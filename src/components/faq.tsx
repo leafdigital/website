@@ -23,7 +23,7 @@ export function Faq({
             {item.q}
             <span
               aria-hidden="true"
-              className="text-muted-foreground transition-transform group-open:rotate-180"
+              className="text-muted-foreground transition-transform group-open:rotate-180 motion-reduce:transition-none"
             >
               ⌄
             </span>
