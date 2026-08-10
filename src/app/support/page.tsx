@@ -1,12 +1,7 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/layout/section";
 import { TrackedLink } from "@/components/analytics/tracked-link";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Faq } from "@/components/faq";
 import { buttonVariants } from "@/components/ui/button";
 import { APP_NAME, SUPPORT_EMAIL } from "@/lib/constants";
 
@@ -58,18 +53,7 @@ export default function SupportPage() {
         <h2 className="text-2xl font-bold tracking-tight">
           Frequent questions
         </h2>
-        <Accordion type="single" collapsible className="mt-6">
-          {faq.map((item) => (
-            <AccordionItem key={item.q} value={item.q}>
-              <AccordionTrigger className="text-left">
-                {item.q}
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed">
-                {item.a}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <Faq items={faq} className="mt-6" />
       </div>
     </Section>
   );

@@ -2,12 +2,7 @@ import type { Metadata } from "next";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { CoverageRing } from "@/components/coverage-ring";
 import { Section, SectionHeading } from "@/components/layout/section";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Faq } from "@/components/faq";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -272,22 +267,7 @@ export default function AltTextPage() {
       {/* 7 — FAQ + closing CTA. */}
       <Section>
         <SectionHeading kicker="Questions" title="Asked and answered" />
-        <Accordion
-          type="single"
-          collapsible
-          className="mx-auto mt-10 max-w-2xl"
-        >
-          {faq.map((item) => (
-            <AccordionItem key={item.q} value={item.q}>
-              <AccordionTrigger className="text-left">
-                {item.q}
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed">
-                {item.a}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <Faq items={faq} className="mx-auto mt-10 max-w-2xl" />
         <div className="mt-16 text-center">
           <h2 className="text-2xl font-bold tracking-tight text-balance">
             Your store has a number. One minute from now, you could be looking
