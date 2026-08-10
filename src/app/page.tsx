@@ -1,31 +1,33 @@
-import Link from "next/link";
+import { TrackedLink } from "@/components/analytics/tracked-link";
+import { buttonVariants } from "@/components/ui/button";
+import { Section } from "@/components/layout/section";
 
-// Interim homepage — the full umbrella build-out (thesis narrative, products
-// index, blog migration) lands in Milestone 3. This page exists so the domain
-// has a coherent home at cutover; until cutover the old site remains live.
+// Interim homepage — the full v1 build (studio hero + flagship mirror) lands
+// with the pages layer. This keeps the domain coherent in the meantime.
 export default function Home() {
   return (
-    <section className="mx-auto max-w-3xl px-6 py-24 text-center">
-      <p className="text-sm font-medium tracking-widest text-green-700 uppercase">
+    <Section className="text-center">
+      <p className="text-brand-800 text-xs font-bold tracking-wider uppercase">
         Agentic commerce
       </p>
-      <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
-        AI agents are becoming the shoppers.
-        <br />
-        Make your catalog legible to machines.
+      <h1 className="mx-auto mt-4 max-w-3xl text-4xl font-extrabold tracking-tight text-balance sm:text-5xl">
+        AI agents are becoming the shoppers. Make your store legible to
+        machines.
       </h1>
-      <p className="mx-auto mt-6 max-w-xl text-lg text-neutral-600">
-        Leaf Digital builds Shopify apps and services that get your store seen,
-        understood, and recommended by AI — starting with your images.
+      <p className="text-muted-foreground mx-auto mt-6 max-w-xl text-lg leading-relaxed">
+        Leaf builds Shopify apps that get your store seen, understood, and
+        recommended by AI — starting with your images.
       </p>
       <div className="mt-10">
-        <Link
+        <TrackedLink
           href="/apps/alt-text"
-          className="rounded-lg bg-green-600 px-6 py-3 font-medium text-white hover:bg-green-700"
+          event="cta_install_click"
+          eventProps={{ location: "interim-home" }}
+          className={buttonVariants({ size: "lg" })}
         >
-          See our first app →
-        </Link>
+          See our first app
+        </TrackedLink>
       </div>
-    </section>
+    </Section>
   );
 }

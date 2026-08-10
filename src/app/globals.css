@@ -1,1 +1,114 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/*
+ * Leaf Digital theme — values from brand/tokens.json (approved kit).
+ *
+ * One-accent rule: green is reserved for actions (CTAs), the coverage ring,
+ * and the logo. Everything else is neutral. If green is on screen, it is the
+ * thing we want the visitor to do or the number we want them to feel.
+ *
+ * Contrast law: the kit's action ramp (green-500/600/700) fails WCAG AA as a
+ * text/background pairing on white, so semantic tokens pair green-800+ with
+ * white text (5.1:1). 500–700 remain available for decoration (gradients,
+ * ring stroke) where no text sits on them. The site ships light-only.
+ */
+
+@theme inline {
+  --font-heading: var(--font-sans);
+  --font-sans: var(--font-sans);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+@theme {
+  /* Brand greens — exact v1 values. */
+  --color-brand-50: #f0fdf4;
+  --color-brand-100: #dcfce7;
+  --color-brand-200: #bbf7d0;
+  --color-brand-400: #66bb6a;
+  --color-brand-500: #4caf50;
+  --color-brand-600: #43a047;
+  --color-brand-700: #388e3c;
+  --color-brand-800: #2e7d32;
+  --color-brand-900: #1b5e20;
+  /* Logo green — mark + wordmark only. */
+  --color-brand-logo: #176639;
+
+  /* Neutrals — exact v1 values (Tailwind v3 gray hex, pinned so the v4
+   * oklch defaults can't drift the rendered site off the live one). */
+  --color-neutral-50: #f9fafb;
+  --color-neutral-100: #f3f4f6;
+  --color-neutral-200: #e5e7eb;
+  --color-neutral-300: #d1d5db;
+  --color-neutral-400: #9ca3af;
+  --color-neutral-500: #6b7280;
+  --color-neutral-600: #4b5563;
+  --color-neutral-700: #374151;
+  --color-neutral-800: #1f2937;
+  --color-neutral-900: #111827;
+
+  /* v1 CTA glow, kept as a named shadow. */
+  --shadow-cta: 0 4px 15px rgb(76 175 80 / 0.35);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: var(--color-neutral-800);
+  --card: #ffffff;
+  --card-foreground: var(--color-neutral-800);
+  --popover: #ffffff;
+  --popover-foreground: var(--color-neutral-800);
+  /* Action green: the one accent. AA on white (5.1:1). */
+  --primary: var(--color-brand-800);
+  --primary-foreground: #ffffff;
+  --secondary: var(--color-neutral-100);
+  --secondary-foreground: var(--color-neutral-800);
+  --muted: var(--color-neutral-100);
+  --muted-foreground: var(--color-neutral-500);
+  /* Accent = quiet green wash, never a text color. */
+  --accent: var(--color-brand-50);
+  --accent-foreground: var(--color-brand-900);
+  --destructive: #dc2626;
+  --border: var(--color-neutral-200);
+  --input: var(--color-neutral-200);
+  --ring: var(--color-brand-600);
+  /* v1 button radius: 10px. */
+  --radius: 0.625rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply scroll-smooth font-sans antialiased;
+  }
+}
