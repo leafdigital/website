@@ -15,12 +15,16 @@ export function Header() {
   return (
     <header className="border-border sticky top-0 z-50 border-b bg-white/85 backdrop-blur-xl">
       <Container className="flex h-16 items-center justify-between">
-        <Link
-          href="/"
-          className="text-brand-logo flex items-center gap-2 text-lg font-bold tracking-tight"
-        >
-          <Image src="/brand/leaf-mark.svg" alt="" width={28} height={28} />
-          Leaf <span className="font-normal">digital</span>
+        <Link href="/" className="flex items-center">
+          {/* The v1 nav logo, verbatim: mark + wordmark in one 478×84 SVG. */}
+          <Image
+            src="/brand/leaf-logo.svg"
+            alt="Leaf digital"
+            width={182}
+            height={32}
+            className="h-8 w-auto"
+            priority
+          />
         </Link>
         <nav aria-label="Main">
           <ul className="flex items-center gap-1 sm:gap-2">
