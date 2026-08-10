@@ -15,6 +15,13 @@ export const SITE_URL = "https://leafdigital.co";
 export const SUPPORT_EMAIL = "hello@leafdigital.co";
 
 /**
+ * False until domain cutover: the v1 site owns leafdigital.co, and search
+ * engines must not index this deploy before then. Flipped by setting
+ * NEXT_PUBLIC_SITE_INDEXABLE=true on the Vercel project (cutover checklist).
+ */
+export const SITE_INDEXABLE = process.env.NEXT_PUBLIC_SITE_INDEXABLE === "true";
+
+/**
  * The mirror number — the coverage deficit shown on the homepage and the
  * alt-text landing hero. Load-bearing copy from the product blueprint:
  * a real-looking store scan, not a round marketing number.

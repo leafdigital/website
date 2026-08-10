@@ -3,13 +3,15 @@ import { Geist } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
-import { SITE_NAME, SITE_URL } from "@/lib/constants";
+import { SITE_INDEXABLE, SITE_NAME, SITE_URL } from "@/lib/constants";
 import "./globals.css";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  // Belt to robots.ts's braces: pre-cutover deploys must not be indexed.
+  robots: SITE_INDEXABLE ? undefined : { index: false, follow: false },
   title: {
     default: `${SITE_NAME} — Shopify apps that make your store legible to AI`,
     template: `%s — ${SITE_NAME}`,

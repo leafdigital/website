@@ -22,10 +22,11 @@ function ease(t: number) {
 }
 
 /**
- * The mirror: an SVG ring that animates to the store's coverage fraction
- * while the missing-count ticks up. Animation starts when the ring scrolls
- * into view; with prefers-reduced-motion it renders the final state
- * immediately.
+ * The mirror: an SVG ring that fills to covered/total while the covered
+ * number ticks up. Callers choose the framing — pass the deficit as
+ * `covered` (with a matching label) to show the gap instead. Animation
+ * starts when the ring scrolls into view; with prefers-reduced-motion it
+ * renders the final state immediately.
  */
 export function CoverageRing({
   covered,
