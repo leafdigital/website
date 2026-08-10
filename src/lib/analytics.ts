@@ -8,7 +8,9 @@ export type CtaEvent =
   | "cta_scan_click"
   | "cta_install_click"
   | "cta_pricing_view"
-  | "cta_contact_click";
+  | "cta_contact_click"
+  /** Internal navigation toward an app page — not an install. */
+  | "cta_app_view";
 
 export function trackCta(event: CtaEvent, props?: Record<string, string>) {
   track(event, props);

@@ -22,8 +22,15 @@ export const SUPPORT_EMAIL = "hello@leafdigital.co";
 export const SITE_INDEXABLE = process.env.NEXT_PUBLIC_SITE_INDEXABLE === "true";
 
 /**
- * The mirror number — the coverage deficit shown on the homepage and the
- * alt-text landing hero. Load-bearing copy from the product blueprint:
- * a real-looking store scan, not a round marketing number.
+ * Future App Store listing. BLOCKER: handle depends on the final app name —
+ * update alongside APP_NAME. Dead until the Sep 5 submission is approved.
  */
-export const MIRROR = { covered: 1255, total: 3102 } as const;
+export const APP_INSTALL_URL = "https://apps.shopify.com/leaf-alt-text";
+
+/**
+ * The mirror number — the coverage deficit shown on the homepage and the
+ * alt-text landing hero. Load-bearing copy from the product blueprint
+ * (verbatim: "1,847 of 3,102"): a real-looking store scan, not a round
+ * marketing number.
+ */
+export const MIRROR = { needsAttention: 1847, total: 3102 } as const;
