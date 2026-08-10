@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <section className="mx-auto max-w-3xl px-6 py-24 text-center">
-      <p className="text-sm font-medium uppercase tracking-widest text-green-700">
+      <p className="text-sm font-medium tracking-widest text-green-700 uppercase">
         Agentic commerce
       </p>
       <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">

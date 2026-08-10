@@ -4,6 +4,7 @@ Business website for Leaf Digital (leafdigital.co): the apps portfolio, thesis
 narrative, and agency services. Next.js 16 (App Router) + Tailwind v4.
 
 ## Context
+
 - Replaces the static v1 site (repo: archive-site-v1-static) — which stays LIVE
   until domain cutover. Do not break it; do not archive it before cutover.
 - Milestone 1 (blocks the alt-text app's Sep 5 App Store submission):
@@ -16,4 +17,5 @@ narrative, and agency services. Next.js 16 (App Router) + Tailwind v4.
 - Content library (LinkedIn posts, salvaged docs): private repo leafdigital/business.
 
 ## Dev
+
 npm install && npm run dev
