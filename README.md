@@ -1,7 +1,7 @@
 # Leaf Digital — website
 
 Business website for Leaf Digital (leafdigital.co): the apps portfolio, thesis
-narrative, and agency services. Next.js 15 (App Router) + Tailwind v4.
+narrative, and agency services. Next.js 16 (App Router) + Tailwind v4.
 
 ## Context
 - Replaces the static v1 site (repo: archive-site-v1-static) — which stays LIVE
