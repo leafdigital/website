@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/layout/section";
+import { TrackedLink } from "@/components/analytics/tracked-link";
 import {
   Accordion,
   AccordionContent,
@@ -43,12 +44,14 @@ export default function SupportPage() {
           it lands with the engineer who built the app.
         </p>
         <div className="mt-8">
-          <a
+          <TrackedLink
             href={`mailto:${SUPPORT_EMAIL}`}
+            event="cta_contact_click"
+            eventProps={{ location: "support" }}
             className={buttonVariants({ size: "lg" })}
           >
             {SUPPORT_EMAIL}
-          </a>
+          </TrackedLink>
         </div>
       </div>
       <div className="mx-auto mt-16 max-w-2xl">

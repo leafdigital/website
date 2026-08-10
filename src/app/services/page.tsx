@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/layout/section";
+import { TrackedLink } from "@/components/analytics/tracked-link";
 import { SUPPORT_EMAIL } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -17,12 +18,14 @@ export default function ServicesPage() {
       <p className="text-muted-foreground mx-auto mt-4 max-w-xl text-lg leading-relaxed">
         Leaf takes on a small number of Shopify engineering engagements
         alongside the apps. If that sounds like what you need, email{" "}
-        <a
+        <TrackedLink
           href={`mailto:${SUPPORT_EMAIL}`}
+          event="cta_contact_click"
+          eventProps={{ location: "services" }}
           className="text-foreground underline underline-offset-4"
         >
           {SUPPORT_EMAIL}
-        </a>{" "}
+        </TrackedLink>{" "}
         and tell us what you’re building.
       </p>
     </Section>

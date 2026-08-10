@@ -24,7 +24,7 @@ export default function AppsPage() {
       <ul className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-3">
         {apps.map((app) => (
           <li key={app.name}>
-            <AppCard app={app} />
+            <AppCard app={app} headingLevel="h2" />
           </li>
         ))}
       </ul>
