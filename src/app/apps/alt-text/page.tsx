@@ -166,7 +166,7 @@ export default function AltTextPage() {
         <p className="text-muted-foreground mx-auto mt-10 max-w-2xl text-center leading-relaxed">
           And now a fourth: AI shopping agents describe your products to buyers
           by reading what your images say. Right now, yours may be saying
-          nothing â while your competitors’ catalogs do the talking.
+          nothing — while your competitors’ catalogs do the talking.
         </p>
       </Section>
 
