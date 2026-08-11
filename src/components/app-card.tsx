@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { TrackedLink } from "@/components/analytics/tracked-link";
+import { WaitlistForm } from "@/components/waitlist-form";
 import { buttonVariants } from "@/components/ui/button";
 
 export type AppCardData = {
@@ -55,7 +56,11 @@ export function AppCard({
               {app.cta}
             </TrackedLink>
           </div>
-        ) : null}
+        ) : (
+          /* Lab cards capture intent instead of linking — the lead form
+           * lives where the curiosity is (positioning doc, section 5). */
+          <WaitlistForm app={app.name} />
+        )}
       </CardContent>
     </Card>
   );

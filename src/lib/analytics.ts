@@ -10,7 +10,8 @@ export type CtaEvent =
   | "cta_pricing_view"
   | "cta_contact_click"
   /** Internal navigation toward an app page — not an install. */
-  | "cta_app_view";
+  | "cta_app_view"
+  | "cta_waitlist_join";
 
 export function trackCta(event: CtaEvent, props?: Record<string, string>) {
   track(event, props);
