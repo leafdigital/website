@@ -1,6 +1,7 @@
 import { AppCard } from "@/components/app-card";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { CoverageRing } from "@/components/coverage-ring";
+import { WaitlistForm } from "@/components/waitlist-form";
 import { Container } from "@/components/layout/container";
 import { Section, SectionHeading } from "@/components/layout/section";
 import { buttonVariants } from "@/components/ui/button";
@@ -22,7 +23,7 @@ const laws = [
 const truths = [
   { figure: "30 days", label: "every change undoable, before → after kept" },
   { figure: "4 laws", label: "written down before the first install" },
-  { figure: "1 engineer", label: "builds the apps and answers the email" },
+  { figure: "25 free", label: "taste the quality on your own images, forever" },
 ];
 
 export default function Home() {
@@ -189,6 +190,18 @@ export default function Home() {
           >
             Scan my store free
           </TrackedLink>
+        </div>
+      </Section>
+
+      {/* 9 — Early access: the one waitlist form; lab cards link here. */}
+      <Section wash id="early-access" className="scroll-mt-16 text-center">
+        <SectionHeading
+          kicker="The lab"
+          title="Be first in line for what's next"
+          sub="Catalog quality scoring and AI answer accuracy are in the works. Early-access merchants shape them — and never pay to look."
+        />
+        <div className="mt-10">
+          <WaitlistForm />
         </div>
       </Section>
     </>

@@ -8,7 +8,7 @@ import { SUPPORT_EMAIL } from "@/lib/constants";
  */
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const KNOWN_APPS = new Set(["Catalog Readiness", "AI Answer Accuracy"]);
+const KNOWN_APPS = new Set(["Catalog Readiness", "AI Answer Accuracy", "Both"]);
 
 export async function POST(request: Request) {
   let body: { email?: string; app?: string; company?: string };
