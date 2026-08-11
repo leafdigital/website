@@ -1,7 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { TrackedLink } from "@/components/analytics/tracked-link";
-import { WaitlistForm } from "@/components/waitlist-form";
 import { buttonVariants } from "@/components/ui/button";
 
 export type AppCardData = {
@@ -45,8 +44,8 @@ export function AppCard({
         <p className="text-muted-foreground leading-relaxed">
           {app.description}
         </p>
-        {app.href && app.cta ? (
-          <div>
+        <div>
+          {app.href && app.cta ? (
             <TrackedLink
               href={app.href}
               event="cta_app_view"
@@ -55,12 +54,19 @@ export function AppCard({
             >
               {app.cta}
             </TrackedLink>
-          </div>
-        ) : (
-          /* Lab cards capture intent instead of linking — the lead form
-           * lives where the curiosity is (positioning doc, section 5). */
-          <WaitlistForm app={app.name} />
-        )}
+          ) : (
+            /* Lab cards send intent to the one early-access form at the
+             * bottom of the homepage — no inline inputs on cards. */
+            <TrackedLink
+              href="/#early-access"
+              event="cta_app_view"
+              eventProps={{ location: "lab-card-waitlist", app: app.name }}
+              className={buttonVariants({ variant: "outline" })}
+            >
+              Get early access
+            </TrackedLink>
+          )}
+        </div>
       </CardContent>
     </Card>
   );
