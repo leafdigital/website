@@ -11,7 +11,7 @@
 export const APP_NAME = "Leaf Alt Text";
 
 export const SITE_NAME = "Leaf Digital";
-export const SITE_URL = "https://leafdigital.co";
+export const SITE_URL = "https://www.leafdigital.co";
 export const SUPPORT_EMAIL = "hello@leafdigital.co";
 
 /**
