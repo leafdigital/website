@@ -13,11 +13,11 @@ export const metadata: Metadata = {
   // Belt to robots.ts's braces: pre-cutover deploys must not be indexed.
   robots: SITE_INDEXABLE ? undefined : { index: false, follow: false },
   title: {
-    default: `${SITE_NAME} — Shopify apps that make your store legible to AI`,
+    default: `${SITE_NAME} — the work your store needs done, handled correctly`,
     template: `%s — ${SITE_NAME}`,
   },
   description:
-    "AI agents are becoming the shoppers. Leaf builds Shopify apps that get your store seen, understood, and recommended by machines — starting with your images.",
+    "Leaf makes Shopify apps that take on the jobs nobody on your team owns — under written laws about what they'll never touch, with an undo on everything they do.",
   openGraph: {
     siteName: SITE_NAME,
     type: "website",

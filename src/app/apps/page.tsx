@@ -6,7 +6,7 @@ import { apps } from "@/lib/apps";
 export const metadata: Metadata = {
   title: "Apps",
   description:
-    "The Leaf app suite for Shopify: make your catalog legible to the machines that are becoming the shoppers — images first, attributes next, answers after that.",
+    "Shopify apps that take on the jobs nobody on your team owns — images first, catalog quality and AI answers next. Each one ships under written laws.",
 };
 
 export default function AppsPage() {
@@ -17,8 +17,9 @@ export default function AppsPage() {
           Apps
         </h1>
         <p className="text-muted-foreground mt-4 text-lg leading-relaxed">
-          One narrative, app by app: make your catalog legible to machines —
-          images first, attributes next, answers after that.
+          One unowned job at a time, done properly: your images first, your
+          catalog quality and AI answers next. Every app ships under written
+          laws about what it will never touch.
         </p>
       </div>
       <ul className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-3">
