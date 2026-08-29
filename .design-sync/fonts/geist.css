@@ -1,0 +1,20 @@
+/* Geist (latin subset) — mirrors next/font/google in src/app/layout.tsx.
+ * Google serves Geist as a single variable woff2 covering weights 100-900,
+ * so one file backs every weight the components use.
+ * --font-sans is what Next normally sets on <html> via the font className;
+ * without it the bundle's `font-sans` utility resolves to nothing. */
+:root {
+  --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+@font-face {
+  font-family: "Geist";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("./geist-latin.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}

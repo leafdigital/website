@@ -1,0 +1,13 @@
+{
+  "projectId": "8a3bfed3-64be-474a-be67-d51c48b646b3",
+  "shape": "package",
+  "pkg": "leaf-website",
+  "globalName": "LeafDS",
+  "srcDir": "src/components",
+  "tsconfig": "tsconfig.json",
+  "cssEntry": "styles.css",
+  "extraFonts": ["fonts/geist.css"],
+  "docsDir": "docs",
+  "guidelinesGlob": ["guides/**/*.md"],
+  "readmeHeader": ".design-sync/conventions.md"
+}
