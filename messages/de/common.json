@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "label": "Hauptnavigation",
+    "apps": "Apps",
+    "services": "Leistungen",
+    "blog": "Blog",
+    "scan": "Kostenloser Scan"
+  },
+  "footer": {
+    "label": "Fußzeile",
+    "privacy": "Datenschutz",
+    "support": "Support",
+    "contact": "Kontakt",
+    "rights": "© {year} {siteName}. Alle Rechte vorbehalten."
+  },
+  "skipToContent": "Zum Inhalt springen",
+  "localeSwitcher": {
+    "label": "Sprache"
+  }
+}

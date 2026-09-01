@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "label": "Main",
+    "apps": "Apps",
+    "services": "Services",
+    "blog": "Blog",
+    "scan": "Free scan"
+  },
+  "footer": {
+    "label": "Footer",
+    "privacy": "Privacy",
+    "support": "Support",
+    "contact": "Contact",
+    "rights": "© {year} {siteName}. All rights reserved."
+  },
+  "skipToContent": "Skip to content",
+  "localeSwitcher": {
+    "label": "Language"
+  }
+}

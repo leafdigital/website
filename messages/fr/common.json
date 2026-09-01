@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "label": "Principale",
+    "apps": "Apps",
+    "services": "Services",
+    "blog": "Blog",
+    "scan": "Analyse gratuite"
+  },
+  "footer": {
+    "label": "Pied de page",
+    "privacy": "Confidentialité",
+    "support": "Assistance",
+    "contact": "Contact",
+    "rights": "© {year} {siteName}. Tous droits réservés."
+  },
+  "skipToContent": "Aller au contenu",
+  "localeSwitcher": {
+    "label": "Langue"
+  }
+}
