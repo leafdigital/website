@@ -1,0 +1,33 @@
+{
+  "$comment": "Deliberately outside the per-locale namespace scheme: this banner speaks the language the visitor is NOT currently reading, so all locales ship together in one small file rather than loading six message bundles. Excluded from the parity guard for the same reason (scripts/i18n/lib.mjs walks directories only).",
+  "en": {
+    "message": "View this site in English?",
+    "accept": "Switch to English",
+    "dismiss": "No thanks"
+  },
+  "es": {
+    "message": "¿Ver este sitio en español?",
+    "accept": "Cambiar a español",
+    "dismiss": "No, gracias"
+  },
+  "pt-br": {
+    "message": "Ver este site em português?",
+    "accept": "Mudar para português",
+    "dismiss": "Não, obrigado"
+  },
+  "de": {
+    "message": "Diese Seite auf Deutsch ansehen?",
+    "accept": "Auf Deutsch wechseln",
+    "dismiss": "Nein, danke"
+  },
+  "fr": {
+    "message": "Voir ce site en français ?",
+    "accept": "Passer au français",
+    "dismiss": "Non merci"
+  },
+  "it": {
+    "message": "Vuoi vedere questo sito in italiano?",
+    "accept": "Passa all'italiano",
+    "dismiss": "No, grazie"
+  }
+}

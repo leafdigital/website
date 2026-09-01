@@ -1,0 +1,63 @@
+import { APP_NAME, SITE_NAME, SUPPORT_EMAIL } from "@/lib/constants";
+
+export const meta = {
+  title: "Política de privacidade",
+  updated: "2026-08-10",
+  draft: true,
+};
+
+## A versão simples
+
+Operamos este site e o app {APP_NAME} para Shopify. O site coleta quase nada. O
+app lê as imagens dos seus produtos e o alt text delas pela API do Shopify,
+envia as imagens a um provedor de modelos de IA para serem descritas e escreve
+o alt text de volta — com a sua aprovação. Nunca vemos nem armazenamos os dados
+pessoais dos seus clientes. Tudo o que vem a seguir é isso, em detalhe.
+
+## Este site
+
+- **Analytics.** Usamos o Vercel Analytics, que funciona sem cookies e coleta
+  visualizações de página agregadas e eventos de interação anonimizados. Sem
+  rastreamento entre sites, sem identificadores de publicidade, nada que
+  identifique você.
+- **Formulários e email.** Se você nos escrever ou entrar em uma lista de
+  espera, guardamos seu endereço e sua mensagem para responder. Não vendemos,
+  não compartilhamos e não adicionamos a listas de marketing que você não
+  pediu.
+
+## O app {APP_NAME}
+
+### A que acessamos
+
+Pela API do Shopify, com as permissões que você concede na instalação: as
+imagens dos seus produtos, o alt text atual delas, os títulos dos produtos e as
+referências de imagens do tema. Esse é o conjunto de trabalho — o app não pede
+acesso a pedidos, clientes ou dados de pagamento.
+
+### Processamento por IA, dito com clareza
+
+Para escrever uma descrição, as imagens dos seus produtos são enviadas ao nosso
+provedor de modelos de IA, que devolve o texto. As imagens são transmitidas
+apenas para essa finalidade. Nenhum dado pessoal de cliente é envolvido em
+momento algum — o modelo vê fotografia de produto, nada mais.
+
+### O que armazenamos
+
+Resultados de análise (notas de cobertura por imagem), o alt text proposto e
+aplicado e o histórico de antes e depois que possibilita desfazer por 30 dias.
+Armazenamos referências de imagens, não cópias da sua biblioteca.
+
+### Retenção
+
+O histórico de alterações é mantido por 30 dias para permitir a restauração e
+depois é descartado. Se você desinstalar, os dados do app vinculados à sua loja
+são excluídos conforme os webhooks obrigatórios de exclusão de dados do
+Shopify — em até 48 horas a partir da solicitação do Shopify.
+
+## Seus direitos e como falar conosco
+
+Você pode solicitar a exportação ou a exclusão de qualquer dado que tenhamos
+sobre você ou sobre a sua loja — aplicam-se a LGPD, o GDPR e estruturas
+equivalentes. Escreva para <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a> e
+responderemos em até 30 dias, normalmente bem antes. A {SITE_NAME} é a
+controladora dos dados deste site.

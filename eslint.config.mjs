@@ -56,6 +56,42 @@ const eslintConfig = defineConfig([
       ],
     },
   },
+  {
+    /**
+     * No hardcoded copy in JSX. This is the rule that actually stops the
+     * system decaying — without it, month three has English scattered through
+     * new components again and nobody notices until a locale looks wrong.
+     *
+     * `files` is the governed set and `ignores` is the QUARANTINE LIST: pages
+     * whose copy is still inline because the content rewrite will replace them
+     * wholesale (docs/i18n.md §8.4). The list is also the migration tracker —
+     * whatever is still on it has not been done. Delete entries, never add.
+     */
+    files: ["src/**/*.tsx"],
+    ignores: [
+      // NB: escaped — ESLint globs read a bare [locale] as a character class.
+      "src/app/\\[locale\\]/page.tsx",
+      "src/app/\\[locale\\]/apps/**",
+      "src/app/\\[locale\\]/blog/**",
+      "src/app/\\[locale\\]/services/**",
+      "src/components/app-card.tsx",
+      "src/components/coverage-ring.tsx",
+      "src/components/waitlist-form.tsx",
+      "src/lib/og.tsx",
+      "src/components/ui/**",
+    ],
+    rules: {
+      "react/jsx-no-literals": [
+        "error",
+        {
+          // Punctuation and separators between translated fragments are not copy.
+          allowedStrings: ["—", "·", "/", "|", "⌄", "©"],
+          ignoreProps: true,
+          noStrings: false,
+        },
+      ],
+    },
+  },
 ]);
 
 export default eslintConfig;

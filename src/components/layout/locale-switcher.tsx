@@ -3,6 +3,7 @@
 import { useTransition } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
+import { rememberLocaleChoice } from "@/i18n/locale-choice";
 import { routing, type Locale } from "@/i18n/routing";
 
 /**
@@ -35,6 +36,7 @@ export function LocaleSwitcher() {
         disabled={isPending}
         onChange={(e) => {
           const next = e.target.value as Locale;
+          rememberLocaleChoice();
           startTransition(() => {
             /**
              * The explicit `locale` is the one legitimate cross-locale

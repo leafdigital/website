@@ -1,0 +1,63 @@
+import { APP_NAME, SITE_NAME, SUPPORT_EMAIL } from "@/lib/constants";
+
+export const meta = {
+  title: "Política de privacidad",
+  updated: "2026-08-10",
+  draft: true,
+};
+
+## La versión sencilla
+
+Operamos este sitio web y la app {APP_NAME} para Shopify. El sitio web recoge
+casi nada. La app lee las imágenes de tus productos y su alt text a través de
+la API de Shopify, envía las imágenes a un proveedor de modelos de IA para que
+las describa, y escribe el alt text de vuelta, con tu aprobación. Nunca vemos
+ni almacenamos los datos personales de tus clientes. Todo lo que sigue es eso
+mismo, en detalle.
+
+## Este sitio web
+
+- **Analítica.** Usamos Vercel Analytics, que funciona sin cookies y recoge
+  vistas de página agregadas y eventos de interacción anonimizados. Sin
+  seguimiento entre sitios, sin identificadores publicitarios, sin nada que te
+  identifique.
+- **Formularios y email.** Si nos escribes o te apuntas a una lista de espera,
+  conservamos tu dirección y tu mensaje para responderte. No la vendemos, no la
+  compartimos ni la añadimos a listas de marketing que no hayas pedido.
+
+## La app {APP_NAME}
+
+### A qué accedemos
+
+A través de la API de Shopify, con los permisos que concedes al instalar: las
+imágenes de tus productos, su alt text actual, los títulos de producto y las
+referencias de imágenes del tema. Ese es el conjunto de trabajo: la app no
+solicita acceso a pedidos, clientes ni datos de pago.
+
+### Procesamiento con IA, dicho claramente
+
+Para escribir una descripción, las imágenes de tus productos se envían a
+nuestro proveedor de modelos de IA, que devuelve el texto. Las imágenes se
+transmiten solo con ese fin. En ningún momento intervienen datos personales de
+clientes: el modelo ve fotografía de producto y nada más.
+
+### Qué almacenamos
+
+Resultados de análisis (calificaciones de cobertura por imagen), el alt text
+propuesto y aplicado, y el historial de antes y después que hace posible
+deshacer durante 30 días. Almacenamos referencias de imágenes, no copias de tu
+biblioteca.
+
+### Conservación
+
+El historial de cambios se conserva 30 días para permitir la restauración y
+después se elimina. Si desinstalas, los datos de la app vinculados a tu tienda
+se borran conforme a los webhooks obligatorios de borrado de datos de Shopify,
+en un plazo de 48 horas desde la solicitud de Shopify.
+
+## Tus derechos y cómo contactarnos
+
+Puedes solicitar la exportación o el borrado de cualquier dato que tengamos
+sobre ti o sobre tu tienda: se aplican el RGPD y marcos equivalentes. Escribe a <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a> y
+te responderemos en un plazo de 30 días, normalmente mucho antes. {SITE_NAME} es
+el responsable del tratamiento de este sitio web.

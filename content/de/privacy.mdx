@@ -1,0 +1,64 @@
+import { APP_NAME, SITE_NAME, SUPPORT_EMAIL } from "@/lib/constants";
+
+export const meta = {
+  title: "Datenschutzerklärung",
+  updated: "2026-08-10",
+  draft: true,
+};
+
+## Die einfache Fassung
+
+Wir betreiben diese Website und die App {APP_NAME} für Shopify. Die Website
+erhebt so gut wie nichts. Die App liest deine Produktbilder und deren Alt-Text
+über die Shopify-API, sendet Bilder zur Beschreibung an einen KI-Modellanbieter
+und schreibt den Alt-Text zurück — mit deiner Freigabe. Wir sehen und speichern
+niemals die personenbezogenen Daten deiner Kundinnen und Kunden. Alles Weitere
+ist genau das, im Detail.
+
+## Diese Website
+
+- **Analyse.** Wir nutzen Vercel Analytics: cookielos, mit aggregierten
+  Seitenaufrufen und anonymisierten Interaktionsereignissen. Kein
+  seitenübergreifendes Tracking, keine Werbe-IDs, nichts, was dich benennt.
+- **Formulare und E-Mail.** Wenn du uns schreibst oder dich auf eine Warteliste
+  setzt, bewahren wir deine Adresse und deine Nachricht auf, um dir zu
+  antworten. Wir verkaufen sie nicht, geben sie nicht weiter und nehmen sie
+  nicht in Marketinglisten auf, die du nicht angefordert hast.
+
+## Die App {APP_NAME}
+
+### Worauf wir zugreifen
+
+Über die Shopify-API, mit den Berechtigungen, die du bei der Installation
+erteilst: deine Produktbilder, deren aktueller Alt-Text, Produkttitel und
+Theme-Bildreferenzen. Das ist der gesamte Arbeitsbereich — die App fordert
+keinen Zugriff auf Bestellungen, Kundendaten oder Zahlungsdaten an.
+
+### KI-Verarbeitung, klar offengelegt
+
+Um eine Beschreibung zu schreiben, werden deine Produktbilder an unseren
+KI-Modellanbieter gesendet, der den Text zurückliefert. Die Bilder werden
+ausschließlich zu diesem Zweck übermittelt. Zu keinem Zeitpunkt sind
+personenbezogene Kundendaten beteiligt — das Modell sieht Produktfotografie,
+sonst nichts.
+
+### Was wir speichern
+
+Scan-Ergebnisse (Abdeckungsbewertung je Bild), vorgeschlagenen und gesetzten
+Alt-Text sowie den Vorher-Nachher-Verlauf, der das 30-tägige Rückgängigmachen
+ermöglicht. Wir speichern Bildreferenzen, keine Kopien deiner Bildbibliothek.
+
+### Aufbewahrung
+
+Der Änderungsverlauf wird 30 Tage lang für die Wiederherstellung aufbewahrt und
+danach gelöscht. Bei einer Deinstallation werden die mit deinem Shop
+verknüpften App-Daten gemäß den verpflichtenden Datenlöschungs-Webhooks von
+Shopify gelöscht — innerhalb von 48 Stunden nach der Anfrage von Shopify.
+
+## Deine Rechte und wie du uns erreichst
+
+Du kannst den Export oder die Löschung aller Daten verlangen, die wir über dich
+oder deinen Shop gespeichert haben — die DSGVO und gleichwertige Regelwerke
+gelten. Schreib an <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>, und
+wir antworten innerhalb von 30 Tagen, meist deutlich schneller. {SITE_NAME} ist
+der Verantwortliche für diese Website.

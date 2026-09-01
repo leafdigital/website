@@ -6,6 +6,7 @@ import { getTranslations } from "next-intl/server";
 import { Analytics } from "@vercel/analytics/next";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { LocaleSuggestion } from "@/components/layout/locale-suggestion";
 import { isLocale, routing } from "@/i18n/routing";
 import { SITE_INDEXABLE, SITE_NAME, SITE_URL } from "@/lib/constants";
 import "../globals.css";
@@ -79,6 +80,7 @@ export default async function LocaleLayout({
           >
             {t("skipToContent")}
           </a>
+          <LocaleSuggestion />
           <Header />
           <main id="main" className="flex-1">
             {children}

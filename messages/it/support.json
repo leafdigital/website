@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "title": "Assistenza",
+    "description": "Ottieni aiuto su {appName} e su tutte le app Leaf: assistenza via email, risposte su annullamento e fatturazione, e esattamente ciò che le nostre app toccano — e ciò che non toccano."
+  },
+  "title": "Assistenza",
+  "intro": "Bloccato, curioso o qualcosa non torna? L'email è la via più rapida: arriva direttamente all'ingegnere che ha costruito l'app.",
+  "faqTitle": "Domande frequenti",
+  "faq": {
+    "undo": {
+      "q": "Come annullo qualcosa che l'app ha scritto?",
+      "a": "Ogni alt text applicato conserva il prima e il dopo per 30 giorni. Apri l'app, trova l'immagine (o la modifica nel tuo riepilogo) e premi ripristina: un clic, senza aprire un ticket. Se qualcosa non si lascia annullare, scrivici e lo sistemiamo di persona."
+    },
+    "billing": {
+      "q": "Come funziona la fatturazione?",
+      "a": "La fatturazione passa da Shopify: prezzi mensili fissi con limiti di utilizzo, senza sorprese a consumo. I piani a pagamento includono 14 giorni di prova. Disdici dall'admin Shopify quando vuoi; tutto ciò che è già stato scritto resta nel tuo negozio."
+    },
+    "scope": {
+      "q": "Cosa toccano le app Leaf nel mio negozio?",
+      "a": "{appName} legge le immagini dei tuoi prodotti e del tuo tema e scrive una cosa sola: il campo alt. Nessun codice del tema, nessun contenuto di prodotto, nessuna immagine. Nulla viene scritto senza la tua approvazione, a meno che tu non abbia attivato il pilota automatico — ed è comunque reversibile per singola fonte."
+    },
+    "speed": {
+      "q": "In quanto tempo rispondete?",
+      "a": "Entro un giorno lavorativo, di solito molto prima. Riceverai una risposta dalla persona che ha costruito l'app: tra te e la soluzione non c'è nessuno script di primo livello."
+    }
+  }
+}

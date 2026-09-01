@@ -16,5 +16,10 @@
   "skipToContent": "Aller au contenu",
   "localeSwitcher": {
     "label": "Langue"
+  },
+  "document": {
+    "fallbackNotice": "Ce document n'est pas encore disponible dans votre langue ; la version anglaise est affichée.",
+    "draft": "Brouillon — en cours de revue juridique",
+    "updated": "Dernière mise à jour : {date, date, long}"
   }
 }

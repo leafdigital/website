@@ -30,6 +30,11 @@ jobs:
 
       - run: npm run typecheck
 
+      # Key parity, ICU-argument parity and translation staleness. Also runs as
+      # part of `build`, but kept explicit so a locale failure is legible in
+      # the job list rather than buried in build output.
+      - run: npm run i18n:check
+
       - run: npm run build
 
   a11y:

@@ -1,42 +1,41 @@
 import type { Metadata } from "next";
+import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Section } from "@/components/layout/section";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Faq } from "@/components/faq";
 import { buttonVariants } from "@/components/ui/button";
 import { APP_NAME, SUPPORT_EMAIL } from "@/lib/constants";
 
-export const metadata: Metadata = {
-  title: "Support",
-  description: `Get help with ${APP_NAME} and every Leaf app: email support, undo and billing answers, and exactly what our apps do and don't touch.`,
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("support");
+  return {
+    title: t("meta.title"),
+    description: t("meta.description", { appName: APP_NAME }),
+  };
+}
 
-const faq = [
-  {
-    q: "How do I undo something the app wrote?",
-    a: "Every applied alt text keeps its before and after for 30 days. Open the app, find the image (or the change in your digest), and hit restore — one click, no support ticket needed. If anything resists undoing, email us and we'll fix it personally.",
-  },
-  {
-    q: "How does billing work?",
-    a: "Billing runs through Shopify — flat monthly prices with usage caps, no metered surprises. Paid tiers carry a 14-day trial. Cancel from the Shopify admin at any time; everything already written stays in your store.",
-  },
-  {
-    q: "What do Leaf apps touch in my store?",
-    a: `${APP_NAME} reads your product and theme images and writes one thing: the alt field. No theme code, no product content, no images. Nothing is written without your approval unless you've turned auto-pilot on — and that is reversible per source.`,
-  },
-  {
-    q: "How fast do you answer?",
-    a: "Within one business day, usually much faster. You'll get an answer from the person who built the app — there is no tier-one script between you and a fix.",
-  },
-];
+/**
+ * The page is a schema; the locale file fills it. Layout and logic live here,
+ * every word lives in `messages/{locale}/support.json` (docs/i18n.md §4).
+ */
+const faqKeys = ["undo", "billing", "scope", "speed"] as const;
 
 export default function SupportPage() {
+  const t = useTranslations("support");
+
+  const faq = faqKeys.map((key) => ({
+    q: t(`faq.${key}.q`),
+    /* appName is an ICU argument, never baked into the translated string. */
+    a: t(`faq.${key}.a`, { appName: APP_NAME }),
+  }));
+
   return (
     <Section>
       <div className="mx-auto max-w-2xl text-center">
-        <h1 className="text-4xl font-extrabold tracking-tight">Support</h1>
+        <h1 className="text-4xl font-extrabold tracking-tight">{t("title")}</h1>
         <p className="text-muted-foreground mt-4 text-lg leading-relaxed">
-          Stuck, curious, or something looks wrong? Email is the fastest path —
-          it lands with the engineer who built the app.
+          {t("intro")}
         </p>
         <div className="mt-8">
           <TrackedLink
@@ -50,9 +49,7 @@ export default function SupportPage() {
         </div>
       </div>
       <div className="mx-auto mt-16 max-w-2xl">
-        <h2 className="text-2xl font-bold tracking-tight">
-          Frequent questions
-        </h2>
+        <h2 className="text-2xl font-bold tracking-tight">{t("faqTitle")}</h2>
         <Faq items={faq} className="mt-6" />
       </div>
     </Section>

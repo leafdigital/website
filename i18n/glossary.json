@@ -1,0 +1,68 @@
+{
+  "$comment": "Shared with the Shopify app UI and the App Store listing so the brand reads the same across all three surfaces. See docs/i18n.md §7.",
+
+  "doNotTranslate": [
+    "Leaf",
+    "Leaf Digital",
+    "Shopify",
+    "Shopify Admin",
+    "App Store",
+    "alt text",
+    "ChatGPT",
+    "Vercel Analytics"
+  ],
+
+  "orthographyExceptions": {
+    "$comment": "Do-not-translate terms that still take local orthography rather than staying verbatim.",
+    "alt text": { "de": "Alt-Text" }
+  },
+
+  "translateConsistently": {
+    "agentic shelf": {
+      "es": "estantería agéntica",
+      "pt-br": "prateleira agêntica",
+      "de": "agentisches Regal",
+      "fr": "rayon agentique",
+      "it": "scaffale agentico"
+    },
+    "coverage": {
+      "es": "cobertura",
+      "pt-br": "cobertura",
+      "de": "Abdeckung",
+      "fr": "couverture",
+      "it": "copertura"
+    },
+    "scan": {
+      "es": "análisis",
+      "pt-br": "análise",
+      "de": "Scan",
+      "fr": "analyse",
+      "it": "scansione"
+    },
+    "auto-pilot": {
+      "es": "piloto automático",
+      "pt-br": "piloto automático",
+      "de": "Autopilot",
+      "fr": "pilote automatique",
+      "it": "pilota automatico"
+    },
+    "undo": {
+      "es": "deshacer",
+      "pt-br": "desfazer",
+      "de": "rückgängig machen",
+      "fr": "annuler",
+      "it": "annullare"
+    }
+  },
+
+  "critical": {
+    "$comment": "Keys carrying the positioning. A model left alone smooths these into generic SaaS voice and nobody notices, because nobody here reads Italian. Translate these with a stricter brief; everything else ships unreviewed.",
+    "keys": [
+      "common.nav.scan",
+      "home.hero.headline",
+      "home.hero.subhead",
+      "home.laws.*",
+      "altText.hero.*"
+    ]
+  }
+}

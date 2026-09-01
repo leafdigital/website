@@ -16,5 +16,10 @@
   "skipToContent": "Zum Inhalt springen",
   "localeSwitcher": {
     "label": "Sprache"
+  },
+  "document": {
+    "fallbackNotice": "Dieses Dokument liegt noch nicht in deiner Sprache vor, daher wird die englische Fassung angezeigt.",
+    "draft": "Entwurf — in rechtlicher Prüfung",
+    "updated": "Zuletzt aktualisiert: {date, date, long}"
   }
 }

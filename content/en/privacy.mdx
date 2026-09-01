@@ -1,0 +1,59 @@
+import { APP_NAME, SITE_NAME, SUPPORT_EMAIL } from "@/lib/constants";
+
+export const meta = {
+  title: "Privacy policy",
+  updated: "2026-08-10",
+  draft: true,
+};
+
+## The plain version
+
+We run this website and the {APP_NAME} app for Shopify. The website collects
+almost nothing. The app reads your product images and their alt text through
+Shopify's API, sends images to an AI model provider to be described, and writes
+alt text back — with your approval. We never see or store your customers'
+personal data. Everything below is that, in detail.
+
+## This website
+
+- **Analytics.** We use Vercel Analytics, which is cookieless and collects
+  aggregate page views and anonymized interaction events. No cross-site
+  tracking, no advertising identifiers, nothing that names you.
+- **Forms and email.** If you email us or join a waitlist, we keep your address
+  and message to answer you. We don't sell it, share it, or add it to marketing
+  lists you didn't ask for.
+
+## The {APP_NAME} app
+
+### What we access
+
+Through the Shopify API, with the permissions you grant at install: your
+product images, their current alt text, product titles, and theme image
+references. That is the working set — the app does not request access to
+orders, customers, or payment data.
+
+### AI processing — disclosed plainly
+
+To write a description, your product images are sent to our AI model provider,
+which returns the text. Images are transmitted for that purpose only. No
+customer personal data is involved at any point — the model sees product
+photography, nothing else.
+
+### What we store
+
+Scan results (coverage grades per image), proposed and applied alt text, and
+the before/after history that powers the 30-day undo. We store image
+references, not copies of your image library.
+
+### Retention
+
+Change history is kept for 30 days to power restore, then pruned. If you
+uninstall, app data tied to your store is deleted in line with Shopify's
+mandatory data-erasure webhooks — within 48 hours of Shopify's request.
+
+## Your rights and how to reach us
+
+You can request an export or erasure of any data we hold about you or your
+store — GDPR and equivalent frameworks apply. Write to <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a> and
+we'll respond within 30 days, usually much faster. {SITE_NAME} is the data
+controller for this website.

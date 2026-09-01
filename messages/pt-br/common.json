@@ -16,5 +16,10 @@
   "skipToContent": "Pular para o conteúdo",
   "localeSwitcher": {
     "label": "Idioma"
+  },
+  "document": {
+    "fallbackNotice": "Este documento ainda não está disponível no seu idioma, então a versão em inglês é exibida.",
+    "draft": "Rascunho — em revisão jurídica",
+    "updated": "Última atualização: {date, date, long}"
   }
 }
