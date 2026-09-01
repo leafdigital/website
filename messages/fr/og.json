@@ -1,0 +1,9 @@
+{
+  "site": {
+    "title": "Le travail dont votre boutique a besoin — fait, et bien fait."
+  },
+  "altText": {
+    "title": "{needsAttention, number} de vos images ne disent peut-être rien",
+    "kicker": "L'alt text, vraiment regardé"
+  }
+}

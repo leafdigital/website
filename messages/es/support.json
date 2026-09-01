@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "title": "Soporte",
+    "description": "Obtén ayuda con {appName} y todas las apps de Leaf: soporte por email, respuestas sobre deshacer y facturación, y exactamente lo que nuestras apps tocan y lo que no."
+  },
+  "title": "Soporte",
+  "intro": "¿Atascado, con dudas o algo no cuadra? El email es la vía más rápida: llega directamente al ingeniero que construyó la app.",
+  "faqTitle": "Preguntas frecuentes",
+  "faq": {
+    "undo": {
+      "q": "¿Cómo deshago algo que escribió la app?",
+      "a": "Cada alt text aplicado guarda su antes y su después durante 30 días. Abre la app, busca la imagen (o el cambio en tu resumen) y pulsa restaurar: un clic, sin abrir ningún ticket. Si algo se resiste a deshacerse, escríbenos y lo arreglamos personalmente."
+    },
+    "billing": {
+      "q": "¿Cómo funciona la facturación?",
+      "a": "La facturación va a través de Shopify: precios mensuales fijos con límites de uso, sin sorpresas por consumo. Los planes de pago incluyen 14 días de prueba. Cancela desde el admin de Shopify cuando quieras; todo lo ya escrito se queda en tu tienda."
+    },
+    "scope": {
+      "q": "¿Qué tocan las apps de Leaf en mi tienda?",
+      "a": "{appName} lee las imágenes de tus productos y de tu tema, y escribe una sola cosa: el campo alt. Nada de código del tema, nada de contenido de producto, nada de imágenes. No se escribe nada sin tu aprobación, salvo que hayas activado el piloto automático, y eso es reversible por fuente."
+    },
+    "speed": {
+      "q": "¿Cuánto tardan en responder?",
+      "a": "Dentro de un día hábil, normalmente mucho antes. Te responderá la persona que construyó la app: no hay ningún guion de primer nivel entre tú y la solución."
+    }
+  }
+}

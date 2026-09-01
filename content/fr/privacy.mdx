@@ -1,0 +1,65 @@
+import { APP_NAME, SITE_NAME, SUPPORT_EMAIL } from "@/lib/constants";
+
+export const meta = {
+  title: "Politique de confidentialité",
+  updated: "2026-08-10",
+  draft: true,
+};
+
+## La version simple
+
+Nous exploitons ce site web et l'app {APP_NAME} pour Shopify. Le site ne
+collecte presque rien. L'app lit les images de vos produits et leur alt text via
+l'API Shopify, envoie les images à un fournisseur de modèles d'IA pour qu'elles
+soient décrites, puis réécrit l'alt text — avec votre approbation. Nous ne
+voyons ni ne stockons jamais les données personnelles de vos clients. Tout ce
+qui suit, c'est cela, en détail.
+
+## Ce site web
+
+- **Analyse d'audience.** Nous utilisons Vercel Analytics, sans cookies, qui
+  collecte des pages vues agrégées et des événements d'interaction anonymisés.
+  Aucun suivi inter-sites, aucun identifiant publicitaire, rien qui vous nomme.
+- **Formulaires et email.** Si vous nous écrivez ou rejoignez une liste
+  d'attente, nous conservons votre adresse et votre message pour vous répondre.
+  Nous ne les vendons pas, ne les partageons pas et ne les ajoutons pas à des
+  listes marketing que vous n'avez pas demandées.
+
+## L'app {APP_NAME}
+
+### Ce à quoi nous accédons
+
+Via l'API Shopify, avec les autorisations que vous accordez à l'installation :
+les images de vos produits, leur alt text actuel, les titres de produits et les
+références d'images de votre thème. C'est tout le périmètre — l'app ne demande
+aucun accès aux commandes, aux clients ni aux données de paiement.
+
+### Traitement par IA, dit clairement
+
+Pour rédiger une description, les images de vos produits sont envoyées à notre
+fournisseur de modèles d'IA, qui renvoie le texte. Les images ne sont
+transmises qu'à cette fin. Aucune donnée personnelle de client n'intervient à
+aucun moment : le modèle voit de la photographie de produit, rien d'autre.
+
+### Ce que nous stockons
+
+Les résultats d'analyse (niveau de couverture par image), l'alt text proposé et
+appliqué, ainsi que l'historique avant/après qui rend possible l'annulation
+pendant 30 jours. Nous stockons des références d'images, pas des copies de
+votre bibliothèque.
+
+### Conservation
+
+L'historique des modifications est conservé 30 jours pour permettre la
+restauration, puis supprimé. Si vous désinstallez, les données de l'app liées à
+votre boutique sont supprimées conformément aux webhooks obligatoires
+d'effacement de données de Shopify — dans les 48 heures suivant la demande de
+Shopify.
+
+## Vos droits et comment nous joindre
+
+Vous pouvez demander l'export ou l'effacement de toute donnée que nous détenons
+sur vous ou votre boutique — le RGPD et les cadres équivalents s'appliquent.
+Écrivez à <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a> et nous
+répondrons sous 30 jours, généralement bien plus vite. {SITE_NAME} est le
+responsable de traitement pour ce site.

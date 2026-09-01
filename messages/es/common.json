@@ -1,0 +1,25 @@
+{
+  "nav": {
+    "label": "Principal",
+    "apps": "Apps",
+    "services": "Servicios",
+    "blog": "Blog",
+    "scan": "Análisis gratis"
+  },
+  "footer": {
+    "label": "Pie de página",
+    "privacy": "Privacidad",
+    "support": "Soporte",
+    "contact": "Contacto",
+    "rights": "© {year} {siteName}. Todos los derechos reservados."
+  },
+  "skipToContent": "Saltar al contenido",
+  "localeSwitcher": {
+    "label": "Idioma"
+  },
+  "document": {
+    "fallbackNotice": "Este documento aún no está disponible en tu idioma, así que se muestra la versión en inglés.",
+    "draft": "Borrador — en revisión legal",
+    "updated": "Última actualización: {date, date, long}"
+  }
+}

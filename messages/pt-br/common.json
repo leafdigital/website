@@ -1,0 +1,25 @@
+{
+  "nav": {
+    "label": "Principal",
+    "apps": "Apps",
+    "services": "Serviços",
+    "blog": "Blog",
+    "scan": "Análise gratuita"
+  },
+  "footer": {
+    "label": "Rodapé",
+    "privacy": "Privacidade",
+    "support": "Suporte",
+    "contact": "Contato",
+    "rights": "© {year} {siteName}. Todos os direitos reservados."
+  },
+  "skipToContent": "Pular para o conteúdo",
+  "localeSwitcher": {
+    "label": "Idioma"
+  },
+  "document": {
+    "fallbackNotice": "Este documento ainda não está disponível no seu idioma, então a versão em inglês é exibida.",
+    "draft": "Rascunho — em revisão jurídica",
+    "updated": "Última atualização: {date, date, long}"
+  }
+}

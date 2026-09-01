@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "title": "Support",
+    "description": "Hilfe zu {appName} und allen Leaf-Apps: E-Mail-Support, Antworten zu Rückgängigmachen und Abrechnung und genau das, was unsere Apps anfassen — und was nicht."
+  },
+  "title": "Support",
+  "intro": "Steckst du fest, hast du eine Frage oder sieht etwas falsch aus? E-Mail ist der schnellste Weg — sie landet direkt bei dem Entwickler, der die App gebaut hat.",
+  "faqTitle": "Häufige Fragen",
+  "faq": {
+    "undo": {
+      "q": "Wie mache ich rückgängig, was die App geschrieben hat?",
+      "a": "Jeder gesetzte Alt-Text behält seinen Vorher- und Nachher-Stand 30 Tage lang. Öffne die App, suche das Bild (oder die Änderung in deiner Übersicht) und klicke auf Wiederherstellen — ein Klick, kein Support-Ticket nötig. Falls sich etwas nicht rückgängig machen lässt, schreib uns, und wir kümmern uns persönlich darum."
+    },
+    "billing": {
+      "q": "Wie funktioniert die Abrechnung?",
+      "a": "Die Abrechnung läuft über Shopify — feste Monatspreise mit Nutzungsgrenzen, keine Überraschungen nach Verbrauch. Bezahlte Tarife haben 14 Tage Testphase. Kündige jederzeit im Shopify-Admin; alles bereits Geschriebene bleibt in deinem Shop."
+    },
+    "scope": {
+      "q": "Was fassen Leaf-Apps in meinem Shop an?",
+      "a": "{appName} liest deine Produkt- und Theme-Bilder und schreibt genau eine Sache: das Alt-Feld. Kein Theme-Code, keine Produktinhalte, keine Bilder. Ohne deine Freigabe wird nichts geschrieben — es sei denn, du hast den Autopilot aktiviert, und auch das ist pro Quelle umkehrbar."
+    },
+    "speed": {
+      "q": "Wie schnell antwortet ihr?",
+      "a": "Innerhalb eines Werktags, meist deutlich schneller. Du bekommst eine Antwort von der Person, die die App gebaut hat — zwischen dir und der Lösung steht kein Erstsupport-Skript."
+    }
+  }
+}

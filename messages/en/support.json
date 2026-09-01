@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "title": "Support",
+    "description": "Get help with {appName} and every Leaf app: email support, undo and billing answers, and exactly what our apps do and don't touch."
+  },
+  "title": "Support",
+  "intro": "Stuck, curious, or something looks wrong? Email is the fastest path — it lands with the engineer who built the app.",
+  "faqTitle": "Frequent questions",
+  "faq": {
+    "undo": {
+      "q": "How do I undo something the app wrote?",
+      "a": "Every applied alt text keeps its before and after for 30 days. Open the app, find the image (or the change in your digest), and hit restore — one click, no support ticket needed. If anything resists undoing, email us and we'll fix it personally."
+    },
+    "billing": {
+      "q": "How does billing work?",
+      "a": "Billing runs through Shopify — flat monthly prices with usage caps, no metered surprises. Paid tiers carry a 14-day trial. Cancel from the Shopify admin at any time; everything already written stays in your store."
+    },
+    "scope": {
+      "q": "What do Leaf apps touch in my store?",
+      "a": "{appName} reads your product and theme images and writes one thing: the alt field. No theme code, no product content, no images. Nothing is written without your approval unless you've turned auto-pilot on — and that is reversible per source."
+    },
+    "speed": {
+      "q": "How fast do you answer?",
+      "a": "Within one business day, usually much faster. You'll get an answer from the person who built the app — there is no tier-one script between you and a fix."
+    }
+  }
+}

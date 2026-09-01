@@ -1,17 +1,24 @@
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { buttonVariants } from "@/components/ui/button";
 import { TrackedLink } from "@/components/analytics/tracked-link";
+import { Link } from "@/i18n/navigation";
 import { Container } from "./container";
 
+/**
+ * Hrefs are locale-relative: `Link` resolves `/apps` against the active locale,
+ * so a visitor on `/de` stays on `/de`.
+ */
 const nav = [
-  { href: "/apps", label: "Apps" },
+  { href: "/apps", key: "apps" },
   // Quiet door — sunset decision pending; link only, no page work this sweep.
-  { href: "/services", label: "Services" },
-  { href: "/blog", label: "Blog" },
-];
+  { href: "/services", key: "services" },
+  { href: "/blog", key: "blog" },
+] as const;
 
 export function Header() {
+  const t = useTranslations("common");
+
   return (
     <header className="border-border sticky top-0 z-50 border-b bg-white/85 backdrop-blur-xl">
       <Container className="flex h-16 items-center justify-between">
@@ -26,7 +33,7 @@ export function Header() {
             priority
           />
         </Link>
-        <nav aria-label="Main">
+        <nav aria-label={t("nav.label")}>
           <ul className="flex items-center gap-1 sm:gap-2">
             {nav.map((item) => (
               <li key={item.href}>
@@ -34,7 +41,7 @@ export function Header() {
                   href={item.href}
                   className="text-muted-foreground hover:text-foreground rounded-md px-2 py-2 text-sm sm:px-3"
                 >
-                  {item.label}
+                  {t(`nav.${item.key}`)}
                 </Link>
               </li>
             ))}
@@ -45,7 +52,7 @@ export function Header() {
                 eventProps={{ location: "header" }}
                 className={buttonVariants({ size: "sm" })}
               >
-                Free scan
+                {t("nav.scan")}
               </TrackedLink>
             </li>
           </ul>

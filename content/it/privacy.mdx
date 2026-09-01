@@ -1,0 +1,64 @@
+import { APP_NAME, SITE_NAME, SUPPORT_EMAIL } from "@/lib/constants";
+
+export const meta = {
+  title: "Informativa sulla privacy",
+  updated: "2026-08-10",
+  draft: true,
+};
+
+## La versione semplice
+
+Gestiamo questo sito web e l'app {APP_NAME} per Shopify. Il sito raccoglie
+quasi nulla. L'app legge le immagini dei tuoi prodotti e il loro alt text
+tramite l'API di Shopify, invia le immagini a un fornitore di modelli di IA
+perché vengano descritte e riscrive l'alt text — con la tua approvazione. Non
+vediamo né conserviamo mai i dati personali dei tuoi clienti. Tutto ciò che
+segue è questo, nel dettaglio.
+
+## Questo sito web
+
+- **Analisi.** Usiamo Vercel Analytics, che funziona senza cookie e raccoglie
+  visualizzazioni di pagina aggregate ed eventi di interazione anonimizzati.
+  Nessun tracciamento tra siti, nessun identificatore pubblicitario, nulla che
+  ti identifichi.
+- **Moduli ed email.** Se ci scrivi o ti iscrivi a una lista d'attesa,
+  conserviamo il tuo indirizzo e il tuo messaggio per risponderti. Non li
+  vendiamo, non li condividiamo e non li aggiungiamo a liste di marketing che
+  non hai richiesto.
+
+## L'app {APP_NAME}
+
+### A cosa accediamo
+
+Tramite l'API di Shopify, con i permessi che concedi in fase di installazione:
+le immagini dei tuoi prodotti, il loro alt text attuale, i titoli dei prodotti
+e i riferimenti alle immagini del tema. Questo è l'intero perimetro — l'app non
+richiede accesso a ordini, clienti o dati di pagamento.
+
+### Elaborazione con IA, detta chiaramente
+
+Per scrivere una descrizione, le immagini dei tuoi prodotti vengono inviate al
+nostro fornitore di modelli di IA, che restituisce il testo. Le immagini sono
+trasmesse solo per questa finalità. Nessun dato personale dei clienti è
+coinvolto in alcun momento: il modello vede fotografia di prodotto, nient'altro.
+
+### Cosa conserviamo
+
+I risultati delle scansioni (livello di copertura per immagine), l'alt text
+proposto e applicato e lo storico prima/dopo che rende possibile annullare per
+30 giorni. Conserviamo riferimenti alle immagini, non copie della tua libreria.
+
+### Conservazione
+
+Lo storico delle modifiche viene conservato per 30 giorni per consentire il
+ripristino, poi eliminato. Se disinstalli, i dati dell'app collegati al tuo
+negozio vengono cancellati in conformità ai webhook obbligatori di
+cancellazione dati di Shopify — entro 48 ore dalla richiesta di Shopify.
+
+## I tuoi diritti e come contattarci
+
+Puoi richiedere l'esportazione o la cancellazione di qualsiasi dato che
+deteniamo su di te o sul tuo negozio — si applicano il GDPR e quadri
+equivalenti. Scrivi a <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a> e
+risponderemo entro 30 giorni, di solito molto prima. {SITE_NAME} è il titolare
+del trattamento per questo sito.
