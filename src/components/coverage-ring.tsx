@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useFormatter } from "next-intl";
 import { cn } from "@/lib/utils";
 
 type CoverageRingProps = {
@@ -8,7 +9,12 @@ type CoverageRingProps = {
   covered: number;
   /** Total products scanned. */
   total: number;
-  label?: string;
+  /** The line under the ring. Comes from a message file, never a default. */
+  label: string;
+  /** "of 3,102" — the denominator line inside the ring, already formatted. */
+  totalLabel: string;
+  /** What a screen reader hears in place of the whole figure. */
+  ariaLabel: string;
   className?: string;
 };
 
@@ -31,9 +37,14 @@ function ease(t: number) {
 export function CoverageRing({
   covered,
   total,
-  label = "products have real alt text",
+  label,
+  totalLabel,
+  ariaLabel,
   className,
 }: CoverageRingProps) {
+  /* Locale-formatted, so the ticking number reads 2.451 in de and 2 451
+   * in fr — `toLocaleString()` with no locale would follow the browser. */
+  const format = useFormatter();
   const fraction = total > 0 ? covered / total : 0;
   const [progress, setProgress] = useState(0);
   const [started, setStarted] = useState(false);
@@ -81,7 +92,7 @@ export function CoverageRing({
       ref={rootRef}
       className={cn("flex flex-col items-center", className)}
       role="img"
-      aria-label={`${covered.toLocaleString()} of ${total.toLocaleString()} ${label}`}
+      aria-label={ariaLabel}
     >
       <div className="relative">
         <svg width="200" height="200" viewBox="0 0 200 200" aria-hidden="true">
@@ -111,10 +122,10 @@ export function CoverageRing({
           className="absolute inset-0 flex flex-col items-center justify-center"
         >
           <span className="font-mono text-4xl font-extrabold tracking-tight tabular-nums">
-            {shownCovered.toLocaleString()}
+            {format.number(shownCovered)}
           </span>
           <span className="text-ink-faint text-fine mt-1 font-mono tabular-nums">
-            of {total.toLocaleString()}
+            {totalLabel}
           </span>
         </div>
       </div>

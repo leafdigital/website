@@ -5,6 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { rememberLocaleChoice } from "@/i18n/locale-choice";
 import { routing, type Locale } from "@/i18n/routing";
+import { cn } from "@/lib/utils";
 
 /**
  * Endonyms — each language named in itself. Someone looking for Portuguese
@@ -20,7 +21,12 @@ const localeNames: Record<Locale, string> = {
   it: "Italiano",
 };
 
-export function LocaleSwitcher() {
+/** `dark` is the footer, which is the only place this currently renders. */
+export function LocaleSwitcher({
+  tone = "light",
+}: {
+  tone?: "light" | "dark";
+}) {
   const t = useTranslations("common");
   const locale = useLocale();
   const router = useRouter();
@@ -46,10 +52,17 @@ export function LocaleSwitcher() {
             router.replace(pathname, { locale: next });
           });
         }}
-        className="text-muted-foreground hover:text-foreground cursor-pointer rounded-lg bg-transparent py-1 text-sm transition-colors duration-150 disabled:opacity-50"
+        className={cn(
+          "cursor-pointer rounded-lg bg-transparent py-1 text-sm transition-colors duration-150 disabled:opacity-50",
+          tone === "dark"
+            ? "text-white/55 hover:text-white"
+            : "text-muted-foreground hover:text-foreground",
+        )}
       >
         {routing.locales.map((l) => (
-          <option key={l} value={l}>
+          /* Native options inherit the OS menu ground, not the footer's —
+           * so they need ink text regardless of the trigger's tone. */
+          <option key={l} value={l} className="text-ink">
             {localeNames[l]}
           </option>
         ))}

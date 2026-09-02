@@ -13,16 +13,24 @@ import { cn } from "@/lib/utils";
  */
 function PillBadge({
   className,
+  tone = "brand",
   asChild = false,
   ...props
-}: React.ComponentProps<"span"> & { asChild?: boolean }) {
+}: React.ComponentProps<"span"> & {
+  /** `neutral` for the lab apps: in the lab is a status, not an action. */
+  tone?: "brand" | "neutral";
+  asChild?: boolean;
+}) {
   const Comp = asChild ? Slot.Root : "span";
 
   return (
     <Comp
       data-slot="pill-badge"
       className={cn(
-        "border-brand-800/25 bg-brand-50/85 text-brand-900 text-fine inline-flex w-fit shrink-0 items-center gap-2 rounded-full border px-3.5 py-1.5 font-semibold",
+        "text-fine inline-flex w-fit shrink-0 items-center gap-2 rounded-full border px-4 py-1.5 font-medium",
+        tone === "brand"
+          ? "border-brand-800/25 bg-brand-50/85 text-brand-900"
+          : "border-hairline-strong text-muted-foreground bg-white/85",
         className,
       )}
       {...props}

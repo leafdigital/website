@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "title": "Dein Geld steckt im Lager fest",
+    "description": "Neun Apps prognostizieren deinen Shopify-Bestand. Keine einzige schickt die PO. Reorder Engine baut die fehlende letzte Meile — erst im Schattenlauf an deinen eigenen Bestellungen bewiesen."
+  },
+  "hero": {
+    "badge": "Reorder Engine · kommt bald · Warteliste offen",
+    "kicker": "Gefangenes Kapital killt Marken",
+    "headline": "Dein Geld steckt im <accent>Lager fest.</accent>",
+    "subhead": "Zu viel von den Ladenhütern, Ausverkauf bei den Bestsellern — und du bist es, der um 23 Uhr nachbestellt. Du hast keine Marke aufgebaut, um nachts Tabellen abzugleichen.",
+    "ctaPrimary": "Auf die Warteliste",
+    "ctaSecondary": "Wie Vertrauen verdient wird",
+    "finePrint": "Die ersten {spots, number} Shops bekommen Charter-Preise, lebenslang festgeschrieben."
+  },
+  "gap": {
+    "forecastCount": "{count, number}",
+    "forecast": "Apps prognostizieren deinen Bestand",
+    "sendCount": "{count, number}",
+    "send": "schicken die PO",
+    "caption": "Jeder Platzhirsch hört bei „empfehlen → Mensch klickt“ auf. Wir bauen die fehlende letzte Meile — sorgfältig."
+  },
+  "blind": {
+    "kicker": "Nachbestelltag",
+    "title": "Wo Gründer im Blindflug sind",
+    "cash": {
+      "label": "DIE KAPITALFALLE",
+      "statement": "Kapital vergraben in Ladenhütern, während Bestseller ausverkauft sind"
+    },
+    "spot": {
+      "label": "DER BLINDE FLECK",
+      "statement": "Die Tabelle unterscheidet „wenig Nachfrage“ nicht von „nichts zu verkaufen“"
+    },
+    "night": {
+      "label": "DER 23-UHR-JOB",
+      "statement": "Niemand schaut hin, wenn es kippt — außer dir, nachts"
+    }
+  },
+  "why": {
+    "title": "Warum schickt niemand die PO?",
+    "sub": "Weil eine PO echtes Geld bindet — und das braucht Vertrauen, das sich noch kein Prognose-Tool verdient hat. Also bauen wir zuerst das Vertrauen: Es beweist sich an deinen eigenen Bestellungen, im Schattenlauf, bevor es irgendetwas anfasst."
+  },
+  "ladder": {
+    "kicker": "Die Vertrauensleiter",
+    "title": "Autonomie wird verdient, nie vorausgesetzt",
+    "shadow": {
+      "title": "Schattenlauf",
+      "body": "30 Tage lang jede PO, die es geschickt hätte, dauerhaft protokolliert als Beweis — gegen deine echten Bestellungen, bevor es irgendetwas anfasst."
+    },
+    "approve": {
+      "title": "Freigeben",
+      "body": "Es entwirft die echte PO — MOQs, Staffelpreise, Kartonrundung. Du klickst auf Senden."
+    },
+    "autonomy": {
+      "title": "Autonomie verdienen",
+      "body": "Nur innerhalb der Grenzen, die du setzt, mit Sicherungen — und nur, wenn die Schattenlauf-Bilanz es rechtfertigt. Du behältst das Sagen."
+    },
+    "footer": "Audit → Freigabe → verdiente Autonomie. So arbeitet jede Leaf-App — und diese App am deutlichsten."
+  },
+  "cta": {
+    "title": "Auf die Warteliste. Lass es sich erst beweisen.",
+    "sub": "Eine Liste, alle kommenden Leaf-Apps — du stehst bei allen vorn. Die ersten {spots, number} Shops bekommen Charter-Preise, lebenslang festgeschrieben.",
+    "note": "Stumme Bilder lassen sich schon heute beheben. <link>Image Voice ist live — jetzt scannen →</link>"
+  }
+}

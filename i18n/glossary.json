@@ -1,6 +1,5 @@
 {
   "$comment": "Shared with the Shopify app UI and the App Store listing so the brand reads the same across all three surfaces. See docs/i18n.md §7.",
-
   "doNotTranslate": [
     "Leaf",
     "Leaf Digital",
@@ -9,14 +8,32 @@
     "App Store",
     "alt text",
     "ChatGPT",
-    "Vercel Analytics"
+    "Vercel Analytics",
+    "Image Voice",
+    "Hidden Margin",
+    "Reorder Engine",
+    "Audit",
+    "Keeper",
+    "Curator",
+    "Founding Curator",
+    "First Sweep",
+    "Charter",
+    "3PL",
+    "PO",
+    "SKU",
+    "HS code",
+    "COO",
+    "MOQ",
+    "EAA",
+    "ADA",
+    "SEO"
   ],
-
   "orthographyExceptions": {
     "$comment": "Do-not-translate terms that still take local orthography rather than staying verbatim.",
-    "alt text": { "de": "Alt-Text" }
+    "alt text": {
+      "de": "Alt-Text"
+    }
   },
-
   "translateConsistently": {
     "agentic shelf": {
       "es": "estantería agéntica",
@@ -54,15 +71,28 @@
       "it": "annullare"
     }
   },
-
   "critical": {
     "$comment": "Keys carrying the positioning. A model left alone smooths these into generic SaaS voice and nobody notices, because nobody here reads Italian. Translate these with a stricter brief; everything else ships unreviewed.",
     "keys": [
-      "common.nav.scan",
-      "home.hero.headline",
-      "home.hero.subhead",
-      "home.laws.*",
-      "altText.hero.*"
+      "common.nav.*",
+      "common.meta.*",
+      "og.*",
+      "home.hero.*",
+      "home.villain.*",
+      "home.suite.*",
+      "home.contrast.*",
+      "home.cta.*",
+      "imageVoice.hero.*",
+      "imageVoice.prices.*",
+      "imageVoice.checkbox.*",
+      "imageVoice.cta.*",
+      "hiddenMargin.hero.*",
+      "hiddenMargin.prices.*",
+      "hiddenMargin.someday.*",
+      "reorderEngine.hero.*",
+      "reorderEngine.blind.*",
+      "reorderEngine.why.*"
     ]
-  }
+  },
+  "doNotTranslate.$comment": "App and plan names are product names, not words: a merchant who reads about Curator in Italian has to recognise it in the Shopify billing screen, which is English. Same for the acronyms — they are the terms of art in every one of these markets."
 }

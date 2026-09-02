@@ -1,0 +1,187 @@
+{
+  "meta": {
+    "title": "Deine Bilder schweigen",
+    "description": "Stumme Bilder verkaufen nicht — nicht für Google, nicht für KI-Shopper, nicht für alle, die sie vorgelesen brauchen. Für immer kostenloser Audit, dann eine echte Beschreibung für jedes Bild in deinem Shopify-Shop."
+  },
+  "hero": {
+    "badge": "Live im Shopify App Store",
+    "headline": "Deine Bilder <accent>schweigen.</accent>",
+    "subhead": "<lead>{silent, number} deiner Bilder sagen nichts</lead> — nicht für Google, nicht für KI-Shopper, nicht für alle, die sie vorgelesen brauchen. Stumme Bilder verkaufen nicht.",
+    "ctaPrimary": "Kostenlosen Scan starten",
+    "ctaSecondary": "Preise ansehen",
+    "finePrint": "Für immer kostenloser Audit · Keine Kreditkarte · Nichts passiert ohne deine Freigabe"
+  },
+  "ring": {
+    "label": "deiner Bilder schweigen",
+    "total": "von {total, number}",
+    "aria": "{silent, number} von {total, number} deiner Bilder schweigen",
+    "caption": "Beispiel-Scan — deiner dauert Minuten, kostenlos."
+  },
+  "prices": {
+    "kicker": "Ein Gegner, drei Rechnungen",
+    "title": "Schweigen kostet dich dreifach",
+    "sub": "Ein Problem, drei Etagen tief. Beheb das Schweigen einmal, und alle drei Rechnungen hören auf.",
+    "traffic": {
+      "label": "VERLORENER TRAFFIC",
+      "statement": "Google überspringt sie",
+      "body": "Ein Bild ohne Beschreibung taucht in der Bildersuche nie auf. Der Traffic geht an den Shop nebenan, dessen Bilder sprechen."
+    },
+    "agentic": {
+      "label": "VERLORENE AGENTISCHE VERKÄUFE",
+      "statement": "KI-Shopper können sie nicht lesen",
+      "body": "Shopping-Agenten lesen deinen Katalog roh. Ein stummes Bild existiert für sie nicht — und damit auch das Produkt nicht."
+    },
+    "accessibility": {
+      "label": "BARRIEREFREIHEITS-RISIKO",
+      "statement": "Screenreader bekommen nichts",
+      "body": "Der EAA erfasst E-Commerce seit Juni 2025; ADA-Klagen treffen jedes Jahr Tausende US-Shops. Unlesbare Bilder sind deine sichtbarste Lücke."
+    }
+  },
+  "checkbox": {
+    "kicker": "Das Häkchen-Problem",
+    "title": "100 % Abdeckung, trotzdem stumm.",
+    "sub": "Jede aufgeblähte SEO-Suite hat ein Häkchen für Alt-Text. Ein Häkchen stopft Titel ins Alt-Feld und nennt es erledigt. So schreibt es nicht:",
+    "beforeLabel": "Vorher — „abgedeckt“",
+    "beforeOne": "alt=\"IMG_2041-final-v3.jpg\"",
+    "beforeTwo": "alt=\"herren bio t-shirt kaufen günstig bester preis versandkostenfrei SEO\"",
+    "beforeCaption": "Müll aus Dateinamen und Keyword-Stuffing. Zählt als 100 % Abdeckung — laut dem Tool, das es geschrieben hat.",
+    "afterLabel": "Nachher — Image Voice",
+    "afterCode": "alt=\"Moosgrünes T-Shirt aus Bio-Baumwolle, flach gefaltet, mit sichtbarem Rippkragen und gesticktem Blatt am Saum\"",
+    "afterCaption": "Jedes Bild wirklich angesehen. Pro Bild verschieden, ~125 Zeichen, beginnt nie mit „Bild von“.",
+    "closer": "Deshalb <lead>benotet der kostenlose Audit, statt zu zählen</lead>: fehlt / Müll / schwach / gut, mit einer bildgeprüften Stichprobe. Typisches Ergebnis: „62 von 100 abgedeckten Bildern beschreiben das Bild nicht.“"
+  },
+  "how": {
+    "kicker": "So funktioniert's",
+    "title": "Scannen. Schreiben. Sprechen.",
+    "scan": {
+      "title": "Scan",
+      "body": "Kostenlos, bei der Installation, ohne Einrichtung. Alle stummen Bilder in einer Zahl — benotet, nicht gezählt."
+    },
+    "write": {
+      "title": "Schreiben",
+      "body": "Jedes Bild wirklich angesehen. Freigeben, bearbeiten oder überspringen — in einer Tastatur-Queue, gebaut für 200 Entscheidungen am Stück."
+    },
+    "speak": {
+      "title": "Sprechen",
+      "body": "Autopilot, den du dir verdienst — angeboten erst, wenn deine eigene Freigabe-Bilanz ihn rechtfertigt. Danach wird jedes neue Bild Minuten nach dem Upload beschrieben, für immer."
+    },
+    "footer": "Audit → Freigabe → verdiente Autonomie. So arbeitet jede Leaf-App."
+  },
+  "benefits": {
+    "kicker": "Was du bekommst",
+    "title": "Was sich ändert, wenn deine Bilder nicht mehr schweigen",
+    "one": {
+      "title": "Du kennst die Wahrheit in Minuten — kostenlos, bevor du irgendetwas entscheidest.",
+      "body": "Vollständiger Scan bei der Installation, ohne Einrichtung. Die Zahl: „{silent, number} deiner Bilder schweigen.“"
+    },
+    "two": {
+      "title": "Du erfährst, was wirklich kaputt ist — nicht, was erledigt aussieht.",
+      "body": "Benotet, nicht gezählt: fehlt / Müll / schwach / gut, mit einer bildgeprüften Stichprobe. Kein „100 % Abdeckung“ täuscht dich mehr — weder deins noch das eines Konkurrenz-Tools."
+    },
+    "three": {
+      "title": "Texte, die du einen Kunden laut hören lassen würdest.",
+      "body": "Jedes Bild wirklich angesehen — nie aus Titeln oder Dateinamen erzeugt. Kein Spam-Geruch, nichts zum Fremdschämen, nichts, wofür Google dich abstraft."
+    },
+    "four": {
+      "title": "Deine Bilder sprechen die Sprache, in der deine Kunden einkaufen.",
+      "body": "Beschreibungen in der Sprache deines Shops — EN, DE, FR, ES, IT, NL, PT. Der Screenreader einer deutschen Kundin spricht Deutsch."
+    },
+    "five": {
+      "title": "Das Thema Barrierefreiheit: erledigt, bevor jemand fragt.",
+      "body": "EAA in der EU, ADA in den USA. Deine sichtbarste Lücke — Tausende unlesbare Bilder — geschlossen, mit einem Nachweis dafür."
+    },
+    "six": {
+      "title": "Du behältst die Kontrolle, ohne die Arbeit zu machen.",
+      "body": "Nichts fasst Shopify an, bevor du es sagst. Sammel-Freigabe, wenn du genug gesehen hast: „die restlichen {remaining, number} übernehmen?“ Dein ganzer Katalog geprüft, in einem Kaffee."
+    },
+    "seven": {
+      "title": "Es kann nichts schiefgehen, was du nicht siehst und rückgängig machen kannst.",
+      "body": "Jeder Schreibvorgang wird durch Zurücklesen geprüft. 30 Tage rückgängig machen, in jedem Tarif. Strukturell unfähig, etwas anderes als das Alt-Feld anzufassen — und Wörter, die ein Mensch geschrieben hat, überschreibt es nie."
+    },
+    "eight": {
+      "title": "Irgendwann denkst du nie wieder daran.",
+      "body": "Neues Produkt hochgeladen → in Minuten beschrieben. Eine Wochenübersicht statt einer To-do-Liste. Die Aufgabe verlässt deinen Kopf endgültig."
+    },
+    "nine": {
+      "title": "Die Qualität verfällt nicht, sobald du wegschaust.",
+      "body": "Wöchentliche Re-Scans halten die Zahl ehrlich; die Schreibqualität wird gegen ein Golden Set abgesichert. Was du am ersten Tag freigegeben hast, bekommst du auch im sechsten Monat."
+    },
+    "ten": {
+      "title": "Du trägst das Ergebnis.",
+      "body": "„Vollständig beschrieben seit 3. März“ — verdient, nicht gekauft, in jedem Tarif, auch im kostenlosen. Sichtbarer Beweis, dass du einen sauberen Shop führst."
+    },
+    "eleven": {
+      "title": "Du weißt genau, was du kaufst — und wir sagen dir, wenn wir es nicht sind.",
+      "body": "Lebenslang kostenlose Beschreibungen, um die Qualität an deinen eigenen Produkten zu beurteilen. Bezahlte Tarife räumen deinen Rückstand vorab ab — kein monatelanges Tröpfeln. Zu groß für unsere Tarife? Dann sagen wir es und bieten dir eine Warteliste an."
+    }
+  },
+  "pricing": {
+    "kicker": "Preise",
+    "title": "Die Magie passiert vor der Paywall",
+    "sub": "Beurteile die Texte an deinen eigenen Produkten, kostenlos, für immer. Wenn du buchst, schreibt der First Sweep deinen Rückstand vorab — das monatliche Kontingent hält danach nur noch neue Bilder abgedeckt.",
+    "period": "/Mon.",
+    "featured": "Voller Umfang",
+    "audit": {
+      "name": "Audit",
+      "price": "{amount, number, ::currency/USD precision-integer}",
+      "tagline": "Das erste Ja — kostenlos, für immer",
+      "one": "Vollständiger Bild-Audit und Abdeckungsbericht über deinen Katalog",
+      "two": "Einmalige Qualitätsnote für deinen bestehenden Alt-Text",
+      "three": "Ein Starterpaket an Produktbeschreibungen — beurteile die Texte an deinen eigenen Bildern",
+      "cta": "Kostenlosen Scan starten"
+    },
+    "keeper": {
+      "name": "Keeper",
+      "price": "{amount, number, ::currency/USD}",
+      "tagline": "Ganzer Katalog geschrieben — 14 Tage kostenlos testen",
+      "one": "Alles aus Audit",
+      "two": "<lead>First Sweep:</lead> dein Produktkatalog vorab geschrieben, nicht über Monate rationiert",
+      "three": "Monatliches Kontingent hält jedes neue Bild abgedeckt",
+      "four": "Autopilot: neue Bilder werden automatisch beschrieben — sobald du seinen Geschmack freigegeben hast",
+      "five": "Wöchentliche Fortschrittsübersicht in dein Postfach, von einem Menschen unterschrieben",
+      "cta": "Mit dem kostenlosen Scan starten"
+    },
+    "curator": {
+      "name": "Curator",
+      "price": "{amount, number, ::currency/USD}",
+      "tagline": "Der ganze Shop spricht — 14 Tage kostenlos testen",
+      "offerLabel": "Founding Curator",
+      "offer": "Die <lead>ersten {spots, number} Händler</lead> bekommen Curator <lead>lebenslang zum halben Preis</lead> — {price, number, ::currency/USD}/Mon., und der Titel bleibt deiner.",
+      "one": "Alles aus Keeper",
+      "two": "<lead>First Sweep deckt den ganzen Shop ab</lead> — Theme inklusive, mit der höchsten Sweep-Obergrenze",
+      "three": "Theme-Bilder beschrieben — Banner, Slider, Sektionsbilder, nicht nur Produkte",
+      "four": "Der meiste Spielraum für die Pflege aktiver Kataloge",
+      "cta": "Mit dem kostenlosen Scan starten"
+    },
+    "footer": "Stumme Bilder sind eins von sieben Lecks. <link>Die Leaf-Suite findet die anderen sechs →</link>"
+  },
+  "faq": {
+    "kicker": "Due Diligence",
+    "title": "Die Fragen, die wir auch stellen würden",
+    "breakStore": {
+      "q": "Kann es meinen Shop kaputt machen?",
+      "a": "Nein. Es ist strukturell unfähig, etwas anderes als das Alt-Feld anzufassen, jeder Schreibvorgang wird durch Zurücklesen geprüft, und jede Änderung lässt sich in jedem Tarif 30 Tage lang rückgängig machen — mit vollständiger Vorher → Nachher-Spur. Wörter, die ein Mensch geschrieben hat, überschreibt es nie, und Bilder aus den Theme-Einstellungen, an die es nicht herankommt, werden mit einem Deeplink markiert, statt still zu scheitern."
+    },
+    "compliance": {
+      "q": "Macht mich das EAA- und ADA-konform?",
+      "a": "Das kann kein Tool versprechen, und wir tun es nicht. Was es tut: Es schließt deine sichtbarste Lücke — Tausende unlesbare Bilder — mit einem Nachweis dafür. Der EAA erfasst E-Commerce in der EU seit Juni 2025; ADA-Klagen treffen jedes Jahr Tausende US-Shops."
+    },
+    "spam": {
+      "q": "Ist KI-Alt-Text nicht Spam?",
+      "a": "Der Spam-Ruf kommt von Tools, die Text aus Titeln und Dateinamen erzeugen. Image Voice sieht sich jedes einzelne Bild an. Beschreibungen sind pro Bild verschieden, rund 125 Zeichen lang und beginnen nie mit „Bild von“. Beurteile es kostenlos an deinen eigenen Produkten, bevor du irgendetwas bezahlst."
+    },
+    "languages": {
+      "q": "In welchen Sprachen schreibt es?",
+      "a": "In der Sprache deines Shops: Englisch, Deutsch, Französisch, Spanisch, Italienisch, Niederländisch und Portugiesisch. Dein Bild-SEO wirkt in deinem Markt — und der Screenreader einer deutschen Kundin spricht Deutsch."
+    },
+    "howLong": {
+      "q": "Wie lange dauert es, bis mein ganzer Katalog beschrieben ist?",
+      "a": "Tage, nicht Monate. Bezahlte Tarife enthalten einen First Sweep, der deinen bestehenden Rückstand vorab schreibt — das monatliche Kontingent muss nur noch mit neuen Bildern mithalten. Während der kostenlosen Testphase bekommst du einen Probe-Sweep deiner besten Bilder; der volle Sweep läuft an dem Tag, an dem deine Testphase übergeht. Und wenn dein Shop größer ist, als unsere Tarife gut abdecken, sagen wir es, bevor du zahlst, und bieten dir eine Lösung direkt vom Gründer an, statt dein Geld zu nehmen."
+    }
+  },
+  "cta": {
+    "title": "Kostenlosen Scan starten. Deine Zahl sehen.",
+    "sub": "Für immer kostenlos. Keine Kreditkarte. Deine stummen Bilder in einer Zahl, in Minuten — benotet, nicht gezählt.",
+    "button": "Im Shopify App Store installieren"
+  }
+}

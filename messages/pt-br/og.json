@@ -1,9 +1,17 @@
 {
   "site": {
-    "title": "O trabalho que sua loja precisa — feito, e feito direito."
+    "title": "Seu dinheiro está escondido."
   },
-  "altText": {
-    "title": "{needsAttention, number} das suas imagens podem não estar dizendo nada",
-    "kicker": "Alt text, de fato olhado"
+  "imageVoice": {
+    "kicker": "Image Voice",
+    "title": "{silent, number} das suas imagens não dizem nada"
+  },
+  "hiddenMargin": {
+    "kicker": "Hidden Margin",
+    "title": "Seu catálogo tem buracos."
+  },
+  "reorderEngine": {
+    "kicker": "Reorder Engine",
+    "title": "Seu caixa está preso no estoque."
   }
 }

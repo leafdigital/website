@@ -1,0 +1,187 @@
+{
+  "meta": {
+    "title": "Tus imágenes están mudas",
+    "description": "Las imágenes mudas no venden — ni a Google, ni a los compradores de IA, ni a quien necesita que se las lean en voz alta. Auditoría gratis para siempre y, después, una descripción real para cada imagen de tu tienda Shopify."
+  },
+  "hero": {
+    "badge": "Ya en la Shopify App Store",
+    "headline": "Tus imágenes están <accent>mudas.</accent>",
+    "subhead": "<lead>{silent, number} de tus imágenes no dicen nada</lead> — ni a Google, ni a los compradores de IA, ni a quien necesita que se las lean en voz alta. Las imágenes mudas no venden.",
+    "ctaPrimary": "Hacer el análisis gratis",
+    "ctaSecondary": "Ver precios",
+    "finePrint": "Auditoría gratis para siempre · Sin tarjeta · Nada toca tu tienda hasta que lo apruebes"
+  },
+  "ring": {
+    "label": "de tus imágenes están mudas",
+    "total": "de {total, number}",
+    "aria": "{silent, number} de {total, number} de tus imágenes están mudas",
+    "caption": "Análisis de ejemplo — el tuyo tarda minutos y es gratis."
+  },
+  "prices": {
+    "kicker": "Un villano, tres precios",
+    "title": "El silencio te cobra tres veces",
+    "sub": "Un solo problema, apilado tres veces. Arregla el silencio una vez y dejan de llegar las tres facturas.",
+    "traffic": {
+      "label": "TRÁFICO PERDIDO",
+      "statement": "Google se las salta",
+      "body": "Una imagen sin descripción nunca entra en la búsqueda de imágenes. Ese tráfico se va a la tienda de al lado, cuyas fotos sí hablan."
+    },
+    "agentic": {
+      "label": "VENTAS AGÉNTICAS PERDIDAS",
+      "statement": "Los compradores de IA no las pueden leer",
+      "body": "Los agentes de compra recorren tu catálogo en crudo. Para ellos, una imagen muda no existe — y el producto tampoco."
+    },
+    "accessibility": {
+      "label": "RIESGO DE ACCESIBILIDAD",
+      "statement": "Los lectores de pantalla no reciben nada",
+      "body": "La EAA incluye el ecommerce desde junio de 2025; las demandas por ADA alcanzan cada año a miles de tiendas en EE. UU. Tus imágenes ilegibles son tu punto débil más visible."
+    }
+  },
+  "checkbox": {
+    "kicker": "El problema de la casilla",
+    "title": "100% de cobertura, y siguen mudas.",
+    "sub": "Toda suite de SEO inflada trae su casilla de alt text. Una casilla mete los títulos en el campo alt y da el trabajo por hecho. No escribe así:",
+    "beforeLabel": "Antes — “cubierto”",
+    "beforeOne": "alt=\"IMG_2041-final-v3.jpg\"",
+    "beforeTwo": "alt=\"comprar camiseta organica hombre barata mejor precio envio gratis SEO\"",
+    "beforeCaption": "Basura sacada de nombres de archivo y de meter palabras clave a presión. Contado como 100% de cobertura — por la misma herramienta que lo escribió.",
+    "afterLabel": "Después — Image Voice",
+    "afterCode": "alt=\"Camiseta de algodón orgánico verde musgo doblada en plano, con el cuello acanalado y una hoja bordada en el bajo\"",
+    "afterCaption": "Cada imagen mirada de verdad. Distinta en cada imagen, ~125 caracteres, y nunca empieza por “imagen de”.",
+    "closer": "Por eso la auditoría gratuita <lead>califica en vez de contar</lead>: falta / basura / floja / buena, con una muestra verificada por visión. Resultado típico: “62 de 100 imágenes cubiertas no describen la imagen”."
+  },
+  "how": {
+    "kicker": "Cómo funciona",
+    "title": "Analiza. Escribe. Habla.",
+    "scan": {
+      "title": "Analiza",
+      "body": "Gratis, nada más instalar, sin configuración. Tu recuento de imágenes mudas en un número — calificado, no contado."
+    },
+    "write": {
+      "title": "Escribe",
+      "body": "Cada imagen mirada de verdad. Aprueba, edita o salta desde una cola de teclado hecha para 200 decisiones de una sentada."
+    },
+    "speak": {
+      "title": "Habla",
+      "body": "Un piloto automático que te ganas — solo se te ofrece cuando tu propio historial de aprobaciones lo justifica. A partir de ahí, cada imagen nueva queda descrita a los pocos minutos de subirla, para siempre."
+    },
+    "footer": "Auditoría → aprobación → autonomía ganada. Así funciona cada app de Leaf."
+  },
+  "benefits": {
+    "kicker": "Lo que te llevas",
+    "title": "Qué cambia cuando tus imágenes dejan de estar mudas",
+    "one": {
+      "title": "Sabrás la verdad en minutos — gratis, antes de decidir nada.",
+      "body": "Análisis completo al instalar, sin configuración. El número: “{silent, number} de tus imágenes están mudas”."
+    },
+    "two": {
+      "title": "Descubrirás qué está roto de verdad — no lo que parece hecho.",
+      "body": "Calificado, no contado: falta / basura / floja / buena, con una muestra verificada por visión. Dejas de tragarte el “100% de cobertura” — el tuyo o el de la herramienta de la competencia."
+    },
+    "three": {
+      "title": "Textos que dejarías que un cliente escuchara en voz alta.",
+      "body": "Cada imagen mirada de verdad — nunca generada a partir de títulos o nombres de archivo. Sin olor a spam, sin nada que te avergüence, sin nada que Google pueda penalizar."
+    },
+    "four": {
+      "title": "Tus imágenes hablan el idioma en el que compran tus clientes.",
+      "body": "Descripciones escritas en el idioma de tu tienda — EN, DE, FR, ES, IT, NL, PT. El lector de pantalla de un cliente alemán habla alemán."
+    },
+    "five": {
+      "title": "La casilla de accesibilidad: cerrada antes de que nadie venga a preguntar.",
+      "body": "EAA en la UE, ADA en EE. UU. Tu punto débil más visible — miles de imágenes ilegibles — cerrado, y con un registro de auditoría que lo demuestra."
+    },
+    "six": {
+      "title": "Mantienes el control sin hacer el trabajo.",
+      "body": "Nada toca Shopify hasta que tú lo digas. Aplica en bloque cuando hayas visto suficiente: “¿aplico las {remaining, number} restantes?”. Todo tu catálogo revisado en un café."
+    },
+    "seven": {
+      "title": "No puede salir nada mal que no puedas ver y deshacer.",
+      "body": "Cada escritura se verifica releyéndola. 30 días para deshacer, en todos los planes. Estructuralmente incapaz de tocar nada que no sea el campo alt, y nunca sobrescribe palabras escritas por una persona."
+    },
+    "eight": {
+      "title": "Al final, dejas de pensar en ello.",
+      "body": "Producto nuevo subido → descrito en minutos. Un resumen semanal en vez de una lista de tareas. El tema se te va de la cabeza para siempre."
+    },
+    "nine": {
+      "title": "La calidad no se pudre cuando dejas de vigilar.",
+      "body": "Los reanálisis semanales mantienen el número real; la calidad de escritura se contrasta contra un conjunto de referencia. Lo que aprobaste el primer día es lo que tienes en el sexto mes."
+    },
+    "ten": {
+      "title": "Lo llevarás puesto.",
+      "body": "“Totalmente descrito desde el 3 de marzo” — ganado, no comprado, en todos los planes, incluido el gratuito. Prueba visible de que llevas una tienda impecable."
+    },
+    "eleven": {
+      "title": "Sabrás exactamente qué estás comprando — y te diremos si no somos lo tuyo.",
+      "body": "Descripciones gratis de por vida para juzgar la calidad en tus propios productos. Los planes de pago barren todo lo pendiente de entrada — sin goteo de meses. ¿Demasiado grande para nuestros planes? Te lo decimos y te ofrecemos una lista de espera."
+    }
+  },
+  "pricing": {
+    "kicker": "Precios",
+    "title": "La magia ocurre antes del muro de pago",
+    "sub": "Juzga los textos en tus propios productos, gratis y para siempre. Cuando te suscribes, el First Sweep escribe de entrada todo lo pendiente — la cuota mensual solo se encarga de que las imágenes nuevas sigan cubiertas.",
+    "period": "/mes",
+    "featured": "Alcance total",
+    "audit": {
+      "name": "Audit",
+      "price": "{amount, number, ::currency/USD precision-integer}",
+      "tagline": "El primer sí — gratis, para siempre",
+      "one": "Auditoría completa de imágenes e informe de cobertura de todo tu catálogo",
+      "two": "Calificación única de la calidad de tu alt text actual",
+      "three": "Un lote inicial de descripciones de producto — juzga los textos con tus propias imágenes",
+      "cta": "Hacer el análisis gratis"
+    },
+    "keeper": {
+      "name": "Keeper",
+      "price": "{amount, number, ::currency/USD}",
+      "tagline": "Catálogo entero escrito — 14 días de prueba gratis",
+      "one": "Todo lo de Audit",
+      "two": "<lead>First Sweep:</lead> tu catálogo de productos escrito de entrada, no racionado durante meses",
+      "three": "La cuota mensual mantiene cubierta cada imagen nueva",
+      "four": "Piloto automático: las imágenes nuevas se describen solas — en cuanto has aprobado su criterio",
+      "five": "Resumen semanal de avances en tu bandeja, firmado por una persona",
+      "cta": "Empezar con el análisis gratis"
+    },
+    "curator": {
+      "name": "Curator",
+      "price": "{amount, number, ::currency/USD}",
+      "tagline": "Toda la tienda habla — 14 días de prueba gratis",
+      "offerLabel": "Founding Curator",
+      "offer": "Los <lead>primeros {spots, number} comercios</lead> se llevan Curator a <lead>mitad de precio, de por vida</lead> — {price, number, ::currency/USD}/mes, y el título se queda contigo.",
+      "one": "Todo lo de Keeper",
+      "two": "<lead>El First Sweep cubre toda la tienda</lead> — tema incluido, con el techo de barrido más alto",
+      "three": "Imágenes del tema descritas — banners, sliders, imágenes de sección, no solo productos",
+      "four": "El mayor margen de mantenimiento, para catálogos activos",
+      "cta": "Empezar con el análisis gratis"
+    },
+    "footer": "Las imágenes mudas son una de siete fugas. <link>La suite de Leaf encuentra las otras seis →</link>"
+  },
+  "faq": {
+    "kicker": "Antes de fiarte",
+    "title": "Las preguntas que nosotros también haríamos",
+    "breakStore": {
+      "q": "¿Puede romper mi tienda?",
+      "a": "No. Es estructuralmente incapaz de tocar nada que no sea el campo alt, cada escritura se verifica releyéndola y cada cambio tiene 30 días para deshacerse, en todos los planes — con el rastro completo de antes → después. Nunca sobrescribe palabras escritas por una persona, y las imágenes de la configuración del tema a las que no llega se marcan con un enlace directo en vez de fallar en silencio."
+    },
+    "compliance": {
+      "q": "¿Esto me hace cumplir la EAA / ADA?",
+      "a": "Ninguna herramienta puede prometerlo, y nosotros no lo vamos a hacer. Lo que sí hace es cerrar tu punto débil más visible — miles de imágenes ilegibles — con un registro de auditoría que lo demuestra. La EAA incluye el ecommerce desde junio de 2025 en la UE; las demandas por ADA alcanzan cada año a miles de tiendas en EE. UU."
+    },
+    "spam": {
+      "q": "¿El alt text con IA no es spam?",
+      "a": "La fama de spam viene de herramientas que generan el texto a partir de títulos y nombres de archivo. Image Voice mira cada imagen. Las descripciones son distintas en cada una, rondan los 125 caracteres y nunca empiezan por “imagen de”. Júzgalo gratis en tus propios productos antes de pagar nada."
+    },
+    "languages": {
+      "q": "¿En qué idiomas escribe?",
+      "a": "En el idioma de tu tienda: inglés, alemán, francés, español, italiano, neerlandés y portugués. Tu SEO de imágenes funciona en tu mercado — y el lector de pantalla de un cliente alemán habla alemán."
+    },
+    "howLong": {
+      "q": "¿Cuánto tarda en quedar descrito todo mi catálogo?",
+      "a": "Días, no meses. Los planes de pago incluyen un First Sweep que escribe de entrada todo lo que tienes pendiente — la cuota mensual solo tiene que seguirle el ritmo a las imágenes nuevas. Durante la prueba gratuita recibes un barrido de muestra con tus mejores imágenes; el barrido completo se lanza el día que la prueba se convierte. Y si tu tienda se sale de lo que nuestros planes cubren bien, te lo decimos antes de que pagues y te ofrecemos una opción atendida por el fundador en vez de quedarnos con tu dinero."
+    }
+  },
+  "cta": {
+    "title": "Haz el análisis gratis. Mira tu número.",
+    "sub": "Gratis para siempre. Sin tarjeta. Tu recuento de imágenes mudas en minutos — calificado, no contado.",
+    "button": "Instalar desde la Shopify App Store"
+  }
+}

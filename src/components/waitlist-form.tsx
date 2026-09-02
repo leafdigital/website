@@ -1,25 +1,23 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { useTranslations } from "next-intl";
 import { trackCta } from "@/lib/analytics";
-import { cn } from "@/lib/utils";
 
 type Status = "idle" | "sending" | "done" | "error";
 
-const CHOICES = ["Both", "Catalog Readiness", "AI Answer Accuracy"] as const;
-
 /**
- * The early-access form — one instance, in the homepage's bottom CTA
- * section (lab cards link here; no inline inputs on cards). One field, an
- * app choice, honest promise, first-person button (tested pattern).
+ * One list, every app. The form takes an email and nothing else — a choice
+ * of app would imply separate lists, and there is exactly one (see the API
+ * route). `source` is which page it was submitted from, for the inbox.
+ *
+ * It only ever renders on the dark CTA band, so the styling is on-dark:
+ * near-white input, white button, white status line.
  */
-export function WaitlistForm() {
+export function WaitlistForm({ source }: { source: string }) {
+  const t = useTranslations("common.waitlist");
   const [email, setEmail] = useState("");
-  const [app, setApp] = useState<(typeof CHOICES)[number]>("Both");
   const [status, setStatus] = useState<Status>("idle");
-  const [message, setMessage] = useState("");
 
   async function submit(event: React.FormEvent) {
     event.preventDefault();
@@ -28,87 +26,63 @@ export function WaitlistForm() {
       const res = await fetch("/api/waitlist", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, app }),
+        body: JSON.stringify({ email, source }),
       });
-      const data = (await res.json()) as { error?: string };
       if (!res.ok) {
-        setMessage(data.error ?? "Something went wrong — try again?");
         setStatus("error");
         return;
       }
-      trackCta("cta_waitlist_join", { app });
+      trackCta("cta_waitlist_join", { source });
       setStatus("done");
     } catch {
-      setMessage("Something went wrong — try again?");
       setStatus("error");
     }
   }
 
   if (status === "done") {
     return (
-      <p className="text-brand-800 font-semibold" role="status">
-        You’re on the list. We only write when there’s something to try.
+      <p className="text-on-dark font-semibold" role="status">
+        {t("joined")}
       </p>
     );
   }
 
   return (
-    <form onSubmit={submit} className="mx-auto flex max-w-md flex-col gap-4">
-      <fieldset>
-        <legend className="sr-only">Which app are you interested in?</legend>
-        <div className="flex flex-wrap justify-center gap-2">
-          {CHOICES.map((choice) => (
-            <label
-              key={choice}
-              className={cn(
-                "cursor-pointer rounded-full border px-4 py-1.5 text-sm font-semibold transition-colors duration-150",
-                app === choice
-                  ? "border-brand-800 bg-brand-800 text-white"
-                  : "border-hairline-strong text-muted-foreground hover:text-foreground",
-              )}
-            >
-              <input
-                type="radio"
-                name="app"
-                value={choice}
-                checked={app === choice}
-                onChange={() => setApp(choice)}
-                className="sr-only"
-              />
-              {choice}
-            </label>
-          ))}
-        </div>
-      </fieldset>
-      {/* Honeypot — hidden from real visitors, tempting to bots. */}
-      <input
-        type="text"
-        name="company"
-        tabIndex={-1}
-        autoComplete="off"
-        aria-hidden="true"
-        className="hidden"
-      />
+    <form onSubmit={submit} className="w-full max-w-[440px]">
       <div className="flex gap-2">
+        {/* Honeypot — hidden from real visitors, tempting to bots. */}
+        <input
+          type="text"
+          name="company"
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+          className="hidden"
+        />
         <label htmlFor="waitlist-email" className="sr-only">
-          Email for early access
+          {t("emailLabel")}
         </label>
-        <Input
+        <input
           id="waitlist-email"
           type="email"
           required
-          placeholder="you@yourstore.com"
+          placeholder={t("placeholder")}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           disabled={status === "sending"}
+          className="text-ink h-[50px] min-w-0 flex-1 rounded-lg border border-white/25 bg-white/95 px-4 text-[15px] outline-none focus:border-white focus:ring-3 focus:ring-white/25 disabled:opacity-60"
         />
-        <Button type="submit" disabled={status === "sending"}>
-          {status === "sending" ? "Joining…" : "Get early access"}
-        </Button>
+        <button
+          type="submit"
+          disabled={status === "sending"}
+          className="text-brand-900 shadow-on-dark h-[50px] shrink-0 rounded-lg bg-white px-[22px] text-[15px] font-bold transition-[transform,box-shadow] duration-200 hover:-translate-y-px focus-visible:ring-3 focus-visible:ring-white/40 focus-visible:outline-none disabled:opacity-60"
+        >
+          {status === "sending" ? t("sending") : t("submit")}
+        </button>
       </div>
       {status === "error" ? (
-        <p className="text-destructive text-fine" role="alert">
-          {message}
+        <p className="mt-3 text-sm text-white/80" role="alert">
+          {t("error")}
         </p>
       ) : null}
     </form>

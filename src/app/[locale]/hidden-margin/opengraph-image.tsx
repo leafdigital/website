@@ -1,12 +1,15 @@
 import { getTranslations } from "next-intl/server";
 import { OG_SIZE, renderOgImage } from "@/lib/og";
 import { routing } from "@/i18n/routing";
-import { MIRROR } from "@/lib/constants";
 
 export const size = OG_SIZE;
 export const contentType = "image/png";
-/** Static by Next's contract — see the note in the root OG route. */
-export const alt = `${MIRROR.needsAttention} of ${MIRROR.total} images need attention — scan your Shopify store free`;
+/**
+ * Next requires `alt` to be a static export, so it stays English while the
+ * card itself is localized. It is the fallback description on the social
+ * card, not the card's visible copy.
+ */
+export const alt = "Hidden Margin — your catalog has holes";
 
 /** One card per locale, prerendered. */
 export function generateStaticParams() {
@@ -22,11 +25,7 @@ export default async function OgImage({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "og" });
   return renderOgImage({
-    /**
-     * MIRROR passes as a raw integer: en renders "1,847", de "1.847",
-     * fr "1 847". The separator is never written into a translated string.
-     */
-    title: t("altText.title", { needsAttention: MIRROR.needsAttention }),
-    kicker: t("altText.kicker"),
+    kicker: t("hiddenMargin.kicker"),
+    title: t("hiddenMargin.title"),
   });
 }

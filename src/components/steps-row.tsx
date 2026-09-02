@@ -24,26 +24,30 @@ export function StepsRow({
   className?: string;
 }) {
   return (
-    <ol className={cn("grid gap-10 md:grid-cols-3 md:gap-0", className)}>
+    <ol className={cn("grid gap-8 md:grid-cols-3 md:gap-0", className)}>
       {steps.map((step, i) => (
         <li
           key={step.title}
           /* The rule between columns is the layout — no card, no gap. */
-          className="border-border md:border-l md:px-10 md:first:border-l-0 md:first:pl-0"
+          /* Top border on mobile, left border from md up: the rule always
+           * runs between two steps, never around one. */
+          className="border-hairline border-t pt-8 first:border-t-0 first:pt-0 md:border-t-0 md:border-l md:px-10 md:pt-0 md:first:border-l-0 md:first:pl-0"
         >
           <span
             aria-hidden="true"
             className={cn(
-              "text-h3 flex size-11 items-center justify-center rounded-lg font-mono tabular-nums",
+              "flex size-11 items-center justify-center rounded-lg text-[17px] font-bold",
               i === 0
-                ? "bg-primary text-primary-foreground"
+                ? "bg-primary text-primary-foreground shadow-[0_4px_14px_rgb(46_125_50/0.3)]"
                 : "bg-brand-50 text-brand-800",
             )}
           >
             {i + 1}
           </span>
-          <Heading className="text-h3 mt-5">{step.title}</Heading>
-          <p className="text-muted-foreground mt-2 leading-[1.65]">
+          <Heading className="mt-3.5 text-[21px] tracking-[-0.01em]">
+            {step.title}
+          </Heading>
+          <p className="text-muted-foreground mt-3.5 leading-[1.6]">
             {step.body}
           </p>
         </li>

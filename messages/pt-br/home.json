@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "title": "Seu dinheiro está escondido",
+    "description": "Seu Shopify, seu 3PL e sua planilha contam três histórias diferentes. A Leaf faz apps pequenos e afiados para Shopify que encontram o dinheiro escondido nas brechas — e depois fazem o trabalho."
+  },
+  "hero": {
+    "badge": "O Image Voice já está na Shopify App Store",
+    "headline": "Seu dinheiro<br></br>está <accent>escondido.</accent>",
+    "subhead": "Seu Shopify, seu 3PL e sua planilha contam três histórias diferentes. E o dinheiro se esconde nas brechas.",
+    "ctaPrimary": "Analisar minha loja de graça",
+    "ctaSecondary": "Ver os apps",
+    "finePrint": "Análise gratuita para sempre · Sem cartão de crédito · Seu número em minutos"
+  },
+  "inventory": {
+    "title": "Estoque disponível · mesmos SKUs, mesmo dia",
+    "shopify": "Shopify",
+    "threePl": "Seu 3PL",
+    "spreadsheet": "Sua planilha",
+    "units": "{count, number} unidades",
+    "gap": "A diferença",
+    "gapValue": "{units, number} unidades · ~{dollars, number, ::currency/USD precision-integer}",
+    "caption": "Dados de exemplo — sua análise é feita a partir da sua loja."
+  },
+  "villain": {
+    "kicker": "Soa familiar?",
+    "title": "Você abre três painéis e ainda não sabe qual número é o real.",
+    "sub": "Você não criou uma marca para isso. A falha nunca está numa função — está nas emendas. Ninguém tem o mapa inteiro, então o dinheiro se esconde entre os sistemas.",
+    "one": "Caixa travado em estoque que ninguém queria ter comprado",
+    "two": "Vendas perdidas por ruptura que sistema nenhum registra",
+    "three": "Ondas de reembolso batendo com adiantamentos de PO que você não vê chegar",
+    "four": "Falhas de sincronização descobertas meses tarde demais",
+    "closer": "Tudo o que é caro é invisível. Esse é o vilão — e é por isso que nenhum painel sozinho jamais pegou isso."
+  },
+  "plan": {
+    "kicker": "O plano",
+    "title": "Três passos entre você e o dinheiro escondido",
+    "connect": {
+      "title": "Conectar",
+      "body": "A Leaf liga seus sistemas e mostra, em dinheiro, onde eles se contradizem. Sem opiniões — aritmética."
+    },
+    "shadow": {
+      "title": "Sombra",
+      "body": "30 dias de “é exatamente isto que eu teria feito”. Dinheiro recuperado, prova no papel — sua loja é o estudo de caso."
+    },
+    "run": {
+      "title": "Deixar rodar",
+      "body": "Aprovações em um clique, depois você define seu limite e recupera seu tempo. Autonomia se conquista, nunca se pressupõe."
+    }
+  },
+  "suite": {
+    "kicker": "A suíte",
+    "title": "O plano, na prática",
+    "sub": "Apps pequenos e afiados. Cada um encontra dinheiro numa emenda específica — e depois faz o trabalho sozinho.",
+    "live": "NO AR",
+    "lab": "NO LABORATÓRIO",
+    "imageVoice": {
+      "description": "Suas imagens são mudas — para o Google, para os compradores de IA, para os leitores de tela. Análise gratuita e uma descrição de verdade para cada imagem.",
+      "cta": "Ver o app →"
+    },
+    "hiddenMargin": {
+      "description": "Margem escondida mata negócio. Seu catálogo tem buracos — custos, HS codes e países de origem faltando. Uma nota de prontidão, com cada buraco precificado em dinheiro.",
+      "cta": "Entrar na lista de espera →"
+    },
+    "reorderEngine": {
+      "description": "Nove apps preveem seu estoque. Nenhum envia o PO. Estamos construindo o último quilômetro que falta — provado em modo sombra primeiro.",
+      "cta": "Entrar na lista de espera →"
+    }
+  },
+  "contrast": {
+    "withoutLabel": "Sem a Leaf",
+    "withoutBody": "O trimestre termina como sempre termina: “para onde foi o dinheiro?” Mais uma noite de planilhas, mais um conjunto de números que não fecham.",
+    "withLabel": "Com a Leaf",
+    "withBody": "Você abre um email por semana, vê os números fecharem e volta a construir aquilo que te fez abrir a empresa."
+  },
+  "cta": {
+    "title": "Instale o analisador gratuito. Veja o que está escondido.",
+    "sub": "Não vamos te mostrar os números de outra pessoa. Vamos mostrar os seus — de graça, em minutos, antes de você decidir qualquer coisa.",
+    "button": "Rodar a análise gratuita",
+    "note": "Hidden Margin e Reorder Engine estão no laboratório. <link>Entre na lista de espera →</link>"
+  }
+}

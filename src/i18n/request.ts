@@ -6,7 +6,15 @@ import { isLocale, routing } from "./routing";
  * (docs/i18n.md §4) and merged here, so `useTranslations("support")` reads
  * `messages/{locale}/support.json`.
  */
-const namespaces = ["common", "og", "support"] as const;
+const namespaces = [
+  "common",
+  "og",
+  "support",
+  "home",
+  "imageVoice",
+  "hiddenMargin",
+  "reorderEngine",
+] as const;
 
 /**
  * Resolution order, and why it needs two steps:

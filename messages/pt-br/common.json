@@ -1,10 +1,14 @@
 {
+  "meta": {
+    "defaultTitle": "Leaf Digital — seu dinheiro está escondido",
+    "defaultDescription": "Seu Shopify, seu 3PL e sua planilha contam três histórias diferentes. A Leaf faz apps pequenos e afiados que encontram o dinheiro escondido nas brechas — e depois fazem o trabalho sozinhos."
+  },
   "nav": {
     "label": "Principal",
     "apps": "Apps",
-    "services": "Serviços",
-    "blog": "Blog",
-    "scan": "Análise gratuita"
+    "freeScan": "Análise gratuita",
+    "earlyAccess": "Acesso antecipado",
+    "joinWaitlist": "Entrar na lista de espera"
   },
   "footer": {
     "label": "Rodapé",
@@ -12,6 +16,14 @@
     "support": "Suporte",
     "contact": "Contato",
     "rights": "© {year} {siteName}. Todos os direitos reservados."
+  },
+  "waitlist": {
+    "emailLabel": "Email para acesso antecipado",
+    "placeholder": "voce@sualoja.com",
+    "submit": "Quero acesso antecipado",
+    "sending": "Entrando…",
+    "joined": "Você está na lista. Só escrevemos quando tem algo para testar.",
+    "error": "Algo quebrou do nosso lado — nos manda um email?"
   },
   "skipToContent": "Pular para o conteúdo",
   "localeSwitcher": {

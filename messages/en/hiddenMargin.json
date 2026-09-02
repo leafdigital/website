@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "title": "Your catalog has holes",
+    "description": "Missing costs, weights and codes hide money today and turn away AI shoppers tomorrow. One readiness score for your Shopify catalog, with every gap priced in dollars."
+  },
+  "hero": {
+    "badge": "Hidden Margin · in the lab · early access open",
+    "kicker": "Hidden margins kill businesses",
+    "headline": "Your catalog has <accent>holes.</accent>",
+    "subhead": "Missing costs, weights, codes. <lead>Today they hide money.</lead> Tomorrow they turn away customers you’ll never even see.",
+    "ctaPrimary": "Join the waitlist",
+    "ctaSecondary": "See a sample report",
+    "finePrint": "Free scan · One readiness score · Gaps priced in dollars"
+  },
+  "score": {
+    "label": "Readiness Score",
+    "value": "{score, number}%",
+    "ready": "ready",
+    "benchmark": "Stores your size average <lead>{benchmark, number}%</lead>",
+    "costLabel": "{count, number} SKUs missing cost",
+    "costNote": "margin = a guess",
+    "weightLabel": "{count, number} variants missing weight",
+    "weightNote": "shipping leaks",
+    "customsLabel": "{count, number} missing HS codes / COO",
+    "customsNote": "customs risk",
+    "caption": "Sample data — your report is built from your store."
+  },
+  "prices": {
+    "kicker": "One villain, two prices",
+    "title": "The holes charge you twice",
+    "today": {
+      "label": "TODAY",
+      "statement": "Hidden money",
+      "body": "No cost on a third of SKUs means margin is a guess. No weights means shipping surprises. And every report you trust is built on those blanks — missing costs are the precondition for every margin number you’ll ever compute."
+    },
+    "tomorrow": {
+      "label": "TOMORROW",
+      "statement": "Invisible products",
+      "body": "AI shopping agents read your catalog raw — no photos, no vibes, just fields. Whatever is blank doesn’t exist to them. They’re already browsing, and you’ll never see the customers they turned away."
+    }
+  },
+  "someday": {
+    "title": "“I’ve been meaning to clean it up someday.”",
+    "sub": "So has everyone — and the catalog grows faster than the someday ever comes. Nobody audits 400 products field by field. The blanks pile up quietly, and every report built on them is a guess."
+  },
+  "report": {
+    "kicker": "The sample report",
+    "title": "Every gap, priced where it can be",
+    "sub": "Not a checklist — a bill. The scan shows what each blank field is costing you, in dollars where the arithmetic allows.",
+    "colProduct": "Product",
+    "colMissing": "What’s missing",
+    "colCost": "What it costs you",
+    "trailRunner": {
+      "product": "Trail Runner 2.0 · 4 variants",
+      "missing": "Cost per item",
+      "cost": "margin unknown on {amount, number, ::currency/USD precision-integer}/yr"
+    },
+    "tote": {
+      "product": "Canvas Weekender Tote",
+      "missing": "Weight",
+      "cost": "≈ {amount, number, ::currency/USD} leaked per order shipped"
+    },
+    "merino": {
+      "product": "Merino Crew · 6 variants",
+      "missing": "HS code + country of origin",
+      "cost": "customs delays on EU orders"
+    },
+    "cap": {
+      "product": "Everyday Cap",
+      "missing": "Product type, 3 metafields",
+      "cost": "invisible to AI shoppers"
+    },
+    "caption": "Sample data, labeled as such — we never invent case studies. Your report comes from your store."
+  },
+  "how": {
+    "kicker": "How it works",
+    "title": "From guessing to knowing, in three steps",
+    "scan": {
+      "title": "Scan",
+      "body": "Free score plus the full gap list — priced in dollars wherever the arithmetic allows."
+    },
+    "enrich": {
+      "title": "Enrich",
+      "body": "It fills every field that can be inferred; you approve. Nothing changes without your yes."
+    },
+    "ready": {
+      "title": "Stay ready",
+      "body": "Every new product checked on upload. The score holds — forever, without you chasing it."
+    },
+    "footer": "Audit → approval → earned autonomy. This is how every Leaf app works."
+  },
+  "cta": {
+    "title": "Run the free scan. See your score.",
+    "sub": "One list, every coming Leaf app — you’re first in line for all of them. Early merchants get a direct line to the founder and a say in what we build.",
+    "offerLabel": "Founding-merchant offer",
+    "offer": "The first {spots, number} stores get the top plan at the middle plan’s price — locked for life.",
+    "noteLive": "Silent images are already fixable today. <link>Image Voice is live — run that scan now →</link>",
+    "noteNext": "Cash trapped in inventory? <link>Reorder Engine is coming →</link>"
+  }
+}

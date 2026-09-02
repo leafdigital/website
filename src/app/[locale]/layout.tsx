@@ -32,6 +32,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "common" });
 
   /**
    * The proxy already sets alternate-language `Link` headers, but a good deal
@@ -46,11 +47,10 @@ export async function generateMetadata({
     // Belt to robots.ts's braces: pre-cutover deploys must not be indexed.
     robots: SITE_INDEXABLE ? undefined : { index: false, follow: false },
     title: {
-      default: `${SITE_NAME} — the work your store needs done, handled correctly`,
+      default: t("meta.defaultTitle"),
       template: `%s — ${SITE_NAME}`,
     },
-    description:
-      "Leaf makes Shopify apps that take on the jobs nobody on your team owns — under written laws about what they'll never touch, with an undo on everything they do.",
+    description: t("meta.defaultDescription"),
     alternates: {
       canonical: `/${locale}`,
       languages: { ...languages, "x-default": `/${routing.defaultLocale}` },

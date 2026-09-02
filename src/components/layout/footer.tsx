@@ -9,15 +9,19 @@ const links = [
   { href: "/support", key: "support" },
 ] as const;
 
+/**
+ * The page ends a shade darker than the CTA band it follows — `surface-deep`,
+ * not `surface-dark`. Everything here is 55% white: a footer that competes
+ * for attention with the thing above it is a footer doing the wrong job.
+ */
 export function Footer() {
   const t = useTranslations("common");
 
   return (
-    <footer className="border-border border-t">
-      <Container className="text-muted-foreground text-fine flex flex-col items-center justify-between gap-4 py-10 sm:flex-row">
+    <footer className="bg-surface-deep">
+      <Container className="flex flex-col items-center justify-between gap-6 border-t border-white/10 py-9 text-sm text-white/55 sm:flex-row">
         {/* Year and site name are ICU arguments — never baked into the string. */}
-        {/* Meta line — ink-faint is reserved for text nobody has to read. */}
-        <p className="text-ink-faint">
+        <p>
           {t("footer.rights", {
             year: new Date().getFullYear(),
             siteName: SITE_NAME,
@@ -30,7 +34,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="hover:text-foreground transition-colors duration-150"
+                    className="transition-colors duration-150 hover:text-white"
                   >
                     {t(`footer.${link.key}`)}
                   </Link>
@@ -40,14 +44,14 @@ export function Footer() {
                 {/* External scheme — plain anchor, nothing to localize. */}
                 <a
                   href={`mailto:${SUPPORT_EMAIL}`}
-                  className="hover:text-foreground transition-colors duration-150"
+                  className="transition-colors duration-150 hover:text-white"
                 >
                   {t("footer.contact")}
                 </a>
               </li>
             </ul>
           </nav>
-          <LocaleSwitcher />
+          <LocaleSwitcher tone="dark" />
         </div>
       </Container>
     </footer>

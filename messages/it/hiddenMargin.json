@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "title": "Il tuo catalogo ha dei buchi",
+    "description": "Costi, pesi e codici mancanti oggi nascondono soldi e domani allontanano gli acquirenti AI. Un unico punteggio di prontezza per il tuo catalogo Shopify, con ogni lacuna quantificata in dollari."
+  },
+  "hero": {
+    "badge": "Hidden Margin · in laboratorio · accesso anticipato aperto",
+    "kicker": "I margini nascosti uccidono le aziende",
+    "headline": "Il tuo catalogo ha dei <accent>buchi.</accent>",
+    "subhead": "Costi, pesi, codici mancanti. <lead>Oggi ti nascondono i soldi.</lead> Domani allontanano clienti che non vedrai nemmeno.",
+    "ctaPrimary": "Entra in lista d’attesa",
+    "ctaSecondary": "Guarda un report di esempio",
+    "finePrint": "Scansione gratuita · Un solo punteggio di prontezza · Lacune quantificate in dollari"
+  },
+  "score": {
+    "label": "Punteggio di prontezza",
+    "value": "{score, number}%",
+    "ready": "pronto",
+    "benchmark": "I negozi della tua taglia sono in media al <lead>{benchmark, number}%</lead>",
+    "costLabel": "{count, number} SKU senza costo",
+    "costNote": "margine = un’ipotesi",
+    "weightLabel": "{count, number} varianti senza peso",
+    "weightNote": "falle nella spedizione",
+    "customsLabel": "{count, number} senza HS code / COO",
+    "customsNote": "rischio dogana",
+    "caption": "Dati di esempio — il tuo report parte dal tuo negozio."
+  },
+  "prices": {
+    "kicker": "Un nemico, due prezzi da pagare",
+    "title": "I buchi te la fanno pagare due volte",
+    "today": {
+      "label": "OGGI",
+      "statement": "Soldi nascosti",
+      "body": "Nessun costo su un terzo degli SKU significa che il margine è un’ipotesi. Nessun peso significa sorprese sulle spedizioni. E ogni report di cui ti fidi è costruito su quelle caselle vuote — i costi mancanti sono la premessa di ogni numero di margine che calcolerai."
+    },
+    "tomorrow": {
+      "label": "DOMANI",
+      "statement": "Prodotti invisibili",
+      "body": "Gli agenti di acquisto AI leggono il tuo catalogo grezzo — niente foto, niente atmosfera, solo campi. Quello che è vuoto per loro non esiste. Stanno già navigando, e i clienti che hanno allontanato non li vedrai mai."
+    }
+  },
+  "someday": {
+    "title": "“Prima o poi lo sistemo.”",
+    "sub": "Lo dicono tutti — e il catalogo cresce più in fretta di quanto arrivi quel “poi”. Nessuno controlla 400 prodotti campo per campo. Le caselle vuote si accumulano in silenzio, e ogni report costruito su di esse è un’ipotesi."
+  },
+  "report": {
+    "kicker": "Il report di esempio",
+    "title": "Ogni lacuna, quantificata dove si può",
+    "sub": "Non una lista di controllo — un conto. La scansione mostra quanto ti costa ogni campo vuoto, in dollari dove l’aritmetica lo consente.",
+    "colProduct": "Prodotto",
+    "colMissing": "Cosa manca",
+    "colCost": "Quanto ti costa",
+    "trailRunner": {
+      "product": "Trail Runner 2.0 · 4 varianti",
+      "missing": "Costo per articolo",
+      "cost": "margine ignoto su {amount, number, ::currency/USD precision-integer}/anno"
+    },
+    "tote": {
+      "product": "Canvas Weekender Tote",
+      "missing": "Peso",
+      "cost": "≈ {amount, number, ::currency/USD} persi per ogni ordine spedito"
+    },
+    "merino": {
+      "product": "Merino Crew · 6 varianti",
+      "missing": "HS code + paese d’origine",
+      "cost": "ritardi doganali sugli ordini UE"
+    },
+    "cap": {
+      "product": "Everyday Cap",
+      "missing": "Tipo di prodotto, 3 metacampi",
+      "cost": "invisibile agli acquirenti AI"
+    },
+    "caption": "Dati di esempio, dichiarati come tali — non inventiamo mai casi studio. Il tuo report viene dal tuo negozio."
+  },
+  "how": {
+    "kicker": "Come funziona",
+    "title": "Dall’ipotesi alla certezza, in tre passi",
+    "scan": {
+      "title": "Scansiona",
+      "body": "Punteggio gratuito più l’elenco completo delle lacune — quantificate in dollari ovunque l’aritmetica lo consenta."
+    },
+    "enrich": {
+      "title": "Arricchisci",
+      "body": "Compila ogni campo che si può dedurre; tu approvi. Niente cambia senza il tuo sì."
+    },
+    "ready": {
+      "title": "Resta pronto",
+      "body": "Ogni nuovo prodotto controllato al caricamento. Il punteggio tiene — per sempre, senza che tu debba rincorrerlo."
+    },
+    "footer": "Audit → approvazione → autonomia guadagnata. Funziona così ogni app Leaf."
+  },
+  "cta": {
+    "title": "Avvia la scansione gratuita. Guarda il tuo punteggio.",
+    "sub": "Una sola lista, tutte le app Leaf in arrivo — sei primo in fila per ognuna. I primi merchant hanno una linea diretta con il fondatore e voce in capitolo su cosa costruiamo.",
+    "offerLabel": "Offerta per i primi merchant",
+    "offer": "I primi {spots, number} negozi prendono il piano più alto al prezzo di quello intermedio — bloccato a vita.",
+    "noteLive": "Le immagini mute si sistemano già oggi. <link>Image Voice è online — avvia quella scansione ora →</link>",
+    "noteNext": "Liquidità bloccata in magazzino? <link>Reorder Engine sta arrivando →</link>"
+  }
+}

@@ -22,9 +22,11 @@ const buttonVariants = cva(
          * — v3 has one non-green button, not two. */
         outline:
           "border-hairline-strong bg-secondary text-secondary-foreground hover:bg-ink-wash aria-expanded:bg-ink-wash",
-        /* On the dark band: white ground, ink text, no hairline needed. */
+        /* On the dark band: white ground, brand-900 text, no hairline. The
+         * green is the only colour left that reads as an action once the
+         * ground is dark. */
         onDark:
-          "bg-on-dark text-ink hover:bg-on-dark/90 focus-visible:ring-brand-on-dark/40",
+          "bg-on-dark text-brand-900 hover:bg-on-dark/92 focus-visible:ring-on-dark/40",
         ghost:
           "hover:bg-ink-wash hover:text-foreground aria-expanded:bg-ink-wash aria-expanded:text-foreground",
         destructive:

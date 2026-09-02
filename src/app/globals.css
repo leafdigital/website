@@ -82,15 +82,22 @@
   --color-hairline: --alpha(var(--color-ink) / 9%);
   --color-hairline-strong: --alpha(var(--color-ink) / 14%);
 
-  /* Dark surface — full-bleed bands only (max 1–2 per page). This is the
-   * one place a below-800 green may carry text. */
-  --color-surface-dark: #0b120d;
+  /* Dark surfaces — two, because the references use two. `dark` is the
+   * statement band inside the page; `deep` is the darker ground the footer
+   * sits on and the first stop of the final-CTA gradient, so the page ends
+   * a shade heavier than it argued. This is the one place a below-800 green
+   * may carry text. */
+  --color-surface-dark: #101911;
+  --color-surface-deep: #0f1a10;
   --color-on-dark: #ffffff;
   --color-on-dark-muted: --alpha(#ffffff / 60%);
   --color-brand-on-dark: #7bc67f;
 
   /* Ink washes — quiet tints for surfaces on the light ground. */
   --color-ink-wash: --alpha(var(--color-ink) / 4%);
+  /* The "before" / "without" surface: warm off-white, opaque so it holds its
+   * own against the white card sitting next to it. */
+  --color-surface-muted: #fafaf9;
 
   /* Type scale — v3. Weight 800 on headings, tracking tightens with size. */
   --text-hero: 72px;
@@ -102,6 +109,12 @@
   --text-h2--line-height: 1.08;
   --text-h2--letter-spacing: -0.03em;
   --text-h2--font-weight: 800;
+
+  /* The dark band and the final CTA carry a heavier H2 than a light section. */
+  --text-h2-lg: 48px;
+  --text-h2-lg--line-height: 1.06;
+  --text-h2-lg--letter-spacing: -0.03em;
+  --text-h2-lg--font-weight: 800;
 
   --text-h3: 20px;
   --text-h3--line-height: 1.3;
@@ -126,19 +139,37 @@
   --shadow-card:
     0 1px 2px --alpha(var(--color-ink) / 4%),
     0 20px 48px --alpha(var(--color-ink) / 8%);
-  /* v1 CTA glow, kept as a named shadow. Key CTAs only. */
-  --shadow-cta: 0 4px 15px rgb(76 175 80 / 0.35);
+  /* The green glow, at the two sizes the references use: `cta` under a 52px
+   * hero button, `cta-sm` under the 38px one in the header. */
+  --shadow-cta: 0 4px 20px rgb(46 125 50 / 0.35);
+  --shadow-cta-sm: 0 2px 10px rgb(46 125 50 / 0.3);
+  /* Featured (green) card: a wide green-tinted lift instead of the ink one. */
+  --shadow-featured: 0 14px 36px rgb(46 125 50 / 0.1);
+  /* The white button on the dark CTA band — an ink shadow, not a glow. */
+  --shadow-on-dark: 0 8px 28px rgb(0 0 0 / 0.25);
 
   /* Motion — one entrance curve, one hover duration. */
   --ease-leaf: cubic-bezier(0.2, 0.7, 0.2, 1);
   --animate-fade-up: fade-up 700ms var(--ease-leaf) both;
+  /* The radial glow never sits still. 16s behind a hero, 18s behind the
+   * final CTA — slow enough that you notice it only by leaving the tab open. */
+  --animate-aurora: aurora-drift 16s ease-in-out infinite;
+  --animate-aurora-slow: aurora-drift 18s ease-in-out infinite;
+
+  @keyframes aurora-drift {
+    0%,
+    100% {
+      transform: translate(-50%, 0) scale(1);
+    }
+    50% {
+      transform: translate(-42%, 4%) scale(1.12);
+    }
+  }
 
   @keyframes fade-up {
     from {
       opacity: 0;
-      /* Distance isn't specified in the v3 spec; 16px reads as a lift
-       * without turning into a slide at 700ms. */
-      transform: translateY(16px);
+      transform: translateY(14px);
     }
     to {
       opacity: 1;
@@ -199,12 +230,15 @@
   html {
     @apply scroll-smooth font-sans antialiased;
   }
-  /* Headings are extrabold and balanced by default — the v3 voice. Sizes
-   * stay explicit at the call site. */
+  /* Headings are balanced by default — the v3 voice. Sizes stay explicit at
+   * the call site. h1/h2 are extrabold; h3 sits a step back at 700, because
+   * a card title competing with a section heading flattens the hierarchy. */
   h1,
-  h2,
-  h3 {
+  h2 {
     @apply font-extrabold text-balance;
+  }
+  h3 {
+    @apply font-bold text-balance;
   }
   /* Numbers and data are always mono + tabular, wherever they appear. */
   :is(code, kbd, samp, pre) {
@@ -216,7 +250,9 @@
   /* `animate-fade-up` is generated from the theme var above; this is the
    * standing reduced-motion guard so no call site has to remember it. */
   @media (prefers-reduced-motion: reduce) {
-    .animate-fade-up {
+    .animate-fade-up,
+    .animate-aurora,
+    .animate-aurora-slow {
       animation: none;
     }
   }

@@ -9,17 +9,19 @@
 /** Indexed routes. These, times every locale, are the sitemap. */
 export const indexedRoutes = [
   "/",
-  "/apps",
-  "/apps/alt-text",
+  "/image-voice",
+  "/hidden-margin",
+  "/reorder-engine",
   "/privacy",
   "/support",
 ] as const;
 
 /**
- * Reachable and linked, but deliberately kept out of the sitemap: /services is
- * the quiet door pending a sunset decision, /blog is a stub with no posts.
+ * Nothing is reachable-but-unlisted any more: /apps, /services and /blog were
+ * retired with the v3 rebuild. The homepage `#apps` grid is the only index of
+ * the portfolio, and each app owns its own route.
  */
-export const unlistedRoutes = ["/services", "/blog"] as const;
+export const unlistedRoutes = [] as const;
 
 export type AppRoute =
   (typeof indexedRoutes)[number] | (typeof unlistedRoutes)[number];

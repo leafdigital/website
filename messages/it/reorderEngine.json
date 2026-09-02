@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "title": "La tua liquidità è bloccata in magazzino",
+    "description": "Nove app prevedono il tuo magazzino Shopify. Nessuna invia il PO. Reorder Engine sta costruendo l’ultimo miglio che manca — prima messo alla prova in ombra sui tuoi ordini veri."
+  },
+  "hero": {
+    "badge": "Reorder Engine · in arrivo · lista d’attesa aperta",
+    "kicker": "La liquidità bloccata uccide i brand",
+    "headline": "La tua liquidità è bloccata in <accent>magazzino.</accent>",
+    "subhead": "Troppa roba che non gira, rotture di stock sui bestseller — e a riordinare alle 23 ci sei tu. Non hai costruito un brand per riconciliare fogli di calcolo di notte.",
+    "ctaPrimary": "Entra in lista d’attesa",
+    "ctaSecondary": "Come si guadagna la fiducia",
+    "finePrint": "I primi {spots, number} negozi ottengono il prezzo Charter, bloccato a vita."
+  },
+  "gap": {
+    "forecastCount": "{count, number}",
+    "forecast": "app prevedono il tuo magazzino",
+    "sendCount": "{count, number}",
+    "send": "inviano il PO",
+    "caption": "Ogni concorrente storico si ferma a “consiglia → l’umano clicca”. Stiamo costruendo l’ultimo miglio che manca — con cautela."
+  },
+  "blind": {
+    "kicker": "Giorno di riordino",
+    "title": "Dove i fondatori vanno alla cieca",
+    "cash": {
+      "label": "LA TRAPPOLA DELLA LIQUIDITÀ",
+      "statement": "Liquidità sepolta in prodotti che non girano mentre i bestseller finiscono"
+    },
+    "spot": {
+      "label": "L’ANGOLO CIECO",
+      "statement": "Il foglio di calcolo non distingue “poca domanda” da “niente da vendere”"
+    },
+    "night": {
+      "label": "IL LAVORO DELLE 23",
+      "statement": "Nessuno guarda quando si rompe — tranne te, di notte"
+    }
+  },
+  "why": {
+    "title": "Perché nessuno invia il PO?",
+    "sub": "Perché un ordine d’acquisto impegna soldi veri — e serve una fiducia che nessun tool di previsione si è guadagnato. Così costruiamo prima la fiducia: si mette alla prova sui tuoi ordini veri, in ombra, prima di toccare qualsiasi cosa."
+  },
+  "ladder": {
+    "kicker": "La scala della fiducia",
+    "title": "L’autonomia si guadagna, non si presume",
+    "shadow": {
+      "title": "In ombra",
+      "body": "30 giorni di ogni PO che avrebbe inviato, registrati come prova permanente — sui tuoi ordini veri, prima di toccare qualsiasi cosa."
+    },
+    "approve": {
+      "title": "Approva",
+      "body": "Prepara il PO vero — MOQ, sconti a scaglioni, arrotondamento per cartone. Tu clicchi invia."
+    },
+    "autonomy": {
+      "title": "Guadagna autonomia",
+      "body": "Solo dentro i limiti che imposti tu, con interruttori di sicurezza — e solo se lo storico in ombra se lo merita. Al comando resti tu."
+    },
+    "footer": "Audit → approvazione → autonomia guadagnata. Funziona così ogni app Leaf — e questa app ne è l’espressione più piena."
+  },
+  "cta": {
+    "title": "Entra in lista d’attesa. Guardalo prima mettersi alla prova.",
+    "sub": "Una sola lista, tutte le app Leaf in arrivo — sei primo in fila per ognuna. I primi {spots, number} negozi ottengono il prezzo Charter, bloccato a vita.",
+    "note": "Le immagini mute si sistemano già oggi. <link>Image Voice è online — avvia quella scansione ora →</link>"
+  }
+}

@@ -1,9 +1,17 @@
 {
   "site": {
-    "title": "Il lavoro di cui il tuo negozio ha bisogno — fatto, e fatto bene."
+    "title": "I tuoi soldi si nascondono."
   },
-  "altText": {
-    "title": "{needsAttention, number} delle tue immagini potrebbero non dire nulla",
-    "kicker": "Alt text, guardato davvero"
+  "imageVoice": {
+    "kicker": "Image Voice",
+    "title": "{silent, number} delle tue immagini non dicono nulla"
+  },
+  "hiddenMargin": {
+    "kicker": "Hidden Margin",
+    "title": "Il tuo catalogo ha dei buchi."
+  },
+  "reorderEngine": {
+    "kicker": "Reorder Engine",
+    "title": "La tua liquidità è bloccata in magazzino."
   }
 }

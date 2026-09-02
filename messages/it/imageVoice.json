@@ -1,0 +1,187 @@
+{
+  "meta": {
+    "title": "Le tue immagini sono mute",
+    "description": "Le immagini mute non vendono — non a Google, non agli acquirenti AI, non a chi ha bisogno che vengano lette ad alta voce. Audit gratuito per sempre, poi una descrizione vera per ogni immagine del tuo negozio Shopify."
+  },
+  "hero": {
+    "badge": "Online sullo Shopify App Store",
+    "headline": "Le tue immagini sono <accent>mute.</accent>",
+    "subhead": "<lead>{silent, number} delle tue immagini non dicono nulla</lead> — a Google, agli acquirenti AI, a chi ha bisogno che vengano lette ad alta voce. Le immagini mute non vendono.",
+    "ctaPrimary": "Avvia la scansione gratuita",
+    "ctaSecondary": "Vedi i prezzi",
+    "finePrint": "Audit gratuito per sempre · Nessuna carta di credito · Nulla tocca il tuo negozio finché non approvi"
+  },
+  "ring": {
+    "label": "delle tue immagini sono mute",
+    "total": "su {total, number}",
+    "aria": "{silent, number} delle tue {total, number} immagini sono mute",
+    "caption": "Scansione di esempio — la tua richiede pochi minuti, gratis."
+  },
+  "prices": {
+    "kicker": "Un nemico, tre prezzi da pagare",
+    "title": "Il silenzio te la fa pagare tre volte",
+    "sub": "Un solo problema, in tre strati. Risolvi il silenzio una volta e i tre conti si fermano tutti.",
+    "traffic": {
+      "label": "TRAFFICO PERSO",
+      "statement": "Google le salta",
+      "body": "Un’immagine senza descrizione non entra mai nella ricerca per immagini. Il traffico va al negozio accanto, quello le cui foto parlano."
+    },
+    "agentic": {
+      "label": "VENDITE AGENTICHE PERSE",
+      "statement": "Gli acquirenti AI non le leggono",
+      "body": "Gli agenti di acquisto leggono il tuo catalogo grezzo. Per loro un’immagine muta non esiste — e nemmeno il prodotto."
+    },
+    "accessibility": {
+      "label": "RISCHIO ACCESSIBILITÀ",
+      "statement": "Gli screen reader non trovano nulla",
+      "body": "L’EAA include l’ecommerce dal giugno 2025; le cause ADA colpiscono migliaia di negozi USA ogni anno. Le immagini illeggibili sono la tua lacuna più visibile."
+    }
+  },
+  "checkbox": {
+    "kicker": "Il problema della spunta",
+    "title": "100% di copertura, e ancora mute.",
+    "sub": "Ogni suite SEO gonfia ha la sua spunta per l’alt text. Una spunta infila i titoli nei campi alt e considera il lavoro finito. Non scrive così:",
+    "beforeLabel": "Prima — “coperta”",
+    "beforeOne": "alt=\"IMG_2041-final-v3.jpg\"",
+    "beforeTwo": "alt=\"comprare t-shirt uomo biologica prezzo migliore spedizione gratis SEO\"",
+    "beforeCaption": "Spazzatura da nomi di file e keyword stuffing. Contata come 100% di copertura — dallo stesso tool che l’ha scritta.",
+    "afterLabel": "Dopo — Image Voice",
+    "afterCode": "alt=\"T-shirt in cotone biologico verde muschio piegata in piano, con il collo a costine e una foglia ricamata sull’orlo\"",
+    "afterCaption": "Ogni immagine guardata davvero. Diversa per ogni immagine, ~125 caratteri, non inizia mai con “immagine di”.",
+    "closer": "Ecco perché l’audit gratuito <lead>valuta invece di contare</lead>: mancante / spazzatura / debole / buona, con un campione verificato a vista. Risultato tipico: “62 delle 100 immagini coperte non descrivono l’immagine”."
+  },
+  "how": {
+    "kicker": "Come funziona",
+    "title": "Scansiona. Scrivi. Parla.",
+    "scan": {
+      "title": "Scansiona",
+      "body": "Gratis, all’installazione, senza configurazione. Il conto delle tue immagini mute in un unico numero — valutato, non contato."
+    },
+    "write": {
+      "title": "Scrivi",
+      "body": "Ogni immagine guardata davvero. Approva, modifica o salta da una coda a tastiera pensata per 200 decisioni di fila."
+    },
+    "speak": {
+      "title": "Parla",
+      "body": "Un pilota automatico che ti guadagni — proposto solo quando il tuo storico di approvazioni lo giustifica. Poi ogni nuova immagine viene descritta pochi minuti dopo il caricamento, per sempre."
+    },
+    "footer": "Audit → approvazione → autonomia guadagnata. Funziona così ogni app Leaf."
+  },
+  "benefits": {
+    "kicker": "Cosa ottieni",
+    "title": "Cosa cambia quando le tue immagini smettono di essere mute",
+    "one": {
+      "title": "Saprai la verità in pochi minuti — gratis, prima di decidere qualsiasi cosa.",
+      "body": "Scansione completa all’installazione, senza configurazione. Il numero: “{silent, number} delle tue immagini sono mute”."
+    },
+    "two": {
+      "title": "Scoprirai cosa è davvero rotto — non cosa sembra fatto.",
+      "body": "Valutate, non contate: mancante / spazzatura / debole / buona, con un campione verificato a vista. Smetti di farti ingannare dal “100% di copertura” — il tuo o quello di un tool concorrente."
+    },
+    "three": {
+      "title": "Testi che lasceresti ascoltare a un cliente ad alta voce.",
+      "body": "Ogni immagine guardata davvero — mai generata da titoli o nomi di file. Nessun odore di spam, niente di cui vergognarsi, niente che Google possa penalizzare."
+    },
+    "four": {
+      "title": "Le tue immagini parlano la lingua in cui i tuoi clienti comprano.",
+      "body": "Descrizioni scritte nella lingua del tuo negozio — EN, DE, FR, ES, IT, NL, PT. Lo screen reader di un cliente tedesco parla tedesco."
+    },
+    "five": {
+      "title": "La casella accessibilità: chiusa prima che qualcuno venga a chiedere.",
+      "body": "EAA nell’UE, ADA negli USA. La tua lacuna più visibile — migliaia di immagini illeggibili — chiusa, con un registro delle modifiche da mostrare."
+    },
+    "six": {
+      "title": "Resti al comando senza fare il lavoro.",
+      "body": "Nulla tocca Shopify finché non lo dici tu. Applica in blocco quando hai visto abbastanza: “applico le {remaining, number} rimanenti?”. L’intero catalogo rivisto nel tempo di un caffè."
+    },
+    "seven": {
+      "title": "Non può andare storto nulla che tu non possa vedere e annullare.",
+      "body": "Ogni scrittura viene verificata rileggendola. 30 giorni per annullare, su tutti i piani. Strutturalmente incapace di toccare qualcosa che non sia il campo alt, e non sovrascrive mai parole scritte da una persona."
+    },
+    "eight": {
+      "title": "Prima o poi non ci pensi più.",
+      "body": "Nuovo prodotto caricato → descritto in pochi minuti. Un riepilogo settimanale al posto di una lista di cose da fare. Il lavoro ti esce dalla testa per sempre."
+    },
+    "nine": {
+      "title": "La qualità non marcisce quando smetti di controllare.",
+      "body": "Le ri-scansioni settimanali tengono vero il numero; la qualità della scrittura è messa alla prova contro un golden set. Quello che hai approvato il primo giorno è quello che ottieni al sesto mese."
+    },
+    "ten": {
+      "title": "Il risultato lo indossi.",
+      "body": "“Interamente descritto dal 3 marzo” — guadagnato, non comprato, su tutti i piani, gratuito incluso. Prova visibile che gestisci un negozio in ordine."
+    },
+    "eleven": {
+      "title": "Saprai esattamente cosa stai comprando — e ti diremo noi se non facciamo al caso tuo.",
+      "body": "Descrizioni gratuite a vita per giudicare la qualità sui tuoi prodotti. I piani a pagamento ripuliscono l’arretrato subito — niente contagocce lungo mesi. Troppo grande per i nostri piani? Te lo diciamo e ti offriamo una lista d’attesa."
+    }
+  },
+  "pricing": {
+    "kicker": "Prezzi",
+    "title": "La magia succede prima del paywall",
+    "sub": "Giudica la scrittura sui tuoi prodotti, gratis, per sempre. Quando ti abboni, il First Sweep scrive subito tutto l’arretrato — la quota mensile serve solo a tenere coperte le nuove immagini.",
+    "period": "/mese",
+    "featured": "Copertura totale",
+    "audit": {
+      "name": "Audit",
+      "price": "{amount, number, ::currency/USD precision-integer}",
+      "tagline": "Il primo sì — gratis, per sempre",
+      "one": "Audit completo delle immagini e report di copertura su tutto il catalogo",
+      "two": "Una valutazione della qualità del tuo alt text attuale",
+      "three": "Un primo lotto di descrizioni di prodotto — giudica la scrittura sulle tue immagini",
+      "cta": "Avvia la scansione gratuita"
+    },
+    "keeper": {
+      "name": "Keeper",
+      "price": "{amount, number, ::currency/USD}",
+      "tagline": "Catalogo intero scritto — 14 giorni di prova gratuita",
+      "one": "Tutto quello che c’è in Audit",
+      "two": "<lead>First Sweep:</lead> il tuo catalogo prodotti scritto subito, non razionato per mesi",
+      "three": "La quota mensile tiene coperta ogni nuova immagine",
+      "four": "Pilota automatico: le nuove immagini descritte da sole — quando ne hai approvato il gusto",
+      "five": "Riepilogo settimanale dei progressi nella tua inbox, firmato da una persona",
+      "cta": "Inizia dalla scansione gratuita"
+    },
+    "curator": {
+      "name": "Curator",
+      "price": "{amount, number, ::currency/USD}",
+      "tagline": "Tutto il negozio parla — 14 giorni di prova gratuita",
+      "offerLabel": "Founding Curator",
+      "offer": "I <lead>primi {spots, number} merchant</lead> prendono Curator a <lead>metà prezzo, a vita</lead> — {price, number, ::currency/USD}/mese, e il titolo resta tuo.",
+      "one": "Tutto quello che c’è in Keeper",
+      "two": "<lead>Il First Sweep copre tutto il negozio</lead> — tema incluso, con il tetto più alto",
+      "three": "Immagini del tema descritte — banner, slider, immagini di sezione, non solo prodotti",
+      "four": "Il massimo margine di manutenzione, per cataloghi attivi",
+      "cta": "Inizia dalla scansione gratuita"
+    },
+    "footer": "Le immagini mute sono una falla su sette. <link>La suite Leaf trova le altre sei →</link>"
+  },
+  "faq": {
+    "kicker": "Due diligence",
+    "title": "Le domande che faremmo anche noi",
+    "breakStore": {
+      "q": "Può rompere il mio negozio?",
+      "a": "No. È strutturalmente incapace di toccare qualcosa che non sia il campo alt, ogni scrittura viene verificata rileggendola e ogni modifica ha 30 giorni per essere annullata, su tutti i piani — con un registro completo prima → dopo. Non sovrascrive mai parole scritte da una persona, e le immagini nelle impostazioni del tema che non riesce a raggiungere vengono segnalate con un link diretto invece di fallire in silenzio."
+    },
+    "compliance": {
+      "q": "Mi rende conforme a EAA / ADA?",
+      "a": "Nessun tool può prometterlo, e noi non lo faremo. Quello che fa è chiudere la tua lacuna più visibile — migliaia di immagini illeggibili — con un registro delle modifiche da mostrare. L’EAA include l’ecommerce dal giugno 2025 nell’UE; le cause ADA colpiscono migliaia di negozi USA ogni anno."
+    },
+    "spam": {
+      "q": "L’alt text scritto dall’AI non è spam?",
+      "a": "La fama di spam viene dai tool che generano testo da titoli e nomi di file. Image Voice guarda ogni singola immagine. Le descrizioni sono diverse per ogni immagine, circa 125 caratteri, e non iniziano mai con “immagine di”. Giudica tu, gratis, sui tuoi prodotti prima di pagare qualsiasi cosa."
+    },
+    "languages": {
+      "q": "In quali lingue scrive?",
+      "a": "La lingua del tuo negozio: inglese, tedesco, francese, spagnolo, italiano, olandese e portoghese. Il tuo SEO per immagini funziona nel tuo mercato — e lo screen reader di un cliente tedesco parla tedesco."
+    },
+    "howLong": {
+      "q": "Quanto ci vuole perché tutto il catalogo sia descritto?",
+      "a": "Giorni, non mesi. I piani a pagamento includono un First Sweep che scrive subito tutto l’arretrato — la quota mensile deve solo stare dietro alle nuove immagini. Durante la prova gratuita ricevi uno sweep di assaggio sulle tue immagini migliori; lo sweep completo parte il giorno in cui la prova si converte. E se il tuo negozio va oltre quello che i nostri piani reggono bene, te lo diciamo prima che tu paghi e ti proponiamo un’opzione seguita dal fondatore invece di prenderci i tuoi soldi."
+    }
+  },
+  "cta": {
+    "title": "Avvia la scansione gratuita. Guarda il tuo numero.",
+    "sub": "Gratis per sempre. Nessuna carta di credito. Il conto delle tue immagini mute in pochi minuti — valutato, non contato.",
+    "button": "Installa dallo Shopify App Store"
+  }
+}
