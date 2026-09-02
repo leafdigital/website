@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Link } from "@/i18n/navigation";
 import { Container } from "./container";
@@ -39,21 +39,22 @@ export function Header() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="text-muted-foreground hover:text-foreground rounded-md px-2 py-2 text-sm sm:px-3"
+                  className="text-muted-foreground hover:text-foreground rounded-lg px-2 py-2 text-sm font-medium transition-colors duration-150 sm:px-3"
                 >
                   {t(`nav.${item.key}`)}
                 </Link>
               </li>
             ))}
             <li className="ml-2">
-              <TrackedLink
-                href="/apps/alt-text#scan"
-                event="cta_scan_click"
-                eventProps={{ location: "header" }}
-                className={buttonVariants({ size: "sm" })}
-              >
-                {t("nav.scan")}
-              </TrackedLink>
+              <Button asChild size="sm">
+                <TrackedLink
+                  href="/apps/alt-text#scan"
+                  event="cta_scan_click"
+                  eventProps={{ location: "header" }}
+                >
+                  {t("nav.scan")}
+                </TrackedLink>
+              </Button>
             </li>
           </ul>
         </nav>

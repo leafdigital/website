@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/layout/section";
-import { Badge } from "@/components/ui/badge";
+import { PillBadge } from "@/components/ui/pill-badge";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <Section className="text-center">
-      <Badge variant="outline">Coming back soon</Badge>
-      <h1 className="mt-4 text-4xl font-extrabold tracking-tight">Blog</h1>
-      <p className="text-muted-foreground mx-auto mt-4 max-w-xl text-lg leading-relaxed">
+      <PillBadge className="mx-auto">Coming back soon</PillBadge>
+      <h1 className="sm:text-h2 mt-6 text-3xl tracking-[-0.03em]">Blog</h1>
+      <p className="text-muted-foreground mx-auto mt-4 max-w-xl text-lg leading-[1.65]">
         The writing on agentic commerce and machine-legible catalogs is moving
         in with the new site. It lands here shortly after the domain switches
         over.

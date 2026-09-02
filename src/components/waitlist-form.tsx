@@ -46,7 +46,7 @@ export function WaitlistForm() {
 
   if (status === "done") {
     return (
-      <p className="text-brand-800 font-medium" role="status">
+      <p className="text-brand-800 font-semibold" role="status">
         You’re on the list. We only write when there’s something to try.
       </p>
     );
@@ -61,10 +61,10 @@ export function WaitlistForm() {
             <label
               key={choice}
               className={cn(
-                "cursor-pointer rounded-full border px-4 py-1.5 text-sm font-medium transition-colors",
+                "cursor-pointer rounded-full border px-4 py-1.5 text-sm font-semibold transition-colors duration-150",
                 app === choice
                   ? "border-brand-800 bg-brand-800 text-white"
-                  : "border-border text-muted-foreground hover:text-foreground",
+                  : "border-hairline-strong text-muted-foreground hover:text-foreground",
               )}
             >
               <input
@@ -107,7 +107,7 @@ export function WaitlistForm() {
         </Button>
       </div>
       {status === "error" ? (
-        <p className="text-destructive text-sm" role="alert">
+        <p className="text-destructive text-fine" role="alert">
           {message}
         </p>
       ) : null}

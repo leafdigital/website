@@ -3,8 +3,9 @@ import { TrackedLink } from "@/components/analytics/tracked-link";
 import { CoverageRing } from "@/components/coverage-ring";
 import { WaitlistForm } from "@/components/waitlist-form";
 import { Container } from "@/components/layout/container";
-import { Section, SectionHeading } from "@/components/layout/section";
-import { buttonVariants } from "@/components/ui/button";
+import { Kicker, Section, SectionHeading } from "@/components/layout/section";
+import { Button } from "@/components/ui/button";
+import { PillBadge } from "@/components/ui/pill-badge";
 import { apps } from "@/lib/apps";
 import { MIRROR, SUPPORT_EMAIL } from "@/lib/constants";
 
@@ -31,47 +32,49 @@ export default function Home() {
     <>
       {/* 1 — Hero. H1 is verbatim voice-of-customer. */}
       <Section className="text-center">
-        <p className="text-brand-800 text-xs font-bold tracking-wider uppercase">
-          A Shopify product studio
-        </p>
-        <h1 className="mx-auto mt-4 max-w-3xl text-4xl font-extrabold tracking-tight text-balance sm:text-[52px] sm:leading-[1.1]">
-          The work your store needs done — handled, correctly.
+        <PillBadge className="mx-auto">A Shopify product studio</PillBadge>
+        <h1 className="lg:text-hero mx-auto mt-6 max-w-4xl text-4xl tracking-[-0.045em] sm:text-5xl">
+          The work your store needs done — handled,{" "}
+          <span className="text-primary">correctly</span>.
         </h1>
-        <p className="text-muted-foreground mx-auto mt-6 max-w-2xl text-lg leading-relaxed">
+        <p className="text-muted-foreground mx-auto mt-6 max-w-2xl text-lg leading-[1.65]">
           Leaf makes Shopify apps that take on the jobs nobody on your team owns
           — starting with your product images — under written laws about what
           they’ll never touch, with an undo on everything they do.
         </p>
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <TrackedLink
-            href="/apps/alt-text#scan"
-            event="cta_scan_click"
-            eventProps={{ location: "home-hero" }}
-            className={buttonVariants({ size: "lg" })}
-          >
-            Scan my store free
-          </TrackedLink>
-          <TrackedLink
-            href="/apps"
-            event="cta_app_view"
-            eventProps={{ location: "home-hero-secondary" }}
-            className="text-muted-foreground hover:text-foreground text-sm font-medium underline-offset-4 hover:underline"
-          >
-            See the apps
-          </TrackedLink>
+        <div className="mt-9 flex flex-wrap items-center justify-center gap-3.5">
+          <Button asChild size="lg">
+            <TrackedLink
+              href="/apps/alt-text#scan"
+              event="cta_scan_click"
+              eventProps={{ location: "home-hero" }}
+            >
+              Scan my store free
+            </TrackedLink>
+          </Button>
+          <Button asChild size="lg" variant="secondary" className="shadow-none">
+            <TrackedLink
+              href="/apps"
+              event="cta_app_view"
+              eventProps={{ location: "home-hero-secondary" }}
+            >
+              See the apps
+            </TrackedLink>
+          </Button>
         </div>
+        <p className="text-fine text-ink-faint mt-4">
+          Free to scan · No card · Nothing written without your approval
+        </p>
       </Section>
 
       {/* 2 — Truth strip: small-but-true numbers. */}
-      <div className="border-y">
+      <div className="border-border border-y">
         <Container>
           <ul className="grid gap-6 py-8 text-center sm:grid-cols-3">
             {truths.map((truth) => (
               <li key={truth.figure}>
-                <p className="text-2xl font-extrabold tracking-tight">
-                  {truth.figure}
-                </p>
-                <p className="text-muted-foreground mt-1 text-sm">
+                <p className="text-h3 font-mono tabular-nums">{truth.figure}</p>
+                <p className="text-muted-foreground text-fine mt-1">
                   {truth.label}
                 </p>
               </li>
@@ -90,44 +93,43 @@ export default function Home() {
             className="justify-self-center"
           />
           <div className="text-center sm:text-left">
-            <h2 className="text-2xl font-bold tracking-tight text-balance sm:text-3xl">
+            <h2 className="sm:text-h2 text-3xl tracking-[-0.03em]">
               You didn’t build your store to babysit it.
             </h2>
-            <p className="text-muted-foreground mt-4 leading-relaxed">
+            <p className="text-muted-foreground mt-4 leading-[1.65]">
               Alt text is the classic unowned job: it costs you image-search
               traffic, it’s an accessibility exposure, and no one on your team
               has it on their list. Our flagship app scans your catalog free and
               shows you your real number — graded, not just counted. We only
               ever touch the alt field.
             </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-4 sm:justify-start">
-              <TrackedLink
-                href="/apps/alt-text#scan"
-                event="cta_scan_click"
-                eventProps={{ location: "home-mirror" }}
-                className={buttonVariants({ size: "lg" })}
-              >
-                Scan my store free
-              </TrackedLink>
+            <div className="mt-8 flex flex-wrap justify-center gap-3.5 sm:justify-start">
+              <Button asChild size="lg">
+                <TrackedLink
+                  href="/apps/alt-text#scan"
+                  event="cta_scan_click"
+                  eventProps={{ location: "home-mirror" }}
+                >
+                  Scan my store free
+                </TrackedLink>
+              </Button>
             </div>
           </div>
         </div>
       </Section>
 
       {/* 4 — The laws. Principles as content. */}
-      <Section wash>
+      <Section tone="wash">
         <SectionHeading
           kicker="The standard"
           title="It's your store. Software should act like it."
           sub="Every Leaf app ships a written law sheet before its first install — what it will never do, in plain words. These are the flagship's. Hold us to them."
         />
-        <ol className="mx-auto mt-12 max-w-2xl space-y-6 border-l-2 pl-8">
+        <ol className="border-border mx-auto mt-12 max-w-2xl space-y-6 border-l pl-8">
           {laws.map((law, i) => (
             <li key={law}>
-              <p className="text-brand-800 text-xs font-bold tracking-wider uppercase">
-                Law {i + 1}
-              </p>
-              <p className="mt-1 text-lg font-bold">{law}</p>
+              <Kicker>Law {i + 1}</Kicker>
+              <p className="text-h3 mt-1.5">{law}</p>
             </li>
           ))}
         </ol>
@@ -151,23 +153,23 @@ export default function Home() {
 
       {/* 6 — The maker. Services: aware, not sold.
        * 7 — Reviews slot reserved: first five App Store reviews go here. */}
-      <Section wash>
+      <Section tone="wash">
         <div className="mx-auto max-w-2xl text-center">
           <SectionHeading kicker="The maker" title="Who's behind this" />
-          <p className="text-muted-foreground mt-6 leading-relaxed">
+          <p className="text-muted-foreground mt-6 leading-[1.65]">
             Leaf is run by an engineer who has shipped for dozens of DTC brands
             — the kind of stores where a broken theme costs real money before
             lunch. That’s where the laws come from: years of seeing what
             careless software does to other people’s stores. When you email
             support, the person who wrote the code answers.
           </p>
-          <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
+          <p className="text-muted-foreground text-fine mt-4 leading-[1.6]">
             Beyond the apps, we take on a small number of engagements — theme
             and app builds, custom integrations. If your store needs hands like
             that,{" "}
             <a
               href={`mailto:${SUPPORT_EMAIL}`}
-              className="text-foreground underline underline-offset-4"
+              className="text-foreground hover:text-primary underline underline-offset-4 transition-colors duration-150"
             >
               write us
             </a>
@@ -177,24 +179,34 @@ export default function Home() {
       </Section>
 
       {/* 8 — Closing CTA: the mirror hook, one last time. */}
-      <Section className="text-center">
-        <h2 className="mx-auto max-w-2xl text-2xl font-bold tracking-tight text-balance sm:text-3xl">
-          Your store has a number. It takes one minute to see it.
-        </h2>
-        <div className="mt-8">
-          <TrackedLink
-            href="/apps/alt-text#scan"
-            event="cta_scan_click"
-            eventProps={{ location: "home-closing" }}
-            className={buttonVariants({ size: "lg" })}
-          >
-            Scan my store free
-          </TrackedLink>
+      <Section tone="dark" className="text-center">
+        <SectionHeading
+          tone="dark"
+          kicker="One minute"
+          title="Your store has a number. It takes one minute to see it."
+        />
+        <div className="mt-9">
+          <Button asChild size="lg">
+            <TrackedLink
+              href="/apps/alt-text#scan"
+              event="cta_scan_click"
+              eventProps={{ location: "home-closing" }}
+            >
+              Scan my store free
+            </TrackedLink>
+          </Button>
         </div>
+        <p className="text-fine text-on-dark-muted mt-4">
+          Free forever to scan · We only ever touch the alt field
+        </p>
       </Section>
 
       {/* 9 — Early access: the one waitlist form; lab cards link here. */}
-      <Section wash id="early-access" className="scroll-mt-16 text-center">
+      <Section
+        tone="wash"
+        id="early-access"
+        className="scroll-mt-16 text-center"
+      >
         <SectionHeading
           kicker="The lab"
           title="Be first in line for what's next"

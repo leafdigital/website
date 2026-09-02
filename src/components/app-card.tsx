@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { TrackedLink } from "@/components/analytics/tracked-link";
-import { buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 
 export type AppCardData = {
   name: string;
@@ -30,9 +30,7 @@ export function AppCard({
     <Card className="flex h-full flex-col">
       <CardHeader>
         <div className="flex items-center justify-between gap-2">
-          <Heading className="font-heading text-xl font-bold">
-            {app.name}
-          </Heading>
+          <Heading className="font-heading text-h3">{app.name}</Heading>
           {app.status === "live" ? (
             <Badge>Live</Badge>
           ) : (
@@ -41,30 +39,32 @@ export function AppCard({
         </div>
       </CardHeader>
       <CardContent className="flex flex-1 flex-col justify-between gap-6">
-        <p className="text-muted-foreground leading-relaxed">
+        <p className="text-muted-foreground leading-[1.65]">
           {app.description}
         </p>
         <div>
           {app.href && app.cta ? (
-            <TrackedLink
-              href={app.href}
-              event="cta_app_view"
-              eventProps={{ location: "app-card", app: app.name }}
-              className={buttonVariants({ variant: "outline" })}
-            >
-              {app.cta}
-            </TrackedLink>
+            <Button asChild variant="secondary">
+              <TrackedLink
+                href={app.href}
+                event="cta_app_view"
+                eventProps={{ location: "app-card", app: app.name }}
+              >
+                {app.cta}
+              </TrackedLink>
+            </Button>
           ) : (
             /* Lab cards send intent to the one early-access form at the
              * bottom of the homepage — no inline inputs on cards. */
-            <TrackedLink
-              href="/#early-access"
-              event="cta_app_view"
-              eventProps={{ location: "lab-card-waitlist", app: app.name }}
-              className={buttonVariants({ variant: "outline" })}
-            >
-              Get early access
-            </TrackedLink>
+            <Button asChild variant="secondary">
+              <TrackedLink
+                href="/#early-access"
+                event="cta_app_view"
+                eventProps={{ location: "lab-card-waitlist", app: app.name }}
+              >
+                Get early access
+              </TrackedLink>
+            </Button>
           )}
         </div>
       </CardContent>

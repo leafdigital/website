@@ -7,8 +7,10 @@ import type { MDXComponents } from "mdx/types";
  */
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
-    h2: (props) => <h2 className="mt-10 text-2xl font-bold" {...props} />,
-    h3: (props) => <h3 className="mt-6 text-lg font-bold" {...props} />,
+    h2: (props) => (
+      <h2 className="mt-10 text-2xl tracking-[-0.02em]" {...props} />
+    ),
+    h3: (props) => <h3 className="text-h3 mt-6" {...props} />,
     p: (props) => <p className="text-muted-foreground mt-3" {...props} />,
     ul: (props) => (
       <ul
@@ -18,7 +20,10 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ),
     strong: (props) => <strong className="text-foreground" {...props} />,
     a: (props) => (
-      <a className="text-foreground underline underline-offset-4" {...props} />
+      <a
+        className="text-foreground hover:text-primary underline underline-offset-4 transition-colors duration-150"
+        {...props}
+      />
     ),
     ...components,
   };

@@ -46,7 +46,7 @@ export function LocaleSwitcher() {
             router.replace(pathname, { locale: next });
           });
         }}
-        className="text-muted-foreground hover:text-foreground cursor-pointer rounded-md bg-transparent py-1 text-sm disabled:opacity-50"
+        className="text-muted-foreground hover:text-foreground cursor-pointer rounded-lg bg-transparent py-1 text-sm transition-colors duration-150 disabled:opacity-50"
       >
         {routing.locales.map((l) => (
           <option key={l} value={l}>

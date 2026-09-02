@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Section } from "@/components/layout/section";
-import { Badge } from "@/components/ui/badge";
+import { PillBadge } from "@/components/ui/pill-badge";
 import { routing } from "@/i18n/routing";
 import { documentLanguages, resolveDocumentLocale } from "@/lib/documents";
 import { APP_NAME, SITE_NAME } from "@/lib/constants";
@@ -58,21 +58,19 @@ export default async function PrivacyPage({
       <article className="mx-auto max-w-2xl">
         {/* DRAFT marker — maintainer + legal sign-off removes `draft` from the
          * MDX meta export, in every locale (LF-220 AC). */}
-        {meta.draft ? (
-          <Badge variant="outline">{t("document.draft")}</Badge>
-        ) : null}
-        <h1 className="mt-4 text-4xl font-extrabold tracking-tight">
+        {meta.draft ? <PillBadge>{t("document.draft")}</PillBadge> : null}
+        <h1 className="sm:text-h2 mt-6 text-3xl tracking-[-0.03em]">
           {meta.title}
         </h1>
-        <p className="text-muted-foreground mt-2 text-sm">
+        <p className="text-ink-faint text-fine mt-2">
           {t("document.updated", { date: new Date(meta.updated) })}
         </p>
         {fellBack ? (
-          <p className="border-border text-muted-foreground mt-6 rounded-md border px-4 py-3 text-sm">
+          <p className="border-border text-muted-foreground text-fine mt-6 rounded-lg border px-4 py-3">
             {t("document.fallbackNotice")}
           </p>
         ) : null}
-        <div className="mt-6 leading-relaxed">
+        <div className="mt-6 leading-[1.65]">
           <Document />
         </div>
       </article>

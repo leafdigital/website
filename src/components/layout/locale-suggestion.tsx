@@ -63,21 +63,21 @@ export function LocaleSuggestion() {
   };
 
   return (
-    <div lang={hint} className="border-border bg-muted/40 border-b">
+    <div lang={hint} className="border-border bg-accent border-b">
       <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-3 px-4 py-2 text-sm">
         {/* `lang` above matters: this text is not in the page's language. */}
         <span>{copy.message}</span>
         <button
           type="button"
           onClick={accept}
-          className="text-foreground font-medium underline underline-offset-4"
+          className="text-foreground font-semibold underline underline-offset-4 transition-colors duration-150"
         >
           {copy.accept}
         </button>
         <button
           type="button"
           onClick={dismiss}
-          className="text-muted-foreground hover:text-foreground"
+          className="text-muted-foreground hover:text-foreground transition-colors duration-150"
         >
           {copy.dismiss}
         </button>

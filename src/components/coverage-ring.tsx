@@ -91,7 +91,7 @@ export function CoverageRing({
             r={RADIUS}
             fill="none"
             strokeWidth="14"
-            className="stroke-neutral-200"
+            className="stroke-hairline-strong"
           />
           <circle
             cx="100"
@@ -110,15 +110,15 @@ export function CoverageRing({
           aria-hidden="true"
           className="absolute inset-0 flex flex-col items-center justify-center"
         >
-          <span className="text-4xl font-extrabold tracking-tight tabular-nums">
+          <span className="font-mono text-4xl font-extrabold tracking-tight tabular-nums">
             {shownCovered.toLocaleString()}
           </span>
-          <span className="text-muted-foreground text-sm">
+          <span className="text-ink-faint text-fine mt-1 font-mono tabular-nums">
             of {total.toLocaleString()}
           </span>
         </div>
       </div>
-      <p aria-hidden="true" className="text-muted-foreground mt-3 text-sm">
+      <p aria-hidden="true" className="text-muted-foreground text-fine mt-3">
         {label}
       </p>
     </div>

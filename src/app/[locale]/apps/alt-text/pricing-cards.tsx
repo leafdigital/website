@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { trackCta } from "@/lib/analytics";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Badge } from "@/components/ui/badge";
-import { buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { APP_INSTALL_URL } from "@/lib/constants";
 
@@ -76,37 +76,43 @@ export function PricingCards() {
         <li key={tier.name}>
           <Card
             className={
-              tier.featured ? "border-brand-600 h-full border-2" : "h-full"
+              tier.featured
+                ? "border-brand-800/25 ring-brand-800/10 h-full ring-1"
+                : "h-full"
             }
           >
-            <CardContent className="flex h-full flex-col pt-6">
-              <div className="flex items-center justify-between">
-                <h3 className="font-bold">{tier.name}</h3>
+            <CardContent className="flex h-full flex-col">
+              <div className="flex items-center justify-between gap-2">
+                <h3 className="text-h3">{tier.name}</h3>
                 {tier.featured ? <Badge>Most popular</Badge> : null}
               </div>
-              <p className="mt-4 text-4xl font-extrabold tracking-tight">
+              <p className="mt-4 font-mono text-4xl font-extrabold tracking-[-0.03em] tabular-nums">
                 {tier.price}
-                <span className="text-muted-foreground ml-1 text-sm font-normal">
+                <span className="text-ink-faint text-fine ml-1.5 font-sans font-normal">
                   {tier.tagline}
                 </span>
               </p>
-              <ul className="text-muted-foreground mt-6 flex-1 space-y-2 text-sm leading-relaxed">
+              <ul className="text-muted-foreground border-border mt-6 flex-1 divide-y divide-(--color-hairline-soft) border-t text-sm leading-[1.6]">
                 {tier.features.map((feature) => (
-                  <li key={feature}>{feature}</li>
+                  <li key={feature} className="py-2.5">
+                    {feature}
+                  </li>
                 ))}
               </ul>
               <div className="mt-8">
-                <TrackedLink
-                  href={APP_INSTALL_URL}
-                  event="cta_install_click"
-                  eventProps={{ location: "pricing", tier: tier.name }}
-                  className={buttonVariants({
-                    variant: tier.featured ? "default" : "outline",
-                    className: "w-full",
-                  })}
+                <Button
+                  asChild
+                  variant={tier.featured ? "default" : "secondary"}
+                  className="w-full"
                 >
-                  {tier.cta}
-                </TrackedLink>
+                  <TrackedLink
+                    href={APP_INSTALL_URL}
+                    event="cta_install_click"
+                    eventProps={{ location: "pricing", tier: tier.name }}
+                  >
+                    {tier.cta}
+                  </TrackedLink>
+                </Button>
               </div>
             </CardContent>
           </Card>

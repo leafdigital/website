@@ -15,15 +15,23 @@ to feel.
 - Action green: `#4CAF50 → #388E3C` ramp (v1 CTA gradient runs 500→700).
 - Tints (`#f0fdf4` / `#dcfce7`) for badges and quiet section washes only.
 - **Contrast law:** green as _text_ on white starts at green-700 (`#388E3C`).
-  green-500 on white is decoration-only — it fails 4.5:1.
+  green-500 on white is decoration-only — it fails 4.5:1. One exception, added
+  in v3: on the dark band (`#0B120D`), `#7BC67F` carries the kicker.
 
 ## Type
 
-v1 shipped Poppins 300–800. Proposed for v2: **Geist Sans via `next/font`**
-(self-hosted, zero layout shift, sharper at small sizes); Poppins stays the
-continuity option — decide at kit approval. Scale (from v1, keep the feel):
-hero 52/800 tight (-1px), section 40/700, card 22/700, sub 18/1.7,
-body 15–16/1.6, badges 12/700 uppercase.
+v1 shipped Poppins 300–800. v2 settled on **Geist Sans via `next/font`**
+(self-hosted, zero layout shift, sharper at small sizes), and v3 adds **Geist
+Mono** for numbers and data — same family, so the one-face rule holds.
+
+v3 scale (supersedes the v1 numbers below): hero 72/800/-0.045em/1.02,
+section 44/800/-0.03em/1.08, card 20/800/-0.02em, kicker 13/700 uppercase
++0.08em above every h2, body 16–18/1.6–1.65, fine print 13, caption 12.
+Headings are always `text-wrap: balance`. Full values in
+[tokens.json](tokens.json) under `v3`.
+
+_v1, for reference:_ hero 52/800 tight (-1px), section 40/700, card 22/700,
+sub 18/1.7, body 15–16/1.6, badges 12/700 uppercase.
 
 ## Voice line
 
@@ -37,3 +45,6 @@ bank's annual report, cut it.
   (see `og-image-v1.png` for the v1 style).
 - Favicon = the mark, unchanged (`leaf-mark.svg`).
 - v1's blue/amber utility colors are dropped in v2 — one accent, neutrals, done.
+- v3 moves the neutrals off pure gray onto a green-tinted ink ramp
+  (`#17211A` / `#5B665E` / `#8B948D`) and sharpens the radius ladder to a fixed
+  12px (buttons, tiles) / 18px (cards) / 999px (pills only).

@@ -4,7 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { Section } from "@/components/layout/section";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Faq } from "@/components/faq";
-import { buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { APP_NAME, SUPPORT_EMAIL } from "@/lib/constants";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -33,23 +33,26 @@ export default function SupportPage() {
   return (
     <Section>
       <div className="mx-auto max-w-2xl text-center">
-        <h1 className="text-4xl font-extrabold tracking-tight">{t("title")}</h1>
-        <p className="text-muted-foreground mt-4 text-lg leading-relaxed">
+        <h1 className="sm:text-h2 text-3xl tracking-[-0.03em]">{t("title")}</h1>
+        <p className="text-muted-foreground mt-4 text-lg leading-[1.65]">
           {t("intro")}
         </p>
-        <div className="mt-8">
-          <TrackedLink
-            href={`mailto:${SUPPORT_EMAIL}`}
-            event="cta_contact_click"
-            eventProps={{ location: "support" }}
-            className={buttonVariants({ size: "lg" })}
-          >
-            {SUPPORT_EMAIL}
-          </TrackedLink>
+        <div className="mt-9">
+          <Button asChild size="lg">
+            <TrackedLink
+              href={`mailto:${SUPPORT_EMAIL}`}
+              event="cta_contact_click"
+              eventProps={{ location: "support" }}
+            >
+              {SUPPORT_EMAIL}
+            </TrackedLink>
+          </Button>
         </div>
       </div>
       <div className="mx-auto mt-16 max-w-2xl">
-        <h2 className="text-2xl font-bold tracking-tight">{t("faqTitle")}</h2>
+        <h2 className="sm:text-h2 text-3xl tracking-[-0.03em]">
+          {t("faqTitle")}
+        </h2>
         <Faq items={faq} className="mt-6" />
       </div>
     </Section>

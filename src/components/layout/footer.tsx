@@ -14,9 +14,10 @@ export function Footer() {
 
   return (
     <footer className="border-border border-t">
-      <Container className="text-muted-foreground flex flex-col items-center justify-between gap-4 py-10 text-sm sm:flex-row">
+      <Container className="text-muted-foreground text-fine flex flex-col items-center justify-between gap-4 py-10 sm:flex-row">
         {/* Year and site name are ICU arguments — never baked into the string. */}
-        <p>
+        {/* Meta line — ink-faint is reserved for text nobody has to read. */}
+        <p className="text-ink-faint">
           {t("footer.rights", {
             year: new Date().getFullYear(),
             siteName: SITE_NAME,
@@ -27,7 +28,10 @@ export function Footer() {
             <ul className="flex items-center gap-6">
               {links.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="hover:text-foreground">
+                  <Link
+                    href={link.href}
+                    className="hover:text-foreground transition-colors duration-150"
+                  >
                     {t(`footer.${link.key}`)}
                   </Link>
                 </li>
@@ -36,7 +40,7 @@ export function Footer() {
                 {/* External scheme — plain anchor, nothing to localize. */}
                 <a
                   href={`mailto:${SUPPORT_EMAIL}`}
-                  className="hover:text-foreground"
+                  className="hover:text-foreground transition-colors duration-150"
                 >
                   {t("footer.contact")}
                 </a>

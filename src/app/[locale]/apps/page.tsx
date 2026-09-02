@@ -13,10 +13,8 @@ export default function AppsPage() {
   return (
     <Section>
       <div className="mx-auto max-w-2xl text-center">
-        <h1 className="text-4xl font-extrabold tracking-tight text-balance">
-          Apps
-        </h1>
-        <p className="text-muted-foreground mt-4 text-lg leading-relaxed">
+        <h1 className="sm:text-h2 text-3xl tracking-[-0.03em]">Apps</h1>
+        <p className="text-muted-foreground mt-4 text-lg leading-[1.65]">
           One unowned job at a time, done properly: your images first, your
           catalog quality and AI answers next. Every app ships under written
           laws about what it will never touch.

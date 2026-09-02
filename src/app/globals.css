@@ -3,21 +3,27 @@
 @import "shadcn/tailwind.css";
 
 /*
- * Leaf Digital theme — values from brand/tokens.json (approved kit).
+ * Leaf Digital theme — v3.
  *
  * One-accent rule: green is reserved for actions (CTAs), the coverage ring,
- * and the logo. Everything else is neutral. If green is on screen, it is the
+ * and the logo. Everything else is ink. If green is on screen, it is the
  * thing we want the visitor to do or the number we want them to feel.
  *
  * Contrast law: the kit's action ramp (green-500/600/700) fails WCAG AA as a
  * text/background pairing on white, so semantic tokens pair green-800+ with
  * white text (5.1:1). 500–700 remain available for decoration (gradients,
- * ring stroke) where no text sits on them. The site ships light-only.
+ * ring stroke) where no text sits on them. The one exception is the dark
+ * band (§ "Dark surface"): on #0B120D, brand-on-dark carries text and only
+ * there. The site ships light-only.
+ *
+ * v3 moves the neutrals off pure gray onto a green-tinted ink ramp, sharpens
+ * the radius ladder to fixed steps, and adds the dark-band surface.
  */
 
 @theme inline {
   --font-heading: var(--font-sans);
   --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
@@ -36,13 +42,18 @@
   --color-card: var(--card);
   --color-foreground: var(--foreground);
   --color-background: var(--background);
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Radius ladder — v3 fixed steps, not a calc off one seed. Buttons 12,
+   * inner tiles 12, cards 18. The ladder tops out at 18px: `rounded-2xl`
+   * and softer are clamped so a stray utility can't reintroduce the old
+   * pillowy container. Pills use `rounded-full`. */
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 18px;
+  --radius-3xl: 18px;
+  --radius-4xl: 18px;
 }
 
 @theme {
@@ -59,8 +70,87 @@
   /* Logo green — mark + wordmark only. */
   --color-brand-logo: #176639;
 
-  /* Neutrals — exact v1 values (Tailwind v3 gray hex, pinned so the v4
-   * oklch defaults can't drift the rendered site off the live one). */
+  /* Ink ramp — v3 neutrals. Green-tinted, never pure gray. */
+  --color-ink: #17211a;
+  --color-ink-muted: #5b665e;
+  --color-ink-faint: #8b948d;
+
+  /* Hairlines — alpha ink, so they sit on any surface without banding.
+   * `hairline` is the default card/divider line; `soft` for dense internal
+   * rules, `strong` for the secondary button border. */
+  --color-hairline-soft: --alpha(var(--color-ink) / 7%);
+  --color-hairline: --alpha(var(--color-ink) / 9%);
+  --color-hairline-strong: --alpha(var(--color-ink) / 14%);
+
+  /* Dark surface — full-bleed bands only (max 1–2 per page). This is the
+   * one place a below-800 green may carry text. */
+  --color-surface-dark: #0b120d;
+  --color-on-dark: #ffffff;
+  --color-on-dark-muted: --alpha(#ffffff / 60%);
+  --color-brand-on-dark: #7bc67f;
+
+  /* Ink washes — quiet tints for surfaces on the light ground. */
+  --color-ink-wash: --alpha(var(--color-ink) / 4%);
+
+  /* Type scale — v3. Weight 800 on headings, tracking tightens with size. */
+  --text-hero: 72px;
+  --text-hero--line-height: 1.02;
+  --text-hero--letter-spacing: -0.045em;
+  --text-hero--font-weight: 800;
+
+  --text-h2: 44px;
+  --text-h2--line-height: 1.08;
+  --text-h2--letter-spacing: -0.03em;
+  --text-h2--font-weight: 800;
+
+  --text-h3: 20px;
+  --text-h3--line-height: 1.3;
+  --text-h3--letter-spacing: -0.02em;
+  --text-h3--font-weight: 800;
+
+  /* The kicker that sits above every H2. */
+  --text-kicker: 13px;
+  --text-kicker--line-height: 1.2;
+  --text-kicker--letter-spacing: 0.08em;
+  --text-kicker--font-weight: 700;
+
+  /* Fine print: reassurance lines, captions, meta rows with ` · ` between. */
+  --text-fine: 13px;
+  --text-fine--line-height: 1.5;
+
+  /* Data-card captions. */
+  --text-caption: 12px;
+  --text-caption--line-height: 1.4;
+
+  /* Card shadow — a tight contact shadow plus a wide soft one. */
+  --shadow-card:
+    0 1px 2px --alpha(var(--color-ink) / 4%),
+    0 20px 48px --alpha(var(--color-ink) / 8%);
+  /* v1 CTA glow, kept as a named shadow. Key CTAs only. */
+  --shadow-cta: 0 4px 15px rgb(76 175 80 / 0.35);
+
+  /* Motion — one entrance curve, one hover duration. */
+  --ease-leaf: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --animate-fade-up: fade-up 700ms var(--ease-leaf) both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      /* Distance isn't specified in the v3 spec; 16px reads as a lift
+       * without turning into a slide at 700ms. */
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+@theme {
+  /* Legacy gray ramp — kept only so nothing that still references it breaks
+   * mid-sweep. Do not reach for these: text and lines use the ink ramp and
+   * the hairline tokens above. */
   --color-neutral-50: #f9fafb;
   --color-neutral-100: #f3f4f6;
   --color-neutral-200: #e5e7eb;
@@ -71,34 +161,32 @@
   --color-neutral-700: #374151;
   --color-neutral-800: #1f2937;
   --color-neutral-900: #111827;
-
-  /* v1 CTA glow, kept as a named shadow. */
-  --shadow-cta: 0 4px 15px rgb(76 175 80 / 0.35);
 }
 
 :root {
   --background: #ffffff;
-  --foreground: var(--color-neutral-800);
+  --foreground: var(--color-ink);
   --card: #ffffff;
-  --card-foreground: var(--color-neutral-800);
+  --card-foreground: var(--color-ink);
   --popover: #ffffff;
-  --popover-foreground: var(--color-neutral-800);
+  --popover-foreground: var(--color-ink);
   /* Action green: the one accent. AA on white (5.1:1). */
   --primary: var(--color-brand-800);
   --primary-foreground: #ffffff;
-  --secondary: var(--color-neutral-100);
-  --secondary-foreground: var(--color-neutral-800);
-  --muted: var(--color-neutral-100);
-  --muted-foreground: var(--color-neutral-500);
+  /* Secondary is the white bordered button, not a filled gray one. */
+  --secondary: #ffffff;
+  --secondary-foreground: var(--color-ink);
+  --muted: var(--color-ink-wash);
+  --muted-foreground: var(--color-ink-muted);
   /* Accent = quiet green wash, never a text color. */
   --accent: var(--color-brand-50);
   --accent-foreground: var(--color-brand-900);
   --destructive: #dc2626;
-  --border: var(--color-neutral-200);
-  --input: var(--color-neutral-200);
+  --border: var(--color-hairline);
+  --input: var(--color-hairline-strong);
   --ring: var(--color-brand-600);
-  /* v1 button radius: 10px. */
-  --radius: 0.625rem;
+  /* Alias for components that read the seed directly: button radius. */
+  --radius: 12px;
 }
 
 @layer base {
@@ -110,5 +198,26 @@
   }
   html {
     @apply scroll-smooth font-sans antialiased;
+  }
+  /* Headings are extrabold and balanced by default — the v3 voice. Sizes
+   * stay explicit at the call site. */
+  h1,
+  h2,
+  h3 {
+    @apply font-extrabold text-balance;
+  }
+  /* Numbers and data are always mono + tabular, wherever they appear. */
+  :is(code, kbd, samp, pre) {
+    @apply font-mono tabular-nums;
+  }
+}
+
+@layer utilities {
+  /* `animate-fade-up` is generated from the theme var above; this is the
+   * standing reduced-motion guard so no call site has to remember it. */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-up {
+      animation: none;
+    }
   }
 }

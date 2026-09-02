@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { CoverageRing } from "@/components/coverage-ring";
-import { Section, SectionHeading } from "@/components/layout/section";
+import { Kicker, Section, SectionHeading } from "@/components/layout/section";
 import { Faq } from "@/components/faq";
-import { Badge } from "@/components/ui/badge";
-import { buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
+import { PillBadge } from "@/components/ui/pill-badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { APP_INSTALL_URL, APP_NAME, MIRROR } from "@/lib/constants";
 import { PricingCards } from "./pricing-cards";
@@ -93,28 +93,33 @@ export default function AltTextPage() {
       <Section id="scan" className="pb-12">
         <div className="mx-auto grid max-w-4xl items-center gap-10 sm:grid-cols-2">
           <div className="text-center sm:text-left">
-            <Badge variant="outline">{APP_NAME} for Shopify</Badge>
-            <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-balance sm:text-[52px] sm:leading-[1.1]">
+            <PillBadge>{APP_NAME} for Shopify</PillBadge>
+            {/* Sized for this page's 50/50 split, not the 7fr hero column —
+             * see the sweep note about moving this onto `HeroSplit`. The
+             * headline figure stays in the heading face: mono advances open
+             * gaps a display line can't carry. */}
+            <h1 className="mt-6 text-4xl tracking-[-0.045em] tabular-nums sm:text-5xl">
               {MIRROR.needsAttention.toLocaleString()} of your images may be
-              saying nothing
+              saying <span className="text-primary">nothing</span>
             </h1>
-            <p className="text-muted-foreground mt-6 text-lg leading-relaxed">
+            <p className="text-muted-foreground mt-6 text-lg leading-[1.65]">
               That’s a typical scan of a {MIRROR.total.toLocaleString()}-image
               store. Yours takes about a minute, writes nothing, and shows you
               the real number — graded, not just counted.
             </p>
-            <div className="mt-8">
-              <TrackedLink
-                href={APP_INSTALL_URL}
-                event="cta_scan_click"
-                eventProps={{ location: "alt-text-hero" }}
-                className={buttonVariants({ size: "lg" })}
-              >
-                Scan my store free
-              </TrackedLink>
-              <p className="text-muted-foreground mt-3 text-sm">
-                We only ever touch the alt field. Nothing is written without
-                your approval.
+            <div className="mt-9">
+              <Button asChild size="lg">
+                <TrackedLink
+                  href={APP_INSTALL_URL}
+                  event="cta_scan_click"
+                  eventProps={{ location: "alt-text-hero" }}
+                >
+                  Scan my store free
+                </TrackedLink>
+              </Button>
+              <p className="text-fine text-ink-faint mt-4">
+                Free forever to scan · No card · We only ever touch the alt
+                field
               </p>
             </div>
           </div>
@@ -128,8 +133,9 @@ export default function AltTextPage() {
       </Section>
 
       {/* 2 — Problem / agitate. */}
-      <Section wash>
+      <Section tone="dark">
         <SectionHeading
+          tone="dark"
           kicker="The quiet leak"
           title="Missing alt text costs you three ways, and none of them show up in your analytics"
         />
@@ -149,16 +155,16 @@ export default function AltTextPage() {
             },
           ].map((item) => (
             <Card key={item.title} className="h-full">
-              <CardContent className="pt-6">
-                <h3 className="font-bold">{item.title}</h3>
-                <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
+              <CardContent>
+                <h3 className="text-h3">{item.title}</h3>
+                <p className="text-muted-foreground mt-2 text-sm leading-[1.65]">
                   {item.body}
                 </p>
               </CardContent>
             </Card>
           ))}
         </div>
-        <p className="text-muted-foreground mx-auto mt-10 max-w-2xl text-center leading-relaxed">
+        <p className="text-on-dark-muted mx-auto mt-10 max-w-2xl text-center leading-[1.65]">
           And now a fourth: AI shopping agents describe your products to buyers
           by reading what your images say. Right now, yours may be saying
           nothing — while your competitors’ catalogs do the talking.
@@ -173,31 +179,29 @@ export default function AltTextPage() {
           sub="Cheap generators echo your product title and call it coverage. We look at the picture. Here's the difference on one image:"
         />
         <div className="mx-auto mt-10 grid max-w-3xl gap-6 sm:grid-cols-2">
-          <Card className="border-2">
-            <CardContent className="pt-6">
-              <p className="text-muted-foreground text-xs font-bold tracking-wider uppercase">
+          <Card>
+            <CardContent>
+              <p className="text-kicker text-ink-faint uppercase">
                 Title-echo generators
               </p>
-              <p className="mt-3 font-mono text-sm leading-relaxed">
+              <p className="mt-3 font-mono text-sm leading-[1.6]">
                 &ldquo;Aria Midi Dress — Olive — S/M/L — New Arrivals&rdquo;
               </p>
-              <p className="text-muted-foreground mt-3 text-sm">
+              <p className="text-muted-foreground text-fine mt-3">
                 100% coverage. Zero description. A screen reader and a shopping
                 agent learn nothing.
               </p>
             </CardContent>
           </Card>
-          <Card className="border-brand-600 border-2">
-            <CardContent className="pt-6">
-              <p className="text-brand-800 text-xs font-bold tracking-wider uppercase">
-                {APP_NAME}
-              </p>
-              <p className="mt-3 font-mono text-sm leading-relaxed">
+          <Card className="border-brand-800/25">
+            <CardContent>
+              <Kicker>{APP_NAME}</Kicker>
+              <p className="mt-3 font-mono text-sm leading-[1.6]">
                 &ldquo;Model wearing the Aria midi dress in olive linen,
                 wrap-front with tie waist, photographed outdoors in soft
                 light&rdquo;
               </p>
-              <p className="text-muted-foreground mt-3 text-sm">
+              <p className="text-muted-foreground text-fine mt-3">
                 Written from the actual image. Distinct for every photo of the
                 product.
               </p>
@@ -207,7 +211,7 @@ export default function AltTextPage() {
       </Section>
 
       {/* 4 — Trust ladder. */}
-      <Section wash>
+      <Section tone="wash">
         <SectionHeading
           kicker="How trust is earned"
           title="Scan. Taste. Review. Auto-pilot."
@@ -217,12 +221,10 @@ export default function AltTextPage() {
           {ladder.map((rung, i) => (
             <li key={rung.step}>
               <Card className="h-full">
-                <CardContent className="pt-6">
-                  <p className="text-brand-800 text-xs font-bold tracking-wider uppercase">
-                    Step {i + 1}
-                  </p>
-                  <h3 className="mt-1 text-lg font-bold">{rung.step}</h3>
-                  <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
+                <CardContent>
+                  <Kicker>Step {i + 1}</Kicker>
+                  <h3 className="text-h3 mt-1.5">{rung.step}</h3>
+                  <p className="text-muted-foreground mt-2 text-sm leading-[1.65]">
                     {rung.body}
                   </p>
                 </CardContent>
@@ -239,11 +241,11 @@ export default function AltTextPage() {
           title="What we never do"
           sub="Written down before the first install, enforced by the code — not the marketing."
         />
-        <ol className="mx-auto mt-12 max-w-2xl space-y-8 border-l-2 pl-8">
+        <ol className="border-border mx-auto mt-12 max-w-2xl space-y-8 border-l pl-8">
           {laws.map((law) => (
             <li key={law.rule}>
-              <h3 className="text-lg font-bold">{law.rule}</h3>
-              <p className="text-muted-foreground mt-1 leading-relaxed">
+              <h3 className="text-h3">{law.rule}</h3>
+              <p className="text-muted-foreground mt-1.5 leading-[1.65]">
                 {law.gloss}
               </p>
             </li>
@@ -252,13 +254,13 @@ export default function AltTextPage() {
       </Section>
 
       {/* 6 — Pricing. */}
-      <Section wash id="pricing">
+      <Section tone="wash" id="pricing">
         <SectionHeading
           kicker="Pricing"
           title="Less than an hour of a VA's time — for work no VA does well"
         />
         <PricingCards />
-        <p className="text-muted-foreground mx-auto mt-8 max-w-2xl text-center text-sm leading-relaxed">
+        <p className="text-ink-faint text-fine mx-auto mt-8 max-w-2xl text-center">
           Catalog bigger than 10,000 images a month? A Scale waitlist spot gets
           you personal onboarding — reach us from the support page.
         </p>
@@ -269,19 +271,20 @@ export default function AltTextPage() {
         <SectionHeading kicker="Questions" title="Asked and answered" />
         <Faq items={faq} className="mx-auto mt-10 max-w-2xl" />
         <div className="mt-16 text-center">
-          <h2 className="text-2xl font-bold tracking-tight text-balance">
+          <h2 className="sm:text-h2 text-3xl tracking-[-0.03em]">
             Your store has a number. One minute from now, you could be looking
             at it.
           </h2>
-          <div className="mt-6">
-            <TrackedLink
-              href={APP_INSTALL_URL}
-              event="cta_scan_click"
-              eventProps={{ location: "alt-text-closing" }}
-              className={buttonVariants({ size: "lg" })}
-            >
-              Scan my store free
-            </TrackedLink>
+          <div className="mt-9">
+            <Button asChild size="lg">
+              <TrackedLink
+                href={APP_INSTALL_URL}
+                event="cta_scan_click"
+                eventProps={{ location: "alt-text-closing" }}
+              >
+                Scan my store free
+              </TrackedLink>
+            </Button>
           </div>
         </div>
       </Section>

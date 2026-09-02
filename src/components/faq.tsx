@@ -18,17 +18,17 @@ export function Faq({
   return (
     <div className={cn("divide-border divide-y border-y", className)}>
       {items.map((item) => (
-        <details key={item.q} className="group py-4">
-          <summary className="flex cursor-pointer list-none items-center justify-between gap-4 rounded-md font-medium marker:hidden [&::-webkit-details-marker]:hidden">
+        <details key={item.q} className="group py-5">
+          <summary className="text-foreground flex cursor-pointer list-none items-center justify-between gap-4 rounded-lg font-semibold marker:hidden [&::-webkit-details-marker]:hidden">
             {item.q}
             <span
               aria-hidden="true"
-              className="text-muted-foreground transition-transform group-open:rotate-180 motion-reduce:transition-none"
+              className="text-ink-faint transition-transform duration-150 group-open:rotate-180 motion-reduce:transition-none"
             >
               ⌄
             </span>
           </summary>
-          <p className="text-muted-foreground mt-3 leading-relaxed">{item.a}</p>
+          <p className="text-muted-foreground mt-3 leading-[1.65]">{item.a}</p>
         </details>
       ))}
     </div>
