@@ -43,7 +43,10 @@ export function CtaBand({
        * faded at the bottom of the scroll. Revealing the children instead
        * keeps every animated box comfortably shorter than the fold.
        */}
-      <Container className="reveal-group flex max-w-[736px] flex-col items-center gap-[22px] py-20 text-center sm:py-[110px]">
+      <Container
+        data-reveal-group
+        className="flex max-w-[736px] flex-col items-center gap-[22px] py-20 text-center sm:py-[110px]"
+      >
         <h2 className="text-on-dark text-3xl leading-[1.06] tracking-[-0.03em] sm:text-[48px]">
           {title}
         </h2>

@@ -182,7 +182,7 @@ export default function ImageVoicePage() {
           sub={t("checkbox.sub")}
           className="max-w-[680px]"
         />
-        <div className="reveal-group mt-14 grid gap-[18px] md:grid-cols-2">
+        <div data-reveal-group className="mt-14 grid gap-[18px] md:grid-cols-2">
           <div className="border-hairline bg-surface-muted flex flex-col gap-4 rounded-xl border p-[30px]">
             <p className="text-fine text-ink-faint font-bold tracking-[0.05em] uppercase">
               {t("checkbox.beforeLabel")}
@@ -205,7 +205,10 @@ export default function ImageVoicePage() {
             </p>
           </div>
         </div>
-        <p className="reveal text-muted-foreground mt-11 max-w-[640px] leading-[1.6]">
+        <p
+          data-reveal
+          className="text-muted-foreground mt-11 max-w-[640px] leading-[1.6]"
+        >
           {t.rich("checkbox.closer", { lead })}
         </p>
       </Section>
@@ -220,7 +223,7 @@ export default function ImageVoicePage() {
             body: t(`how.${key}.body`),
           }))}
         />
-        <p className="reveal text-ink-faint mt-11 text-[15px]">
+        <p data-reveal className="text-ink-faint mt-11 text-[15px]">
           {t("how.footer")}
         </p>
       </Section>
@@ -232,7 +235,7 @@ export default function ImageVoicePage() {
           title={t("benefits.title")}
           className="max-w-[680px]"
         />
-        <ul className="reveal-group mt-14 grid gap-4 md:grid-cols-2">
+        <ul data-reveal-group className="mt-14 grid gap-4 md:grid-cols-2">
           {benefits.map((key, i) => {
             const featured = i === 0;
             return (
@@ -278,7 +281,7 @@ export default function ImageVoicePage() {
           className="max-w-[680px]"
         />
         <PricingCards />
-        <p className="reveal text-ink-faint mt-11 text-[15px]">
+        <p data-reveal className="text-ink-faint mt-11 text-[15px]">
           {t.rich("pricing.footer", {
             link: (chunks) => (
               <Link href="/" className="text-brand-800 font-semibold">

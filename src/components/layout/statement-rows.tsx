@@ -29,7 +29,8 @@ export function StatementRows({
 }) {
   return (
     <dl
-      className={cn("reveal-group mt-16 border-b border-white/12", className)}
+      data-reveal-group
+      className={cn("mt-16 border-b border-white/12", className)}
     >
       {items.map((item) => (
         <div

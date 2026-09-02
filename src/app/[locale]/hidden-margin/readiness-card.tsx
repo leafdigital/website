@@ -33,7 +33,8 @@ export function ReadinessCard() {
           <div
             /* Width is the value; the draw is a scaleX on top of it, so the
              * bar animates on the compositor and never reflows the card. */
-            className="bg-brand-600 reveal-draw h-full rounded-full"
+            data-draw
+            className="bg-brand-600 h-full rounded-full"
             style={{ width: `${readinessScore}%` }}
           />
         </div>

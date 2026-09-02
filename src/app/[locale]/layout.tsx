@@ -9,6 +9,7 @@ import { Header } from "@/components/layout/header";
 import { LocaleSuggestion } from "@/components/layout/locale-suggestion";
 import { isLocale, routing } from "@/i18n/routing";
 import { SITE_INDEXABLE, SITE_NAME, SITE_URL } from "@/lib/constants";
+import { REVEAL_SCRIPT } from "@/lib/reveal-script";
 import "../globals.css";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
@@ -74,6 +75,10 @@ export default async function LocaleLayout({
       className={`${geist.variable} ${geistMono.variable}`}
     >
       <body className="flex min-h-screen flex-col">
+        {/* First thing in <body>: it blocks parsing, so nothing paints before
+         * the reveal state is decided and there is no flash of shown-then-
+         * hidden content. See src/lib/reveal-script.ts. */}
+        <script dangerouslySetInnerHTML={{ __html: REVEAL_SCRIPT }} />
         <NextIntlClientProvider>
           <a
             href="#main"

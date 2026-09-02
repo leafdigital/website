@@ -25,10 +25,8 @@ export function StepsRow({
 }) {
   return (
     <ol
-      className={cn(
-        "reveal-group grid gap-8 md:grid-cols-3 md:gap-0",
-        className,
-      )}
+      data-reveal-group
+      className={cn("grid gap-8 md:grid-cols-3 md:gap-0", className)}
     >
       {steps.map((step, i) => (
         <li

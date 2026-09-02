@@ -92,7 +92,7 @@ export function PricingCards() {
   );
 
   return (
-    <div className="reveal-group mt-14 grid gap-[18px] lg:grid-cols-3">
+    <div data-reveal-group className="mt-14 grid gap-[18px] lg:grid-cols-3">
       <Plan
         name={t("audit.name")}
         price={t("audit.price", { amount: PRICING.audit })}

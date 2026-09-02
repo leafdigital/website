@@ -143,7 +143,7 @@ export default function ReorderEnginePage() {
             body: t(`ladder.${key}.body`),
           }))}
         />
-        <p className="reveal text-ink-faint mt-11 text-[15px]">
+        <p data-reveal className="text-ink-faint mt-11 text-[15px]">
           {t("ladder.footer")}
         </p>
       </Section>

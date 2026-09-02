@@ -185,47 +185,6 @@
     }
   }
 
-  /* The scroll-driven twin of fade-up. Same idea — the difference is only
-   * what drives it: the clock above the fold, the scrollbar below it.
-   *
-   * The distance is a variable because the weight of the arrival should
-   * follow the weight of the thing arriving. A caption does not need the
-   * travel a 48px statement on a dark band earns. */
-  @keyframes reveal {
-    from {
-      opacity: 0;
-      transform: translateY(var(--reveal-lift, 22px));
-    }
-    to {
-      opacity: 1;
-      transform: none;
-    }
-  }
-
-  /* A hairline drawing itself across. The whole design system is built on
-   * rules rather than boxes — steps divided by a line, statements stacked on
-   * lines, sections separated by one — so drawing them is motion that says
-   * what the layout already says, instead of decorating it. */
-  @keyframes draw-x {
-    from {
-      transform: scaleX(0);
-    }
-    to {
-      transform: scaleX(1);
-    }
-  }
-
-  /* A meter drawing itself. `transform`, not `width`, so it stays on the
-   * compositor and never reflows the card around it. */
-  @keyframes draw {
-    from {
-      transform: scaleX(0);
-    }
-    to {
-      transform: scaleX(1);
-    }
-  }
-
   /* The header earns its edge on the way down: no line at rest against the
    * hero, a hairline and a whisper of shadow once the page moves under it. */
   @keyframes header-settle {
@@ -320,90 +279,6 @@
   }
 
   /*
-   * Scroll-driven reveals.
-   *
-   * Two guards, and the nesting order is the whole safety argument: nothing
-   * here sets `opacity: 0` unless the browser can also animate it back. A
-   * visitor on a browser without view timelines, or one who asked for less
-   * motion, gets the page fully painted and no animation at all — never a
-   * blank section waiting on script that will not run. There is no JS in
-   * this feature and nothing to hydrate.
-   *
-   * Progress is `linear` on purpose. An eased scroll-driven fade detaches
-   * from the finger and reads as a effect; linear reads as the page simply
-   * being where you scrolled it to.
-   */
-  @supports (animation-timeline: view()) {
-    @media (prefers-reduced-motion: no-preference) {
-      .reveal,
-      .reveal-group > * {
-        animation: reveal linear both;
-        animation-timeline: view();
-        /* Starts as the block's top edge clears the fold, finished well
-         * before it is centred — the movement is over by the time you have
-         * settled on it. */
-        animation-range: entry calc(var(--reveal-offset, 0%)) entry
-          calc(var(--reveal-offset, 0%) + 55%);
-      }
-
-      /* Siblings in a grid arrive on one scroll position, so they need the
-       * offset to land in sequence rather than as a block. Four steps is
-       * enough for a 3-up row; past that they share the last one, because a
-       * twelve-card grid staggered twelve deep reads as a loading screen. */
-      .reveal-group > *:nth-child(2) {
-        --reveal-offset: 5%;
-      }
-      .reveal-group > *:nth-child(3) {
-        --reveal-offset: 10%;
-      }
-      .reveal-group > *:nth-child(n + 4) {
-        --reveal-offset: 14%;
-      }
-
-      /* A dark band is the loudest thing on its page; its content arrives
-       * with more travel and takes longer to settle, so the section lands
-       * rather than merely appearing. */
-      [data-tone="dark"] .reveal,
-      [data-tone="dark"] .reveal-group > * {
-        --reveal-lift: 34px;
-        animation-range: entry calc(var(--reveal-offset, 0%)) entry
-          calc(var(--reveal-offset, 0%) + 52%);
-      }
-
-      /*
-       * A rule that draws itself in. The element keeps its real border for
-       * every browser that gets no further than this @supports block; here
-       * we hide it and hand the job to a pseudo-element, which can carry its
-       * own timeline independently of whatever animation the element itself
-       * is already running.
-       */
-      .rule-draw {
-        position: relative;
-        border-top-color: transparent;
-      }
-      .rule-draw::before {
-        content: "";
-        position: absolute;
-        inset-inline: 0;
-        top: -1px;
-        height: 1px;
-        background: var(--color-hairline-soft);
-        transform-origin: left center;
-        animation: draw-x linear both;
-        animation-timeline: view();
-        animation-range: entry 0% entry 35%;
-      }
-
-      .reveal-draw {
-        animation: draw linear both;
-        animation-timeline: view();
-        animation-range: entry 10% entry 70%;
-        transform-origin: left center;
-      }
-    }
-  }
-
-  /*
    * The header reacts to scroll position rather than to entering the
    * viewport, so this one rides `scroll()`, not `view()`. Same two guards:
    * without them the header keeps the resting hairline it ships with.
@@ -415,6 +290,118 @@
         animation-timeline: scroll();
         animation-range: 0 72px;
       }
+    }
+  }
+}
+
+/*
+ * Reveals — deliberately NOT inside `@layer utilities`.
+ *
+ * Tailwind v4 tree-shakes that layer against what it finds in the source
+ * scan, and it keys that off class names. These selectors are attribute-only,
+ * so every one of them was silently dropped from the build: the markup was
+ * right, the script was right, and the stylesheet simply did not contain the
+ * rules. Top-level CSS is always emitted.
+ */
+/*
+ * Reveals.
+ *
+ * Every selector here is gated on `data-armed`, and only the bootstrapper
+ * sets that (src/lib/reveal-script.ts) — after it has an observer in hand
+ * and only on elements below the fold. Nothing in this stylesheet can hide
+ * content on its own, which is the point: a blank section is a far worse
+ * outcome than a missing animation, and this makes the blank section
+ * unreachable rather than merely unlikely.
+ *
+ * The `data-reveal*` attributes in the markup are inert markers. They say
+ * "this is animatable", never "this is hidden".
+ */
+/* The one frame in which elements are being hidden. Without this the hiding
+ * itself animates — see the bootstrapper. */
+[data-arming] [data-armed] {
+  transition: none !important;
+}
+
+[data-armed]:not([data-rule]) {
+  opacity: 0;
+  transform: translateY(var(--reveal-lift, 24px));
+  transition:
+    opacity 700ms var(--ease-leaf),
+    transform 700ms var(--ease-leaf);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+[data-armed][data-revealed]:not([data-rule]) {
+  opacity: 1;
+  transform: none;
+}
+
+/* Siblings in a grid come into view together, so the delay is what makes
+ * them read as a sequence rather than a slab. Capped at the fourth: a
+ * twelve-card grid staggered twelve deep reads as a loading screen. */
+[data-reveal-group] > *:nth-child(2) {
+  --reveal-delay: 90ms;
+}
+[data-reveal-group] > *:nth-child(3) {
+  --reveal-delay: 180ms;
+}
+[data-reveal-group] > *:nth-child(n + 4) {
+  --reveal-delay: 260ms;
+}
+
+/* A dark band is the loudest thing on its page. More travel, and slower, so
+ * the section lands instead of merely appearing.
+ *
+ * The `:not()` is not decoration: without it this selector is a step
+ * below the base rule above, whose `transition` shorthand then wins and the
+ * slower duration is silently ignored. */
+[data-tone="dark"] [data-armed]:not([data-rule]) {
+  --reveal-lift: 34px;
+  transition-duration: 850ms;
+}
+
+/*
+ * A rule that draws itself in. The whole design system is built on
+ * hairlines rather than boxes — steps divided by a rule, statements
+ * stacked on rules, sections separated by one — so drawing them is motion
+ * that restates the layout instead of decorating it. It rides a
+ * pseudo-element so the rule keeps its own timing independently of
+ * whatever the element itself is doing.
+ */
+[data-rule][data-armed] {
+  position: relative;
+  border-top-color: transparent;
+}
+[data-rule][data-armed]::before {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: -1px;
+  height: 1px;
+  background: var(--color-hairline-soft);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 1100ms var(--ease-leaf);
+}
+[data-rule][data-armed][data-revealed]::before {
+  transform: scaleX(1);
+}
+
+/* The readiness meter fills to its value on load — it sits in the hero, so
+ * it is never below the fold and has nothing to be triggered by. Width is
+ * the value; the draw is a scaleX on top of it, so it never reflows the card
+ * around it. The delay lets the hero cascade land first. */
+@media (prefers-reduced-motion: no-preference) {
+  [data-draw] {
+    transform-origin: left center;
+    animation: draw-x 1100ms var(--ease-leaf) 320ms both;
+  }
+
+  @keyframes draw-x {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
     }
   }
 }

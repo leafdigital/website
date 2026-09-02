@@ -165,7 +165,7 @@ export default function Home() {
             statement: t(`villain.${key}`),
           }))}
         />
-        <p className="reveal mt-10 text-[17px] text-white/55">
+        <p data-reveal className="mt-10 text-[17px] text-white/55">
           {t("villain.closer")}
         </p>
       </Section>
@@ -189,7 +189,7 @@ export default function Home() {
           title={t("suite.title")}
           sub={t("suite.sub")}
         />
-        <ul className="reveal-group mt-14 grid gap-[18px] md:grid-cols-3">
+        <ul data-reveal-group className="mt-14 grid gap-[18px] md:grid-cols-3">
           {apps.map((app) => (
             <li key={app.name} className="flex">
               <AppCard app={app} featured={app.featured} />
@@ -200,7 +200,7 @@ export default function Home() {
 
       {/* 5 — The two futures, side by side. */}
       <Section className="pt-0 sm:pt-0">
-        <div className="reveal-group grid gap-[18px] md:grid-cols-2">
+        <div data-reveal-group className="grid gap-[18px] md:grid-cols-2">
           <div className="border-hairline bg-surface-muted rounded-xl border p-10">
             <p className="text-fine text-ink-faint font-bold tracking-[0.05em] uppercase">
               {t("contrast.withoutLabel")}

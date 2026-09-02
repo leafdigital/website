@@ -118,7 +118,7 @@ export default function HiddenMarginPage() {
           className="max-w-[680px]"
         />
         <SampleReport />
-        <p className="reveal text-fine text-ink-faint mt-5">
+        <p data-reveal className="text-fine text-ink-faint mt-5">
           {t("report.caption")}
         </p>
       </Section>
@@ -133,7 +133,7 @@ export default function HiddenMarginPage() {
             body: t(`how.${key}.body`),
           }))}
         />
-        <p className="reveal text-ink-faint mt-11 text-[15px]">
+        <p data-reveal className="text-ink-faint mt-11 text-[15px]">
           {t("how.footer")}
         </p>
       </Section>

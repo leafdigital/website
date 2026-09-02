@@ -53,9 +53,9 @@ export function Section({
       {...props}
     >
       <Container
+        {...(divided ? { "data-rule": "" } : {})}
         className={cn(
-          divided &&
-            "border-hairline-soft rule-draw border-t pt-16 sm:pt-[90px]",
+          divided && "border-hairline-soft border-t pt-16 sm:pt-[90px]",
           containerClassName,
         )}
       >
@@ -113,11 +113,11 @@ export function SectionHeading({
 
   return (
     <div
+      data-reveal
       className={cn(
         /* Left is the v3 default: the reference sets every section heading
          * against the content column's left edge, not down its middle. */
         align === "center" ? "mx-auto max-w-2xl text-center" : "max-w-[660px]",
-        "reveal",
         className,
       )}
     >
