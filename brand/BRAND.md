@@ -17,6 +17,11 @@ to feel.
 - **Contrast law:** green as _text_ on white starts at green-700 (`#388E3C`).
   green-500 on white is decoration-only — it fails 4.5:1. One exception, added
   in v3: on the dark band (`#0B120D`), `#7BC67F` carries the kicker.
+- **a11y deviation (2026-09-02):** `ink-faint` ships as `#6C756E`, not the
+  `#8B948D` the v3 handoff specified. The original is 3.13:1 on white — it
+  fails AA everywhere it is used (fine print, captions, meta rows) and drops
+  the Lighthouse accessibility score below the repo's `1.0` gate. Darkened
+  along the same hue to clear 4.5:1 on white and on `surface-muted`.
 
 ## Type
 

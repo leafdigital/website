@@ -34,14 +34,6 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "common" });
 
-  /**
-   * The proxy already sets alternate-language `Link` headers, but a good deal
-   * of SEO tooling only reads the document head — so emit the tags too.
-   */
-  const languages = Object.fromEntries(
-    routing.locales.map((l) => [l, `/${l}`]),
-  );
-
   return {
     metadataBase: new URL(SITE_URL),
     // Belt to robots.ts's braces: pre-cutover deploys must not be indexed.
@@ -51,16 +43,13 @@ export async function generateMetadata({
       template: `%s — ${SITE_NAME}`,
     },
     description: t("meta.defaultDescription"),
-    alternates: {
-      canonical: `/${locale}`,
-      languages: { ...languages, "x-default": `/${routing.defaultLocale}` },
-    },
-    openGraph: {
-      siteName: SITE_NAME,
-      type: "website",
-      url: `${SITE_URL}/${locale}`,
-      locale,
-    },
+    /**
+     * Deliberately no `alternates` here. Canonical and hreflang are per-route
+     * and metadata inherits, so a block set at this level would overwrite
+     * every page's URL with the layout's — see src/lib/metadata.ts. Pages
+     * call `localeMetadata(route, locale)` instead.
+     */
+    openGraph: { siteName: SITE_NAME, type: "website", locale },
   };
 }
 

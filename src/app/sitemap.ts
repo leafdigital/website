@@ -1,11 +1,11 @@
 import type { MetadataRoute } from "next";
-import { getPathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { indexedRoutes } from "@/lib/routes";
-import { SITE_URL } from "@/lib/constants";
+import { indexedRoutes, type AppRoute } from "@/lib/routes";
+import { absoluteUrl } from "@/lib/metadata";
 
-const url = (locale: string, route: string) =>
-  `${SITE_URL}${getPathname({ href: route, locale })}`;
+/* Same builder the canonical tags use — a sitemap that lists a URL the page
+ * does not claim as its own is a sitemap arguing with the page. */
+const url = (locale: string, route: AppRoute) => absoluteUrl(route, locale);
 
 /**
  * Every indexed route in every locale, each entry carrying the full set of

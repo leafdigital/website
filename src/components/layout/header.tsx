@@ -48,7 +48,9 @@ export function Header() {
   const cta = ctaByRoute[pathname as keyof typeof ctaByRoute] ?? defaultCta;
 
   return (
-    <header className="border-hairline-soft sticky top-0 z-50 border-b bg-white/75 backdrop-blur-[24px] backdrop-saturate-[1.4]">
+    /* `header-settle` withholds the border and shadow until the page has
+     * moved a little — at rest the header sits on the hero with no seam. */
+    <header className="header-settle border-hairline-soft sticky top-0 z-50 border-b bg-white/75 backdrop-blur-[24px] backdrop-saturate-[1.4]">
       <Container className="flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center">
           {/* The v1 nav logo, verbatim: mark + wordmark in one 478×84 SVG. */}

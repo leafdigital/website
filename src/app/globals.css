@@ -73,7 +73,15 @@
   /* Ink ramp — v3 neutrals. Green-tinted, never pure gray. */
   --color-ink: #17211a;
   --color-ink-muted: #5b665e;
-  --color-ink-faint: #8b948d;
+  /*
+   * a11y deviation from the v3 handoff, same precedent as brand-800 in
+   * BRAND.md: the specified #8B948D is 3.13:1 on white and fails WCAG AA,
+   * which fails the repo's own `accessibility: 1` Lighthouse gate on every
+   * page that carries fine print. Darkened along its own hue until it clears
+   * 4.5:1 on both grounds it actually sits on — white (4.76:1) and
+   * `surface-muted` (4.56:1). Same role, same green-tinted gray, legible.
+   */
+  --color-ink-faint: #6c756e;
 
   /* Hairlines — alpha ink, so they sit on any surface without banding.
    * `hairline` is the default card/divider line; `soft` for dense internal
@@ -176,6 +184,44 @@
       transform: none;
     }
   }
+
+  /* The scroll-driven twin of fade-up. Same distance, same idea — the
+   * difference is only what drives it: the clock above the fold, the
+   * scrollbar below it. */
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  /* A meter drawing itself. `transform`, not `width`, so it stays on the
+   * compositor and never reflows the card around it. */
+  @keyframes draw {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  /* The header earns its edge on the way down: no line at rest against the
+   * hero, a hairline and a whisper of shadow once the page moves under it. */
+  @keyframes header-settle {
+    from {
+      border-bottom-color: transparent;
+      box-shadow: 0 0 0 rgb(23 33 26 / 0);
+    }
+    to {
+      border-bottom-color: var(--color-hairline-soft);
+      box-shadow: 0 1px 20px rgb(23 33 26 / 0.05);
+    }
+  }
 }
 
 @theme {
@@ -254,6 +300,71 @@
     .animate-aurora,
     .animate-aurora-slow {
       animation: none;
+    }
+  }
+
+  /*
+   * Scroll-driven reveals.
+   *
+   * Two guards, and the nesting order is the whole safety argument: nothing
+   * here sets `opacity: 0` unless the browser can also animate it back. A
+   * visitor on a browser without view timelines, or one who asked for less
+   * motion, gets the page fully painted and no animation at all — never a
+   * blank section waiting on script that will not run. There is no JS in
+   * this feature and nothing to hydrate.
+   *
+   * Progress is `linear` on purpose. An eased scroll-driven fade detaches
+   * from the finger and reads as a effect; linear reads as the page simply
+   * being where you scrolled it to.
+   */
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .reveal,
+      .reveal-group > * {
+        animation: reveal linear both;
+        animation-timeline: view();
+        /* Starts as the block's top edge clears the fold, finished well
+         * before it is centred — the movement is over by the time you have
+         * settled on it. */
+        animation-range: entry calc(var(--reveal-offset, 0%)) entry
+          calc(var(--reveal-offset, 0%) + 55%);
+      }
+
+      /* Siblings in a grid arrive on one scroll position, so they need the
+       * offset to land in sequence rather than as a block. Four steps is
+       * enough for a 3-up row; past that they share the last one, because a
+       * twelve-card grid staggered twelve deep reads as a loading screen. */
+      .reveal-group > *:nth-child(2) {
+        --reveal-offset: 4%;
+      }
+      .reveal-group > *:nth-child(3) {
+        --reveal-offset: 8%;
+      }
+      .reveal-group > *:nth-child(n + 4) {
+        --reveal-offset: 11%;
+      }
+
+      .reveal-draw {
+        animation: draw linear both;
+        animation-timeline: view();
+        animation-range: entry 10% entry 70%;
+        transform-origin: left center;
+      }
+    }
+  }
+
+  /*
+   * The header reacts to scroll position rather than to entering the
+   * viewport, so this one rides `scroll()`, not `view()`. Same two guards:
+   * without them the header keeps the resting hairline it ships with.
+   */
+  @supports (animation-timeline: scroll()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .header-settle {
+        animation: header-settle linear both;
+        animation-timeline: scroll();
+        animation-range: 0 72px;
+      }
     }
   }
 }

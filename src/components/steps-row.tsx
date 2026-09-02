@@ -24,7 +24,12 @@ export function StepsRow({
   className?: string;
 }) {
   return (
-    <ol className={cn("grid gap-8 md:grid-cols-3 md:gap-0", className)}>
+    <ol
+      className={cn(
+        "reveal-group grid gap-8 md:grid-cols-3 md:gap-0",
+        className,
+      )}
+    >
       {steps.map((step, i) => (
         <li
           key={step.title}

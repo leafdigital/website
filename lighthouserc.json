@@ -6,19 +6,33 @@
       "numberOfRuns": 3,
       "url": [
         "http://localhost:4381/",
-        "http://localhost:4381/apps",
-        "http://localhost:4381/apps/alt-text",
+        "http://localhost:4381/image-voice",
+        "http://localhost:4381/hidden-margin",
+        "http://localhost:4381/reorder-engine",
         "http://localhost:4381/privacy",
-        "http://localhost:4381/support",
-        "http://localhost:4381/services",
-        "http://localhost:4381/blog"
+        "http://localhost:4381/support"
       ]
     },
     "assert": {
       "assertions": {
-        "categories:accessibility": ["error", { "minScore": 1 }],
-        "largest-contentful-paint": ["error", { "maxNumericValue": 2500 }],
-        "cumulative-layout-shift": ["error", { "maxNumericValue": 0.1 }]
+        "categories:accessibility": [
+          "error",
+          {
+            "minScore": 1
+          }
+        ],
+        "largest-contentful-paint": [
+          "error",
+          {
+            "maxNumericValue": 2500
+          }
+        ],
+        "cumulative-layout-shift": [
+          "error",
+          {
+            "maxNumericValue": 0.1
+          }
+        ]
       }
     },
     "upload": {

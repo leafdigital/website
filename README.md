@@ -14,8 +14,12 @@ thesis behind it. Next.js 16 (App Router) + Tailwind v4, six locales.
 | `/privacy`        | Tier-3 document (MDX per locale)                      |
 | `/support`        | Utility copy + FAQ                                    |
 
-Every route is locale-prefixed (`/en/…`, `/de/…`); `src/lib/routes.ts` is the
-one route table the sitemap and the nav both derive from. `/apps`, `/services`
+English is unprefixed (`/image-voice`); every other locale carries its segment
+(`/de/image-voice`). Old `/en/…` URLs redirect to the short form. Never build
+a locale URL by hand — `Link` and `getPathname` own the shape, and
+`src/lib/metadata.ts` is the only place a canonical or hreflang set is built.
+`src/lib/routes.ts` is the one route table the sitemap and the nav both derive
+from. `/apps`, `/services`
 and `/blog` were retired with the v3 rebuild — the homepage `#apps` grid is
 the only index of the portfolio.
 

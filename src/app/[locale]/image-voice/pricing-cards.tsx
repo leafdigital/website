@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Button } from "@/components/ui/button";
-import { OFFER, PRICING } from "@/lib/constants";
+import { FOUNDING_CURATOR_PRICE, OFFER, PRICING } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 /**
@@ -92,7 +92,7 @@ export function PricingCards() {
   );
 
   return (
-    <div className="mt-14 grid gap-[18px] lg:grid-cols-3">
+    <div className="reveal-group mt-14 grid gap-[18px] lg:grid-cols-3">
       <Plan
         name={t("audit.name")}
         price={t("audit.price", { amount: PRICING.audit })}
@@ -133,7 +133,7 @@ export function PricingCards() {
               {t.rich("curator.offer", {
                 lead: (chunks) => <strong>{chunks}</strong>,
                 spots: OFFER.foundingCurators,
-                price: PRICING.foundingCurator,
+                price: FOUNDING_CURATOR_PRICE,
               })}
             </p>
           </aside>

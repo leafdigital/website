@@ -16,7 +16,7 @@ export function SampleReport() {
   };
 
   return (
-    <div className="border-hairline mt-14 overflow-x-auto rounded-xl border shadow-[0_1px_2px_rgb(23_33_26/0.04),0_12px_32px_rgb(23_33_26/0.05)]">
+    <div className="border-hairline reveal mt-14 overflow-x-auto rounded-xl border shadow-[0_1px_2px_rgb(23_33_26/0.04),0_12px_32px_rgb(23_33_26/0.05)]">
       <table className="w-full min-w-[640px] border-collapse text-left">
         <thead>
           <tr className="text-ink-faint bg-surface-muted text-[12px] font-bold tracking-[0.05em] uppercase">

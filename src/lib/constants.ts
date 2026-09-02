@@ -76,11 +76,16 @@ export const SAMPLE = {
  */
 export const PRICING = {
   audit: 0,
-  keeper: 9.99,
-  curator: 29.99,
-  /** What a Founding Curator pays for Curator, for life. */
-  foundingCurator: 14.99,
+  keeper: 18.9,
+  curator: 28.9,
 } as const;
+
+/**
+ * What a Founding Curator pays for Curator, for life. Derived, not typed in:
+ * the offer copy says "half price" in six languages, so a hand-entered figure
+ * that drifts from half of `curator` turns that sentence into a false claim.
+ */
+export const FOUNDING_CURATOR_PRICE = PRICING.curator / 2;
 
 /**
  * Founder-offer inventory. Counts down as spots go; the copy around each one

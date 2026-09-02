@@ -8,7 +8,7 @@ import { Container } from "@/components/layout/container";
 export function PullQuote({ title, sub }: { title: string; sub: string }) {
   return (
     <section className="py-20 sm:py-[110px]">
-      <Container className="max-w-[720px] text-center">
+      <Container className="reveal max-w-[720px] text-center">
         <h2 className="text-3xl leading-[1.15] tracking-[-0.03em] sm:text-[40px]">
           {title}
         </h2>

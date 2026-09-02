@@ -14,12 +14,22 @@ import { Button } from "@/components/ui/button";
 import { PillBadge } from "@/components/ui/pill-badge";
 import { Link } from "@/i18n/navigation";
 import { APP_INSTALL_URL, SAMPLE } from "@/lib/constants";
+import { localeMetadata } from "@/lib/metadata";
 import { cn } from "@/lib/utils";
 import { PricingCards } from "./pricing-cards";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("imageVoice");
-  return { title: t("meta.title"), description: t("meta.description") };
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "imageVoice" });
+  return {
+    title: t("meta.title"),
+    description: t("meta.description"),
+    ...localeMetadata("/image-voice", locale),
+  };
 }
 
 const priceRows = ["traffic", "agentic", "accessibility"] as const;
@@ -172,7 +182,7 @@ export default function ImageVoicePage() {
           sub={t("checkbox.sub")}
           className="max-w-[680px]"
         />
-        <div className="mt-14 grid gap-[18px] md:grid-cols-2">
+        <div className="reveal-group mt-14 grid gap-[18px] md:grid-cols-2">
           <div className="border-hairline bg-surface-muted flex flex-col gap-4 rounded-xl border p-[30px]">
             <p className="text-fine text-ink-faint font-bold tracking-[0.05em] uppercase">
               {t("checkbox.beforeLabel")}
@@ -195,7 +205,7 @@ export default function ImageVoicePage() {
             </p>
           </div>
         </div>
-        <p className="text-muted-foreground mt-11 max-w-[640px] leading-[1.6]">
+        <p className="reveal text-muted-foreground mt-11 max-w-[640px] leading-[1.6]">
           {t.rich("checkbox.closer", { lead })}
         </p>
       </Section>
@@ -220,7 +230,7 @@ export default function ImageVoicePage() {
           title={t("benefits.title")}
           className="max-w-[680px]"
         />
-        <ul className="mt-14 grid gap-4 md:grid-cols-2">
+        <ul className="reveal-group mt-14 grid gap-4 md:grid-cols-2">
           {benefits.map((key, i) => {
             const featured = i === 0;
             return (
@@ -281,7 +291,7 @@ export default function ImageVoicePage() {
       <Section divided containerClassName="max-w-[800px]">
         <SectionHeading kicker={t("faq.kicker")} title={t("faq.title")} />
         <Faq
-          className="mt-12"
+          className="reveal mt-12"
           items={faqKeys.map((key) => ({
             q: t(`faq.${key}.q`),
             a: t(`faq.${key}.a`),

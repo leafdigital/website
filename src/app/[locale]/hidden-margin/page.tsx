@@ -13,12 +13,22 @@ import { PillBadge } from "@/components/ui/pill-badge";
 import { WaitlistForm } from "@/components/waitlist-form";
 import { Link } from "@/i18n/navigation";
 import { OFFER } from "@/lib/constants";
+import { localeMetadata } from "@/lib/metadata";
 import { ReadinessCard } from "./readiness-card";
 import { SampleReport } from "./sample-report";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("hiddenMargin");
-  return { title: t("meta.title"), description: t("meta.description") };
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "hiddenMargin" });
+  return {
+    title: t("meta.title"),
+    description: t("meta.description"),
+    ...localeMetadata("/hidden-margin", locale),
+  };
 }
 
 const priceRows = ["today", "tomorrow"] as const;

@@ -35,7 +35,15 @@ export function CtaBand({
         aria-hidden="true"
         className="animate-aurora-slow pointer-events-none absolute -top-44 left-1/2 -z-10 h-[460px] w-[800px] -translate-x-1/2 rounded-[50%] bg-[radial-gradient(closest-side,rgba(255,255,255,0.12),transparent_70%)]"
       />
-      <Container className="flex max-w-[736px] flex-col items-center gap-[22px] py-20 text-center sm:py-[110px]">
+      {/*
+       * `reveal-group`, not `reveal`. This column is the last content on the
+       * page, and with the offer tile and the form in it, it can stand
+       * taller than a short phone's viewport — an element that never
+       * finishes entering never finishes its reveal, and would sit part
+       * faded at the bottom of the scroll. Revealing the children instead
+       * keeps every animated box comfortably shorter than the fold.
+       */}
+      <Container className="reveal-group flex max-w-[736px] flex-col items-center gap-[22px] py-20 text-center sm:py-[110px]">
         <h2 className="text-on-dark text-3xl leading-[1.06] tracking-[-0.03em] sm:text-[48px]">
           {title}
         </h2>

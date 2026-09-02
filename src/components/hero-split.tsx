@@ -49,7 +49,15 @@ export function HeroSplit({
       />
       <Container>
         <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-16">
-          <div className="animate-fade-up flex flex-col items-start gap-6 text-left sm:gap-[26px]">
+          {/*
+           * The column cascades rather than arriving as a block: each child
+           * trails the one above it. The delays are keyed from the END of
+           * the list, because the front of it varies — only some pages pass
+           * a `kicker` — while sub / CTA / fine print are always the last
+           * three. The headline stays at 0ms: it is the LCP element on
+           * every one of these pages and must not wait on choreography.
+           */}
+          <div className="[&>*]:animate-fade-up flex flex-col items-start gap-6 text-left sm:gap-[26px] [&>*:nth-last-child(1)]:[animation-delay:220ms] [&>*:nth-last-child(2)]:[animation-delay:160ms] [&>*:nth-last-child(3)]:[animation-delay:80ms]">
             {badge}
             {kicker}
             {title}
@@ -67,7 +75,12 @@ export function HeroSplit({
               <p className="text-fine text-ink-faint">{finePrint}</p>
             ) : null}
           </div>
-          {visual ? <div className="min-w-0">{visual}</div> : null}
+          {visual ? (
+            /* The evidence lands after the claim — never before it. */
+            <div className="animate-fade-up min-w-0 [animation-delay:140ms]">
+              {visual}
+            </div>
+          ) : null}
         </div>
       </Container>
     </section>

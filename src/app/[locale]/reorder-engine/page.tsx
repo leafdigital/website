@@ -13,10 +13,20 @@ import { PillBadge } from "@/components/ui/pill-badge";
 import { WaitlistForm } from "@/components/waitlist-form";
 import { Link } from "@/i18n/navigation";
 import { OFFER, SAMPLE } from "@/lib/constants";
+import { localeMetadata } from "@/lib/metadata";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("reorderEngine");
-  return { title: t("meta.title"), description: t("meta.description") };
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "reorderEngine" });
+  return {
+    title: t("meta.title"),
+    description: t("meta.description"),
+    ...localeMetadata("/reorder-engine", locale),
+  };
 }
 
 const blindRows = ["cash", "spot", "night"] as const;
