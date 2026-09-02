@@ -118,7 +118,9 @@ export default function HiddenMarginPage() {
           className="max-w-[680px]"
         />
         <SampleReport />
-        <p className="text-fine text-ink-faint mt-5">{t("report.caption")}</p>
+        <p className="reveal text-fine text-ink-faint mt-5">
+          {t("report.caption")}
+        </p>
       </Section>
 
       {/* 5 — The ladder every Leaf app climbs. */}
@@ -131,7 +133,9 @@ export default function HiddenMarginPage() {
             body: t(`how.${key}.body`),
           }))}
         />
-        <p className="text-ink-faint mt-11 text-[15px]">{t("how.footer")}</p>
+        <p className="reveal text-ink-faint mt-11 text-[15px]">
+          {t("how.footer")}
+        </p>
       </Section>
 
       {/* 6 — One list, every app. The offer earns its own tile. */}

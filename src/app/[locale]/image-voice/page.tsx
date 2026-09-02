@@ -220,7 +220,9 @@ export default function ImageVoicePage() {
             body: t(`how.${key}.body`),
           }))}
         />
-        <p className="text-ink-faint mt-11 text-[15px]">{t("how.footer")}</p>
+        <p className="reveal text-ink-faint mt-11 text-[15px]">
+          {t("how.footer")}
+        </p>
       </Section>
 
       {/* 5 — Eleven promises. The first one is free, so it leads. */}
@@ -276,7 +278,7 @@ export default function ImageVoicePage() {
           className="max-w-[680px]"
         />
         <PricingCards />
-        <p className="text-ink-faint mt-11 text-[15px]">
+        <p className="reveal text-ink-faint mt-11 text-[15px]">
           {t.rich("pricing.footer", {
             link: (chunks) => (
               <Link href="/" className="text-brand-800 font-semibold">
@@ -291,7 +293,7 @@ export default function ImageVoicePage() {
       <Section divided containerClassName="max-w-[800px]">
         <SectionHeading kicker={t("faq.kicker")} title={t("faq.title")} />
         <Faq
-          className="reveal mt-12"
+          className="mt-12"
           items={faqKeys.map((key) => ({
             q: t(`faq.${key}.q`),
             a: t(`faq.${key}.a`),

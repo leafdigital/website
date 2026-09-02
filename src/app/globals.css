@@ -185,17 +185,33 @@
     }
   }
 
-  /* The scroll-driven twin of fade-up. Same distance, same idea — the
-   * difference is only what drives it: the clock above the fold, the
-   * scrollbar below it. */
+  /* The scroll-driven twin of fade-up. Same idea — the difference is only
+   * what drives it: the clock above the fold, the scrollbar below it.
+   *
+   * The distance is a variable because the weight of the arrival should
+   * follow the weight of the thing arriving. A caption does not need the
+   * travel a 48px statement on a dark band earns. */
   @keyframes reveal {
     from {
       opacity: 0;
-      transform: translateY(14px);
+      transform: translateY(var(--reveal-lift, 22px));
     }
     to {
       opacity: 1;
       transform: none;
+    }
+  }
+
+  /* A hairline drawing itself across. The whole design system is built on
+   * rules rather than boxes — steps divided by a line, statements stacked on
+   * lines, sections separated by one — so drawing them is motion that says
+   * what the layout already says, instead of decorating it. */
+  @keyframes draw-x {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
     }
   }
 
@@ -335,13 +351,47 @@
        * enough for a 3-up row; past that they share the last one, because a
        * twelve-card grid staggered twelve deep reads as a loading screen. */
       .reveal-group > *:nth-child(2) {
-        --reveal-offset: 4%;
+        --reveal-offset: 5%;
       }
       .reveal-group > *:nth-child(3) {
-        --reveal-offset: 8%;
+        --reveal-offset: 10%;
       }
       .reveal-group > *:nth-child(n + 4) {
-        --reveal-offset: 11%;
+        --reveal-offset: 14%;
+      }
+
+      /* A dark band is the loudest thing on its page; its content arrives
+       * with more travel and takes longer to settle, so the section lands
+       * rather than merely appearing. */
+      [data-tone="dark"] .reveal,
+      [data-tone="dark"] .reveal-group > * {
+        --reveal-lift: 34px;
+        animation-range: entry calc(var(--reveal-offset, 0%)) entry
+          calc(var(--reveal-offset, 0%) + 52%);
+      }
+
+      /*
+       * A rule that draws itself in. The element keeps its real border for
+       * every browser that gets no further than this @supports block; here
+       * we hide it and hand the job to a pseudo-element, which can carry its
+       * own timeline independently of whatever animation the element itself
+       * is already running.
+       */
+      .rule-draw {
+        position: relative;
+        border-top-color: transparent;
+      }
+      .rule-draw::before {
+        content: "";
+        position: absolute;
+        inset-inline: 0;
+        top: -1px;
+        height: 1px;
+        background: var(--color-hairline-soft);
+        transform-origin: left center;
+        animation: draw-x linear both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 35%;
       }
 
       .reveal-draw {

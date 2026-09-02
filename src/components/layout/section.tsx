@@ -54,7 +54,8 @@ export function Section({
     >
       <Container
         className={cn(
-          divided && "border-hairline-soft border-t pt-16 sm:pt-[90px]",
+          divided &&
+            "border-hairline-soft rule-draw border-t pt-16 sm:pt-[90px]",
           containerClassName,
         )}
       >
