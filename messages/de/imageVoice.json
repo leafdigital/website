@@ -6,7 +6,7 @@
   "hero": {
     "badge": "Live im Shopify App Store",
     "headline": "Deine Bilder <accent>schweigen.</accent>",
-    "subhead": "<lead>{silent, number} deiner Bilder sagen nichts</lead> — nicht für Google, nicht für KI-Shopper, nicht für alle, die sie vorgelesen brauchen. Stumme Bilder verkaufen nicht.",
+    "subhead": "<lead>Ein typischer Shop: Tausende Bilder, die nichts sagen</lead> — nicht für Google, nicht für KI-Shopper, nicht für alle, die sie vorgelesen brauchen. Stumme Bilder verkaufen nicht. Deine werden in Minuten gezählt, kostenlos.",
     "ctaPrimary": "Kostenlosen Scan starten",
     "ctaSecondary": "Preise ansehen",
     "finePrint": "Für immer kostenloser Audit · Keine Kreditkarte · Nichts passiert ohne deine Freigabe"
@@ -16,6 +16,33 @@
     "total": "von {total, number}",
     "aria": "{silent, number} von {total, number} deiner Bilder schweigen",
     "caption": "Beispiel-Scan — deiner dauert Minuten, kostenlos."
+  },
+  "task": {
+    "eyebrow": "Die Aufgabe, die nie erledigt wird",
+    "opener": "Niemand setzt sich hin und beschreibt 3.000 Bilder.",
+    "middleOne": "Also wird sie nie erledigt — es ist der Job, der in jedem Shop, jedes Quartal, von jeder To-do-Liste gestrichen wird.",
+    "middleTwo": "Und weil niemand zählt, kannst du nicht einmal sagen, wie schlimm es ist.",
+    "resolution": "Diesen letzten Teil beheben wir in Minuten.",
+    "listLabel": "To-do",
+    "one": {
+      "task": "Alt-Texte für Produktbilder schreiben",
+      "tag": "Q1 → Q2"
+    },
+    "two": {
+      "task": "Alt-Text — wenigstens die Bestseller",
+      "tag": "Q2 → Q3"
+    },
+    "three": {
+      "task": "Bildbeschreibungen?? (VA fragen)",
+      "tag": "Q3 → Q4"
+    },
+    "four": {
+      "task": "Alt-Text (diesmal wirklich)",
+      "tag": "Q4 → …"
+    },
+    "done": "Herausfinden, wie schlimm es ist",
+    "doneTime": "4 Min.",
+    "caption": "Die To-do-Liste jedes Shops. Nur eine Zeile wird je abgehakt."
   },
   "prices": {
     "kicker": "Ein Gegner, drei Rechnungen",
@@ -48,7 +75,7 @@
     "afterLabel": "Nachher — Image Voice",
     "afterCode": "alt=\"Moosgrünes T-Shirt aus Bio-Baumwolle, flach gefaltet, mit sichtbarem Rippkragen und gesticktem Blatt am Saum\"",
     "afterCaption": "Jedes Bild wirklich angesehen. Pro Bild verschieden, ~125 Zeichen, beginnt nie mit „Bild von“.",
-    "closer": "Deshalb <lead>benotet der kostenlose Audit, statt zu zählen</lead>: fehlt / Müll / schwach / gut, mit einer bildgeprüften Stichprobe. Typisches Ergebnis: „62 von 100 abgedeckten Bildern beschreiben das Bild nicht.“"
+    "closer": "Deshalb <lead>benotet der kostenlose Audit, statt zu zählen</lead>: fehlt / Müll / schwach / gut, mit einer bildgeprüften Stichprobe. Typisches Ergebnis: „62 von 100 abgedeckten Bildern beschreiben das Bild nicht.“ Lass ihn über deinen Shop laufen und lies die Stichprobe selbst — die Note ist der Beweis, nicht unser Wort."
   },
   "how": {
     "kicker": "So funktioniert's",
@@ -70,6 +97,23 @@
   "benefits": {
     "kicker": "Was du bekommst",
     "title": "Was sich ändert, wenn deine Bilder nicht mehr schweigen",
+    "sub": "Keine Feature-Liste — eine Zeitleiste. Das passiert wirklich, ab der Minute, in der du installierst.",
+    "chapterOne": {
+      "label": "Minute eins",
+      "note": "Du installierst. Nichts zu konfigurieren."
+    },
+    "chapterTwo": {
+      "label": "Die erste Sitzung",
+      "note": "Ein Kaffee. Der ganze Katalog geprüft."
+    },
+    "chapterThree": {
+      "label": "Ab dann",
+      "note": "Der Job verlässt deinen Kopf."
+    },
+    "chapterFour": {
+      "label": "Bevor Geld fließt",
+      "note": "Alles davon liegt vor der Paywall."
+    },
     "one": {
       "title": "Du kennst die Wahrheit in Minuten — kostenlos, bevor du irgendetwas entscheidest.",
       "body": "Vollständiger Scan bei der Installation, ohne Einrichtung. Die Zahl: „{silent, number} deiner Bilder schweigen.“"
@@ -94,10 +138,6 @@
       "title": "Du behältst die Kontrolle, ohne die Arbeit zu machen.",
       "body": "Nichts fasst Shopify an, bevor du es sagst. Sammel-Freigabe, wenn du genug gesehen hast: „die restlichen {remaining, number} übernehmen?“ Dein ganzer Katalog geprüft, in einem Kaffee."
     },
-    "seven": {
-      "title": "Es kann nichts schiefgehen, was du nicht siehst und rückgängig machen kannst.",
-      "body": "Jeder Schreibvorgang wird durch Zurücklesen geprüft. 30 Tage rückgängig machen, in jedem Tarif. Strukturell unfähig, etwas anderes als das Alt-Feld anzufassen — und Wörter, die ein Mensch geschrieben hat, überschreibt es nie."
-    },
     "eight": {
       "title": "Irgendwann denkst du nie wieder daran.",
       "body": "Neues Produkt hochgeladen → in Minuten beschrieben. Eine Wochenübersicht statt einer To-do-Liste. Die Aufgabe verlässt deinen Kopf endgültig."
@@ -113,6 +153,10 @@
     "eleven": {
       "title": "Du weißt genau, was du kaufst — und wir sagen dir, wenn wir es nicht sind.",
       "body": "Lebenslang kostenlose Beschreibungen, um die Qualität an deinen eigenen Produkten zu beurteilen. Bezahlte Tarife räumen deinen Rückstand vorab ab — kein monatelanges Tröpfeln. Zu groß für unsere Tarife? Dann sagen wir es und bieten dir eine Warteliste an."
+    },
+    "limits": {
+      "title": "Was es nicht kann.",
+      "body": "Es kann strukturell nichts außer dem Alt-Feld anfassen. Es kann deinen Shop nicht ohne deine Freigabe ändern. Es kann keine Änderung vornehmen, die nicht protokolliert und 30 Tage lang widerrufbar ist. Es kann keine Beschreibung überschreiben, die ein Mensch geschrieben hat. Und wenn es etwas nicht erreicht (Bilder aus den Theme-Einstellungen), meldet es das mit einem Deeplink, statt still zu scheitern."
     }
   },
   "pricing": {
@@ -153,6 +197,7 @@
       "four": "Der meiste Spielraum für die Pflege aktiver Kataloge",
       "cta": "Mit dem kostenlosen Scan starten"
     },
+    "trust": "Nichts hier läuft auf Vertrauen. Der Audit ist für immer kostenlos, die Texte beurteilst du an deinen eigenen Produkten, bevor du einen Cent zahlst, und jede Änderung ist 30 Tage lang widerrufbar. Das Einzige, was du glauben musst, ist dein eigener Scan.",
     "footer": "Stumme Bilder sind eins von sieben Lecks. <link>Die Leaf-Suite findet die anderen sechs →</link>"
   },
   "faq": {
@@ -168,7 +213,7 @@
     },
     "spam": {
       "q": "Ist KI-Alt-Text nicht Spam?",
-      "a": "Der Spam-Ruf kommt von Tools, die Text aus Titeln und Dateinamen erzeugen. Image Voice sieht sich jedes einzelne Bild an. Beschreibungen sind pro Bild verschieden, rund 125 Zeichen lang und beginnen nie mit „Bild von“. Beurteile es kostenlos an deinen eigenen Produkten, bevor du irgendetwas bezahlst."
+      "a": "Der Ruf ist verdient — wir haben Kataloge geöffnet, in denen jede Beschreibung mit „Bild von“ begann und in einem Keyword-Haufen endete, schlimmer als leer, weil es erledigt aussieht. Genau dagegen ist Image Voice gebaut: Es sieht sich jedes Bild an, schreibt rund 125 eigene Zeichen, beginnt nie mit „Bild von“ und benotet den Müll, der schon da ist — damit du den Unterschied an deinem eigenen Shop siehst, kostenlos."
     },
     "languages": {
       "q": "In welchen Sprachen schreibt es?",
@@ -181,7 +226,7 @@
   },
   "cta": {
     "title": "Kostenlosen Scan starten. Deine Zahl sehen.",
-    "sub": "Für immer kostenlos. Keine Kreditkarte. Deine stummen Bilder in einer Zahl, in Minuten — benotet, nicht gezählt.",
+    "sub": "Zwei Zukünfte: Dein Katalog bleibt stumm, während der Bild-Traffic und die KI-Shopper nebenan einkaufen — oder jedes Bild spricht, und du denkst nie wieder daran.",
     "button": "Im Shopify App Store installieren"
   }
 }

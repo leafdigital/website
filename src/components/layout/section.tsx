@@ -69,20 +69,28 @@ export function Section({
  * The label that sits above a heading — 13/700, wide tracking, uppercase.
  * `SectionHeading` renders one for you; use this directly for the kickers
  * that sit above an h1 or inside a pattern component.
+ *
+ * `face` picks the cut: `sans` is the v3 default every page ships, `mono`
+ * is the eyebrow the Image Voice v2 narrative opens each section with. Set
+ * it per page, not per section — a page that mixes the two reads as two
+ * pages stitched together.
  */
 export function Kicker({
   children,
   tone = "light",
+  face = "sans",
   className,
-}: {
-  children: React.ReactNode;
+  ...props
+}: React.ComponentProps<"p"> & {
   tone?: "light" | "dark";
-  className?: string;
+  face?: "sans" | "mono";
 }) {
   return (
     <p
+      {...props}
       className={cn(
-        "text-kicker uppercase",
+        "uppercase",
+        face === "mono" ? "text-eyebrow font-mono" : "text-kicker",
         tone === "dark" ? "text-brand-on-dark" : "text-brand-800",
         className,
       )}
@@ -98,6 +106,7 @@ export function SectionHeading({
   title,
   sub,
   tone = "light",
+  face = "sans",
   align = "left",
   className,
 }: {
@@ -106,6 +115,8 @@ export function SectionHeading({
   sub?: React.ReactNode;
   /** `dark` when the block sits on a `Section tone="dark"` band. */
   tone?: "light" | "dark";
+  /** The kicker's cut — see `Kicker`. */
+  face?: "sans" | "mono";
   align?: "center" | "left";
   className?: string;
 }) {
@@ -121,7 +132,11 @@ export function SectionHeading({
         className,
       )}
     >
-      {kicker ? <Kicker tone={tone}>{kicker}</Kicker> : null}
+      {kicker ? (
+        <Kicker tone={tone} face={face}>
+          {kicker}
+        </Kicker>
+      ) : null}
       <h2
         className={cn(
           dark ? "mt-[18px]" : "mt-3.5",

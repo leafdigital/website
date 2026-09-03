@@ -101,6 +101,14 @@
   --color-on-dark-muted: --alpha(#ffffff / 60%);
   --color-brand-on-dark: #7bc67f;
 
+  /* The line struck through junk alt text. The only red on the site and
+   * never a text color: it marks evidence as wrong without ever having to
+   * carry a word itself, so it is exempt from the contrast law above. */
+  --color-strike: rgb(178 58 50 / 0.55);
+  /* Its ink twin: the line through a task that keeps getting deferred. Not
+   * wrong, just not done — so it is ink, not red. */
+  --color-strike-ink: --alpha(var(--color-ink) / 50%);
+
   /* Ink washes — quiet tints for surfaces on the light ground. */
   --color-ink-wash: --alpha(var(--color-ink) / 4%);
   /* The "before" / "without" surface: warm off-white, opaque so it holds its
@@ -135,6 +143,16 @@
   --text-kicker--letter-spacing: 0.08em;
   --text-kicker--font-weight: 700;
 
+  /* The kicker's mono cut, introduced by the Image Voice v2 narrative: a
+   * step smaller, a step lighter, twice the tracking, and always set in
+   * `font-mono`. It reads as a machine label rather than a heading, which
+   * is what a page of centred cinematic statements needs above each one —
+   * a sans kicker at that size competes with the statement under it. */
+  --text-eyebrow: 12px;
+  --text-eyebrow--line-height: 1.2;
+  --text-eyebrow--letter-spacing: 0.16em;
+  --text-eyebrow--font-weight: 600;
+
   /* Fine print: reassurance lines, captions, meta rows with ` · ` between. */
   --text-fine: 13px;
   --text-fine--line-height: 1.5;
@@ -147,6 +165,12 @@
   --shadow-card:
     0 1px 2px --alpha(var(--color-ink) / 4%),
     0 20px 48px --alpha(var(--color-ink) / 8%);
+  /* The same shadow one step deeper, for a card that is centre stage rather
+   * than one of a grid — the to-do list and the alt-text specimen each stand
+   * alone in their section and have to read as lifted off the page. */
+  --shadow-card-lifted:
+    0 1px 2px --alpha(var(--color-ink) / 4%),
+    0 24px 56px --alpha(var(--color-ink) / 10%);
   /* The green glow, at the two sizes the references use: `cta` under a 52px
    * hero button, `cta-sm` under the 38px one in the header. */
   --shadow-cta: 0 4px 20px rgb(46 125 50 / 0.35);
@@ -163,6 +187,11 @@
    * final CTA — slow enough that you notice it only by leaving the tab open. */
   --animate-aurora: aurora-drift 16s ease-in-out infinite;
   --animate-aurora-slow: aurora-drift 18s ease-in-out infinite;
+  /* Two ambient loops, for the two things on a page that are alive rather
+   * than arriving: the hero's evidence card drifts, and the founder tile
+   * breathes. Both start after the entrance they sit inside has landed. */
+  --animate-float: float-y 7s ease-in-out 1.4s infinite;
+  --animate-glow-pulse: glow-pulse 5s ease-in-out infinite;
 
   @keyframes aurora-drift {
     0%,
@@ -171,6 +200,26 @@
     }
     50% {
       transform: translate(-42%, 4%) scale(1.12);
+    }
+  }
+
+  @keyframes float-y {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes glow-pulse {
+    0%,
+    100% {
+      box-shadow: 0 6px 18px rgb(46 125 50 / 0.25);
+    }
+    50% {
+      box-shadow: 0 8px 30px rgb(46 125 50 / 0.5);
     }
   }
 
@@ -273,7 +322,9 @@
   @media (prefers-reduced-motion: reduce) {
     .animate-fade-up,
     .animate-aurora,
-    .animate-aurora-slow {
+    .animate-aurora-slow,
+    .animate-float,
+    .animate-glow-pulse {
       animation: none;
     }
   }
@@ -384,6 +435,105 @@
 }
 [data-rule][data-armed][data-revealed]::before {
   transform: scaleX(1);
+}
+
+/*
+ * Motion variants of the same reveal.
+ *
+ * `data-motion` says HOW an armed element arrives; the trigger, the guards
+ * and `--reveal-delay` are the base rules above, so a variant can never hide
+ * anything the base rule would not have hidden. Each one restates a piece of
+ * the layout rather than decorating it: a strike crosses evidence out, a
+ * spine draws the thread the beats hang on, a dot lands on that thread, and
+ * a pop is reserved for the one line in a block that is the answer.
+ *
+ * The `:not([data-rule])` is for specificity, not logic — the dark-band
+ * override is a three-selector rule, and its `transition` shorthand would
+ * otherwise win against a two-selector variant and drop the duration.
+ */
+[data-armed][data-motion]:not([data-rule]) {
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+/* Crossed out on the way past: the to-do lines that never get done, and the
+ * junk alt text a checkbox tool called coverage. */
+[data-armed][data-motion="strike"]:not([data-rule]) {
+  opacity: 1;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 900ms var(--ease-leaf);
+}
+[data-armed][data-revealed][data-motion="strike"]:not([data-rule]) {
+  transform: scaleX(1);
+}
+
+/*
+ * The same strike, drawn through running text instead of over it.
+ *
+ * An overlay span can only cross ONE line — the moment the sentence wraps
+ * (which on a phone is always) it lands between the two lines instead of
+ * through them. Painting the line as a background on the text itself, with
+ * `box-decoration-break: clone`, gives every wrapped fragment its own; the
+ * draw is `background-size`, which animates. `--strike-line` is the colour,
+ * set at the call site — ink for a deferred task, red for junk alt text.
+ */
+[data-armed][data-motion="strike-text"]:not([data-rule]) {
+  opacity: 1;
+  transform: none;
+  background-image: linear-gradient(
+    var(--strike-line, var(--color-strike-ink)),
+    var(--strike-line, var(--color-strike-ink))
+  );
+  background-repeat: no-repeat;
+  background-position: 0 52%;
+  background-size: 0% 1.5px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  transition: background-size 900ms var(--ease-leaf);
+}
+[data-armed][data-revealed][data-motion="strike-text"]:not([data-rule]) {
+  background-size: 100% 1.5px;
+}
+
+/* The vertical thread down a chapter of beats, and the horizontal one
+ * through the three steps. Slower than a strike — it is a whole section's
+ * spine, not one line's verdict. */
+[data-armed][data-motion="spine"]:not([data-rule]) {
+  opacity: 1;
+  transform: scaleY(0);
+  transform-origin: top center;
+  transition: transform 1100ms var(--ease-leaf);
+}
+[data-armed][data-revealed][data-motion="spine"]:not([data-rule]) {
+  transform: scaleY(1);
+}
+
+/* A node landing on the spine, or a pill landing on a card edge. */
+[data-armed][data-motion="dot"]:not([data-rule]) {
+  opacity: 0;
+  transform: scale(0.3);
+  transition:
+    opacity 400ms var(--ease-leaf),
+    transform 500ms var(--ease-leaf);
+}
+[data-armed][data-revealed][data-motion="dot"]:not([data-rule]) {
+  opacity: 1;
+  transform: none;
+}
+
+/* The answer arriving — the one row that gets checked, the description that
+ * replaces the junk. It rises like a normal reveal but scales as it lands,
+ * which is the difference between appearing and being placed. */
+[data-armed][data-motion="pop"]:not([data-rule]) {
+  opacity: 0;
+  transform: scale(0.94) translateY(10px);
+  transition:
+    opacity 700ms var(--ease-leaf),
+    transform 700ms var(--ease-leaf);
+}
+[data-armed][data-revealed][data-motion="pop"]:not([data-rule]) {
+  opacity: 1;
+  transform: none;
 }
 
 /* The readiness meter fills to its value on load — it sits in the hero, so

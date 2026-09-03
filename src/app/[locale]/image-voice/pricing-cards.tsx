@@ -1,7 +1,12 @@
 import { useTranslations } from "next-intl";
-import { TrackedLink } from "@/components/analytics/tracked-link";
+import { TrackedExternalLink } from "@/components/analytics/tracked-external-link";
 import { Button } from "@/components/ui/button";
-import { FOUNDING_CURATOR_PRICE, OFFER, PRICING } from "@/lib/constants";
+import {
+  APP_INSTALL_URL,
+  FOUNDING_CURATOR_PRICE,
+  OFFER,
+  PRICING,
+} from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 /**
@@ -12,6 +17,10 @@ import { cn } from "@/lib/utils";
  *
  * Every button points at the same place. There is nothing to buy on this
  * page: you install, you scan, you decide.
+ *
+ * v2 adds the hover lift and makes the founder tile breathe: it is the one
+ * offer on the page with a countdown behind it, and a tile that sits
+ * perfectly still reads as boilerplate.
  */
 function Plan({
   name,
@@ -38,13 +47,21 @@ function Plan({
     <div
       className={cn(
         "relative flex flex-col gap-4 rounded-xl p-8",
+        /* The lift is on `translate`, not `transform` — the reveal system
+         * owns `transform` on these cards and would flatten a hover that
+         * shared it. */
+        "transition-[translate,box-shadow] duration-250 ease-out hover:-translate-y-1 motion-reduce:transition-none",
         featured
-          ? "border-brand-800/40 shadow-featured from-brand-50 border-[1.5px] bg-linear-to-b to-white to-70%"
-          : "border-hairline bg-card border",
+          ? "border-brand-800/40 shadow-featured from-brand-50 border-[1.5px] bg-linear-to-b to-white to-70% hover:shadow-[0_24px_56px_rgb(46_125_50/0.2)]"
+          : "border-hairline bg-card hover:shadow-card-lifted border",
       )}
     >
       {featured && featuredLabel ? (
-        <span className="bg-primary text-primary-foreground absolute -top-3 left-8 rounded-full px-3 py-1 text-[11px] font-bold tracking-[0.05em] uppercase">
+        <span
+          data-reveal
+          data-motion="dot"
+          className="bg-primary text-primary-foreground absolute -top-3 left-8 rounded-full px-3 py-1 text-[11px] font-bold tracking-[0.05em] uppercase [--reveal-delay:260ms]"
+        >
           {featuredLabel}
         </span>
       ) : null}
@@ -71,13 +88,17 @@ function Plan({
         variant={featured ? "default" : "secondary"}
         className={cn("mt-auto h-11 w-full", featured && "shadow-cta-sm")}
       >
-        <TrackedLink
-          href="/image-voice#scan"
-          event="cta_pricing_view"
+        {/* External — a plain anchor, not the locale-aware Link. Every plan
+            button is the same free scan, so none of them stops at an anchor
+            further down the page. */}
+        <TrackedExternalLink
+          href={APP_INSTALL_URL}
+          rel="noreferrer"
+          event="cta_scan_click"
           eventProps={{ location: "pricing", plan: name }}
         >
           {cta}
-        </TrackedLink>
+        </TrackedExternalLink>
       </Button>
     </div>
   );
@@ -125,7 +146,7 @@ export function PricingCards() {
         offer={
           /* A filled green tile, not a dashed note: this is the one place on
            * the page where the offer has to outrank the plan around it. */
-          <aside className="bg-primary border-brand-800/50 rounded-lg border-[1.5px] px-4 py-3.5 shadow-[0_6px_18px_rgb(46_125_50/0.25)]">
+          <aside className="bg-primary border-brand-800/50 animate-glow-pulse rounded-lg border-[1.5px] px-4 py-3.5 shadow-[0_6px_18px_rgb(46_125_50/0.25)]">
             <p className="text-[12px] font-bold tracking-[0.06em] text-white/75 uppercase">
               {t("curator.offerLabel")}
             </p>

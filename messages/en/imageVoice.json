@@ -6,7 +6,7 @@
   "hero": {
     "badge": "Live on the Shopify App Store",
     "headline": "Your images are <accent>silent.</accent>",
-    "subhead": "<lead>{silent, number} of your images say nothing</lead> — to Google, to AI shoppers, to anyone who needs them read aloud. Silent images don’t sell.",
+    "subhead": "<lead>A typical store: thousands of images that say nothing</lead> — to Google, to AI shoppers, to anyone who needs them read aloud. Silent images don’t sell. Yours are counted in minutes, free.",
     "ctaPrimary": "Run the free scan",
     "ctaSecondary": "See pricing",
     "finePrint": "Free forever audit · No credit card · Nothing touches your store until you approve"
@@ -16,6 +16,33 @@
     "total": "of {total, number}",
     "aria": "{silent, number} of {total, number} of your images are silent",
     "caption": "Sample scan — yours takes minutes, free."
+  },
+  "task": {
+    "eyebrow": "The task that never gets done",
+    "opener": "Nobody sits down to describe 3,000 images.",
+    "middleOne": "So it never gets done — it’s the job that gets deleted from every to-do list, every quarter, in every store.",
+    "middleTwo": "And because nobody’s counting, you can’t even say how bad it is.",
+    "resolution": "That last part we can fix in minutes.",
+    "listLabel": "To-do",
+    "one": {
+      "task": "Write alt text for product images",
+      "tag": "Q1 → Q2"
+    },
+    "two": {
+      "task": "Alt text — at least the bestsellers",
+      "tag": "Q2 → Q3"
+    },
+    "three": {
+      "task": "Image descriptions?? (ask VA)",
+      "tag": "Q3 → Q4"
+    },
+    "four": {
+      "task": "Alt text (for real this time)",
+      "tag": "Q4 → …"
+    },
+    "done": "Find out how bad it is",
+    "doneTime": "4 min",
+    "caption": "Every store’s to-do list. Only one line ever gets checked."
   },
   "prices": {
     "kicker": "One villain, three prices",
@@ -48,7 +75,7 @@
     "afterLabel": "After — Image Voice",
     "afterCode": "alt=\"Moss-green organic cotton tee folded flat, showing the ribbed collar and embroidered leaf at the hem\"",
     "afterCaption": "Every image actually looked at. Distinct per image, ~125 characters, never starts with “image of.”",
-    "closer": "That’s why the free audit <lead>grades instead of counting</lead>: missing / junk / weak / good, with a vision-checked sample. Typical result: “62 of 100 covered images don’t describe the image.”"
+    "closer": "That’s why the free audit <lead>grades instead of counting</lead>: missing / junk / weak / good, with a vision-checked sample. Typical result: “62 of 100 covered images don’t describe the image.” Run it on your store and read the sample yourself — the grade is the proof, not our word for it."
   },
   "how": {
     "kicker": "How it works",
@@ -70,6 +97,23 @@
   "benefits": {
     "kicker": "What you get",
     "title": "What changes when your images stop being silent",
+    "sub": "Not a feature list — a timeline. Here’s what actually happens, from the minute you install.",
+    "chapterOne": {
+      "label": "Minute one",
+      "note": "You install. Nothing to configure."
+    },
+    "chapterTwo": {
+      "label": "The first sitting",
+      "note": "One coffee. The whole catalog reviewed."
+    },
+    "chapterThree": {
+      "label": "From then on",
+      "note": "The job leaves your head."
+    },
+    "chapterFour": {
+      "label": "Before any money moves",
+      "note": "Everything above the paywall."
+    },
     "one": {
       "title": "You’ll know the truth in minutes — free, before you decide anything.",
       "body": "Full scan on install, no setup. The number: “{silent, number} of your images are silent.”"
@@ -94,10 +138,6 @@
       "title": "You stay in control without doing the work.",
       "body": "Nothing touches Shopify until you say so. Bulk-apply when you’ve seen enough: “apply the remaining {remaining, number}?” Your whole catalog reviewed in one coffee."
     },
-    "seven": {
-      "title": "Nothing can go wrong that you can’t see and undo.",
-      "body": "Every write verified by reading it back. 30-day undo on every plan. Structurally unable to touch anything but the alt field, and it never overwrites words a human wrote."
-    },
     "eight": {
       "title": "Eventually, you never think about it again.",
       "body": "New product uploaded → described within minutes. A weekly digest instead of a to-do list. The job leaves your head permanently."
@@ -113,6 +153,10 @@
     "eleven": {
       "title": "You’ll know exactly what you’re buying — and we’ll tell you if it’s not us.",
       "body": "Free lifetime descriptions to judge quality on your own products. Paid plans sweep your backlog up front — no months-long drip. Too big for our plans? We say so and offer a waitlist."
+    },
+    "limits": {
+      "title": "What it can’t do.",
+      "body": "It can’t touch anything except the alt field — structurally. It can’t change your store without your approval. It can’t make an edit that isn’t logged and undoable for 30 days. It can’t overwrite a description a human wrote. And when it can’t reach something (theme-settings images), it flags it with a deep link instead of failing silently."
     }
   },
   "pricing": {
@@ -153,6 +197,7 @@
       "four": "The most maintenance headroom, for active catalogs",
       "cta": "Start with the free scan"
     },
+    "trust": "Nothing here runs on trust. The audit is free forever, the writing is judged on your own products before you pay a cent, and every change is undoable for 30 days. The only thing we ask you to believe is your own scan.",
     "footer": "Silent images are one of seven leaks. <link>The Leaf suite finds the other six →</link>"
   },
   "faq": {
@@ -168,7 +213,7 @@
     },
     "spam": {
       "q": "Isn’t AI alt text spammy?",
-      "a": "The spam reputation comes from tools that generate text from titles and filenames. Image Voice looks at every image. Descriptions are distinct per image, around 125 characters, and never start with “image of.” Judge it free on your own products before paying anything."
+      "a": "It earned that reputation — we’ve opened catalogs where every description began “image of” and ended in a keyword pile, worse than empty because it looks done. That’s exactly what Image Voice is built against: it looks at every image, writes ~125 distinct characters, never starts with “image of,” and grades the junk that’s already there so you can see the difference on your own store, free."
     },
     "languages": {
       "q": "Which languages does it write in?",
@@ -181,7 +226,7 @@
   },
   "cta": {
     "title": "Run the free scan. See your number.",
-    "sub": "Free forever. No credit card. Your silent-image count in minutes — graded, not counted.",
+    "sub": "Two futures: your catalog stays mute while the image traffic and the AI shoppers go next door — or every image speaks, and you never think about it again.",
     "button": "Install on the Shopify App Store"
   }
 }

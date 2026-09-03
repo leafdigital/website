@@ -7,7 +7,7 @@ import { CoverageRing } from "@/components/coverage-ring";
 import { Faq } from "@/components/faq";
 import { HeroSplit } from "@/components/hero-split";
 import { CtaBand } from "@/components/layout/cta-band";
-import { Section, SectionHeading } from "@/components/layout/section";
+import { Kicker, Section, SectionHeading } from "@/components/layout/section";
 import { StatementRows } from "@/components/layout/statement-rows";
 import { StepsRow } from "@/components/steps-row";
 import { Button } from "@/components/ui/button";
@@ -15,8 +15,10 @@ import { PillBadge } from "@/components/ui/pill-badge";
 import { Link } from "@/i18n/navigation";
 import { APP_INSTALL_URL, SAMPLE } from "@/lib/constants";
 import { localeMetadata } from "@/lib/metadata";
-import { cn } from "@/lib/utils";
+import { Journey } from "./journey";
 import { PricingCards } from "./pricing-cards";
+import { SpecimenCard } from "./specimen-card";
+import { TodoCard } from "./todo-card";
 
 export async function generateMetadata({
   params,
@@ -34,19 +36,6 @@ export async function generateMetadata({
 
 const priceRows = ["traffic", "agentic", "accessibility"] as const;
 const steps = ["scan", "write", "speak"] as const;
-const benefits = [
-  "one",
-  "two",
-  "three",
-  "four",
-  "five",
-  "six",
-  "seven",
-  "eight",
-  "nine",
-  "ten",
-  "eleven",
-] as const;
 const faqKeys = [
   "breakStore",
   "compliance",
@@ -55,38 +44,42 @@ const faqKeys = [
   "howLong",
 ] as const;
 
-/** A mono chip showing a literal alt attribute — the evidence, not a quote. */
-function CodeChip({
-  children,
-  tone = "before",
-}: {
-  children: string;
-  tone?: "before" | "after";
-}) {
+/**
+ * A soft green aura behind a centred narrative. Decoration only: it exists
+ * so a section of nothing but sentences still has a centre of gravity.
+ */
+function Aura({ className }: { className: string }) {
   return (
-    <p
-      className={cn(
-        "rounded-md border bg-white p-3.5 font-mono text-[13px]",
-        tone === "before"
-          ? "border-ink/8 text-ink-faint leading-[1.6]"
-          : "border-brand-800/20 leading-[1.7]",
-      )}
-    >
-      {children}
-    </p>
+    <div
+      aria-hidden="true"
+      className={`pointer-events-none absolute left-1/2 -z-10 -translate-x-1/2 rounded-[50%] blur-[40px] ${className}`}
+    />
   );
 }
 
+/**
+ * /image-voice, v2 — the same argument as v1, told as one continuous scroll
+ * instead of eight stacked blocks.
+ *
+ * The through-line: you are shown the problem (a to-do list that strikes
+ * itself out), told what it costs (the one dark band), shown the evidence
+ * (one specimen card, junk struck through in red), shown the mechanism
+ * (three steps on a drawn thread), walked through what happens to you (four
+ * chapters on a drawn spine), and only then given a price. Every reveal on
+ * the page restates the layout — a rule draws, a strike crosses, a spine
+ * grows — rather than decorating it.
+ */
 export default function ImageVoicePage() {
   const t = useTranslations("imageVoice");
-  const { silentImages, totalImages, bulkRemaining } = SAMPLE;
+  const { silentImages, totalImages } = SAMPLE;
   const lead = (chunks: React.ReactNode) => (
     <strong className="text-foreground font-semibold">{chunks}</strong>
   );
 
   return (
     <>
-      {/* 1 — Hero. One number does the arguing. */}
+      {/* 1 — Hero. Number-free by design: the one number on this screen is
+          the one inside the ring. */}
       <HeroSplit
         badge={
           <PillBadge>
@@ -106,17 +99,19 @@ export default function ImageVoicePage() {
             })}
           </h1>
         }
-        sub={t.rich("hero.subhead", { silent: silentImages, lead })}
+        sub={t.rich("hero.subhead", { lead })}
         cta={
           <>
             <Button asChild size="lg">
-              <TrackedLink
-                href="/image-voice#scan"
+              {/* External — a plain anchor, not the locale-aware Link. */}
+              <TrackedExternalLink
+                href={APP_INSTALL_URL}
+                rel="noreferrer"
                 event="cta_scan_click"
                 eventProps={{ location: "image-voice-hero" }}
               >
                 {t("hero.ctaPrimary")}
-              </TrackedLink>
+              </TrackedExternalLink>
             </Button>
             <Button
               asChild
@@ -137,7 +132,9 @@ export default function ImageVoicePage() {
         finePrint={t("hero.finePrint")}
         visual={
           <figure className="flex flex-col items-center">
-            <div className="border-hairline bg-card shadow-card rounded-2xl border px-10 py-8">
+            {/* The evidence keeps moving after it lands — the one card on
+                the page that is alive rather than arriving. */}
+            <div className="border-hairline bg-card shadow-card animate-float rounded-2xl border px-10 py-8">
               <CoverageRing
                 covered={silentImages}
                 total={totalImages}
@@ -156,10 +153,48 @@ export default function ImageVoicePage() {
         }
       />
 
-      {/* 2 — One villain, three bills. The page's only dark band. */}
+      {/* 2 — The task that never gets done. Four sentences and a list; the
+          section is deliberately mostly air. */}
+      <Section className="relative isolate overflow-hidden sm:py-[150px]">
+        <Aura className="top-[14%] h-[620px] w-[940px] bg-[radial-gradient(closest-side,rgba(67,160,71,0.07),transparent_70%)]" />
+        <div className="mx-auto flex max-w-[840px] flex-col items-center gap-6 text-center sm:gap-[30px]">
+          <Kicker face="mono" data-reveal>
+            {t("task.eyebrow")}
+          </Kicker>
+          <h2
+            data-reveal
+            className="text-[32px] leading-[1.15] font-bold tracking-[-0.03em] [--reveal-delay:80ms] sm:text-[42px]"
+          >
+            {t("task.opener")}
+          </h2>
+          <p
+            data-reveal
+            className="text-muted-foreground max-w-[720px] text-xl leading-[1.45] font-medium text-balance [--reveal-delay:160ms] sm:text-[26px]"
+          >
+            {t("task.middleOne")}
+          </p>
+          <p
+            data-reveal
+            className="text-muted-foreground max-w-[720px] text-xl leading-[1.45] font-medium text-balance [--reveal-delay:240ms] sm:text-[26px]"
+          >
+            {t("task.middleTwo")}
+          </p>
+          <p
+            data-reveal
+            className="text-primary text-[25px] leading-[1.3] font-bold tracking-[-0.02em] [--reveal-delay:320ms] sm:text-[31px]"
+          >
+            {t("task.resolution")}
+          </p>
+        </div>
+        <TodoCard />
+      </Section>
+
+      {/* 3 — One villain, three bills. The page's only dark band, and the one
+          block v2 deliberately left alone. */}
       <Section tone="dark">
         <SectionHeading
           tone="dark"
+          face="mono"
           kicker={t("prices.kicker")}
           title={t("prices.title")}
           sub={t("prices.sub")}
@@ -174,114 +209,81 @@ export default function ImageVoicePage() {
         />
       </Section>
 
-      {/* 3 — The competitive argument, shown rather than claimed. */}
-      <Section>
+      {/* 4 — The competitive argument, shown rather than claimed. One
+          specimen, struck through and replaced. */}
+      <Section className="relative isolate overflow-hidden sm:py-[130px]">
+        <Aura className="top-[22%] h-[600px] w-[900px] bg-[radial-gradient(closest-side,rgba(67,160,71,0.06),transparent_70%)]" />
         <SectionHeading
+          align="center"
+          face="mono"
           kicker={t("checkbox.kicker")}
           title={t("checkbox.title")}
           sub={t("checkbox.sub")}
-          className="max-w-[680px]"
+          className="max-w-[720px]"
         />
-        <div data-reveal-group className="mt-14 grid gap-[18px] md:grid-cols-2">
-          <div className="border-hairline bg-surface-muted flex flex-col gap-4 rounded-xl border p-[30px]">
-            <p className="text-fine text-ink-faint font-bold tracking-[0.05em] uppercase">
-              {t("checkbox.beforeLabel")}
-            </p>
-            <div className="flex flex-col gap-2.5">
-              <CodeChip>{t("checkbox.beforeOne")}</CodeChip>
-              <CodeChip>{t("checkbox.beforeTwo")}</CodeChip>
-            </div>
-            <p className="text-ink-faint text-base sm:text-sm">
-              {t("checkbox.beforeCaption")}
-            </p>
-          </div>
-          <div className="border-brand-800/35 shadow-featured from-brand-50 flex flex-col gap-4 rounded-xl border-[1.5px] bg-linear-to-b to-white to-70% p-[30px]">
-            <p className="text-fine text-brand-800 font-bold tracking-[0.05em] uppercase">
-              {t("checkbox.afterLabel")}
-            </p>
-            <CodeChip tone="after">{t("checkbox.afterCode")}</CodeChip>
-            <p className="text-muted-foreground text-base sm:text-sm">
-              {t("checkbox.afterCaption")}
-            </p>
-          </div>
-        </div>
+        <SpecimenCard />
         <p
           data-reveal
-          className="text-muted-foreground mt-11 max-w-[640px] leading-[1.6]"
+          className="text-muted-foreground mx-auto mt-14 max-w-[660px] text-center text-lg leading-[1.6] text-balance"
         >
           {t.rich("checkbox.closer", { lead })}
         </p>
       </Section>
 
-      {/* 4 — The ladder every Leaf app climbs. */}
+      {/* 5 — The ladder every Leaf app climbs, drawn as one thread. */}
       <Section divided>
-        <SectionHeading kicker={t("how.kicker")} title={t("how.title")} />
+        <SectionHeading
+          align="center"
+          face="mono"
+          kicker={t("how.kicker")}
+          title={t("how.title")}
+        />
         <StepsRow
-          className="mt-[60px]"
+          variant="connected"
+          className="mt-[70px]"
           steps={steps.map((key) => ({
             title: t(`how.${key}.title`),
             body: t(`how.${key}.body`),
           }))}
         />
-        <p data-reveal className="text-ink-faint mt-11 text-[15px]">
+        <p data-reveal className="text-ink-faint mt-14 text-center text-[15px]">
           {t("how.footer")}
         </p>
       </Section>
 
-      {/* 5 — Eleven promises. The first one is free, so it leads. */}
+      {/* 6 — Not a feature list. Four chapters, in the order they happen. */}
       <Section divided>
         <SectionHeading
+          face="mono"
           kicker={t("benefits.kicker")}
           title={t("benefits.title")}
+          sub={t("benefits.sub")}
           className="max-w-[680px]"
         />
-        <ul data-reveal-group className="mt-14 grid gap-4 md:grid-cols-2">
-          {benefits.map((key, i) => {
-            const featured = i === 0;
-            return (
-              <li
-                key={key}
-                className={cn(
-                  "rounded-xl p-[30px]",
-                  featured
-                    ? "border-brand-800/35 from-brand-50 border-[1.5px] bg-linear-to-b to-white to-70% shadow-[0_14px_36px_rgb(46_125_50/0.08)] md:col-span-2"
-                    : "border-hairline bg-card border",
-                )}
-              >
-                <span
-                  aria-hidden="true"
-                  className={cn(
-                    "text-fine font-mono font-bold tabular-nums",
-                    featured ? "text-brand-800" : "text-ink-faint",
-                  )}
-                >
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <h3 className="mt-2 text-[19px] tracking-[-0.01em]">
-                  {t(`benefits.${key}.title`)}
-                </h3>
-                <p className="text-muted-foreground mt-2 text-base leading-[1.6] sm:text-[15px]">
-                  {t(`benefits.${key}.body`, {
-                    silent: silentImages,
-                    remaining: bulkRemaining,
-                  })}
-                </p>
-              </li>
-            );
-          })}
-        </ul>
+        <Journey />
       </Section>
 
-      {/* 6 — Pricing. The free plan is a plan, not a trial. */}
+      {/* 7 — Pricing. The free plan is a plan, not a trial. */}
       <Section id="pricing" divided className="scroll-mt-16">
         <SectionHeading
+          align="center"
+          face="mono"
           kicker={t("pricing.kicker")}
           title={t("pricing.title")}
           sub={t("pricing.sub")}
-          className="max-w-[680px]"
+          className="max-w-[720px]"
         />
         <PricingCards />
-        <p data-reveal className="text-ink-faint mt-11 text-[15px]">
+        <p
+          data-reveal
+          className="text-muted-foreground mx-auto mt-11 max-w-[720px] text-center leading-[1.6]"
+        >
+          {t("pricing.trust")}
+        </p>
+        <p
+          data-reveal
+          className="text-ink-faint mt-5 text-center text-[15px] [--reveal-delay:90ms]"
+        >
           {t.rich("pricing.footer", {
             link: (chunks) => (
               <Link href="/" className="text-brand-800 font-semibold">
@@ -292,9 +294,14 @@ export default function ImageVoicePage() {
         </p>
       </Section>
 
-      {/* 7 — The objections, answered before they are asked. */}
+      {/* 8 — The objections, answered before they are asked. */}
       <Section divided containerClassName="max-w-[800px]">
-        <SectionHeading kicker={t("faq.kicker")} title={t("faq.title")} />
+        <SectionHeading
+          align="center"
+          face="mono"
+          kicker={t("faq.kicker")}
+          title={t("faq.title")}
+        />
         <Faq
           className="mt-12"
           items={faqKeys.map((key) => ({
@@ -304,7 +311,7 @@ export default function ImageVoicePage() {
         />
       </Section>
 
-      {/* 8 — Install. The only external link on the page. */}
+      {/* 9 — Install. Two futures, one button. */}
       <CtaBand
         id="scan"
         title={t("cta.title")}

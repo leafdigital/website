@@ -6,7 +6,7 @@
   "hero": {
     "badge": "En ligne sur le Shopify App Store",
     "headline": "Vos images sont <accent>muettes.</accent>",
-    "subhead": "<lead>{silent, number} de vos images ne disent rien</lead> — à Google, aux acheteurs IA, à quiconque a besoin qu’on les lui lise. Les images muettes ne vendent pas.",
+    "subhead": "<lead>Une boutique typique : des milliers d’images qui ne disent rien</lead> — à Google, aux acheteurs IA, à quiconque a besoin qu’on les lui lise. Les images muettes ne vendent pas. Les vôtres sont comptées en quelques minutes, gratuitement.",
     "ctaPrimary": "Lancer l’analyse gratuite",
     "ctaSecondary": "Voir les tarifs",
     "finePrint": "Audit gratuit à vie · Sans carte bancaire · Rien ne touche votre boutique sans votre validation"
@@ -16,6 +16,33 @@
     "total": "sur {total, number}",
     "aria": "{silent, number} de vos {total, number} images sont muettes",
     "caption": "Analyse d’exemple — la vôtre prend quelques minutes, gratuitement."
+  },
+  "task": {
+    "eyebrow": "La tâche qui n’est jamais faite",
+    "opener": "Personne ne s’assoit pour décrire 3 000 images.",
+    "middleOne": "Alors ce n’est jamais fait — c’est le travail qu’on efface de chaque liste de tâches, chaque trimestre, dans chaque boutique.",
+    "middleTwo": "Et comme personne ne compte, vous ne pouvez même pas dire à quel point c’est grave.",
+    "resolution": "Cette dernière partie, on la règle en quelques minutes.",
+    "listLabel": "À faire",
+    "one": {
+      "task": "Écrire l’alt text des images produits",
+      "tag": "T1 → T2"
+    },
+    "two": {
+      "task": "Alt text — au moins les best-sellers",
+      "tag": "T2 → T3"
+    },
+    "three": {
+      "task": "Descriptions d’images ?? (demander au VA)",
+      "tag": "T3 → T4"
+    },
+    "four": {
+      "task": "Alt text (pour de vrai cette fois)",
+      "tag": "T4 → …"
+    },
+    "done": "Savoir à quel point c’est grave",
+    "doneTime": "4 min",
+    "caption": "La liste de toutes les boutiques. Une seule ligne finit cochée."
   },
   "prices": {
     "kicker": "Un coupable, trois factures",
@@ -48,7 +75,7 @@
     "afterLabel": "Après — Image Voice",
     "afterCode": "alt=\"T-shirt en coton bio vert mousse plié à plat, laissant voir le col côtelé et la feuille brodée sur l’ourlet\"",
     "afterCaption": "Chaque image réellement regardée. Unique pour chaque image, ~125 caractères, ne commence jamais par « image de ».",
-    "closer": "C’est pour ça que l’audit gratuit <lead>note au lieu de compter</lead> : manquant / déchet / faible / bon, avec un échantillon vérifié à la vision. Résultat typique : « 62 images “couvertes” sur 100 ne décrivent pas l’image. »"
+    "closer": "C’est pour ça que l’audit gratuit <lead>note au lieu de compter</lead> : manquant / déchet / faible / bon, avec un échantillon vérifié à la vision. Résultat typique : « 62 images “couvertes” sur 100 ne décrivent pas l’image. » Lancez-le sur votre boutique et lisez l’échantillon vous-même — la note est la preuve, pas notre parole."
   },
   "how": {
     "kicker": "Comment ça marche",
@@ -70,6 +97,23 @@
   "benefits": {
     "kicker": "Ce que vous obtenez",
     "title": "Ce qui change quand vos images cessent d’être muettes",
+    "sub": "Pas une liste de fonctionnalités — une chronologie. Voici ce qui se passe vraiment, dès la minute de l’installation.",
+    "chapterOne": {
+      "label": "La première minute",
+      "note": "Vous installez. Rien à configurer."
+    },
+    "chapterTwo": {
+      "label": "La première séance",
+      "note": "Un café. Tout le catalogue passé en revue."
+    },
+    "chapterThree": {
+      "label": "À partir de là",
+      "note": "Le sujet quitte votre tête."
+    },
+    "chapterFour": {
+      "label": "Avant que l’argent bouge",
+      "note": "Tout cela est avant le paywall."
+    },
     "one": {
       "title": "Vous saurez la vérité en quelques minutes — gratuitement, avant de décider quoi que ce soit.",
       "body": "Analyse complète dès l’installation, sans configuration. Le chiffre : « {silent, number} de vos images sont muettes. »"
@@ -94,10 +138,6 @@
       "title": "Vous gardez le contrôle sans faire le travail.",
       "body": "Rien ne touche Shopify tant que vous n’avez pas dit oui. Appliquez en masse quand vous en avez assez vu : « appliquer les {remaining, number} restantes ? » Tout votre catalogue relu le temps d’un café."
     },
-    "seven": {
-      "title": "Rien ne peut mal tourner sans que vous puissiez le voir et l’annuler.",
-      "body": "Chaque écriture vérifiée en la relisant. 30 jours pour annuler, sur toutes les offres. Structurellement incapable de toucher autre chose que le champ alt, et elle n’écrase jamais des mots écrits par un humain."
-    },
     "eight": {
       "title": "À terme, vous n’y pensez plus jamais.",
       "body": "Nouveau produit importé → décrit en quelques minutes. Un récapitulatif hebdomadaire au lieu d’une liste de tâches. La corvée quitte votre tête pour de bon."
@@ -113,6 +153,10 @@
     "eleven": {
       "title": "Vous saurez exactement ce que vous achetez — et on vous le dira si ce n’est pas pour nous.",
       "body": "Des descriptions gratuites à vie pour juger la qualité sur vos propres produits. Les offres payantes traitent tout votre arriéré d’emblée — pas de goutte-à-goutte sur des mois. Trop gros pour nos offres ? On le dit et on vous propose une liste d’attente."
+    },
+    "limits": {
+      "title": "Ce qu’il ne peut pas faire.",
+      "body": "Il ne peut structurellement rien toucher d’autre que le champ alt. Il ne peut pas modifier votre boutique sans votre validation. Il ne peut pas faire une modification qui ne soit pas journalisée et annulable pendant 30 jours. Il ne peut pas écraser une description écrite par un humain. Et quand il n’atteint pas quelque chose (les images des réglages de thème), il le signale avec un lien direct au lieu d’échouer en silence."
     }
   },
   "pricing": {
@@ -153,6 +197,7 @@
       "four": "La plus grande marge d’entretien, pour les catalogues actifs",
       "cta": "Commencer par l’analyse gratuite"
     },
+    "trust": "Rien ici ne repose sur la confiance. L’audit est gratuit à vie, l’écriture se juge sur vos propres produits avant de payer un centime, et chaque modification est annulable pendant 30 jours. La seule chose que nous vous demandons de croire, c’est votre propre analyse.",
     "footer": "Les images muettes ne sont qu’une fuite sur sept. <link>La suite Leaf trouve les six autres →</link>"
   },
   "faq": {
@@ -168,7 +213,7 @@
     },
     "spam": {
       "q": "L’alt text écrit par une IA, ce n’est pas du spam ?",
-      "a": "Cette réputation vient des outils qui génèrent le texte à partir des titres et des noms de fichiers. Image Voice regarde chaque image. Les descriptions sont uniques pour chaque image, font environ 125 caractères et ne commencent jamais par « image de ». Jugez-la gratuitement sur vos propres produits avant de payer quoi que ce soit."
+      "a": "Cette réputation est méritée — nous avons ouvert des catalogues où chaque description commençait par « image de » et finissait en tas de mots-clés, pire que vide parce que ça a l’air fait. C’est exactement contre ça qu’Image Voice est construit : il regarde chaque image, écrit environ 125 caractères uniques, ne commence jamais par « image de », et note le déchet déjà en place — pour que vous voyiez la différence sur votre propre boutique, gratuitement."
     },
     "languages": {
       "q": "Dans quelles langues écrit-elle ?",
@@ -181,7 +226,7 @@
   },
   "cta": {
     "title": "Lancez l’analyse gratuite. Voyez votre chiffre.",
-    "sub": "Gratuit à vie. Sans carte bancaire. Le nombre de vos images muettes en quelques minutes — noté, pas compté.",
+    "sub": "Deux futurs : votre catalogue reste muet pendant que le trafic images et les acheteurs IA vont à côté — ou chaque image parle, et vous n’y pensez plus jamais.",
     "button": "Installer sur le Shopify App Store"
   }
 }
