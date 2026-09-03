@@ -158,9 +158,7 @@ export default function ImageVoicePage() {
       <Section className="relative isolate overflow-hidden sm:py-[150px]">
         <Aura className="top-[14%] h-[620px] w-[940px] bg-[radial-gradient(closest-side,rgba(67,160,71,0.07),transparent_70%)]" />
         <div className="mx-auto flex max-w-[840px] flex-col items-center gap-6 text-center sm:gap-[30px]">
-          <Kicker face="mono" data-reveal>
-            {t("task.eyebrow")}
-          </Kicker>
+          <Kicker data-reveal>{t("task.eyebrow")}</Kicker>
           <h2
             data-reveal
             className="text-[32px] leading-[1.15] font-bold tracking-[-0.03em] [--reveal-delay:80ms] sm:text-[42px]"
@@ -194,7 +192,6 @@ export default function ImageVoicePage() {
       <Section tone="dark">
         <SectionHeading
           tone="dark"
-          face="mono"
           kicker={t("prices.kicker")}
           title={t("prices.title")}
           sub={t("prices.sub")}
@@ -215,7 +212,6 @@ export default function ImageVoicePage() {
         <Aura className="top-[22%] h-[600px] w-[900px] bg-[radial-gradient(closest-side,rgba(67,160,71,0.06),transparent_70%)]" />
         <SectionHeading
           align="center"
-          face="mono"
           kicker={t("checkbox.kicker")}
           title={t("checkbox.title")}
           sub={t("checkbox.sub")}
@@ -234,7 +230,6 @@ export default function ImageVoicePage() {
       <Section divided>
         <SectionHeading
           align="center"
-          face="mono"
           kicker={t("how.kicker")}
           title={t("how.title")}
         />
@@ -254,7 +249,6 @@ export default function ImageVoicePage() {
       {/* 6 — Not a feature list. Four chapters, in the order they happen. */}
       <Section divided>
         <SectionHeading
-          face="mono"
           kicker={t("benefits.kicker")}
           title={t("benefits.title")}
           sub={t("benefits.sub")}
@@ -267,7 +261,6 @@ export default function ImageVoicePage() {
       <Section id="pricing" divided className="scroll-mt-16">
         <SectionHeading
           align="center"
-          face="mono"
           kicker={t("pricing.kicker")}
           title={t("pricing.title")}
           sub={t("pricing.sub")}
@@ -298,7 +291,6 @@ export default function ImageVoicePage() {
       <Section divided containerClassName="max-w-[800px]">
         <SectionHeading
           align="center"
-          face="mono"
           kicker={t("faq.kicker")}
           title={t("faq.title")}
         />

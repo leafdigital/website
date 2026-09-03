@@ -143,16 +143,6 @@
   --text-kicker--letter-spacing: 0.08em;
   --text-kicker--font-weight: 700;
 
-  /* The kicker's mono cut, introduced by the Image Voice v2 narrative: a
-   * step smaller, a step lighter, twice the tracking, and always set in
-   * `font-mono`. It reads as a machine label rather than a heading, which
-   * is what a page of centred cinematic statements needs above each one —
-   * a sans kicker at that size competes with the statement under it. */
-  --text-eyebrow: 12px;
-  --text-eyebrow--line-height: 1.2;
-  --text-eyebrow--letter-spacing: 0.16em;
-  --text-eyebrow--font-weight: 600;
-
   /* Fine print: reassurance lines, captions, meta rows with ` · ` between. */
   --text-fine: 13px;
   --text-fine--line-height: 1.5;

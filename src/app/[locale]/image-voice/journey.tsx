@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { Kicker } from "@/components/layout/section";
 import { SAMPLE } from "@/lib/constants";
 
 /**
@@ -62,9 +63,7 @@ export function Journey() {
               aria-hidden="true"
               className="bg-brand-800/45 mt-1 h-px w-11"
             />
-            <p className="text-eyebrow text-brand-800 font-mono uppercase">
-              {t(`${chapter.key}.label`)}
-            </p>
+            <Kicker>{t(`${chapter.key}.label`)}</Kicker>
             <p className="text-ink-faint text-[15px] leading-[1.5]">
               {t(`${chapter.key}.note`)}
             </p>
