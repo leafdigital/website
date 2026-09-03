@@ -1,14 +1,14 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "leaf-website";
 
-// CardTitle is a div by design. Shown inside CardHeader, which is the only
-// place its grid position is correct.
+// CardTitle is a div at text-h3 by design. Shown inside CardHeader, which is
+// the only place its grid position is correct.
 
 export const Default = () => (
   <Card className="max-w-sm">
     <CardHeader>
-      <CardTitle>AI Answer Accuracy</CardTitle>
+      <CardTitle>Reorder Engine</CardTitle>
       <CardDescription>
-        Watch what the machines actually say about your store.
+        Nine apps forecast your inventory. Not one sends the PO.
       </CardDescription>
     </CardHeader>
   </Card>
@@ -19,7 +19,7 @@ export const Default = () => (
 export const AsRealHeading = () => (
   <Card className="max-w-sm">
     <CardHeader>
-      <h3 className="font-heading text-xl font-bold">Leaf Alt Text</h3>
+      <h3 className="font-heading text-h3">Image Voice</h3>
       <CardDescription>Appears in heading navigation.</CardDescription>
     </CardHeader>
   </Card>

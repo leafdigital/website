@@ -4,7 +4,7 @@ import { Container } from "./container";
 /**
  * `default` — white ground, the page's normal band.
  * `wash`    — quiet green tint for sections that should feel like the brand.
- * `dark`    — full-bleed #0B120D for big statements (the problem/villain
+ * `dark`    — full-bleed #101911 for big statements (the problem/villain
  *             band, a final CTA). Max 1–2 per page, or it stops landing.
  */
 export type SectionTone = "default" | "wash" | "dark";

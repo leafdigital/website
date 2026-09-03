@@ -4,36 +4,42 @@ category: Analytics
 
 # TrackedLink
 
-A link that reports a CTA event on click. Use it for every primary call to
-action so click-through exists from day one; use a plain link for ordinary
-navigation.
+An internal link that reports a CTA event on click. Use it for every primary
+call to action so click-through exists from day one; use a plain `Link` for
+ordinary navigation.
 
-- `event` is one of the fixed CTA names: `cta_scan_click`, `cta_install_click`,
-  `cta_pricing_view`, `cta_contact_click`, `cta_app_view`, `cta_waitlist_join`.
-- `eventProps` carries context, conventionally `{ location }` and sometimes
-  `{ app }`.
+- It wraps the **locale-aware** `Link`, so `href` is locale-relative
+  (`/image-voice`, `/image-voice#pricing`, `/#apps`) — never write a locale into
+  one, and never an absolute URL. For an off-site link (the App Store install)
+  use [TrackedExternalLink](./TrackedExternalLink.md), which is a plain anchor
+  with the same reporting.
+- `event` is one of the fixed CTA names: `cta_scan_click`,
+  `cta_install_click`, `cta_pricing_view`, `cta_contact_click`, `cta_app_view`,
+  `cta_waitlist_join`.
+- `eventProps` carries context. The convention is `{ location }` naming the
+  page and slot — `"header"`, `"home-hero"`, `"home-hero-secondary"`,
+  `"image-voice-cta"`, `"apps-grid"` — plus `{ app }` where a link is about one
+  app.
 
 ## Making it look like a button
 
-Wrap it in `Button` with `asChild`:
+Wrap it in [Button](./Button.md) with `asChild`:
 
 ```tsx
-<Button asChild variant="outline">
+<Button asChild size="lg">
   <TrackedLink
-    href="/apps/alt-text"
-    event="cta_app_view"
-    eventProps={{ location: "app-card" }}
+    href="/image-voice"
+    event="cta_scan_click"
+    eventProps={{ location: "home-hero" }}
   >
-    See the app
+    Scan my store free
   </TrackedLink>
 </Button>
 ```
 
-Do **not** pass `buttonVariants({ variant: "outline" })` straight to `className`.
-`Button` merges its classes with tailwind-merge; a raw class string does not, so
-the base `border-transparent` and the outline variant's `border-border` both
-survive and the later stylesheet rule wins — the outline button renders with no
-border. The `RawVariantClasses` preview shows the failure next to the fix.
-
-The solid (`default`) variant is unaffected, so
-`buttonVariants({ size: "sm" })` for a green CTA is safe.
+Do **not** pass `buttonVariants({ … })` straight to `className`. `Button` runs
+its classes through tailwind-merge; a raw class string does not, so the base
+`border-transparent` and the variant's `border-hairline-strong` both survive and
+the later stylesheet rule wins — the button renders with no border. Every call
+site in the site now uses the `asChild` form, so this is a trap to avoid rather
+than a bug to work around, but the mechanism is still live.

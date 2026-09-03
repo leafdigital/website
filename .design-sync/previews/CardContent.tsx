@@ -11,33 +11,40 @@ import {
 export const Prose = () => (
   <Card className="max-w-sm">
     <CardHeader>
-      <CardTitle>Leaf Alt Text</CardTitle>
-      <CardDescription>Live on the App Store.</CardDescription>
+      <CardTitle>Image Voice</CardTitle>
+      <CardDescription>Live on the Shopify App Store.</CardDescription>
     </CardHeader>
     <CardContent>
       <p className="text-muted-foreground leading-relaxed">
-        Sees every product image the way a shopper — or a shopping agent — does,
-        and writes the alt text your catalog is missing.
+        Your images are silent — to Google, to AI shoppers, to screen readers.
+        Free scan, a real description for every image.
       </p>
     </CardContent>
   </Card>
 );
 
-/** Content is a plain block, so it holds lists and stats as happily as prose. */
+/**
+ * Content is a plain block, so it holds lists and stats as happily as prose.
+ * Figures are the sample scan from src/lib/constants.ts.
+ */
 export const WithStats = () => (
   <Card className="max-w-sm">
     <CardHeader>
-      <CardTitle>Last scan</CardTitle>
+      <CardTitle>Sample scan</CardTitle>
     </CardHeader>
     <CardContent>
       <dl className="grid grid-cols-2 gap-3">
         <div>
-          <dt className="text-muted-foreground">Products</dt>
-          <dd className="text-lg font-semibold tabular-nums">3,102</dd>
+          <dt className="text-muted-foreground">Images</dt>
+          <dd className="font-mono text-lg font-semibold tabular-nums">
+            3,102
+          </dd>
         </div>
         <div>
-          <dt className="text-muted-foreground">Missing alt text</dt>
-          <dd className="text-lg font-semibold tabular-nums">1,847</dd>
+          <dt className="text-muted-foreground">Silent</dt>
+          <dd className="font-mono text-lg font-semibold tabular-nums">
+            2,451
+          </dd>
         </div>
       </dl>
     </CardContent>

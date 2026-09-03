@@ -1,23 +1,24 @@
 import { Button } from "leaf-website";
 
-/** The one-accent rule in practice: green is the action, everything else is neutral. */
+/** The one-accent rule in practice: green is the action, everything else neutral. */
 export const Variants = () => (
   <div className="flex flex-wrap items-center gap-3">
-    <Button>Get early access</Button>
-    <Button variant="outline">See the app</Button>
-    <Button variant="secondary">Read the blog</Button>
-    <Button variant="ghost">Cancel</Button>
+    <Button>Run the free scan</Button>
+    <Button variant="secondary">See pricing</Button>
+    <Button variant="ghost">See the apps</Button>
     <Button variant="destructive">Remove app</Button>
-    <Button variant="link">Learn more</Button>
+    <Button variant="link">Join the waitlist</Button>
   </div>
 );
 
-/** Marketing-site scale. `lg` carries the CTA glow shadow. */
+/** Marketing-site scale: 52 / 44 / 38. `lg` is the only one with the CTA glow. */
 export const Sizes = () => (
   <div className="flex flex-wrap items-center gap-3">
     <Button size="lg">Scan my store free</Button>
     <Button size="default">Free scan</Button>
-    <Button size="sm">Free scan</Button>
+    <Button size="sm" className="shadow-cta-sm">
+      Free scan
+    </Button>
     <Button size="icon" aria-label="Open menu">
       <svg
         viewBox="0 0 24 24"
@@ -31,11 +32,21 @@ export const Sizes = () => (
   </div>
 );
 
+/** On the dark band the action goes white — green stops reading as a button. */
+export const OnDark = () => (
+  <div className="bg-surface-dark flex flex-wrap items-center gap-3 rounded-xl p-8">
+    <Button size="lg" variant="onDark" className="shadow-on-dark">
+      Run the free scan
+    </Button>
+    <Button variant="onDark">Get early access</Button>
+  </div>
+);
+
 export const Disabled = () => (
   <div className="flex flex-wrap items-center gap-3">
     <Button disabled>Joining…</Button>
-    <Button variant="outline" disabled>
-      See the app
+    <Button variant="secondary" disabled>
+      See pricing
     </Button>
   </div>
 );

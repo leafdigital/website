@@ -62,6 +62,10 @@ symlinkSync(join(root, "src"), join(pkgDir, "src"));
 // public/ so the image shim can inline site assets (the logo Header renders)
 // as data URIs — absolute "/brand/..." paths have no server behind them here.
 symlinkSync(join(root, "public"), join(pkgDir, "public"));
+// messages/ so the next-intl shim can serve the real English copy instead of
+// placeholder strings — Header, Footer and WaitlistForm are all copy, and a
+// preview of them showing "[[footer.rights]]" would be worse than useless.
+symlinkSync(join(root, "messages"), join(pkgDir, "messages"));
 // tsconfig is copied (so `@/*` -> ./src/* resolves against pkgDir/src) with
 // design-sync-only aliases layered on. esbuild reads these paths, which is the
 // only supported way to swap a module for the bundle:
@@ -69,6 +73,9 @@ symlinkSync(join(root, "public"), join(pkgDir, "public"));
 //     client runtime and its bare process.env reads into the bundle.
 //   @/lib/constants -> a shim that loads a process guard first, then re-exports
 //     the real file (its module-scope process.env read would otherwise throw).
+//   next-intl, @/i18n/*, @/lib/analytics -> shims. Same class of problem, one
+//     scale worse: the design system is a single module, so one module-scope
+//     process.env read anywhere in the graph empties EVERY preview.
 // Exact patterns win over the `@/*` wildcard, so @/lib/* is otherwise untouched.
 cpSync(join(root, ".design-sync/shims"), join(pkgDir, "shims"), {
   recursive: true,
@@ -99,6 +106,14 @@ writeFileSync(
           "next/link": ["./shims/next-link.tsx"],
           "next/image": ["./shims/next-image.tsx"],
           "@/lib/constants": ["./shims/constants.ts"],
+          // The i18n layer: next-intl is a Next client-runtime package and
+          // reads process.env at module scope. Because the design system
+          // ships as ONE module, that throw empties every preview in the
+          // bundle — primitives included. These four keep it out entirely.
+          "next-intl": ["./shims/next-intl.tsx"],
+          "@/i18n/navigation": ["./shims/i18n-navigation.tsx"],
+          "@/i18n/routing": ["./shims/i18n-routing.ts"],
+          "@/lib/analytics": ["./shims/analytics.ts"],
           ...appTs.compilerOptions.paths,
         },
       },

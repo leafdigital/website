@@ -9,5 +9,16 @@
   "extraFonts": ["fonts/geist.css"],
   "docsDir": "docs",
   "guidelinesGlob": ["guides/**/*.md"],
-  "readmeHeader": ".design-sync/conventions.md"
+  "readmeHeader": ".design-sync/conventions.md",
+  "overrides": {
+    "AppCard": {
+      "cardMode": "column"
+    },
+    "StatementRows": {
+      "cardMode": "column"
+    },
+    "TrackedExternalLink": {
+      "cardMode": "column"
+    }
+  }
 }

@@ -1,22 +1,38 @@
-import { SectionHeading } from "leaf-website";
+import { Section, SectionHeading } from "leaf-website";
 
-/** The full block: kicker, heading, sub — centred in a 2xl measure. */
-export const Full = () => (
+/** The full block, left-aligned in its 660px measure — the v3 default. */
+export const Default = () => (
   <SectionHeading
-    kicker="What we build"
-    title="Shopify apps that earn their keep"
-    sub="Small, sharp tools for merchants who would rather fix the catalog than read another dashboard."
+    kicker="The suite"
+    title="The plan, made real"
+    sub="Small, sharp apps. Each one finds money in a specific seam — then does the work itself."
   />
 );
 
-/** Heading only — the common case inside a dense page. */
+/** Kicker and heading only — the common case on a dense page. */
 export const TitleOnly = () => (
-  <SectionHeading title="Questions, answered plainly" />
+  <SectionHeading kicker="Due diligence" title="The questions we’d ask too" />
 );
 
-export const WithSub = () => (
+/** `tone="dark"` inside the dark band: white 48px heading, green kicker. */
+export const OnDark = () => (
+  <Section tone="dark">
+    <SectionHeading
+      tone="dark"
+      kicker="Sound familiar?"
+      title="You check three dashboards and still don’t know which number is real."
+      sub="You didn’t build a brand for this. The failure is never a feature — it’s the seams."
+      className="max-w-[760px]"
+    />
+  </Section>
+);
+
+/** `align="center"` — the exception, for a band with one thing in it. */
+export const Centered = () => (
   <SectionHeading
-    title="Your catalog, as a shopping agent sees it"
-    sub="Every product image the assistants can't read is a product they can't recommend."
+    align="center"
+    kicker="Pricing"
+    title="The magic happens before the paywall"
+    sub="Judge the writing on your own products, free, forever."
   />
 );

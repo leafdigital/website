@@ -1,74 +1,56 @@
-import { Button, TrackedLink, buttonVariants } from "leaf-website";
+import { Button, TrackedLink } from "leaf-website";
 
 /**
- * The reliable way to make a tracked link look like a button: Button with
- * `asChild`. Button runs its classes through tailwind-merge, so the outline
- * variant's `border-border` correctly replaces the base `border-transparent`.
+ * The way to make a tracked link look like a button: Button with `asChild`,
+ * which is what every CTA on the site does. The hero pair, verbatim.
  */
 export const AsButton = () => (
   <div className="flex flex-wrap items-center gap-3">
-    <Button asChild size="sm">
+    <Button asChild size="lg">
       <TrackedLink
-        href="/apps/alt-text#scan"
+        href="/image-voice"
         event="cta_scan_click"
-        eventProps={{ location: "header" }}
+        eventProps={{ location: "home-hero" }}
       >
-        Free scan
+        Scan my store free
       </TrackedLink>
     </Button>
-    <Button asChild variant="outline">
+    <Button asChild size="lg" variant="secondary" className="shadow-none">
       <TrackedLink
-        href="/apps/alt-text"
+        href="/#apps"
         event="cta_app_view"
-        eventProps={{ location: "app-card", app: "Leaf Alt Text" }}
+        eventProps={{ location: "home-hero-secondary" }}
       >
-        See the app
+        See the apps
       </TrackedLink>
     </Button>
   </div>
 );
 
-/**
- * The same two CTAs styled by passing `buttonVariants(...)` straight to
- * className — what the site's own header and app cards currently do. The solid
- * variant is fine; the outline one loses its border, because without
- * tailwind-merge both `border-transparent` (base) and `border-border` (outline)
- * survive and the later rule in the stylesheet wins. Shown so the difference is
- * visible; prefer the `asChild` form above.
- */
-export const RawVariantClasses = () => (
-  <div className="flex flex-wrap items-center gap-3">
+/** The nav-height CTA: `sm` plus the smaller glow the header adds itself. */
+export const InHeader = () => (
+  <Button asChild size="sm" className="shadow-cta-sm">
     <TrackedLink
-      href="/apps/alt-text#scan"
+      href="/image-voice"
       event="cta_scan_click"
       eventProps={{ location: "header" }}
-      className={buttonVariants({ size: "sm" })}
     >
       Free scan
     </TrackedLink>
-    <TrackedLink
-      href="/apps/alt-text"
-      event="cta_app_view"
-      eventProps={{ location: "app-card" }}
-      className={buttonVariants({ variant: "outline" })}
-    >
-      See the app — border lost
-    </TrackedLink>
-  </div>
+  </Button>
 );
 
 /** Unstyled, it is an ordinary inline link that happens to report a click. */
 export const AsTextLink = () => (
   <p className="text-muted-foreground max-w-md leading-relaxed">
-    Every product image an assistant can’t read is a product it can’t recommend.{" "}
+    Hidden Margin and Reorder Engine are in the lab.{" "}
     <TrackedLink
-      href="/apps/alt-text"
-      event="cta_app_view"
-      eventProps={{ location: "body-copy" }}
-      className="text-primary underline underline-offset-4"
+      href="/hidden-margin"
+      event="cta_waitlist_join"
+      eventProps={{ location: "home-cta" }}
+      className="text-brand-800 font-semibold underline underline-offset-4"
     >
-      See what the scan finds
+      Join the waitlist →
     </TrackedLink>
-    .
   </p>
 );

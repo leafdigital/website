@@ -15,15 +15,15 @@ import {
 export const WithBadge = () => (
   <Card className="max-w-sm">
     <CardHeader>
-      <CardTitle>Leaf Alt Text</CardTitle>
-      <CardDescription>Live on the App Store.</CardDescription>
+      <CardTitle>Image Voice</CardTitle>
+      <CardDescription>Live on the Shopify App Store.</CardDescription>
       <CardAction>
-        <Badge>Live</Badge>
+        <Badge>LIVE</Badge>
       </CardAction>
     </CardHeader>
     <CardContent>
       <p className="text-muted-foreground">
-        Scan free, stay for the auto-pilot.
+        Free scan, a real description for every image.
       </p>
     </CardContent>
   </Card>
@@ -32,9 +32,9 @@ export const WithBadge = () => (
 export const WithButton = () => (
   <Card className="max-w-sm">
     <CardHeader>
-      <CardTitle>Catalog Readiness</CardTitle>
+      <CardTitle>Hidden Margin</CardTitle>
       <CardDescription>
-        A readiness score for the agentic shelf.
+        One readiness score, gaps priced in dollars.
       </CardDescription>
       <CardAction>
         <Button variant="ghost" size="sm">

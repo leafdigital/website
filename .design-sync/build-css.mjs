@@ -12,6 +12,28 @@ const root = resolve(import.meta.dirname, "..");
 const entry = resolve(root, ".design-sync/.cache/tw-entry.css");
 const out = resolve(root, ".design-sync/.cache/leaf.css");
 
+/* The v3 ink ramp, surfaces and hairlines. These are semantic names too —
+ * they just are not shadcn's. Without them a design agent typing
+ * `text-ink-muted` or `bg-surface-deep` gets a class that does nothing,
+ * because Tailwind only emits what it finds in the scanned sources and the
+ * site happens to use only some of them. */
+const INK = [
+  "ink",
+  "ink-muted",
+  "ink-faint",
+  "ink-wash",
+  "surface-dark",
+  "surface-deep",
+  "surface-muted",
+  "on-dark",
+  "on-dark-muted",
+  "brand-on-dark",
+  "hairline",
+  "hairline-soft",
+  "hairline-strong",
+];
+/* On a dark band everything is white at some alpha. */
+const WHITE_ALPHA = "white/{8,10,12,20,25,55,60,70,75,80,82,90}";
 const SEMANTIC = [
   "background",
   "foreground",
@@ -79,6 +101,8 @@ const SAFELIST = [
   `@source inline("${RESP}max-w-{xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl,full,none,prose}");`,
   // typography
   `@source inline("${RESP}text-{xs,sm,base,lg,xl,2xl,3xl,4xl,5xl,6xl}");`,
+  // the v3 type ramp — the named steps, not the generic scale
+  `@source inline("${RESP}text-{hero,h2,h2-lg,h3,kicker,fine,caption}");`,
   `@source inline("${RESP}font-{normal,medium,semibold,bold,extrabold,sans,heading}");`,
   `@source inline("${RESP}{leading-none,leading-tight,leading-snug,leading-normal,leading-relaxed,leading-loose}");`,
   `@source inline("${RESP}{tracking-tight,tracking-normal,tracking-wide,tracking-wider,uppercase,capitalize,lowercase}");`,
@@ -87,10 +111,15 @@ const SAFELIST = [
   `@source inline("${RESP}{bg,text,border,ring,fill,stroke,divide}-{${SEMANTIC.join(",")}}");`,
   `@source inline("${RESP}{bg,text,border,ring,fill,stroke}-{${BRAND.join(",")}}");`,
   `@source inline("${RESP}{bg,text,border}-{${NEUTRAL.join(",")}}");`,
+  `@source inline("${RESP}{bg,text,border,divide,ring}-{${INK.join(",")}}");`,
+  `@source inline("${RESP}{bg,text,border,divide}-${WHITE_ALPHA}");`,
   // borders, radius, shadow, misc
   `@source inline("${RESP}{border,border-0,border-2,border-t,border-b,border-l,border-r,border-x,border-y,divide-y,divide-x}");`,
   `@source inline("${RESP}rounded-{none,sm,md,lg,xl,2xl,3xl,full}");`,
-  `@source inline("${RESP}shadow-{none,sm,md,lg,xl,cta}");`,
+  `@source inline("${RESP}shadow-{none,sm,md,lg,xl,card,cta,cta-sm,featured,on-dark}");`,
+  // entrance + the drifting hero glow; the scroll reveals are plain CSS and
+  // ship in the stylesheet already (they need no utility class)
+  `@source inline("animate-{fade-up,aurora,aurora-slow}");`,
   `@source inline("${RESP}{relative,absolute,fixed,sticky,static,inset-0,top-0,bottom-0,left-0,right-0,z-10,z-50}");`,
   `@source inline("${RESP}{overflow-hidden,overflow-auto,overflow-x-auto,object-cover,object-contain,cursor-pointer,select-none,transition-all,transition-colors}");`,
   `@source inline("${RESP}{opacity-0,opacity-50,opacity-70,opacity-100,order-first,order-last,list-none,antialiased}");`,

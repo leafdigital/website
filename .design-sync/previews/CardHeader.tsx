@@ -15,14 +15,12 @@ import {
 export const TitleAndDescription = () => (
   <Card className="max-w-sm">
     <CardHeader>
-      <CardTitle>Leaf Alt Text</CardTitle>
-      <CardDescription>
-        Writes the alt text your catalog is missing.
-      </CardDescription>
+      <CardTitle>Image Voice</CardTitle>
+      <CardDescription>Live on the Shopify App Store.</CardDescription>
     </CardHeader>
     <CardContent>
       <p className="text-muted-foreground">
-        Scan free, stay for the auto-pilot.
+        Free scan, a real description for every image.
       </p>
     </CardContent>
   </Card>
@@ -32,16 +30,16 @@ export const TitleAndDescription = () => (
 export const WithAction = () => (
   <Card className="max-w-sm">
     <CardHeader>
-      <CardTitle>Catalog Readiness</CardTitle>
+      <CardTitle>Hidden Margin</CardTitle>
       <CardDescription>
-        A readiness score for the agentic shelf.
+        One readiness score, gaps priced in dollars.
       </CardDescription>
       <CardAction>
-        <Badge variant="outline">In the lab</Badge>
+        <Badge variant="outline">IN THE LAB</Badge>
       </CardAction>
     </CardHeader>
     <CardContent>
-      <p className="text-muted-foreground">Attribute by attribute.</p>
+      <p className="text-muted-foreground">Missing costs, weights, codes.</p>
     </CardContent>
   </Card>
 );

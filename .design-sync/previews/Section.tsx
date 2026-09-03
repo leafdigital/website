@@ -1,27 +1,45 @@
-import { Button, Section, SectionHeading } from "leaf-website";
+import { Section, SectionHeading } from "leaf-website";
 
-/** The default band: standard vertical rhythm, content in the page column. */
+/** The default band: white ground, standard rhythm, content in the page column. */
 export const Default = () => (
   <Section>
     <SectionHeading
-      kicker="What we build"
-      title="Shopify apps that earn their keep"
-      sub="Small, sharp tools for merchants who would rather fix the catalog than read another dashboard."
+      kicker="The plan"
+      title="Three steps between you and the hidden money"
+      sub="Small, sharp apps. Each one finds money in a specific seam — then does the work itself."
     />
   </Section>
 );
 
-/** `wash` paints the quiet green background — for bands that carry the brand. */
-export const Washed = () => (
-  <Section wash id="early-access">
-    <div className="text-center">
-      <SectionHeading
-        title="Get early access"
-        sub="We only write when there's something to try."
-      />
-      <div className="mt-8">
-        <Button size="lg">Get early access</Button>
-      </div>
-    </div>
+/**
+ * `tone="dark"` is the full-bleed statement band — one per page. The heading
+ * needs its own `tone="dark"`; the section only sets the surface.
+ */
+export const Dark = () => (
+  <Section tone="dark">
+    <SectionHeading
+      tone="dark"
+      kicker="Sound familiar?"
+      title="You check three dashboards and still don’t know which number is real."
+      sub="You didn’t build a brand for this. The failure is never a feature — it’s the seams. Nobody holds the map, so the money hides between systems."
+      className="max-w-[760px]"
+    />
+  </Section>
+);
+
+/** `divided` trades the top padding for a hairline — two bands, one argument. */
+export const Divided = () => (
+  <Section divided>
+    <SectionHeading kicker="Due diligence" title="The questions we’d ask too" />
+  </Section>
+);
+
+/** `tone="wash"` paints the quiet green ground. Sparingly — it is the accent. */
+export const Wash = () => (
+  <Section tone="wash">
+    <SectionHeading
+      kicker="What you get"
+      title="What changes when your images stop being silent"
+    />
   </Section>
 );

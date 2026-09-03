@@ -1,29 +1,23 @@
-import { WaitlistForm } from "leaf-website";
+import { CtaBand, WaitlistForm } from "leaf-website";
 
 /**
- * The form takes no props and owns its own state, so the card shows the idle
- * state — the only one reachable without submitting. The sending, error and
- * confirmation states all follow a real POST to /api/waitlist.
+ * The form is styled for the dark CTA band and nothing else, so the card puts
+ * it on `surface-deep`. Only the idle state is reachable without submitting —
+ * sending, error and confirmation all follow a real POST to /api/waitlist.
  */
-export const Idle = () => (
-  <div className="max-w-md">
-    <WaitlistForm />
+export const Default = () => (
+  <div className="bg-surface-deep flex justify-center rounded-xl p-10">
+    <WaitlistForm source="design-preview" />
   </div>
 );
 
-/** How it actually sits on the page: inside the homepage's washed CTA band. */
-export const InCtaSection = () => (
-  <div className="bg-accent rounded-lg px-6 py-10">
-    <div className="mx-auto max-w-2xl text-center">
-      <h2 className="text-3xl font-bold tracking-tight text-balance">
-        Get early access
-      </h2>
-      <p className="text-muted-foreground mt-4 text-lg leading-relaxed">
-        We only write when there’s something to try.
-      </p>
-      <div className="mt-8">
-        <WaitlistForm />
-      </div>
-    </div>
-  </div>
+/** Where it actually sits: the `action` of a lab page’s closing CtaBand. */
+export const InCtaBand = () => (
+  <CtaBand
+    id="waitlist"
+    title="Run the free scan. See your score."
+    sub="One list, every coming Leaf app — you’re first in line for all of them. Early merchants get a direct line to the founder and a say in what we build."
+    action={<WaitlistForm source="hidden-margin" />}
+    note="Silent images are already fixable today. Image Voice is live — run that scan now →"
+  />
 );

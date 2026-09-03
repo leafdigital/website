@@ -1,65 +1,87 @@
 import { AppCard } from "leaf-website";
 
-// Content is the real portfolio from src/lib/apps.ts.
+// The real suite, verbatim from messages/en/home.json → `suite`.
 
-/** A shipped app: green Live badge and a CTA to the app page. */
-export const Live = () => (
+/** The live app. `featured` is the green treatment — one card per grid gets it. */
+export const Featured = () => (
   <div className="max-w-sm">
     <AppCard
+      featured
       app={{
-        name: "Leaf Alt Text",
+        name: "Image Voice",
         status: "live",
+        statusLabel: "LIVE",
         description:
-          "Sees every product image the way a shopper — or a shopping agent — does, and writes the alt text your catalog is missing. Scan free, taste the quality on 25 of your own images, stay for the auto-pilot.",
-        href: "/apps/alt-text",
-        cta: "See the app",
+          "Your images are silent — to Google, to AI shoppers, to screen readers. Free scan, a real description for every image.",
+        href: "/image-voice",
+        cta: "See the app →",
       }}
     />
   </div>
 );
 
-/** A lab app: outline badge, no dates promised, CTA points at early access. */
+/** A lab app: neutral pill, hairline border, ink lift. No dates promised. */
 export const Lab = () => (
   <div className="max-w-sm">
     <AppCard
       app={{
-        name: "Catalog Readiness",
+        name: "Hidden Margin",
         status: "lab",
+        statusLabel: "IN THE LAB",
         description:
-          "A readiness score for the agentic shelf: how legible are your products to the AI assistants your customers already ask? Attribute by attribute, with the fixes ranked.",
+          "Hidden margins kill businesses. Your catalog has holes — missing costs, HS codes, countries of origin. One readiness score, gaps priced in dollars.",
+        href: "/hidden-margin",
+        cta: "Join the waitlist →",
       }}
     />
   </div>
 );
 
-/** The portfolio strip — equal-height cards, which is what `h-full` buys. */
-export const PortfolioGrid = () => (
-  <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-    <AppCard
-      app={{
-        name: "Leaf Alt Text",
-        status: "live",
-        description:
-          "Writes the alt text your catalog is missing. Scan free, stay for the auto-pilot.",
-        href: "/apps/alt-text",
-        cta: "See the app",
-      }}
-    />
-    <AppCard
-      app={{
-        name: "Catalog Readiness",
-        status: "lab",
-        description:
-          "A readiness score for the agentic shelf, attribute by attribute, with the fixes ranked.",
-      }}
-    />
-    <AppCard
-      app={{
-        name: "AI Answer Accuracy",
-        status: "lab",
-        description:
-          "When ChatGPT talks about your products, is it right? Catch the answers that cost you sales.",
-      }}
-    />
-  </div>
+/**
+ * The homepage grid: one featured card, two lab cards, each cell a flex `li`
+ * so the three cards match height.
+ */
+export const SuiteGrid = () => (
+  <ul className="grid gap-[18px] md:grid-cols-3">
+    <li className="flex">
+      <AppCard
+        featured
+        app={{
+          name: "Image Voice",
+          status: "live",
+          statusLabel: "LIVE",
+          description:
+            "Your images are silent — to Google, to AI shoppers, to screen readers. Free scan, a real description for every image.",
+          href: "/image-voice",
+          cta: "See the app →",
+        }}
+      />
+    </li>
+    <li className="flex">
+      <AppCard
+        app={{
+          name: "Hidden Margin",
+          status: "lab",
+          statusLabel: "IN THE LAB",
+          description:
+            "Hidden margins kill businesses. Your catalog has holes — missing costs, HS codes, countries of origin. One readiness score, gaps priced in dollars.",
+          href: "/hidden-margin",
+          cta: "Join the waitlist →",
+        }}
+      />
+    </li>
+    <li className="flex">
+      <AppCard
+        app={{
+          name: "Reorder Engine",
+          status: "lab",
+          statusLabel: "IN THE LAB",
+          description:
+            "Nine apps forecast your inventory. Not one sends the PO. We’re building the missing last mile — proven in shadow first.",
+          href: "/reorder-engine",
+          cta: "Join the waitlist →",
+        }}
+      />
+    </li>
+  </ul>
 );

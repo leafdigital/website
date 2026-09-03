@@ -33,6 +33,40 @@ node_modules that shallow-symlinks the real one, plus a **minimal real**
 `src` and `public` symlinks, and copies of the compiled CSS, fonts, docs and
 shims. It is regenerated every build; nothing there is durable.
 
+## The i18n shims are the thing that keeps this buildable
+
+The site was localized after the first sync. Seven components under
+`src/components` now import `next-intl` or `@/i18n/*`, and `next-intl` is a
+Next client-runtime package that reads `process.env` at module scope.
+
+**The design system ships as ONE module**, so a single module-scope `process`
+reference anywhere in the graph takes down every preview in the bundle. The
+first rebuild after localization went from a clean bundle to **0/37 components
+rendering** — 25 hard errors and the rest "root empty", primitives included,
+none of which touch i18n. The bundle also grew 228 KB → 625 KB.
+
+Four aliases fix it (`setup-pkgdir.mjs`), and the render check went to 34/37:
+
+- `next-intl` → `shims/next-intl.tsx`. Serves the **real English copy** out of
+  `messages/en/*.json` and formats it with `intl-messageformat`, which is what
+  next-intl uses underneath — so ICU arguments and number skeletons behave as
+  they do in production instead of being approximated. `Header`, `Footer` and
+  `WaitlistForm` are almost entirely copy; a preview of them reading
+  `[[footer.rights]]` would be worse than useless.
+- `@/i18n/navigation` → plain `<a>`, a no-op router, identity `getPathname`.
+  Same trade the `next/link` shim already makes. `locale` is destructured off
+  so it never lands on the rendered anchor.
+- `@/i18n/routing` → the locale list as plain data. The real file calls
+  `defineRouting` from `next-intl/routing`, which re-imports the runtime.
+- `@/lib/analytics` → no-op `trackCta`. The real module pulls
+  `@vercel/analytics` **and** `@next/third-parties/google`; the GA helper is
+  gated on a `process.env`-derived flag, and a design session must never post
+  events to the production properties.
+
+`setup-pkgdir.mjs` also symlinks `messages/` into the package dir for the
+first of those. **If a locale is added, update `shims/i18n-routing.ts` too** —
+its list is a copy, not a derivation.
+
 ## Shims (`.design-sync/shims/`, aliased via the package dir's tsconfig)
 
 - `next/link` → plain `<a>`, `next/image` → plain `<img>`. The real modules drag
@@ -67,6 +101,22 @@ do nothing. `build-css.mjs` ships an `@source inline(...)` safelist of the
 standard layout/spacing/type/colour vocabulary (~3,900 classes, 314 KB).
 **Keep it in sync with the family table in `conventions.md`.**
 
+The safelist was extended for v3 (2026-09-03) with the named type ramp
+(`text-hero`/`text-h2`/`text-h2-lg`/`text-h3`/`text-kicker`/`text-fine`/
+`text-caption`), the ink-and-surface families (`ink*`, `surface-*`,
+`on-dark*`, `hairline*`, `brand-on-dark`), `white/<alpha>` for dark bands, the
+four new shadows and the `animate-*` entrances. Before that a design agent
+typing `text-h2-lg` or `bg-surface-deep` got a class that did nothing. CSS went
+314 KB → 440 KB.
+
+The scroll-reveal rules (`[data-armed]`, `[data-reveal-group] > *`) live at the
+**top level** of `globals.css`, deliberately outside `@layer utilities` —
+Tailwind v4 tree-shakes that layer against class names found in the source
+scan, and attribute-only selectors match nothing, so they were silently
+dropped from the compiled stylesheet. They ship in `_ds_bundle.css` now, but
+they are inert here: only the site's bootstrapper sets `data-armed`. That is
+correct — a design canvas renders content in its final state.
+
 `--font-sans` is also declared there: `globals.css` has
 `--font-sans: var(--font-sans)` inside `@theme inline`, which Next resolves by
 setting the var on `<html>` via the `next/font` className. Nothing sets it in a
@@ -77,8 +127,9 @@ block in that file is dropped, which is why the var lives in the compiled CSS).
 
 ## Known render warns
 
-- **`Footer` shows "© 2024".** The capture harness pins a fixed clock; the
-  component uses the live year. Not a defect.
+- **`Footer`'s year comes from the capture clock**, not from today — the
+  component reads the live year and the harness pins one. Currently renders
+  "© 2026". Not a defect.
 - **`CoverageRing` previews force `prefers-reduced-motion`.** The ring tweens
   for 1.6s on scroll-into-view and a screenshot otherwise catches it mid-count
   (856 instead of 1,255). The component already renders its final state under
@@ -99,17 +150,35 @@ Fix is `<Button asChild variant="outline">…</Button>`. The `TrackedLink`
 preview shows the failure beside the fix; `AppCard`'s previews render the
 current (borderless) behaviour faithfully.
 
-## The repo's pre-commit hook lints these files
+## The pre-commit hook and these files
 
-`lint-staged` runs `eslint --max-warnings 0` over staged `*.{ts,tsx,mjs}`, and
-`.design-sync/previews/` and `.design-sync/shims/` are staged like any other
-source. Two consequences when authoring:
+`.design-sync/**` is in eslint's `globalIgnores` (a directory inside it makes a
+bare `npm run lint` die with EISDIR). That interacts badly with `lint-staged`:
+staging a preview made `eslint --max-warnings 0` emit _"File ignored because of
+a matching ignore pattern"_ — a warning — and then fail the commit on it, for
+every file, whether or not anything was actually wrong.
 
-- **Use a typographic apostrophe (’) in JSX text**, not `'` —
-  `react/no-unescaped-entities` is an error, and it fails the commit.
+Fixed 2026-09-03 by adding `--no-warn-ignored` to the `lint-staged` command in
+`package.json`. Real warnings in `src/` still fail the commit; deliberately
+ignored paths no longer do.
+
+So these files are **not** linted by the hook. Author them as if they were
+anyway — they are read by a design agent as exemplars:
+
+- **Use a typographic apostrophe (’) in JSX text**, not `'`.
 - The shims carry file-level `eslint-disable` headers on purpose: they
-  destructure Next-only props precisely so they are _not_ forwarded, and
-  `next-image.tsx` renders a plain `<img>` by design.
+  destructure Next-only props precisely so they are _not_ forwarded,
+  `next-image.tsx` renders a plain `<img>` by design, and the analytics shim
+  keeps unused parameters to preserve the real module's signature.
+- Previews legitimately use raw `<a href="/internal-path">`. The locale-aware
+  `Link` is not a design-system export and there is no Next router in a
+  canvas, so `@next/next/no-html-link-for-pages` would be a false positive
+  here. It only shows up under `--no-ignore`.
+
+`prettier --write` still reformats staged previews during the commit, which
+changes their source hash and therefore **clears their grades** — expect a
+re-capture and re-grade pass after committing. Cheaper: run
+`npx prettier --write .design-sync` _before_ the final build.
 
 `prettier --write` also reformats staged previews during the commit, which
 changes their source hash and therefore **clears their grades** — expect a
@@ -124,6 +193,8 @@ build so the committed formatting is what you verified.
   `conventions.md` family table can drift from it. Re-check both together.
 - **`PUBLIC_ASSETS` in `next-image.tsx` is hand-maintained.** A new image in a
   component renders broken until it is added there.
+- **`AppCard` needs `cardMode: "column"`** in `cfg.overrides` — its stories
+  are wider than the default grid cell and the product card crops them.
 - **Grouping comes from `category` frontmatter** in `.design-sync/docs/*.md`.
   A new component with no doc lands in `general`; add a doc file with a
   `category` before syncing.

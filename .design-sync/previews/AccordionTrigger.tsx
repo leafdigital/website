@@ -26,10 +26,9 @@ export const LongLabel = () => (
   <Accordion type="single" collapsible className="max-w-md">
     <AccordionItem value="a">
       <AccordionTrigger>
-        What happens to my alt text if I cancel the subscription partway through
-        a bulk write?
+        How long until my whole catalog is described?
       </AccordionTrigger>
-      <AccordionContent>Everything already written stays.</AccordionContent>
+      <AccordionContent>Days, not months.</AccordionContent>
     </AccordionItem>
   </Accordion>
 );

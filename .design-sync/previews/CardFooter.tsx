@@ -14,16 +14,16 @@ import {
 export const WithAction = () => (
   <Card className="max-w-sm">
     <CardHeader>
-      <CardTitle>Leaf Alt Text</CardTitle>
-      <CardDescription>Live on the App Store.</CardDescription>
+      <CardTitle>Image Voice</CardTitle>
+      <CardDescription>Live on the Shopify App Store.</CardDescription>
     </CardHeader>
     <CardContent>
       <p className="text-muted-foreground">
-        Scan free, stay for the auto-pilot.
+        Free scan, a real description for every image.
       </p>
     </CardContent>
     <CardFooter>
-      <Button variant="outline" size="sm">
+      <Button variant="secondary" size="sm">
         See the app
       </Button>
     </CardFooter>
@@ -33,14 +33,14 @@ export const WithAction = () => (
 export const Divided = () => (
   <Card className="max-w-sm">
     <CardHeader>
-      <CardTitle>Catalog Readiness</CardTitle>
+      <CardTitle>Hidden Margin</CardTitle>
       <CardDescription>
-        A readiness score for the agentic shelf.
+        One readiness score, gaps priced in dollars.
       </CardDescription>
     </CardHeader>
     <CardFooter className="border-t">
       <Button variant="ghost" size="sm">
-        Get early access
+        Join the waitlist
       </Button>
     </CardFooter>
   </Card>

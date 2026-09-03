@@ -10,9 +10,10 @@ import {
 export const Prose = () => (
   <Accordion type="single" collapsible defaultValue="a" className="max-w-lg">
     <AccordionItem value="a">
-      <AccordionTrigger>Do you store my product images?</AccordionTrigger>
+      <AccordionTrigger>Can it break my store?</AccordionTrigger>
       <AccordionContent>
-        No. We read each image, write the alt text, and forget it.
+        No. Every write is verified by reading it back, and every change has a
+        30-day undo.
       </AccordionContent>
     </AccordionItem>
   </Accordion>
@@ -22,15 +23,18 @@ export const Prose = () => (
 export const RichContent = () => (
   <Accordion type="single" collapsible defaultValue="a" className="max-w-lg">
     <AccordionItem value="a">
-      <AccordionTrigger>How is the alt text written?</AccordionTrigger>
+      <AccordionTrigger>Isn’t AI alt text spammy?</AccordionTrigger>
       <AccordionContent>
         <p>
-          Each image is described the way a shopper — or a shopping agent —
-          would read it: what the product is, then what distinguishes it.
+          The spam reputation comes from tools that generate text from titles
+          and filenames. Image Voice looks at every image.
         </p>
         <p>
-          You can review every line before anything is published. See the{" "}
-          <a href="/apps/alt-text">app page</a> for examples.
+          Judge it free on your own products before paying anything —{" "}
+          <a href="https://apps.shopify.com/image-voice">
+            install on the Shopify App Store
+          </a>
+          .
         </p>
       </AccordionContent>
     </AccordionItem>

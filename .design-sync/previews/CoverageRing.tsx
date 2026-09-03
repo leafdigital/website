@@ -14,20 +14,33 @@ if (typeof window !== "undefined") {
 }
 
 /**
- * The mirror number from the product blueprint — a real-looking store scan,
- * framed as the deficit the way the homepage uses it.
+ * The hero figure from /image-voice, framed as the deficit: SAMPLE.silentImages
+ * out of SAMPLE.totalImages, with the real ring copy and its sample caption.
  */
-export const Deficit = () => (
-  <CoverageRing
-    covered={1847}
-    total={3102}
-    label="products are missing real alt text"
-  />
+export const Default = () => (
+  <figure className="flex flex-col items-center">
+    <div className="border-hairline bg-card shadow-card rounded-2xl border px-10 py-8">
+      <CoverageRing
+        covered={2451}
+        total={3102}
+        label="of your images are silent"
+        totalLabel="of 3,102"
+        ariaLabel="2,451 of 3,102 of your images are silent"
+      />
+    </div>
+    <figcaption className="text-caption text-ink-faint mt-3.5 text-center">
+      Sample scan — yours takes minutes, free.
+    </figcaption>
+  </figure>
 );
 
-/** The same ring framed as coverage rather than gap. */
-export const Coverage = () => <CoverageRing covered={1255} total={3102} />;
-
-export const NearlyComplete = () => (
-  <CoverageRing covered={2980} total={3102} />
+/** The same ring framed as coverage rather than gap — the label carries it. */
+export const AsCoverage = () => (
+  <CoverageRing
+    covered={651}
+    total={3102}
+    label="of your images already speak"
+    totalLabel="of 3,102"
+    ariaLabel="651 of 3,102 of your images already speak"
+  />
 );

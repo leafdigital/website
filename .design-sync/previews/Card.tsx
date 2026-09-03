@@ -14,19 +14,17 @@ import {
 export const Default = () => (
   <Card className="max-w-sm">
     <CardHeader>
-      <CardTitle>Leaf Alt Text</CardTitle>
-      <CardDescription>
-        Writes the alt text your catalog is missing.
-      </CardDescription>
+      <CardTitle>Image Voice</CardTitle>
+      <CardDescription>Live on the Shopify App Store.</CardDescription>
     </CardHeader>
     <CardContent>
       <p className="text-muted-foreground">
-        Scan free, taste the quality on 25 of your own images, stay for the
-        auto-pilot.
+        Your images are silent — to Google, to AI shoppers, to screen readers.
+        Free scan, a real description for every image.
       </p>
     </CardContent>
     <CardFooter>
-      <Button variant="outline" size="sm">
+      <Button variant="secondary" size="sm">
         See the app
       </Button>
     </CardFooter>
@@ -37,28 +35,30 @@ export const Default = () => (
 export const WithAction = () => (
   <Card className="max-w-sm">
     <CardHeader>
-      <CardTitle>Catalog Readiness</CardTitle>
+      <CardTitle>Hidden Margin</CardTitle>
       <CardDescription>
-        A readiness score for the agentic shelf.
+        One readiness score, gaps priced in dollars.
       </CardDescription>
       <CardAction>
-        <Badge variant="outline">In the lab</Badge>
+        <Badge variant="outline">IN THE LAB</Badge>
       </CardAction>
     </CardHeader>
     <CardContent>
       <p className="text-muted-foreground">
-        Attribute by attribute, with the fixes ranked.
+        Missing costs, HS codes, countries of origin.
       </p>
     </CardContent>
   </Card>
 );
 
-/** `size="sm"` tightens --card-spacing from 4 to 3. */
+/** `size="sm"` tightens --card-spacing from 5 to 4. */
 export const Compact = () => (
   <Card size="sm" className="max-w-xs">
     <CardHeader>
-      <CardTitle>AI Answer Accuracy</CardTitle>
-      <CardDescription>Watch what the machines say about you.</CardDescription>
+      <CardTitle>Reorder Engine</CardTitle>
+      <CardDescription>
+        Nine apps forecast your inventory. Not one sends the PO.
+      </CardDescription>
     </CardHeader>
   </Card>
 );

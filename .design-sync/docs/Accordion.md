@@ -4,12 +4,14 @@ category: Primitives
 
 # Accordion
 
-Radix-backed disclosure list, bordered and rounded as one block. Use it for
+Radix-backed disclosure list, bordered and rounded as one 18px block. Use it for
 grouped, interactive disclosure inside a page.
 
 For a page's FAQ, prefer [Faq](./Faq.md) instead — it is the zero-JS
 `<details>` version, and it exists because this accordion's hydration cost
-pushed the alt-text page past its LCP budget.
+pushed an app page past its LCP budget on throttled mobile. Nothing on the v3
+site uses this component today; it is here for a screen that genuinely needs
+controlled open state.
 
 ## Parts
 
@@ -21,11 +23,12 @@ Set `type="single"` with `collapsible`, or `type="multiple"`. Pass
 state is visible.
 
 ```tsx
-<Accordion type="single" collapsible defaultValue="a">
-  <AccordionItem value="a">
-    <AccordionTrigger>Do you store my images?</AccordionTrigger>
+<Accordion type="single" collapsible defaultValue="break">
+  <AccordionItem value="break">
+    <AccordionTrigger>Can it break my store?</AccordionTrigger>
     <AccordionContent>
-      No. We read them, write the alt text, and forget them.
+      No. Every write is verified by reading it back, and every change has a
+      30-day undo.
     </AccordionContent>
   </AccordionItem>
 </Accordion>

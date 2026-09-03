@@ -16,7 +16,7 @@ to feel.
 - Tints (`#f0fdf4` / `#dcfce7`) for badges and quiet section washes only.
 - **Contrast law:** green as _text_ on white starts at green-700 (`#388E3C`).
   green-500 on white is decoration-only — it fails 4.5:1. One exception, added
-  in v3: on the dark band (`#0B120D`), `#7BC67F` carries the kicker.
+  in v3: on the dark band (`#101911`), `#7BC67F` carries the kicker.
 - **a11y deviation (2026-09-02):** `ink-faint` ships as `#6C756E`, not the
   `#8B948D` the v3 handoff specified. The original is 3.13:1 on white — it
   fails AA everywhere it is used (fine print, captions, meta rows) and drops
