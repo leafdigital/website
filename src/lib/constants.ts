@@ -18,6 +18,31 @@ export const SUPPORT_EMAIL = "hello@leafdigital.co";
 export const SITE_INDEXABLE = process.env.NEXT_PUBLIC_SITE_INDEXABLE === "true";
 
 /**
+ * GA4 property for leafdigital.co.
+ *
+ * Not secret — a measurement ID ships in the page source by definition, so
+ * it lives here with the other site facts rather than in an env var. What IS
+ * environment-dependent is whether it loads at all: see `GA_ENABLED`.
+ */
+export const GA_MEASUREMENT_ID = "G-7RHWEPW611";
+
+/**
+ * GA loads on the real site and nowhere else.
+ *
+ * It rides `SITE_INDEXABLE` deliberately. Both flags answer the same
+ * question — "is this the deployment the public actually visits?" — and the
+ * alternative is worse than the coupling: `npm run start` is a production
+ * build, so a NODE_ENV check alone means every Lighthouse CI run posts
+ * eighteen synthetic sessions to the property, and the first thing you would
+ * ask of the data ("how many real people ran the free scan") is the thing it
+ * can no longer answer. Preview deploys are excluded for the same reason.
+ *
+ * NEXT_PUBLIC_* is inlined at build time, so this is decided when the site is
+ * built, not when the server boots.
+ */
+export const GA_ENABLED = SITE_INDEXABLE;
+
+/**
  * The App Store listing. BLOCKER: guessed from the app name — the real
  * handle is whatever Shopify assigns on approval. Every "Install on the
  * Shopify App Store" button on /image-voice points here.

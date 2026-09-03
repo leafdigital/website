@@ -4,11 +4,18 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { Analytics } from "@vercel/analytics/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { LocaleSuggestion } from "@/components/layout/locale-suggestion";
 import { isLocale, routing } from "@/i18n/routing";
-import { SITE_INDEXABLE, SITE_NAME, SITE_URL } from "@/lib/constants";
+import {
+  GA_ENABLED,
+  GA_MEASUREMENT_ID,
+  SITE_INDEXABLE,
+  SITE_NAME,
+  SITE_URL,
+} from "@/lib/constants";
 import { REVEAL_SCRIPT } from "@/lib/reveal-script";
 import "../globals.css";
 
@@ -94,6 +101,11 @@ export default async function LocaleLayout({
           <Footer />
         </NextIntlClientProvider>
         <Analytics />
+        {/* Loads after hydration, so it never competes with first paint.
+         * GA4's enhanced measurement picks up App Router navigations from
+         * History API events, so client-side route changes are counted
+         * without a per-page call. */}
+        {GA_ENABLED ? <GoogleAnalytics gaId={GA_MEASUREMENT_ID} /> : null}
       </body>
     </html>
   );
