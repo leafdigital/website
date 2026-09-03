@@ -15,16 +15,26 @@ export const routing = defineRouting({
   defaultLocale: "en",
 
   /**
-   * Every locale is prefixed, English included. The `as-needed` alternative
-   * special-cases the default locale in every link helper, canonical tag and
-   * sitemap entry forever, to save one path segment. The site is not indexed
-   * yet, so prefix-all costs nothing now and inherits no redirect debt.
+   * English is unprefixed: `/image-voice`, not `/en/image-voice`. Every other
+   * locale keeps its segment.
+   *
+   * This reverses the Phase-0 decision (docs/i18n.md §3, amended). The
+   * trade it warned about is real and is now paid deliberately: the default
+   * locale is special-cased in every URL we build, which is why no component
+   * may hand-write one — `getPathname` and `Link` are the only two places
+   * that know the shape, and `src/lib/metadata.ts` is the only place a
+   * canonical or an hreflang is assembled.
+   *
+   * next-intl redirects `/en/…` to `/…` on its own, so the prefixed URLs
+   * that shipped before this change keep resolving rather than 404ing.
    */
-  localePrefix: "always",
+  localePrefix: "as-needed",
 
   /**
-   * Cookie → `accept-language`, in that order, on `/` only. An explicit locale
-   * in the URL always wins and is never overridden.
+   * Cookie → `accept-language`, in that order, on `/` only — `src/proxy.ts`
+   * pins every other path. Under `as-needed` an unprefixed deep path is a
+   * real English URL, and letting negotiation run on it would move a visitor
+   * off a link somebody sent them. An explicit locale in the URL always wins.
    */
   localeDetection: true,
 

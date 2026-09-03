@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "title": "Votre catalogue est troué",
+    "description": "Coûts, poids et codes manquants cachent de l’argent aujourd’hui et feront fuir les acheteurs IA demain. Un seul score de préparation pour votre catalogue Shopify, avec chaque trou chiffré en dollars."
+  },
+  "hero": {
+    "badge": "Hidden Margin · au labo · accès anticipé ouvert",
+    "kicker": "Les marges cachées tuent les entreprises",
+    "headline": "Votre catalogue est <accent>troué.</accent>",
+    "subhead": "Coûts, poids, codes manquants. <lead>Aujourd’hui, ils cachent de l’argent.</lead> Demain, ils feront fuir des clients que vous ne verrez même jamais.",
+    "ctaPrimary": "Rejoindre la liste",
+    "ctaSecondary": "Voir un rapport d’exemple",
+    "finePrint": "Analyse gratuite · Un score de préparation · Les trous chiffrés en dollars"
+  },
+  "score": {
+    "label": "Score de préparation",
+    "value": "{score, number} %",
+    "ready": "prêt",
+    "benchmark": "Les boutiques de votre taille sont en moyenne à <lead>{benchmark, number} %</lead>",
+    "costLabel": "{count, number} SKU sans coût",
+    "costNote": "la marge = une supposition",
+    "weightLabel": "{count, number} variantes sans poids",
+    "weightNote": "fuites sur l’expédition",
+    "customsLabel": "{count, number} sans HS code / COO",
+    "customsNote": "risque en douane",
+    "caption": "Données d’exemple — votre rapport est construit à partir de votre boutique."
+  },
+  "prices": {
+    "kicker": "Un coupable, deux factures",
+    "title": "Les trous vous facturent deux fois",
+    "today": {
+      "label": "AUJOURD’HUI",
+      "statement": "De l’argent caché",
+      "body": "Pas de coût sur un tiers des SKU, et la marge devient une supposition. Pas de poids, et l’expédition réserve des surprises. Et chaque rapport auquel vous faites confiance repose sur ces blancs — les coûts manquants conditionnent tous les chiffres de marge que vous calculerez un jour."
+    },
+    "tomorrow": {
+      "label": "DEMAIN",
+      "statement": "Des produits invisibles",
+      "body": "Les agents d’achat IA lisent votre catalogue à l’état brut — pas de photos, pas d’ambiance, juste des champs. Tout ce qui est vide n’existe pas pour eux. Ils naviguent déjà, et vous ne verrez jamais les clients qu’ils ont écartés."
+    }
+  },
+  "someday": {
+    "title": "« Je comptais faire le ménage un de ces jours. »",
+    "sub": "Tout le monde comptait le faire — et le catalogue grossit plus vite que le jour où l’on s’y met. Personne n’audite 400 produits champ par champ. Les blancs s’accumulent en silence, et chaque rapport construit dessus n’est qu’une supposition."
+  },
+  "report": {
+    "kicker": "Le rapport d’exemple",
+    "title": "Chaque trou, chiffré quand c’est possible",
+    "sub": "Pas une checklist — une facture. L’analyse montre ce que chaque champ vide vous coûte, en dollars quand l’arithmétique le permet.",
+    "colProduct": "Produit",
+    "colMissing": "Ce qui manque",
+    "colCost": "Ce que ça vous coûte",
+    "trailRunner": {
+      "product": "Trail Runner 2.0 · 4 variantes",
+      "missing": "Coût par article",
+      "cost": "marge inconnue sur {amount, number, ::currency/USD precision-integer}/an"
+    },
+    "tote": {
+      "product": "Canvas Weekender Tote",
+      "missing": "Poids",
+      "cost": "≈ {amount, number, ::currency/USD} de fuite par commande expédiée"
+    },
+    "merino": {
+      "product": "Merino Crew · 6 variantes",
+      "missing": "HS code + pays d’origine",
+      "cost": "retards en douane sur les commandes UE"
+    },
+    "cap": {
+      "product": "Everyday Cap",
+      "missing": "Type de produit, 3 métachamps",
+      "cost": "invisible pour les acheteurs IA"
+    },
+    "caption": "Données d’exemple, annoncées comme telles — on n’invente jamais d’études de cas. Votre rapport vient de votre boutique."
+  },
+  "how": {
+    "kicker": "Comment ça marche",
+    "title": "De la supposition à la certitude, en trois étapes",
+    "scan": {
+      "title": "Analyser",
+      "body": "Score gratuit et liste complète des trous — chiffrés en dollars partout où l’arithmétique le permet."
+    },
+    "enrich": {
+      "title": "Enrichir",
+      "body": "L’app remplit chaque champ qui peut être déduit ; vous validez. Rien ne change sans votre oui."
+    },
+    "ready": {
+      "title": "Rester prêt",
+      "body": "Chaque nouveau produit vérifié à l’import. Le score tient — pour toujours, sans que vous ayez à courir après."
+    },
+    "footer": "Audit → validation → autonomie méritée. C’est ainsi que fonctionne chaque app Leaf."
+  },
+  "cta": {
+    "title": "Lancez l’analyse gratuite. Voyez votre score.",
+    "sub": "Une seule liste, toutes les apps Leaf à venir — vous êtes en tête de file pour toutes. Les premiers marchands ont une ligne directe avec le fondateur et leur mot à dire sur ce qu’on construit.",
+    "offerLabel": "Offre marchand fondateur",
+    "offer": "Les {spots, number} premières boutiques obtiennent l’offre du haut au prix de celle du milieu — bloqué à vie.",
+    "noteLive": "Les images muettes, ça se règle déjà aujourd’hui. <link>Image Voice est en ligne — lancez l’analyse maintenant →</link>",
+    "noteNext": "De la trésorerie piégée dans le stock ? <link>Reorder Engine arrive →</link>"
+  }
+}

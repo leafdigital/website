@@ -1,0 +1,187 @@
+{
+  "meta": {
+    "title": "Your images are silent",
+    "description": "Silent images don’t sell — not to Google, not to AI shoppers, not to anyone who needs them read aloud. Free forever audit, then a real description for every image in your Shopify store."
+  },
+  "hero": {
+    "badge": "Live on the Shopify App Store",
+    "headline": "Your images are <accent>silent.</accent>",
+    "subhead": "<lead>{silent, number} of your images say nothing</lead> — to Google, to AI shoppers, to anyone who needs them read aloud. Silent images don’t sell.",
+    "ctaPrimary": "Run the free scan",
+    "ctaSecondary": "See pricing",
+    "finePrint": "Free forever audit · No credit card · Nothing touches your store until you approve"
+  },
+  "ring": {
+    "label": "of your images are silent",
+    "total": "of {total, number}",
+    "aria": "{silent, number} of {total, number} of your images are silent",
+    "caption": "Sample scan — yours takes minutes, free."
+  },
+  "prices": {
+    "kicker": "One villain, three prices",
+    "title": "Silence charges you three ways",
+    "sub": "One problem, stacked three deep. Fix the silence once and all three bills stop.",
+    "traffic": {
+      "label": "LOST TRAFFIC",
+      "statement": "Google skips them",
+      "body": "An image with no description never enters image search. The traffic goes to the store next door whose pictures speak."
+    },
+    "agentic": {
+      "label": "LOST AGENTIC SALES",
+      "statement": "AI shoppers can’t read them",
+      "body": "Shopping agents browse your catalog raw. A silent image doesn’t exist to them — and neither does the product."
+    },
+    "accessibility": {
+      "label": "ACCESSIBILITY RISK",
+      "statement": "Screen readers get nothing",
+      "body": "The EAA has had ecommerce in scope since June 2025; ADA suits hit thousands of US stores a year. Unreadable images are your most visible gap."
+    }
+  },
+  "checkbox": {
+    "kicker": "The checkbox problem",
+    "title": "100% coverage, still silent.",
+    "sub": "Every bloated SEO suite has an alt-text checkbox. A checkbox stuffs titles into alt fields and calls it done. It doesn’t write like this:",
+    "beforeLabel": "Before — “covered”",
+    "beforeOne": "alt=\"IMG_2041-final-v3.jpg\"",
+    "beforeTwo": "alt=\"buy mens organic tee best price free shipping SEO\"",
+    "beforeCaption": "Junk from filenames and keyword stuffing. Counted as 100% coverage — by the tool that wrote it.",
+    "afterLabel": "After — Image Voice",
+    "afterCode": "alt=\"Moss-green organic cotton tee folded flat, showing the ribbed collar and embroidered leaf at the hem\"",
+    "afterCaption": "Every image actually looked at. Distinct per image, ~125 characters, never starts with “image of.”",
+    "closer": "That’s why the free audit <lead>grades instead of counting</lead>: missing / junk / weak / good, with a vision-checked sample. Typical result: “62 of 100 covered images don’t describe the image.”"
+  },
+  "how": {
+    "kicker": "How it works",
+    "title": "Scan. Write. Speak.",
+    "scan": {
+      "title": "Scan",
+      "body": "Free, on install, no setup. Your silent-image count in one number — graded, not counted."
+    },
+    "write": {
+      "title": "Write",
+      "body": "Every image actually looked at. Approve, edit, or skip from a keyboard queue built for 200 decisions in a sitting."
+    },
+    "speak": {
+      "title": "Speak",
+      "body": "Auto-pilot you earn — offered only when your own approval record justifies it. Then every new image is described within minutes of upload, forever."
+    },
+    "footer": "Audit → approval → earned autonomy. This is how every Leaf app works."
+  },
+  "benefits": {
+    "kicker": "What you get",
+    "title": "What changes when your images stop being silent",
+    "one": {
+      "title": "You’ll know the truth in minutes — free, before you decide anything.",
+      "body": "Full scan on install, no setup. The number: “{silent, number} of your images are silent.”"
+    },
+    "two": {
+      "title": "You’ll find out what’s actually broken — not what looks done.",
+      "body": "Graded, not counted: missing / junk / weak / good, with a vision-checked sample. You stop being fooled by “100% coverage” — yours or a competitor tool’s."
+    },
+    "three": {
+      "title": "Writing you’d let a customer hear aloud.",
+      "body": "Every image actually looked at — never generated from titles or filenames. No spam smell, nothing to be embarrassed by, nothing for Google to penalize."
+    },
+    "four": {
+      "title": "Your images speak the language your customers shop in.",
+      "body": "Descriptions written in your store’s own language — EN, DE, FR, ES, IT, NL, PT. A German customer’s screen reader speaks German."
+    },
+    "five": {
+      "title": "The accessibility box: closed before anyone comes asking.",
+      "body": "EAA in the EU, ADA in the US. Your most visible gap — thousands of unreadable images — closed, with an audit trail to show for it."
+    },
+    "six": {
+      "title": "You stay in control without doing the work.",
+      "body": "Nothing touches Shopify until you say so. Bulk-apply when you’ve seen enough: “apply the remaining {remaining, number}?” Your whole catalog reviewed in one coffee."
+    },
+    "seven": {
+      "title": "Nothing can go wrong that you can’t see and undo.",
+      "body": "Every write verified by reading it back. 30-day undo on every plan. Structurally unable to touch anything but the alt field, and it never overwrites words a human wrote."
+    },
+    "eight": {
+      "title": "Eventually, you never think about it again.",
+      "body": "New product uploaded → described within minutes. A weekly digest instead of a to-do list. The job leaves your head permanently."
+    },
+    "nine": {
+      "title": "The quality won’t rot after you stop watching.",
+      "body": "Weekly re-scans keep the number true; writing quality is gated against a golden set. What you approved on day one is what you get in month six."
+    },
+    "ten": {
+      "title": "You’ll wear the result.",
+      "body": "“Fully described since 3 March” — earned, not bought, on every plan including free. Visible proof you run a tight store."
+    },
+    "eleven": {
+      "title": "You’ll know exactly what you’re buying — and we’ll tell you if it’s not us.",
+      "body": "Free lifetime descriptions to judge quality on your own products. Paid plans sweep your backlog up front — no months-long drip. Too big for our plans? We say so and offer a waitlist."
+    }
+  },
+  "pricing": {
+    "kicker": "Pricing",
+    "title": "The magic happens before the paywall",
+    "sub": "Judge the writing on your own products, free, forever. When you subscribe, the First Sweep writes your backlog up front — the monthly allowance just keeps new images covered.",
+    "period": "/mo",
+    "featured": "Full scope",
+    "audit": {
+      "name": "Audit",
+      "price": "{amount, number, ::currency/USD precision-integer}",
+      "tagline": "The first yes — free, forever",
+      "one": "Full image audit and coverage report across your catalog",
+      "two": "One-time quality grade of your existing alt text",
+      "three": "A starter batch of product descriptions — judge the writing on your own images",
+      "cta": "Run the free scan"
+    },
+    "keeper": {
+      "name": "Keeper",
+      "price": "{amount, number, ::currency/USD}",
+      "tagline": "Full catalog written — 14-day free trial",
+      "one": "Everything in Audit",
+      "two": "<lead>First Sweep:</lead> your product catalog written up front, not rationed over months",
+      "three": "Monthly allowance keeps every new image covered",
+      "four": "Autopilot: new images described automatically — once you’ve approved its taste",
+      "five": "Weekly progress digest to your inbox, signed by a person",
+      "cta": "Start with the free scan"
+    },
+    "curator": {
+      "name": "Curator",
+      "price": "{amount, number, ::currency/USD}",
+      "tagline": "The whole store speaks — 14-day free trial",
+      "offerLabel": "Founding Curator",
+      "offer": "The <lead>first {spots, number} merchants</lead> take Curator at <lead>half price, for life</lead> — {price, number, ::currency/USD}/mo, and the title stays yours.",
+      "one": "Everything in Keeper",
+      "two": "<lead>First Sweep covers the whole store</lead> — theme included, with the highest sweep ceiling",
+      "three": "Theme images described — banners, sliders, section imagery, not just products",
+      "four": "The most maintenance headroom, for active catalogs",
+      "cta": "Start with the free scan"
+    },
+    "footer": "Silent images are one of seven leaks. <link>The Leaf suite finds the other six →</link>"
+  },
+  "faq": {
+    "kicker": "Due diligence",
+    "title": "The questions we’d ask too",
+    "breakStore": {
+      "q": "Can it break my store?",
+      "a": "No. It is structurally unable to touch anything but the alt field, every write is verified by reading it back, and every change has a 30-day undo on every plan — with a full before → after trail. It never overwrites words a human wrote, and theme-settings images it can’t reach are flagged with a deep link instead of failing silently."
+    },
+    "compliance": {
+      "q": "Does this make me EAA / ADA compliant?",
+      "a": "No tool can promise that, and we won’t. What it does is close your most visible gap — thousands of unreadable images — with an audit trail to show for it. EAA has had ecommerce in scope since June 2025 in the EU; ADA suits hit thousands of US stores a year."
+    },
+    "spam": {
+      "q": "Isn’t AI alt text spammy?",
+      "a": "The spam reputation comes from tools that generate text from titles and filenames. Image Voice looks at every image. Descriptions are distinct per image, around 125 characters, and never start with “image of.” Judge it free on your own products before paying anything."
+    },
+    "languages": {
+      "q": "Which languages does it write in?",
+      "a": "Your store’s own language: English, German, French, Spanish, Italian, Dutch, and Portuguese. Your image SEO works in your market — and a German customer’s screen reader speaks German."
+    },
+    "howLong": {
+      "q": "How long until my whole catalog is described?",
+      "a": "Days, not months. Paid plans include a First Sweep that writes your existing backlog up front — the monthly allowance only has to keep up with new images. During a free trial you get a taste sweep of your best images; the full sweep runs the day your trial converts. And if your store is beyond what our plans handle well, we say so before you pay and offer a founder-led option instead of taking your money."
+    }
+  },
+  "cta": {
+    "title": "Run the free scan. See your number.",
+    "sub": "Free forever. No credit card. Your silent-image count in minutes — graded, not counted.",
+    "button": "Install on the Shopify App Store"
+  }
+}

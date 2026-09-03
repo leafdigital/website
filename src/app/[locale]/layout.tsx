@@ -4,11 +4,19 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { Analytics } from "@vercel/analytics/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { LocaleSuggestion } from "@/components/layout/locale-suggestion";
 import { isLocale, routing } from "@/i18n/routing";
-import { SITE_INDEXABLE, SITE_NAME, SITE_URL } from "@/lib/constants";
+import {
+  GA_ENABLED,
+  GA_MEASUREMENT_ID,
+  SITE_INDEXABLE,
+  SITE_NAME,
+  SITE_URL,
+} from "@/lib/constants";
+import { REVEAL_SCRIPT } from "@/lib/reveal-script";
 import "../globals.css";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
@@ -32,35 +40,24 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-
-  /**
-   * The proxy already sets alternate-language `Link` headers, but a good deal
-   * of SEO tooling only reads the document head — so emit the tags too.
-   */
-  const languages = Object.fromEntries(
-    routing.locales.map((l) => [l, `/${l}`]),
-  );
+  const t = await getTranslations({ locale, namespace: "common" });
 
   return {
     metadataBase: new URL(SITE_URL),
     // Belt to robots.ts's braces: pre-cutover deploys must not be indexed.
     robots: SITE_INDEXABLE ? undefined : { index: false, follow: false },
     title: {
-      default: `${SITE_NAME} — the work your store needs done, handled correctly`,
+      default: t("meta.defaultTitle"),
       template: `%s — ${SITE_NAME}`,
     },
-    description:
-      "Leaf makes Shopify apps that take on the jobs nobody on your team owns — under written laws about what they'll never touch, with an undo on everything they do.",
-    alternates: {
-      canonical: `/${locale}`,
-      languages: { ...languages, "x-default": `/${routing.defaultLocale}` },
-    },
-    openGraph: {
-      siteName: SITE_NAME,
-      type: "website",
-      url: `${SITE_URL}/${locale}`,
-      locale,
-    },
+    description: t("meta.defaultDescription"),
+    /**
+     * Deliberately no `alternates` here. Canonical and hreflang are per-route
+     * and metadata inherits, so a block set at this level would overwrite
+     * every page's URL with the layout's — see src/lib/metadata.ts. Pages
+     * call `localeMetadata(route, locale)` instead.
+     */
+    openGraph: { siteName: SITE_NAME, type: "website", locale },
   };
 }
 
@@ -85,6 +82,10 @@ export default async function LocaleLayout({
       className={`${geist.variable} ${geistMono.variable}`}
     >
       <body className="flex min-h-screen flex-col">
+        {/* First thing in <body>: it blocks parsing, so nothing paints before
+         * the reveal state is decided and there is no flash of shown-then-
+         * hidden content. See src/lib/reveal-script.ts. */}
+        <script dangerouslySetInnerHTML={{ __html: REVEAL_SCRIPT }} />
         <NextIntlClientProvider>
           <a
             href="#main"
@@ -100,6 +101,11 @@ export default async function LocaleLayout({
           <Footer />
         </NextIntlClientProvider>
         <Analytics />
+        {/* Loads after hydration, so it never competes with first paint.
+         * GA4's enhanced measurement picks up App Router navigations from
+         * History API events, so client-side route changes are counted
+         * without a per-page call. */}
+        {GA_ENABLED ? <GoogleAnalytics gaId={GA_MEASUREMENT_ID} /> : null}
       </body>
     </html>
   );

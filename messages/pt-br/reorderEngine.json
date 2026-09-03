@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "title": "Seu caixa está preso no estoque",
+    "description": "Nove apps preveem o estoque da sua loja Shopify. Nenhum envia o PO. O Reorder Engine está construindo o último quilômetro que falta — provado em modo sombra contra os seus próprios pedidos primeiro."
+  },
+  "hero": {
+    "badge": "Reorder Engine · em breve · lista de espera aberta",
+    "kicker": "Caixa preso mata marca",
+    "headline": "Seu caixa está preso no <accent>estoque.</accent>",
+    "subhead": "Sobra do que sai devagar, ruptura no que mais vende — e é você quem repõe às 23h. Você não criou uma marca para conciliar planilha de madrugada.",
+    "ctaPrimary": "Entrar na lista de espera",
+    "ctaSecondary": "Como a confiança se conquista",
+    "finePrint": "As primeiras {spots, number} lojas levam o preço Charter, travado para sempre."
+  },
+  "gap": {
+    "forecastCount": "{count, number}",
+    "forecast": "apps preveem seu estoque",
+    "sendCount": "{count, number}",
+    "send": "enviam o PO",
+    "caption": "Todo incumbente para em “recomendar → humano clica”. Estamos construindo o último quilômetro que falta — com cuidado."
+  },
+  "blind": {
+    "kicker": "Dia de reposição",
+    "title": "Onde os fundadores voam às cegas",
+    "cash": {
+      "label": "A ARMADILHA DO CAIXA",
+      "statement": "Caixa enterrado no que sai devagar enquanto o campeão de vendas falta"
+    },
+    "spot": {
+      "label": "O PONTO CEGO",
+      "statement": "A planilha não distingue “pouca demanda” de “não tinha o que vender”"
+    },
+    "night": {
+      "label": "O TRABALHO DAS 23H",
+      "statement": "Ninguém está olhando quando quebra — exceto você, de madrugada"
+    }
+  },
+  "why": {
+    "title": "Por que ninguém envia o PO?",
+    "sub": "Porque uma ordem de compra compromete dinheiro de verdade — e isso exige uma confiança que nenhuma ferramenta de previsão conquistou. Então a gente constrói a confiança primeiro: ele se prova nos seus próprios pedidos, em modo sombra, antes de tocar em qualquer coisa."
+  },
+  "ladder": {
+    "kicker": "A escada da confiança",
+    "title": "Autonomia se conquista, nunca se pressupõe",
+    "shadow": {
+      "title": "Sombra",
+      "body": "30 dias de cada PO que ele teria enviado, registrado como prova permanente — contra seus pedidos reais, antes de tocar em qualquer coisa."
+    },
+    "approve": {
+      "title": "Aprovar",
+      "body": "Ele rascunha o PO de verdade — MOQs, faixas de preço, arredondamento por caixa. Você clica em enviar."
+    },
+    "autonomy": {
+      "title": "Conquistar autonomia",
+      "body": "Só dentro dos limites que você definir, com disjuntores — e só se o histórico em modo sombra merecer. Você continua no comando."
+    },
+    "footer": "Auditoria → aprovação → autonomia conquistada. É assim que todo app da Leaf funciona — e este app é a expressão mais completa disso."
+  },
+  "cta": {
+    "title": "Entre na lista de espera. Veja ele se provar primeiro.",
+    "sub": "Uma lista, todos os apps que a Leaf vai lançar — você é o primeiro da fila em todos. As primeiras {spots, number} lojas levam o preço Charter, travado para sempre.",
+    "note": "Imagens mudas já dá para resolver hoje. <link>O Image Voice está no ar — rode essa análise agora →</link>"
+  }
+}

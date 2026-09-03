@@ -1,10 +1,14 @@
 {
+  "meta": {
+    "defaultTitle": "Leaf Digital — i tuoi soldi si nascondono",
+    "defaultDescription": "Shopify, il tuo 3PL e il tuo foglio di calcolo raccontano tre storie diverse. Leaf costruisce app piccole e affilate che trovano i soldi nascosti nelle crepe — e poi fanno il lavoro da sole."
+  },
   "nav": {
     "label": "Principale",
     "apps": "App",
-    "services": "Servizi",
-    "blog": "Blog",
-    "scan": "Scansione gratuita"
+    "freeScan": "Scansione gratuita",
+    "earlyAccess": "Accesso anticipato",
+    "joinWaitlist": "Lista d’attesa"
   },
   "footer": {
     "label": "Piè di pagina",
@@ -12,6 +16,14 @@
     "support": "Assistenza",
     "contact": "Contatti",
     "rights": "© {year} {siteName}. Tutti i diritti riservati."
+  },
+  "waitlist": {
+    "emailLabel": "Email per l’accesso anticipato",
+    "placeholder": "tu@iltuonegozio.com",
+    "submit": "Voglio l’accesso anticipato",
+    "sending": "Iscrizione…",
+    "joined": "Sei in lista. Ti scriviamo solo quando c’è qualcosa da provare.",
+    "error": "Qualcosa si è rotto da parte nostra — ci scrivi un’email?"
   },
   "skipToContent": "Vai al contenuto",
   "localeSwitcher": {

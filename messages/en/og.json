@@ -1,9 +1,17 @@
 {
   "site": {
-    "title": "The work your store needs done — handled, correctly."
+    "title": "Your money is hiding."
   },
-  "altText": {
-    "title": "{needsAttention, number} of your images may be saying nothing",
-    "kicker": "Alt text, actually looked at"
+  "imageVoice": {
+    "kicker": "Image Voice",
+    "title": "{silent, number} of your images say nothing"
+  },
+  "hiddenMargin": {
+    "kicker": "Hidden Margin",
+    "title": "Your catalog has holes."
+  },
+  "reorderEngine": {
+    "kicker": "Reorder Engine",
+    "title": "Your cash is trapped in inventory."
   }
 }

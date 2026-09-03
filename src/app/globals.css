@@ -73,7 +73,15 @@
   /* Ink ramp — v3 neutrals. Green-tinted, never pure gray. */
   --color-ink: #17211a;
   --color-ink-muted: #5b665e;
-  --color-ink-faint: #8b948d;
+  /*
+   * a11y deviation from the v3 handoff, same precedent as brand-800 in
+   * BRAND.md: the specified #8B948D is 3.13:1 on white and fails WCAG AA,
+   * which fails the repo's own `accessibility: 1` Lighthouse gate on every
+   * page that carries fine print. Darkened along its own hue until it clears
+   * 4.5:1 on both grounds it actually sits on — white (4.76:1) and
+   * `surface-muted` (4.56:1). Same role, same green-tinted gray, legible.
+   */
+  --color-ink-faint: #6c756e;
 
   /* Hairlines — alpha ink, so they sit on any surface without banding.
    * `hairline` is the default card/divider line; `soft` for dense internal
@@ -82,15 +90,22 @@
   --color-hairline: --alpha(var(--color-ink) / 9%);
   --color-hairline-strong: --alpha(var(--color-ink) / 14%);
 
-  /* Dark surface — full-bleed bands only (max 1–2 per page). This is the
-   * one place a below-800 green may carry text. */
-  --color-surface-dark: #0b120d;
+  /* Dark surfaces — two, because the references use two. `dark` is the
+   * statement band inside the page; `deep` is the darker ground the footer
+   * sits on and the first stop of the final-CTA gradient, so the page ends
+   * a shade heavier than it argued. This is the one place a below-800 green
+   * may carry text. */
+  --color-surface-dark: #101911;
+  --color-surface-deep: #0f1a10;
   --color-on-dark: #ffffff;
   --color-on-dark-muted: --alpha(#ffffff / 60%);
   --color-brand-on-dark: #7bc67f;
 
   /* Ink washes — quiet tints for surfaces on the light ground. */
   --color-ink-wash: --alpha(var(--color-ink) / 4%);
+  /* The "before" / "without" surface: warm off-white, opaque so it holds its
+   * own against the white card sitting next to it. */
+  --color-surface-muted: #fafaf9;
 
   /* Type scale — v3. Weight 800 on headings, tracking tightens with size. */
   --text-hero: 72px;
@@ -102,6 +117,12 @@
   --text-h2--line-height: 1.08;
   --text-h2--letter-spacing: -0.03em;
   --text-h2--font-weight: 800;
+
+  /* The dark band and the final CTA carry a heavier H2 than a light section. */
+  --text-h2-lg: 48px;
+  --text-h2-lg--line-height: 1.06;
+  --text-h2-lg--letter-spacing: -0.03em;
+  --text-h2-lg--font-weight: 800;
 
   --text-h3: 20px;
   --text-h3--line-height: 1.3;
@@ -126,23 +147,54 @@
   --shadow-card:
     0 1px 2px --alpha(var(--color-ink) / 4%),
     0 20px 48px --alpha(var(--color-ink) / 8%);
-  /* v1 CTA glow, kept as a named shadow. Key CTAs only. */
-  --shadow-cta: 0 4px 15px rgb(76 175 80 / 0.35);
+  /* The green glow, at the two sizes the references use: `cta` under a 52px
+   * hero button, `cta-sm` under the 38px one in the header. */
+  --shadow-cta: 0 4px 20px rgb(46 125 50 / 0.35);
+  --shadow-cta-sm: 0 2px 10px rgb(46 125 50 / 0.3);
+  /* Featured (green) card: a wide green-tinted lift instead of the ink one. */
+  --shadow-featured: 0 14px 36px rgb(46 125 50 / 0.1);
+  /* The white button on the dark CTA band — an ink shadow, not a glow. */
+  --shadow-on-dark: 0 8px 28px rgb(0 0 0 / 0.25);
 
   /* Motion — one entrance curve, one hover duration. */
   --ease-leaf: cubic-bezier(0.2, 0.7, 0.2, 1);
   --animate-fade-up: fade-up 700ms var(--ease-leaf) both;
+  /* The radial glow never sits still. 16s behind a hero, 18s behind the
+   * final CTA — slow enough that you notice it only by leaving the tab open. */
+  --animate-aurora: aurora-drift 16s ease-in-out infinite;
+  --animate-aurora-slow: aurora-drift 18s ease-in-out infinite;
+
+  @keyframes aurora-drift {
+    0%,
+    100% {
+      transform: translate(-50%, 0) scale(1);
+    }
+    50% {
+      transform: translate(-42%, 4%) scale(1.12);
+    }
+  }
 
   @keyframes fade-up {
     from {
       opacity: 0;
-      /* Distance isn't specified in the v3 spec; 16px reads as a lift
-       * without turning into a slide at 700ms. */
-      transform: translateY(16px);
+      transform: translateY(14px);
     }
     to {
       opacity: 1;
       transform: none;
+    }
+  }
+
+  /* The header earns its edge on the way down: no line at rest against the
+   * hero, a hairline and a whisper of shadow once the page moves under it. */
+  @keyframes header-settle {
+    from {
+      border-bottom-color: transparent;
+      box-shadow: 0 0 0 rgb(23 33 26 / 0);
+    }
+    to {
+      border-bottom-color: var(--color-hairline-soft);
+      box-shadow: 0 1px 20px rgb(23 33 26 / 0.05);
     }
   }
 }
@@ -199,12 +251,15 @@
   html {
     @apply scroll-smooth font-sans antialiased;
   }
-  /* Headings are extrabold and balanced by default — the v3 voice. Sizes
-   * stay explicit at the call site. */
+  /* Headings are balanced by default — the v3 voice. Sizes stay explicit at
+   * the call site. h1/h2 are extrabold; h3 sits a step back at 700, because
+   * a card title competing with a section heading flattens the hierarchy. */
   h1,
-  h2,
-  h3 {
+  h2 {
     @apply font-extrabold text-balance;
+  }
+  h3 {
+    @apply font-bold text-balance;
   }
   /* Numbers and data are always mono + tabular, wherever they appear. */
   :is(code, kbd, samp, pre) {
@@ -216,8 +271,137 @@
   /* `animate-fade-up` is generated from the theme var above; this is the
    * standing reduced-motion guard so no call site has to remember it. */
   @media (prefers-reduced-motion: reduce) {
-    .animate-fade-up {
+    .animate-fade-up,
+    .animate-aurora,
+    .animate-aurora-slow {
       animation: none;
+    }
+  }
+
+  /*
+   * The header reacts to scroll position rather than to entering the
+   * viewport, so this one rides `scroll()`, not `view()`. Same two guards:
+   * without them the header keeps the resting hairline it ships with.
+   */
+  @supports (animation-timeline: scroll()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .header-settle {
+        animation: header-settle linear both;
+        animation-timeline: scroll();
+        animation-range: 0 72px;
+      }
+    }
+  }
+}
+
+/*
+ * Reveals — deliberately NOT inside `@layer utilities`.
+ *
+ * Tailwind v4 tree-shakes that layer against what it finds in the source
+ * scan, and it keys that off class names. These selectors are attribute-only,
+ * so every one of them was silently dropped from the build: the markup was
+ * right, the script was right, and the stylesheet simply did not contain the
+ * rules. Top-level CSS is always emitted.
+ */
+/*
+ * Reveals.
+ *
+ * Every selector here is gated on `data-armed`, and only the bootstrapper
+ * sets that (src/lib/reveal-script.ts) — after it has an observer in hand
+ * and only on elements below the fold. Nothing in this stylesheet can hide
+ * content on its own, which is the point: a blank section is a far worse
+ * outcome than a missing animation, and this makes the blank section
+ * unreachable rather than merely unlikely.
+ *
+ * The `data-reveal*` attributes in the markup are inert markers. They say
+ * "this is animatable", never "this is hidden".
+ */
+/* The one frame in which elements are being hidden. Without this the hiding
+ * itself animates — see the bootstrapper. */
+[data-arming] [data-armed] {
+  transition: none !important;
+}
+
+[data-armed]:not([data-rule]) {
+  opacity: 0;
+  transform: translateY(var(--reveal-lift, 24px));
+  transition:
+    opacity 700ms var(--ease-leaf),
+    transform 700ms var(--ease-leaf);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+[data-armed][data-revealed]:not([data-rule]) {
+  opacity: 1;
+  transform: none;
+}
+
+/* Siblings in a grid come into view together, so the delay is what makes
+ * them read as a sequence rather than a slab. Capped at the fourth: a
+ * twelve-card grid staggered twelve deep reads as a loading screen. */
+[data-reveal-group] > *:nth-child(2) {
+  --reveal-delay: 90ms;
+}
+[data-reveal-group] > *:nth-child(3) {
+  --reveal-delay: 180ms;
+}
+[data-reveal-group] > *:nth-child(n + 4) {
+  --reveal-delay: 260ms;
+}
+
+/* A dark band is the loudest thing on its page. More travel, and slower, so
+ * the section lands instead of merely appearing.
+ *
+ * The `:not()` is not decoration: without it this selector is a step
+ * below the base rule above, whose `transition` shorthand then wins and the
+ * slower duration is silently ignored. */
+[data-tone="dark"] [data-armed]:not([data-rule]) {
+  --reveal-lift: 34px;
+  transition-duration: 850ms;
+}
+
+/*
+ * A rule that draws itself in. The whole design system is built on
+ * hairlines rather than boxes — steps divided by a rule, statements
+ * stacked on rules, sections separated by one — so drawing them is motion
+ * that restates the layout instead of decorating it. It rides a
+ * pseudo-element so the rule keeps its own timing independently of
+ * whatever the element itself is doing.
+ */
+[data-rule][data-armed] {
+  position: relative;
+  border-top-color: transparent;
+}
+[data-rule][data-armed]::before {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: -1px;
+  height: 1px;
+  background: var(--color-hairline-soft);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 1100ms var(--ease-leaf);
+}
+[data-rule][data-armed][data-revealed]::before {
+  transform: scaleX(1);
+}
+
+/* The readiness meter fills to its value on load — it sits in the hero, so
+ * it is never below the fold and has nothing to be triggered by. Width is
+ * the value; the draw is a scaleX on top of it, so it never reflows the card
+ * around it. The delay lets the hero cascade land first. */
+@media (prefers-reduced-motion: no-preference) {
+  [data-draw] {
+    transform-origin: left center;
+    animation: draw-x 1100ms var(--ease-leaf) 320ms both;
+  }
+
+  @keyframes draw-x {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
     }
   }
 }

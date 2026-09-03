@@ -2,16 +2,22 @@ import { NextResponse } from "next/server";
 import { SUPPORT_EMAIL } from "@/lib/constants";
 
 /**
- * Lab-app waitlist. No database at this volume — submissions land in the
- * support inbox via Resend (RESEND_API_KEY already lives on the Vercel
- * project). The inbox is the CRM until a real list is warranted.
+ * The waitlist. ONE list across every app — a visitor who signs up on
+ * /hidden-margin is first in line for /reorder-engine too, and the copy on
+ * both pages promises exactly that. `source` records which page they came
+ * from so the inbox keeps the context; it is not a list they joined.
+ *
+ * No database at this volume — submissions land in the support inbox via
+ * Resend (RESEND_API_KEY already lives on the Vercel project). The inbox is
+ * the CRM until a real list is warranted.
  */
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const KNOWN_APPS = new Set(["Catalog Readiness", "AI Answer Accuracy", "Both"]);
+/** Where the form was rendered. Unknown values are recorded, never rejected. */
+const KNOWN_SOURCES = new Set(["hidden-margin", "reorder-engine", "home"]);
 
 export async function POST(request: Request) {
-  let body: { email?: string; app?: string; company?: string };
+  let body: { email?: string; source?: string; company?: string };
   try {
     body = await request.json();
   } catch {
@@ -24,8 +30,10 @@ export async function POST(request: Request) {
   }
 
   const email = body.email?.trim() ?? "";
-  const app = body.app ?? "";
-  if (!EMAIL_RE.test(email) || !KNOWN_APPS.has(app)) {
+  const source = KNOWN_SOURCES.has(body.source ?? "")
+    ? (body.source as string)
+    : "unknown";
+  if (!EMAIL_RE.test(email)) {
     return NextResponse.json(
       { error: "Enter a valid email address." },
       { status: 400 },
@@ -48,8 +56,8 @@ export async function POST(request: Request) {
     body: JSON.stringify({
       from: "Leaf waitlist <waitlist@leafdigital.co>",
       to: [SUPPORT_EMAIL],
-      subject: `Waitlist: ${app}`,
-      text: `${email} joined the ${app} waitlist.`,
+      subject: `Waitlist: ${email}`,
+      text: `${email} joined the waitlist from ${source}.`,
     }),
   });
 

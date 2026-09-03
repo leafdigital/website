@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "title": "Dein Katalog hat Löcher",
+    "description": "Fehlende Kosten, Gewichte und Codes verstecken heute Geld und vergraulen morgen KI-Shopper. Ein Bereitschafts-Score für deinen Shopify-Katalog, mit jeder Lücke in Dollar beziffert."
+  },
+  "hero": {
+    "badge": "Hidden Margin · im Labor · früher Zugang offen",
+    "kicker": "Versteckte Margen killen Unternehmen",
+    "headline": "Dein Katalog hat <accent>Löcher.</accent>",
+    "subhead": "Fehlende Kosten, Gewichte, Codes. <lead>Heute verstecken sie Geld.</lead> Morgen vergraulen sie Kunden, die du nie zu Gesicht bekommst.",
+    "ctaPrimary": "Auf die Warteliste",
+    "ctaSecondary": "Beispielbericht ansehen",
+    "finePrint": "Kostenloser Scan · Ein Bereitschafts-Score · Lücken in Dollar beziffert"
+  },
+  "score": {
+    "label": "Bereitschafts-Score",
+    "value": "{score, number} %",
+    "ready": "bereit",
+    "benchmark": "Shops deiner Größe liegen im Schnitt bei <lead>{benchmark, number} %</lead>",
+    "costLabel": "{count, number} SKUs ohne Kosten",
+    "costNote": "Marge = geraten",
+    "weightLabel": "{count, number} Varianten ohne Gewicht",
+    "weightNote": "Versandkosten sickern weg",
+    "customsLabel": "{count, number} ohne HS code / COO",
+    "customsNote": "Zollrisiko",
+    "caption": "Beispieldaten — dein Bericht entsteht aus deinem Shop."
+  },
+  "prices": {
+    "kicker": "Ein Gegner, zwei Rechnungen",
+    "title": "Die Löcher kosten dich doppelt",
+    "today": {
+      "label": "HEUTE",
+      "statement": "Verstecktes Geld",
+      "body": "Keine Kosten bei einem Drittel der SKUs heißt: Die Marge ist geraten. Keine Gewichte heißt: Versandüberraschungen. Und jeder Bericht, dem du vertraust, steht auf diesen Leerstellen — fehlende Kosten sind die Voraussetzung für jede Margenzahl, die du je berechnen wirst."
+    },
+    "tomorrow": {
+      "label": "MORGEN",
+      "statement": "Unsichtbare Produkte",
+      "body": "KI-Shopping-Agenten lesen deinen Katalog roh — keine Fotos, keine Stimmung, nur Felder. Was leer ist, existiert für sie nicht. Sie sind schon unterwegs, und du wirst die Kunden nie sehen, die sie abgewiesen haben."
+    }
+  },
+  "someday": {
+    "title": "„Ich wollte das irgendwann mal aufräumen.“",
+    "sub": "Wollten alle — und der Katalog wächst schneller, als das Irgendwann kommt. Niemand prüft 400 Produkte Feld für Feld. Die Leerstellen stapeln sich leise, und jeder Bericht, der darauf steht, ist geraten."
+  },
+  "report": {
+    "kicker": "Der Beispielbericht",
+    "title": "Jede Lücke, beziffert wo es geht",
+    "sub": "Keine Checkliste — eine Rechnung. Der Scan zeigt, was dich jedes leere Feld kostet, in Dollar, wo die Arithmetik es hergibt.",
+    "colProduct": "Produkt",
+    "colMissing": "Was fehlt",
+    "colCost": "Was es dich kostet",
+    "trailRunner": {
+      "product": "Trail Runner 2.0 · 4 Varianten",
+      "missing": "Kosten pro Artikel",
+      "cost": "Marge unbekannt auf {amount, number, ::currency/USD precision-integer}/Jahr"
+    },
+    "tote": {
+      "product": "Canvas Weekender Tote",
+      "missing": "Gewicht",
+      "cost": "≈ {amount, number, ::currency/USD} Verlust pro versendeter Bestellung"
+    },
+    "merino": {
+      "product": "Merino Crew · 6 Varianten",
+      "missing": "HS code + Herkunftsland",
+      "cost": "Zollverzögerungen bei EU-Bestellungen"
+    },
+    "cap": {
+      "product": "Everyday Cap",
+      "missing": "Produkttyp, 3 Metafelder",
+      "cost": "unsichtbar für KI-Shopper"
+    },
+    "caption": "Beispieldaten, als solche gekennzeichnet — wir erfinden keine Fallstudien. Dein Bericht kommt aus deinem Shop."
+  },
+  "how": {
+    "kicker": "So funktioniert's",
+    "title": "Vom Raten zum Wissen, in drei Schritten",
+    "scan": {
+      "title": "Scan",
+      "body": "Kostenloser Score plus die vollständige Lückenliste — in Dollar beziffert, wo die Arithmetik es hergibt."
+    },
+    "enrich": {
+      "title": "Anreichern",
+      "body": "Es füllt jedes Feld, das sich ableiten lässt; du gibst frei. Ohne dein Ja ändert sich nichts."
+    },
+    "ready": {
+      "title": "Bereit bleiben",
+      "body": "Jedes neue Produkt wird beim Upload geprüft. Der Score hält — für immer, ohne dass du hinterherläufst."
+    },
+    "footer": "Audit → Freigabe → verdiente Autonomie. So arbeitet jede Leaf-App."
+  },
+  "cta": {
+    "title": "Kostenlosen Scan starten. Deinen Score sehen.",
+    "sub": "Eine Liste, alle kommenden Leaf-Apps — du stehst bei allen vorn. Frühe Händler bekommen einen direkten Draht zum Gründer und reden mit, was wir bauen.",
+    "offerLabel": "Angebot für Gründungshändler",
+    "offer": "Die ersten {spots, number} Shops bekommen den Top-Tarif zum Preis des mittleren — lebenslang festgeschrieben.",
+    "noteLive": "Stumme Bilder lassen sich schon heute beheben. <link>Image Voice ist live — jetzt scannen →</link>",
+    "noteNext": "Kapital im Lager gefangen? <link>Reorder Engine kommt →</link>"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "title": "Your cash is trapped in inventory",
+    "description": "Nine apps forecast your Shopify inventory. Not one sends the PO. Reorder Engine is building the missing last mile — proven in shadow against your own orders first."
+  },
+  "hero": {
+    "badge": "Reorder Engine · coming soon · waitlist open",
+    "kicker": "Trapped cash kills brands",
+    "headline": "Your cash is trapped in <accent>inventory.</accent>",
+    "subhead": "Too much of the slow movers, stockouts on the bestsellers — and you’re the one reordering at 11pm. You didn’t build a brand to reconcile spreadsheets at night.",
+    "ctaPrimary": "Join the waitlist",
+    "ctaSecondary": "How trust is earned",
+    "finePrint": "First {spots, number} stores get Charter pricing, locked for life."
+  },
+  "gap": {
+    "forecastCount": "{count, number}",
+    "forecast": "apps forecast your inventory",
+    "sendCount": "{count, number}",
+    "send": "send the PO",
+    "caption": "Every incumbent stops at “recommend → human clicks.” We’re building the missing last mile — carefully."
+  },
+  "blind": {
+    "kicker": "Reorder day",
+    "title": "Where founders fly blind",
+    "cash": {
+      "label": "THE CASH TRAP",
+      "statement": "Cash buried in slow movers while bestsellers stock out"
+    },
+    "spot": {
+      "label": "THE BLIND SPOT",
+      "statement": "The spreadsheet can’t tell “low demand” from “nothing to sell”"
+    },
+    "night": {
+      "label": "THE 11PM JOB",
+      "statement": "Nobody is watching when it breaks — except you, at night"
+    }
+  },
+  "why": {
+    "title": "Why does nobody send the PO?",
+    "sub": "Because a purchase order commits real money — and that takes trust no forecasting tool has earned. So we’re building trust first: it proves itself on your own orders, in shadow, before it touches anything."
+  },
+  "ladder": {
+    "kicker": "The trust ladder",
+    "title": "Autonomy is earned, never assumed",
+    "shadow": {
+      "title": "Shadow",
+      "body": "30 days of every PO it would have sent, logged as permanent proof — against your real orders, before it touches anything."
+    },
+    "approve": {
+      "title": "Approve",
+      "body": "It drafts the real PO — MOQs, price breaks, carton rounding. You click send."
+    },
+    "autonomy": {
+      "title": "Earn autonomy",
+      "body": "Only inside limits you set, with circuit breakers — and only if the shadow record earns it. You stay in charge."
+    },
+    "footer": "Audit → approval → earned autonomy. This is how every Leaf app works — and this app is its fullest expression."
+  },
+  "cta": {
+    "title": "Join the waitlist. Watch it prove itself first.",
+    "sub": "One list, every coming Leaf app — you’re first in line for all of them. The first {spots, number} stores get Charter pricing, locked for life.",
+    "note": "Silent images are already fixable today. <link>Image Voice is live — run that scan now →</link>"
+  }
+}

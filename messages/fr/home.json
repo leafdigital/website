@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "title": "Votre argent se cache",
+    "description": "Votre Shopify, votre 3PL et votre tableur racontent trois histoires différentes. Leaf conçoit des apps Shopify courtes et affûtées qui trouvent l’argent caché dans les écarts — puis font le travail."
+  },
+  "hero": {
+    "badge": "Image Voice est en ligne sur le Shopify App Store",
+    "headline": "Votre argent<br></br>se <accent>cache.</accent>",
+    "subhead": "Votre Shopify, votre 3PL et votre tableur racontent trois histoires différentes. Et l’argent se cache dans les écarts.",
+    "ctaPrimary": "Analyser ma boutique",
+    "ctaSecondary": "Voir les apps",
+    "finePrint": "Analyse gratuite à vie · Sans carte bancaire · Votre chiffre en quelques minutes"
+  },
+  "inventory": {
+    "title": "Stock disponible · mêmes SKU, même jour",
+    "shopify": "Shopify",
+    "threePl": "Votre 3PL",
+    "spreadsheet": "Votre tableur",
+    "units": "{count, number} unités",
+    "gap": "L’écart",
+    "gapValue": "{units, number} unités · ~{dollars, number, ::currency/USD precision-integer}",
+    "caption": "Données d’exemple — votre analyse est construite à partir de votre boutique."
+  },
+  "villain": {
+    "kicker": "Ça vous parle ?",
+    "title": "Vous consultez trois tableaux de bord et vous ne savez toujours pas quel chiffre est vrai.",
+    "sub": "Vous n’avez pas créé une marque pour ça. La panne n’est jamais dans une fonctionnalité — elle est dans les coutures. Personne ne détient la carte, alors l’argent se cache entre les systèmes.",
+    "one": "De la trésorerie bloquée dans du stock que personne ne voulait commander",
+    "two": "Des ventes perdues sur des ruptures qu’aucun système n’enregistre",
+    "three": "Des vagues de remboursements qui percutent des acomptes de PO que vous ne voyez pas venir",
+    "four": "Des synchros cassées découvertes des mois trop tard",
+    "closer": "Tout ce qui coûte cher est invisible. Voilà le coupable — et voilà pourquoi aucun tableau de bord ne l’a jamais attrapé."
+  },
+  "plan": {
+    "kicker": "Le plan",
+    "title": "Trois étapes entre vous et l’argent caché",
+    "connect": {
+      "title": "Connecter",
+      "body": "Leaf relie vos systèmes et vous montre, en dollars, où ils se contredisent. Pas d’opinions — de l’arithmétique."
+    },
+    "shadow": {
+      "title": "Observer",
+      "body": "30 jours de « voilà exactement ce que j’aurais fait ». De l’argent récupéré, des preuves noir sur blanc — votre boutique est l’étude de cas."
+    },
+    "run": {
+      "title": "Laisser tourner",
+      "body": "Validation en un clic, puis vous fixez votre seuil et vous récupérez votre temps. L’autonomie se mérite, elle ne se présume jamais."
+    }
+  },
+  "suite": {
+    "kicker": "La suite",
+    "title": "Le plan, en vrai",
+    "sub": "Des apps courtes et affûtées. Chacune trouve de l’argent dans une couture précise — puis fait le travail elle-même.",
+    "live": "EN LIGNE",
+    "lab": "AU LABO",
+    "imageVoice": {
+      "description": "Vos images sont muettes — pour Google, pour les acheteurs IA, pour les lecteurs d’écran. Analyse gratuite, une vraie description pour chaque image.",
+      "cta": "Voir l’app →"
+    },
+    "hiddenMargin": {
+      "description": "Les marges cachées tuent les entreprises. Votre catalogue est troué — coûts, HS codes et pays d’origine manquants. Un seul score de préparation, les trous chiffrés en dollars.",
+      "cta": "Rejoindre la liste →"
+    },
+    "reorderEngine": {
+      "description": "Neuf apps prévoient votre stock. Aucune n’envoie le PO. On construit le dernier kilomètre manquant — prouvé en observation d’abord.",
+      "cta": "Rejoindre la liste →"
+    }
+  },
+  "contrast": {
+    "withoutLabel": "Sans Leaf",
+    "withoutBody": "Le trimestre se termine comme toujours : « où est passé l’argent ? » Encore une nuit de tableurs, encore des chiffres qui ne tombent pas juste.",
+    "withLabel": "Avec Leaf",
+    "withBody": "Vous ouvrez un email par semaine, vous voyez les chiffres tomber juste, et vous retournez construire ce pour quoi vous avez monté la boîte."
+  },
+  "cta": {
+    "title": "Installez l’analyse gratuite. Voyez ce qui se cache.",
+    "sub": "On ne vous montrera pas les chiffres de quelqu’un d’autre. On vous montrera les vôtres — gratuitement, en quelques minutes, avant que vous décidiez quoi que ce soit.",
+    "button": "Lancer l’analyse gratuite",
+    "note": "Hidden Margin et Reorder Engine sont au labo. <link>Rejoindre la liste d’attente →</link>"
+  }
+}

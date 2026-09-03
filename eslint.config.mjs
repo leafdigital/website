@@ -68,18 +68,7 @@ const eslintConfig = defineConfig([
      * whatever is still on it has not been done. Delete entries, never add.
      */
     files: ["src/**/*.tsx"],
-    ignores: [
-      // NB: escaped — ESLint globs read a bare [locale] as a character class.
-      "src/app/\\[locale\\]/page.tsx",
-      "src/app/\\[locale\\]/apps/**",
-      "src/app/\\[locale\\]/blog/**",
-      "src/app/\\[locale\\]/services/**",
-      "src/components/app-card.tsx",
-      "src/components/coverage-ring.tsx",
-      "src/components/waitlist-form.tsx",
-      "src/lib/og.tsx",
-      "src/components/ui/**",
-    ],
+    ignores: ["src/lib/og.tsx", "src/components/ui/**"],
     rules: {
       "react/jsx-no-literals": [
         "error",

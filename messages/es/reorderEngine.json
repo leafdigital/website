@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "title": "Tu dinero está atrapado en el inventario",
+    "description": "Nueve apps predicen tu inventario de Shopify. Ninguna envía el PO. Reorder Engine está construyendo el último tramo que falta — probado antes en sombra contra tus propios pedidos."
+  },
+  "hero": {
+    "badge": "Reorder Engine · muy pronto · lista de espera abierta",
+    "kicker": "El dinero atrapado mata marcas",
+    "headline": "Tu dinero está atrapado en el <accent>inventario.</accent>",
+    "subhead": "Demasiado de lo que no rota, roturas de stock en los superventas — y el que repone a las 11 de la noche eres tú. No montaste una marca para cuadrar hojas de cálculo de madrugada.",
+    "ctaPrimary": "Unirme a la lista",
+    "ctaSecondary": "Cómo se gana la confianza",
+    "finePrint": "Las primeras {spots, number} tiendas se llevan el precio Charter, bloqueado de por vida."
+  },
+  "gap": {
+    "forecastCount": "{count, number}",
+    "forecast": "apps predicen tu inventario",
+    "sendCount": "{count, number}",
+    "send": "envían el PO",
+    "caption": "Todos los que ya están en el mercado se paran en “recomendar → que haga clic un humano”. Estamos construyendo el último tramo que falta — con cuidado."
+  },
+  "blind": {
+    "kicker": "Día de reposición",
+    "title": "Donde los fundadores van a ciegas",
+    "cash": {
+      "label": "LA TRAMPA DEL DINERO",
+      "statement": "Dinero enterrado en lo que no rota mientras los superventas se agotan"
+    },
+    "spot": {
+      "label": "EL PUNTO CIEGO",
+      "statement": "La hoja de cálculo no distingue “poca demanda” de “no había nada que vender”"
+    },
+    "night": {
+      "label": "EL TURNO DE LAS 11",
+      "statement": "Nadie está mirando cuando se rompe — excepto tú, de noche"
+    }
+  },
+  "why": {
+    "title": "¿Por qué no hay nadie que envíe el PO?",
+    "sub": "Porque una orden de compra compromete dinero real — y eso exige una confianza que ninguna herramienta de previsión se ha ganado. Así que primero construimos la confianza: se demuestra con tus propios pedidos, en sombra, antes de tocar nada."
+  },
+  "ladder": {
+    "kicker": "La escalera de la confianza",
+    "title": "La autonomía se gana, nunca se presupone",
+    "shadow": {
+      "title": "En sombra",
+      "body": "30 días de cada PO que habría enviado, registrado como prueba permanente — contra tus pedidos reales, antes de tocar nada."
+    },
+    "approve": {
+      "title": "Aprueba",
+      "body": "Redacta el PO de verdad — MOQ, descuentos por volumen, redondeo por caja. Tú haces clic en enviar."
+    },
+    "autonomy": {
+      "title": "Gana autonomía",
+      "body": "Solo dentro de los límites que tú fijes, con cortacircuitos — y solo si el historial en sombra se lo gana. El mando sigue siendo tuyo."
+    },
+    "footer": "Auditoría → aprobación → autonomía ganada. Así funciona cada app de Leaf — y esta es su expresión más completa."
+  },
+  "cta": {
+    "title": "Únete a la lista. Deja que se demuestre primero.",
+    "sub": "Una lista, todas las apps que vienen de Leaf — eres el primero de la fila en todas. Las primeras {spots, number} tiendas se llevan el precio Charter, bloqueado de por vida.",
+    "note": "Las imágenes mudas ya tienen arreglo hoy. <link>Image Voice está disponible — haz ese análisis ya →</link>"
+  }
+}

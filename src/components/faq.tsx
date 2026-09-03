@@ -16,7 +16,10 @@ export function Faq({
   className?: string;
 }) {
   return (
-    <div className={cn("divide-border divide-y border-y", className)}>
+    <div
+      data-reveal-group
+      className={cn("divide-border divide-y border-y", className)}
+    >
       {items.map((item) => (
         <details key={item.q} className="group py-5">
           <summary className="text-foreground flex cursor-pointer list-none items-center justify-between gap-4 rounded-lg font-semibold marker:hidden [&::-webkit-details-marker]:hidden">

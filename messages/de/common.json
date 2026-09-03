@@ -1,10 +1,14 @@
 {
+  "meta": {
+    "defaultTitle": "Leaf Digital — dein Geld versteckt sich",
+    "defaultDescription": "Dein Shopify, dein 3PL und deine Tabelle erzählen drei verschiedene Geschichten. Leaf baut kleine, scharfe Apps, die das Geld in den Lücken finden — und die Arbeit dann selbst erledigen."
+  },
   "nav": {
     "label": "Hauptnavigation",
     "apps": "Apps",
-    "services": "Leistungen",
-    "blog": "Blog",
-    "scan": "Kostenloser Scan"
+    "freeScan": "Kostenloser Scan",
+    "earlyAccess": "Früh dabei sein",
+    "joinWaitlist": "Auf die Warteliste"
   },
   "footer": {
     "label": "Fußzeile",
@@ -12,6 +16,14 @@
     "support": "Support",
     "contact": "Kontakt",
     "rights": "© {year} {siteName}. Alle Rechte vorbehalten."
+  },
+  "waitlist": {
+    "emailLabel": "E-Mail für frühen Zugang",
+    "placeholder": "du@deinshop.com",
+    "submit": "Früh dabei sein",
+    "sending": "Wird eingetragen…",
+    "joined": "Du stehst auf der Liste. Wir schreiben nur, wenn es etwas zum Ausprobieren gibt.",
+    "error": "Bei uns ist etwas kaputtgegangen — schreib uns stattdessen eine E-Mail?"
   },
   "skipToContent": "Zum Inhalt springen",
   "localeSwitcher": {

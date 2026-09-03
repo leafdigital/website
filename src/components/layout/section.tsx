@@ -11,6 +11,14 @@ export type SectionTone = "default" | "wash" | "dark";
 
 type SectionProps = React.ComponentProps<"section"> & {
   tone?: SectionTone;
+  /**
+   * A hairline rule above the content instead of a gap, for two light
+   * sections that belong to the same argument. The rule sits inside the
+   * content column, and the section loses its own top padding to it.
+   */
+  divided?: boolean;
+  className?: string;
+  containerClassName?: string;
 };
 
 const toneClass: Record<SectionTone, string> = {
@@ -28,17 +36,31 @@ const toneClass: Record<SectionTone, string> = {
  */
 export function Section({
   className,
+  containerClassName,
   tone = "default",
+  divided = false,
   children,
   ...props
 }: SectionProps) {
   return (
     <section
       data-tone={tone}
-      className={cn("py-16 sm:py-24", toneClass[tone], className)}
+      className={cn(
+        divided ? "pt-0 pb-20 sm:pb-[110px]" : "py-20 sm:py-[110px]",
+        toneClass[tone],
+        className,
+      )}
       {...props}
     >
-      <Container>{children}</Container>
+      <Container
+        {...(divided ? { "data-rule": "" } : {})}
+        className={cn(
+          divided && "border-hairline-soft border-t pt-16 sm:pt-[90px]",
+          containerClassName,
+        )}
+      >
+        {children}
+      </Container>
     </section>
   );
 }
@@ -76,12 +98,12 @@ export function SectionHeading({
   title,
   sub,
   tone = "light",
-  align = "center",
+  align = "left",
   className,
 }: {
   kicker?: string;
-  title: string;
-  sub?: string;
+  title: React.ReactNode;
+  sub?: React.ReactNode;
   /** `dark` when the block sits on a `Section tone="dark"` band. */
   tone?: "light" | "dark";
   align?: "center" | "left";
@@ -91,17 +113,21 @@ export function SectionHeading({
 
   return (
     <div
+      data-reveal
       className={cn(
-        "max-w-2xl",
-        align === "center" ? "mx-auto text-center" : "text-left",
+        /* Left is the v3 default: the reference sets every section heading
+         * against the content column's left edge, not down its middle. */
+        align === "center" ? "mx-auto max-w-2xl text-center" : "max-w-[660px]",
         className,
       )}
     >
       {kicker ? <Kicker tone={tone}>{kicker}</Kicker> : null}
       <h2
         className={cn(
-          "sm:text-h2 mt-3 text-3xl tracking-[-0.03em]",
-          dark && "text-on-dark",
+          dark ? "mt-[18px]" : "mt-3.5",
+          "text-3xl leading-[1.1] tracking-[-0.03em]",
+          /* Dark bands and the final CTA carry the heavier 48px cut. */
+          dark ? "text-on-dark sm:text-h2-lg" : "sm:text-h2",
         )}
       >
         {title}
@@ -109,7 +135,8 @@ export function SectionHeading({
       {sub ? (
         <p
           className={cn(
-            "mt-4 text-lg leading-[1.65]",
+            dark ? "mt-[18px]" : "mt-3.5",
+            "text-lg leading-[1.6]",
             dark ? "text-on-dark-muted" : "text-muted-foreground",
           )}
         >

@@ -5,6 +5,7 @@ import { PillBadge } from "@/components/ui/pill-badge";
 import { routing } from "@/i18n/routing";
 import { documentLanguages, resolveDocumentLocale } from "@/lib/documents";
 import { APP_NAME, SITE_NAME } from "@/lib/constants";
+import { absoluteUrl, localeMetadata } from "@/lib/metadata";
 
 const DOC = "privacy";
 
@@ -33,11 +34,15 @@ export async function generateMetadata({
   return {
     title: mod.meta.title,
     description: `How ${SITE_NAME} handles data across this website and the ${APP_NAME} app — what we access, what we store, how long we keep it, and the AI processing we disclose plainly.`,
+    ...localeMetadata("/privacy", locale),
     alternates: {
-      canonical: `/${locale}/${DOC}`,
+      ...localeMetadata("/privacy", locale).alternates,
+      /* Tier-3 override: a locale with no translated document is omitted
+       * from hreflang rather than advertised and served English
+       * (docs/i18n.md §8.5). */
       languages: {
-        ...documentLanguages(DOC, `/${DOC}`),
-        "x-default": `/${routing.defaultLocale}/${DOC}`,
+        ...documentLanguages(DOC, "/privacy"),
+        "x-default": absoluteUrl("/privacy", routing.defaultLocale),
       },
     },
   };

@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "title": "Seu catálogo tem buracos",
+    "description": "Custos, pesos e códigos faltando escondem dinheiro hoje e afastam os compradores de IA amanhã. Uma nota de prontidão para o seu catálogo Shopify, com cada buraco precificado em dinheiro."
+  },
+  "hero": {
+    "badge": "Hidden Margin · no laboratório · acesso antecipado aberto",
+    "kicker": "Margem escondida mata negócio",
+    "headline": "Seu catálogo tem <accent>buracos.</accent>",
+    "subhead": "Custos, pesos e códigos faltando. <lead>Hoje eles escondem dinheiro.</lead> Amanhã afastam clientes que você nunca vai nem ver.",
+    "ctaPrimary": "Entrar na lista de espera",
+    "ctaSecondary": "Ver um relatório de exemplo",
+    "finePrint": "Análise gratuita · Uma nota de prontidão · Buracos precificados em dinheiro"
+  },
+  "score": {
+    "label": "Nota de prontidão",
+    "value": "{score, number}%",
+    "ready": "pronto",
+    "benchmark": "Lojas do seu tamanho ficam em <lead>{benchmark, number}%</lead>",
+    "costLabel": "{count, number} SKUs sem custo",
+    "costNote": "margem = chute",
+    "weightLabel": "{count, number} variantes sem peso",
+    "weightNote": "vazamento no frete",
+    "customsLabel": "{count, number} sem HS code / COO",
+    "customsNote": "risco na alfândega",
+    "caption": "Dados de exemplo — seu relatório é feito a partir da sua loja."
+  },
+  "prices": {
+    "kicker": "Um vilão, duas contas",
+    "title": "Os buracos te cobram duas vezes",
+    "today": {
+      "label": "HOJE",
+      "statement": "Dinheiro escondido",
+      "body": "Sem custo em um terço dos SKUs, margem vira chute. Sem peso, o frete vira surpresa. E todo relatório em que você confia é construído sobre esses campos vazios — custo faltando é a pré-condição de qualquer número de margem que você venha a calcular."
+    },
+    "tomorrow": {
+      "label": "AMANHÃ",
+      "statement": "Produtos invisíveis",
+      "body": "Os agentes de compra com IA leem seu catálogo cru — sem fotos, sem clima, só campos. O que estiver vazio não existe para eles. Eles já estão navegando, e você nunca vai ver os clientes que eles descartaram."
+    }
+  },
+  "someday": {
+    "title": "“Um dia eu organizo isso.”",
+    "sub": "Todo mundo diz o mesmo — e o catálogo cresce mais rápido do que esse dia chega. Ninguém audita 400 produtos campo por campo. Os vazios se acumulam em silêncio, e todo relatório construído sobre eles é um chute."
+  },
+  "report": {
+    "kicker": "O relatório de exemplo",
+    "title": "Cada buraco, precificado onde dá",
+    "sub": "Não é uma checklist — é uma conta. A análise mostra quanto cada campo vazio está te custando, em dinheiro sempre que a aritmética permite.",
+    "colProduct": "Produto",
+    "colMissing": "O que está faltando",
+    "colCost": "Quanto isso te custa",
+    "trailRunner": {
+      "product": "Trail Runner 2.0 · 4 variantes",
+      "missing": "Custo por item",
+      "cost": "margem desconhecida sobre {amount, number, ::currency/USD precision-integer}/ano"
+    },
+    "tote": {
+      "product": "Canvas Weekender Tote",
+      "missing": "Peso",
+      "cost": "≈ {amount, number, ::currency/USD} vazando por pedido enviado"
+    },
+    "merino": {
+      "product": "Merino Crew · 6 variantes",
+      "missing": "HS code + país de origem",
+      "cost": "atrasos na alfândega em pedidos para a UE"
+    },
+    "cap": {
+      "product": "Everyday Cap",
+      "missing": "Tipo de produto, 3 metafields",
+      "cost": "invisível para compradores de IA"
+    },
+    "caption": "Dados de exemplo, marcados como tais — nunca inventamos estudos de caso. Seu relatório vem da sua loja."
+  },
+  "how": {
+    "kicker": "Como funciona",
+    "title": "De chutar para saber, em três passos",
+    "scan": {
+      "title": "Analisar",
+      "body": "Nota gratuita mais a lista completa de buracos — precificados em dinheiro sempre que a aritmética permite."
+    },
+    "enrich": {
+      "title": "Enriquecer",
+      "body": "Ele preenche todo campo que dá para inferir; você aprova. Nada muda sem o seu sim."
+    },
+    "ready": {
+      "title": "Continuar pronto",
+      "body": "Cada produto novo é conferido no upload. A nota se mantém — para sempre, sem você correr atrás."
+    },
+    "footer": "Auditoria → aprovação → autonomia conquistada. É assim que todo app da Leaf funciona."
+  },
+  "cta": {
+    "title": "Rode a análise gratuita. Veja sua nota.",
+    "sub": "Uma lista, todos os apps que a Leaf vai lançar — você é o primeiro da fila em todos. Os lojistas do começo têm linha direta com o fundador e voz no que a gente constrói.",
+    "offerLabel": "Oferta de lojista fundador",
+    "offer": "As primeiras {spots, number} lojas levam o plano mais alto pelo preço do plano do meio — travado para sempre.",
+    "noteLive": "Imagens mudas já dá para resolver hoje. <link>O Image Voice está no ar — rode essa análise agora →</link>",
+    "noteNext": "Caixa preso no estoque? <link>O Reorder Engine está chegando →</link>"
+  }
+}

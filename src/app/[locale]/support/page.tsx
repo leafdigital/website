@@ -6,12 +6,19 @@ import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Faq } from "@/components/faq";
 import { Button } from "@/components/ui/button";
 import { APP_NAME, SUPPORT_EMAIL } from "@/lib/constants";
+import { localeMetadata } from "@/lib/metadata";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("support");
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "support" });
   return {
     title: t("meta.title"),
     description: t("meta.description", { appName: APP_NAME }),
+    ...localeMetadata("/support", locale),
   };
 }
 

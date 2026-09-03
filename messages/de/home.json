@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "title": "Dein Geld versteckt sich",
+    "description": "Dein Shopify, dein 3PL und deine Tabelle erzählen drei verschiedene Geschichten. Leaf baut kleine, scharfe Shopify-Apps, die das Geld in den Lücken finden — und die Arbeit dann erledigen."
+  },
+  "hero": {
+    "badge": "Image Voice ist im Shopify App Store live",
+    "headline": "Dein Geld<br></br><accent>versteckt sich.</accent>",
+    "subhead": "Dein Shopify, dein 3PL und deine Tabelle erzählen drei verschiedene Geschichten. Und in den Lücken versteckt sich das Geld.",
+    "ctaPrimary": "Shop kostenlos scannen",
+    "ctaSecondary": "Die Apps ansehen",
+    "finePrint": "Für immer kostenloser Scan · Keine Kreditkarte · Deine Zahl in Minuten"
+  },
+  "inventory": {
+    "title": "Verfügbarer Bestand · gleiches SKU-Set, gleicher Tag",
+    "shopify": "Shopify",
+    "threePl": "Dein 3PL",
+    "spreadsheet": "Deine Tabelle",
+    "units": "{count, number} Einheiten",
+    "gap": "Die Lücke",
+    "gapValue": "{units, number} Einheiten · ~{dollars, number, ::currency/USD precision-integer}",
+    "caption": "Beispieldaten — dein Scan entsteht aus deinem Shop."
+  },
+  "villain": {
+    "kicker": "Kommt dir bekannt vor?",
+    "title": "Du prüfst drei Dashboards und weißt immer noch nicht, welche Zahl stimmt.",
+    "sub": "Dafür hast du keine Marke aufgebaut. Es scheitert nie an einer Funktion — es scheitert an den Nahtstellen. Niemand hält die Karte, also versteckt sich das Geld zwischen den Systemen.",
+    "one": "Kapital gebunden in Ware, die niemand bestellen wollte",
+    "two": "Verkäufe verloren durch Ausverkäufe, die kein System je erfasst",
+    "three": "Rückerstattungswellen, die auf PO-Anzahlungen prallen, ohne dass du sie kommen siehst",
+    "four": "Sync-Fehler, die du Monate zu spät entdeckst",
+    "closer": "Alles Teure ist unsichtbar. Das ist der Gegner — und deshalb hat ihn noch nie ein einzelnes Dashboard erwischt."
+  },
+  "plan": {
+    "kicker": "Der Plan",
+    "title": "Drei Schritte zwischen dir und dem versteckten Geld",
+    "connect": {
+      "title": "Verbinden",
+      "body": "Leaf verbindet deine Systeme und zeigt dir in Dollar, wo sie sich widersprechen. Keine Meinungen — Arithmetik."
+    },
+    "shadow": {
+      "title": "Schattenlauf",
+      "body": "30 Tage lang „genau das hätte ich getan.“ Gerettetes Geld, schwarz auf weiß belegt — dein Shop ist die Fallstudie."
+    },
+    "run": {
+      "title": "Laufen lassen",
+      "body": "Freigabe mit einem Klick, dann setzt du deine Schwelle und bekommst deine Zeit zurück. Autonomie wird verdient, nie vorausgesetzt."
+    }
+  },
+  "suite": {
+    "kicker": "Die Suite",
+    "title": "Der Plan, real geworden",
+    "sub": "Kleine, scharfe Apps. Jede findet Geld in einer bestimmten Naht — und erledigt die Arbeit dann selbst.",
+    "live": "LIVE",
+    "lab": "IM LABOR",
+    "imageVoice": {
+      "description": "Deine Bilder schweigen — für Google, für KI-Shopper, für Screenreader. Kostenloser Scan, eine echte Beschreibung für jedes Bild.",
+      "cta": "App ansehen →"
+    },
+    "hiddenMargin": {
+      "description": "Versteckte Margen killen Unternehmen. Dein Katalog hat Löcher — fehlende Kosten, HS codes, Herkunftsländer. Ein Bereitschafts-Score, jede Lücke in Dollar beziffert.",
+      "cta": "Auf die Warteliste →"
+    },
+    "reorderEngine": {
+      "description": "Neun Apps prognostizieren deinen Bestand. Keine einzige schickt die PO. Wir bauen die fehlende letzte Meile — erst im Schattenlauf bewiesen.",
+      "cta": "Auf die Warteliste →"
+    }
+  },
+  "contrast": {
+    "withoutLabel": "Ohne Leaf",
+    "withoutBody": "Das Quartal endet wie immer: „Wo ist das Geld hin?“ Noch eine Nacht mit Tabellen, noch ein Satz Zahlen, die nicht zusammenpassen.",
+    "withLabel": "Mit Leaf",
+    "withBody": "Du öffnest eine E-Mail pro Woche, siehst die Zahlen aufgehen und baust weiter an dem, wofür du die Firma gegründet hast."
+  },
+  "cta": {
+    "title": "Installier den kostenlosen Scanner. Sieh, was sich versteckt.",
+    "sub": "Wir zeigen dir nicht die Zahlen von jemand anderem. Wir zeigen dir deine — kostenlos, in Minuten, bevor du irgendetwas entscheidest.",
+    "button": "Kostenlosen Scan starten",
+    "note": "Hidden Margin und Reorder Engine sind im Labor. <link>Auf die Warteliste →</link>"
+  }
+}

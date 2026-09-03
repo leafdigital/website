@@ -1,18 +1,40 @@
 # Leaf Digital — website
 
-Business website for Leaf Digital (leafdigital.co): the apps portfolio, thesis
-narrative, and agency services. Next.js 16 (App Router) + Tailwind v4.
+Business website for Leaf Digital (leafdigital.co): the apps portfolio and the
+thesis behind it. Next.js 16 (App Router) + Tailwind v4, six locales.
+
+## Pages
+
+| Route             | What it is                                            |
+| ----------------- | ----------------------------------------------------- |
+| `/`               | The suite. Hero, the villain, the plan, the apps grid |
+| `/image-voice`    | The live app — free audit, pricing, FAQ               |
+| `/hidden-margin`  | In the lab — readiness score, sample report, waitlist |
+| `/reorder-engine` | Coming soon — the trust ladder, waitlist              |
+| `/privacy`        | Tier-3 document (MDX per locale)                      |
+| `/support`        | Utility copy + FAQ                                    |
+
+English is unprefixed (`/image-voice`); every other locale carries its segment
+(`/de/image-voice`). Old `/en/…` URLs redirect to the short form. Never build
+a locale URL by hand — `Link` and `getPathname` own the shape, and
+`src/lib/metadata.ts` is the only place a canonical or hreflang set is built.
+`src/lib/routes.ts` is the one route table the sitemap and the nav both derive
+from. `/apps`, `/services`
+and `/blog` were retired with the v3 rebuild — the homepage `#apps` grid is
+the only index of the portfolio.
+
+Page copy lives in `messages/{locale}/{page}.json`, never in TSX
+(`docs/i18n.md` §4). Sample figures and offer counts live in
+`src/lib/constants.ts` — they are all expected to change.
 
 ## Context
 
 - Replaces the static v1 site (repo: archive-site-v1-static) — which stays LIVE
   until domain cutover. Do not break it; do not archive it before cutover.
-- Milestone 1 (blocks the alt-text app's Sep 5 App Store submission):
-  /apps/alt-text landing page, /privacy, /support — deployed on a preview
-  domain so the URLs exist for the submission.
-- Milestone 2: port homepage positioning + the AI-shopping-agent widget + lead
-  form from the v1 site (check what the current form posts to first), then
-  domain cutover, then archive the v1 repo.
+- Milestone 1 (blocks Image Voice's App Store submission): the /image-voice
+  landing page, /privacy, /support — deployed on a preview domain so the URLs
+  exist for the submission.
+- Milestone 2: domain cutover, then archive the v1 repo.
 - Milestone 3: umbrella build-out — Products-primary IA, email capture.
 - Content library (LinkedIn posts, salvaged docs): private repo leafdigital/business.
 
@@ -23,7 +45,9 @@ npm install && npm run dev
 ```
 
 Scripts: `dev` / `build` / `start` / `lint` / `typecheck` / `format` /
-`format:check`. Husky + lint-staged format and lint staged files on commit.
+`format:check` / `i18n:check` / `i18n:stamp`. Husky + lint-staged format and
+lint staged files on commit. `build` runs `i18n:check` first, so a missing or
+stale translation fails the build rather than shipping a half-English page.
 
 ## Brand
 

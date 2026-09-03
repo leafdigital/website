@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "title": "Votre trésorerie est piégée dans le stock",
+    "description": "Neuf apps prévoient votre stock Shopify. Aucune n’envoie le PO. Reorder Engine construit le dernier kilomètre manquant — prouvé en observation sur vos propres commandes d’abord."
+  },
+  "hero": {
+    "badge": "Reorder Engine · bientôt · liste d’attente ouverte",
+    "kicker": "La trésorerie piégée tue les marques",
+    "headline": "Votre trésorerie est piégée dans le <accent>stock.</accent>",
+    "subhead": "Trop de rotations lentes, des ruptures sur les best-sellers — et c’est vous qui repassez commande à 23 h. Vous n’avez pas monté une marque pour réconcilier des tableurs la nuit.",
+    "ctaPrimary": "Rejoindre la liste",
+    "ctaSecondary": "Comment la confiance se mérite",
+    "finePrint": "Les {spots, number} premières boutiques obtiennent le tarif Charter, bloqué à vie."
+  },
+  "gap": {
+    "forecastCount": "{count, number}",
+    "forecast": "apps prévoient votre stock",
+    "sendCount": "{count, number}",
+    "send": "envoient le PO",
+    "caption": "Tous les acteurs en place s’arrêtent à « recommander → l’humain clique ». On construit le dernier kilomètre manquant — avec prudence."
+  },
+  "blind": {
+    "kicker": "Jour de réappro",
+    "title": "Là où les fondateurs avancent à l’aveugle",
+    "cash": {
+      "label": "LE PIÈGE À TRÉSORERIE",
+      "statement": "De la trésorerie enterrée dans les rotations lentes pendant que les best-sellers sont en rupture"
+    },
+    "spot": {
+      "label": "L’ANGLE MORT",
+      "statement": "Le tableur ne distingue pas « peu de demande » de « rien à vendre »"
+    },
+    "night": {
+      "label": "LE BOULOT DE 23 H",
+      "statement": "Personne ne surveille quand ça casse — sauf vous, la nuit"
+    }
+  },
+  "why": {
+    "title": "Pourquoi personne n’envoie le PO ?",
+    "sub": "Parce qu’un bon de commande engage de l’argent réel — et ça demande une confiance qu’aucun outil de prévision n’a méritée. Alors on construit la confiance d’abord : l’app fait ses preuves sur vos propres commandes, en observation, avant de toucher à quoi que ce soit."
+  },
+  "ladder": {
+    "kicker": "L’échelle de confiance",
+    "title": "L’autonomie se mérite, elle ne se présume jamais",
+    "shadow": {
+      "title": "Observer",
+      "body": "30 jours de chaque PO qu’elle aurait envoyé, consignés comme preuve permanente — face à vos vraies commandes, avant de toucher à quoi que ce soit."
+    },
+    "approve": {
+      "title": "Valider",
+      "body": "Elle rédige le vrai PO — MOQ, paliers de prix, arrondis au carton. Vous cliquez sur envoyer."
+    },
+    "autonomy": {
+      "title": "Mériter l’autonomie",
+      "body": "Seulement dans les limites que vous fixez, avec des coupe-circuits — et seulement si l’historique en observation le mérite. C’est vous qui commandez."
+    },
+    "footer": "Audit → validation → autonomie méritée. C’est ainsi que fonctionne chaque app Leaf — et celle-ci en est l’expression la plus aboutie."
+  },
+  "cta": {
+    "title": "Rejoignez la liste. Regardez-la faire ses preuves d’abord.",
+    "sub": "Une seule liste, toutes les apps Leaf à venir — vous êtes en tête de file pour toutes. Les {spots, number} premières boutiques obtiennent le tarif Charter, bloqué à vie.",
+    "note": "Les images muettes, ça se règle déjà aujourd’hui. <link>Image Voice est en ligne — lancez l’analyse maintenant →</link>"
+  }
+}
