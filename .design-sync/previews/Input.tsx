@@ -19,7 +19,7 @@ export const EmailCapture = () => (
 export const States = () => (
   <div className="flex max-w-xs flex-col gap-3">
     <Input placeholder="Empty" />
-    <Input defaultValue="hello@leafdigital.co" />
+    <Input defaultValue="hello@leafdigital.io" />
     <Input defaultValue="not-an-email" aria-invalid="true" />
     <Input placeholder="Disabled" disabled />
   </div>

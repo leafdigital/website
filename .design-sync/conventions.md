@@ -1,6 +1,6 @@
 # Building with the Leaf Digital design system
 
-These are the components behind leafdigital.co — a Shopify app studio's
+These are the components behind leafdigital.io — a Shopify app studio's
 marketing site. Small surface, opinionated brand rules. Read this before
 composing a screen.
 

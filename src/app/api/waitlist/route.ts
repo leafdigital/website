@@ -54,7 +54,7 @@ export async function POST(request: Request) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      from: "Leaf waitlist <waitlist@leafdigital.co>",
+      from: "Leaf waitlist <waitlist@leafdigital.io>",
       to: [SUPPORT_EMAIL],
       subject: `Waitlist: ${email}`,
       text: `${email} joined the waitlist from ${source}.`,

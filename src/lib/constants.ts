@@ -7,18 +7,18 @@
 export const APP_NAME = "Image Voice";
 
 export const SITE_NAME = "Leaf Digital";
-export const SITE_URL = "https://www.leafdigital.co";
-export const SUPPORT_EMAIL = "hello@leafdigital.co";
+export const SITE_URL = "https://www.leafdigital.io";
+export const SUPPORT_EMAIL = "hello@leafdigital.io";
 
 /**
- * False until domain cutover: the v1 site owns leafdigital.co, and search
- * engines must not index this deploy before then. Flipped by setting
+ * False until domain cutover: the v1 site still answers on leafdigital.co,
+ * and search engines must not index this deploy before then. Flipped by setting
  * NEXT_PUBLIC_SITE_INDEXABLE=true on the Vercel project (cutover checklist).
  */
 export const SITE_INDEXABLE = process.env.NEXT_PUBLIC_SITE_INDEXABLE === "true";
 
 /**
- * GA4 property for leafdigital.co.
+ * GA4 property for leafdigital.io.
  *
  * Not secret — a measurement ID ships in the page source by definition, so
  * it lives here with the other site facts rather than in an env var. What IS
