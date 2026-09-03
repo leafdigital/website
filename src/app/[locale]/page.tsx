@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
-import { AppCard, type AppCardData } from "@/components/app-card";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { DataCard } from "@/components/data-card";
 import { HeroSplit } from "@/components/hero-split";
 import { CtaBand } from "@/components/layout/cta-band";
 import { Section, SectionHeading } from "@/components/layout/section";
 import { StatementRows } from "@/components/layout/statement-rows";
-import { StepsRow } from "@/components/steps-row";
 import { Button } from "@/components/ui/button";
 import { PillBadge } from "@/components/ui/pill-badge";
 import { Link } from "@/i18n/navigation";
 import { SAMPLE } from "@/lib/constants";
 import { localeMetadata } from "@/lib/metadata";
+import { PlanTimeline } from "./plan-timeline";
+import { SuiteIndex } from "./suite-index";
 
 export async function generateMetadata({
   params,
@@ -30,46 +30,25 @@ export async function generateMetadata({
 }
 
 /** The page is a schema; `messages/{locale}/home.json` fills it. */
-const steps = ["connect", "shadow", "run"] as const;
 const villainRows = ["one", "two", "three", "four"] as const;
 
+/**
+ * The homepage, v2 — the same argument as v3, told as one descent.
+ *
+ * The routing is the honest part and it survives the redesign: the hero
+ * sends you to the one app you can install today, and the closing band
+ * sends you to the waitlist for the one this page spends its middle
+ * describing. We do not point a "run the free scan" button at a scanner
+ * that is still in the lab.
+ */
 export default function Home() {
   const t = useTranslations("home");
   const { inventory } = SAMPLE;
 
-  const apps: (AppCardData & { featured: boolean })[] = [
-    {
-      name: "Image Voice",
-      status: "live",
-      statusLabel: t("suite.live"),
-      description: t("suite.imageVoice.description"),
-      href: "/image-voice",
-      cta: t("suite.imageVoice.cta"),
-      featured: true,
-    },
-    {
-      name: "Hidden Margin",
-      status: "lab",
-      statusLabel: t("suite.lab"),
-      description: t("suite.hiddenMargin.description"),
-      href: "/hidden-margin",
-      cta: t("suite.hiddenMargin.cta"),
-      featured: false,
-    },
-    {
-      name: "Reorder Engine",
-      status: "lab",
-      statusLabel: t("suite.lab"),
-      description: t("suite.reorderEngine.description"),
-      href: "/reorder-engine",
-      cta: t("suite.reorderEngine.cta"),
-      featured: false,
-    },
-  ];
-
   return (
     <>
-      {/* 1 — Hero. The visual is the argument: three systems, one SKU set. */}
+      {/* 1 — Hero. The visual is the argument: three systems, one SKU set,
+          reconciling themselves while you read the headline. */}
       <HeroSplit
         badge={
           <PillBadge>
@@ -92,37 +71,40 @@ export default function Home() {
         }
         sub={t("hero.subhead")}
         cta={
-          <>
-            <Button asChild size="lg">
-              <TrackedLink
-                href="/image-voice"
-                event="cta_scan_click"
-                eventProps={{ location: "home-hero" }}
-              >
-                {t("hero.ctaPrimary")}
-              </TrackedLink>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="secondary"
-              className="shadow-none"
+          /* One CTA. A second button here would have to point at something
+             that is not installable yet — the fine print below does that
+             work in sentences instead. */
+          <Button
+            asChild
+            size="lg"
+            /* The label is a sentence, not a verb — on a phone it has to be
+               allowed to wrap rather than push the hero column sideways. */
+            className="h-auto min-h-[52px] max-w-full py-3 text-center whitespace-normal sm:h-[52px] sm:py-0 sm:whitespace-nowrap"
+          >
+            <TrackedLink
+              href="/image-voice"
+              event="cta_scan_click"
+              eventProps={{ location: "home-hero" }}
             >
-              <TrackedLink
-                href="/#apps"
-                event="cta_app_view"
-                eventProps={{ location: "home-hero-secondary" }}
-              >
-                {t("hero.ctaSecondary")}
-              </TrackedLink>
-            </Button>
-          </>
+              {t("hero.ctaPrimary")}
+            </TrackedLink>
+          </Button>
         }
         finePrint={t("hero.finePrint")}
         visual={
           <DataCard
+            float
             title={t("inventory.title")}
-            caption={t("inventory.caption")}
+            caption={t.rich("inventory.caption", {
+              link: (chunks) => (
+                <Link
+                  href="/hidden-margin"
+                  className="text-brand-800 font-semibold"
+                >
+                  {chunks}
+                </Link>
+              ),
+            })}
             rows={[
               {
                 label: t("inventory.shopify"),
@@ -149,7 +131,8 @@ export default function Home() {
         }
       />
 
-      {/* 2 — The villain. One dark band per page; this is the page's. */}
+      {/* 2 — The villain. One dark band per page; this is the page's, and
+          v2 deliberately left its layout alone. */}
       <Section tone="dark">
         <SectionHeading
           tone="dark"
@@ -170,37 +153,40 @@ export default function Home() {
         </p>
       </Section>
 
-      {/* 3 — The plan. Three steps, divided by rules rather than cards. */}
-      <Section>
-        <SectionHeading kicker={t("plan.kicker")} title={t("plan.title")} />
-        <StepsRow
-          className="mt-[60px]"
-          steps={steps.map((key) => ({
-            title: t(`plan.${key}.title`),
-            body: t(`plan.${key}.body`),
-          }))}
+      {/* 3 — The plan. A descent down a drawn spine, because the order is
+          the argument: autonomy comes last and has to be earned. */}
+      {/* `overflow-x-clip`, not `hidden`: the steps slide in from their own
+          side, and a step whose row already touches the content edge would
+          otherwise put 30px of horizontal scroll on the page for the length
+          of its reveal. Clip does not make a scroll container, so nothing
+          else in the section changes. */}
+      <Section className="overflow-x-clip sm:pt-[120px]">
+        <SectionHeading
+          align="center"
+          kicker={t("plan.kicker")}
+          title={t("plan.title")}
         />
+        <PlanTimeline />
       </Section>
 
       {/* 4 — The suite. The only index of the portfolio; there is no /apps. */}
       <Section id="apps" className="scroll-mt-16 pt-5 sm:pt-5">
         <SectionHeading
+          align="center"
           kicker={t("suite.kicker")}
           title={t("suite.title")}
           sub={t("suite.sub")}
         />
-        <ul data-reveal-group className="mt-14 grid gap-[18px] md:grid-cols-3">
-          {apps.map((app) => (
-            <li key={app.name} className="flex">
-              <AppCard app={app} featured={app.featured} />
-            </li>
-          ))}
-        </ul>
+        <SuiteIndex />
       </Section>
 
-      {/* 5 — The two futures, side by side. */}
+      {/*
+       * 5 — The two futures, side by side. No reveal, deliberately: after a
+       * page of things that draw and slide themselves in, two plain cards
+       * that are simply THERE is the loudest thing left.
+       */}
       <Section className="pt-0 sm:pt-0">
-        <div data-reveal-group className="grid gap-[18px] md:grid-cols-2">
+        <div className="grid gap-[18px] md:grid-cols-2">
           <div className="border-hairline bg-surface-muted rounded-xl border p-10">
             <p className="text-fine text-ink-faint font-bold tracking-[0.05em] uppercase">
               {t("contrast.withoutLabel")}
@@ -220,15 +206,17 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* 6 — The one thing to do. */}
+      {/* 6 — The one thing to do. Waitlist-first: the scan this page argues
+          for is the one that is still in the lab. */}
       <CtaBand
         title={t("cta.title")}
         sub={t("cta.sub")}
         action={
           <Button asChild size="lg" variant="onDark" className="shadow-on-dark">
             <TrackedLink
-              href="/image-voice"
-              event="cta_scan_click"
+              href="/hidden-margin#waitlist"
+              data-motion="dot"
+              event="cta_app_view"
               eventProps={{ location: "home-cta" }}
             >
               {t("cta.button")}
@@ -237,7 +225,7 @@ export default function Home() {
         }
         note={t.rich("cta.note", {
           link: (chunks) => (
-            <Link href="/hidden-margin" className="font-semibold text-white">
+            <Link href="/image-voice" className="font-semibold text-white">
               {chunks}
             </Link>
           ),

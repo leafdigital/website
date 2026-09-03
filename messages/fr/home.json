@@ -7,9 +7,8 @@
     "badge": "Image Voice est en ligne sur le Shopify App Store",
     "headline": "Votre argent<br></br>se <accent>cache.</accent>",
     "subhead": "Votre Shopify, votre 3PL et votre tableur racontent trois histoires différentes. Et l’argent se cache dans les écarts.",
-    "ctaPrimary": "Analyser ma boutique",
-    "ctaSecondary": "Voir les apps",
-    "finePrint": "Analyse gratuite à vie · Sans carte bancaire · Votre chiffre en quelques minutes"
+    "ctaPrimary": "Analysez vos images gratuitement — Image Voice est en ligne →",
+    "finePrint": "Notre première app est en ligne : Image Voice, l’analyse des images muettes. Hidden Margin — l’analyse qui chiffre en euros chaque trou de votre catalogue — arrive ensuite. Les premiers inscrits sont les premiers avertis."
   },
   "inventory": {
     "title": "Stock disponible · mêmes SKU, même jour",
@@ -19,7 +18,7 @@
     "units": "{count, number} unités",
     "gap": "L’écart",
     "gapValue": "{units, number} unités · ~{dollars, number, ::currency/USD precision-integer}",
-    "caption": "Données d’exemple — votre analyse est construite à partir de votre boutique."
+    "caption": "Hidden Margin + Reorder Engine — au labo. Voilà ce que l’analyse vous montrera. <link>→</link>"
   },
   "villain": {
     "kicker": "Ça vous parle ?",
@@ -73,9 +72,9 @@
     "withBody": "Vous ouvrez un email par semaine, vous voyez les chiffres tomber juste, et vous retournez construire ce pour quoi vous avez monté la boîte."
   },
   "cta": {
-    "title": "Installez l’analyse gratuite. Voyez ce qui se cache.",
-    "sub": "On ne vous montrera pas les chiffres de quelqu’un d’autre. On vous montrera les vôtres — gratuitement, en quelques minutes, avant que vous décidiez quoi que ce soit.",
-    "button": "Lancer l’analyse gratuite",
-    "note": "Hidden Margin et Reorder Engine sont au labo. <link>Rejoindre la liste d’attente →</link>"
+    "title": "Le scanner d’écarts est au labo. Soyez les premiers à voir ce qui se cache.",
+    "sub": "Nous ne vous montrerons pas les chiffres de quelqu’un d’autre. Nous vous montrerons les vôtres — le jour où l’analyse pourra tourner sur votre boutique. Une seule liste, pour toutes les prochaines apps Leaf.",
+    "button": "Rejoindre la liste d’attente",
+    "note": "En attendant, disponible aujourd’hui : commencez là où toute boutique fuit en premier. <link>Lancer l’analyse d’images gratuite →</link>"
   }
 }

@@ -7,9 +7,8 @@
     "badge": "Image Voice ist im Shopify App Store live",
     "headline": "Dein Geld<br></br><accent>versteckt sich.</accent>",
     "subhead": "Dein Shopify, dein 3PL und deine Tabelle erzählen drei verschiedene Geschichten. Und in den Lücken versteckt sich das Geld.",
-    "ctaPrimary": "Shop kostenlos scannen",
-    "ctaSecondary": "Die Apps ansehen",
-    "finePrint": "Für immer kostenloser Scan · Keine Kreditkarte · Deine Zahl in Minuten"
+    "ctaPrimary": "Bilder kostenlos scannen — Image Voice ist live →",
+    "finePrint": "Unsere erste App ist live: Image Voice, der Scan für stumme Bilder. Hidden Margin — der Scan, der jede Lücke in deinem Katalog in Euro beziffert — kommt als Nächstes. Wer zuerst auf der Liste steht, erfährt es zuerst."
   },
   "inventory": {
     "title": "Verfügbarer Bestand · gleiches SKU-Set, gleicher Tag",
@@ -19,7 +18,7 @@
     "units": "{count, number} Einheiten",
     "gap": "Die Lücke",
     "gapValue": "{units, number} Einheiten · ~{dollars, number, ::currency/USD precision-integer}",
-    "caption": "Beispieldaten — dein Scan entsteht aus deinem Shop."
+    "caption": "Hidden Margin + Reorder Engine — im Labor. Genau das wird dir der Scan zeigen. <link>→</link>"
   },
   "villain": {
     "kicker": "Kommt dir bekannt vor?",
@@ -73,9 +72,9 @@
     "withBody": "Du öffnest eine E-Mail pro Woche, siehst die Zahlen aufgehen und baust weiter an dem, wofür du die Firma gegründet hast."
   },
   "cta": {
-    "title": "Installier den kostenlosen Scanner. Sieh, was sich versteckt.",
-    "sub": "Wir zeigen dir nicht die Zahlen von jemand anderem. Wir zeigen dir deine — kostenlos, in Minuten, bevor du irgendetwas entscheidest.",
-    "button": "Kostenlosen Scan starten",
-    "note": "Hidden Margin und Reorder Engine sind im Labor. <link>Auf die Warteliste →</link>"
+    "title": "Der Lücken-Scanner ist im Labor. Sei die Erste, die sieht, was sich versteckt.",
+    "sub": "Wir zeigen dir nicht die Zahlen von irgendwem. Wir zeigen dir deine — an dem Tag, an dem der Scan auf deinem Shop laufen kann. Eine Liste, alle kommenden Leaf-Apps.",
+    "button": "Auf die Warteliste",
+    "note": "Heute schon live: Fang da an, wo jeder Shop zuerst leckt. <link>Kostenlosen Bilder-Scan starten →</link>"
   }
 }

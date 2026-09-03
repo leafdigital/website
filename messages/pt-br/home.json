@@ -7,9 +7,8 @@
     "badge": "O Image Voice já está na Shopify App Store",
     "headline": "Seu dinheiro<br></br>está <accent>escondido.</accent>",
     "subhead": "Seu Shopify, seu 3PL e sua planilha contam três histórias diferentes. E o dinheiro se esconde nas brechas.",
-    "ctaPrimary": "Analisar minha loja de graça",
-    "ctaSecondary": "Ver os apps",
-    "finePrint": "Análise gratuita para sempre · Sem cartão de crédito · Seu número em minutos"
+    "ctaPrimary": "Analise suas imagens de graça — o Image Voice já está no ar →",
+    "finePrint": "Nosso primeiro app está no ar: Image Voice, a análise de imagens mudas. O Hidden Margin — a análise que coloca preço em cada buraco do seu catálogo — vem em seguida. Quem entra primeiro na lista fica sabendo primeiro."
   },
   "inventory": {
     "title": "Estoque disponível · mesmos SKUs, mesmo dia",
@@ -19,7 +18,7 @@
     "units": "{count, number} unidades",
     "gap": "A diferença",
     "gapValue": "{units, number} unidades · ~{dollars, number, ::currency/USD precision-integer}",
-    "caption": "Dados de exemplo — sua análise é feita a partir da sua loja."
+    "caption": "Hidden Margin + Reorder Engine — no laboratório. É isto que a análise vai te mostrar. <link>→</link>"
   },
   "villain": {
     "kicker": "Soa familiar?",
@@ -73,9 +72,9 @@
     "withBody": "Você abre um email por semana, vê os números fecharem e volta a construir aquilo que te fez abrir a empresa."
   },
   "cta": {
-    "title": "Instale o analisador gratuito. Veja o que está escondido.",
-    "sub": "Não vamos te mostrar os números de outra pessoa. Vamos mostrar os seus — de graça, em minutos, antes de você decidir qualquer coisa.",
-    "button": "Rodar a análise gratuita",
-    "note": "Hidden Margin e Reorder Engine estão no laboratório. <link>Entre na lista de espera →</link>"
+    "title": "O scanner de buracos está no laboratório. Seja a primeira a ver o que está escondido.",
+    "sub": "A gente não vai te mostrar os números de outra pessoa. Vai mostrar os seus — no dia em que a análise puder rodar na sua loja. Uma lista só, para todos os próximos apps da Leaf.",
+    "button": "Entrar na lista de espera",
+    "note": "Enquanto isso, já disponível hoje: comece por onde toda loja vaza primeiro. <link>Rodar a análise de imagens grátis →</link>"
   }
 }

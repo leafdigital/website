@@ -72,7 +72,9 @@ export function HeroSplit({
               </div>
             ) : null}
             {finePrint ? (
-              <p className="text-fine text-ink-faint">{finePrint}</p>
+              <p className="text-fine text-ink-faint max-w-[520px] leading-[1.6]">
+                {finePrint}
+              </p>
             ) : null}
           </div>
           {visual ? (

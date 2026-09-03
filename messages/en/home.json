@@ -7,9 +7,8 @@
     "badge": "Image Voice is live on the Shopify App Store",
     "headline": "Your money<br></br>is <accent>hiding.</accent>",
     "subhead": "Your Shopify, your 3PL, and your spreadsheet all tell a different story. And the money hides in the gaps.",
-    "ctaPrimary": "Scan my store free",
-    "ctaSecondary": "See the apps",
-    "finePrint": "Free forever scan · No credit card · Your number in minutes"
+    "ctaPrimary": "Scan your images free — Image Voice is live →",
+    "finePrint": "Our first app is live: Image Voice, the silent-images scan. Hidden Margin — the scan that prices every gap in your catalog in dollars — ships next. First in line hears first."
   },
   "inventory": {
     "title": "Inventory on hand · same SKU set, same day",
@@ -19,7 +18,7 @@
     "units": "{count, number} units",
     "gap": "The gap",
     "gapValue": "{units, number} units · ~{dollars, number, ::currency/USD precision-integer}",
-    "caption": "Sample data — your scan is built from your store."
+    "caption": "Hidden Margin + Reorder Engine — in the lab. This is what the scan will show you. <link>→</link>"
   },
   "villain": {
     "kicker": "Sound familiar?",
@@ -73,9 +72,9 @@
     "withBody": "You open one email a week, watch the numbers tie out, and go back to building the thing you started the company to build."
   },
   "cta": {
-    "title": "Install the free scanner. See what’s hiding.",
-    "sub": "We won’t show you someone else’s numbers. We’ll show you yours — free, in minutes, before you decide anything.",
-    "button": "Run the free scan",
-    "note": "Hidden Margin and Reorder Engine are in the lab. <link>Join the waitlist →</link>"
+    "title": "The gap scanner is in the lab. Be first to see what’s hiding.",
+    "sub": "We won’t show you someone else’s numbers. We’ll show you yours — the day the scan can run on your store. One list, every coming Leaf app.",
+    "button": "Join the waitlist",
+    "note": "Meanwhile, live today: start where every store leaks first. <link>Run the free image scan →</link>"
   }
 }
