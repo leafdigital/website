@@ -1,7 +1,7 @@
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { routing, type Locale } from "@/i18n/routing";
-import { absoluteUrl } from "./metadata";
+import { absoluteUrl, languageTag } from "./metadata";
 import type { AppRoute } from "./routes";
 
 /**
@@ -32,6 +32,9 @@ export function documentLanguages(doc: string, href: AppRoute) {
   return Object.fromEntries(
     routing.locales
       .filter((locale: Locale) => hasDocument(locale, doc))
-      .map((locale: Locale) => [locale, absoluteUrl(href, locale)]),
+      .map((locale: Locale) => [
+        languageTag(locale),
+        absoluteUrl(href, locale),
+      ]),
   );
 }

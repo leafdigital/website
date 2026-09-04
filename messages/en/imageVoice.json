@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Your images are silent",
-    "description": "Silent images don’t sell — not to Google, not to AI shoppers, not to anyone who needs them read aloud. Free forever audit, then a real description for every image in your Shopify store."
+    "title": "Shopify Alt Text App — Graded, Not Counted | Image Voice",
+    "description": "Free alt text audit for Shopify. Graded, not counted — see how many of your images are actually described, then get a real description for every one."
   },
   "hero": {
     "badge": "Live on the Shopify App Store",
@@ -66,7 +66,7 @@
   },
   "checkbox": {
     "kicker": "The checkbox problem",
-    "title": "100% coverage, still silent.",
+    "title": "100% alt text coverage, still silent.",
     "sub": "Every bloated SEO suite has an alt-text checkbox. A checkbox stuffs titles into alt fields and calls it done. It doesn’t write like this:",
     "beforeLabel": "Before — “covered”",
     "beforeOne": "alt=\"IMG_2041-final-v3.jpg\"",
@@ -78,8 +78,8 @@
     "closer": "That’s why the free audit <lead>grades instead of counting</lead>: missing / junk / weak / good, with a vision-checked sample. Typical result: “62 of 100 covered images don’t describe the image.” Run it on your store and read the sample yourself — the grade is the proof, not our word for it."
   },
   "how": {
-    "kicker": "How it works",
-    "title": "Scan. Write. Speak.",
+    "kicker": "Scan. Write. Speak.",
+    "title": "How Image Voice writes your alt text",
     "scan": {
       "title": "Scan",
       "body": "Free, on install, no setup. Your silent-image count in one number — graded, not counted."
@@ -131,7 +131,7 @@
       "body": "Descriptions written in your store’s own language — EN, DE, FR, ES, IT, NL, PT. A German customer’s screen reader speaks German."
     },
     "five": {
-      "title": "The accessibility box: closed before anyone comes asking.",
+      "title": "Alt text and EAA / ADA accessibility: the box closed before anyone comes asking.",
       "body": "EAA in the EU, ADA in the US. Your most visible gap — thousands of unreadable images — closed, with an audit trail to show for it."
     },
     "six": {

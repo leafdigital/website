@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Vos images sont muettes",
-    "description": "Les images muettes ne vendent pas — ni à Google, ni aux acheteurs IA, ni à ceux qui ont besoin qu’on les leur lise. Audit gratuit à vie, puis une vraie description pour chaque image de votre boutique Shopify."
+    "title": "Alt text pour Shopify — évalué, pas compté | Image Voice",
+    "description": "Audit d’alt text gratuit pour Shopify. Évalué, pas compté : voyez combien de vos images sont vraiment décrites, puis obtenez une vraie description pour chacune."
   },
   "hero": {
     "badge": "En ligne sur le Shopify App Store",
@@ -66,7 +66,7 @@
   },
   "checkbox": {
     "kicker": "Le problème de la case cochée",
-    "title": "100 % de couverture, toujours muettes.",
+    "title": "100 % de couverture d’alt text, toujours muettes.",
     "sub": "Toutes les grosses suites SEO ont leur case « alt text ». Une case, ça fourre les titres dans les champs alt et ça se dit terminé. Ça n’écrit pas ceci :",
     "beforeLabel": "Avant — « couvert »",
     "beforeOne": "alt=\"IMG_2041-final-v3.jpg\"",
@@ -78,8 +78,8 @@
     "closer": "C’est pour ça que l’audit gratuit <lead>note au lieu de compter</lead> : manquant / déchet / faible / bon, avec un échantillon vérifié à la vision. Résultat typique : « 62 images “couvertes” sur 100 ne décrivent pas l’image. » Lancez-le sur votre boutique et lisez l’échantillon vous-même — la note est la preuve, pas notre parole."
   },
   "how": {
-    "kicker": "Comment ça marche",
-    "title": "Analyser. Écrire. Parler.",
+    "kicker": "Analyser. Écrire. Parler.",
+    "title": "Comment Image Voice écrit votre alt text",
     "scan": {
       "title": "Analyser",
       "body": "Gratuit, dès l’installation, sans configuration. Le nombre de vos images muettes en un chiffre — noté, pas compté."
@@ -131,7 +131,7 @@
       "body": "Des descriptions écrites dans la langue de votre boutique — EN, DE, FR, ES, IT, NL, PT. Le lecteur d’écran d’un client allemand parle allemand."
     },
     "five": {
-      "title": "Le dossier accessibilité : bouclé avant que quiconque vienne poser la question.",
+      "title": "Alt text et accessibilité EAA / ADA : le dossier bouclé avant que quiconque vienne poser la question.",
       "body": "L’EAA dans l’UE, l’ADA aux États-Unis. Votre faille la plus visible — des milliers d’images illisibles — refermée, avec une piste d’audit à l’appui."
     },
     "six": {

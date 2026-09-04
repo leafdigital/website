@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { TrackedExternalLink } from "@/components/analytics/tracked-external-link";
 import { TrackedLink } from "@/components/analytics/tracked-link";
@@ -12,9 +12,16 @@ import { StatementRows } from "@/components/layout/statement-rows";
 import { StepsRow } from "@/components/steps-row";
 import { Button } from "@/components/ui/button";
 import { PillBadge } from "@/components/ui/pill-badge";
+import { JsonLd } from "@/components/seo/json-ld";
 import { Link } from "@/i18n/navigation";
-import { APP_INSTALL_URL, SAMPLE } from "@/lib/constants";
-import { localeMetadata } from "@/lib/metadata";
+import { APP_INSTALL_URL, APP_NAME, SAMPLE, SITE_NAME } from "@/lib/constants";
+import { absoluteUrl, localeMetadata } from "@/lib/metadata";
+import {
+  breadcrumbs,
+  faqPage,
+  imageVoiceApplication,
+  organization,
+} from "@/lib/schema";
 import { Journey } from "./journey";
 import { PricingCards } from "./pricing-cards";
 import { SpecimenCard } from "./specimen-card";
@@ -28,7 +35,12 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "imageVoice" });
   return {
-    title: t("meta.title"),
+    /* `absolute` bypasses the layout's "%s — Leaf Digital" template. A title
+     * is the whole search result, and the strings in the locale files are
+     * written to be exactly that — appending a suffix pushes them past 60
+     * characters and truncates the words that were doing the work. Documents
+     * (/privacy) still take the template, which is what it is there for. */
+    title: { absolute: t("meta.title") },
     description: t("meta.description"),
     ...localeMetadata("/image-voice", locale),
   };
@@ -91,13 +103,39 @@ function Aura({ className }: { className: string }) {
  */
 export default function ImageVoicePage() {
   const t = useTranslations("imageVoice");
+  const locale = useLocale();
   const { silentImages, totalImages } = SAMPLE;
+  /* Built once and used twice: the accordion renders these, the FAQPage node
+   * describes them. One source, so the two can never disagree. */
+  const faq = faqKeys.map((key) => ({
+    q: t(`faq.${key}.q`),
+    a: t(`faq.${key}.a`),
+  }));
   const lead = (chunks: React.ReactNode) => (
     <strong className="text-foreground font-semibold">{chunks}</strong>
   );
 
   return (
     <>
+      <JsonLd
+        graph={[
+          organization(),
+          imageVoiceApplication({
+            locale,
+            description: t("meta.description"),
+            planNames: {
+              audit: t("pricing.audit.name"),
+              keeper: t("pricing.keeper.name"),
+              curator: t("pricing.curator.name"),
+            },
+          }),
+          faqPage(absoluteUrl("/image-voice", locale), faq),
+          breadcrumbs(locale, [
+            { name: SITE_NAME, route: "/" },
+            { name: APP_NAME, route: "/image-voice" },
+          ]),
+        ]}
+      />
       {/* 1 — Hero. Number-free by design: the one number on this screen is
           the one inside the ring. */}
       <HeroSplit
@@ -322,10 +360,7 @@ export default function ImageVoicePage() {
           collapseAfter={6}
           moreLabel={t("faq.showAll", { count: faqKeys.length })}
           lessLabel={t("faq.showFewer")}
-          items={faqKeys.map((key) => ({
-            q: t(`faq.${key}.q`),
-            a: t(`faq.${key}.a`),
-          }))}
+          items={faq}
         />
       </Section>
 

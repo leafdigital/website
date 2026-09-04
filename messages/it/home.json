@@ -1,13 +1,13 @@
 {
   "meta": {
-    "title": "I tuoi soldi si nascondono",
+    "title": "Leaf Digital — app Shopify che trovano i tuoi soldi",
     "description": "Shopify, il tuo 3PL e il tuo foglio di calcolo raccontano tre storie diverse. Leaf costruisce app Shopify piccole e affilate che trovano i soldi nascosti nelle crepe — e poi fanno il lavoro."
   },
   "hero": {
     "badge": "Image Voice è online sullo Shopify App Store",
     "headline": "I tuoi soldi<br></br>si <accent>nascondono.</accent>",
     "subhead": "Shopify, il tuo 3PL e il tuo foglio di calcolo raccontano tre storie diverse. E i soldi si nascondono nelle crepe.",
-    "ctaPrimary": "Scansiona le tue immagini gratis →",
+    "ctaPrimary": "Dove si nascondono i tuoi? ↓",
     "finePrint": "La nostra prima app è online: Image Voice, la scansione delle immagini mute. Hidden Margin — la scansione che dà un prezzo a ogni buco del tuo catalogo — arriva subito dopo. Chi è primo in lista lo sa per primo."
   },
   "inventory": {
@@ -54,7 +54,7 @@
     "lab": "IN LABORATORIO",
     "imageVoice": {
       "description": "Le tue immagini sono mute — per Google, per gli acquirenti AI, per gli screen reader. Scansione gratuita, una descrizione vera per ogni immagine.",
-      "cta": "Guarda l’app →"
+      "cta": "Scansiona le tue immagini gratis →"
     },
     "hiddenMargin": {
       "description": "I margini nascosti uccidono le aziende. Il tuo catalogo ha dei buchi — costi mancanti, HS code, paesi d’origine. Un unico punteggio di prontezza, con le lacune quantificate in dollari.",

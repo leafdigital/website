@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Tus imágenes están mudas",
-    "description": "Las imágenes mudas no venden — ni a Google, ni a los compradores de IA, ni a quien necesita que se las lean en voz alta. Auditoría gratis para siempre y, después, una descripción real para cada imagen de tu tienda Shopify."
+    "title": "Alt text para Shopify — evaluado, no contado | Image Voice",
+    "description": "Auditoría de alt text gratis para Shopify. Evaluada, no contada: mira cuántas de tus imágenes están descritas de verdad y consigue una descripción real para cada una."
   },
   "hero": {
     "badge": "Ya en la Shopify App Store",
@@ -66,7 +66,7 @@
   },
   "checkbox": {
     "kicker": "El problema de la casilla",
-    "title": "100% de cobertura, y siguen mudas.",
+    "title": "100% de cobertura de alt text, y siguen mudas.",
     "sub": "Toda suite de SEO inflada trae su casilla de alt text. Una casilla mete los títulos en el campo alt y da el trabajo por hecho. No escribe así:",
     "beforeLabel": "Antes — “cubierto”",
     "beforeOne": "alt=\"IMG_2041-final-v3.jpg\"",
@@ -78,8 +78,8 @@
     "closer": "Por eso la auditoría gratuita <lead>califica en vez de contar</lead>: falta / basura / floja / buena, con una muestra verificada por visión. Resultado típico: “62 de 100 imágenes cubiertas no describen la imagen”. Pásala por tu tienda y lee la muestra tú mismo: la nota es la prueba, no nuestra palabra."
   },
   "how": {
-    "kicker": "Cómo funciona",
-    "title": "Analiza. Escribe. Habla.",
+    "kicker": "Analiza. Escribe. Habla.",
+    "title": "Cómo Image Voice escribe tu alt text",
     "scan": {
       "title": "Analiza",
       "body": "Gratis, nada más instalar, sin configuración. Tu recuento de imágenes mudas en un número — calificado, no contado."
@@ -131,7 +131,7 @@
       "body": "Descripciones escritas en el idioma de tu tienda — EN, DE, FR, ES, IT, NL, PT. El lector de pantalla de un cliente alemán habla alemán."
     },
     "five": {
-      "title": "La casilla de accesibilidad: cerrada antes de que nadie venga a preguntar.",
+      "title": "Alt text y accesibilidad EAA / ADA: la casilla cerrada antes de que nadie venga a preguntar.",
       "body": "EAA en la UE, ADA en EE. UU. Tu punto débil más visible — miles de imágenes ilegibles — cerrado, y con un registro de auditoría que lo demuestra."
     },
     "six": {

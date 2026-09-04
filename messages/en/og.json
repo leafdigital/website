@@ -13,5 +13,9 @@
   "reorderEngine": {
     "kicker": "Reorder Engine",
     "title": "Your cash is trapped in inventory."
+  },
+  "support": {
+    "kicker": "Support",
+    "title": "Answered by the person who built it."
   }
 }

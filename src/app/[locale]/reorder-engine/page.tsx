@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { HeroSplit } from "@/components/hero-split";
@@ -10,10 +10,12 @@ import { PullQuote } from "@/components/pull-quote";
 import { StepsRow } from "@/components/steps-row";
 import { Button } from "@/components/ui/button";
 import { PillBadge } from "@/components/ui/pill-badge";
+import { JsonLd } from "@/components/seo/json-ld";
 import { WaitlistForm } from "@/components/waitlist-form";
 import { Link } from "@/i18n/navigation";
-import { OFFER, SAMPLE } from "@/lib/constants";
+import { OFFER, SAMPLE, SITE_NAME, REORDER_ENGINE_NAME } from "@/lib/constants";
 import { localeMetadata } from "@/lib/metadata";
+import { breadcrumbs, organization } from "@/lib/schema";
 
 export async function generateMetadata({
   params,
@@ -23,7 +25,12 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "reorderEngine" });
   return {
-    title: t("meta.title"),
+    /* `absolute` bypasses the layout's "%s — Leaf Digital" template. A title
+     * is the whole search result, and the strings in the locale files are
+     * written to be exactly that — appending a suffix pushes them past 60
+     * characters and truncates the words that were doing the work. Documents
+     * (/privacy) still take the template, which is what it is there for. */
+    title: { absolute: t("meta.title") },
     description: t("meta.description"),
     ...localeMetadata("/reorder-engine", locale),
   };
@@ -64,9 +71,19 @@ function GapCard() {
 
 export default function ReorderEnginePage() {
   const t = useTranslations("reorderEngine");
+  const locale = useLocale();
 
   return (
     <>
+      <JsonLd
+        graph={[
+          organization(),
+          breadcrumbs(locale, [
+            { name: SITE_NAME, route: "/" },
+            { name: REORDER_ENGINE_NAME, route: "/reorder-engine" },
+          ]),
+        ]}
+      />
       {/* 1 — Hero. Coming soon is a status, so the badge stays neutral. */}
       <HeroSplit
         badge={<PillBadge tone="neutral">{t("hero.badge")}</PillBadge>}

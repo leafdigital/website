@@ -6,6 +6,14 @@
 /** The live app. Named in the v3 handoff; replaces the old placeholder. */
 export const APP_NAME = "Image Voice";
 
+/**
+ * The two apps still in the lab. Named here for the same reason APP_NAME is:
+ * they are brand terms, never translated (i18n/glossary.json), and structured
+ * data has to call them something.
+ */
+export const HIDDEN_MARGIN_NAME = "Hidden Margin";
+export const REORDER_ENGINE_NAME = "Reorder Engine";
+
 export const SITE_NAME = "Leaf Digital";
 export const SITE_URL = "https://www.leafdigital.io";
 export const SUPPORT_EMAIL = "hello@leafdigital.io";

@@ -13,5 +13,9 @@
   "reorderEngine": {
     "kicker": "Reorder Engine",
     "title": "Dein Geld steckt im Lager fest."
+  },
+  "support": {
+    "kicker": "Support",
+    "title": "Antwort von der Person, die die App gebaut hat."
   }
 }

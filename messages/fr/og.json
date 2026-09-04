@@ -13,5 +13,9 @@
   "reorderEngine": {
     "kicker": "Reorder Engine",
     "title": "Votre trésorerie est piégée dans le stock."
+  },
+  "support": {
+    "kicker": "Assistance",
+    "title": "La réponse vient de qui a construit l’app."
   }
 }

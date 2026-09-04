@@ -13,5 +13,9 @@
   "reorderEngine": {
     "kicker": "Reorder Engine",
     "title": "La tua liquidità è bloccata in magazzino."
+  },
+  "support": {
+    "kicker": "Assistenza",
+    "title": "Ti risponde chi ha costruito l’app."
   }
 }
