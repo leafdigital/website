@@ -38,3 +38,28 @@ export function documentLanguages(doc: string, href: AppRoute) {
       ]),
   );
 }
+
+/**
+ * Metadata for an English-only content page.
+ *
+ * The page renders in every locale so a language switch never 404s, but only
+ * one of those six URLs is a real page: the other five serve the same English
+ * words. So every locale points its canonical at the English URL and the
+ * hreflang set says the same thing. Six URLs advertising themselves as six
+ * pages, all carrying identical English copy, is the duplicate-content
+ * problem this site has otherwise been careful not to have.
+ *
+ * This is the tier-3 fallback rule (docs/i18n.md §8.5) taken to its end: a
+ * locale with no translation is not advertised — and when NO locale has one,
+ * the honest advertisement is a single English page.
+ */
+export function englishOnlyMetadata(route: AppRoute) {
+  const canonical = absoluteUrl(route, routing.defaultLocale);
+  return {
+    canonical,
+    languages: {
+      [languageTag(routing.defaultLocale)]: canonical,
+      "x-default": canonical,
+    },
+  };
+}

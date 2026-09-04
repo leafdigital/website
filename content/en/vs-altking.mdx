@@ -1,0 +1,117 @@
+import { APP_NAME, PRICING } from "@/lib/constants";
+
+export const meta = {
+  title: "Image Voice vs AltKing",
+  updated: "2026-09-04",
+};
+
+AltKing is free, it has 188 reviews at five stars, and it carries the Built for
+Shopify badge. Before anything else on this page: for a lot of stores it is the
+right answer, and we will show you how to tell whether yours is one of them.
+
+## What AltKing actually does
+
+From its own App Store listing, its method is:
+
+> Create alt text using variables (variants, product title, type, tags)
+
+That is a template. You choose the shape once — product title, then variant,
+then type — and AltKing fills it in across the catalogue and keeps it synced
+daily as you upload. It is fast, it is free, and it never writes anything
+strange, because it never writes anything new.
+
+Here is what that produces for a product with six photographs:
+
+```
+alt="Moss Green Organic Cotton Tee - Small - T-Shirts"
+alt="Moss Green Organic Cotton Tee - Small - T-Shirts"
+alt="Moss Green Organic Cotton Tee - Small - T-Shirts"
+```
+
+Six images. One sentence, three times over, and it is the sentence already in
+the `<h1>`, the product title, and the breadcrumb.
+
+## When that is genuinely fine
+
+If your product photography is packshots — same garment, white background, front
+and back — then the product title honestly is close to a description, the six
+photographs really do contain the same information, and paying anybody for
+something better is paying for a difference your customers will not experience.
+
+**If that is your store, install AltKing and stop reading.** It is free and it
+is well built. We would rather you knew that than found out after paying us.
+
+## When it stops being fine
+
+The moment your images carry information the title does not.
+
+- A detail shot of the collar, the stitching, the hem
+- The fabric close-up somebody zooms into before they buy
+- On-model shots — fit, drape, scale against a person
+- Lifestyle and in-context photography
+- Anything in the theme: banners, sliders, section imagery, campaign art
+- Every image where the reason you shot it was that the title was not enough
+
+For those, a variable-built string is not a wrong description. It is not a
+description at all — it is the product title, announced again. A screen reader
+reads the same sentence six times. Google image search receives no information
+it did not already have from the page. An AI shopping agent parsing your
+catalogue as text sees one product attribute repeated, not six photographs.
+
+**A variable is not a description.** That is the entire difference, and it is
+the only claim on this page you need to check.
+
+## What {APP_NAME} does instead
+
+It looks at the image. Every one, individually, and writes roughly 125
+characters describing what is actually in the frame — which is also the length
+[Shopify's own guidance recommends](https://www.shopify.com/blog/image-alt-text),
+against a hard field limit of 512.
+
+```
+alt="Moss-green organic cotton tee folded flat, showing the ribbed collar and
+embroidered leaf at the hem"
+```
+
+Different image, different sentence. That is the whole product.
+
+And before it writes anything, it grades what you already have — including
+whatever AltKing has been filling in — four ways: **missing, junk, weak, good**,
+with a sample you read yourself. A template-filled field counts as covered in
+every tool on the store. The audit is the thing that tells you whether covered
+and described are the same word in your catalogue.
+
+## The honest trade
+
+| | AltKing | {APP_NAME} |
+| --- | --- | --- |
+| Price | Free | Audit free forever, then ${PRICING.keeper} or ${PRICING.curator}/mo |
+| Method | Variables from product data | Every image read individually |
+| Same product, six photos | One sentence, six times | Six sentences |
+| Grades existing alt text | No | Yes, free |
+| Theme and banner images | No | On Curator |
+| Reviews | 5.0 across 188 | None yet |
+| Built for Shopify | Yes | No |
+
+We are the newer, unproven, paid one. That is the trade, stated plainly, and on
+a store full of packshots it is not a trade worth making.
+
+## What to do about it
+
+**Run the free audit on what AltKing has already written.** No card, nothing
+written to your store, a graded answer on your own products in minutes.
+
+You will find out in one number whether your photographs are carrying
+information your alt text is throwing away. If they are not, AltKing is free and
+you should keep it — and you will have that in writing from the people who would
+rather have sold you something.
+
+<p className="text-ink-faint text-fine mt-10">
+  AltKing's features, rating and pricing above were taken from its{" "}
+  <a href="https://apps.shopify.com/alt-text-automator-by-starapps">
+    App Store listing
+  </a>{" "}
+  on 4 September 2026 and may have changed since. Check the listing before you
+  decide. AltKing is a trademark of its owner and this page is not affiliated
+  with or endorsed by them.
+</p>
