@@ -3,6 +3,37 @@ import { cn } from "@/lib/utils";
 export type FaqItem = { q: string; a: string };
 
 /**
+ * The disclosure caret.
+ *
+ * An SVG rather than a "⌄" glyph, because this thing rotates: a text
+ * character sits wherever its font's bearings put it inside the em box, so
+ * flipping it 180° moves the visible mark off the line it was aligned to —
+ * visibly wrong in one state, and usually in both. This path is centred on
+ * its own viewBox, so a half turn maps it exactly onto itself.
+ */
+function Caret({ className }: { className?: string }) {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 12 12"
+      fill="none"
+      className={cn(
+        "size-3 shrink-0 transition-transform duration-150 motion-reduce:transition-none",
+        className,
+      )}
+    >
+      <path
+        d="M2.5 4.25 6 7.75l3.5-3.5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+/**
  * One question. Every question in a list shares a `name`, which is what makes
  * the group behave as an accordion — the browser closes the open one when you
  * open another, with no script and no state. Browsers without support just
@@ -13,12 +44,7 @@ function Question({ item, group }: { item: FaqItem; group: string }) {
     <details name={group} className="border-hairline group border-t py-5">
       <summary className="text-foreground flex cursor-pointer list-none items-center justify-between gap-4 rounded-lg font-semibold marker:hidden [&::-webkit-details-marker]:hidden">
         {item.q}
-        <span
-          aria-hidden="true"
-          className="text-ink-faint transition-transform duration-150 group-open:rotate-180 motion-reduce:transition-none"
-        >
-          ⌄
-        </span>
+        <Caret className="text-ink-faint group-open:rotate-180" />
       </summary>
       <p className="text-muted-foreground mt-3 leading-[1.65]">{item.a}</p>
     </details>
@@ -87,12 +113,7 @@ export function Faq({
           <summary className="border-hairline text-brand-800 order-2 flex cursor-pointer list-none items-center justify-center gap-2 border-t py-5 text-[15px] font-semibold marker:hidden [&::-webkit-details-marker]:hidden">
             <span className="group-open/more:hidden">{moreLabel}</span>
             <span className="hidden group-open/more:inline">{lessLabel}</span>
-            <span
-              aria-hidden="true"
-              className="transition-transform duration-150 group-open/more:rotate-180 motion-reduce:transition-none"
-            >
-              ⌄
-            </span>
+            <Caret className="group-open/more:rotate-180" />
           </summary>
           <div className="order-1">
             {hidden.map((item) => (
