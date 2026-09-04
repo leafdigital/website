@@ -1,0 +1,134 @@
+import { APP_NAME, PRICING } from "@/lib/constants";
+
+export const meta = {
+  title: "Image Voice vs AltText.ai",
+  updated: "2026-09-04",
+};
+
+Nobody arrives on this page because AltText.ai wrote bad alt text.
+
+They arrive for one of two reasons, and both of them are sitting in AltText.ai's
+own review page. The first is the meter. The second is worse: the number stopped
+meaning anything.
+
+## The two reasons people go looking
+
+A merchant, in a two-star review on AltText.ai's listing, describing the second
+one:
+
+> we had some discrepancy issues between the "number of images without alt text"
+> and the "number of images resolved" — those values never matched the number of
+> actual issues found, or the number of issues actually resolved
+
+That is the whole problem with coverage as a metric, written by somebody who
+paid to discover it. A tool that counts filled fields will tell you that you are
+done. It cannot tell you whether the field it filled says anything, because it
+never graded what was there — and neither does any other alt text app on the
+Shopify App Store, including this one until you run the audit.
+
+The first reason is the meter. Another two-star review, and the developer's own
+reply underneath it:
+
+> concerned about inflated credit usage
+
+> you just ran out of credits faster than the plan allowed
+
+And a third merchant, on the size of the job:
+
+> we will need several months to work through it
+
+Several months, for a backlog that already exists, on a plan you are already
+paying for. That is not a complaint about quality. It is arithmetic.
+
+## The arithmetic
+
+AltText.ai's Shopify plans, from its App Store listing, checked 4 September
+2026:
+
+| Plan | Price | Images included |
+| --- | --- | --- |
+| Pay as you go | $3 per 50 images | first 25 free |
+| Bronze | $5/month | 100 per month |
+| Silver | $19/month | 500 per month |
+| Gold | $59/month | 2,000 per month |
+
+A 3,000-image catalogue does not fit in the top plan in a single month. At $59 a
+month it takes two, and you are paying for the meter the whole time you wait.
+
+{APP_NAME} prices the backlog instead of the image. Keeper is
+${PRICING.keeper} a month and Curator is ${PRICING.curator}, and both open with
+a **First Sweep** that writes the backlog up front, in days — not a monthly
+allowance you drip your own catalogue through. The monthly allowance after that
+only has to keep up with what you upload next.
+
+## Where AltText.ai is better, and it genuinely is
+
+This is not a page about a bad app. AltText.ai is good, it is well reviewed, and
+on three counts it beats us outright:
+
+- **It has been judged.** 4.5 stars across 142 reviews at the time of writing.
+  {APP_NAME} has none yet. If your shortlist rule is "nothing without a track
+  record," that rule is a good rule and it excludes us.
+- **It carries the Built for Shopify badge.** We do not. That badge is Shopify's
+  assessment of performance, design and integration quality, and it is not
+  nothing.
+- **130+ languages.** We write in seven — English, German, French, Spanish,
+  Italian, Dutch and Portuguese. If your store sells in Japanese, this comparison
+  is already over and you should install theirs.
+
+It also does analyse the image. AltText.ai's own description of its method is
+that its AI "automatically analyzes each image on your site," and the reviews
+back that up. Anyone telling you it just copies your product title into the alt
+field is selling you something.
+
+We know the temptation, because it is the assumption we started from. We have
+opened catalogues where every description began "image of" and ended in a
+keyword pile — worse than empty, because it looks done. That is a real thing,
+and it is what {APP_NAME} was built against. It is not what AltText.ai does, and
+a comparison page that pretended otherwise would be the same kind of dishonest
+as a coverage number that counts empty fields as done.
+
+## So what is actually different
+
+One thing, and everything else follows from it.
+
+**AltText.ai writes alt text. {APP_NAME} grades it first, then writes it.**
+
+The audit is free, forever, and it is the part that has no equivalent. It reads
+what is already in your alt fields — whatever wrote it, us, them, an SEO suite,
+or an intern in 2019 — and sorts it four ways: **missing, junk, weak, good**,
+with a vision-checked sample you read yourself. A typical result reads "62 of
+100 covered images don't describe the image." That is a sentence a count cannot
+produce.
+
+Three more differences, all downstream of it:
+
+- **Nothing reaches your store unapproved.** Every description goes through a
+  keyboard queue built for 200 decisions in one sitting — approve, edit, skip.
+  Auto-pilot exists, and it is offered only once your own approval record
+  justifies it.
+- **Thirty-day undo, on every plan including free.** Full before → after trail.
+- **The quality is gated, not trusted.** Writing is checked against a fixed
+  golden set, so no update can quietly degrade what you approved, and a weekly
+  re-scan keeps your number true.
+
+## What to do about it
+
+Do not take our word for the difference. Take theirs.
+
+**Run the free audit on the alt text AltText.ai already wrote for you.** It costs
+nothing, it needs no card, and nothing is written to your store. You will get a
+grade on their output within minutes, on your own products.
+
+If the grade comes back good — and on a well-run AltText.ai install it may — then
+you have your answer, you have it for free, and we will be the ones telling you
+to stay where you are.
+
+<p className="text-ink-faint text-fine mt-10">
+  Competitor pricing, ratings and features above were taken from the{" "}
+  <a href="https://apps.shopify.com/alttext-ai">AltText.ai App Store listing</a>{" "}
+  and <a href="https://alttext.ai/">alttext.ai</a> on 4 September 2026, and may
+  have changed since. Check the listing before you decide. AltText.ai is a
+  trademark of its owner and this page is not affiliated with or endorsed by
+  them.
+</p>

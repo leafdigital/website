@@ -274,5 +274,16 @@
     "title": "Kostenlosen Scan starten. Deine Zahl sehen.",
     "sub": "Zwei Zukünfte: Dein Katalog bleibt stumm, während der Bild-Traffic und die KI-Shopper nebenan einkaufen — oder jedes Bild spricht, und du denkst nie wieder daran.",
     "button": "Im Shopify App Store installieren"
+  },
+  "compare": {
+    "kicker": "Bevor du dich entscheidest",
+    "title": "Lies das zuerst — auch das, was dich woanders hinschicken könnte",
+    "guide": "Der komplette Leitfaden zu Alt-Text auf Shopify",
+    "guideSub": "Wie guter Alt-Text aussieht, wo er sich in deinem Shop überall versteckt, und ein Zehn-Minuten-Audit von Hand.",
+    "altTextAi": "Image Voice gegen AltText.ai",
+    "altTextAiSub": "Ihre Preise, ihre Bewertungen und die drei Dinge, die sie besser machen.",
+    "altKing": "Image Voice gegen AltKing",
+    "altKingSub": "Kostenlos und gut gebaut. Für einen Shop voller Freisteller ist das die richtige Antwort.",
+    "englishNote": "Diese Seiten gibt es nur auf Englisch."
   }
 }

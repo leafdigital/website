@@ -164,3 +164,39 @@ export function breadcrumbs(
     })),
   };
 }
+
+/**
+ * A dated, sourced document — the guide and the two comparisons.
+ *
+ * `Article` rather than `BlogPosting`: these are reference pages that get
+ * revised, not posts that get published once, and `dateModified` is the field
+ * that matters for both. The date comes from the MDX `meta.updated`, which is
+ * the same string the page prints at the top, so the machine-readable date and
+ * the human-readable one cannot disagree.
+ */
+export function article({
+  url,
+  headline,
+  description,
+  updated,
+  locale,
+}: {
+  url: string;
+  headline: string;
+  description: string;
+  updated: string;
+  locale: string;
+}): JsonLdNode {
+  return {
+    "@type": "Article",
+    "@id": `${url}#article`,
+    headline,
+    description,
+    url,
+    dateModified: updated,
+    inLanguage: languageTag(locale),
+    author: ref(ORGANIZATION_ID),
+    publisher: ref(ORGANIZATION_ID),
+    isPartOf: ref(WEBSITE_ID),
+  };
+}

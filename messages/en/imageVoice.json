@@ -274,5 +274,16 @@
     "title": "Run the free scan. See your number.",
     "sub": "Two futures: your catalog stays mute while the image traffic and the AI shoppers go next door — or every image speaks, and you never think about it again.",
     "button": "Install on the Shopify App Store"
+  },
+  "compare": {
+    "kicker": "Before you decide",
+    "title": "Read these first — including the ones that might send you elsewhere",
+    "guide": "The complete guide to alt text on Shopify",
+    "guideSub": "What good looks like, everywhere it hides in your store, and a ten-minute audit you can run by hand.",
+    "altTextAi": "Image Voice vs AltText.ai",
+    "altTextAiSub": "Their pricing, their reviews, and the three things they do better.",
+    "altKing": "Image Voice vs AltKing",
+    "altKingSub": "They are free and well built. For a store full of packshots, that is the right answer.",
+    "englishNote": "These are in English only."
   }
 }

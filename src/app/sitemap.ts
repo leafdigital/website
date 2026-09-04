@@ -1,6 +1,11 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
-import { indexedRoutes, lastModified, type AppRoute } from "@/lib/routes";
+import {
+  contentRoutes,
+  indexedRoutes,
+  lastModified,
+  type AppRoute,
+} from "@/lib/routes";
 import { absoluteUrl, alternateLanguages } from "@/lib/metadata";
 
 /* Same builder the canonical tags use — a sitemap that lists a URL the page
@@ -16,12 +21,26 @@ const url = (locale: string, route: AppRoute) => absoluteUrl(route, locale);
  * `lastmod` is the field it does read, so that is the field this file carries
  * — sourced from `lastModified` in src/lib/routes.ts.
  */
+const modified = (route: AppRoute) =>
+  new Date(`${lastModified[route]}T00:00:00Z`);
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  return routing.locales.flatMap((locale) =>
+  const localized = routing.locales.flatMap((locale) =>
     indexedRoutes.map((route) => ({
       url: url(locale, route),
-      lastModified: new Date(`${lastModified[route]}T00:00:00Z`),
+      lastModified: modified(route),
       alternates: { languages: alternateLanguages(route) },
     })),
   );
+
+  /* The content layer is English-only (see `contentRoutes`), so it is listed
+   * once rather than six times. Submitting five URLs that serve the same
+   * English words would be asking a crawler to pick a canonical we have
+   * already picked for it. */
+  const content = contentRoutes.map((route) => ({
+    url: url(routing.defaultLocale, route),
+    lastModified: modified(route),
+  }));
+
+  return [...localized, ...content];
 }

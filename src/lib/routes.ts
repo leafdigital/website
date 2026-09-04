@@ -17,6 +17,37 @@ export const indexedRoutes = [
 ] as const;
 
 /**
+ * The content layer: routes that exist in English only.
+ *
+ * Six marketing pages is a ceiling. These are the pages that answer a buying
+ * query rather than a branded one — the guide somebody reads before they
+ * shortlist, and the two comparisons they read while shortlisting.
+ *
+ * English-only is a decision, not a backlog item. Two reasons, and the second
+ * is the one that matters. The queries are English: somebody searching
+ * "alttext.ai alternative" is typing a competitor's English brand name.
+ * And every sentence on a comparison page is a factual claim about a company
+ * that can change its pricing on a Tuesday — six translations of a claim is
+ * six copies to keep true, and the stale ones are the ones nobody notices.
+ *
+ * They still RENDER in every locale, because a visitor who switches language
+ * mid-journey must not hit a 404. What they do not do is get advertised as
+ * six pages: each locale's copy declares the English URL as its canonical,
+ * and the sitemap lists the English URL alone. See `contentCanonical`.
+ */
+export const contentRoutes = [
+  "/guides/shopify-alt-text",
+  "/image-voice/vs-alttext-ai",
+  "/image-voice/vs-altking",
+] as const;
+
+export type ContentRoute = (typeof contentRoutes)[number];
+
+export function isContentRoute(route: AppRoute): route is ContentRoute {
+  return (contentRoutes as readonly string[]).includes(route);
+}
+
+/**
  * Nothing is reachable-but-unlisted any more: /apps, /services and /blog were
  * retired with the v3 rebuild. The homepage `#apps` grid is the only index of
  * the portfolio, and each app owns its own route.
@@ -24,7 +55,9 @@ export const indexedRoutes = [
 export const unlistedRoutes = [] as const;
 
 export type AppRoute =
-  (typeof indexedRoutes)[number] | (typeof unlistedRoutes)[number];
+  | (typeof indexedRoutes)[number]
+  | (typeof contentRoutes)[number]
+  | (typeof unlistedRoutes)[number];
 
 /**
  * When each route's content last changed, `YYYY-MM-DD`.
@@ -46,4 +79,7 @@ export const lastModified: Record<AppRoute, string> = {
   "/reorder-engine": "2026-09-04",
   "/privacy": "2026-09-02",
   "/support": "2026-09-04",
+  "/guides/shopify-alt-text": "2026-09-04",
+  "/image-voice/vs-alttext-ai": "2026-09-04",
+  "/image-voice/vs-altking": "2026-09-04",
 };

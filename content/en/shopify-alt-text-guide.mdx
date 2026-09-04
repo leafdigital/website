@@ -1,0 +1,196 @@
+import { APP_NAME } from "@/lib/constants";
+
+export const meta = {
+  title: "Alt text for Shopify stores: the complete guide",
+  updated: "2026-09-04",
+};
+
+Nobody sits down to describe three thousand images.
+
+It is the job that gets deleted from every to-do list, every quarter, in every
+store — and because nobody is counting, you cannot even say how bad it is. This
+guide fixes the second half of that. By the end of it you will know what alt
+text is for, what a good one looks like, where every one of them lives in
+Shopify, and how to find out — in about ten minutes, with no app installed — how
+much of your catalogue is actually described.
+
+## Who reads your alt text
+
+Three audiences, and they want different things from the same sentence.
+
+**Google.** Image search only surfaces images it can read. An image with no
+description is not ranked badly; it is not in the race. Alt text is also how
+Google understands what a page is about when the page is mostly photographs,
+which on a product page it usually is.
+
+**AI shopping agents.** This is the newer one and it is moving fastest. An agent
+browsing your catalogue on a customer's behalf reads it as text. A silent image
+does not exist to it — and if the image was carrying the reason to buy, neither
+does the product.
+
+**Screen-reader users.** A person who cannot see your photograph hears your alt
+text, or hears "image", or hears the filename. This is the audience the law
+cares about, and the one that tells you what a good description sounds like: if
+it would be useless read aloud, it is useless.
+
+The three wants are less different than they look. Write the sentence that helps
+the person who cannot see the image, and you have written the one the other two
+want.
+
+## What Shopify itself says
+
+Worth knowing before anything else, because it settles several arguments.
+
+- **512 characters** is the hard limit on the product alt text field.
+- **125 characters or fewer** is Shopify's recommended length.
+- **Skip "image of."** Screen readers already announce that it is an image, so
+  the words are pure overhead, twice.
+- **Keywords only where they describe.** Work them in "only where they describe
+  the image, such as product type, colour, material, model name, or use case."
+  Stuffing is treated as a spam signal.
+- **Decorative images get an empty alt attribute** — `alt=""`, not a missing
+  one — so screen readers skip them instead of announcing a background swirl.
+
+Source: [How To Write Image Alt Text for SEO](https://www.shopify.com/blog/image-alt-text)
+and the [Shopify Help Center](https://help.shopify.com/en/manual/products/product-media/add-alt-text).
+
+For the standard behind the law, alt text is
+[WCAG Success Criterion 1.1.1, Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content),
+at Level A — the lowest conformance level, which is to say the least excusable
+one to fail.
+
+## What good looks like
+
+Same product, three descriptions.
+
+```
+alt="IMG_2041-final-v3.jpg"
+```
+
+Missing, effectively. This is a filename that leaked into a field.
+
+```
+alt="buy mens organic tee best price free shipping"
+```
+
+Junk. It describes nothing, it reads as spam to Google, and out loud it is
+gibberish. Note that both of these count as **covered** in every alt text tool
+on the Shopify App Store, including the audit inside our own app until it grades
+them.
+
+```
+alt="Moss Green Organic Cotton Tee - Small - T-Shirts"
+```
+
+Weak, and this is the interesting one, because it is what a template produces
+and it looks fine. It is the product title. A shopper reading the page already
+has it from the heading; a screen-reader user hears it once per photograph; and
+it is identical across all six images of the product, so five of the six carry
+no information at all.
+
+```
+alt="Moss-green organic cotton tee folded flat, showing the ribbed collar and
+embroidered leaf at the hem"
+```
+
+Good. It describes *this photograph* — the one the merchant chose to shoot
+because the title was not enough.
+
+## The five rules
+
+1. **Describe what is in the frame**, not what the product is called.
+2. **One image, one sentence.** If two images of a product share alt text, at
+   least one of them is undescribed.
+3. **Roughly 125 characters.** Long enough to be specific, short enough to be
+   heard.
+4. **Never open with "image of", "picture of", or "photo of."**
+5. **Empty `alt=""` for decoration.** Dividers, swirls, spacer images. Silence
+   is the correct description of something with nothing to say.
+
+A sixth, for context: the same photograph can need different alt text in
+different places. On the product page it is the garment; in a blog post about
+dyeing it might be the colour.
+
+## Where alt text lives in Shopify
+
+More places than most merchants expect, and the ones people miss are the ones
+that hold the biggest images.
+
+- **Product media.** Admin → Products → the product → click a media item →
+  alt text field → Save. This is the one everybody knows.
+- **Variant images.** Attached to the media item, so they inherit from the
+  product's media, but a variant-specific shot is its own image and deserves its
+  own sentence.
+- **Collection images.** Set on the collection, easy to forget entirely.
+- **Blog article images**, including the featured image.
+- **Theme images.** Banners, sliders, section imagery, campaign art. Admin →
+  Online Store → Themes → Customize → click the section → Edit below the image.
+  These are the largest, most prominent images on the store, and they are also
+  the ones most likely to be entirely undescribed, because they are not in the
+  product admin where people go looking.
+- **Theme-settings images.** Some themes hold images in settings rather than
+  sections. These cannot be reached by the Shopify API at all, which is worth
+  knowing before you evaluate any tool that claims to cover "everything."
+
+## The ten-minute self-audit
+
+No app. Do this before you evaluate any tool, including ours, because the number
+it gives you is the number every vendor's pitch has to beat.
+
+1. Open your store, right-click any product image, choose **Inspect**.
+2. Find the `<img>` tag and read its `alt` attribute.
+3. Do this for **twenty images**: five bestsellers' primary photos, five detail
+   or on-model shots, five theme or banner images, five blog images.
+4. Sort each into four buckets:
+   - **Missing** — empty or absent on a non-decorative image
+   - **Junk** — a filename, or keywords strung together
+   - **Weak** — the product title, or a template, or true of six images at once
+   - **Good** — describes this specific photograph
+5. Count the last bucket.
+
+Most stores discover something they were not expecting: coverage is high and
+description is low. Fields are full. The words in them are the product title.
+
+**That gap is the entire point of this guide.** Coverage is a count of non-empty
+fields. It is not a measure of whether anything was described, and every tool
+that reports a coverage percentage — ours included, until it grades — is
+reporting a number that can be 100% on a catalogue nobody can read.
+
+## Does this actually make you compliant?
+
+No tool can promise that, and any that does is one to walk away from.
+
+What is true: the **European Accessibility Act** has had ecommerce in scope
+since June 2025, web accessibility lawsuits in the US run into the thousands
+each year under the **ADA**, and unreadable images are the most visible,
+most easily automated-away gap on a typical storefront. Closing it with an audit
+trail is a materially better position than not. It is not a certificate, and
+this guide is not legal advice.
+
+## When to automate, and when not to
+
+**Do it by hand if** you have fewer than a few hundred images, or your catalogue
+is stable. Twenty images is an afternoon. Two hundred is a week of afternoons,
+and you will write better alt text than any tool because you know why you shot
+the photograph.
+
+**Automate if** the number is in the thousands, or new products land weekly, or
+you have tried twice already and the to-do line just moved to next quarter. At
+three thousand images the failure is not effort, it is that nothing grades what
+is already junk, nothing verifies each write, nothing catches the product you
+upload next Tuesday, and nobody is watching when it silently stops.
+
+Whatever you choose, judge it on the same four buckets you just used by hand.
+Ask any vendor: *does it grade what is already there, or only count it?* Most
+count.
+
+## Find out where your store stands
+
+Run the twenty-image audit above. It is free, it takes ten minutes, and it is
+yours whether or not you ever install anything.
+
+If the number comes back worse than you expected and the catalogue is too big to
+fix by hand, {APP_NAME} does the same four-bucket grade across your whole store
+— free, forever, no card, nothing written until you approve it. **Run the free
+scan and see your number.** If your alt text turns out to be fine, we will tell
+you that too.

@@ -48,6 +48,13 @@ export async function generateMetadata({
 
 const priceRows = ["traffic", "agentic", "accessibility"] as const;
 const steps = ["scan", "write", "speak"] as const;
+
+/** The content layer, in reading order: learn, then compare. */
+const comparisons = [
+  { href: "/guides/shopify-alt-text", key: "guide" },
+  { href: "/image-voice/vs-alttext-ai", key: "altTextAi" },
+  { href: "/image-voice/vs-altking", key: "altKing" },
+] as const;
 /**
  * The order is the reading order, and it is an argument: safety before
  * quality, quality before results, results before price. Someone who bails
@@ -362,6 +369,48 @@ export default function ImageVoicePage() {
           lessLabel={t("faq.showFewer")}
           items={faq}
         />
+      </Section>
+
+      {/* 8.5 — The content layer, linked from the one page it belongs to.
+          Two of these three send readers to a competitor if the competitor
+          is the better fit, which is the same argument the FAQ above makes
+          and the reason this block sits after it rather than in the nav. */}
+      <Section divided containerClassName="max-w-[800px]">
+        <SectionHeading
+          align="center"
+          kicker={t("compare.kicker")}
+          title={t("compare.title")}
+        />
+        <div data-reveal-group className="border-hairline mt-10 border-b">
+          {comparisons.map(({ href, key }) => (
+            <TrackedLink
+              key={href}
+              href={href}
+              data-reveal
+              event="cta_app_view"
+              eventProps={{ location: "image-voice-compare", page: key }}
+              className="group hover:bg-brand-50/50 border-hairline flex items-center justify-between gap-6 border-t px-2 py-6 transition-colors duration-200"
+            >
+              <span className="flex flex-col gap-1.5">
+                <span className="text-foreground text-[19px] font-semibold tracking-[-0.015em]">
+                  {t(`compare.${key}`)}
+                </span>
+                <span className="text-muted-foreground text-[15px] leading-[1.55]">
+                  {t(`compare.${key}Sub`)}
+                </span>
+              </span>
+              <span
+                aria-hidden="true"
+                className="text-brand-800 shrink-0 text-2xl transition-transform duration-200 group-hover:translate-x-1 motion-reduce:transition-none"
+              >
+                {"\u2192"}
+              </span>
+            </TrackedLink>
+          ))}
+        </div>
+        <p className="text-ink-faint text-fine mt-5 text-center">
+          {t("compare.englishNote")}
+        </p>
       </Section>
 
       {/* 9 — Install. Two futures, one button. */}
