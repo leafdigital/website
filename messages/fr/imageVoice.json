@@ -207,21 +207,73 @@
       "q": "Est-ce que ça peut casser ma boutique ?",
       "a": "Non. L’app est structurellement incapable de toucher autre chose que le champ alt, chaque écriture est vérifiée en la relisant, et chaque modification a 30 jours d’annulation sur toutes les offres — avec une trace complète avant → après. Elle n’écrase jamais des mots écrits par un humain, et les images des réglages de thème qu’elle ne peut pas atteindre sont signalées avec un lien direct plutôt que d’échouer en silence."
     },
-    "compliance": {
-      "q": "Est-ce que ça me met en conformité EAA / ADA ?",
-      "a": "Aucun outil ne peut le promettre, et on ne le fera pas. Ce que l’app fait, c’est refermer votre faille la plus visible — des milliers d’images illisibles — avec une piste d’audit à l’appui. L’EAA couvre l’ecommerce depuis juin 2025 dans l’UE ; les plaintes ADA touchent des milliers de boutiques américaines par an."
+    "speed": {
+      "q": "Est-ce que ça va ralentir ma boutique ?",
+      "a": "Non — l’app ne touche jamais à votre thème et n’ajoute aucun script à votre boutique. Elle écrit les champs alt via l’API Shopify, et rien d’autre. Zéro poids côté front, zéro impact sur les performances."
+    },
+    "existingAlt": {
+      "q": "Qu’advient-il de l’alt text que mon équipe a déjà écrit ?",
+      "a": "Rien, sauf si vous le décidez. L’app n’écrase jamais des mots écrits par un humain. L’audit note vos descriptions existantes — les bonnes restent, les faibles sont signalées avec une réécriture proposée, et chaque décision vous revient."
+    },
+    "access": {
+      "q": "À quoi a-t-elle besoin d’accéder ?",
+      "a": "Aux produits et à leurs images — c’est tout. Elle est structurellement incapable d’écrire ailleurs que dans le champ alt. Pas de commandes, pas de clients, pas de code de thème."
+    },
+    "uninstall": {
+      "q": "Que se passe-t-il si je désinstalle ?",
+      "a": "Les descriptions sont à vous — l’alt text vit dans votre boutique Shopify, pas dans notre app, donc tout ce que vous avez validé reste exactement où il est. Les données liées à votre boutique sont supprimées conformément aux webhooks d’effacement obligatoires de Shopify, dans les 48 heures suivant sa demande."
     },
     "spam": {
       "q": "L’alt text écrit par une IA, ce n’est pas du spam ?",
       "a": "Cette réputation est méritée — nous avons ouvert des catalogues où chaque description commençait par « image de » et finissait en tas de mots-clés, pire que vide parce que ça a l’air fait. C’est exactement contre ça qu’Image Voice est construit : il regarde chaque image, écrit environ 125 caractères uniques, ne commence jamais par « image de », et note le déchet déjà en place — pour que vous voyiez la différence sur votre propre boutique, gratuitement."
     },
+    "diy": {
+      "q": "Je ne peux pas simplement demander à ChatGPT d’écrire mes balises alt ?",
+      "a": "Pour 20 images ? Honnêtement, si. À 3 000, ça casse : rien ne note ce qui est déjà du déchet, rien ne vérifie chaque écriture, rien n’attrape le produit que vous mettrez en ligne mardi prochain, et personne ne regarde quand ça s’arrête en silence. Image Voice, c’est la différence entre écrire l’alt text une fois et ne plus avoir à y penser — noté, vérifié, annulable, pour toujours."
+    },
+    "rot": {
+      "q": "Comment savoir que la qualité ne va pas se dégrader une fois abonné ?",
+      "a": "Deux mécanismes. La qualité d’écriture est verrouillée contre un golden set fixe — aucune mise à jour ne peut dégrader en silence ce que vous avez validé. Et un re-scan hebdomadaire garde votre chiffre juste, en rattrapant ce qui échappe aux webhooks. La qualité du premier jour est celle du sixième mois, par construction."
+    },
+    "editing": {
+      "q": "Puis-je modifier ce qu’elle écrit ?",
+      "a": "Chaque description, avant qu’elle ne touche votre boutique — validez, modifiez ou passez, depuis une file au clavier conçue pour 200 décisions d’affilée. Et pendant 30 jours ensuite, tout reste annulable."
+    },
+    "matters": {
+      "q": "L’alt text compte-t-il vraiment pour les ventes ?",
+      "a": "De trois façons, pondérées honnêtement. La recherche d’images Google ne remonte que les images qu’elle peut lire — les images muettes ne sont même pas dans la course. Les agents d’achat IA lisent votre catalogue comme du texte ; une image non décrite n’existe pas pour eux. Et les clients au lecteur d’écran entendent vos produits, ou n’entendent rien. Nous ne vous dirons pas que ça multiplie votre trafic par dix — ça colmate une fuite qui vous coûte un peu, partout, tout le temps."
+    },
+    "compliance": {
+      "q": "Est-ce que ça me met en conformité EAA / ADA ?",
+      "a": "Aucun outil ne peut le promettre, et on ne le fera pas. Ce que l’app fait, c’est refermer votre faille la plus visible — des milliers d’images illisibles — avec une piste d’audit à l’appui. L’EAA couvre l’ecommerce depuis juin 2025 dans l’UE ; les plaintes ADA touchent des milliers de boutiques américaines par an."
+    },
     "languages": {
       "q": "Dans quelles langues écrit-elle ?",
       "a": "Celle de votre boutique : anglais, allemand, français, espagnol, italien, néerlandais et portugais. Votre SEO images fonctionne sur votre marché — et le lecteur d’écran d’un client allemand parle allemand."
     },
-    "howLong": {
-      "q": "Combien de temps avant que tout mon catalogue soit décrit ?",
-      "a": "Des jours, pas des mois. Les offres payantes incluent un First Sweep qui écrit votre arriéré d’emblée — le quota mensuel n’a plus qu’à suivre les nouvelles images. Pendant un essai gratuit, vous avez un balayage d’aperçu sur vos meilleures images ; le balayage complet se lance le jour où votre essai se convertit. Et si votre boutique dépasse ce que nos offres gèrent bien, on vous le dit avant que vous payiez et on vous propose une option accompagnée par le fondateur plutôt que de prendre votre argent."
+    "seoApp": {
+      "q": "J’ai déjà une app SEO qui inclut l’alt text.",
+      "a": "Lancez l’audit gratuit sur ce qu’elle a écrit — c’est le test honnête. La plupart des alt text « inclus » sont votre titre produit recopié dans le champ alt : 100 % de couverture, toujours muet. L’audit note au lieu de compter, donc vous verrez en quelques minutes si ce que vous avez décrit quoi que ce soit. Si c’est vraiment bon, c’est nous qui vous le dirons."
+    },
+    "freePlan": {
+      "q": "Comment le plan gratuit reste-t-il gratuit ?",
+      "a": "L’audit est notre marketing. Chaque analyse prouve le problème mieux que n’importe quelle publicité que nous pourrions écrire, et les utilisateurs gratuits qui jugent l’écriture sur leurs propres produits deviennent payants quand ils sont prêts — ou pas, et gardent l’audit pour toujours. Personne ne vous subventionne ; vous êtes le pipeline."
+    },
+    "firstSweep": {
+      "q": "C’est quoi un First Sweep, et que couvre l’allocation mensuelle ?",
+      "a": "Le First Sweep écrit votre retard existant d’un coup, en quelques jours — vous n’êtes pas rationné sur des mois. Ensuite, l’allocation mensuelle n’a plus qu’à suivre le rythme des nouvelles images. Sur Curator, le sweep couvre toute la boutique, thème compris."
+    },
+    "images": {
+      "q": "Quelles images sont couvertes — seulement les produits ?",
+      "a": "Keeper couvre votre catalogue produits. Curator couvre toute la boutique — images de thème, bannières, sliders, visuels de sections. L’audit vous montre les deux chiffres, pour que vous sachiez de quel palier votre boutique a réellement besoin avant de payer."
+    },
+    "founding": {
+      "q": "Pourquoi les {spots, number} premiers marchands ont-ils Curator à moitié prix à vie ?",
+      "a": "Parce que {spots, number} boutiques avec qui nous pouvons parler valent plus qu’une marge pleine en ce moment. Les Founding Curators verrouillent le prix pour toujours ; nous récupérons les retours et les données de référence qui rendent le produit meilleur. C’est tout le marché."
+    },
+    "hugeCatalog": {
+      "q": "Mon catalogue est énorme — plus de 20 000 images.",
+      "a": "Alors nos plans standard ne conviennent peut-être vraiment pas, et l’analyse vous le dira avant que vous ne payiez quoi que ce soit — avec une option accompagnée par le fondateur plutôt qu’une facture surprise. Nous préférons dire « pas nous » que prendre votre argent de travers."
     }
   },
   "cta": {

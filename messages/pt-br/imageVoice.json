@@ -207,21 +207,73 @@
       "q": "Isso pode quebrar minha loja?",
       "a": "Não. Ele é estruturalmente incapaz de tocar em qualquer coisa além do campo alt, toda escrita é conferida relendo o resultado e toda alteração tem 30 dias para desfazer, em qualquer plano — com trilha completa de antes → depois. Ele nunca sobrescreve palavras que uma pessoa escreveu, e as imagens em configurações do tema que ele não alcança são sinalizadas com um link direto, em vez de falharem em silêncio."
     },
-    "compliance": {
-      "q": "Isso me deixa em conformidade com EAA / ADA?",
-      "a": "Nenhuma ferramenta pode prometer isso, e a gente não vai prometer. O que ele faz é fechar sua falha mais visível — milhares de imagens ilegíveis — com trilha de auditoria para provar. A EAA inclui o ecommerce no escopo desde junho de 2025 na Europa; processos por ADA atingem milhares de lojas americanas por ano."
+    "speed": {
+      "q": "Isso vai deixar minha loja mais lenta?",
+      "a": "Não — ele nunca toca no seu tema e não adiciona nenhum script à sua vitrine. Ele escreve os campos alt pela API da Shopify e nada além disso. Zero peso no front-end, zero impacto de performance."
+    },
+    "existingAlt": {
+      "q": "O que acontece com o alt text que meu time já escreveu?",
+      "a": "Nada, a não ser que você mande. Ele nunca sobrescreve palavras escritas por uma pessoa. A auditoria dá nota às suas descrições existentes: as boas ficam, as fracas são sinalizadas com uma reescrita sugerida, e toda decisão é sua."
+    },
+    "access": {
+      "q": "De que acesso ele precisa?",
+      "a": "Dos produtos e das imagens deles — só isso. Ele é estruturalmente incapaz de escrever em qualquer coisa que não seja o campo alt. Nada de pedidos, nada de clientes, nada de código do tema."
+    },
+    "uninstall": {
+      "q": "O que acontece se eu desinstalar?",
+      "a": "As descrições são suas — o alt text mora na sua loja Shopify, não no nosso app, então tudo o que você aprovou continua exatamente onde está. Os dados do app ligados à sua loja são apagados conforme os webhooks de exclusão obrigatórios da Shopify, em até 48 horas depois do pedido dela."
     },
     "spam": {
       "q": "Alt text feito por IA não é spam?",
       "a": "Essa fama foi merecida — já abrimos catálogos em que toda descrição começava com “imagem de” e terminava numa pilha de palavras-chave, pior do que vazio porque parece pronto. É exatamente contra isso que o Image Voice foi feito: ele olha cada imagem, escreve cerca de 125 caracteres próprios, nunca começa com “imagem de” e dá nota ao lixo que já está lá — para você ver a diferença na sua própria loja, de graça."
     },
+    "diy": {
+      "q": "Não dá para pedir para o ChatGPT escrever meus alt tags?",
+      "a": "Para 20 imagens? Sinceramente, dá. Em 3.000 isso quebra: nada dá nota ao que já é lixo, nada verifica cada gravação, nada pega o produto que você vai subir na terça que vem, e ninguém está olhando quando aquilo para em silêncio. O Image Voice é a diferença entre escrever alt text uma vez e ter isso resolvido — com nota, verificado, reversível, para sempre."
+    },
+    "rot": {
+      "q": "Como eu sei que a qualidade não vai cair depois que eu assinar?",
+      "a": "Dois mecanismos. A qualidade da escrita é travada contra um golden set fixo: nenhuma atualização consegue piorar em silêncio o que você aprovou. E uma nova varredura semanal mantém seu número verdadeiro, pegando o que escapa dos webhooks. A qualidade do dia um é a do mês seis, por construção."
+    },
+    "editing": {
+      "q": "Eu posso editar o que ele escreve?",
+      "a": "Cada descrição, antes de tocar na sua loja — aprove, edite ou pule, numa fila de teclado feita para 200 decisões de uma vez. E por 30 dias depois disso, tudo continua reversível."
+    },
+    "matters": {
+      "q": "Alt text importa mesmo para as vendas?",
+      "a": "De três formas, pesadas com honestidade. A busca de imagens do Google só mostra imagens que ela consegue ler — imagem muda nem entra na disputa. Agentes de compra de IA leem seu catálogo como texto; uma imagem sem descrição não existe para eles. E quem usa leitor de tela ouve seus produtos ou não ouve nada. A gente não vai dizer que isso multiplica seu tráfego por dez: fecha um vazamento que te custa um pouco, em todo lugar, o tempo todo."
+    },
+    "compliance": {
+      "q": "Isso me deixa em conformidade com EAA / ADA?",
+      "a": "Nenhuma ferramenta pode prometer isso, e a gente não vai prometer. O que ele faz é fechar sua falha mais visível — milhares de imagens ilegíveis — com trilha de auditoria para provar. A EAA inclui o ecommerce no escopo desde junho de 2025 na Europa; processos por ADA atingem milhares de lojas americanas por ano."
+    },
     "languages": {
       "q": "Em quais idiomas ele escreve?",
       "a": "No idioma da sua loja: inglês, alemão, francês, espanhol, italiano, holandês e português. Seu SEO de imagem funciona no seu mercado — e o leitor de tela de um cliente alemão fala alemão."
     },
-    "howLong": {
-      "q": "Quanto tempo até meu catálogo inteiro estar descrito?",
-      "a": "Dias, não meses. Os planos pagos incluem um First Sweep que escreve todo o seu acervo de uma vez — a franquia mensal só precisa dar conta das imagens novas. Durante o teste grátis você recebe uma varredura de amostra das suas melhores imagens; a varredura completa roda no dia em que o teste vira assinatura. E se a sua loja for maior do que os nossos planos dão conta, a gente fala antes de você pagar e oferece uma opção conduzida pelo fundador em vez de pegar seu dinheiro."
+    "seoApp": {
+      "q": "Eu já tenho um app de SEO que inclui alt text.",
+      "a": "Rode a auditoria gratuita no que ele escreveu — esse é o teste honesto. A maior parte do alt text “incluído” é o título do seu produto copiado no campo alt: 100% de cobertura, e continua mudo. A auditoria dá nota em vez de contar, então em minutos você vê se o que você tem descreve alguma coisa. Se for realmente bom, nós é que vamos te dizer."
+    },
+    "freePlan": {
+      "q": "Como o plano gratuito continua gratuito?",
+      "a": "A auditoria é o nosso marketing. Cada análise prova o problema melhor do que qualquer anúncio que a gente pudesse escrever, e quem usa de graça e julga a escrita nos próprios produtos vira cliente pagante quando estiver pronto — ou não vira, e fica com a auditoria para sempre. Ninguém está te subsidiando; você é o funil."
+    },
+    "firstSweep": {
+      "q": "O que é um First Sweep e o que a franquia mensal cobre?",
+      "a": "O First Sweep escreve todo o seu acúmulo já existente de uma vez, em dias — você não fica racionado por meses. Depois disso, a franquia mensal só precisa acompanhar as imagens novas. No Curator o sweep cobre a loja inteira, tema incluído."
+    },
+    "images": {
+      "q": "Quais imagens são cobertas — só produtos?",
+      "a": "O Keeper cobre seu catálogo de produtos. O Curator cobre a loja inteira: imagens do tema, banners, sliders, imagens de seção. A auditoria mostra os dois números, então você sabe de qual plano sua loja realmente precisa antes de pagar."
+    },
+    "founding": {
+      "q": "Por que os primeiros {spots, number} lojistas levam o Curator pela metade do preço para sempre?",
+      "a": "Porque {spots, number} lojas com quem a gente consegue conversar valem mais do que margem cheia agora. Os Founding Curators travam o preço para sempre; a gente fica com o feedback e os dados de referência que deixam o produto melhor. É esse o acordo inteiro."
+    },
+    "hugeCatalog": {
+      "q": "Meu catálogo é gigante — mais de 20.000 imagens.",
+      "a": "Então nossos planos padrão podem realmente não servir, e a análise vai te dizer isso antes de você pagar qualquer coisa — com uma opção conduzida pelo fundador em vez de uma conta surpresa. A gente prefere dizer “não somos nós” a pegar seu dinheiro do jeito errado."
     }
   },
   "cta": {

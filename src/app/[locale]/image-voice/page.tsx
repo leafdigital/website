@@ -13,7 +13,7 @@ import { StepsRow } from "@/components/steps-row";
 import { Button } from "@/components/ui/button";
 import { PillBadge } from "@/components/ui/pill-badge";
 import { Link } from "@/i18n/navigation";
-import { APP_INSTALL_URL, SAMPLE } from "@/lib/constants";
+import { APP_INSTALL_URL, OFFER, SAMPLE } from "@/lib/constants";
 import { localeMetadata } from "@/lib/metadata";
 import { Journey } from "./journey";
 import { PricingCards } from "./pricing-cards";
@@ -36,12 +36,34 @@ export async function generateMetadata({
 
 const priceRows = ["traffic", "agentic", "accessibility"] as const;
 const steps = ["scan", "write", "speak"] as const;
+/**
+ * The order is the reading order, and it is an argument: safety before
+ * quality, quality before results, results before price. Someone who bails
+ * out halfway has still been answered on the things that stop an install.
+ */
 const faqKeys = [
+  /* Safety and control. */
   "breakStore",
-  "compliance",
+  "speed",
+  "existingAlt",
+  "access",
+  "uninstall",
+  /* Quality. */
   "spam",
+  "diy",
+  "rot",
+  "editing",
+  /* Results. */
+  "matters",
+  "compliance",
   "languages",
-  "howLong",
+  "seoApp",
+  /* Pricing and plans. */
+  "freePlan",
+  "firstSweep",
+  "images",
+  "founding",
+  "hugeCatalog",
 ] as const;
 
 /**
@@ -297,8 +319,11 @@ export default function ImageVoicePage() {
         <Faq
           className="mt-12"
           items={faqKeys.map((key) => ({
-            q: t(`faq.${key}.q`),
-            a: t(`faq.${key}.a`),
+            /* `spots` is only read by the founder-offer question, but the
+             * count lives in `constants.ts` and is passed everywhere it is
+             * spoken — the pricing tile says the same number. */
+            q: t(`faq.${key}.q`, { spots: OFFER.foundingCurators }),
+            a: t(`faq.${key}.a`, { spots: OFFER.foundingCurators }),
           }))}
         />
       </Section>

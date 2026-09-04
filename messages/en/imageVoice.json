@@ -207,21 +207,73 @@
       "q": "Can it break my store?",
       "a": "No. It is structurally unable to touch anything but the alt field, every write is verified by reading it back, and every change has a 30-day undo on every plan — with a full before → after trail. It never overwrites words a human wrote, and theme-settings images it can’t reach are flagged with a deep link instead of failing silently."
     },
-    "compliance": {
-      "q": "Does this make me EAA / ADA compliant?",
-      "a": "No tool can promise that, and we won’t. What it does is close your most visible gap — thousands of unreadable images — with an audit trail to show for it. EAA has had ecommerce in scope since June 2025 in the EU; ADA suits hit thousands of US stores a year."
+    "speed": {
+      "q": "Will it slow my store down?",
+      "a": "No — it never touches your theme and adds no script to your storefront. It writes alt fields through Shopify’s API and nothing else. Zero front-end weight, zero performance impact."
+    },
+    "existingAlt": {
+      "q": "What happens to alt text my team already wrote?",
+      "a": "Nothing, unless you say so. It never overwrites words a human wrote. The audit grades your existing descriptions — good ones stay, weak ones get flagged with a suggested rewrite, and every decision is yours."
+    },
+    "access": {
+      "q": "What does it need access to?",
+      "a": "Products and their images — that’s it. It’s structurally unable to write to anything except the alt field. No orders, no customers, no theme code."
+    },
+    "uninstall": {
+      "q": "What happens if I uninstall?",
+      "a": "The descriptions are yours — alt text lives in your Shopify store, not in our app, so everything you approved stays exactly where it is. App data tied to your store is deleted in line with Shopify’s mandatory data-erasure webhooks, within 48 hours of Shopify’s request."
     },
     "spam": {
       "q": "Isn’t AI alt text spammy?",
       "a": "It earned that reputation — we’ve opened catalogs where every description began “image of” and ended in a keyword pile, worse than empty because it looks done. That’s exactly what Image Voice is built against: it looks at every image, writes ~125 distinct characters, never starts with “image of,” and grades the junk that’s already there so you can see the difference on your own store, free."
     },
+    "diy": {
+      "q": "Can’t I just have ChatGPT write my alt tags?",
+      "a": "For 20 images? Honestly, yes. At 3,000 it breaks: nothing grades what’s already junk, nothing verifies each write, nothing catches the product you upload next Tuesday, and nobody’s watching when it silently stops. Image Voice is the difference between writing alt text once and having it handled — graded, verified, undoable, forever."
+    },
+    "rot": {
+      "q": "How do I know the quality won’t rot after I subscribe?",
+      "a": "Two mechanisms. Writing quality is gated against a fixed golden set — no update can silently degrade what you approved. And a weekly re-scan keeps your number true, catching anything that slips past webhooks. Day-one quality is month-six quality, by construction."
+    },
+    "editing": {
+      "q": "Can I edit what it writes?",
+      "a": "Every description, before it touches your store — approve, edit, or skip from a keyboard queue built for 200 decisions in a sitting. And for 30 days after, everything is still undoable."
+    },
+    "matters": {
+      "q": "Does alt text actually matter for sales?",
+      "a": "Three ways, honestly weighted. Google image search only surfaces images it can read — silent images simply aren’t in the race. AI shopping agents read your catalog as text; an undescribed image doesn’t exist to them. And screen-reader customers hear your products or hear nothing. We won’t tell you it 10×’s traffic — it closes a leak that’s costing you a little, everywhere, forever."
+    },
+    "compliance": {
+      "q": "Does this make me EAA / ADA compliant?",
+      "a": "No tool can promise that, and we won’t. What it does is close your most visible gap — thousands of unreadable images — with an audit trail to show for it. EAA has had ecommerce in scope since June 2025 in the EU; ADA suits hit thousands of US stores a year."
+    },
     "languages": {
       "q": "Which languages does it write in?",
       "a": "Your store’s own language: English, German, French, Spanish, Italian, Dutch, and Portuguese. Your image SEO works in your market — and a German customer’s screen reader speaks German."
     },
-    "howLong": {
-      "q": "How long until my whole catalog is described?",
-      "a": "Days, not months. Paid plans include a First Sweep that writes your existing backlog up front — the monthly allowance only has to keep up with new images. During a free trial you get a taste sweep of your best images; the full sweep runs the day your trial converts. And if your store is beyond what our plans handle well, we say so before you pay and offer a founder-led option instead of taking your money."
+    "seoApp": {
+      "q": "I already have an SEO app with alt text included.",
+      "a": "Run the free audit on what it wrote — that’s the honest test. Most “included” alt text is your product title copied into the alt field: 100% coverage, still silent. The audit grades instead of counting, so you’ll see in minutes whether what you have describes anything. If it’s genuinely good, we’ll be the ones telling you."
+    },
+    "freePlan": {
+      "q": "How does the free plan stay free?",
+      "a": "The audit is our marketing. Every scan proves the problem better than any ad we could write, and free users who judge the writing on their own products become paying users when they’re ready — or don’t, and keep the audit forever. Nobody’s subsidizing you; you’re the pipeline."
+    },
+    "firstSweep": {
+      "q": "What’s a First Sweep, and what does the monthly allowance cover?",
+      "a": "The First Sweep writes your existing backlog up front, in days — you’re not rationed over months. After that, the monthly allowance only has to keep up with new images. On Curator the sweep covers the whole store, theme included."
+    },
+    "images": {
+      "q": "Which images are covered — just products?",
+      "a": "Keeper covers your product catalog. Curator covers the whole store — theme images, banners, sliders, section imagery. The audit shows you both numbers, so you’ll know which tier your store actually needs before paying."
+    },
+    "founding": {
+      "q": "Why do the first {spots, number} merchants get Curator half price for life?",
+      "a": "Because {spots, number} stores we can talk to are worth more than full margin right now. Founding Curators get the price locked forever; we get the feedback and the benchmark data that make the product better. That’s the whole deal."
+    },
+    "hugeCatalog": {
+      "q": "My catalog is huge — 20,000+ images.",
+      "a": "Then our standard plans may genuinely not fit, and the scan will tell you so before you pay anything — with a founder-led option instead of a surprise bill. We’d rather say “not us” than take your money badly."
     }
   },
   "cta": {

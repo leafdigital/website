@@ -207,21 +207,73 @@
       "q": "Kann es meinen Shop kaputt machen?",
       "a": "Nein. Es ist strukturell unfähig, etwas anderes als das Alt-Feld anzufassen, jeder Schreibvorgang wird durch Zurücklesen geprüft, und jede Änderung lässt sich in jedem Tarif 30 Tage lang rückgängig machen — mit vollständiger Vorher → Nachher-Spur. Wörter, die ein Mensch geschrieben hat, überschreibt es nie, und Bilder aus den Theme-Einstellungen, an die es nicht herankommt, werden mit einem Deeplink markiert, statt still zu scheitern."
     },
-    "compliance": {
-      "q": "Macht mich das EAA- und ADA-konform?",
-      "a": "Das kann kein Tool versprechen, und wir tun es nicht. Was es tut: Es schließt deine sichtbarste Lücke — Tausende unlesbare Bilder — mit einem Nachweis dafür. Der EAA erfasst E-Commerce in der EU seit Juni 2025; ADA-Klagen treffen jedes Jahr Tausende US-Shops."
+    "speed": {
+      "q": "Wird mein Shop dadurch langsamer?",
+      "a": "Nein — die App fasst dein Theme nie an und fügt deinem Storefront kein Skript hinzu. Sie schreibt Alt-Felder über die Shopify-API und sonst nichts. Null Frontend-Gewicht, null Performance-Einfluss."
+    },
+    "existingAlt": {
+      "q": "Was passiert mit Alt-Texten, die mein Team schon geschrieben hat?",
+      "a": "Nichts, außer du willst es. Sie überschreibt nie Worte, die ein Mensch geschrieben hat. Der Audit benotet deine vorhandenen Beschreibungen — gute bleiben, schwache werden mit einem Vorschlag markiert, und jede Entscheidung liegt bei dir."
+    },
+    "access": {
+      "q": "Worauf braucht sie Zugriff?",
+      "a": "Produkte und ihre Bilder — mehr nicht. Sie kann strukturell in nichts außer das Alt-Feld schreiben. Keine Bestellungen, keine Kundendaten, kein Theme-Code."
+    },
+    "uninstall": {
+      "q": "Was passiert, wenn ich sie deinstalliere?",
+      "a": "Die Beschreibungen gehören dir — Alt-Text liegt in deinem Shopify-Shop, nicht in unserer App. Alles, was du freigegeben hast, bleibt genau da, wo es ist. App-Daten zu deinem Shop werden gemäß Shopifys verpflichtenden Datenlösch-Webhooks gelöscht, innerhalb von 48 Stunden nach Shopifys Anfrage."
     },
     "spam": {
       "q": "Ist KI-Alt-Text nicht Spam?",
       "a": "Der Ruf ist verdient — wir haben Kataloge geöffnet, in denen jede Beschreibung mit „Bild von“ begann und in einem Keyword-Haufen endete, schlimmer als leer, weil es erledigt aussieht. Genau dagegen ist Image Voice gebaut: Es sieht sich jedes Bild an, schreibt rund 125 eigene Zeichen, beginnt nie mit „Bild von“ und benotet den Müll, der schon da ist — damit du den Unterschied an deinem eigenen Shop siehst, kostenlos."
     },
+    "diy": {
+      "q": "Kann ChatGPT meine Alt-Tags nicht einfach schreiben?",
+      "a": "Für 20 Bilder? Ehrlich gesagt ja. Bei 3.000 bricht es zusammen: nichts benotet, was schon Müll ist, nichts prüft jeden einzelnen Schreibvorgang, nichts erfasst das Produkt, das du nächsten Dienstag hochlädst, und niemand merkt es, wenn es still aufhört. Image Voice ist der Unterschied zwischen Alt-Text einmal schreiben und Alt-Text erledigt haben — benotet, geprüft, widerrufbar, für immer."
+    },
+    "rot": {
+      "q": "Woher weiß ich, dass die Qualität nach dem Abo nicht verfällt?",
+      "a": "Zwei Mechanismen. Die Schreibqualität wird gegen ein festes Golden Set geprüft — kein Update kann still verschlechtern, was du freigegeben hast. Und ein wöchentlicher Re-Scan hält deine Zahl aktuell und fängt alles ab, was an den Webhooks vorbeirutscht. Qualität an Tag eins ist Qualität in Monat sechs, von der Konstruktion her."
+    },
+    "editing": {
+      "q": "Kann ich bearbeiten, was sie schreibt?",
+      "a": "Jede Beschreibung, bevor sie deinen Shop berührt — freigeben, bearbeiten oder überspringen, aus einer Tastatur-Queue, die für 200 Entscheidungen am Stück gebaut ist. Und 30 Tage danach ist alles noch widerrufbar."
+    },
+    "matters": {
+      "q": "Bringt Alt-Text überhaupt Umsatz?",
+      "a": "Auf drei Wegen, ehrlich gewichtet. Die Google-Bildersuche zeigt nur Bilder, die sie lesen kann — stumme Bilder sind gar nicht erst im Rennen. KI-Shopping-Agenten lesen deinen Katalog als Text; ein unbeschriebenes Bild existiert für sie nicht. Und Kundinnen mit Screenreader hören deine Produkte oder hören nichts. Wir behaupten nicht, dass es deinen Traffic verzehnfacht — es schließt ein Leck, das dich überall ein bisschen kostet, für immer."
+    },
+    "compliance": {
+      "q": "Macht mich das EAA- und ADA-konform?",
+      "a": "Das kann kein Tool versprechen, und wir tun es nicht. Was es tut: Es schließt deine sichtbarste Lücke — Tausende unlesbare Bilder — mit einem Nachweis dafür. Der EAA erfasst E-Commerce in der EU seit Juni 2025; ADA-Klagen treffen jedes Jahr Tausende US-Shops."
+    },
     "languages": {
       "q": "In welchen Sprachen schreibt es?",
       "a": "In der Sprache deines Shops: Englisch, Deutsch, Französisch, Spanisch, Italienisch, Niederländisch und Portugiesisch. Dein Bild-SEO wirkt in deinem Markt — und der Screenreader einer deutschen Kundin spricht Deutsch."
     },
-    "howLong": {
-      "q": "Wie lange dauert es, bis mein ganzer Katalog beschrieben ist?",
-      "a": "Tage, nicht Monate. Bezahlte Tarife enthalten einen First Sweep, der deinen bestehenden Rückstand vorab schreibt — das monatliche Kontingent muss nur noch mit neuen Bildern mithalten. Während der kostenlosen Testphase bekommst du einen Probe-Sweep deiner besten Bilder; der volle Sweep läuft an dem Tag, an dem deine Testphase übergeht. Und wenn dein Shop größer ist, als unsere Tarife gut abdecken, sagen wir es, bevor du zahlst, und bieten dir eine Lösung direkt vom Gründer an, statt dein Geld zu nehmen."
+    "seoApp": {
+      "q": "Ich habe schon eine SEO-App, in der Alt-Text enthalten ist.",
+      "a": "Lass den kostenlosen Audit über das laufen, was sie geschrieben hat — das ist der ehrliche Test. Der meiste „enthaltene“ Alt-Text ist dein Produkttitel, kopiert ins Alt-Feld: 100 % Abdeckung, trotzdem stumm. Der Audit benotet, statt zu zählen, also siehst du in Minuten, ob das, was du hast, überhaupt etwas beschreibt. Wenn es wirklich gut ist, sind wir die, die es dir sagen."
+    },
+    "freePlan": {
+      "q": "Wie bleibt der kostenlose Plan kostenlos?",
+      "a": "Der Audit ist unser Marketing. Jeder Scan belegt das Problem besser als jede Anzeige, die wir schreiben könnten, und kostenlose Nutzer, die die Texte an ihren eigenen Produkten beurteilen, werden zahlende Nutzer, wenn sie so weit sind — oder eben nicht und behalten den Audit für immer. Niemand subventioniert dich; du bist die Pipeline."
+    },
+    "firstSweep": {
+      "q": "Was ist ein First Sweep, und was deckt das Monatskontingent ab?",
+      "a": "Der First Sweep schreibt deinen bestehenden Rückstand vorab, in Tagen — du wirst nicht über Monate rationiert. Danach muss das Monatskontingent nur noch mit neuen Bildern Schritt halten. Bei Curator deckt der Sweep den ganzen Shop ab, Theme inklusive."
+    },
+    "images": {
+      "q": "Welche Bilder sind abgedeckt — nur Produkte?",
+      "a": "Keeper deckt deinen Produktkatalog ab. Curator deckt den ganzen Shop ab — Theme-Bilder, Banner, Slider, Section-Bilder. Der Audit zeigt dir beide Zahlen, damit du weißt, welche Stufe dein Shop wirklich braucht, bevor du zahlst."
+    },
+    "founding": {
+      "q": "Warum bekommen die ersten {spots, number} Händler Curator lebenslang zum halben Preis?",
+      "a": "Weil {spots, number} Shops, mit denen wir reden können, gerade mehr wert sind als volle Marge. Founding Curators bekommen den Preis für immer festgeschrieben; wir bekommen das Feedback und die Benchmark-Daten, die das Produkt besser machen. Das ist der ganze Deal."
+    },
+    "hugeCatalog": {
+      "q": "Mein Katalog ist riesig — über 20.000 Bilder.",
+      "a": "Dann passen unsere Standard-Pläne vielleicht wirklich nicht, und der Scan sagt dir das, bevor du irgendetwas zahlst — mit einer Founder-Option statt einer überraschenden Rechnung. Wir sagen lieber „nicht wir“, als dein Geld schlecht zu nehmen."
     }
   },
   "cta": {
