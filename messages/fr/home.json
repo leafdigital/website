@@ -7,7 +7,7 @@
     "badge": "Image Voice est en ligne sur le Shopify App Store",
     "headline": "Votre argent<br></br>se <accent>cache.</accent>",
     "subhead": "Votre Shopify, votre 3PL et votre tableur racontent trois histoires différentes. Et l’argent se cache dans les écarts.",
-    "ctaPrimary": "Analysez vos images gratuitement →",
+    "ctaPrimary": "Où se cache le vôtre ? ↓",
     "finePrint": "Notre première app est en ligne : Image Voice, l’analyse des images muettes. Hidden Margin — l’analyse qui chiffre en euros chaque trou de votre catalogue — arrive ensuite. Les premiers inscrits sont les premiers avertis."
   },
   "inventory": {
@@ -54,7 +54,7 @@
     "lab": "AU LABO",
     "imageVoice": {
       "description": "Vos images sont muettes — pour Google, pour les acheteurs IA, pour les lecteurs d’écran. Analyse gratuite, une vraie description pour chaque image.",
-      "cta": "Voir l’app →"
+      "cta": "Analysez vos images gratuitement →"
     },
     "hiddenMargin": {
       "description": "Les marges cachées tuent les entreprises. Votre catalogue est troué — coûts, HS codes et pays d’origine manquants. Un seul score de préparation, les trous chiffrés en dollars.",

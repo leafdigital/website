@@ -7,7 +7,7 @@
     "badge": "Image Voice ist im Shopify App Store live",
     "headline": "Dein Geld<br></br><accent>versteckt sich.</accent>",
     "subhead": "Dein Shopify, dein 3PL und deine Tabelle erzählen drei verschiedene Geschichten. Und in den Lücken versteckt sich das Geld.",
-    "ctaPrimary": "Bilder kostenlos scannen →",
+    "ctaPrimary": "Wo versteckt sich deins? ↓",
     "finePrint": "Unsere erste App ist live: Image Voice, der Scan für stumme Bilder. Hidden Margin — der Scan, der jede Lücke in deinem Katalog in Euro beziffert — kommt als Nächstes. Wer zuerst auf der Liste steht, erfährt es zuerst."
   },
   "inventory": {
@@ -54,7 +54,7 @@
     "lab": "IM LABOR",
     "imageVoice": {
       "description": "Deine Bilder schweigen — für Google, für KI-Shopper, für Screenreader. Kostenloser Scan, eine echte Beschreibung für jedes Bild.",
-      "cta": "App ansehen →"
+      "cta": "Bilder kostenlos scannen →"
     },
     "hiddenMargin": {
       "description": "Versteckte Margen killen Unternehmen. Dein Katalog hat Löcher — fehlende Kosten, HS codes, Herkunftsländer. Ein Bereitschafts-Score, jede Lücke in Dollar beziffert.",

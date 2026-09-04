@@ -82,9 +82,15 @@ export default function Home() {
         }
         sub={t("hero.subhead")}
         cta={
-          /* One CTA. A second button here would have to point at something
-             that is not installable yet — the fine print below does that
-             work in sentences instead. */
+          /* One CTA, and it routes rather than promises. The headline asks
+             where the money is hiding; sending that question straight to the
+             one app that scans images answered a question nobody asked. It
+             now drops the reader into the index, and the fine print below
+             does the sequencing in sentences.
+
+             `cta_app_view`, not `cta_scan_click`: this button no longer
+             sends anyone to a scan, and counting it as one would corrupt the
+             single number the vocabulary exists to keep clean. */
           <Button
             asChild
             size="lg"
@@ -93,8 +99,8 @@ export default function Home() {
             className="h-auto min-h-[52px] max-w-full py-3 text-center whitespace-normal sm:h-[52px] sm:py-0 sm:whitespace-nowrap"
           >
             <TrackedLink
-              href="/image-voice"
-              event="cta_scan_click"
+              href="/#apps"
+              event="cta_app_view"
               eventProps={{ location: "home-hero" }}
             >
               {t("hero.ctaPrimary")}
