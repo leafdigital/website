@@ -203,6 +203,8 @@
   "faq": {
     "kicker": "Due Diligence",
     "title": "Die Fragen, die wir auch stellen würden",
+    "showAll": "Alle {count, number} Fragen anzeigen",
+    "showFewer": "Weniger anzeigen",
     "breakStore": {
       "q": "Kann es meinen Shop kaputt machen?",
       "a": "Nein. Es ist strukturell unfähig, etwas anderes als das Alt-Feld anzufassen, jeder Schreibvorgang wird durch Zurücklesen geprüft, und jede Änderung lässt sich in jedem Tarif 30 Tage lang rückgängig machen — mit vollständiger Vorher → Nachher-Spur. Wörter, die ein Mensch geschrieben hat, überschreibt es nie, und Bilder aus den Theme-Einstellungen, an die es nicht herankommt, werden mit einem Deeplink markiert, statt still zu scheitern."
@@ -217,7 +219,7 @@
     },
     "access": {
       "q": "Worauf braucht sie Zugriff?",
-      "a": "Produkte und ihre Bilder — mehr nicht. Sie kann strukturell in nichts außer das Alt-Feld schreiben. Keine Bestellungen, keine Kundendaten, kein Theme-Code."
+      "a": "Auf Produkte und ihre Bilder, Blog-Artikel und deren Bilder sowie dein veröffentlichtes Theme — sie liest Theme-Dateien, weil dort die Banner- und Section-Bilder liegen. Schreiben kann sie strukturell nur das Alt-Feld und sonst nichts. Keine Bestellungen, keine Kundendaten, keine Zahlungsdaten."
     },
     "uninstall": {
       "q": "Was passiert, wenn ich sie deinstalliere?",
@@ -255,10 +257,6 @@
       "q": "Ich habe schon eine SEO-App, in der Alt-Text enthalten ist.",
       "a": "Lass den kostenlosen Audit über das laufen, was sie geschrieben hat — das ist der ehrliche Test. Der meiste „enthaltene“ Alt-Text ist dein Produkttitel, kopiert ins Alt-Feld: 100 % Abdeckung, trotzdem stumm. Der Audit benotet, statt zu zählen, also siehst du in Minuten, ob das, was du hast, überhaupt etwas beschreibt. Wenn es wirklich gut ist, sind wir die, die es dir sagen."
     },
-    "freePlan": {
-      "q": "Wie bleibt der kostenlose Plan kostenlos?",
-      "a": "Der Audit ist unser Marketing. Jeder Scan belegt das Problem besser als jede Anzeige, die wir schreiben könnten, und kostenlose Nutzer, die die Texte an ihren eigenen Produkten beurteilen, werden zahlende Nutzer, wenn sie so weit sind — oder eben nicht und behalten den Audit für immer. Niemand subventioniert dich; du bist die Pipeline."
-    },
     "firstSweep": {
       "q": "Was ist ein First Sweep, und was deckt das Monatskontingent ab?",
       "a": "Der First Sweep schreibt deinen bestehenden Rückstand vorab, in Tagen — du wirst nicht über Monate rationiert. Danach muss das Monatskontingent nur noch mit neuen Bildern Schritt halten. Bei Curator deckt der Sweep den ganzen Shop ab, Theme inklusive."
@@ -267,13 +265,9 @@
       "q": "Welche Bilder sind abgedeckt — nur Produkte?",
       "a": "Keeper deckt deinen Produktkatalog ab. Curator deckt den ganzen Shop ab — Theme-Bilder, Banner, Slider, Section-Bilder. Der Audit zeigt dir beide Zahlen, damit du weißt, welche Stufe dein Shop wirklich braucht, bevor du zahlst."
     },
-    "founding": {
-      "q": "Warum bekommen die ersten {spots, number} Händler Curator lebenslang zum halben Preis?",
-      "a": "Weil {spots, number} Shops, mit denen wir reden können, gerade mehr wert sind als volle Marge. Founding Curators bekommen den Preis für immer festgeschrieben; wir bekommen das Feedback und die Benchmark-Daten, die das Produkt besser machen. Das ist der ganze Deal."
-    },
     "hugeCatalog": {
       "q": "Mein Katalog ist riesig — über 20.000 Bilder.",
-      "a": "Dann passen unsere Standard-Pläne vielleicht wirklich nicht, und der Scan sagt dir das, bevor du irgendetwas zahlst — mit einer Founder-Option statt einer überraschenden Rechnung. Wir sagen lieber „nicht wir“, als dein Geld schlecht zu nehmen."
+      "a": "Der First Sweep geht zuerst die Bilder an, die es nötig haben — fehlende und Müll-Beschreibungen zuerst, kein blinder Durchlauf über alles, was du besitzt. Und wenn die Obergrenze von Curator für einen Katalog deiner Größe immer noch nicht reicht, schreib uns: Wir finden gern eine Lösung. Dieses Gespräch ist für uns beide billiger als ein Plan, der nicht passt."
     }
   },
   "cta": {

@@ -13,7 +13,7 @@ import { StepsRow } from "@/components/steps-row";
 import { Button } from "@/components/ui/button";
 import { PillBadge } from "@/components/ui/pill-badge";
 import { Link } from "@/i18n/navigation";
-import { APP_INSTALL_URL, OFFER, SAMPLE } from "@/lib/constants";
+import { APP_INSTALL_URL, SAMPLE } from "@/lib/constants";
 import { localeMetadata } from "@/lib/metadata";
 import { Journey } from "./journey";
 import { PricingCards } from "./pricing-cards";
@@ -59,10 +59,8 @@ const faqKeys = [
   "languages",
   "seoApp",
   /* Pricing and plans. */
-  "freePlan",
   "firstSweep",
   "images",
-  "founding",
   "hugeCatalog",
 ] as const;
 
@@ -318,12 +316,15 @@ export default function ImageVoicePage() {
         />
         <Faq
           className="mt-12"
+          /* Seventeen questions is a wall to scroll past on the way to the
+           * install button. Six covers the whole safety group plus the one
+           * everybody asks; the rest are there for whoever wants them. */
+          collapseAfter={6}
+          moreLabel={t("faq.showAll", { count: faqKeys.length })}
+          lessLabel={t("faq.showFewer")}
           items={faqKeys.map((key) => ({
-            /* `spots` is only read by the founder-offer question, but the
-             * count lives in `constants.ts` and is passed everywhere it is
-             * spoken — the pricing tile says the same number. */
-            q: t(`faq.${key}.q`, { spots: OFFER.foundingCurators }),
-            a: t(`faq.${key}.a`, { spots: OFFER.foundingCurators }),
+            q: t(`faq.${key}.q`),
+            a: t(`faq.${key}.a`),
           }))}
         />
       </Section>

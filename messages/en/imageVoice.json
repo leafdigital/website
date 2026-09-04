@@ -203,6 +203,8 @@
   "faq": {
     "kicker": "Due diligence",
     "title": "The questions we’d ask too",
+    "showAll": "Show all {count, number} questions",
+    "showFewer": "Show fewer",
     "breakStore": {
       "q": "Can it break my store?",
       "a": "No. It is structurally unable to touch anything but the alt field, every write is verified by reading it back, and every change has a 30-day undo on every plan — with a full before → after trail. It never overwrites words a human wrote, and theme-settings images it can’t reach are flagged with a deep link instead of failing silently."
@@ -217,7 +219,7 @@
     },
     "access": {
       "q": "What does it need access to?",
-      "a": "Products and their images — that’s it. It’s structurally unable to write to anything except the alt field. No orders, no customers, no theme code."
+      "a": "Products and their images, blog articles and theirs, and your published theme — it reads theme files because that’s where banner and section images live. What it can write is the alt field and nothing else, structurally. No orders, no customers, no payment data."
     },
     "uninstall": {
       "q": "What happens if I uninstall?",
@@ -255,10 +257,6 @@
       "q": "I already have an SEO app with alt text included.",
       "a": "Run the free audit on what it wrote — that’s the honest test. Most “included” alt text is your product title copied into the alt field: 100% coverage, still silent. The audit grades instead of counting, so you’ll see in minutes whether what you have describes anything. If it’s genuinely good, we’ll be the ones telling you."
     },
-    "freePlan": {
-      "q": "How does the free plan stay free?",
-      "a": "The audit is our marketing. Every scan proves the problem better than any ad we could write, and free users who judge the writing on their own products become paying users when they’re ready — or don’t, and keep the audit forever. Nobody’s subsidizing you; you’re the pipeline."
-    },
     "firstSweep": {
       "q": "What’s a First Sweep, and what does the monthly allowance cover?",
       "a": "The First Sweep writes your existing backlog up front, in days — you’re not rationed over months. After that, the monthly allowance only has to keep up with new images. On Curator the sweep covers the whole store, theme included."
@@ -267,13 +265,9 @@
       "q": "Which images are covered — just products?",
       "a": "Keeper covers your product catalog. Curator covers the whole store — theme images, banners, sliders, section imagery. The audit shows you both numbers, so you’ll know which tier your store actually needs before paying."
     },
-    "founding": {
-      "q": "Why do the first {spots, number} merchants get Curator half price for life?",
-      "a": "Because {spots, number} stores we can talk to are worth more than full margin right now. Founding Curators get the price locked forever; we get the feedback and the benchmark data that make the product better. That’s the whole deal."
-    },
     "hugeCatalog": {
       "q": "My catalog is huge — 20,000+ images.",
-      "a": "Then our standard plans may genuinely not fit, and the scan will tell you so before you pay anything — with a founder-led option instead of a surprise bill. We’d rather say “not us” than take your money badly."
+      "a": "The First Sweep goes after the images that need it — missing and junk descriptions first, not a blind pass over everything you own. And if Curator’s ceiling still isn’t enough for a catalog your size, write to us and we’ll happily work something out. That conversation is cheaper for both of us than a plan that doesn’t fit."
     }
   },
   "cta": {

@@ -203,6 +203,8 @@
   "faq": {
     "kicker": "Antes de fiarte",
     "title": "Las preguntas que nosotros también haríamos",
+    "showAll": "Ver las {count, number} preguntas",
+    "showFewer": "Ver menos",
     "breakStore": {
       "q": "¿Puede romper mi tienda?",
       "a": "No. Es estructuralmente incapaz de tocar nada que no sea el campo alt, cada escritura se verifica releyéndola y cada cambio tiene 30 días para deshacerse, en todos los planes — con el rastro completo de antes → después. Nunca sobrescribe palabras escritas por una persona, y las imágenes de la configuración del tema a las que no llega se marcan con un enlace directo en vez de fallar en silencio."
@@ -217,7 +219,7 @@
     },
     "access": {
       "q": "¿A qué necesita acceso?",
-      "a": "A los productos y sus imágenes — eso es todo. Estructuralmente no puede escribir en nada que no sea el campo alt. Ni pedidos, ni clientes, ni código del tema."
+      "a": "A los productos y sus imágenes, a los artículos del blog y las suyas, y a tu tema publicado — lee los archivos del tema porque ahí es donde viven los banners y las imágenes de sección. Lo que puede escribir es el campo alt y nada más, estructuralmente. Ni pedidos, ni clientes, ni datos de pago."
     },
     "uninstall": {
       "q": "¿Qué pasa si la desinstalo?",
@@ -255,10 +257,6 @@
       "q": "Ya tengo una app de SEO que incluye alt text.",
       "a": "Pasa la auditoría gratuita por lo que escribió: esa es la prueba honesta. La mayoría del alt text “incluido” es tu título de producto copiado en el campo alt: 100 % de cobertura, igual de mudo. La auditoría califica en vez de contar, así que en minutos verás si lo que tienes describe algo. Si de verdad es bueno, seremos nosotros quienes te lo digamos."
     },
-    "freePlan": {
-      "q": "¿Cómo se mantiene gratis el plan gratuito?",
-      "a": "La auditoría es nuestro marketing. Cada análisis demuestra el problema mejor que cualquier anuncio que pudiéramos escribir, y quienes juzgan la escritura en sus propios productos acaban pagando cuando están listos — o no, y se quedan la auditoría para siempre. Nadie te subvenciona; tú eres el embudo."
-    },
     "firstSweep": {
       "q": "¿Qué es un First Sweep y qué cubre la asignación mensual?",
       "a": "El First Sweep escribe tu acumulado existente por adelantado, en días — no te raciona a lo largo de meses. Después, la asignación mensual solo tiene que seguir el ritmo de las imágenes nuevas. En Curator el sweep cubre toda la tienda, tema incluido."
@@ -267,13 +265,9 @@
       "q": "¿Qué imágenes cubre — solo productos?",
       "a": "Keeper cubre tu catálogo de productos. Curator cubre toda la tienda: imágenes del tema, banners, sliders, imágenes de secciones. La auditoría te muestra ambos números, así sabrás qué plan necesita de verdad tu tienda antes de pagar."
     },
-    "founding": {
-      "q": "¿Por qué los primeros {spots, number} comercios tienen Curator a mitad de precio de por vida?",
-      "a": "Porque {spots, number} tiendas con las que podamos hablar valen ahora mismo más que el margen completo. Los Founding Curators fijan el precio para siempre; nosotros nos llevamos el feedback y los datos de referencia que hacen mejor el producto. Ese es todo el trato."
-    },
     "hugeCatalog": {
       "q": "Mi catálogo es enorme — más de 20.000 imágenes.",
-      "a": "Entonces puede que nuestros planes estándar no encajen de verdad, y el análisis te lo dirá antes de que pagues nada — con una opción acompañada por el fundador en vez de una factura sorpresa. Preferimos decir “no somos nosotros” que quedarnos mal con tu dinero."
+      "a": "El First Sweep va primero a por las imágenes que lo necesitan — las descripciones que faltan y las que son basura, no una pasada ciega por todo lo que tienes. Y si el techo de Curator sigue sin ser suficiente para un catálogo de tu tamaño, escríbenos y encontramos algo con mucho gusto. Esa conversación sale más barata para los dos que un plan que no encaja."
     }
   },
   "cta": {

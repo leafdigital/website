@@ -203,6 +203,8 @@
   "faq": {
     "kicker": "Due diligence",
     "title": "Les questions qu’on poserait aussi",
+    "showAll": "Voir les {count, number} questions",
+    "showFewer": "Voir moins",
     "breakStore": {
       "q": "Est-ce que ça peut casser ma boutique ?",
       "a": "Non. L’app est structurellement incapable de toucher autre chose que le champ alt, chaque écriture est vérifiée en la relisant, et chaque modification a 30 jours d’annulation sur toutes les offres — avec une trace complète avant → après. Elle n’écrase jamais des mots écrits par un humain, et les images des réglages de thème qu’elle ne peut pas atteindre sont signalées avec un lien direct plutôt que d’échouer en silence."
@@ -217,7 +219,7 @@
     },
     "access": {
       "q": "À quoi a-t-elle besoin d’accéder ?",
-      "a": "Aux produits et à leurs images — c’est tout. Elle est structurellement incapable d’écrire ailleurs que dans le champ alt. Pas de commandes, pas de clients, pas de code de thème."
+      "a": "Aux produits et à leurs images, aux articles de blog et aux leurs, et à votre thème publié — elle lit les fichiers du thème parce que c’est là que vivent les bannières et les visuels de sections. Ce qu’elle peut écrire, c’est le champ alt et rien d’autre, structurellement. Pas de commandes, pas de clients, pas de données de paiement."
     },
     "uninstall": {
       "q": "Que se passe-t-il si je désinstalle ?",
@@ -255,10 +257,6 @@
       "q": "J’ai déjà une app SEO qui inclut l’alt text.",
       "a": "Lancez l’audit gratuit sur ce qu’elle a écrit — c’est le test honnête. La plupart des alt text « inclus » sont votre titre produit recopié dans le champ alt : 100 % de couverture, toujours muet. L’audit note au lieu de compter, donc vous verrez en quelques minutes si ce que vous avez décrit quoi que ce soit. Si c’est vraiment bon, c’est nous qui vous le dirons."
     },
-    "freePlan": {
-      "q": "Comment le plan gratuit reste-t-il gratuit ?",
-      "a": "L’audit est notre marketing. Chaque analyse prouve le problème mieux que n’importe quelle publicité que nous pourrions écrire, et les utilisateurs gratuits qui jugent l’écriture sur leurs propres produits deviennent payants quand ils sont prêts — ou pas, et gardent l’audit pour toujours. Personne ne vous subventionne ; vous êtes le pipeline."
-    },
     "firstSweep": {
       "q": "C’est quoi un First Sweep, et que couvre l’allocation mensuelle ?",
       "a": "Le First Sweep écrit votre retard existant d’un coup, en quelques jours — vous n’êtes pas rationné sur des mois. Ensuite, l’allocation mensuelle n’a plus qu’à suivre le rythme des nouvelles images. Sur Curator, le sweep couvre toute la boutique, thème compris."
@@ -267,13 +265,9 @@
       "q": "Quelles images sont couvertes — seulement les produits ?",
       "a": "Keeper couvre votre catalogue produits. Curator couvre toute la boutique — images de thème, bannières, sliders, visuels de sections. L’audit vous montre les deux chiffres, pour que vous sachiez de quel palier votre boutique a réellement besoin avant de payer."
     },
-    "founding": {
-      "q": "Pourquoi les {spots, number} premiers marchands ont-ils Curator à moitié prix à vie ?",
-      "a": "Parce que {spots, number} boutiques avec qui nous pouvons parler valent plus qu’une marge pleine en ce moment. Les Founding Curators verrouillent le prix pour toujours ; nous récupérons les retours et les données de référence qui rendent le produit meilleur. C’est tout le marché."
-    },
     "hugeCatalog": {
       "q": "Mon catalogue est énorme — plus de 20 000 images.",
-      "a": "Alors nos plans standard ne conviennent peut-être vraiment pas, et l’analyse vous le dira avant que vous ne payiez quoi que ce soit — avec une option accompagnée par le fondateur plutôt qu’une facture surprise. Nous préférons dire « pas nous » que prendre votre argent de travers."
+      "a": "Le First Sweep s’attaque d’abord aux images qui en ont besoin — descriptions manquantes et déchets en premier, pas un passage aveugle sur tout ce que vous possédez. Et si le plafond de Curator ne suffit toujours pas pour un catalogue de votre taille, écrivez-nous : nous trouverons volontiers une solution. Cette conversation coûte moins cher, à vous comme à nous, qu’un forfait mal taillé."
     }
   },
   "cta": {

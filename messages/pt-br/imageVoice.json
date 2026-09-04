@@ -203,6 +203,8 @@
   "faq": {
     "kicker": "Due diligence",
     "title": "As perguntas que a gente também faria",
+    "showAll": "Ver todas as {count, number} perguntas",
+    "showFewer": "Ver menos",
     "breakStore": {
       "q": "Isso pode quebrar minha loja?",
       "a": "Não. Ele é estruturalmente incapaz de tocar em qualquer coisa além do campo alt, toda escrita é conferida relendo o resultado e toda alteração tem 30 dias para desfazer, em qualquer plano — com trilha completa de antes → depois. Ele nunca sobrescreve palavras que uma pessoa escreveu, e as imagens em configurações do tema que ele não alcança são sinalizadas com um link direto, em vez de falharem em silêncio."
@@ -217,7 +219,7 @@
     },
     "access": {
       "q": "De que acesso ele precisa?",
-      "a": "Dos produtos e das imagens deles — só isso. Ele é estruturalmente incapaz de escrever em qualquer coisa que não seja o campo alt. Nada de pedidos, nada de clientes, nada de código do tema."
+      "a": "Dos produtos e das imagens deles, dos artigos do blog e das imagens deles, e do seu tema publicado — ele lê os arquivos do tema porque é ali que moram os banners e as imagens de seção. O que ele consegue escrever é o campo alt e nada além disso, estruturalmente. Nada de pedidos, nada de clientes, nada de dados de pagamento."
     },
     "uninstall": {
       "q": "O que acontece se eu desinstalar?",
@@ -255,10 +257,6 @@
       "q": "Eu já tenho um app de SEO que inclui alt text.",
       "a": "Rode a auditoria gratuita no que ele escreveu — esse é o teste honesto. A maior parte do alt text “incluído” é o título do seu produto copiado no campo alt: 100% de cobertura, e continua mudo. A auditoria dá nota em vez de contar, então em minutos você vê se o que você tem descreve alguma coisa. Se for realmente bom, nós é que vamos te dizer."
     },
-    "freePlan": {
-      "q": "Como o plano gratuito continua gratuito?",
-      "a": "A auditoria é o nosso marketing. Cada análise prova o problema melhor do que qualquer anúncio que a gente pudesse escrever, e quem usa de graça e julga a escrita nos próprios produtos vira cliente pagante quando estiver pronto — ou não vira, e fica com a auditoria para sempre. Ninguém está te subsidiando; você é o funil."
-    },
     "firstSweep": {
       "q": "O que é um First Sweep e o que a franquia mensal cobre?",
       "a": "O First Sweep escreve todo o seu acúmulo já existente de uma vez, em dias — você não fica racionado por meses. Depois disso, a franquia mensal só precisa acompanhar as imagens novas. No Curator o sweep cobre a loja inteira, tema incluído."
@@ -267,13 +265,9 @@
       "q": "Quais imagens são cobertas — só produtos?",
       "a": "O Keeper cobre seu catálogo de produtos. O Curator cobre a loja inteira: imagens do tema, banners, sliders, imagens de seção. A auditoria mostra os dois números, então você sabe de qual plano sua loja realmente precisa antes de pagar."
     },
-    "founding": {
-      "q": "Por que os primeiros {spots, number} lojistas levam o Curator pela metade do preço para sempre?",
-      "a": "Porque {spots, number} lojas com quem a gente consegue conversar valem mais do que margem cheia agora. Os Founding Curators travam o preço para sempre; a gente fica com o feedback e os dados de referência que deixam o produto melhor. É esse o acordo inteiro."
-    },
     "hugeCatalog": {
       "q": "Meu catálogo é gigante — mais de 20.000 imagens.",
-      "a": "Então nossos planos padrão podem realmente não servir, e a análise vai te dizer isso antes de você pagar qualquer coisa — com uma opção conduzida pelo fundador em vez de uma conta surpresa. A gente prefere dizer “não somos nós” a pegar seu dinheiro do jeito errado."
+      "a": "O First Sweep vai primeiro nas imagens que precisam — descrições faltando e lixo antes de tudo, não uma passada cega em tudo o que você tem. E se o teto do Curator ainda não der conta de um catálogo do seu tamanho, escreva pra gente que a gente resolve com prazer. Essa conversa sai mais barata para os dois do que um plano que não serve."
     }
   },
   "cta": {
