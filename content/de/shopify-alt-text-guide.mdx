@@ -1,0 +1,206 @@
+import { APP_NAME } from "@/lib/constants";
+
+export const meta = {
+  title: "Alt-Text für Shopify-Shops: der komplette Leitfaden",
+  updated: "2026-09-04",
+};
+
+Niemand setzt sich hin und beschreibt dreitausend Bilder.
+
+Es ist die Aufgabe, die in jedem Quartal, in jedem Shop, von jeder To-do-Liste
+gestrichen wird — und weil niemand zählt, kannst du nicht einmal sagen, wie
+schlimm es steht. Diesen zweiten Teil löst dieser Leitfaden. Am Ende weißt du,
+wofür Alt-Text da ist, wie ein guter aussieht, an welchen Stellen er in Shopify
+überall steckt, und wie du in etwa zehn Minuten — ganz ohne App — herausfindest,
+wie viel deines Katalogs tatsächlich beschrieben ist.
+
+## Wer deinen Alt-Text liest
+
+Drei Zielgruppen, und sie wollen Unterschiedliches vom selben Satz.
+
+**Google.** Die Bildersuche zeigt nur Bilder, die sie lesen kann. Ein Bild ohne
+Beschreibung wird nicht schlecht bewertet — es nimmt am Rennen gar nicht teil.
+Über Alt-Text versteht Google außerdem, worum es auf einer Seite geht, wenn diese
+Seite überwiegend aus Fotos besteht, was auf einer Produktseite meistens der Fall
+ist.
+
+**KI-Shopping-Agenten.** Das ist die neuere Zielgruppe, und sie wächst am
+schnellsten. Ein Agent, der deinen Katalog im Auftrag einer Kundin durchgeht,
+liest ihn als Text. Ein stummes Bild existiert für ihn nicht — und wenn das Bild
+den Kaufgrund transportiert hat, existiert das Produkt ebenfalls nicht.
+
+**Screenreader-Nutzerinnen und -Nutzer.** Wer dein Foto nicht sehen kann, hört
+deinen Alt-Text, oder hört „Bild", oder hört den Dateinamen. Das ist die
+Zielgruppe, die das Gesetz meint, und die, an der du erkennst, wie eine gute
+Beschreibung klingt: Wenn sie vorgelesen nutzlos wäre, ist sie nutzlos.
+
+Die drei Bedürfnisse liegen näher beieinander, als es aussieht. Schreib den Satz,
+der der Person hilft, die das Bild nicht sehen kann, und du hast den Satz
+geschrieben, den die anderen beiden auch wollen.
+
+## Was Shopify selbst sagt
+
+Gut zu wissen, bevor irgendetwas anderes kommt, weil es mehrere Diskussionen
+beendet.
+
+- **512 Zeichen** ist die harte Grenze des Alt-Text-Felds bei Produkten.
+- **125 Zeichen oder weniger** ist die von Shopify empfohlene Länge.
+- **Kein „Bild von".** Screenreader kündigen ohnehin an, dass es sich um ein Bild
+  handelt — die Wörter sind doppelter Ballast.
+- **Keywords nur da, wo sie beschreiben.** Also nur, wenn sie das Bild wirklich
+  betreffen: Produktart, Farbe, Material, Modellname oder Einsatzzweck.
+  Keyword-Stuffing gilt als Spam-Signal.
+- **Dekorative Bilder bekommen ein leeres Alt-Attribut** — `alt=""`, nicht etwa
+  gar keins — damit Screenreader sie überspringen, statt einen Hintergrund-Swirl
+  anzusagen.
+
+Quelle: [How To Write Image Alt Text for SEO](https://www.shopify.com/blog/image-alt-text)
+und das [Shopify Help Center](https://help.shopify.com/en/manual/products/product-media/add-alt-text).
+
+Der Standard hinter dem Gesetz: Alt-Text ist
+[WCAG-Erfolgskriterium 1.1.1, Nicht-Text-Inhalte](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content),
+auf Stufe A — der niedrigsten Konformitätsstufe, also derjenigen, deren
+Nichterfüllung am wenigsten zu entschuldigen ist.
+
+## Wie gut aussieht
+
+Dasselbe Produkt, drei Beschreibungen.
+
+```
+alt="IMG_2041-final-v3.jpg"
+```
+
+Faktisch nicht vorhanden. Ein Dateiname, der ins Feld gerutscht ist.
+
+```
+alt="herren bio shirt kaufen bester preis versandkostenfrei"
+```
+
+Müll. Beschreibt nichts, liest sich für Google wie Spam, und vorgelesen ist es
+Kauderwelsch. Beachte: Beide zählen in jedem Alt-Text-Tool im Shopify App Store
+als **abgedeckt** — auch im Audit unserer eigenen App, bis es sie bewertet.
+
+```
+alt="Moosgrünes Bio-Baumwollshirt - S - T-Shirts"
+```
+
+Schwach, und das ist der interessante Fall, weil genau das eine Vorlage
+produziert und weil es in Ordnung aussieht. Es ist der Produkttitel. Wer die
+Seite liest, hat ihn schon aus der Überschrift; Screenreader-Nutzende hören ihn
+einmal pro Foto; und er ist bei allen sechs Bildern des Produkts identisch, also
+tragen fünf davon überhaupt keine Information.
+
+```
+alt="Moosgrünes Bio-Baumwollshirt flach gelegt, mit geripptem Kragen und
+gesticktem Blatt am Saum"
+```
+
+Gut. Es beschreibt *dieses Foto* — das, für das sich der Händler entschieden hat,
+weil der Titel nicht genügte.
+
+## Die fünf Regeln
+
+1. **Beschreibe, was im Bild ist**, nicht, wie das Produkt heißt.
+2. **Ein Bild, ein Satz.** Wenn zwei Bilder eines Produkts denselben Alt-Text
+   teilen, ist mindestens eines davon unbeschrieben.
+3. **Etwa 125 Zeichen.** Lang genug, um konkret zu sein, kurz genug, um gehört zu
+   werden.
+4. **Niemals mit „Bild von", „Foto von" oder „Abbildung von" anfangen.**
+5. **Leeres `alt=""` für Dekoration.** Trennlinien, Swirls, Platzhalterbilder.
+   Schweigen ist die richtige Beschreibung für etwas, das nichts zu sagen hat.
+
+Eine sechste, zum Kontext: Dasselbe Foto kann an verschiedenen Stellen
+verschiedenen Alt-Text brauchen. Auf der Produktseite ist es das Kleidungsstück;
+in einem Blogbeitrag übers Färben vielleicht die Farbe.
+
+## Wo Alt-Text in Shopify überall steckt
+
+An mehr Stellen, als die meisten Händler erwarten — und die übersehenen sind
+ausgerechnet die mit den größten Bildern.
+
+- **Produktmedien.** Admin → Produkte → das Produkt → auf ein Medienelement
+  klicken → Alt-Text-Feld → Speichern. Die Stelle, die jeder kennt.
+- **Variantenbilder.** Sie hängen am Medienelement und erben von den
+  Produktmedien — aber eine variantenspezifische Aufnahme ist ein eigenes Bild
+  und verdient einen eigenen Satz.
+- **Kategoriebilder.** An der Kategorie hinterlegt, und komplett leicht zu
+  vergessen.
+- **Bilder in Blogbeiträgen**, inklusive Beitragsbild.
+- **Theme-Bilder.** Banner, Slider, Sektionsbilder, Kampagnenmotive. Admin →
+  Onlineshop → Themes → Anpassen → Sektion anklicken → unter dem Bild auf
+  Bearbeiten. Das sind die größten, prominentesten Bilder im Shop — und
+  gleichzeitig die, die am ehesten vollständig unbeschrieben bleiben, weil sie
+  nicht in der Produktverwaltung liegen, wo alle suchen.
+- **Bilder in Theme-Einstellungen.** Manche Themes halten Bilder in den
+  Einstellungen statt in Sektionen. An die kommt die Shopify-API gar nicht heran
+  — gut zu wissen, bevor du ein Tool bewertest, das behauptet, „alles"
+  abzudecken.
+
+## Das Zehn-Minuten-Audit in Eigenregie
+
+Ohne App. Mach das, bevor du irgendein Tool bewertest, unseres eingeschlossen —
+denn die Zahl, die dabei herauskommt, ist die Zahl, die jedes Verkaufsgespräch
+schlagen muss.
+
+1. Öffne deinen Shop, Rechtsklick auf ein Produktbild, **Untersuchen**.
+2. Such das `<img>`-Tag und lies sein `alt`-Attribut.
+3. Mach das für **zwanzig Bilder**: fünf Hauptbilder von Bestsellern, fünf
+   Detail- oder Model-Aufnahmen, fünf Theme- oder Bannerbilder, fünf Blogbilder.
+4. Sortiere jedes in vier Töpfe:
+   - **Fehlt** — leer oder gar nicht vorhanden bei einem nicht-dekorativen Bild
+   - **Müll** — ein Dateiname oder aneinandergereihte Keywords
+   - **Schwach** — der Produkttitel, eine Vorlage, oder für sechs Bilder
+     gleichzeitig zutreffend
+   - **Gut** — beschreibt genau dieses Foto
+5. Zähl den letzten Topf.
+
+Die meisten Shops entdecken dabei etwas, womit sie nicht gerechnet haben: hohe
+Abdeckung, wenig Beschreibung. Die Felder sind voll. Was drinsteht, ist der
+Produkttitel.
+
+**Diese Lücke ist der ganze Punkt dieses Leitfadens.** Abdeckung ist eine Zählung
+nicht-leerer Felder. Sie misst nicht, ob irgendetwas beschrieben wurde, und jedes
+Tool, das eine Abdeckungsquote meldet — unseres eingeschlossen, bis es bewertet —
+meldet eine Zahl, die bei einem Katalog, den niemand lesen kann, 100 % betragen
+kann.
+
+## Macht das dich rechtskonform?
+
+Kein Tool kann das versprechen, und von jedem, das es tut, solltest du weggehen.
+
+Was stimmt: Der **European Accessibility Act** hat den E-Commerce seit Juni 2025
+im Anwendungsbereich, Klagen wegen digitaler Barrierefreiheit gehen in den USA
+unter dem **ADA** jährlich in die Tausende, und unlesbare Bilder sind die
+sichtbarste und am leichtesten automatisiert zu schließende Lücke in einem
+typischen Shop. Sie mit einem Prüfprotokoll zu schließen, ist eine deutlich
+bessere Position als das Gegenteil. Ein Zertifikat ist es nicht, und dieser
+Leitfaden ist keine Rechtsberatung.
+
+## Wann automatisieren — und wann nicht
+
+**Von Hand, wenn** du weniger als ein paar hundert Bilder hast oder dein Katalog
+stabil ist. Zwanzig Bilder sind ein Nachmittag. Zweihundert sind eine Woche
+Nachmittage — und du schreibst besseren Alt-Text als jedes Tool, weil du weißt,
+warum du das Foto gemacht hast.
+
+**Automatisieren, wenn** die Zahl in die Tausende geht, wöchentlich neue Produkte
+dazukommen, oder du es schon zweimal versucht hast und die To-do-Zeile einfach
+ins nächste Quartal gerutscht ist. Bei dreitausend Bildern ist nicht der Aufwand
+das Problem, sondern dass nichts bewertet, was schon Müll ist, nichts jeden
+Schreibvorgang verifiziert, nichts das Produkt erwischt, das du nächsten Dienstag
+hochlädst, und niemand hinschaut, wenn es still stehen bleibt.
+
+Wofür du dich auch entscheidest: Beurteile es an denselben vier Töpfen, die du
+gerade von Hand benutzt hast. Frag jeden Anbieter: *Bewertet es, was schon da
+ist, oder zählt es nur?* Die meisten zählen.
+
+## Finde heraus, wo dein Shop steht
+
+Mach das Zwanzig-Bilder-Audit von oben. Es kostet nichts, dauert zehn Minuten und
+gehört dir, ob du je etwas installierst oder nicht.
+
+Wenn die Zahl schlechter ausfällt als erwartet und der Katalog zu groß ist, um
+ihn von Hand zu reparieren: {APP_NAME} macht dieselbe Vier-Töpfe-Bewertung für
+deinen ganzen Shop — kostenlos, dauerhaft, ohne Karte, und es wird nichts
+geschrieben, bevor du zustimmst. **Starte den kostenlosen Scan und sieh deine
+Zahl.** Wenn dein Alt-Text in Ordnung ist, sagen wir dir das auch.

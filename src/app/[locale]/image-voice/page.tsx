@@ -408,9 +408,6 @@ export default function ImageVoicePage() {
             </TrackedLink>
           ))}
         </div>
-        <p className="text-ink-faint text-fine mt-5 text-center">
-          {t("compare.englishNote")}
-        </p>
       </Section>
 
       {/* 9 — Install. Two futures, one button. */}

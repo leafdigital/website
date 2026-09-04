@@ -14,29 +14,37 @@ export const indexedRoutes = [
   "/reorder-engine",
   "/privacy",
   "/support",
+  /* Translated into all six locales, so it is advertised like any other page.
+   * It began life in `contentRoutes` — see the note there on what moving a
+   * document between the two lists does and does not require. */
+  "/guides/shopify-alt-text",
 ] as const;
 
 /**
- * The content layer: routes that exist in English only.
+ * The comparison pages: routes that exist in English only.
  *
- * Six marketing pages is a ceiling. These are the pages that answer a buying
- * query rather than a branded one — the guide somebody reads before they
- * shortlist, and the two comparisons they read while shortlisting.
+ * English-only here is a decision, not a backlog item, and it is narrower than
+ * it first looked. The reason is specific to comparisons: every sentence on
+ * one is a factual claim about another company's pricing and features, which
+ * that company can change on a Tuesday. Six translations of a claim is six
+ * copies to keep true, and the stale ones are the ones nobody notices —
+ * docs/i18n.md makes exactly this point about unreviewed locales. The queries
+ * agree: somebody searching "alttext.ai alternative" is typing a competitor's
+ * English brand name whatever language they run their store in.
  *
- * English-only is a decision, not a backlog item. Two reasons, and the second
- * is the one that matters. The queries are English: somebody searching
- * "alttext.ai alternative" is typing a competitor's English brand name.
- * And every sentence on a comparison page is a factual claim about a company
- * that can change its pricing on a Tuesday — six translations of a claim is
- * six copies to keep true, and the stale ones are the ones nobody notices.
+ * The guide was originally here too and has since been translated, because
+ * neither reason applied to it — "alt text shopify" is a real query in German
+ * and French, and the guide cites Shopify's own documented rules rather than a
+ * competitor's price list. It moved to `indexedRoutes` when the five
+ * translations landed.
  *
- * They still RENDER in every locale, because a visitor who switches language
- * mid-journey must not hit a 404. What they do not do is get advertised as
- * six pages: each locale's copy declares the English URL as its canonical,
- * and the sitemap lists the English URL alone. See `contentCanonical`.
+ * These still RENDER in every locale, because a visitor who switches language
+ * mid-journey must not hit a 404. What they do not do is get advertised as six
+ * pages: `contentDocument` canonicalises each locale to the URL of the locale
+ * actually served, which for an untranslated document is the English one, and
+ * the sitemap lists that URL alone.
  */
 export const contentRoutes = [
-  "/guides/shopify-alt-text",
   "/image-voice/vs-alttext-ai",
   "/image-voice/vs-altking",
 ] as const;

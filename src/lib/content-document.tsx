@@ -5,8 +5,8 @@ import {
 } from "@/components/layout/document";
 import { JsonLd } from "@/components/seo/json-ld";
 import { SITE_NAME } from "./constants";
-import { englishOnlyMetadata, resolveDocumentLocale } from "./documents";
-import { absoluteUrl } from "./metadata";
+import { documentLanguages, resolveDocumentLocale } from "./documents";
+import { absoluteUrl, languageTag } from "./metadata";
 import { article, breadcrumbs, organization } from "./schema";
 import { routing } from "@/i18n/routing";
 import type { AppRoute } from "./routes";
@@ -48,7 +48,7 @@ export function contentDocument({
     const mod = (await import(
       `../../content/${resolved}/${doc}.mdx`
     )) as DocModule;
-    return { mod, fellBack };
+    return { mod, fellBack, resolved };
   }
 
   async function generateMetadata({
@@ -57,17 +57,39 @@ export function contentDocument({
     params: Promise<{ locale: string }>;
   }): Promise<Metadata> {
     const { locale } = await params;
-    const { mod } = await load(locale);
+    const { mod, resolved } = await load(locale);
+    const url = absoluteUrl(route, resolved);
 
     return {
       title: { absolute: `${mod.meta.title} — ${SITE_NAME}` },
       description,
-      /* English-only: every locale points at the English URL rather than
-       * advertising six copies of the same words. See englishOnlyMetadata. */
-      alternates: englishOnlyMetadata(route),
+      /**
+       * One rule, and it covers both kinds of document here.
+       *
+       * The canonical is the URL of the locale actually SERVED, not the one
+       * requested. A translated document resolves to itself, so `/de/…`
+       * canonicalises to `/de/…`. An untranslated one resolves to English, so
+       * all six locales canonicalise to the single English URL — which is the
+       * honest thing to advertise when five of them serve identical English
+       * words. `documentLanguages` then lists only the locales that really
+       * have the file, so hreflang never promises a translation that does not
+       * exist (docs/i18n.md §8.5).
+       *
+       * The practical effect: translating a document is the whole migration.
+       * Drop five MDX files in and its canonicals, hreflang and sitemap
+       * entries all become per-locale on their own.
+       */
+      alternates: {
+        canonical: url,
+        languages: {
+          ...documentLanguages(doc, route),
+          "x-default": absoluteUrl(route, routing.defaultLocale),
+        },
+      },
       openGraph: {
-        url: absoluteUrl(route, routing.defaultLocale),
+        url,
         type: "article",
+        locale: languageTag(resolved),
         modifiedTime: mod.meta.updated,
       },
     };
@@ -75,9 +97,11 @@ export function contentDocument({
 
   async function Page({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
-    const { mod, fellBack } = await load(locale);
+    const { mod, fellBack, resolved } = await load(locale);
     const { default: Document, meta } = mod;
-    const url = absoluteUrl(route, routing.defaultLocale);
+    /* The locale actually served — which is English when this document has no
+     * translation, and the requested one when it does. */
+    const url = absoluteUrl(route, resolved);
 
     return (
       <>
@@ -89,10 +113,9 @@ export function contentDocument({
               headline: meta.title,
               description,
               updated: meta.updated,
-              /* The document is English whatever locale asked for it. */
-              locale: routing.defaultLocale,
+              locale: resolved,
             }),
-            breadcrumbs(routing.defaultLocale, [
+            breadcrumbs(resolved, [
               { name: SITE_NAME, route: "/" },
               ...breadcrumb,
               { name: meta.title, route },
