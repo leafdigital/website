@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { DataCard } from "@/components/data-card";
@@ -12,6 +12,8 @@ import { PillBadge } from "@/components/ui/pill-badge";
 import { Link } from "@/i18n/navigation";
 import { SAMPLE } from "@/lib/constants";
 import { localeMetadata } from "@/lib/metadata";
+import { organization, website } from "@/lib/schema";
+import { JsonLd } from "@/components/seo/json-ld";
 import { PlanTimeline } from "./plan-timeline";
 import { SuiteIndex } from "./suite-index";
 
@@ -23,7 +25,12 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "home" });
   return {
-    title: t("meta.title"),
+    /* `absolute` bypasses the layout's "%s — Leaf Digital" template. A title
+     * is the whole search result, and the strings in the locale files are
+     * written to be exactly that — appending a suffix pushes them past 60
+     * characters and truncates the words that were doing the work. Documents
+     * (/privacy) still take the template, which is what it is there for. */
+    title: { absolute: t("meta.title") },
     description: t("meta.description"),
     ...localeMetadata("/", locale),
   };
@@ -43,10 +50,14 @@ const villainRows = ["one", "two", "three", "four"] as const;
  */
 export default function Home() {
   const t = useTranslations("home");
+  const locale = useLocale();
   const { inventory } = SAMPLE;
 
   return (
     <>
+      {/* The publisher and the site itself, stated once. Every other page's
+          graph references this organisation by id rather than restating it. */}
+      <JsonLd graph={[organization(), website(locale)]} />
       {/* 1 — Hero. The visual is the argument: three systems, one SKU set,
           reconciling themselves while you read the headline. */}
       <HeroSplit

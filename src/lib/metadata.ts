@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getPathname } from "@/i18n/navigation";
-import { routing } from "@/i18n/routing";
+import { bcp47, ogLocale, routing, type Locale } from "@/i18n/routing";
 import { SITE_URL } from "./constants";
 import type { AppRoute } from "./routes";
 
@@ -31,19 +31,46 @@ export function absoluteUrl(route: AppRoute, locale: string) {
   return `${SITE_URL}${path === "/" ? "" : path}`;
 }
 
-export function localeMetadata(route: AppRoute, locale: string): Metadata {
-  const url = (l: string) => absoluteUrl(route, l);
+/**
+ * The BCP-47 tag for a locale segment. Everything that advertises a language
+ * to a machine — `hreflang`, `<html lang>`, `inLanguage` — spells it this way;
+ * only URLs use the segment. See `bcp47` in src/i18n/routing.ts.
+ */
+export function languageTag(locale: string) {
+  return bcp47[locale as Locale] ?? locale;
+}
 
+/** The `language_TERRITORY` form Open Graph requires. */
+export function openGraphLocale(locale: string) {
+  return ogLocale[locale as Locale] ?? locale;
+}
+
+/**
+ * `hreflang` for every locale plus `x-default`, keyed by language tag rather
+ * than URL segment. Exported because the sitemap advertises the same set and
+ * the two must not drift.
+ */
+export function alternateLanguages(route: AppRoute) {
+  return {
+    ...Object.fromEntries(
+      routing.locales.map((l) => [languageTag(l), absoluteUrl(route, l)]),
+    ),
+    /* Googlebot arrives with no useful accept-language from a US IP, so
+     * the fallback it is offered is the authored locale. */
+    "x-default": absoluteUrl(route, routing.defaultLocale),
+  };
+}
+
+export function localeMetadata(route: AppRoute, locale: string): Metadata {
   return {
     alternates: {
-      canonical: url(locale),
-      languages: {
-        ...Object.fromEntries(routing.locales.map((l) => [l, url(l)])),
-        /* Googlebot arrives with no useful accept-language from a US IP, so
-         * the fallback it is offered is the authored locale. */
-        "x-default": url(routing.defaultLocale),
-      },
+      canonical: absoluteUrl(route, locale),
+      languages: alternateLanguages(route),
     },
-    openGraph: { url: url(locale), locale, type: "website" },
+    openGraph: {
+      url: absoluteUrl(route, locale),
+      locale: openGraphLocale(locale),
+      type: "website",
+    },
   };
 }

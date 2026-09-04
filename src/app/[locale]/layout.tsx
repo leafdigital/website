@@ -9,6 +9,7 @@ import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { LocaleSuggestion } from "@/components/layout/locale-suggestion";
 import { isLocale, routing } from "@/i18n/routing";
+import { languageTag, openGraphLocale } from "@/lib/metadata";
 import {
   GA_ENABLED,
   GA_MEASUREMENT_ID,
@@ -57,7 +58,12 @@ export async function generateMetadata({
      * every page's URL with the layout's — see src/lib/metadata.ts. Pages
      * call `localeMetadata(route, locale)` instead.
      */
-    openGraph: { siteName: SITE_NAME, type: "website", locale },
+    /* `og:locale` wants language_TERRITORY — a bare `de` is dropped. */
+    openGraph: {
+      siteName: SITE_NAME,
+      type: "website",
+      locale: openGraphLocale(locale),
+    },
   };
 }
 
@@ -77,7 +83,8 @@ export default async function LocaleLayout({
 
   return (
     <html
-      lang={locale}
+      /* The BCP-47 tag, not the URL segment: `pt-BR`, never `pt-br`. */
+      lang={languageTag(locale)}
       dir="ltr"
       className={`${geist.variable} ${geistMono.variable}`}
     >

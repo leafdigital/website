@@ -57,3 +57,41 @@ export function isLocale(value: string | undefined): value is Locale {
     (routing.locales as readonly string[]).includes(value)
   );
 }
+
+/**
+ * The locale segment is a URL, not a language tag. `pt-br` is correct in a
+ * path — lowercase is the convention and Next matches it verbatim — but BCP-47
+ * spells the region in caps, and that is what belongs in `<html lang>`, in
+ * `hreflang`, and in `inLanguage`. Google folds the case; Bing, Yandex and a
+ * good deal of SEO tooling do not, so the two spellings are kept apart here
+ * rather than hoped over.
+ *
+ * next-intl's proxy still emits its alternate-language `Link` headers with the
+ * segment spelling. That is not a contradiction — BCP-47 matching is
+ * case-insensitive, so both name the same language — and the head tags are
+ * what tooling reads.
+ */
+export const bcp47: Record<Locale, string> = {
+  en: "en",
+  es: "es",
+  "pt-br": "pt-BR",
+  de: "de",
+  fr: "fr",
+  it: "it",
+};
+
+/**
+ * Open Graph is the one place that wants `language_TERRITORY` — bare `de` is
+ * not a valid `og:locale` and gets dropped, which is why the cards had no
+ * usable locale before. A territory has to be invented for the five locales
+ * that are language-only; the largest market for each is the honest guess,
+ * and nothing downstream reads it as a market signal.
+ */
+export const ogLocale: Record<Locale, string> = {
+  en: "en_US",
+  es: "es_ES",
+  "pt-br": "pt_BR",
+  de: "de_DE",
+  fr: "fr_FR",
+  it: "it_IT",
+};

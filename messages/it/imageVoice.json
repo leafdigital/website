@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Le tue immagini sono mute",
-    "description": "Le immagini mute non vendono — non a Google, non agli acquirenti AI, non a chi ha bisogno che vengano lette ad alta voce. Audit gratuito per sempre, poi una descrizione vera per ogni immagine del tuo negozio Shopify."
+    "title": "Alt text per Shopify — valutato, non contato | Image Voice",
+    "description": "Audit dell’alt text gratuito per Shopify. Valutato, non contato: scopri quante delle tue immagini sono davvero descritte e ottieni una descrizione vera per ognuna."
   },
   "hero": {
     "badge": "Online sullo Shopify App Store",
@@ -66,7 +66,7 @@
   },
   "checkbox": {
     "kicker": "Il problema della spunta",
-    "title": "100% di copertura, e ancora mute.",
+    "title": "100% di copertura dell’alt text, e ancora mute.",
     "sub": "Ogni suite SEO gonfia ha la sua spunta per l’alt text. Una spunta infila i titoli nei campi alt e considera il lavoro finito. Non scrive così:",
     "beforeLabel": "Prima — “coperta”",
     "beforeOne": "alt=\"IMG_2041-final-v3.jpg\"",
@@ -78,8 +78,8 @@
     "closer": "Ecco perché l’audit gratuito <lead>valuta invece di contare</lead>: mancante / spazzatura / debole / buona, con un campione verificato a vista. Risultato tipico: “62 delle 100 immagini coperte non descrivono l’immagine”. Fallo girare sul tuo negozio e leggi tu stesso il campione: la valutazione è la prova, non la nostra parola."
   },
   "how": {
-    "kicker": "Come funziona",
-    "title": "Scansiona. Scrivi. Parla.",
+    "kicker": "Scansiona. Scrivi. Parla.",
+    "title": "Come Image Voice scrive il tuo alt text",
     "scan": {
       "title": "Scansiona",
       "body": "Gratis, all’installazione, senza configurazione. Il conto delle tue immagini mute in un unico numero — valutato, non contato."
@@ -131,7 +131,7 @@
       "body": "Descrizioni scritte nella lingua del tuo negozio — EN, DE, FR, ES, IT, NL, PT. Lo screen reader di un cliente tedesco parla tedesco."
     },
     "five": {
-      "title": "La casella accessibilità: chiusa prima che qualcuno venga a chiedere.",
+      "title": "Alt text e accessibilità EAA / ADA: la casella chiusa prima che qualcuno venga a chiedere.",
       "body": "EAA nell’UE, ADA negli USA. La tua lacuna più visibile — migliaia di immagini illeggibili — chiusa, con un registro delle modifiche da mostrare."
     },
     "six": {

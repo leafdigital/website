@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { HeroSplit } from "@/components/hero-split";
@@ -10,10 +10,12 @@ import { PullQuote } from "@/components/pull-quote";
 import { StepsRow } from "@/components/steps-row";
 import { Button } from "@/components/ui/button";
 import { PillBadge } from "@/components/ui/pill-badge";
+import { JsonLd } from "@/components/seo/json-ld";
 import { WaitlistForm } from "@/components/waitlist-form";
 import { Link } from "@/i18n/navigation";
-import { OFFER } from "@/lib/constants";
+import { OFFER, SITE_NAME, HIDDEN_MARGIN_NAME } from "@/lib/constants";
 import { localeMetadata } from "@/lib/metadata";
+import { breadcrumbs, organization } from "@/lib/schema";
 import { ReadinessCard } from "./readiness-card";
 import { SampleReport } from "./sample-report";
 
@@ -25,7 +27,12 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "hiddenMargin" });
   return {
-    title: t("meta.title"),
+    /* `absolute` bypasses the layout's "%s — Leaf Digital" template. A title
+     * is the whole search result, and the strings in the locale files are
+     * written to be exactly that — appending a suffix pushes them past 60
+     * characters and truncates the words that were doing the work. Documents
+     * (/privacy) still take the template, which is what it is there for. */
+    title: { absolute: t("meta.title") },
     description: t("meta.description"),
     ...localeMetadata("/hidden-margin", locale),
   };
@@ -36,12 +43,22 @@ const steps = ["scan", "enrich", "ready"] as const;
 
 export default function HiddenMarginPage() {
   const t = useTranslations("hiddenMargin");
+  const locale = useLocale();
   const lead = (chunks: React.ReactNode) => (
     <strong className="text-foreground font-semibold">{chunks}</strong>
   );
 
   return (
     <>
+      <JsonLd
+        graph={[
+          organization(),
+          breadcrumbs(locale, [
+            { name: SITE_NAME, route: "/" },
+            { name: HIDDEN_MARGIN_NAME, route: "/hidden-margin" },
+          ]),
+        ]}
+      />
       {/* 1 — Hero. The badge is neutral: in the lab is a status, not a sale. */}
       <HeroSplit
         badge={<PillBadge tone="neutral">{t("hero.badge")}</PillBadge>}

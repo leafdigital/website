@@ -13,5 +13,9 @@
   "reorderEngine": {
     "kicker": "Reorder Engine",
     "title": "Seu caixa está preso no estoque."
+  },
+  "support": {
+    "kicker": "Suporte",
+    "title": "Quem responde é quem construiu o app."
   }
 }

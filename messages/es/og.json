@@ -13,5 +13,9 @@
   "reorderEngine": {
     "kicker": "Reorder Engine",
     "title": "Tu dinero está atrapado en el inventario."
+  },
+  "support": {
+    "kicker": "Soporte",
+    "title": "Te responde quien construyó la app."
   }
 }

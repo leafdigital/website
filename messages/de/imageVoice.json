@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Deine Bilder schweigen",
-    "description": "Stumme Bilder verkaufen nicht — nicht für Google, nicht für KI-Shopper, nicht für alle, die sie vorgelesen brauchen. Für immer kostenloser Audit, dann eine echte Beschreibung für jedes Bild in deinem Shopify-Shop."
+    "title": "Alt-Text für Shopify — bewertet, nicht gezählt | Image Voice",
+    "description": "Kostenloser Alt-Text-Audit für Shopify. Bewertet, nicht gezählt: Sieh, wie viele deiner Bilder wirklich beschrieben sind — und bekomm für jedes eine echte Beschreibung."
   },
   "hero": {
     "badge": "Live im Shopify App Store",
@@ -66,7 +66,7 @@
   },
   "checkbox": {
     "kicker": "Das Häkchen-Problem",
-    "title": "100 % Abdeckung, trotzdem stumm.",
+    "title": "100 % Alt-Text-Abdeckung, trotzdem stumm.",
     "sub": "Jede aufgeblähte SEO-Suite hat ein Häkchen für Alt-Text. Ein Häkchen stopft Titel ins Alt-Feld und nennt es erledigt. So schreibt es nicht:",
     "beforeLabel": "Vorher — „abgedeckt“",
     "beforeOne": "alt=\"IMG_2041-final-v3.jpg\"",
@@ -78,8 +78,8 @@
     "closer": "Deshalb <lead>benotet der kostenlose Audit, statt zu zählen</lead>: fehlt / Müll / schwach / gut, mit einer bildgeprüften Stichprobe. Typisches Ergebnis: „62 von 100 abgedeckten Bildern beschreiben das Bild nicht.“ Lass ihn über deinen Shop laufen und lies die Stichprobe selbst — die Note ist der Beweis, nicht unser Wort."
   },
   "how": {
-    "kicker": "So funktioniert's",
-    "title": "Scannen. Schreiben. Sprechen.",
+    "kicker": "Scannen. Schreiben. Sprechen.",
+    "title": "So schreibt Image Voice deinen Alt-Text",
     "scan": {
       "title": "Scan",
       "body": "Kostenlos, bei der Installation, ohne Einrichtung. Alle stummen Bilder in einer Zahl — benotet, nicht gezählt."
@@ -131,7 +131,7 @@
       "body": "Beschreibungen in der Sprache deines Shops — EN, DE, FR, ES, IT, NL, PT. Der Screenreader einer deutschen Kundin spricht Deutsch."
     },
     "five": {
-      "title": "Das Thema Barrierefreiheit: erledigt, bevor jemand fragt.",
+      "title": "Alt-Text und Barrierefreiheit nach EAA / ADA: erledigt, bevor jemand fragt.",
       "body": "EAA in der EU, ADA in den USA. Deine sichtbarste Lücke — Tausende unlesbare Bilder — geschlossen, mit einem Nachweis dafür."
     },
     "six": {
