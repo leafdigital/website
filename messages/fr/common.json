@@ -33,5 +33,11 @@
     "fallbackNotice": "Ce document n'est pas encore disponible dans votre langue ; la version anglaise est affichée.",
     "draft": "Brouillon — en cours de revue juridique",
     "updated": "Dernière mise à jour : {date, date, long}"
+  },
+  "notFound": {
+    "title": "Cette page est manquante.",
+    "sub": "Ni faible ni déchet : manquante. Le lien que vous avez suivi ne pointe vers rien que nous ayons.",
+    "home": "Retour à l’accueil",
+    "app": "Voir Image Voice"
   }
 }

@@ -33,5 +33,11 @@
     "fallbackNotice": "Dieses Dokument liegt noch nicht in deiner Sprache vor, daher wird die englische Fassung angezeigt.",
     "draft": "Entwurf — in rechtlicher Prüfung",
     "updated": "Zuletzt aktualisiert: {date, date, long}"
+  },
+  "notFound": {
+    "title": "Diese Seite fehlt.",
+    "sub": "Nicht schwach, nicht Müll — sie fehlt. Der Link, dem du gefolgt bist, zeigt auf nichts, was wir haben.",
+    "home": "Zurück zur Startseite",
+    "app": "Image Voice ansehen"
   }
 }

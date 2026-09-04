@@ -1,0 +1,18 @@
+import { routing } from "@/i18n/routing";
+import {
+  contentOgContentType,
+  contentOgImage,
+  contentOgSize,
+} from "@/lib/content-og";
+
+export const size = contentOgSize;
+export const contentType = contentOgContentType;
+/** Next requires a static `alt` export; the card itself is English-only. */
+export const alt = "Alt text for Shopify stores — the complete guide";
+
+/** One card per locale route, though the document is English in all of them. */
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export default contentOgImage("shopify-alt-text-guide", "Guide");

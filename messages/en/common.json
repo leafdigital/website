@@ -33,5 +33,11 @@
     "fallbackNotice": "This document isn’t available in your language yet, so the English version is shown.",
     "draft": "Draft — under legal review",
     "updated": "Last updated: {date, date, long}"
+  },
+  "notFound": {
+    "title": "This page is missing.",
+    "sub": "Not weak, not junk — missing. The link you followed doesn’t point at anything we have.",
+    "home": "Back to the homepage",
+    "app": "See Image Voice"
   }
 }

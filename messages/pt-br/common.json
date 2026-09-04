@@ -33,5 +33,11 @@
     "fallbackNotice": "Este documento ainda não está disponível no seu idioma, então a versão em inglês é exibida.",
     "draft": "Rascunho — em revisão jurídica",
     "updated": "Última atualização: {date, date, long}"
+  },
+  "notFound": {
+    "title": "Esta página está faltando.",
+    "sub": "Não é fraca nem lixo: está faltando. O link que você seguiu não aponta para nada que a gente tenha.",
+    "home": "Voltar para o início",
+    "app": "Ver o Image Voice"
   }
 }
