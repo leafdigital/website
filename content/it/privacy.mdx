@@ -89,11 +89,10 @@ qualità, l'alt text attualmente presente sull'immagine. La regola onesta: a
 parte l'URL dell'immagine, il suo tipo di media e l'impostazione di lingua del
 negozio, tutto ciò che parte è testo che qualcuno nel tuo negozio ha scritto,
 inoltrato così com'è. Immagini e testo vengono trasmessi solo per questo scopo.
-[Da confermare prima della pubblicazione: il nostro accordo con Anthropic
-prevede che i dati dell'API non vengano usati per addestrare i modelli —
-indicarlo qui una volta confermato.] Non è mai coinvolto alcun dato dei clienti
-del negozio: nessuno dei due flussi ha un punto in cui un cliente o un ordine
-potrebbe anche solo essere agganciato.
+In base ai termini commerciali di Anthropic — l'accordo sotto cui usiamo l'API —
+Anthropic non può addestrare i propri modelli su quel contenuto. Non è mai
+coinvolto alcun dato dei clienti del negozio: nessuno dei due flussi ha un punto
+in cui un cliente o un ordine potrebbe anche solo essere agganciato.
 
 ### Telemetria di prodotto
 
@@ -109,23 +108,24 @@ Nulla nella telemetria nomina un cliente o contiene contenuti del negozio.
 ### Il digest settimanale
 
 Se lo attivi, facciamo passare il tuo indirizzo e-mail del digest e il messaggio
-attraverso un provider di invio e-mail [indicare il fornitore SMTP una volta
-scelto]. Il messaggio contiene il dominio del tuo negozio, i conteggi della
-settimana e i link di ritorno nell'app. Nient'altro, e l'indirizzo di nessun
-altro.
+attraverso Resend (resend.com), il nostro provider di invio e-mail. Il messaggio
+contiene il dominio del tuo negozio, i conteggi della settimana e i link di
+ritorno nell'app. Nient'altro, e l'indirizzo di nessun altro.
 
-Questi tre — Anthropic, PostHog e il provider e-mail — sono l'elenco completo
-dei terzi a cui questa app invia qualcosa. Tutto il resto con cui l'app parla è
-Shopify stesso o la nostra infrastruttura.
+Questi tre — Anthropic, PostHog e Resend — sono l'elenco completo dei terzi a
+cui questa app invia qualcosa. Tutto il resto con cui l'app parla è Shopify
+stesso o la nostra infrastruttura.
 
 ### Dove vivono i tuoi dati
 
-I dati dell'app sono archiviati su server in Germania (Hetzner). Anthropic e
-PostHog trattano dati negli Stati Uniti. Quando al tuo negozio si applica il
-diritto europeo sulla protezione dei dati, questi trasferimenti si basano sulle
-garanzie dei nostri responsabili, comprese le clausole contrattuali tipo
-[confermare in sede di revisione il meccanismo di trasferimento attuale di
-ciascun responsabile].
+I dati dell'app sono archiviati su server in Germania (Hetzner). Anthropic,
+PostHog e Resend trattano dati negli Stati Uniti. Quando al tuo negozio si
+applica il diritto europeo sulla protezione dei dati, ognuno di questi
+trasferimenti poggia su una garanzia precisa: l'accordo sul trattamento di
+Anthropic incorpora le clausole contrattuali tipo dell'UE, con gli addendum
+britannico e svizzero; PostHog e Resend si appoggiano alle stesse clausole e
+sono inoltre certificati nell'ambito dell'EU-U.S. Data Privacy Framework e della
+sua estensione britannica.
 
 ### Conservazione e cancellazione
 

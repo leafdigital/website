@@ -87,10 +87,10 @@ artigo; para a passada de qualidade, o alt text que está no ar na imagem. A
 regra honesta: fora a URL da imagem, o tipo de mídia dela e a configuração de
 idioma da sua loja, tudo que é enviado é texto que alguém na sua loja escreveu,
 repassado do jeito que foi digitado. Imagens e texto são transmitidos só para
-isso. [Confirmar antes de publicar: nosso contrato com a Anthropic prevê que
-dados da API não são usados para treinar modelos — declarar aqui assim que
-confirmado.] Nenhum dado de cliente da loja entra em momento algum: nenhum dos
-dois fluxos tem onde um cliente ou pedido pudesse sequer ser anexado.
+isso. Pelos termos comerciais da Anthropic — o acordo sob o qual usamos a API —,
+a Anthropic não pode treinar os modelos dela com esse conteúdo. Nenhum dado de
+cliente da loja entra em momento algum: nenhum dos dois fluxos tem onde um
+cliente ou pedido pudesse sequer ser anexado.
 
 ### Telemetria de produto
 
@@ -105,22 +105,24 @@ um cliente ou contém conteúdo da loja.
 
 ### O resumo semanal
 
-Se você ativar, mandamos o seu e-mail do resumo e a mensagem por um provedor de
-envio de e-mail [nomear o fornecedor de SMTP assim que for escolhido]. A
-mensagem contém o domínio da sua loja, as contagens da semana e links de volta
-para o app. Nada além disso, e o endereço de mais ninguém.
+Se você ativar, mandamos o seu e-mail do resumo e a mensagem pelo Resend
+(resend.com), nosso provedor de envio de e-mail. A mensagem contém o domínio da
+sua loja, as contagens da semana e links de volta para o app. Nada além disso, e
+o endereço de mais ninguém.
 
-Esses três — Anthropic, PostHog e o provedor de e-mail — são a lista completa de
-terceiros para quem este app envia qualquer coisa. Todo o resto com que o app
-conversa é a própria Shopify ou a nossa infraestrutura.
+Esses três — Anthropic, PostHog e Resend — são a lista completa de terceiros
+para quem este app envia qualquer coisa. Todo o resto com que o app conversa é a
+própria Shopify ou a nossa infraestrutura.
 
 ### Onde os seus dados ficam
 
-Os dados do app ficam em servidores na Alemanha (Hetzner). Anthropic e PostHog
-tratam dados nos Estados Unidos. Onde a lei europeia de proteção de dados se
-aplica à sua loja, essas transferências se apoiam nas salvaguardas dos nossos
-operadores, incluindo cláusulas contratuais padrão [confirmar na revisão o
-mecanismo de transferência atual de cada operador].
+Os dados do app ficam em servidores na Alemanha (Hetzner). Anthropic, PostHog e
+Resend tratam dados nos Estados Unidos. Onde a lei europeia de proteção de dados
+se aplica à sua loja, cada uma dessas transferências se apoia numa salvaguarda
+nomeada: o acordo de tratamento da Anthropic incorpora as cláusulas contratuais
+padrão da UE, com os adendos do Reino Unido e da Suíça; PostHog e Resend se
+apoiam nas mesmas cláusulas e ainda são certificados sob o EU-U.S. Data Privacy
+Framework e sua extensão britânica.
 
 ### Retenção e exclusão
 

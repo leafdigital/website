@@ -82,20 +82,20 @@ Les données personnelles que l'app stocke sont celles du marchand et de son
 
 ### Traitement par IA — dit clairement
 
-Pour écrire ou noter une description, l'app envoie votre image (sous forme
-d'URL du CDN Shopify) à Anthropic (anthropic.com), dont le modèle Claude renvoie
-le texte. Avec l'image, l'app envoie du contexte issu de votre propre boutique
-pour que la description colle : le titre du produit et, s'ils sont renseignés,
-un extrait de sa description, son fournisseur et son type ; pour les images
+Pour écrire ou noter une description, l'app envoie votre image (sous forme d'URL
+du CDN Shopify) à Anthropic (anthropic.com), dont le modèle Claude renvoie le
+texte. Avec l'image, l'app envoie du contexte issu de votre propre boutique pour
+que la description colle : le titre du produit et, s'ils sont renseignés, un
+extrait de sa description, son fournisseur et son type ; pour les images
 d'articles, le titre et le résumé de l'article ; pour la passe qualité, l'alt
 text actuellement en ligne sur l'image. La règle honnête : à part l'URL de
 l'image, son type de média et le réglage de langue de votre boutique, tout ce
 qui part est du texte écrit par quelqu'un chez vous, transmis tel quel. Images
-et texte ne sont transmis que pour cet usage. [À confirmer avant publication :
-notre accord avec Anthropic prévoit que les données d'API ne servent pas à
-entraîner les modèles — l'indiquer ici une fois confirmé.] Aucune donnée client
-de la boutique n'intervient à aucun moment : ni l'un ni l'autre des flux n'a
-d'endroit où un client ou une commande pourrait seulement être rattaché.
+et texte ne sont transmis que pour cet usage. Selon les conditions commerciales
+d'Anthropic — l'accord au titre duquel nous utilisons l'API —, Anthropic ne peut
+pas entraîner ses modèles sur ce contenu. Aucune donnée client de la boutique
+n'intervient à aucun moment : ni l'un ni l'autre des flux n'a d'endroit où un
+client ou une commande pourrait seulement être rattaché.
 
 ### Télémétrie produit
 
@@ -112,24 +112,24 @@ contient de contenu de boutique.
 ### Le digest hebdomadaire
 
 Si vous l'activez, nous faisons transiter votre adresse e-mail de digest et le
-message par un prestataire d'envoi d'e-mails [nommer le fournisseur SMTP une
-fois choisi]. Le message contient le domaine de votre boutique, les compteurs de
-la semaine et des liens vers l'app. Rien d'autre, et l'adresse de personne
-d'autre.
+message par Resend (resend.com), notre prestataire d'envoi d'e-mails. Le message
+contient le domaine de votre boutique, les compteurs de la semaine et des liens
+vers l'app. Rien d'autre, et l'adresse de personne d'autre.
 
-Ces trois-là — Anthropic, PostHog et le prestataire e-mail — constituent la
-liste complète des tiers à qui cette app envoie quoi que ce soit. Tout le reste
-de ce à quoi l'app parle, c'est Shopify lui-même ou notre propre
-infrastructure.
+Ces trois-là — Anthropic, PostHog et Resend — constituent la liste complète des
+tiers à qui cette app envoie quoi que ce soit. Tout le reste de ce à quoi l'app
+parle, c'est Shopify lui-même ou notre propre infrastructure.
 
 ### Où vivent vos données
 
 Les données de l'app sont stockées sur des serveurs en Allemagne (Hetzner).
-Anthropic et PostHog traitent les données aux États-Unis. Lorsque le droit
-européen de la protection des données s'applique à votre boutique, ces
-transferts s'appuient sur les garanties de nos sous-traitants, y compris les
-clauses contractuelles types [confirmer à la revue le mécanisme de transfert
-actuel de chaque sous-traitant].
+Anthropic, PostHog et Resend traitent les données aux États-Unis. Lorsque le
+droit européen de la protection des données s'applique à votre boutique, chacun
+de ces transferts repose sur une garantie nommée : l'accord de sous-traitance
+d'Anthropic intègre les clauses contractuelles types de l'UE, avec les addenda
+britannique et suisse ; PostHog et Resend s'appuient sur les mêmes clauses et
+sont en outre certifiés au titre du EU-U.S. Data Privacy Framework et de son
+extension britannique.
 
 ### Conservation et suppression
 

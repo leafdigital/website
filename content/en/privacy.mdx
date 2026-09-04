@@ -79,11 +79,10 @@ vendor, and type; for blog images, the article's title and summary; for the
 quality pass, the alt text currently live on the image. The honest rule: apart
 from the image URL, its media type, and your store's language setting,
 everything sent is text someone at your store wrote, passed through as typed.
-Images and text are transmitted for this purpose only. [Confirm before
-publishing: our agreement with Anthropic provides that API data is not used to
-train models — state it here once confirmed.] No storefront customer data is
-involved at any point: neither flow has anywhere a customer or order could even
-be attached.
+Images and text are transmitted for this purpose only. Under Anthropic's
+commercial terms, which are the agreement our API use runs under, Anthropic may
+not train its models on that content. No storefront customer data is involved at
+any point: neither flow has anywhere a customer or order could even be attached.
 
 ### Product telemetry
 
@@ -98,21 +97,23 @@ Nothing in telemetry names a customer or contains store content.
 ### The weekly digest
 
 If you enable it, we send your digest email address and the digest message
-through an email delivery provider [name the SMTP vendor once selected]. The
-message contains your shop domain, the week's counts, and links back into the
-app. Nothing else, and no one else's address.
+through Resend (resend.com), our email delivery provider. The message contains
+your shop domain, the week's counts, and links back into the app. Nothing else,
+and no one else's address.
 
-Those three — Anthropic, PostHog, and the email provider — are the complete
-list of third parties this app sends anything to. Everything else the app talks
-to is Shopify itself or our own infrastructure.
+Those three — Anthropic, PostHog, and Resend — are the complete list of third
+parties this app sends anything to. Everything else the app talks to is Shopify
+itself or our own infrastructure.
 
 ### Where your data lives
 
-App data is stored on servers in Germany (Hetzner). Anthropic and PostHog
-process data in the United States. Where European data-protection law applies
-to your store, these transfers rely on our processors' safeguards, including
-standard contractual clauses [confirm each processor's current transfer
-mechanism at review].
+App data is stored on servers in Germany (Hetzner). Anthropic, PostHog, and
+Resend process data in the United States. Where European data-protection law
+applies to your store, each of those transfers rests on a named safeguard:
+Anthropic's data processing addendum incorporates the EU Standard Contractual
+Clauses, with the UK and Swiss addenda; PostHog and Resend rely on the same
+clauses and are additionally certified under the EU-U.S. Data Privacy Framework
+and its UK extension.
 
 ### Retention and deletion
 
