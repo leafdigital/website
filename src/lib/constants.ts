@@ -101,7 +101,7 @@ export const SAMPLE = {
  */
 export const PRICING = {
   audit: 0,
-  keeper: 18.9,
+  keeper: 8.9,
   curator: 28.9,
 } as const;
 
