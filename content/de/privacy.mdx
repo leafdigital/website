@@ -2,62 +2,187 @@ import { APP_NAME, SITE_NAME, SUPPORT_EMAIL } from "@/lib/constants";
 
 export const meta = {
   title: "Datenschutzerklärung",
-  updated: "2026-08-10",
+  updated: "2026-09-03",
+  /* Siehe content/en/privacy.mdx: Entwurf bis zur juristischen Freigabe. */
+  draft: true,
 };
 
 ## Die einfache Fassung
 
 Wir betreiben diese Website und die App {APP_NAME} für Shopify. Die Website
-erhebt so gut wie nichts. Die App liest deine Produktbilder und deren Alt-Text
-über die Shopify-API, sendet Bilder zur Beschreibung an einen KI-Modellanbieter
-und schreibt den Alt-Text zurück — mit deiner Freigabe. Wir sehen und speichern
-niemals die personenbezogenen Daten deiner Kundinnen und Kunden. Alles Weitere
-ist genau das, im Detail.
+erhebt so gut wie nichts. Die App liest deine Produkt-, Artikel- und
+Theme-Bilder samt Alt-Text über die Shopify-API, sendet Bilder (per URL)
+zusammen mit Text aus deinem eigenen Katalog an das Claude-Modell von Anthropic,
+um sie beschreiben oder benoten zu lassen, und schreibt den Alt-Text zurück —
+mit deiner Freigabe. Wir greifen niemals auf personenbezogene Daten deiner
+Storefront-Kundinnen und -Kunden zu, speichern sie nicht und übertragen sie
+nicht: Die App fordert Berechtigungen für Kunden oder Bestellungen gar nicht
+erst an. Die personenbezogenen Daten, die wir halten, sind deine — die der
+Shop-Inhaberin und deines Teams — und diese Erklärung listet jedes einzelne
+davon auf. Alles Weitere ist genau das, im Detail.
+
+## Wer wir sind
+
+{SITE_NAME} ist der Handelsname von Leaf Digital Partners LLC, einer Limited
+Liability Company aus Kalifornien. Für diese Website sowie für deine Konto- und
+Kontaktdaten in unseren Apps sind wir der Verantwortliche. Für die Katalogdaten
+deines Shops — Bilder, Alt-Text, Produkt- und Artikelinhalte, die die App
+berührt — bist du der Verantwortliche, und wir verarbeiten sie nach deinen
+Weisungen, auf Grundlage unserer Vereinbarung mit dir und der
+Plattformbedingungen von Shopify. Du erreichst uns
+unter <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>.
 
 ## Diese Website
 
-- **Analyse.** Wir nutzen Vercel Analytics: cookielos, mit aggregierten
-  Seitenaufrufen und anonymisierten Interaktionsereignissen. Kein
-  seitenübergreifendes Tracking, keine Werbe-IDs, nichts, was dich benennt.
+- **Analyse.** Zwei Dienste, und sie sind nicht dasselbe. Vercel Analytics ist
+  cookielos und erfasst aggregierte Seitenaufrufe und anonymisierte
+  Interaktionsereignisse. Google Analytics 4 läuft auf der Live-Seite daneben
+  und setzt sehr wohl Cookies; darüber erkennen wir, welche Kampagne jemanden
+  hergeführt hat. Keiner der beiden wird für seitenübergreifende Werbung
+  genutzt, und wir schalten keine Anzeigen und verkaufen keine Zielgruppen.
+  Preview- und lokale Builds laden Google Analytics überhaupt nicht.
 - **Formulare und E-Mail.** Wenn du uns schreibst oder dich auf eine Warteliste
-  setzt, bewahren wir deine Adresse und deine Nachricht auf, um dir zu
-  antworten. Wir verkaufen sie nicht, geben sie nicht weiter und nehmen sie
-  nicht in Marketinglisten auf, die du nicht angefordert hast.
+  setzt, behalten wir deine Adresse und deine Nachricht, um dir zu antworten.
+  Wir verkaufen sie nicht, geben sie nicht weiter und setzen dich auf keine
+  Marketinglisten, um die du nicht gebeten hast.
 
 ## Die App {APP_NAME}
 
 ### Worauf wir zugreifen
 
 Über die Shopify-API, mit den Berechtigungen, die du bei der Installation
-erteilst: deine Produktbilder, deren aktueller Alt-Text, Produkttitel und
-Theme-Bildreferenzen. Das ist der gesamte Arbeitsbereich — die App fordert
-keinen Zugriff auf Bestellungen, Kundendaten oder Zahlungsdaten an.
-
-### KI-Verarbeitung, klar offengelegt
-
-Um eine Beschreibung zu schreiben, werden deine Produktbilder an unseren
-KI-Modellanbieter gesendet, der den Text zurückliefert. Die Bilder werden
-ausschließlich zu diesem Zweck übermittelt. Zu keinem Zeitpunkt sind
-personenbezogene Kundendaten beteiligt — das Modell sieht Produktfotografie,
-sonst nichts.
+erteilst: deine Produktbilder und deren Alt-Text, Produkttitel und
+Katalogfelder, Blog-Artikel und deren Bilder, die Bilddateien deines
+veröffentlichten Themes und die Spracheinstellungen deines Shops. Das ist der
+Arbeitsumfang. Die App fordert keinen Zugriff auf Kunden, Bestellungen oder
+Zahlungsdaten an — diese Berechtigungen fehlen bewusst, und unsere Build-Checks
+schlagen fehl, sobald ein Kunden- oder Bestell-Abonnement auftaucht.
 
 ### Was wir speichern
 
-Scan-Ergebnisse (Abdeckungsbewertung je Bild), vorgeschlagenen und gesetzten
-Alt-Text sowie den Vorher-Nachher-Verlauf, der das 30-tägige Rückgängigmachen
-ermöglicht. Wir speichern Bildreferenzen, keine Kopien deiner Bildbibliothek.
+Scan-Ergebnisse (Abdeckungsnoten pro Bild), vorgeschlagenen und angewendeten
+Alt-Text sowie den Vorher-/Nachher-Verlauf, der das 30-Tage-Undo möglich macht.
+Wir speichern Bildreferenzen (Shopify-CDN-URLs), keine Kopien deiner
+Bildbibliothek.
 
-### Aufbewahrung
+Die personenbezogenen Daten, die die App speichert, sind die der Händlerin und
+ihres Teams, nie die einer Storefront-Kundin:
 
-Der Änderungsverlauf wird 30 Tage lang für die Wiederherstellung aufbewahrt und
-danach gelöscht. Bei einer Deinstallation werden die mit deinem Shop
-verknüpften App-Daten gemäß den verpflichtenden Datenlöschungs-Webhooks von
-Shopify gelöscht — innerhalb von 48 Stunden nach der Anfrage von Shopify.
+- Deine Digest-E-Mail-Adresse, falls du den wöchentlichen Digest aktivierst —
+  von dir eingegeben, ausschließlich zum Versand genutzt.
+- Sitzungsdaten von Shopify-Mitarbeitenden (Name, E-Mail, Sprache), die
+  Shopifys eigenes Session-Tooling anhängt, wenn jemand aus deinem Team die App
+  nutzt. Wir lesen diese Felder nicht; sie werden bei der Deinstallation
+  gelöscht und bei einer Redaction erneut durchgesucht.
+- Der Alt-Text selbst, also freier Fließtext. Wenn jemand in deinem Shop
+  personenbezogene Daten in einen Alt-Text getippt hat, speichern wir ihn so,
+  wie er getippt wurde — wir prüfen ihn nicht.
+- Nutzungsdaten zu den eigenen Screens und Aktionen der App, identifiziert über
+  deinen Shop und, wo eine Sitzung eine nennt, eine Mitarbeiter-ID — nie über
+  eine Kundin.
 
-## Deine Rechte und wie du uns erreichst
+### KI-Verarbeitung — klar offengelegt
 
-Du kannst den Export oder die Löschung aller Daten verlangen, die wir über dich
-oder deinen Shop gespeichert haben — die DSGVO und gleichwertige Regelwerke
-gelten. Schreib an <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>, und
-wir antworten innerhalb von 30 Tagen, meist deutlich schneller. {SITE_NAME} ist
-der Verantwortliche für diese Website.
+Um eine Beschreibung zu schreiben oder zu benoten, sendet die App dein Bild (als
+Shopify-CDN-URL) an Anthropic (anthropic.com), dessen Claude-Modell den Text
+zurückgibt. Zusammen mit dem Bild sendet die App Kontext aus deinem eigenen
+Shop, damit die Beschreibung passt: den Produkttitel und, falls gesetzt, einen
+Auszug der Beschreibung, Anbieter und Typ; bei Blog-Bildern Titel und
+Zusammenfassung des Artikels; beim Qualitätsdurchlauf den Alt-Text, der aktuell
+am Bild hängt. Die ehrliche Regel: Abgesehen von der Bild-URL, ihrem Medientyp
+und der Spracheinstellung deines Shops ist alles Gesendete Text, den jemand in
+deinem Shop geschrieben hat, unverändert durchgereicht. Bilder und Text werden
+ausschließlich zu diesem Zweck übertragen. [Vor Veröffentlichung bestätigen:
+Unsere Vereinbarung mit Anthropic sieht vor, dass API-Daten nicht zum Training
+von Modellen verwendet werden — hier festhalten, sobald bestätigt.] Zu keinem
+Zeitpunkt sind Daten von Storefront-Kundinnen beteiligt: In keinem der beiden
+Abläufe gibt es überhaupt eine Stelle, an der eine Kundin oder eine Bestellung
+hängen könnte.
+
+### Produkt-Telemetrie
+
+Die App erfasst, welche ihrer eigenen Screens du erreicht hast — Scan, Review,
+Apply —, damit wir sehen, wo Händlerinnen hängen bleiben. Das wird von unseren
+Servern an PostHog (posthog.com) gesendet, identifiziert über deinen Shop oder
+eine Mitarbeiter-ID, beschränkt auf Zählwerte und Zustände der App-eigenen
+Oberfläche, und für [12 Monate — Aufbewahrungseinstellung bestätigen]
+aufbewahrt. Es gibt kein Session Replay und keinerlei Bildschirmaufzeichnung —
+und zwar strukturell: In deinem Browser wird nie ein Aufzeichnungsskript
+ausgeliefert. Nichts in der Telemetrie nennt eine Kundin oder enthält
+Shop-Inhalte.
+
+### Der wöchentliche Digest
+
+Wenn du ihn aktivierst, senden wir deine Digest-E-Mail-Adresse und die
+Digest-Nachricht über einen E-Mail-Versanddienstleister [SMTP-Anbieter benennen,
+sobald ausgewählt]. Die Nachricht enthält deine Shop-Domain, die Zahlen der
+Woche und Links zurück in die App. Sonst nichts, und keine fremde Adresse.
+
+Diese drei — Anthropic, PostHog und der E-Mail-Dienstleister — sind die
+vollständige Liste der Dritten, an die diese App überhaupt etwas sendet. Alles
+andere, womit die App spricht, ist Shopify selbst oder unsere eigene
+Infrastruktur.
+
+### Wo deine Daten liegen
+
+App-Daten liegen auf Servern in Deutschland (Hetzner). Anthropic und PostHog
+verarbeiten Daten in den Vereinigten Staaten. Soweit europäisches
+Datenschutzrecht auf deinen Shop anwendbar ist, stützen sich diese Übermittlungen
+auf die Garantien unserer Auftragsverarbeiter, einschließlich
+Standardvertragsklauseln [den jeweils aktuellen Übermittlungsmechanismus jedes
+Auftragsverarbeiters bei der Prüfung bestätigen].
+
+### Aufbewahrung und Löschung
+
+- **Alt-Text-Änderungsverlauf:** 30 Tage, um das Wiederherstellen zu
+  ermöglichen, danach bereinigt.
+- **Shop-Daten** (Scan-Ergebnisse, Einstellungen, Sitzungen): aufbewahrt,
+  solange die App installiert ist. Wenn du deinstallierst, sendet uns Shopify
+  rund 48 Stunden später eine verpflichtende Löschanfrage, und wir löschen die
+  Daten deines Shops, sobald sie eintrifft — die Löschung wird protokolliert,
+  und ein erneuter Durchlauf entfernt nichts weiter, weil nichts mehr da ist.
+- **Nutzungs- und Ereignisdaten:** verfallen nach 12 Monaten.
+- **Abrechnungsunterlagen:** aufbewahrt, solange Steuer- und Handelsrecht es
+  verlangen.
+
+### Shopifys Datenschutz-Webhooks
+
+Die App implementiert alle drei verpflichtenden Datenschutz-Webhooks von
+Shopify. Eine Kundendaten-Anfrage erhält eine wahrheitsgemäße Antwort: Wir
+halten keine Kundendaten, die wir exportieren könnten. Eine
+Kunden-Redaction-Anfrage ebenso: nichts gehalten, nichts zu löschen, und wir
+protokollieren den Eingang. Eine Shop-Redaction-Anfrage löscht die Daten deines
+Shops wie oben beschrieben.
+
+## Was wir nie tun
+
+Wir verkaufen deine personenbezogenen Daten nicht und geben sie nicht weiter —
+weder im Sinne der CCPA-Definitionen noch im Sinne irgendeiner anderen. Wir
+schalten keine Werbung, nutzen keine Werbe-IDs, zeichnen keine Sitzungen auf und
+fassen keine Storefront-Kundendaten an. Zugriffstoken für deinen Shop sind im
+Ruhezustand verschlüsselt, und die Daten jedes Shops sind von denen jedes
+anderen strukturell getrennt.
+
+## Deine Rechte
+
+Du kannst Auskunft über die personenbezogenen Daten verlangen, die wir über dich
+halten, eine Kopie, Berichtigung oder Löschung, und du kannst der Verarbeitung
+widersprechen oder ihre Einschränkung verlangen. DSGVO, CCPA und vergleichbare
+Rahmenwerke gelten je nachdem, wo du bist; wir erfüllen den Kern dieser Rechte
+für alle, statt zuerst deine Jurisdiktion zu prüfen. Schreib
+an <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>, und wir antworten
+innerhalb von 30 Tagen, meist deutlich schneller. Wenn du in der EU/im EWR oder
+im Vereinigten Königreich bist, kannst du dich auch bei deiner zuständigen
+Aufsichtsbehörde beschweren. Wir werden dich nie schlechter behandeln, weil du
+ein Datenschutzrecht ausgeübt hast.
+
+## Kinder
+
+Weder die Website noch die App richten sich an Kinder unter 16 Jahren, und wir
+erheben ihre Daten nicht wissentlich.
+
+## Änderungen
+
+Wenn sich diese Erklärung ändert, aktualisieren wir das Datum oben und sagen bei
+allem, was für App-Nutzerinnen wesentlich ist, in der App oder per E-Mail
+Bescheid. Die aktuelle Fassung steht immer unter dieser Adresse.

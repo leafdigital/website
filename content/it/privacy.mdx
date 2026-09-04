@@ -2,62 +2,182 @@ import { APP_NAME, SITE_NAME, SUPPORT_EMAIL } from "@/lib/constants";
 
 export const meta = {
   title: "Informativa sulla privacy",
-  updated: "2026-08-10",
+  updated: "2026-09-03",
+  /* Vedi content/en/privacy.mdx: bozza fino alla revisione legale. */
+  draft: true,
 };
 
 ## La versione semplice
 
-Gestiamo questo sito web e l'app {APP_NAME} per Shopify. Il sito raccoglie
-quasi nulla. L'app legge le immagini dei tuoi prodotti e il loro alt text
-tramite l'API di Shopify, invia le immagini a un fornitore di modelli di IA
-perché vengano descritte e riscrive l'alt text — con la tua approvazione. Non
-vediamo né conserviamo mai i dati personali dei tuoi clienti. Tutto ciò che
-segue è questo, nel dettaglio.
+Gestiamo questo sito e l'app {APP_NAME} per Shopify. Il sito non raccoglie quasi
+nulla. L'app legge le immagini dei tuoi prodotti, degli articoli e del tema
+insieme al loro alt text tramite l'API di Shopify, invia le immagini (via URL)
+con un po' di testo del tuo stesso catalogo al modello Claude di Anthropic
+perché le descriva o le valuti, e riscrive l'alt text — con la tua approvazione.
+Non accediamo mai ai dati personali dei clienti del tuo negozio, non li
+archiviamo e non li trasmettiamo: l'app non richiede affatto i permessi su
+clienti o ordini. I dati personali che trattiamo sono i tuoi — del titolare del
+negozio e del suo team — e questa informativa li elenca uno per uno. Tutto
+quello che segue è questo, nel dettaglio.
 
-## Questo sito web
+## Chi siamo
 
-- **Analisi.** Usiamo Vercel Analytics, che funziona senza cookie e raccoglie
-  visualizzazioni di pagina aggregate ed eventi di interazione anonimizzati.
-  Nessun tracciamento tra siti, nessun identificatore pubblicitario, nulla che
-  ti identifichi.
-- **Moduli ed email.** Se ci scrivi o ti iscrivi a una lista d'attesa,
-  conserviamo il tuo indirizzo e il tuo messaggio per risponderti. Non li
-  vendiamo, non li condividiamo e non li aggiungiamo a liste di marketing che
-  non hai richiesto.
+{SITE_NAME} è il nome commerciale di Leaf Digital Partners LLC, una limited
+liability company della California. Per questo sito, e per i tuoi dati di
+account e contatto nelle nostre app, siamo noi il titolare del trattamento. Per
+i dati di catalogo del tuo negozio — immagini, alt text, contenuti di prodotti e
+articoli che l'app tocca — il titolare sei tu, e noi li trattiamo su tua
+istruzione, in base al nostro accordo con te e ai termini di piattaforma di
+Shopify. Ci trovi
+a <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>.
+
+## Questo sito
+
+- **Analytics.** Due strumenti, e non sono la stessa cosa. Vercel Analytics è
+  senza cookie e raccoglie visualizzazioni di pagina aggregate ed eventi di
+  interazione anonimizzati. Google Analytics 4 gira accanto a esso sul sito in
+  produzione e i cookie li imposta eccome; è così che capiamo quale campagna ha
+  portato qualcuno qui. Nessuno dei due viene usato per pubblicità cross-site, e
+  non facciamo annunci né vendiamo audience. Le build di preview e locali non
+  caricano Google Analytics per niente.
+- **Moduli ed e-mail.** Se ci scrivi o entri in una lista d'attesa, conserviamo
+  il tuo indirizzo e il tuo messaggio per risponderti. Non li vendiamo, non li
+  condividiamo e non ti aggiungiamo a liste di marketing che non hai chiesto.
 
 ## L'app {APP_NAME}
 
 ### A cosa accediamo
 
-Tramite l'API di Shopify, con i permessi che concedi in fase di installazione:
-le immagini dei tuoi prodotti, il loro alt text attuale, i titoli dei prodotti
-e i riferimenti alle immagini del tema. Questo è l'intero perimetro — l'app non
-richiede accesso a ordini, clienti o dati di pagamento.
+Tramite l'API di Shopify, con i permessi che concedi all'installazione: le
+immagini dei tuoi prodotti e il loro alt text, i titoli dei prodotti e i campi
+di catalogo, gli articoli del blog e le loro immagini, i file immagine del tuo
+tema pubblicato e le impostazioni di lingua del negozio. Questo è tutto il
+perimetro. L'app non richiede accesso a clienti, ordini o dati di pagamento —
+quei permessi sono assenti per progettazione, e i nostri controlli di build
+falliscono se compare anche solo una sottoscrizione su clienti o ordini.
 
-### Elaborazione con IA, detta chiaramente
+### Cosa archiviamo
 
-Per scrivere una descrizione, le immagini dei tuoi prodotti vengono inviate al
-nostro fornitore di modelli di IA, che restituisce il testo. Le immagini sono
-trasmesse solo per questa finalità. Nessun dato personale dei clienti è
-coinvolto in alcun momento: il modello vede fotografia di prodotto, nient'altro.
+I risultati delle scansioni (voto di copertura per immagine), l'alt text
+proposto e applicato, e la cronologia prima/dopo che alimenta l'annullamento a
+30 giorni. Archiviamo riferimenti alle immagini (URL della CDN di Shopify), non
+copie della tua libreria.
 
-### Cosa conserviamo
+I dati personali che l'app archivia sono quelli del merchant e del suo team, mai
+quelli di un cliente del negozio:
 
-I risultati delle scansioni (livello di copertura per immagine), l'alt text
-proposto e applicato e lo storico prima/dopo che rende possibile annullare per
-30 giorni. Conserviamo riferimenti alle immagini, non copie della tua libreria.
+- Il tuo indirizzo e-mail per il digest, se attivi il digest settimanale —
+  inserito da te, usato solo per inviarlo.
+- I dettagli di sessione degli utenti Shopify (nome, e-mail, lingua) che gli
+  strumenti di sessione di Shopify allegano quando qualcuno del team usa l'app.
+  Non leggiamo quei campi; vengono cancellati alla disinstallazione e ripuliti
+  di nuovo in caso di redaction.
+- L'alt text stesso, che è testo libero. Se qualcuno nel tuo negozio ha digitato
+  dati personali dentro un alt text, lo archiviamo così com'è stato scritto —
+  non lo ispezioniamo.
+- Registri di utilizzo delle schermate e delle azioni della app stessa,
+  identificati dal tuo negozio e, quando una sessione ne indica uno, da un ID
+  utente del team — mai da un cliente.
 
-### Conservazione
+### Elaborazione con AI — detta chiaramente
 
-Lo storico delle modifiche viene conservato per 30 giorni per consentire il
-ripristino, poi eliminato. Se disinstalli, i dati dell'app collegati al tuo
-negozio vengono cancellati in conformità ai webhook obbligatori di
-cancellazione dati di Shopify — entro 48 ore dalla richiesta di Shopify.
+Per scrivere o valutare una descrizione, l'app invia la tua immagine (come URL
+della CDN di Shopify) ad Anthropic (anthropic.com), il cui modello Claude
+restituisce il testo. Insieme all'immagine, l'app invia contesto dal tuo stesso
+negozio perché la descrizione sia pertinente: il titolo del prodotto e, se
+impostati, un estratto della descrizione, il fornitore e il tipo; per le
+immagini del blog, il titolo e il riassunto dell'articolo; per il passaggio di
+qualità, l'alt text attualmente presente sull'immagine. La regola onesta: a
+parte l'URL dell'immagine, il suo tipo di media e l'impostazione di lingua del
+negozio, tutto ciò che parte è testo che qualcuno nel tuo negozio ha scritto,
+inoltrato così com'è. Immagini e testo vengono trasmessi solo per questo scopo.
+[Da confermare prima della pubblicazione: il nostro accordo con Anthropic
+prevede che i dati dell'API non vengano usati per addestrare i modelli —
+indicarlo qui una volta confermato.] Non è mai coinvolto alcun dato dei clienti
+del negozio: nessuno dei due flussi ha un punto in cui un cliente o un ordine
+potrebbe anche solo essere agganciato.
 
-## I tuoi diritti e come contattarci
+### Telemetria di prodotto
 
-Puoi richiedere l'esportazione o la cancellazione di qualsiasi dato che
-deteniamo su di te o sul tuo negozio — si applicano il GDPR e quadri
-equivalenti. Scrivi a <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a> e
-risponderemo entro 30 giorni, di solito molto prima. {SITE_NAME} è il titolare
-del trattamento per questo sito.
+L'app registra quali delle sue schermate hai raggiunto — scansione, revisione,
+applicazione — così vediamo dove i merchant si bloccano. Viene inviata dai
+nostri server a PostHog (posthog.com), identificata dal tuo negozio o da un ID
+utente del team, limitata a conteggi e stati dell'interfaccia della app stessa,
+e conservata per [12 mesi — confermare l'impostazione di conservazione]. Non c'è
+alcun session replay né alcuna registrazione dello schermo — e in modo
+strutturale: al tuo browser non viene mai servito uno script di registrazione.
+Nulla nella telemetria nomina un cliente o contiene contenuti del negozio.
+
+### Il digest settimanale
+
+Se lo attivi, facciamo passare il tuo indirizzo e-mail del digest e il messaggio
+attraverso un provider di invio e-mail [indicare il fornitore SMTP una volta
+scelto]. Il messaggio contiene il dominio del tuo negozio, i conteggi della
+settimana e i link di ritorno nell'app. Nient'altro, e l'indirizzo di nessun
+altro.
+
+Questi tre — Anthropic, PostHog e il provider e-mail — sono l'elenco completo
+dei terzi a cui questa app invia qualcosa. Tutto il resto con cui l'app parla è
+Shopify stesso o la nostra infrastruttura.
+
+### Dove vivono i tuoi dati
+
+I dati dell'app sono archiviati su server in Germania (Hetzner). Anthropic e
+PostHog trattano dati negli Stati Uniti. Quando al tuo negozio si applica il
+diritto europeo sulla protezione dei dati, questi trasferimenti si basano sulle
+garanzie dei nostri responsabili, comprese le clausole contrattuali tipo
+[confermare in sede di revisione il meccanismo di trasferimento attuale di
+ciascun responsabile].
+
+### Conservazione e cancellazione
+
+- **Cronologia delle modifiche all'alt text:** 30 giorni, per permettere il
+  ripristino, poi ripulita.
+- **Dati del negozio** (risultati delle scansioni, impostazioni, sessioni):
+  conservati finché l'app è installata. Quando disinstalli, Shopify ci invia una
+  richiesta di cancellazione obbligatoria circa 48 ore dopo, e cancelliamo i
+  dati del tuo negozio all'arrivo — la cancellazione viene registrata, e
+  rieseguirla non rimuove nulla di più perché non è rimasto nulla.
+- **Registri di utilizzo ed eventi:** decadono dopo 12 mesi.
+- **Documenti di fatturazione:** conservati per il tempo richiesto dalla
+  normativa fiscale e contabile.
+
+### Webhook privacy di Shopify
+
+L'app implementa tutti e tre i webhook privacy obbligatori di Shopify. Una
+richiesta di dati cliente riceve una risposta veritiera: non deteniamo dati di
+clienti da esportare. Una richiesta di redaction cliente lo stesso: nulla
+detenuto, nulla da cancellare, e registriamo la ricezione. Una richiesta di
+redaction del negozio cancella i dati del tuo negozio come descritto sopra.
+
+## Cosa non facciamo mai
+
+Non vendiamo né condividiamo i tuoi dati personali — né secondo le definizioni
+del CCPA né secondo quelle di chiunque altro. Non facciamo pubblicità, non
+usiamo identificatori pubblicitari, non registriamo sessioni e non tocchiamo i
+dati dei clienti del negozio. I token di accesso al tuo negozio sono cifrati a
+riposo, e i dati di ogni negozio sono isolati da quelli di ogni altro per
+costruzione.
+
+## I tuoi diritti
+
+Puoi chiedere l'accesso ai dati personali che trattiamo su di te, una copia, la
+rettifica o la cancellazione, e puoi opporti al trattamento o chiederne la
+limitazione. GDPR, CCPA e quadri equivalenti si applicano a seconda di dove ti
+trovi; onoriamo la sostanza di questi diritti per tutti, invece di verificare
+prima la tua giurisdizione. Scrivi
+a <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a> e risponderemo entro
+30 giorni, di solito molto prima. Se sei nell'UE/SEE o nel Regno Unito, puoi
+anche rivolgerti alla tua autorità di controllo locale. Non ti tratteremo mai
+diversamente per aver esercitato un diritto sulla privacy.
+
+## Minori
+
+Né il sito né l'app si rivolgono a minori di 16 anni, e non raccogliamo
+consapevolmente i loro dati.
+
+## Modifiche
+
+Quando questa informativa cambia, aggiorniamo la data in alto e, per tutto ciò
+che è rilevante per chi usa l'app, lo diciamo nell'app o via e-mail. La versione
+in vigore vive sempre a questo indirizzo.

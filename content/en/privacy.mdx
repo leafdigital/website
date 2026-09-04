@@ -2,22 +2,43 @@ import { APP_NAME, SITE_NAME, SUPPORT_EMAIL } from "@/lib/constants";
 
 export const meta = {
   title: "Privacy policy",
-  updated: "2026-08-10",
+  updated: "2026-09-03",
+  /* Renders the "Draft — under legal review" badge. Four bracketed items
+   * still need a decision, and counsel has not signed this version off.
+   * Remove this line in every locale once both are done (LF-220 AC). */
+  draft: true,
 };
 
 ## The plain version
 
 We run this website and the {APP_NAME} app for Shopify. The website collects
-almost nothing. The app reads your product images and their alt text through
-Shopify's API, sends images to an AI model provider to be described, and writes
-alt text back — with your approval. We never see or store your customers'
-personal data. Everything below is that, in detail.
+almost nothing. The app reads your product, article, and theme images and their
+alt text through Shopify's API, sends images (by URL) with some of your own
+catalog text to Anthropic's Claude model to be described or graded, and writes
+alt text back — with your approval. We never access, store, or transmit your
+storefront customers' personal data: the app doesn't request customer or order
+permissions at all. The personal data we do hold is yours — the store owner's
+and your staff's — and this policy lists every piece of it. Everything below is
+that, in detail.
+
+## Who we are
+
+{SITE_NAME} is the trading name of Leaf Digital Partners LLC, a California
+limited liability company. For this website, and for your account and contact
+data in our apps, we are the data controller. For your store's catalog data —
+images, alt text, product and article content the app touches — you are the
+controller and we process it on your instructions, under our agreement with you
+and Shopify's platform terms. Reach us
+at <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>.
 
 ## This website
 
-- **Analytics.** We use Vercel Analytics, which is cookieless and collects
-  aggregate page views and anonymized interaction events. No cross-site
-  tracking, no advertising identifiers, nothing that names you.
+- **Analytics.** Two, and they are not the same thing. Vercel Analytics is
+  cookieless and collects aggregate page views and anonymized interaction
+  events. Google Analytics 4 runs alongside it on the live site and does set
+  cookies; it is how we tell which campaign sent someone here. Neither is used
+  for cross-site advertising, and we do not run ads or sell audiences. Preview
+  and local builds load Google Analytics not at all.
 - **Forms and email.** If you email us or join a waitlist, we keep your address
   and message to answer you. We don't sell it, share it, or add it to marketing
   lists you didn't ask for.
@@ -27,32 +48,122 @@ personal data. Everything below is that, in detail.
 ### What we access
 
 Through the Shopify API, with the permissions you grant at install: your
-product images, their current alt text, product titles, and theme image
-references. That is the working set — the app does not request access to
-orders, customers, or payment data.
-
-### AI processing — disclosed plainly
-
-To write a description, your product images are sent to our AI model provider,
-which returns the text. Images are transmitted for that purpose only. No
-customer personal data is involved at any point — the model sees product
-photography, nothing else.
+product images and their alt text, product titles and catalog fields, blog
+articles and their images, your published theme's image files, and your store's
+language settings. That is the working set. The app does not request access to
+customers, orders, or payment data — those permissions are absent by design,
+and our build checks fail if a customer or order subscription ever appears.
 
 ### What we store
 
 Scan results (coverage grades per image), proposed and applied alt text, and
-the before/after history that powers the 30-day undo. We store image
-references, not copies of your image library.
+the before/after history that powers the 30-day undo. We store image references
+(Shopify CDN URLs), not copies of your image library.
 
-### Retention
+The personal data the app stores is the merchant's own and their staff's, never
+a storefront customer's:
 
-Change history is kept for 30 days to power restore, then pruned. If you
-uninstall, app data tied to your store is deleted in line with Shopify's
-mandatory data-erasure webhooks — within 48 hours of Shopify's request.
+- Your digest email address, if you enable the weekly digest — entered by you,
+  used only to send it.
+- Shopify staff-user session details (name, email, locale) that Shopify's own
+  session tooling attaches when a staff member uses the app. We don't read
+  these fields; they're deleted at uninstall and re-swept at redaction.
+- Alt text itself, which is free prose. If someone at your store typed personal
+  data into an alt text, we store it as typed — we don't inspect it.
+- Usage records of the app's own screens and actions, identified by your store
+  and, where a session names one, a staff-user ID — never by a customer.
 
-## Your rights and how to reach us
+### AI processing — disclosed plainly
 
-You can request an export or erasure of any data we hold about you or your
-store — GDPR and equivalent frameworks apply. Write to <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a> and
-we'll respond within 30 days, usually much faster. {SITE_NAME} is the data
-controller for this website.
+To write or grade a description, the app sends your image (as its Shopify CDN
+URL) to Anthropic (anthropic.com), whose Claude model returns the text.
+Alongside the image, the app sends context from your own store so the
+description fits: the product's title and, where set, its description excerpt,
+vendor, and type; for blog images, the article's title and summary; for the
+quality pass, the alt text currently live on the image. The honest rule: apart
+from the image URL, its media type, and your store's language setting,
+everything sent is text someone at your store wrote, passed through as typed.
+Images and text are transmitted for this purpose only. [Confirm before
+publishing: our agreement with Anthropic provides that API data is not used to
+train models — state it here once confirmed.] No storefront customer data is
+involved at any point: neither flow has anywhere a customer or order could even
+be attached.
+
+### Product telemetry
+
+The app records which of its own screens you reached — scan, review, apply — so
+we can see where merchants get stuck. It's sent from our servers to PostHog
+(posthog.com), identified by your store or a staff-user ID, limited to counts
+and states of the app's own interface, and kept for [12 months — confirm
+retention setting]. There is no session replay and no screen recording of any
+kind — structurally: no recording script is ever served to your browser.
+Nothing in telemetry names a customer or contains store content.
+
+### The weekly digest
+
+If you enable it, we send your digest email address and the digest message
+through an email delivery provider [name the SMTP vendor once selected]. The
+message contains your shop domain, the week's counts, and links back into the
+app. Nothing else, and no one else's address.
+
+Those three — Anthropic, PostHog, and the email provider — are the complete
+list of third parties this app sends anything to. Everything else the app talks
+to is Shopify itself or our own infrastructure.
+
+### Where your data lives
+
+App data is stored on servers in Germany (Hetzner). Anthropic and PostHog
+process data in the United States. Where European data-protection law applies
+to your store, these transfers rely on our processors' safeguards, including
+standard contractual clauses [confirm each processor's current transfer
+mechanism at review].
+
+### Retention and deletion
+
+- **Alt-text change history:** 30 days, to power restore, then pruned.
+- **Store data** (scan results, settings, sessions): kept while the app is
+  installed. When you uninstall, Shopify sends us a mandatory erasure request
+  about 48 hours later, and we erase your store's data when it arrives — the
+  deletion is logged, and re-running it removes nothing more because nothing is
+  left.
+- **Usage and event records:** aged out after 12 months.
+- **Billing records:** kept as long as tax and accounting law requires.
+
+### Shopify privacy webhooks
+
+The app implements all three of Shopify's mandatory privacy webhooks. A
+customer data request receives a truthful answer: we hold no customer data to
+export. A customer redaction request likewise: nothing held, nothing to delete,
+and we log the receipt. A shop redaction request erases your store's data as
+described above.
+
+## What we never do
+
+We don't sell or share your personal information — under the CCPA's definitions
+or anyone else's. We don't run advertising, don't use advertising identifiers,
+don't record sessions, and don't touch storefront customer data. Access tokens
+for your store are encrypted at rest, and every store's data is isolated from
+every other's by construction.
+
+## Your rights
+
+You can request access to, a copy of, correction of, or erasure of the personal
+data we hold about you, and you can object to or ask us to restrict processing.
+GDPR, CCPA, and equivalent frameworks apply according to where you are; we honor
+the substance of these rights for everyone rather than checking your
+jurisdiction first. Write
+to <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a> and we'll respond
+within 30 days, usually much faster. If you're in the EU/EEA or UK, you can also
+complain to your local supervisory authority. We will never treat you
+differently for exercising a privacy right.
+
+## Children
+
+Neither the website nor the app is directed at children under 16, and we do not
+knowingly collect their data.
+
+## Changes
+
+When this policy changes, we'll update the date at the top and, for anything
+material to app users, say so in the app or by email. The current version
+always lives at this address.
