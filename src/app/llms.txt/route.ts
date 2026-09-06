@@ -1,9 +1,10 @@
 import {
   APP_INSTALL_URL,
   APP_NAME,
-  HIDDEN_MARGIN_NAME,
+  COUNT_CHECK_NAME,
+  LOST_SALES_NAME,
   PRICING,
-  REORDER_ENGINE_NAME,
+  REORDER_LOOP_NAME,
   SITE_NAME,
   SITE_URL,
   SUPPORT_EMAIL,
@@ -41,8 +42,9 @@ function body() {
 ## Apps
 
 - [${APP_NAME}](${url("/image-voice")}): alt text for Shopify stores. Free forever audit that grades existing alt text as missing / junk / weak / good, then writes a real description for every image. Live on the Shopify App Store. Plans: Audit $${PRICING.audit.toFixed(2)}, Keeper $${PRICING.keeper.toFixed(2)}/mo, Curator $${PRICING.curator.toFixed(2)}/mo.
-- [${HIDDEN_MARGIN_NAME}](${url("/hidden-margin")}): a readiness score for a Shopify catalog's missing costs, weights and HS codes, with each gap priced in dollars. In development; waitlist open.
-- [${REORDER_ENGINE_NAME}](${url("/reorder-engine")}): reorder points and purchase-order automation for Shopify inventory, proven in shadow against a store's own orders before it places one. In development; waitlist open.
+- [${REORDER_LOOP_NAME}](${url("/reorder-loop")}): end-to-end reordering for Shopify inventory — sizes the order to what is selling and to available cash, tracks the supplier's reply, and checks the invoice against what actually landed. Proven in shadow against a store's own orders for 30 days before it places one, and nothing is sent without approval. In development; waitlist open.
+- [${COUNT_CHECK_NAME}](${url("/count-check")}): daily reconciliation of a 3PL's inventory count against Shopify's, per product, with the difference priced in dollars and kept as history a merchant can file a claim on. Read-only — it writes to neither system. In development; waitlist open.
+- [${LOST_SALES_NAME}](${url("/lost-sales")}): counts the hours each product spends at zero and prices them from the store's own run-rate, so out-of-stock days can be told apart from low demand. It can only count from the day it is connected. In development; waitlist open.
 
 ## Guides and comparisons
 
@@ -54,7 +56,7 @@ English only. Each is dated, and the comparisons cite the competitor's own App S
 
 ## Site
 
-- [Home](${url("/")}): the problem all three apps address — Shopify, the 3PL and the spreadsheet disagreeing about the same numbers.
+- [Home](${url("/")}): the problem all four apps address — Shopify, the 3PL and the spreadsheet disagreeing about the same numbers.
 - [Support](${url("/support")}): undo, billing, response times, and exactly what the apps read and write.
 - [Privacy](${url("/privacy")}): what is accessed, what is stored, how long it is kept, and the AI processing involved.
 

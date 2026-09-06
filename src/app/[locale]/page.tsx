@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { useLocale, useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { TrackedLink } from "@/components/analytics/tracked-link";
+import { ContrastCards } from "@/components/contrast-cards";
 import { DataCard } from "@/components/data-card";
 import { HeroSplit } from "@/components/hero-split";
 import { CtaBand } from "@/components/layout/cta-band";
@@ -115,7 +116,7 @@ export default function Home() {
             caption={t.rich("inventory.caption", {
               link: (chunks) => (
                 <Link
-                  href="/hidden-margin"
+                  href="/count-check"
                   className="text-brand-800 font-semibold"
                 >
                   {chunks}
@@ -197,33 +198,18 @@ export default function Home() {
         <SuiteIndex />
       </Section>
 
-      {/*
-       * 5 — The two futures, side by side. No reveal, deliberately: after a
-       * page of things that draw and slide themselves in, two plain cards
-       * that are simply THERE is the loudest thing left.
-       */}
+      {/* 5 — The two futures, side by side. The three lab pages close on the
+          same pair, so the cards are a component now, not a layout. */}
       <Section className="pt-0 sm:pt-0">
-        <div className="grid gap-[18px] md:grid-cols-2">
-          <div className="border-hairline bg-surface-muted rounded-xl border p-10">
-            <p className="text-fine text-ink-faint font-bold tracking-[0.05em] uppercase">
-              {t("contrast.withoutLabel")}
-            </p>
-            <p className="text-muted-foreground mt-3 text-lg leading-[1.6]">
-              {t("contrast.withoutBody")}
-            </p>
-          </div>
-          <div className="border-brand-800/35 shadow-featured from-brand-50 rounded-xl border-[1.5px] bg-linear-to-b to-white p-10">
-            <p className="text-fine text-brand-800 font-bold tracking-[0.05em] uppercase">
-              {t("contrast.withLabel")}
-            </p>
-            <p className="mt-3 text-lg leading-[1.6]">
-              {t("contrast.withBody")}
-            </p>
-          </div>
-        </div>
+        <ContrastCards
+          withoutLabel={t("contrast.withoutLabel")}
+          withoutBody={t("contrast.withoutBody")}
+          withLabel={t("contrast.withLabel")}
+          withBody={t("contrast.withBody")}
+        />
       </Section>
 
-      {/* 6 — The one thing to do. Waitlist-first: the scan this page argues
+      {/* 6 — The one thing to do. Waitlist-first: the app this page argues
           for is the one that is still in the lab. */}
       <CtaBand
         title={t("cta.title")}
@@ -231,7 +217,7 @@ export default function Home() {
         action={
           <Button asChild size="lg" variant="onDark" className="shadow-on-dark">
             <TrackedLink
-              href="/hidden-margin#waitlist"
+              href="/reorder-loop#waitlist"
               data-motion="dot"
               event="cta_app_view"
               eventProps={{ location: "home-cta" }}

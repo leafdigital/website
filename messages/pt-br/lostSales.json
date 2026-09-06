@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "title": "Quanto ficar esgotado custa de verdade — Lost Sales",
+    "description": "Cada dia esgotado custa um dinheiro que você nunca vai ver. O Shopify chama esses dias parados de baixa demanda. O Lost Sales conta, precifica e ordena os produtos que precisam de proteção."
+  },
+  "hero": {
+    "badge": "Lost Sales · no laboratório · lista de espera aberta",
+    "kicker": "O número que ninguém guarda",
+    "headline": "Ficar esgotado custa <accent>mais do que você imagina.</accent>",
+    "subhead": "Cada dia em que você está esgotado, perde um dinheiro que nunca vai ver. O Lost Sales mostra quanto.",
+    "ctaPrimary": "Entrar na lista de espera",
+    "ctaSecondary": "O que muda",
+    "finePrint": "Ele começa a contar no dia em que você conecta. Todo dia antes disso é um dia que você não recupera."
+  },
+  "card": {
+    "daysCount": "{count, number}",
+    "days": "dias o seu melhor produto ficou zerado",
+    "recordsCount": "{count, number}",
+    "records": "sistemas anotaram quanto isso custou",
+    "caption": "Dados de exemplo. O Shopify guarda cada venda que fez — nada guarda as que ele não conseguiu fazer."
+  },
+  "identify": {
+    "kicker": "Soa familiar?",
+    "title": "Não existe alerta para o dinheiro que você não ganhou.",
+    "one": {
+      "statement": "Seu campeão de vendas zerou numa terça. A reposição chegou na quinta seguinte.",
+      "body": "Nove dias."
+    },
+    "two": {
+      "statement": "O Shopify mostra nove dias parados. Ele chama isso de baixa demanda.",
+      "body": "Então o próximo pedido é menor. Então esgota de novo."
+    },
+    "three": {
+      "statement": "Ninguém te avisou. Você descobriu quando um cliente perguntou.",
+      "body": "Você vive dentro dos seus relatórios. Você sabe qual SKU está esgotado hoje."
+    },
+    "four": {
+      "statement": "Você não faz ideia de quanto os dias esgotados do trimestre passado te custaram.",
+      "body": "Porque nada, em lugar nenhum, anotou isso."
+    },
+    "closer": "E saiu do mesmo dinheiro de que você precisa para o próximo pedido."
+  },
+  "logic": {
+    "kicker": "É isto que muda",
+    "title": "Cada dia zerado ganha um valor em dinheiro",
+    "one": {
+      "title": "Precificado, não chutado",
+      "body": "Cada dia em que um produto fica zerado ganha um valor. O seu. A partir do seu ritmo de venda, do seu preço, das suas horas sem estoque. A conta está na tela — confira contra o seu próprio admin."
+    },
+    "two": {
+      "title": "Ordenado pelo que custou",
+      "body": "Você recebe uma lista, ordenada pelo que cada produto te custou enquanto esteve fora."
+    },
+    "three": {
+      "title": "Os cinco que você protege",
+      "body": "Você sabe quais são os cinco que não pode deixar acabar. Não é palpite. É número."
+    },
+    "footer": "Ele começa a contar no dia em que você conecta. Todo dia antes disso é um dia que ninguém anotou — que é exatamente por isso que esse número ainda não existe."
+  },
+  "objections": {
+    "kicker": "Due diligence",
+    "title": "Os três motivos para não acreditar — respondidos",
+    "one": {
+      "q": "«Eu sei quando estou sem estoque.»",
+      "a": "Você sabe o de hoje. Você não sabe o que foram os 31 dias zerados em 14 produtos do trimestre passado, nem quanto custaram. Ninguém guardou isso."
+    },
+    "two": {
+      "q": "«Esse relatório eu monto.»",
+      "a": "A partir de dados que não existem. O Shopify não guarda horas zeradas. Passou o momento, acabou. O único jeito de ter o número é ter contado."
+    },
+    "three": {
+      "q": "«Vai ser mais um número inflado de fornecedor.»",
+      "a": "Cada real mostra a conta. Se não bater com o seu admin, não confie."
+    }
+  },
+  "confess": {
+    "title": "«Aqueles 8 dias zerados não eram baixa demanda — era falta de estoque.»",
+    "sub": "Uma média simples não distingue «ninguém queria» de «a gente não tinha o que vender». Sua previsão também não — e é essa parte que continua te custando."
+  },
+  "solution": {
+    "kicker": "A diferença",
+    "title": "Você nunca mais perde essas vendas.",
+    "sub": "Você sabe exatamente quais produtos proteger — antes do trimestre fechar, não depois.",
+    "withoutLabel": "Sem o Lost Sales",
+    "withoutBody": "Continua parecendo uma semana fraca. A previsão continua pedindo menos. O campeão continua acabando. E o dinheiro continua indo embora sem registro nenhum de que esteve ali.",
+    "withLabel": "Com o Lost Sales",
+    "withBody": "Você sabe quanto ficar esgotado te custou. Em dinheiro. Por produto. Antes do trimestre fechar."
+  },
+  "cta": {
+    "title": "Entre na lista. Ele conta a partir do dia em que você conecta.",
+    "sub": "Uma lista só, para todos os próximos apps da Leaf — você é o primeiro em todos. As primeiras {spots, number} lojas ficam com o preço Charter, travado para sempre. Essa é a escolha certa.",
+    "note": "Imagens mudas já dá para resolver hoje. <link>O Image Voice está no ar — rode essa análise agora →</link>"
+  }
+}

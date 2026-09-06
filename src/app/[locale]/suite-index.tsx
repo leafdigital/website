@@ -1,28 +1,35 @@
 import { useTranslations } from "next-intl";
 import { TrackedLink } from "@/components/analytics/tracked-link";
+import {
+  APP_NAME,
+  COUNT_CHECK_NAME,
+  LOST_SALES_NAME,
+  REORDER_LOOP_NAME,
+} from "@/lib/constants";
 import type { AppRoute } from "@/lib/routes";
 import { cn } from "@/lib/utils";
 
 const apps: { key: string; name: string; href: AppRoute; live: boolean }[] = [
-  { key: "imageVoice", name: "Image Voice", href: "/image-voice", live: true },
+  { key: "imageVoice", name: APP_NAME, href: "/image-voice", live: true },
   {
-    key: "hiddenMargin",
-    name: "Hidden Margin",
-    href: "/hidden-margin",
+    key: "reorderLoop",
+    name: REORDER_LOOP_NAME,
+    href: "/reorder-loop",
     live: false,
   },
   {
-    key: "reorderEngine",
-    name: "Reorder Engine",
-    href: "/reorder-engine",
+    key: "countCheck",
+    name: COUNT_CHECK_NAME,
+    href: "/count-check",
     live: false,
   },
+  { key: "lostSales", name: LOST_SALES_NAME, href: "/lost-sales", live: false },
 ];
 
 /**
  * The portfolio as an index, not a card grid.
  *
- * Three cards side by side make three equal offers, and only one of these is
+ * Four cards side by side make four equal offers, and only one of these is
  * installable today. Numbered rows down a page put them in order and let the
  * live one lead without needing a green card to shout it — the LIVE pill
  * does that work in one word. There is no /apps route; this is the only

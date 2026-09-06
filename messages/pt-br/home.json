@@ -8,7 +8,7 @@
     "headline": "Seu dinheiro<br></br>está <accent>escondido.</accent>",
     "subhead": "Seu Shopify, seu 3PL e sua planilha contam três histórias diferentes. E o dinheiro se esconde nas brechas.",
     "ctaPrimary": "Onde o seu está escondido? ↓",
-    "finePrint": "Nosso primeiro app está no ar: Image Voice, a análise de imagens mudas. O Hidden Margin — a análise que coloca preço em cada buraco do seu catálogo — vem em seguida. Quem entra primeiro na lista fica sabendo primeiro."
+    "finePrint": "Nosso primeiro app está no ar: Image Voice, a análise de imagens mudas. Outros três estão no laboratório — Reorder Loop, Count Check e Lost Sales. Quem está primeiro na lista fica sabendo primeiro."
   },
   "inventory": {
     "title": "Estoque disponível · mesmos SKUs, mesmo dia",
@@ -18,7 +18,7 @@
     "units": "{count, number} unidades",
     "gap": "A diferença",
     "gapValue": "{units, number} unidades · ~{dollars, number, ::currency/USD precision-integer}",
-    "caption": "Hidden Margin + Reorder Engine — no laboratório. É isto que a análise vai te mostrar. <link>→</link>"
+    "caption": "Count Check + Reorder Loop — no laboratório. É esta a brecha que eles vigiam, todo dia. <link>→</link>"
   },
   "villain": {
     "kicker": "Soa familiar?",
@@ -56,12 +56,16 @@
       "description": "Suas imagens são mudas — para o Google, para os compradores de IA, para os leitores de tela. Análise gratuita e uma descrição de verdade para cada imagem.",
       "cta": "Analise suas imagens de graça →"
     },
-    "hiddenMargin": {
-      "description": "Margem escondida mata negócio. Seu catálogo tem buracos — custos, HS codes e países de origem faltando. Uma nota de prontidão, com cada buraco precificado em dinheiro.",
+    "reorderLoop": {
+      "description": "Nove apps preveem o seu estoque. Nenhum termina o pedido. O Reorder Loop faz o pedido inteiro — você só diz sim.",
       "cta": "Entrar na lista de espera →"
     },
-    "reorderEngine": {
-      "description": "Nove apps preveem seu estoque. Nenhum envia o PO. Estamos construindo o último quilômetro que falta — provado em modo sombra primeiro.",
+    "countCheck": {
+      "description": "Seu 3PL diz um número. O Shopify diz outro. A diferença é o seu dinheiro — e ninguém está conferindo.",
+      "cta": "Entrar na lista de espera →"
+    },
+    "lostSales": {
+      "description": "Cada dia esgotado custa um dinheiro que você nunca vai ver. Nada, em lugar nenhum, anota isso. Isto anota.",
       "cta": "Entrar na lista de espera →"
     }
   },
@@ -72,8 +76,8 @@
     "withBody": "Você abre um email por semana, vê os números fecharem e volta a construir aquilo que te fez abrir a empresa."
   },
   "cta": {
-    "title": "O scanner de buracos está no laboratório. Seja a primeira a ver o que está escondido.",
-    "sub": "A gente não vai te mostrar os números de outra pessoa. Vai mostrar os seus — no dia em que a análise puder rodar na sua loja. Uma lista só, para todos os próximos apps da Leaf.",
+    "title": "O Reorder Loop está no laboratório. Seja o primeiro quando ele rodar nos seus pedidos.",
+    "sub": "A gente não vai te mostrar os números de outra pessoa. Vai mostrar os seus — no dia em que ele puder rodar na sua loja. Uma lista só, para todos os próximos apps da Leaf.",
     "button": "Entrar na lista de espera",
     "note": "Enquanto isso, já disponível hoje: comece por onde toda loja vaza primeiro. <link>Rodar a análise de imagens grátis →</link>"
   }

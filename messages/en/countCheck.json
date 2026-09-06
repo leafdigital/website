@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "3PL vs Shopify Inventory Reconciliation — Count Check",
+    "description": "Your 3PL says one number. Shopify says another. The difference is your money, and nobody is checking. Count Check compares both every day and prices the gap."
+  },
+  "hero": {
+    "badge": "Count Check · in the lab · waitlist open",
+    "kicker": "Shrinkage nobody claims back",
+    "headline": "Your stock is going <accent>missing.</accent>",
+    "subhead": "Your 3PL says one number. Shopify says another. The difference is your money — and nobody’s checking.",
+    "ctaPrimary": "Join the waitlist",
+    "ctaSecondary": "See what changes",
+    "finePrint": "Connect your 3PL and Shopify, see today’s gap. Read-only, nothing else — it writes to neither system."
+  },
+  "card": {
+    "title": "Units on hand · one SKU, same day",
+    "threePl": "Your 3PL",
+    "shopify": "Shopify",
+    "units": "{count, number} units",
+    "gap": "The gap",
+    "gapValue": "{count, number} units",
+    "caption": "Sample figures. Someone’s wrong — and right now, nobody is checking which."
+  },
+  "identify": {
+    "kicker": "Sound familiar?",
+    "title": "You pay two systems to hold the same number. Neither one is checking.",
+    "one": {
+      "statement": "Your 3PL quietly dropped the count by one after a cycle count.",
+      "body": "You asked how a bright orange box that weighs five pounds disappears. They said “products can occasionally be misplaced due to an operational move on the warehouse floor.”"
+    },
+    "two": {
+      "statement": "Then they told you 2–5% shrinkage is industry standard.",
+      "body": "Standard for them. Out of your margin."
+    },
+    "three": {
+      "statement": "Black Friday. Your top product oversold by 30 units.",
+      "body": "You spent the weekend calling customers to cancel. Lost the sales and the reputation in the same 48 hours."
+    },
+    "four": {
+      "statement": "Year-end count: you got the total that’s missing.",
+      "body": "Not which product. Not when. Not who."
+    },
+    "closer": "You find out when an order can’t ship."
+  },
+  "logic": {
+    "kicker": "Here’s what changes",
+    "title": "Two numbers, side by side, every day",
+    "one": {
+      "title": "Both counts, daily",
+      "body": "Every day, every product: what your 3PL says, what Shopify says, and the difference — in units and in dollars."
+    },
+    "two": {
+      "title": "You hear it first",
+      "body": "The moment it drifts past what you’ll accept, you know. Not the customer. You."
+    },
+    "three": {
+      "title": "A claim, not a complaint",
+      "body": "And you have the history: which product, when, how much. That’s not a complaint anymore. That’s a claim."
+    },
+    "footer": "It reads both systems and writes to neither. Read-only, nothing else — the only thing it changes is what you know."
+  },
+  "objections": {
+    "kicker": "Due diligence",
+    "title": "The three reasons not to believe this — answered",
+    "one": {
+      "q": "“My 3PL does cycle counts.”",
+      "a": "Their shelf against their system. Nobody checks their system against yours. That’s the gap, and it’s where “industry standard” lives."
+    },
+    "two": {
+      "q": "“It’s ones and twos.”",
+      "a": "Ones and twos across 300 products, at your cost, every month. A 3PL owner said it himself: should be under half a percent. You can’t hold them to that without your own count."
+    },
+    "three": {
+      "q": "“I’ll find out at the physical count.”",
+      "a": "You’ll find the total. By then it’s a write-off, not a claim."
+    }
+  },
+  "confess": {
+    "title": "“Products can occasionally be misplaced.”",
+    "sub": "The 3PL’s own words. Occasionally. For years. Out of your money."
+  },
+  "solution": {
+    "kicker": "The difference",
+    "title": "Your stock, accounted for.",
+    "sub": "No oversells at peak. Shrinkage you can claim back. A count you can trust your cash to.",
+    "withoutLabel": "Without Count Check",
+    "withoutBody": "You find out from a customer. Or at year-end, as a write-off. And the 3PL keeps calling it normal.",
+    "withLabel": "With Count Check",
+    "withBody": "You know the day it moves. You have the number. You walk into the 3PL conversation with the evidence, not the feeling."
+  },
+  "cta": {
+    "title": "Join the waitlist. Connect your 3PL and see today’s gap.",
+    "sub": "One list, every coming Leaf app — you’re first in line for all of them. The first {spots, number} stores get Charter pricing, locked for life. This is the right call.",
+    "note": "Silent images are already fixable today. <link>Image Voice is live — run that scan now →</link>"
+  }
+}

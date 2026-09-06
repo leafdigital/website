@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "title": "Ce que la rupture vous coûte vraiment — Lost Sales",
+    "description": "Chaque jour en rupture, vous perdez de l’argent que vous ne verrez jamais. Shopify appelle ces journées calmes une faible demande. Lost Sales les compte, les chiffre et classe les produits à protéger."
+  },
+  "hero": {
+    "badge": "Lost Sales · au labo · liste d’attente ouverte",
+    "kicker": "Le chiffre que personne ne garde",
+    "headline": "La rupture vous coûte <accent>plus que vous ne croyez.</accent>",
+    "subhead": "Chaque jour en rupture, vous perdez de l’argent que vous ne verrez jamais. Lost Sales vous montre combien.",
+    "ctaPrimary": "Rejoindre la liste d’attente",
+    "ctaSecondary": "Ce qui change",
+    "finePrint": "Il commence à compter le jour où vous le connectez. Chaque jour d’avant est un jour que vous ne récupérerez pas."
+  },
+  "card": {
+    "daysCount": "{count, number}",
+    "days": "jours où votre meilleur produit est resté à zéro",
+    "recordsCount": "{count, number}",
+    "records": "systèmes ont noté ce que ça a coûté",
+    "caption": "Chiffres d’exemple. Shopify garde chaque vente qu’il a faite — rien ne garde celles qu’il n’a pas pu faire."
+  },
+  "identify": {
+    "kicker": "Ça vous parle ?",
+    "title": "Il n’existe aucune alerte pour l’argent que vous n’avez pas gagné.",
+    "one": {
+      "statement": "Votre best-seller est tombé à zéro un mardi. Le réassort est arrivé le jeudi suivant.",
+      "body": "Neuf jours."
+    },
+    "two": {
+      "statement": "Shopify montre neuf journées calmes. Il appelle ça une faible demande.",
+      "body": "Donc la commande suivante est plus petite. Donc il repart en rupture."
+    },
+    "three": {
+      "statement": "Personne ne vous a prévenu. Vous l’avez appris quand un client a posé la question.",
+      "body": "Vous vivez dans vos rapports. Vous connaissez le SKU en rupture aujourd’hui."
+    },
+    "four": {
+      "statement": "Vous n’avez aucune idée de ce que les jours en rupture du trimestre dernier vous ont coûté.",
+      "body": "Parce que rien, nulle part, ne l’a noté."
+    },
+    "closer": "Et c’est sorti de la même trésorerie dont vous avez besoin pour la prochaine commande."
+  },
+  "logic": {
+    "kicker": "Voilà ce qui change",
+    "title": "Chaque journée à zéro reçoit un montant",
+    "one": {
+      "title": "Chiffré, pas deviné",
+      "body": "Chaque jour où un produit reste à zéro reçoit un montant. Le vôtre. À partir de votre rythme de vente, votre prix, vos heures en rupture. Le calcul est à l’écran — confrontez-le à votre propre admin."
+    },
+    "two": {
+      "title": "Classé par ce que ça a coûté",
+      "body": "Vous obtenez une liste, classée par ce que chaque produit vous a coûté pendant son absence."
+    },
+    "three": {
+      "title": "Les cinq à protéger",
+      "body": "Vous savez lesquels sont les cinq que vous ne pouvez pas vous permettre de mettre en rupture. Pas une intuition. Un chiffre."
+    },
+    "footer": "Il commence à compter le jour où vous le connectez. Chaque jour d’avant est un jour que personne n’a noté — c’est exactement pour ça que ce chiffre n’existe pas encore."
+  },
+  "objections": {
+    "kicker": "Due diligence",
+    "title": "Les trois raisons de ne pas y croire — traitées",
+    "one": {
+      "q": "« Je sais quand je suis en rupture. »",
+      "a": "Vous savez pour aujourd’hui. Vous ne savez pas ce qu’ont été les 31 jours à zéro répartis sur 14 produits le trimestre dernier, ni ce qu’ils ont coûté. Personne ne l’a conservé."
+    },
+    "two": {
+      "q": "« Ce rapport, je peux le construire. »",
+      "a": "À partir de données qui n’existent pas. Shopify ne conserve pas les heures à zéro. Une fois l’instant passé, il est perdu. La seule façon d’avoir le chiffre, c’est d’avoir compté."
+    },
+    "three": {
+      "q": "« Ce sera un chiffre gonflé de fournisseur. »",
+      "a": "Chaque euro montre son calcul. Si ça ne tombe pas juste avec votre admin, n’y croyez pas."
+    }
+  },
+  "confess": {
+    "title": "« Ces 8 jours à zéro n’étaient pas une faible demande — il n’y avait pas de stock. »",
+    "sub": "Une simple moyenne ne fait pas la différence entre « personne n’en voulait » et « nous n’avions rien à vendre ». Votre prévision non plus, et c’est cette partie-là qui continue de vous coûter."
+  },
+  "solution": {
+    "kicker": "La différence",
+    "title": "Vous ne perdez plus jamais ces ventes.",
+    "sub": "Vous savez exactement quels produits protéger — avant la clôture du trimestre, pas après.",
+    "withoutLabel": "Sans Lost Sales",
+    "withoutBody": "Ça continue de ressembler à une semaine molle. La prévision continue de commander moins. Le best-seller continue de tomber en rupture. Et l’argent continue de partir sans trace qu’il ait jamais été là.",
+    "withLabel": "Avec Lost Sales",
+    "withBody": "Vous savez ce que la rupture vous a coûté. En euros. Par produit. Avant la clôture du trimestre."
+  },
+  "cta": {
+    "title": "Rejoignez la liste. Il compte à partir du jour où vous le connectez.",
+    "sub": "Une seule liste, pour toutes les prochaines apps Leaf — vous êtes en tête pour toutes. Les {spots, number} premières boutiques obtiennent le tarif Charter, verrouillé à vie. C’est le bon choix.",
+    "note": "Les images muettes se réparent déjà aujourd’hui. <link>Image Voice est en ligne — lancez l’analyse maintenant →</link>"
+  }
+}

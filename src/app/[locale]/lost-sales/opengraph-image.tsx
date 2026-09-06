@@ -9,7 +9,7 @@ export const contentType = "image/png";
  * card itself is localized. It is the fallback description on the social
  * card, not the card's visible copy.
  */
-export const alt = "Reorder Engine — your cash is trapped in inventory";
+export const alt = "Lost Sales — sold out is costing you more than you think";
 
 /** One card per locale, prerendered. */
 export function generateStaticParams() {
@@ -25,7 +25,7 @@ export default async function OgImage({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "og" });
   return renderOgImage({
-    kicker: t("reorderEngine.kicker"),
-    title: t("reorderEngine.title"),
+    kicker: t("lostSales.kicker"),
+    title: t("lostSales.title"),
   });
 }

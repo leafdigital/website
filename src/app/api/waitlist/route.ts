@@ -3,9 +3,9 @@ import { SUPPORT_EMAIL } from "@/lib/constants";
 
 /**
  * The waitlist. ONE list across every app — a visitor who signs up on
- * /hidden-margin is first in line for /reorder-engine too, and the copy on
- * both pages promises exactly that. `source` records which page they came
- * from so the inbox keeps the context; it is not a list they joined.
+ * /count-check is first in line for /reorder-loop too, and the copy on every
+ * lab page promises exactly that. `source` records which page they came from
+ * so the inbox keeps the context; it is not a list they joined.
  *
  * No database at this volume — submissions land in the support inbox via
  * Resend (RESEND_API_KEY already lives on the Vercel project). The inbox is
@@ -14,7 +14,12 @@ import { SUPPORT_EMAIL } from "@/lib/constants";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 /** Where the form was rendered. Unknown values are recorded, never rejected. */
-const KNOWN_SOURCES = new Set(["hidden-margin", "reorder-engine", "home"]);
+const KNOWN_SOURCES = new Set([
+  "reorder-loop",
+  "count-check",
+  "lost-sales",
+  "home",
+]);
 
 export async function POST(request: Request) {
   let body: { email?: string; source?: string; company?: string };

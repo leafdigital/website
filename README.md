@@ -5,14 +5,23 @@ thesis behind it. Next.js 16 (App Router) + Tailwind v4, six locales.
 
 ## Pages
 
-| Route             | What it is                                            |
-| ----------------- | ----------------------------------------------------- |
-| `/`               | The suite. Hero, the villain, the plan, the apps grid |
-| `/image-voice`    | The live app — free audit, pricing, FAQ               |
-| `/hidden-margin`  | In the lab — readiness score, sample report, waitlist |
-| `/reorder-engine` | Coming soon — the trust ladder, waitlist              |
-| `/privacy`        | Tier-3 document (MDX per locale)                      |
-| `/support`        | Utility copy + FAQ                                    |
+| Route           | What it is                                             |
+| --------------- | ------------------------------------------------------ |
+| `/`             | The suite. Hero, the villain, the plan, the apps index |
+| `/image-voice`  | The live app — free audit, pricing, FAQ                |
+| `/reorder-loop` | In the lab — the whole reorder, waitlist               |
+| `/count-check`  | In the lab — 3PL vs Shopify, daily, waitlist           |
+| `/lost-sales`   | In the lab — what stockouts cost, waitlist             |
+| `/privacy`      | Tier-3 document (MDX per locale)                       |
+| `/support`      | Utility copy + FAQ                                     |
+
+The three lab pages are one page schema — `src/components/lab-app-page.tsx` —
+filled from three message files. They make the same argument in the same
+order, so they are one component rather than three files that drift. What a
+page owns is its hero visual and its accent word.
+
+`/hidden-margin` was retired and `/reorder-engine` renamed to `/reorder-loop`
+in the v3 product line; both 301 in `next.config.ts`.
 
 English is unprefixed (`/image-voice`); every other locale carries its segment
 (`/de/image-voice`). Old `/en/…` URLs redirect to the short form. Never build

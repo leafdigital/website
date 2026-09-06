@@ -8,7 +8,7 @@
     "headline": "Dein Geld<br></br><accent>versteckt sich.</accent>",
     "subhead": "Dein Shopify, dein 3PL und deine Tabelle erzählen drei verschiedene Geschichten. Und in den Lücken versteckt sich das Geld.",
     "ctaPrimary": "Wo versteckt sich deins? ↓",
-    "finePrint": "Unsere erste App ist live: Image Voice, der Scan für stumme Bilder. Hidden Margin — der Scan, der jede Lücke in deinem Katalog in Euro beziffert — kommt als Nächstes. Wer zuerst auf der Liste steht, erfährt es zuerst."
+    "finePrint": "Unsere erste App ist live: Image Voice, der Scan für stumme Bilder. Drei weitere sind im Labor — Reorder Loop, Count Check und Lost Sales. Wer zuerst auf der Liste steht, erfährt es zuerst."
   },
   "inventory": {
     "title": "Verfügbarer Bestand · gleiches SKU-Set, gleicher Tag",
@@ -18,7 +18,7 @@
     "units": "{count, number} Einheiten",
     "gap": "Die Lücke",
     "gapValue": "{units, number} Einheiten · ~{dollars, number, ::currency/USD precision-integer}",
-    "caption": "Hidden Margin + Reorder Engine — im Labor. Genau das wird dir der Scan zeigen. <link>→</link>"
+    "caption": "Count Check + Reorder Loop — im Labor. Genau diese Lücke behalten sie jeden Tag im Auge. <link>→</link>"
   },
   "villain": {
     "kicker": "Kommt dir bekannt vor?",
@@ -56,12 +56,16 @@
       "description": "Deine Bilder schweigen — für Google, für KI-Shopper, für Screenreader. Kostenloser Scan, eine echte Beschreibung für jedes Bild.",
       "cta": "Bilder kostenlos scannen →"
     },
-    "hiddenMargin": {
-      "description": "Versteckte Margen killen Unternehmen. Dein Katalog hat Löcher — fehlende Kosten, HS codes, Herkunftsländer. Ein Bereitschafts-Score, jede Lücke in Dollar beziffert.",
+    "reorderLoop": {
+      "description": "Neun Apps prognostizieren deinen Bestand. Keine einzige bringt die Bestellung zu Ende. Reorder Loop macht die ganze Bestellung — du sagst nur Ja.",
       "cta": "Auf die Warteliste →"
     },
-    "reorderEngine": {
-      "description": "Neun Apps prognostizieren deinen Bestand. Keine einzige schickt die PO. Wir bauen die fehlende letzte Meile — erst im Schattenlauf bewiesen.",
+    "countCheck": {
+      "description": "Dein 3PL nennt eine Zahl. Shopify eine andere. Die Differenz ist dein Geld — und niemand prüft sie.",
+      "cta": "Auf die Warteliste →"
+    },
+    "lostSales": {
+      "description": "Jeder Tag, an dem du ausverkauft bist, kostet dich Geld, das du nie zu sehen bekommst. Nirgendwo wird es festgehalten. Hier schon.",
       "cta": "Auf die Warteliste →"
     }
   },
@@ -72,8 +76,8 @@
     "withBody": "Du öffnest eine E-Mail pro Woche, siehst die Zahlen aufgehen und baust weiter an dem, wofür du die Firma gegründet hast."
   },
   "cta": {
-    "title": "Der Lücken-Scanner ist im Labor. Sei die Erste, die sieht, was sich versteckt.",
-    "sub": "Wir zeigen dir nicht die Zahlen von irgendwem. Wir zeigen dir deine — an dem Tag, an dem der Scan auf deinem Shop laufen kann. Eine Liste, alle kommenden Leaf-Apps.",
+    "title": "Reorder Loop ist im Labor. Sei die Erste, wenn es auf deinen Bestellungen läuft.",
+    "sub": "Wir zeigen dir nicht die Zahlen von irgendwem. Wir zeigen dir deine — an dem Tag, an dem es auf deinem Shop laufen kann. Eine Liste, alle kommenden Leaf-Apps.",
     "button": "Auf die Warteliste",
     "note": "Heute schon live: Fang da an, wo jeder Shop zuerst leckt. <link>Kostenlosen Bilder-Scan starten →</link>"
   }
