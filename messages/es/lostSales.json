@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "title": "Lo que agotarte te cuesta de verdad — Lost Sales",
+    "description": "Cada día agotado pierdes dinero que nunca verás. Shopify llama a esos días tranquilos poca demanda. Lost Sales los cuenta, les pone precio y ordena los productos que hay que proteger."
+  },
+  "hero": {
+    "badge": "Lost Sales · en el laboratorio · lista de espera abierta",
+    "kicker": "El número que nadie guarda",
+    "headline": "Estar agotado te cuesta <accent>más de lo que crees.</accent>",
+    "subhead": "Cada día que estás agotado pierdes dinero que nunca verás. Lost Sales te enseña cuánto.",
+    "ctaPrimary": "Únete a la lista de espera",
+    "ctaSecondary": "Qué cambia",
+    "finePrint": "Empieza a contar el día que lo conectas. Cada día anterior es un día que no vas a recuperar."
+  },
+  "card": {
+    "daysCount": "{count, number}",
+    "days": "días que tu mejor producto estuvo a cero",
+    "recordsCount": "{count, number}",
+    "records": "sistemas anotaron lo que costó",
+    "caption": "Datos de ejemplo. Shopify guarda cada venta que hizo — nada guarda las que no pudo hacer."
+  },
+  "identify": {
+    "kicker": "¿Te suena?",
+    "title": "No hay ninguna alerta para el dinero que no ganaste.",
+    "one": {
+      "statement": "Tu superventas llegó a cero un martes. La reposición aterrizó el jueves siguiente.",
+      "body": "Nueve días."
+    },
+    "two": {
+      "statement": "Shopify enseña nueve días tranquilos. Lo llama poca demanda.",
+      "body": "Así que el siguiente pedido es más pequeño. Así que se vuelve a agotar."
+    },
+    "three": {
+      "statement": "Nadie te avisó. Te enteraste cuando lo preguntó un cliente.",
+      "body": "Vives en tus informes. Sabes qué SKU está agotado hoy."
+    },
+    "four": {
+      "statement": "No tienes ni idea de lo que te costaron los días agotado del trimestre pasado.",
+      "body": "Porque nada, en ninguna parte, lo anotó."
+    },
+    "closer": "Y salió del mismo dinero que necesitas para el siguiente pedido."
+  },
+  "logic": {
+    "kicker": "Esto es lo que cambia",
+    "title": "Cada día a cero recibe una cifra en dinero",
+    "one": {
+      "title": "Con precio, no a ojo",
+      "body": "Cada día que un producto está a cero recibe una cifra. La tuya. De tu ritmo de venta, tu precio, tus horas sin stock. Las cuentas están en pantalla — contrástalas con tu propio admin."
+    },
+    "two": {
+      "title": "Ordenado por lo que costó",
+      "body": "Recibes una lista, ordenada por lo que te costó cada producto mientras no estuvo."
+    },
+    "three": {
+      "title": "Los cinco que proteges",
+      "body": "Sabes cuáles son los cinco que no te puedes permitir agotar. No una intuición. Un número."
+    },
+    "footer": "Empieza a contar el día que lo conectas. Cada día anterior es un día que nadie anotó — que es exactamente por lo que ese número todavía no existe."
+  },
+  "objections": {
+    "kicker": "Diligencia debida",
+    "title": "Las tres razones para no creerte esto — respondidas",
+    "one": {
+      "q": "«Ya sé cuándo estoy sin stock.»",
+      "a": "Sabes el de hoy. No sabes los 31 días a cero repartidos en 14 productos del trimestre pasado, ni lo que costaron. Eso no lo guardó nadie."
+    },
+    "two": {
+      "q": "«Ese informe me lo puedo montar yo.»",
+      "a": "Con datos que no están. Shopify no guarda las horas a cero. Cuando pasa el momento, se acabó. La única forma de tener el número es haber estado contando."
+    },
+    "three": {
+      "q": "«Será un número inflado de proveedor.»",
+      "a": "Cada euro enseña sus cuentas. Si no cuadra con tu admin, no te lo creas."
+    }
+  },
+  "confess": {
+    "title": "«Esos 8 días a cero no eran poca demanda — era no tener stock.»",
+    "sub": "Una media simple no distingue entre «no lo quería nadie» y «no teníamos nada que vender». Tu previsión tampoco, y esa es la parte que te sigue costando."
+  },
+  "solution": {
+    "kicker": "La diferencia",
+    "title": "Nunca vuelves a perder esas ventas.",
+    "sub": "Sabes exactamente qué productos proteger — antes de que cierre el trimestre, no después.",
+    "withoutLabel": "Sin Lost Sales",
+    "withoutBody": "Sigue pareciendo una semana floja. La previsión sigue pidiendo menos. El superventas se sigue agotando. Y el dinero se sigue yendo sin que quede constancia de que estuvo ahí.",
+    "withLabel": "Con Lost Sales",
+    "withBody": "Sabes lo que te costó estar agotado. En dinero. Por producto. Antes de que cierre el trimestre."
+  },
+  "cta": {
+    "title": "Únete a la lista. Empieza a contar el día que lo conectas.",
+    "sub": "Una lista, todas las apps de Leaf que vienen — estás primero para todas. Las primeras {spots, number} tiendas consiguen precio Charter, bloqueado de por vida. Esta es la decisión correcta.",
+    "note": "Las imágenes mudas ya tienen arreglo hoy. <link>Image Voice está vivo — lanza ese análisis ahora →</link>"
+  }
+}

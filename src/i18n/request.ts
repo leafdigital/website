@@ -12,8 +12,9 @@ const namespaces = [
   "support",
   "home",
   "imageVoice",
-  "hiddenMargin",
-  "reorderEngine",
+  "reorderLoop",
+  "countCheck",
+  "lostSales",
 ] as const;
 
 /**

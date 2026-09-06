@@ -8,7 +8,7 @@
     "headline": "Your money<br></br>is <accent>hiding.</accent>",
     "subhead": "Your Shopify, your 3PL, and your spreadsheet all tell a different story. And the money hides in the gaps.",
     "ctaPrimary": "Where’s yours hiding? ↓",
-    "finePrint": "Our first app is live: Image Voice, the silent-images scan. Hidden Margin — the scan that prices every gap in your catalog in dollars — ships next. First in line hears first."
+    "finePrint": "Our first app is live: Image Voice, the silent-images scan. Three more are in the lab — Reorder Loop, Count Check and Lost Sales. First in line hears first."
   },
   "inventory": {
     "title": "Inventory on hand · same SKU set, same day",
@@ -18,7 +18,7 @@
     "units": "{count, number} units",
     "gap": "The gap",
     "gapValue": "{units, number} units · ~{dollars, number, ::currency/USD precision-integer}",
-    "caption": "Hidden Margin + Reorder Engine — in the lab. This is what the scan will show you. <link>→</link>"
+    "caption": "Count Check + Reorder Loop — in the lab. This is the gap they watch, every day. <link>→</link>"
   },
   "villain": {
     "kicker": "Sound familiar?",
@@ -56,12 +56,16 @@
       "description": "Your images are silent — to Google, to AI shoppers, to screen readers. Free scan, a real description for every image.",
       "cta": "Scan your images free →"
     },
-    "hiddenMargin": {
-      "description": "Hidden margins kill businesses. Your catalog has holes — missing costs, HS codes, countries of origin. One readiness score, gaps priced in dollars.",
+    "reorderLoop": {
+      "description": "Nine apps forecast your inventory. None of them finish the order. Reorder Loop does the whole order — you just say yes.",
       "cta": "Join the waitlist →"
     },
-    "reorderEngine": {
-      "description": "Nine apps forecast your inventory. Not one sends the PO. We’re building the missing last mile — proven in shadow first.",
+    "countCheck": {
+      "description": "Your 3PL says one number. Shopify says another. The difference is your money — and nobody’s checking.",
+      "cta": "Join the waitlist →"
+    },
+    "lostSales": {
+      "description": "Every day you’re sold out, you lose money you’ll never see. Nothing, anywhere, writes it down. This does.",
       "cta": "Join the waitlist →"
     }
   },
@@ -72,8 +76,8 @@
     "withBody": "You open one email a week, watch the numbers tie out, and go back to building the thing you started the company to build."
   },
   "cta": {
-    "title": "The gap scanner is in the lab. Be first to see what’s hiding.",
-    "sub": "We won’t show you someone else’s numbers. We’ll show you yours — the day the scan can run on your store. One list, every coming Leaf app.",
+    "title": "Reorder Loop is in the lab. Be first when it runs on your orders.",
+    "sub": "We won’t show you someone else’s numbers. We’ll show you yours — the day it can run on your store. One list, every coming Leaf app.",
     "button": "Join the waitlist",
     "note": "Meanwhile, live today: start where every store leaks first. <link>Run the free image scan →</link>"
   }

@@ -6,13 +6,17 @@
     "kicker": "Image Voice",
     "title": "{silent, number} of your images say nothing"
   },
-  "hiddenMargin": {
-    "kicker": "Hidden Margin",
-    "title": "Your catalog has holes."
+  "reorderLoop": {
+    "kicker": "Reorder Loop",
+    "title": "Your cash is trapped."
   },
-  "reorderEngine": {
-    "kicker": "Reorder Engine",
-    "title": "Your cash is trapped in inventory."
+  "countCheck": {
+    "kicker": "Count Check",
+    "title": "Your stock is going missing."
+  },
+  "lostSales": {
+    "kicker": "Lost Sales",
+    "title": "Sold out is costing you."
   },
   "support": {
     "kicker": "Support",

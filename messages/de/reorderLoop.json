@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "title": "Shopify-Nachbestellung, komplett erledigt — Reorder Loop",
+    "description": "Neun Apps prognostizieren deinen Shopify-Bestand. Keine bringt die Bestellung zu Ende. Reorder Loop macht die ganze Bestellung — dimensioniert, nachgehakt, gegen die Lieferung geprüft. Du sagst nur Ja."
+  },
+  "hero": {
+    "badge": "Reorder Loop · im Labor · Warteliste offen",
+    "kicker": "Gebundenes Kapital killt Marken",
+    "headline": "Dein Kapital ist <accent>gefangen.</accent>",
+    "subhead": "In Produkten, die keiner kauft — während die gefragten ausgehen. Und jede Bestellung musst du richtig treffen. Reorder Loop macht die ganze Bestellung. Du sagst nur Ja.",
+    "ctaPrimary": "Auf die Warteliste",
+    "ctaSecondary": "Was sich ändert",
+    "finePrint": "Die ersten {spots, number} Shops bekommen Charter-Preise, für immer festgeschrieben. Es beweist sich erst an deinen eigenen Bestellungen, bevor es irgendetwas anfasst."
+  },
+  "card": {
+    "forecastCount": "{count, number}",
+    "forecast": "Apps prognostizieren deinen Bestand",
+    "finishCount": "{count, number}",
+    "finish": "bringen die Bestellung zu Ende",
+    "caption": "Jeder Platzhirsch hört bei „empfehlen → du klickst“ auf. Reorder Loop ist die fehlende letzte Meile — sorgfältig gebaut, erst im Schattenlauf bewiesen."
+  },
+  "identify": {
+    "kicker": "Kommt dir bekannt vor?",
+    "title": "Jede Bestellung ist eine Wette — und nur du darfst sie setzen.",
+    "one": {
+      "statement": "200 Stück von etwas, das keiner will.",
+      "body": "40 Stück übrig von dem, was alle wollen."
+    },
+    "two": {
+      "statement": "Es ist 23 Uhr. Der Lieferant hat nicht geantwortet.",
+      "body": "Die letzte Rechnung passt immer noch nicht zu dem, was angekommen ist — und du hast sie trotzdem bezahlt."
+    },
+    "three": {
+      "statement": "Die Tabelle nennt Lieferzeit, MOQ, letztes Bestelldatum.",
+      "body": "Sie sagt dir nicht, was es dich kostet, wenn du falsch liegst."
+    },
+    "four": {
+      "statement": "Niemand sonst im Unternehmen kann diese Entscheidung treffen.",
+      "body": "Es ist dein Geld. Also ist es deine Nacht."
+    },
+    "closer": "Du hast keine Marke gegründet, um nach dem Abendessen den Einkauf zu machen."
+  },
+  "logic": {
+    "kicker": "Das ändert sich",
+    "title": "Die ganze Bestellung, erledigt — nicht noch eine Zahl zum Abarbeiten",
+    "one": {
+      "title": "Auf dein Kapital zugeschnitten",
+      "body": "Jede Bestellung wird auf das dimensioniert, was tatsächlich verkauft wird — und auf das Geld, das du tatsächlich hast. Nicht zu viel. Nicht zu wenig. Nicht zu spät."
+    },
+    "two": {
+      "title": "Du hörst es am selben Tag",
+      "body": "Wenn der Lieferant sagt „wir schaffen nur 800, drei Wochen später“, weißt du es an dem Tag, an dem er es sagt — nicht an dem Tag, an dem das Regal leer ist."
+    },
+    "three": {
+      "title": "Du zahlst, was angekommen ist",
+      "body": "Wenn 1.180 Stück ankommen und dir 1.200 berechnet wurden, zahlst du die 20 nicht."
+    },
+    "footer": "Und die ersten 30 Tage fasst es nichts an. Es zeigt dir jede Bestellung, die es aufgegeben hätte, neben der, die du aufgegeben hast. Du vergleichst. Dann entscheidest du."
+  },
+  "objections": {
+    "kicker": "Sorgfaltsprüfung",
+    "title": "Die drei Gründe, das nicht zu glauben — beantwortet",
+    "one": {
+      "q": "„Ich lasse keine Software mein Geld ausgeben.“",
+      "a": "Gut. Tut sie auch nicht. 30 Tage lang gibt sie gar nichts aus. Danach geht nichts raus ohne dein Ja. Danach nur innerhalb der Grenzen, die du setzt. Du behältst die Kontrolle — immer."
+    },
+    "two": {
+      "q": "„Das baue ich mit Claude an einem Wochenende.“",
+      "a": "Die Prognose, klar. Das Wochenend-Skript liest nicht die Antwort des Lieferanten. Merkt die Unterlieferung nicht. Merkt nicht, wenn es leise aufhört zu funktionieren. Und dann schaut niemand hin."
+    },
+    "three": {
+      "q": "„Prediko macht das doch schon.“",
+      "a": "Es sagt dir, was du bestellen sollst. Dann schreibst du dem Lieferanten, jagst dem Container hinterher und prüfst die Rechnung. Die Prognose war nie der schwere Teil."
+    }
+  },
+  "confess": {
+    "title": "Wir hatten dieselbe Angst.",
+    "sub": "Deshalb prognostizieren neun Apps und keine bringt die Bestellung zu Ende — niemand wollte derjenige sein, der dein Geld bindet. Also haben wir es so gebaut, dass es sich das erst verdient: an deinen eigenen Bestellungen, bevor es irgendetwas anfasst."
+  },
+  "solution": {
+    "kicker": "Der Unterschied",
+    "title": "Dein Kapital, befreit.",
+    "sub": "Geld da, wo es sich verkauft. Bestseller im Regal. Abende zurück.",
+    "withoutLabel": "Ohne Reorder Loop",
+    "withoutBody": "Jede Bestellung bleibt deine. Weiter nachts. Weiter eine Wette. Eine schlechte, und das Geld ist weg — vergraben in den falschen Kartons oder nicht da, wenn es drauf ankam.",
+    "withLabel": "Mit Reorder Loop",
+    "withBody": "Du öffnest eine Nachricht. Hier ist die Bestellung. Hier ist der Grund. Du sagst Ja. Der Rest passiert ohne dich."
+  },
+  "cta": {
+    "title": "Auf die Warteliste. Sieh zu, wie es sich an deinen eigenen Bestellungen beweist.",
+    "sub": "Eine Liste, alle kommenden Leaf-Apps — du stehst bei allen vorn. Die ersten {spots, number} Shops bekommen Charter-Preise, für immer festgeschrieben. Das ist die richtige Entscheidung.",
+    "note": "Stumme Bilder lassen sich schon heute beheben. <link>Image Voice ist live — starte den Scan jetzt →</link>"
+  }
+}

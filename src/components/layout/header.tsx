@@ -20,13 +20,18 @@ const ctaByRoute = {
     key: "freeScan",
     event: "cta_scan_click",
   },
-  "/hidden-margin": {
-    href: "/hidden-margin#waitlist",
-    key: "earlyAccess",
+  "/reorder-loop": {
+    href: "/reorder-loop#waitlist",
+    key: "joinWaitlist",
     event: "cta_waitlist_join",
   },
-  "/reorder-engine": {
-    href: "/reorder-engine#waitlist",
+  "/count-check": {
+    href: "/count-check#waitlist",
+    key: "joinWaitlist",
+    event: "cta_waitlist_join",
+  },
+  "/lost-sales": {
+    href: "/lost-sales#waitlist",
     key: "joinWaitlist",
     event: "cta_waitlist_join",
   },

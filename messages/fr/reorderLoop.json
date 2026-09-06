@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "title": "Réapprovisionnement Shopify de bout en bout — Reorder Loop",
+    "description": "Neuf apps prévoient votre stock Shopify. Aucune ne va au bout de la commande. Reorder Loop fait toute la commande — dimensionnée, relancée, vérifiée contre ce qui est arrivé. Vous dites simplement oui."
+  },
+  "hero": {
+    "badge": "Reorder Loop · au labo · liste d’attente ouverte",
+    "kicker": "La trésorerie piégée tue les marques",
+    "headline": "Votre trésorerie est <accent>piégée.</accent>",
+    "subhead": "Dans des produits qui ne partent pas, pendant que ceux qui partent tombent en rupture. Et chaque commande, c’est à vous de la réussir. Reorder Loop fait toute la commande. Vous dites simplement oui.",
+    "ctaPrimary": "Rejoindre la liste d’attente",
+    "ctaSecondary": "Ce qui change",
+    "finePrint": "Les {spots, number} premières boutiques obtiennent le tarif Charter, verrouillé à vie. Il fait ses preuves sur vos propres commandes avant de toucher quoi que ce soit."
+  },
+  "card": {
+    "forecastCount": "{count, number}",
+    "forecast": "apps prévoient votre stock",
+    "finishCount": "{count, number}",
+    "finish": "vont au bout de la commande",
+    "caption": "Tous les acteurs en place s’arrêtent à « on recommande → vous cliquez ». Reorder Loop est le dernier kilomètre manquant — construit avec soin, prouvé en observation d’abord."
+  },
+  "identify": {
+    "kicker": "Ça vous parle ?",
+    "title": "Chaque commande est un pari — et vous êtes le seul autorisé à le prendre.",
+    "one": {
+      "statement": "200 unités de ce que personne ne veut.",
+      "body": "40 unités restantes de ce que tout le monde veut."
+    },
+    "two": {
+      "statement": "Il est 23 h. Le fournisseur n’a pas répondu.",
+      "body": "La dernière facture ne correspond toujours pas à ce qui est arrivé, et vous l’avez payée quand même."
+    },
+    "three": {
+      "statement": "Le tableur donne le délai, le MOQ, la date de la dernière commande.",
+      "body": "Il ne dit pas ce que ça vous coûte quand vous vous trompez."
+    },
+    "four": {
+      "statement": "Personne d’autre dans l’entreprise ne peut trancher.",
+      "body": "C’est votre trésorerie. Donc c’est votre nuit."
+    },
+    "closer": "Vous n’avez pas lancé une marque pour faire les achats après le dîner."
+  },
+  "logic": {
+    "kicker": "Voilà ce qui change",
+    "title": "Toute la commande, faite — pas un chiffre de plus à traiter",
+    "one": {
+      "title": "Calibrée sur votre trésorerie",
+      "body": "Chaque commande est dimensionnée sur ce qui se vend vraiment, et sur la trésorerie que vous avez vraiment. Ni trop. Ni trop peu. Ni trop tard."
+    },
+    "two": {
+      "title": "Vous l’apprenez le jour même",
+      "body": "Quand le fournisseur annonce « on ne peut faire que 800, trois semaines plus tard », vous le savez le jour où il le dit — pas le jour où le rayon est vide."
+    },
+    "three": {
+      "title": "Vous payez ce qui est arrivé",
+      "body": "Quand 1 180 unités arrivent et qu’on vous en a facturé 1 200, vous ne payez pas les 20."
+    },
+    "footer": "Et pendant les 30 premiers jours, il ne touche à rien. Il vous montre chaque commande qu’il aurait passée, à côté de celle que vous avez passée. Vous comparez. Puis vous décidez."
+  },
+  "objections": {
+    "kicker": "Due diligence",
+    "title": "Les trois raisons de ne pas y croire — traitées",
+    "one": {
+      "q": "« Je ne laisse pas un logiciel dépenser mon argent. »",
+      "a": "Bien. Il ne le fait pas. Pendant 30 jours, il ne dépense rien. Ensuite, rien ne part sans votre oui. Ensuite, uniquement dans les limites que vous fixez. Vous gardez la main — toujours."
+    },
+    "two": {
+      "q": "« Je peux construire ça avec Claude en un week-end. »",
+      "a": "La prévision, oui. Le script du week-end ne lit pas la réponse du fournisseur. Ne repère pas la livraison incomplète. Ne remarque pas qu’il a discrètement cessé de fonctionner. Et à ce moment-là, personne ne regarde."
+    },
+    "three": {
+      "q": "« Prediko fait déjà ça. »",
+      "a": "Il vous dit quoi commander. Ensuite vous écrivez au fournisseur, vous courez après le conteneur et vous vérifiez la facture. La prévision n’a jamais été le plus dur."
+    }
+  },
+  "confess": {
+    "title": "Nous avions la même peur.",
+    "sub": "C’est pour ça que neuf apps prévoient et qu’aucune ne va au bout — personne ne voulait être celui qui engage votre argent. Alors nous l’avons construit pour le mériter, sur vos propres commandes, avant qu’il ne touche à quoi que ce soit."
+  },
+  "solution": {
+    "kicker": "La différence",
+    "title": "Votre trésorerie, libérée.",
+    "sub": "L’argent là où ça se vend. Les best-sellers en rayon. Vos soirées récupérées.",
+    "withoutLabel": "Sans Reorder Loop",
+    "withoutBody": "Chaque commande reste la vôtre. Toujours la nuit. Toujours un pari. Une mauvaise et l’argent est parti — enterré dans les mauvais cartons, ou absent du rayon au moment où ça comptait.",
+    "withLabel": "Avec Reorder Loop",
+    "withBody": "Vous ouvrez un message. Voici la commande. Voici pourquoi. Vous dites oui. Le reste se passe sans vous."
+  },
+  "cta": {
+    "title": "Rejoignez la liste. Regardez-le faire ses preuves sur vos propres commandes.",
+    "sub": "Une seule liste, pour toutes les prochaines apps Leaf — vous êtes en tête pour toutes. Les {spots, number} premières boutiques obtiennent le tarif Charter, verrouillé à vie. C’est le bon choix.",
+    "note": "Les images muettes se réparent déjà aujourd’hui. <link>Image Voice est en ligne — lancez l’analyse maintenant →</link>"
+  }
+}

@@ -6,13 +6,17 @@
     "kicker": "Image Voice",
     "title": "{silent, number} delle tue immagini non dicono nulla"
   },
-  "hiddenMargin": {
-    "kicker": "Hidden Margin",
-    "title": "Il tuo catalogo ha dei buchi."
+  "reorderLoop": {
+    "kicker": "Reorder Loop",
+    "title": "I tuoi soldi sono bloccati."
   },
-  "reorderEngine": {
-    "kicker": "Reorder Engine",
-    "title": "La tua liquidità è bloccata in magazzino."
+  "countCheck": {
+    "kicker": "Count Check",
+    "title": "Il tuo stock sta sparendo."
+  },
+  "lostSales": {
+    "kicker": "Lost Sales",
+    "title": "Essere esaurito ti costa."
   },
   "support": {
     "kicker": "Assistenza",

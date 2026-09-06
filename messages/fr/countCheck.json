@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Rapprocher votre 3PL et Shopify chaque jour — Count Check",
+    "description": "Votre 3PL annonce un chiffre. Shopify en annonce un autre. L’écart, c’est votre argent, et personne ne vérifie. Count Check compare les deux chaque jour et chiffre l’écart."
+  },
+  "hero": {
+    "badge": "Count Check · au labo · liste d’attente ouverte",
+    "kicker": "De la démarque que personne ne réclame",
+    "headline": "Votre stock <accent>disparaît.</accent>",
+    "subhead": "Votre 3PL annonce un chiffre. Shopify en annonce un autre. L’écart, c’est votre argent — et personne ne vérifie.",
+    "ctaPrimary": "Rejoindre la liste d’attente",
+    "ctaSecondary": "Ce qui change",
+    "finePrint": "Connectez votre 3PL et Shopify, voyez l’écart du jour. Lecture seule, rien d’autre — il n’écrit dans aucun des deux systèmes."
+  },
+  "card": {
+    "title": "Unités disponibles · un SKU, le même jour",
+    "threePl": "Votre 3PL",
+    "shopify": "Shopify",
+    "units": "{count, number} unités",
+    "gap": "L’écart",
+    "gapValue": "{count, number} unités",
+    "caption": "Chiffres d’exemple. Quelqu’un se trompe — et pour l’instant, personne ne vérifie qui."
+  },
+  "identify": {
+    "kicker": "Ça vous parle ?",
+    "title": "Vous payez deux systèmes pour tenir le même chiffre. Aucun des deux ne le vérifie.",
+    "one": {
+      "statement": "Votre 3PL a discrètement baissé le comptage d’une unité après un inventaire tournant.",
+      "body": "Vous avez demandé comment un carton orange vif de deux kilos et demi disparaît. Réponse : « des produits peuvent occasionnellement être égarés lors d’un mouvement opérationnel dans l’entrepôt »."
+    },
+    "two": {
+      "statement": "Puis on vous a dit que 2 à 5 % de démarque, c’est la norme du secteur.",
+      "body": "La norme pour eux. Sur votre marge."
+    },
+    "three": {
+      "statement": "Black Friday. Votre meilleur produit survendu de 30 unités.",
+      "body": "Vous avez passé le week-end à appeler des clients pour annuler. Perdu les ventes et la réputation dans les mêmes 48 heures."
+    },
+    "four": {
+      "statement": "Inventaire de fin d’année : vous avez le total de ce qui manque.",
+      "body": "Pas quel produit. Pas quand. Pas qui."
+    },
+    "closer": "Vous l’apprenez quand une commande ne peut pas partir."
+  },
+  "logic": {
+    "kicker": "Voilà ce qui change",
+    "title": "Deux chiffres, côte à côte, tous les jours",
+    "one": {
+      "title": "Les deux comptages, chaque jour",
+      "body": "Chaque jour, chaque produit : ce que dit votre 3PL, ce que dit Shopify, et l’écart — en unités et en euros."
+    },
+    "two": {
+      "title": "Vous l’apprenez en premier",
+      "body": "À la seconde où ça dépasse ce que vous acceptez, vous le savez. Pas le client. Vous."
+    },
+    "three": {
+      "title": "Une réclamation, pas une plainte",
+      "body": "Et vous avez l’historique : quel produit, quand, combien. Ce n’est plus une plainte. C’est une réclamation."
+    },
+    "footer": "Il lit les deux systèmes et n’écrit dans aucun. Lecture seule, rien d’autre — la seule chose qui change, c’est ce que vous savez."
+  },
+  "objections": {
+    "kicker": "Due diligence",
+    "title": "Les trois raisons de ne pas y croire — traitées",
+    "one": {
+      "q": "« Mon 3PL fait des inventaires tournants. »",
+      "a": "Leur rayonnage contre leur système. Personne ne confronte leur système au vôtre. C’est là qu’est l’écart, et c’est là que vit la « norme du secteur »."
+    },
+    "two": {
+      "q": "« C’est une ou deux unités. »",
+      "a": "Une ou deux unités sur 300 produits, à votre coût, chaque mois. Un dirigeant de 3PL l’a dit lui-même : ça devrait être sous le demi-pour-cent. Sans votre propre comptage, vous ne pouvez pas les y tenir."
+    },
+    "three": {
+      "q": "« Je le verrai à l’inventaire physique. »",
+      "a": "Vous verrez le total. À ce moment-là, c’est une perte comptable, pas une réclamation."
+    }
+  },
+  "confess": {
+    "title": "« Des produits peuvent occasionnellement être égarés. »",
+    "sub": "Les mots du 3PL lui-même. Occasionnellement. Pendant des années. Sur votre argent."
+  },
+  "solution": {
+    "kicker": "La différence",
+    "title": "Votre stock, justifié.",
+    "sub": "Pas de survente en pic. De la démarque que vous pouvez réclamer. Un comptage auquel confier votre trésorerie.",
+    "withoutLabel": "Sans Count Check",
+    "withoutBody": "Vous l’apprenez par un client. Ou en fin d’année, en perte comptable. Et le 3PL continue d’appeler ça normal.",
+    "withLabel": "Avec Count Check",
+    "withBody": "Vous le savez le jour où ça bouge. Vous avez le chiffre. Vous entrez dans la discussion avec le 3PL avec des preuves, pas avec une impression."
+  },
+  "cta": {
+    "title": "Rejoignez la liste. Connectez votre 3PL et voyez l’écart du jour.",
+    "sub": "Une seule liste, pour toutes les prochaines apps Leaf — vous êtes en tête pour toutes. Les {spots, number} premières boutiques obtiennent le tarif Charter, verrouillé à vie. C’est le bon choix.",
+    "note": "Les images muettes se réparent déjà aujourd’hui. <link>Image Voice est en ligne — lancez l’analyse maintenant →</link>"
+  }
+}

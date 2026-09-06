@@ -10,8 +10,9 @@
     "ChatGPT",
     "Vercel Analytics",
     "Image Voice",
-    "Hidden Margin",
-    "Reorder Engine",
+    "Reorder Loop",
+    "Count Check",
+    "Lost Sales",
     "Audit",
     "Keeper",
     "Curator",
@@ -86,12 +87,15 @@
       "imageVoice.prices.*",
       "imageVoice.checkbox.*",
       "imageVoice.cta.*",
-      "hiddenMargin.hero.*",
-      "hiddenMargin.prices.*",
-      "hiddenMargin.someday.*",
-      "reorderEngine.hero.*",
-      "reorderEngine.blind.*",
-      "reorderEngine.why.*"
+      "reorderLoop.hero.*",
+      "reorderLoop.identify.*",
+      "reorderLoop.solution.*",
+      "countCheck.hero.*",
+      "countCheck.identify.*",
+      "countCheck.solution.*",
+      "lostSales.hero.*",
+      "lostSales.identify.*",
+      "lostSales.solution.*"
     ]
   },
   "doNotTranslate.$comment": "App and plan names are product names, not words: a merchant who reads about Curator in Italian has to recognise it in the Shopify billing screen, which is English. Same for the acronyms — they are the terms of art in every one of these markets."

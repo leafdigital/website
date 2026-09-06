@@ -10,8 +10,9 @@
 export const indexedRoutes = [
   "/",
   "/image-voice",
-  "/hidden-margin",
-  "/reorder-engine",
+  "/reorder-loop",
+  "/count-check",
+  "/lost-sales",
   "/privacy",
   "/support",
   /* Translated into all six locales, so it is advertised like any other page.
@@ -81,10 +82,11 @@ export type AppRoute =
  * date here costs a recrawl; a fresh one on an unchanged page costs trust.
  */
 export const lastModified: Record<AppRoute, string> = {
-  "/": "2026-09-04",
+  "/": "2026-09-06",
   "/image-voice": "2026-09-04",
-  "/hidden-margin": "2026-09-04",
-  "/reorder-engine": "2026-09-04",
+  "/reorder-loop": "2026-09-06",
+  "/count-check": "2026-09-06",
+  "/lost-sales": "2026-09-06",
   "/privacy": "2026-09-02",
   "/support": "2026-09-04",
   "/guides/shopify-alt-text": "2026-09-04",

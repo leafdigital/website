@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "title": "Reposição Shopify de ponta a ponta — Reorder Loop",
+    "description": "Nove apps preveem o estoque da sua loja Shopify. Nenhum termina o pedido. O Reorder Loop faz o pedido inteiro — dimensionado, cobrado do fornecedor, conferido contra o que chegou. Você só diz sim."
+  },
+  "hero": {
+    "badge": "Reorder Loop · no laboratório · lista de espera aberta",
+    "kicker": "Caixa preso mata marca",
+    "headline": "Seu caixa está <accent>preso.</accent>",
+    "subhead": "Em produtos que não vendem, enquanto os que vendem acabam. E cada pedido é você que tem que acertar. O Reorder Loop faz o pedido inteiro. Você só diz sim.",
+    "ctaPrimary": "Entrar na lista de espera",
+    "ctaSecondary": "O que muda",
+    "finePrint": "As primeiras {spots, number} lojas ficam com o preço Charter, travado para sempre. Ele se prova nos seus próprios pedidos antes de encostar em qualquer coisa."
+  },
+  "card": {
+    "forecastCount": "{count, number}",
+    "forecast": "apps preveem o seu estoque",
+    "finishCount": "{count, number}",
+    "finish": "terminam o pedido",
+    "caption": "Todo mundo grande para em «a gente recomenda → você clica». O Reorder Loop é o último quilômetro que falta — construído com cuidado, provado em modo sombra primeiro."
+  },
+  "identify": {
+    "kicker": "Soa familiar?",
+    "title": "Cada pedido é uma aposta — e você é o único autorizado a fazê-la.",
+    "one": {
+      "statement": "200 unidades de uma coisa que ninguém quer.",
+      "body": "40 unidades sobrando daquela que todo mundo quer."
+    },
+    "two": {
+      "statement": "São 23h. O fornecedor não respondeu.",
+      "body": "A última fatura continua sem bater com o que chegou, e você pagou assim mesmo."
+    },
+    "three": {
+      "statement": "A planilha diz lead time, MOQ, data do último pedido.",
+      "body": "Ela não diz quanto te custa quando você erra."
+    },
+    "four": {
+      "statement": "Mais ninguém na empresa pode tomar essa decisão.",
+      "body": "É o seu dinheiro. Então é a sua madrugada."
+    },
+    "closer": "Você não abriu uma marca para fazer compras depois do jantar."
+  },
+  "logic": {
+    "kicker": "É isto que muda",
+    "title": "O pedido inteiro, feito — não mais um número para você resolver",
+    "one": {
+      "title": "No tamanho do seu caixa",
+      "body": "Cada pedido é dimensionado pelo que realmente vende e pelo dinheiro que você realmente tem. Nem demais. Nem de menos. Nem tarde."
+    },
+    "two": {
+      "title": "Você fica sabendo no mesmo dia",
+      "body": "Quando o fornecedor diz «só consigo 800, três semanas atrasado», você sabe no dia em que ele diz — não no dia em que a prateleira está vazia."
+    },
+    "three": {
+      "title": "Você paga o que chegou",
+      "body": "Quando chegam 1.180 unidades e te cobraram 1.200, você não paga as 20."
+    },
+    "footer": "E nos primeiros 30 dias ele não encosta em nada. Ele te mostra cada pedido que teria feito, ao lado do que você fez. Você compara. Depois você decide."
+  },
+  "objections": {
+    "kicker": "Due diligence",
+    "title": "Os três motivos para não acreditar — respondidos",
+    "one": {
+      "q": "«Não vou deixar um software gastar meu dinheiro.»",
+      "a": "Ótimo. Ele não gasta. Por 30 dias não gasta nada. Depois disso, nada sai sem o seu sim. Depois disso, só dentro dos limites que você define. O comando é seu — sempre."
+    },
+    "two": {
+      "q": "«Eu construo isso com o Claude num fim de semana.»",
+      "a": "A previsão, claro. O script de fim de semana não lê a resposta do fornecedor. Não pega a entrega incompleta. Não percebe quando para de funcionar em silêncio. E aí não tem ninguém olhando."
+    },
+    "three": {
+      "q": "«O Prediko já faz isso.»",
+      "a": "Ele te diz o que pedir. Aí você escreve pro fornecedor, corre atrás do contêiner e confere a fatura. A previsão nunca foi a parte difícil."
+    }
+  },
+  "confess": {
+    "title": "A gente tinha o mesmo medo.",
+    "sub": "É por isso que nove apps preveem e nenhum termina o pedido — ninguém queria ser quem compromete o seu dinheiro. Então construímos para merecer isso, nos seus próprios pedidos, antes de encostar em qualquer coisa."
+  },
+  "solution": {
+    "kicker": "A diferença",
+    "title": "Seu caixa, solto.",
+    "sub": "Dinheiro onde vende. Os campeões na prateleira. As noites de volta.",
+    "withoutLabel": "Sem o Reorder Loop",
+    "withoutBody": "Cada pedido continua sendo seu. Continua de madrugada. Continua sendo aposta. Um errado e o dinheiro sumiu — enterrado nas caixas erradas, ou faltando na prateleira bem na hora que importava.",
+    "withLabel": "Com o Reorder Loop",
+    "withBody": "Você abre uma mensagem. Aqui está o pedido. Aqui está o porquê. Você diz sim. O resto acontece sem você."
+  },
+  "cta": {
+    "title": "Entre na lista. Veja ele se provar nos seus próprios pedidos.",
+    "sub": "Uma lista só, para todos os próximos apps da Leaf — você é o primeiro em todos. As primeiras {spots, number} lojas ficam com o preço Charter, travado para sempre. Essa é a escolha certa.",
+    "note": "Imagens mudas já dá para resolver hoje. <link>O Image Voice está no ar — rode essa análise agora →</link>"
+  }
+}

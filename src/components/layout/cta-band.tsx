@@ -8,7 +8,7 @@ import { Container } from "@/components/layout/container";
  *
  * `note` is the line under the action: the cross-link to the apps a visitor
  * did not come for. `offer` sits above the action when there is a founder
- * deal to state (Hidden Margin's frosted tile).
+ * deal that needs its own tile rather than a clause in `sub`.
  */
 export function CtaBand({
   id,

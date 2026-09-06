@@ -7,8 +7,9 @@
       "url": [
         "http://localhost:4381/",
         "http://localhost:4381/image-voice",
-        "http://localhost:4381/hidden-margin",
-        "http://localhost:4381/reorder-engine",
+        "http://localhost:4381/reorder-loop",
+        "http://localhost:4381/count-check",
+        "http://localhost:4381/lost-sales",
         "http://localhost:4381/privacy",
         "http://localhost:4381/support"
       ]

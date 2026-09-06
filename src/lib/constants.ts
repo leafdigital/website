@@ -7,12 +7,16 @@
 export const APP_NAME = "Image Voice";
 
 /**
- * The two apps still in the lab. Named here for the same reason APP_NAME is:
- * they are brand terms, never translated (i18n/glossary.json), and structured
- * data has to call them something.
+ * The three apps still in the lab. Named here for the same reason APP_NAME
+ * is: they are brand terms, never translated (i18n/glossary.json), and
+ * structured data has to call them something.
+ *
+ * v3 retired Hidden Margin and renamed Reorder Engine to Reorder Loop. The
+ * old routes 301 to their successors in next.config.ts.
  */
-export const HIDDEN_MARGIN_NAME = "Hidden Margin";
-export const REORDER_ENGINE_NAME = "Reorder Engine";
+export const REORDER_LOOP_NAME = "Reorder Loop";
+export const COUNT_CHECK_NAME = "Count Check";
+export const LOST_SALES_NAME = "Lost Sales";
 
 export const SITE_NAME = "Leaf Digital";
 export const SITE_URL = "https://www.leafdigital.io";
@@ -81,27 +85,35 @@ export const SAMPLE = {
   totalImages: 3102,
   /** The bulk-apply prompt in benefit 06: what is left after a review run. */
   bulkRemaining: 1750,
-  /** Hidden Margin hero: this store’s score against its size cohort. */
-  readinessScore: 61,
-  benchmarkScore: 74,
-  /** The three gap rows under the score. */
-  gaps: {
-    missingCost: 131,
-    missingWeight: 342,
-    missingCustoms: 89,
-  },
-  /** Hidden Margin’s sample report: the two rows the arithmetic can price. */
-  report: {
-    trailRunnerRevenue: 18400,
-    toteLeakPerOrder: 0.8,
-  },
   /**
-   * Reorder Engine’s opening claim: how many apps forecast inventory, and
-   * how many of them will actually place the order.
+   * Reorder Loop’s opening claim: how many apps forecast inventory, and how
+   * many of them will actually finish the order.
    */
   forecastingApps: 9,
-  appsThatSendThePo: 0,
+  appsThatFinishTheOrder: 0,
+  /**
+   * Count Check’s opening claim: one SKU, two systems, on the same day. The
+   * gap is derived below rather than typed in — a hand-entered third number
+   * is a number that can drift out of arithmetic with the two above it.
+   */
+  countCheck: {
+    threePl: 412,
+    shopify: 447,
+  },
+  /**
+   * Lost Sales’ opening claim: one bestseller, the days it sat at zero, and
+   * how many systems recorded what that cost.
+   */
+  lostSales: {
+    zeroDays: 9,
+    systemsThatRecordedIt: 0,
+  },
 } as const;
+
+/** The gap Count Check exists to show: the two counts, subtracted. */
+export const COUNT_CHECK_GAP = Math.abs(
+  SAMPLE.countCheck.shopify - SAMPLE.countCheck.threePl,
+);
 
 /**
  * Plan prices, in USD. Passed to ICU as raw numbers so each locale formats
@@ -127,8 +139,6 @@ export const FOUNDING_CURATOR_PRICE = PRICING.curator / 2;
 export const OFFER = {
   /** Image Voice — Curator at half price, for life. */
   foundingCurators: 25,
-  /** Hidden Margin — top plan at the middle plan's price. */
-  foundingMerchants: 15,
-  /** Reorder Engine — Charter pricing, locked for life. */
+  /** Every lab app — Charter pricing, locked for life. */
   charterStores: 50,
 } as const;

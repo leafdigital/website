@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "title": "Was Ausverkauft dich wirklich kostet — Lost Sales",
+    "description": "Jeder Tag, an dem du ausverkauft bist, kostet Geld, das du nie zu sehen bekommst. Shopify nennt diese stillen Tage geringe Nachfrage. Lost Sales zählt sie, beziffert sie und reiht die Produkte, die du schützen musst."
+  },
+  "hero": {
+    "badge": "Lost Sales · im Labor · Warteliste offen",
+    "kicker": "Die Zahl, die niemand festhält",
+    "headline": "Ausverkauft kostet dich <accent>mehr, als du denkst.</accent>",
+    "subhead": "Jeder Tag, an dem du ausverkauft bist, kostet dich Geld, das du nie zu sehen bekommst. Lost Sales zeigt dir, wie viel.",
+    "ctaPrimary": "Auf die Warteliste",
+    "ctaSecondary": "Was sich ändert",
+    "finePrint": "Es beginnt an dem Tag zu zählen, an dem du es verbindest. Jeder Tag davor ist ein Tag, den du nie zurückbekommst."
+  },
+  "card": {
+    "daysCount": "{count, number}",
+    "days": "Tage stand dein bestes Produkt auf null",
+    "recordsCount": "{count, number}",
+    "records": "Systeme haben festgehalten, was das gekostet hat",
+    "caption": "Beispielzahlen. Shopify behält jeden Verkauf, den es gemacht hat — nichts behält die, die es nicht machen konnte."
+  },
+  "identify": {
+    "kicker": "Kommt dir bekannt vor?",
+    "title": "Für Geld, das du nicht verdient hast, gibt es keine Benachrichtigung.",
+    "one": {
+      "statement": "Dein Bestseller stand an einem Dienstag auf null. Der Nachschub kam am Donnerstag darauf.",
+      "body": "Neun Tage."
+    },
+    "two": {
+      "statement": "Shopify zeigt neun stille Tage. Es nennt das geringe Nachfrage.",
+      "body": "Also fällt die nächste Bestellung kleiner aus. Also ist es wieder ausverkauft."
+    },
+    "three": {
+      "statement": "Niemand hat es dir gesagt. Du hast es erfahren, als eine Kundin fragte.",
+      "body": "Du lebst in deinen Reports. Du kennst die heute ausverkaufte SKU."
+    },
+    "four": {
+      "statement": "Was dich die ausverkauften Tage im letzten Quartal gekostet haben, weißt du nicht.",
+      "body": "Weil es nirgendwo festgehalten wurde."
+    },
+    "closer": "Und es kam aus demselben Geld, das du für die nächste Bestellung brauchst."
+  },
+  "logic": {
+    "kicker": "Das ändert sich",
+    "title": "Jeder Tag auf null bekommt einen Betrag",
+    "one": {
+      "title": "Beziffert, nicht geschätzt",
+      "body": "Jeder Tag, den ein Produkt auf null steht, bekommt einen Betrag. Deinen. Aus deiner Abverkaufsrate, deinem Preis, deinen Stunden ohne Bestand. Die Rechnung steht auf dem Bildschirm — prüf sie gegen dein eigenes Admin."
+    },
+    "two": {
+      "title": "Sortiert nach dem, was es gekostet hat",
+      "body": "Du bekommst eine Liste, sortiert danach, was dich jedes Produkt gekostet hat, während es weg war."
+    },
+    "three": {
+      "title": "Die fünf, die du schützt",
+      "body": "Du weißt, welche fünf du dir nicht leisten kannst auszuverkaufen. Keine Vermutung. Eine Zahl."
+    },
+    "footer": "Es beginnt an dem Tag zu zählen, an dem du es verbindest. Jeder Tag davor ist ein Tag, den niemand festgehalten hat — genau deshalb gibt es die Zahl noch nicht."
+  },
+  "objections": {
+    "kicker": "Sorgfaltsprüfung",
+    "title": "Die drei Gründe, das nicht zu glauben — beantwortet",
+    "one": {
+      "q": "„Ich weiß doch, wann ich ausverkauft bin.“",
+      "a": "Du weißt es für heute. Du weißt nicht, was die 31 Null-Tage über 14 Produkte im letzten Quartal waren, oder was sie gekostet haben. Das hat niemand aufbewahrt."
+    },
+    "two": {
+      "q": "„Den Report könnte ich selbst bauen.“",
+      "a": "Aus Daten, die es nicht gibt. Shopify hält Stunden-auf-null nicht fest. Ist der Moment vorbei, ist er weg. Die Zahl bekommt nur, wer schon mitgezählt hat."
+    },
+    "three": {
+      "q": "„Das wird irgendeine aufgeblasene Anbieterzahl.“",
+      "a": "Jeder Euro zeigt seine Rechnung. Wenn sie nicht zu deinem Admin passt, glaub ihr nicht."
+    }
+  },
+  "confess": {
+    "title": "„Diese 8 Null-Tage waren keine geringe Nachfrage — da war kein Bestand.“",
+    "sub": "Ein einfacher Durchschnitt kann „wollte keiner“ nicht von „wir hatten nichts zu verkaufen“ unterscheiden. Deine Prognose auch nicht — und genau das kostet dich weiter."
+  },
+  "solution": {
+    "kicker": "Der Unterschied",
+    "title": "Diese Verkäufe verlierst du nie wieder.",
+    "sub": "Du weißt genau, welche Produkte du schützen musst — vor Quartalsende, nicht danach.",
+    "withoutLabel": "Ohne Lost Sales",
+    "withoutBody": "Es sieht weiter nach einer schwachen Woche aus. Die Prognose bestellt weiter weniger. Der Bestseller geht weiter aus. Und das Geld geht weiter, ohne dass irgendwo steht, dass es je da war.",
+    "withLabel": "Mit Lost Sales",
+    "withBody": "Du weißt, was Ausverkauft dich gekostet hat. In Euro. Pro Produkt. Vor Quartalsende."
+  },
+  "cta": {
+    "title": "Auf die Warteliste. Es zählt ab dem Tag, an dem du es verbindest.",
+    "sub": "Eine Liste, alle kommenden Leaf-Apps — du stehst bei allen vorn. Die ersten {spots, number} Shops bekommen Charter-Preise, für immer festgeschrieben. Das ist die richtige Entscheidung.",
+    "note": "Stumme Bilder lassen sich schon heute beheben. <link>Image Voice ist live — starte den Scan jetzt →</link>"
+  }
+}

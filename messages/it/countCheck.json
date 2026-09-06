@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Riconcilia 3PL e Shopify ogni giorno — Count Check",
+    "description": "Il tuo 3PL dice un numero. Shopify ne dice un altro. La differenza sono i tuoi soldi e nessuno la controlla. Count Check confronta i due ogni giorno e mette un prezzo sulla differenza."
+  },
+  "hero": {
+    "badge": "Count Check · in laboratorio · lista d’attesa aperta",
+    "kicker": "Ammanchi che nessuno reclama",
+    "headline": "Il tuo stock sta <accent>sparendo.</accent>",
+    "subhead": "Il tuo 3PL dice un numero. Shopify ne dice un altro. La differenza sono i tuoi soldi — e nessuno la sta controllando.",
+    "ctaPrimary": "Iscriviti alla lista d’attesa",
+    "ctaSecondary": "Cosa cambia",
+    "finePrint": "Collega 3PL e Shopify e guarda la differenza di oggi. Sola lettura, nient’altro — non scrive su nessuno dei due sistemi."
+  },
+  "card": {
+    "title": "Unità disponibili · una SKU, stesso giorno",
+    "threePl": "Il tuo 3PL",
+    "shopify": "Shopify",
+    "units": "{count, number} unità",
+    "gap": "La differenza",
+    "gapValue": "{count, number} unità",
+    "caption": "Dati di esempio. Qualcuno sbaglia — e in questo momento nessuno sta controllando chi."
+  },
+  "identify": {
+    "kicker": "Ti suona familiare?",
+    "title": "Paghi due sistemi perché tengano lo stesso numero. Nessuno dei due lo controlla.",
+    "one": {
+      "statement": "Il tuo 3PL ha abbassato il conteggio di uno, in silenzio, dopo un inventario ciclico.",
+      "body": "Hai chiesto come sparisce uno scatolone arancione fluo da due chili e mezzo. Ti hanno risposto che «i prodotti possono occasionalmente essere smarriti durante una movimentazione operativa in magazzino»."
+    },
+    "two": {
+      "statement": "Poi ti hanno detto che il 2–5 % di ammanco è lo standard di settore.",
+      "body": "Standard per loro. Dal tuo margine."
+    },
+    "three": {
+      "statement": "Black Friday. Il tuo prodotto di punta venduto in eccesso di 30 unità.",
+      "body": "Hai passato il weekend a chiamare i clienti per annullare. Perse le vendite e la reputazione nelle stesse 48 ore."
+    },
+    "four": {
+      "statement": "Inventario di fine anno: hai il totale di quello che manca.",
+      "body": "Non quale prodotto. Non quando. Non per mano di chi."
+    },
+    "closer": "Lo scopri quando un ordine non può partire."
+  },
+  "logic": {
+    "kicker": "Ecco cosa cambia",
+    "title": "Due numeri, uno accanto all’altro, ogni giorno",
+    "one": {
+      "title": "Entrambi i conteggi, ogni giorno",
+      "body": "Ogni giorno, ogni prodotto: cosa dice il tuo 3PL, cosa dice Shopify e la differenza — in unità e in euro."
+    },
+    "two": {
+      "title": "Lo sai per primo",
+      "body": "Nel momento in cui supera quello che sei disposto ad accettare, lo sai. Non il cliente. Tu."
+    },
+    "three": {
+      "title": "Un reclamo, non una lamentela",
+      "body": "E hai lo storico: quale prodotto, quando, quanto. Non è più una lamentela. È un reclamo."
+    },
+    "footer": "Legge entrambi i sistemi e non scrive su nessuno. Sola lettura, nient’altro — l’unica cosa che cambia è quello che sai tu."
+  },
+  "objections": {
+    "kicker": "Due diligence",
+    "title": "I tre motivi per non crederci — con risposta",
+    "one": {
+      "q": "«Il mio 3PL fa gli inventari ciclici.»",
+      "a": "Il loro scaffale contro il loro sistema. Nessuno confronta il loro sistema con il tuo. La differenza è lì, ed è lì che vive lo «standard di settore»."
+    },
+    "two": {
+      "q": "«Sono uno o due pezzi.»",
+      "a": "Uno o due pezzi su 300 prodotti, al tuo costo, ogni mese. L’ha detto il titolare di un 3PL: dovrebbe stare sotto il mezzo punto percentuale. Senza un tuo conteggio non puoi tenerli a quel numero."
+    },
+    "three": {
+      "q": "«Lo scoprirò all’inventario fisico.»",
+      "a": "Scoprirai il totale. A quel punto è una svalutazione, non un reclamo."
+    }
+  },
+  "confess": {
+    "title": "«I prodotti possono occasionalmente essere smarriti.»",
+    "sub": "Parole del 3PL stesso. Occasionalmente. Per anni. Dai tuoi soldi."
+  },
+  "solution": {
+    "kicker": "La differenza",
+    "title": "Il tuo stock, quadrato.",
+    "sub": "Niente vendite in eccesso nei picchi. Ammanchi che puoi reclamare. Un conteggio a cui affidare la tua liquidità.",
+    "withoutLabel": "Senza Count Check",
+    "withoutBody": "Lo scopri da un cliente. O a fine anno, come svalutazione. E il 3PL continua a chiamarlo normale.",
+    "withLabel": "Con Count Check",
+    "withBody": "Lo sai il giorno in cui si muove. Hai il numero. Entri nella conversazione con il 3PL con le prove, non con una sensazione."
+  },
+  "cta": {
+    "title": "Iscriviti alla lista. Collega il 3PL e guarda la differenza di oggi.",
+    "sub": "Una lista, tutte le prossime app Leaf — sei primo per tutte. I primi {spots, number} negozi ottengono il prezzo Charter, bloccato a vita. È la scelta giusta.",
+    "note": "Le immagini mute si sistemano già oggi. <link>Image Voice è live — lancia la scansione adesso →</link>"
+  }
+}

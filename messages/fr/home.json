@@ -8,7 +8,7 @@
     "headline": "Votre argent<br></br>se <accent>cache.</accent>",
     "subhead": "Votre Shopify, votre 3PL et votre tableur racontent trois histoires différentes. Et l’argent se cache dans les écarts.",
     "ctaPrimary": "Où se cache le vôtre ? ↓",
-    "finePrint": "Notre première app est en ligne : Image Voice, l’analyse des images muettes. Hidden Margin — l’analyse qui chiffre en euros chaque trou de votre catalogue — arrive ensuite. Les premiers inscrits sont les premiers avertis."
+    "finePrint": "Notre première app est en ligne : Image Voice, l’analyse des images muettes. Trois autres sont au labo — Reorder Loop, Count Check et Lost Sales. Les premiers sur la liste sont les premiers prévenus."
   },
   "inventory": {
     "title": "Stock disponible · mêmes SKU, même jour",
@@ -18,7 +18,7 @@
     "units": "{count, number} unités",
     "gap": "L’écart",
     "gapValue": "{units, number} unités · ~{dollars, number, ::currency/USD precision-integer}",
-    "caption": "Hidden Margin + Reorder Engine — au labo. Voilà ce que l’analyse vous montrera. <link>→</link>"
+    "caption": "Count Check + Reorder Loop — au labo. Voilà l’écart qu’ils surveillent, tous les jours. <link>→</link>"
   },
   "villain": {
     "kicker": "Ça vous parle ?",
@@ -56,13 +56,17 @@
       "description": "Vos images sont muettes — pour Google, pour les acheteurs IA, pour les lecteurs d’écran. Analyse gratuite, une vraie description pour chaque image.",
       "cta": "Analysez vos images gratuitement →"
     },
-    "hiddenMargin": {
-      "description": "Les marges cachées tuent les entreprises. Votre catalogue est troué — coûts, HS codes et pays d’origine manquants. Un seul score de préparation, les trous chiffrés en dollars.",
-      "cta": "Rejoindre la liste →"
+    "reorderLoop": {
+      "description": "Neuf apps prévoient votre stock. Aucune ne va au bout de la commande. Reorder Loop fait toute la commande — vous dites simplement oui.",
+      "cta": "Rejoindre la liste d’attente →"
     },
-    "reorderEngine": {
-      "description": "Neuf apps prévoient votre stock. Aucune n’envoie le PO. On construit le dernier kilomètre manquant — prouvé en observation d’abord.",
-      "cta": "Rejoindre la liste →"
+    "countCheck": {
+      "description": "Votre 3PL annonce un chiffre. Shopify en annonce un autre. L’écart, c’est votre argent — et personne ne vérifie.",
+      "cta": "Rejoindre la liste d’attente →"
+    },
+    "lostSales": {
+      "description": "Chaque jour en rupture vous coûte de l’argent que vous ne verrez jamais. Rien, nulle part, ne le note. Ceci, si.",
+      "cta": "Rejoindre la liste d’attente →"
     }
   },
   "contrast": {
@@ -72,8 +76,8 @@
     "withBody": "Vous ouvrez un email par semaine, vous voyez les chiffres tomber juste, et vous retournez construire ce pour quoi vous avez monté la boîte."
   },
   "cta": {
-    "title": "Le scanner d’écarts est au labo. Soyez les premiers à voir ce qui se cache.",
-    "sub": "Nous ne vous montrerons pas les chiffres de quelqu’un d’autre. Nous vous montrerons les vôtres — le jour où l’analyse pourra tourner sur votre boutique. Une seule liste, pour toutes les prochaines apps Leaf.",
+    "title": "Reorder Loop est au labo. Soyez le premier quand il tournera sur vos commandes.",
+    "sub": "Nous ne vous montrerons pas les chiffres de quelqu’un d’autre. Nous vous montrerons les vôtres — le jour où il pourra tourner sur votre boutique. Une seule liste, pour toutes les prochaines apps Leaf.",
     "button": "Rejoindre la liste d’attente",
     "note": "En attendant, disponible aujourd’hui : commencez là où toute boutique fuit en premier. <link>Lancer l’analyse d’images gratuite →</link>"
   }
