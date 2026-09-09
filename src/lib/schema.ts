@@ -29,10 +29,32 @@ import type { AppRoute } from "./routes";
  */
 export type JsonLdNode = Record<string, unknown>;
 
-/* Stable node ids. Fragments on the site root, so the same organisation is
- * one entity across every page and locale rather than six of them. */
+/**
+ * Stable node ids. Fragments on the site root, so the same organisation is
+ * one entity across every page and locale rather than six of them.
+ *
+ * There is deliberately NO `WebSite` node, and this is the one piece of
+ * structured data the site removes on purpose rather than never having added.
+ *
+ * Google does not print a homepage's `<title>` in the result. It prints the
+ * site name, and it looks for one in this order: `WebSite.name`, then
+ * `og:site_name`, then the `<title>`, then the h1. A `WebSite` node was added
+ * with the rest of the schema work, and the effect was immediate and
+ * unwanted: a homepage carrying a deliberate 55-character title started
+ * printing as the two words "Leaf Digital".
+ *
+ * Setting `WebSite.name` to the full line was tried first and is the wrong
+ * shape of fix — Google asks for a name there, not a tagline, and is free to
+ * decide a sentence is not a name. Removing the node instead leaves no
+ * site-name source at all, which is what makes Google fall back to the title
+ * it was given. `og:site_name` is left unset for the same reason (see the note
+ * in the layout). The cost is real and accepted: no site-name line on a Slack
+ * or LinkedIn card, and no site-icon treatment in the SERP.
+ *
+ * Re-adding either one moves the homepage back to "Leaf Digital". That is the
+ * trade, not a bug.
+ */
 const ORGANIZATION_ID = `${SITE_URL}/#organization`;
-const WEBSITE_ID = `${SITE_URL}/#website`;
 const IMAGE_VOICE_ID = `${SITE_URL}/#image-voice`;
 
 const ref = (id: string) => ({ "@id": id });
@@ -63,17 +85,6 @@ export function organization(): JsonLdNode {
       email: SUPPORT_EMAIL,
       availableLanguage: ["en", "de", "fr", "es", "it", "pt"],
     },
-  };
-}
-
-export function website(locale: string): JsonLdNode {
-  return {
-    "@type": "WebSite",
-    "@id": WEBSITE_ID,
-    name: SITE_NAME,
-    url: absoluteUrl("/", locale),
-    inLanguage: languageTag(locale),
-    publisher: ref(ORGANIZATION_ID),
   };
 }
 
@@ -197,6 +208,5 @@ export function article({
     inLanguage: languageTag(locale),
     author: ref(ORGANIZATION_ID),
     publisher: ref(ORGANIZATION_ID),
-    isPartOf: ref(WEBSITE_ID),
   };
 }

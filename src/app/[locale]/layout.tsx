@@ -59,8 +59,17 @@ export async function generateMetadata({
      * call `localeMetadata(route, locale)` instead.
      */
     /* `og:locale` wants language_TERRITORY — a bare `de` is dropped. */
+    /**
+     * Deliberately no `siteName`. `og:site_name` is one of the sources Google
+     * reads for the site name it prints instead of a homepage's `<title>`
+     * (see src/lib/schema.ts), so setting it undoes the WebSite removal.
+     *
+     * It was in fact never emitted: pages call `localeMetadata`, Next REPLACES
+     * `openGraph` rather than merging it, and the layout's copy was dropped on
+     * every page. Removing it makes that an intention rather than an accident
+     * — restoring it means accepting "Leaf Digital" as the homepage result.
+     */
     openGraph: {
-      siteName: SITE_NAME,
       type: "website",
       locale: openGraphLocale(locale),
     },
