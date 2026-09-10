@@ -14,9 +14,9 @@
     "kicker": "Count Check",
     "title": "Your stock is going missing."
   },
-  "lostSales": {
-    "kicker": "Lost Sales",
-    "title": "Sold out is costing you."
+  "runway": {
+    "kicker": "Runway",
+    "title": "Your best seller is out."
   },
   "support": {
     "kicker": "Support",

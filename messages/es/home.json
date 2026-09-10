@@ -8,7 +8,7 @@
     "headline": "Tu dinero<br></br>se <accent>esconde.</accent>",
     "subhead": "Tu Shopify, tu 3PL y tu hoja de cálculo cuentan tres historias distintas. Y el dinero se esconde en las grietas.",
     "ctaPrimary": "¿Dónde se esconde el tuyo? ↓",
-    "finePrint": "Nuestra primera app está viva: Image Voice, el análisis de imágenes mudas. Hay tres más en el laboratorio — Reorder Loop, Count Check y Lost Sales. Quien está primero en la lista se entera primero."
+    "finePrint": "Nuestra primera app está viva: Image Voice, el análisis de imágenes mudas. Hay tres más en el laboratorio — Reorder Loop, Count Check y Runway. Quien está primero en la lista se entera primero."
   },
   "inventory": {
     "title": "Inventario disponible · mismos SKU, mismo día",
@@ -64,8 +64,8 @@
       "description": "Tu 3PL dice un número. Shopify dice otro. La diferencia es tu dinero — y nadie la está comprobando.",
       "cta": "Únete a la lista de espera →"
     },
-    "lostSales": {
-      "description": "Cada día agotado pierdes dinero que nunca verás. No queda registrado en ninguna parte. Aquí sí.",
+    "runway": {
+      "description": "Tu superventas se agota y nadie te avisa. Una lista por semana: qué se está acabando, cuándo y cuánto pedir.",
       "cta": "Únete a la lista de espera →"
     }
   },

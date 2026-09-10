@@ -17,7 +17,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const KNOWN_SOURCES = new Set([
   "reorder-loop",
   "count-check",
-  "lost-sales",
+  "runway",
   "home",
 ]);
 

@@ -9,7 +9,7 @@
         "http://localhost:4381/image-voice",
         "http://localhost:4381/reorder-loop",
         "http://localhost:4381/count-check",
-        "http://localhost:4381/lost-sales",
+        "http://localhost:4381/runway",
         "http://localhost:4381/privacy",
         "http://localhost:4381/support"
       ]

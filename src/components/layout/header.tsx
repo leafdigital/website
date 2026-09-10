@@ -30,8 +30,8 @@ const ctaByRoute = {
     key: "joinWaitlist",
     event: "cta_waitlist_join",
   },
-  "/lost-sales": {
-    href: "/lost-sales#waitlist",
+  "/runway": {
+    href: "/runway#waitlist",
     key: "joinWaitlist",
     event: "cta_waitlist_join",
   },

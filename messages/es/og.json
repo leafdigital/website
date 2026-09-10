@@ -14,9 +14,9 @@
     "kicker": "Count Check",
     "title": "Tu stock está desapareciendo."
   },
-  "lostSales": {
-    "kicker": "Lost Sales",
-    "title": "Estar agotado te cuesta."
+  "runway": {
+    "kicker": "Runway",
+    "title": "Tu superventas está agotado."
   },
   "support": {
     "kicker": "Soporte",

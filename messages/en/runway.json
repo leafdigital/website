@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "title": "Days of Cover, Not Unit Alerts — Runway for Shopify",
+    "description": "Your best seller goes out and nobody tells you. Runway sends one list a week: what’s running out, when, how much to order, and what that order ties up."
+  },
+  "hero": {
+    "badge": "Runway · in the lab · waitlist open",
+    "kicker": "Nobody is watching the shelf",
+    "headline": "Your best seller is out. <accent>Nobody told you.</accent>",
+    "subhead": "Runway sends one list a week: what’s running out, when, and how much to order. You read it. Someone acts on it.",
+    "ctaPrimary": "Join the waitlist",
+    "ctaSecondary": "See what changes",
+    "finePrint": "Right now, some of your products can’t be bought. Runway tells you which, and what they normally sell, in the first minute."
+  },
+  "card": {
+    "title": "Monday list · one line, sample",
+    "cover": "Days of cover left",
+    "leadTime": "Supplier lead time",
+    "days": "{count, number} days",
+    "order": "Order now",
+    "orderValue": "{units, number} units · {cost, number, ::currency/USD precision-integer}",
+    "caption": "Sample figures. {days, number} days of cash tied up — and every number shows its working, so you can check it once against your admin and then stop checking."
+  },
+  "identify": {
+    "kicker": "Sound familiar?",
+    "title": "You hired someone so you’d never have to look at this again.",
+    "one": {
+      "statement": "Your best seller hit zero on a Tuesday.",
+      "body": "You found out Friday, from a customer."
+    },
+    "two": {
+      "statement": "The low-stock alert fired at 10 units.",
+      "body": "For that product, 10 units is two days. For the slow one next to it, 10 units is a month. Same alert. Useless both times."
+    },
+    "three": {
+      "statement": "So you ordered big. Just to be safe.",
+      "body": "Now there’s a pallet of it in the 3PL, and the cash you needed for the next thing is sitting on a shelf."
+    },
+    "four": {
+      "statement": "Meanwhile the spreadsheet says your best seller is a slow mover.",
+      "body": "Because every day it was sold out counted as a day nobody wanted it."
+    },
+    "closer": "You’re still the one who notices."
+  },
+  "logic": {
+    "kicker": "Here’s what changes",
+    "title": "Days of cover, against the supplier you actually use",
+    "one": {
+      "title": "Your best seller stops looking slow",
+      "body": "Its sell rate is measured on the days it could actually be bought — so the products that move fastest stop being the ones that get under-ordered."
+    },
+    "two": {
+      "title": "You hear about it in time to order",
+      "body": "The warning is days of cover against your supplier’s real lead time — not a unit count. Nine days left with a 3-day supplier is fine. Nine days left with a 26-day supplier is already late. Runway knows the difference."
+    },
+    "three": {
+      "title": "Every line prices the order",
+      "body": "It says what the order costs and how long the cash is tied up. “282 short. Ordering costs $9,900, tied up about 74 days.” You can say no to that — and be right."
+    },
+    "footer": "Every number shows its working: check it once against your admin, then stop checking. And your stock history starts the day you install — Shopify keeps only today’s number, and nothing before install can be recovered, by anyone."
+  },
+  "objections": {
+    "kicker": "Due diligence",
+    "title": "The four reasons not to believe this — answered",
+    "one": {
+      "q": "“Shopify already shows me days out of stock.”",
+      "a": "It shows the count. It doesn’t keep the history, doesn’t fix the sell rate, and doesn’t tell you what the reorder ties up."
+    },
+    "two": {
+      "q": "“I already have low-stock alerts.”",
+      "a": "At 10 units, whether that’s two days or twenty. They fire too late to do anything about it — that’s the most common complaint in the category."
+    },
+    "three": {
+      "q": "“I could build this with Claude.”",
+      "a": "The alert, maybe. Not the history. Shopify doesn’t store it, and you can’t build yesterday. It exists only if something has been recording it."
+    },
+    "four": {
+      "q": "“I don’t need another dashboard.”",
+      "a": "There isn’t one to check. One list a week to whoever runs inventory. One line a month to you."
+    }
+  },
+  "confess": {
+    "title": "We built the lost-revenue number too — then buried it.",
+    "sub": "Every tool in this category has one, and every one of them is a guess dressed as a fact. Ours is on the line as evidence, never as the headline — and it shows you the floor, the middle, and the guess everyone else prints as truth."
+  },
+  "solution": {
+    "kicker": "The difference",
+    "title": "You stop being the one who notices.",
+    "sub": "Best sellers on the shelf. Cash not stuck in the rest.",
+    "withoutLabel": "Without Runway",
+    "withoutBody": "You find out at zero. You order big to make it stop. The cash gets stuck. And you’re still the one who has to notice.",
+    "withLabel": "With Runway",
+    "withBody": "Monday, one list. What’s running out, when, how much, what it ties up. Someone acts on it. Once a month, one line to you: what got reordered before it hit zero, and what didn’t."
+  },
+  "cta": {
+    "title": "Join the waitlist. Your stock history starts the day you install.",
+    "sub": "One list, every coming Leaf app — you’re first in line for all of them. Free stays free: it never expires and it never stops recording. This is the right call.",
+    "note": "Silent images are already fixable today. <link>Image Voice is live — run that scan now →</link>"
+  }
+}

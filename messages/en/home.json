@@ -8,7 +8,7 @@
     "headline": "Your money<br></br>is <accent>hiding.</accent>",
     "subhead": "Your Shopify, your 3PL, and your spreadsheet all tell a different story. And the money hides in the gaps.",
     "ctaPrimary": "Where’s yours hiding? ↓",
-    "finePrint": "Our first app is live: Image Voice, the silent-images scan. Three more are in the lab — Reorder Loop, Count Check and Lost Sales. First in line hears first."
+    "finePrint": "Our first app is live: Image Voice, the silent-images scan. Three more are in the lab — Reorder Loop, Count Check and Runway. First in line hears first."
   },
   "inventory": {
     "title": "Inventory on hand · same SKU set, same day",
@@ -64,8 +64,8 @@
       "description": "Your 3PL says one number. Shopify says another. The difference is your money — and nobody’s checking.",
       "cta": "Join the waitlist →"
     },
-    "lostSales": {
-      "description": "Every day you’re sold out, you lose money you’ll never see. Nothing, anywhere, writes it down. This does.",
+    "runway": {
+      "description": "Your best seller goes out and nobody tells you. One list a week: what’s running out, when, and how much to order.",
       "cta": "Join the waitlist →"
     }
   },

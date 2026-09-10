@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "title": "Des jours de couverture, pas des alertes en unités — Runway",
+    "description": "Votre best-seller tombe en rupture et personne ne vous prévient. Runway envoie une liste par semaine : ce qui s’épuise, quand, combien commander et ce que cette commande immobilise."
+  },
+  "hero": {
+    "badge": "Runway · au labo · liste d’attente ouverte",
+    "kicker": "Personne ne surveille le rayon",
+    "headline": "Votre best-seller est en rupture. <accent>Personne ne vous l’a dit.</accent>",
+    "subhead": "Runway envoie une liste par semaine : ce qui s’épuise, quand, et combien commander. Vous la lisez. Quelqu’un agit.",
+    "ctaPrimary": "Rejoindre la liste d’attente",
+    "ctaSecondary": "Ce qui change",
+    "finePrint": "En ce moment, certains de vos produits ne peuvent pas être achetés. Runway vous dit lesquels, et ce qu’ils vendent d’habitude, dès la première minute."
+  },
+  "card": {
+    "title": "Liste du lundi · une ligne, exemple",
+    "cover": "Couverture restante",
+    "leadTime": "Délai du fournisseur",
+    "days": "{count, number} jours",
+    "order": "Commander maintenant",
+    "orderValue": "{units, number} unités · {cost, number, ::currency/USD precision-integer}",
+    "caption": "Chiffres d’exemple. {days, number} jours de trésorerie immobilisée — et chaque chiffre montre son calcul, donc vous le confrontez une fois à votre admin et vous arrêtez de vérifier."
+  },
+  "identify": {
+    "kicker": "Ça vous parle ?",
+    "title": "Vous avez recruté quelqu’un pour ne plus jamais avoir à regarder ça.",
+    "one": {
+      "statement": "Votre best-seller est tombé à zéro un mardi.",
+      "body": "Vous l’avez appris le vendredi, par un client."
+    },
+    "two": {
+      "statement": "L’alerte de stock bas s’est déclenchée à 10 unités.",
+      "body": "Pour ce produit, 10 unités c’est deux jours. Pour le produit lent d’à côté, 10 unités c’est un mois. Même alerte. Inutile les deux fois."
+    },
+    "three": {
+      "statement": "Alors vous avez commandé large. Par sécurité.",
+      "body": "Maintenant il y en a une palette au 3PL, et la trésorerie dont vous aviez besoin pour la suite dort sur une étagère."
+    },
+    "four": {
+      "statement": "Pendant ce temps le tableur dit que votre best-seller tourne lentement.",
+      "body": "Parce que chaque jour où il était en rupture a compté comme un jour où personne n’en voulait."
+    },
+    "closer": "C’est toujours vous qui vous en apercevez."
+  },
+  "logic": {
+    "kicker": "Voilà ce qui change",
+    "title": "Des jours de couverture, face au fournisseur que vous utilisez vraiment",
+    "one": {
+      "title": "Votre best-seller cesse de paraître lent",
+      "body": "Son rythme de vente est mesuré sur les jours où il pouvait réellement être acheté — les produits qui tournent le plus vite cessent donc d’être ceux qu’on sous-commande."
+    },
+    "two": {
+      "title": "Vous l’apprenez à temps pour commander",
+      "body": "L’alerte, c’est des jours de couverture face au délai réel de votre fournisseur — pas un nombre d’unités. Neuf jours avec un fournisseur à 3 jours, ça va. Neuf jours avec un fournisseur à 26 jours, c’est déjà trop tard. Runway fait la différence."
+    },
+    "three": {
+      "title": "Chaque ligne chiffre la commande",
+      "body": "Elle dit ce que la commande coûte et combien de temps la trésorerie est immobilisée. « 282 manquantes. Commander coûte 9 900 $, immobilisés environ 74 jours. » À ça, vous pouvez dire non — et avoir raison."
+    },
+    "footer": "Chaque chiffre montre son calcul : confrontez-le une fois à votre admin, puis arrêtez de vérifier. Et votre historique de stock commence le jour de l’installation — Shopify ne garde que le chiffre du jour, et rien d’avant ne peut être récupéré, par personne."
+  },
+  "objections": {
+    "kicker": "Due diligence",
+    "title": "Les quatre raisons de ne pas y croire — traitées",
+    "one": {
+      "q": "« Shopify me montre déjà les jours en rupture. »",
+      "a": "Il montre le compte. Il ne garde pas l’historique, ne corrige pas le rythme de vente, et ne vous dit pas ce que le réassort immobilise."
+    },
+    "two": {
+      "q": "« J’ai déjà des alertes de stock bas. »",
+      "a": "À 10 unités, que ce soit deux jours ou vingt. Elles se déclenchent trop tard pour qu’on puisse y faire quoi que ce soit — c’est la plainte la plus fréquente de la catégorie."
+    },
+    "three": {
+      "q": "« Je peux construire ça avec Claude. »",
+      "a": "L’alerte, peut-être. Pas l’historique. Shopify ne le stocke pas, et on ne construit pas hier. Il n’existe que si quelque chose l’a enregistré."
+    },
+    "four": {
+      "q": "« Je n’ai pas besoin d’un tableau de bord de plus. »",
+      "a": "Il n’y en a aucun à consulter. Une liste par semaine à la personne qui gère le stock. Une ligne par mois pour vous."
+    }
+  },
+  "confess": {
+    "title": "Nous aussi, nous avons construit le chiffre du chiffre d’affaires perdu — puis nous l’avons enterré.",
+    "sub": "Tous les outils de cette catégorie en ont un, et chacun est une estimation déguisée en fait. Le nôtre est sur la ligne comme preuve, jamais comme titre — et il vous montre le plancher, le milieu, et l’estimation que tous les autres impriment comme une vérité."
+  },
+  "solution": {
+    "kicker": "La différence",
+    "title": "Vous cessez d’être celui qui s’en aperçoit.",
+    "sub": "Les best-sellers en rayon. La trésorerie pas coincée dans le reste.",
+    "withoutLabel": "Sans Runway",
+    "withoutBody": "Vous l’apprenez à zéro. Vous commandez large pour que ça s’arrête. La trésorerie se retrouve coincée. Et c’est toujours à vous de vous en apercevoir.",
+    "withLabel": "Avec Runway",
+    "withBody": "Lundi, une liste. Ce qui s’épuise, quand, combien, ce que ça immobilise. Quelqu’un agit. Une fois par mois, une ligne pour vous : ce qui a été réapprovisionné avant d’atteindre zéro, et ce qui ne l’a pas été."
+  },
+  "cta": {
+    "title": "Rejoignez la liste. Votre historique de stock commence le jour de l’installation.",
+    "sub": "Une seule liste, pour toutes les prochaines apps Leaf — vous êtes en tête pour toutes. Le gratuit reste gratuit : il n’expire jamais et n’arrête jamais d’enregistrer. C’est le bon choix.",
+    "note": "Les images muettes se réparent déjà aujourd’hui. <link>Image Voice est en ligne — lancez l’analyse maintenant →</link>"
+  }
+}

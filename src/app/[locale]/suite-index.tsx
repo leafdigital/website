@@ -3,7 +3,7 @@ import { TrackedLink } from "@/components/analytics/tracked-link";
 import {
   APP_NAME,
   COUNT_CHECK_NAME,
-  LOST_SALES_NAME,
+  RUNWAY_NAME,
   REORDER_LOOP_NAME,
 } from "@/lib/constants";
 import type { AppRoute } from "@/lib/routes";
@@ -23,7 +23,7 @@ const apps: { key: string; name: string; href: AppRoute; live: boolean }[] = [
     href: "/count-check",
     live: false,
   },
-  { key: "lostSales", name: LOST_SALES_NAME, href: "/lost-sales", live: false },
+  { key: "runway", name: RUNWAY_NAME, href: "/runway", live: false },
 ];
 
 /**

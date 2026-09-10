@@ -20,8 +20,8 @@ filled from three message files. They make the same argument in the same
 order, so they are one component rather than three files that drift. What a
 page owns is its hero visual and its accent word.
 
-`/hidden-margin` was retired and `/reorder-engine` renamed to `/reorder-loop`
-in the v3 product line; both 301 in `next.config.ts`.
+`/hidden-margin` was retired, `/reorder-engine` renamed to `/reorder-loop`
+and `/lost-sales` to `/runway`; every old route 301s in `next.config.ts`.
 
 English is unprefixed (`/image-voice`); every other locale carries its segment
 (`/de/image-voice`). Old `/en/…` URLs redirect to the short form. Never build

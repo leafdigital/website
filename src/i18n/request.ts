@@ -14,7 +14,7 @@ const namespaces = [
   "imageVoice",
   "reorderLoop",
   "countCheck",
-  "lostSales",
+  "runway",
 ] as const;
 
 /**

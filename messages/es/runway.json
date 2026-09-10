@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "title": "Días de cobertura, no alertas por unidades — Runway",
+    "description": "Tu superventas se agota y nadie te avisa. Runway manda una lista por semana: qué se está acabando, cuándo, cuánto pedir y qué inmoviliza ese pedido."
+  },
+  "hero": {
+    "badge": "Runway · en el laboratorio · lista de espera abierta",
+    "kicker": "Nadie está mirando el estante",
+    "headline": "Tu superventas está agotado. <accent>Nadie te avisó.</accent>",
+    "subhead": "Runway manda una lista por semana: qué se está acabando, cuándo y cuánto pedir. Tú la lees. Alguien actúa.",
+    "ctaPrimary": "Únete a la lista de espera",
+    "ctaSecondary": "Qué cambia",
+    "finePrint": "Ahora mismo hay productos tuyos que no se pueden comprar. Runway te dice cuáles, y lo que normalmente venden, en el primer minuto."
+  },
+  "card": {
+    "title": "Lista del lunes · una línea, ejemplo",
+    "cover": "Cobertura restante",
+    "leadTime": "Plazo del proveedor",
+    "days": "{count, number} días",
+    "order": "Pedir ahora",
+    "orderValue": "{units, number} unidades · {cost, number, ::currency/USD precision-integer}",
+    "caption": "Datos de ejemplo. {days, number} días de dinero inmovilizado — y cada número enseña sus cuentas, así que lo contrastas una vez con tu admin y dejas de comprobarlo."
+  },
+  "identify": {
+    "kicker": "¿Te suena?",
+    "title": "Contrataste a alguien para no tener que volver a mirar esto.",
+    "one": {
+      "statement": "Tu superventas llegó a cero un martes.",
+      "body": "Te enteraste el viernes, por un cliente."
+    },
+    "two": {
+      "statement": "La alerta de stock bajo saltó a las 10 unidades.",
+      "body": "Para ese producto, 10 unidades son dos días. Para el lento de al lado, 10 unidades son un mes. La misma alerta. Inútil las dos veces."
+    },
+    "three": {
+      "statement": "Así que pediste de más. Por si acaso.",
+      "body": "Ahora hay un palé en el 3PL, y el dinero que necesitabas para lo siguiente está parado en un estante."
+    },
+    "four": {
+      "statement": "Y mientras, la hoja de cálculo dice que tu superventas se mueve poco.",
+      "body": "Porque cada día que estuvo agotado contó como un día en que nadie lo quería."
+    },
+    "closer": "Sigues siendo tú quien se da cuenta."
+  },
+  "logic": {
+    "kicker": "Esto es lo que cambia",
+    "title": "Días de cobertura, contra el proveedor que de verdad usas",
+    "one": {
+      "title": "Tu superventas deja de parecer lento",
+      "body": "Su ritmo de venta se mide sobre los días en que realmente se podía comprar — así los productos que más se mueven dejan de ser los que se piden de menos."
+    },
+    "two": {
+      "title": "Te enteras a tiempo de pedir",
+      "body": "El aviso son días de cobertura contra el plazo real de tu proveedor — no un recuento de unidades. Nueve días con un proveedor de 3 días está bien. Nueve días con uno de 26 ya es tarde. Runway sabe la diferencia."
+    },
+    "three": {
+      "title": "Cada línea pone precio al pedido",
+      "body": "Dice cuánto cuesta el pedido y cuánto tiempo queda inmovilizado el dinero. «Faltan 282. Pedirlo cuesta 9.900 $, inmovilizado unos 74 días.» A eso puedes decir que no — y tener razón."
+    },
+    "footer": "Cada número enseña sus cuentas: contrástalo una vez con tu admin y deja de comprobarlo. Y tu histórico de stock empieza el día que lo instalas — Shopify solo guarda el número de hoy, y nada anterior a la instalación se puede recuperar, por nadie."
+  },
+  "objections": {
+    "kicker": "Diligencia debida",
+    "title": "Las cuatro razones para no creerte esto — respondidas",
+    "one": {
+      "q": "«Shopify ya me enseña los días sin stock.»",
+      "a": "Enseña el recuento. No guarda el histórico, no corrige el ritmo de venta y no te dice qué inmoviliza la reposición."
+    },
+    "two": {
+      "q": "«Ya tengo alertas de stock bajo.»",
+      "a": "A las 10 unidades, sean dos días o veinte. Saltan demasiado tarde para poder hacer algo — es la queja más común de la categoría."
+    },
+    "three": {
+      "q": "«Esto lo monto con Claude.»",
+      "a": "La alerta, quizá. El histórico no. Shopify no lo guarda, y ayer no se puede construir. Solo existe si algo lo ha estado registrando."
+    },
+    "four": {
+      "q": "«No necesito otro panel.»",
+      "a": "No hay ninguno que mirar. Una lista por semana a quien lleva el inventario. Una línea al mes para ti."
+    }
+  },
+  "confess": {
+    "title": "Nosotros también construimos el número de ingresos perdidos — y luego lo enterramos.",
+    "sub": "Todas las herramientas de esta categoría tienen uno, y todos son una suposición disfrazada de hecho. El nuestro va en la línea como prueba, nunca como titular — y te enseña el suelo, el medio y la suposición que los demás imprimen como verdad."
+  },
+  "solution": {
+    "kicker": "La diferencia",
+    "title": "Dejas de ser quien se da cuenta.",
+    "sub": "Los superventas en el estante. El dinero no atascado en el resto.",
+    "withoutLabel": "Sin Runway",
+    "withoutBody": "Te enteras a cero. Pides de más para que pare. El dinero se queda atascado. Y sigues siendo tú quien tiene que darse cuenta.",
+    "withLabel": "Con Runway",
+    "withBody": "Lunes, una lista. Qué se está acabando, cuándo, cuánto, qué inmoviliza. Alguien actúa. Una vez al mes, una línea para ti: qué se repuso antes de llegar a cero, y qué no."
+  },
+  "cta": {
+    "title": "Únete a la lista. Tu histórico de stock empieza el día que lo instalas.",
+    "sub": "Una lista, todas las apps de Leaf que vienen — estás primero para todas. Gratis sigue siendo gratis: nunca caduca y nunca deja de registrar. Esta es la decisión correcta.",
+    "note": "Las imágenes mudas ya tienen arreglo hoy. <link>Image Voice está vivo — lanza ese análisis ahora →</link>"
+  }
+}

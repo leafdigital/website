@@ -14,9 +14,9 @@
     "kicker": "Count Check",
     "title": "Il tuo stock sta sparendo."
   },
-  "lostSales": {
-    "kicker": "Lost Sales",
-    "title": "Essere esaurito ti costa."
+  "runway": {
+    "kicker": "Runway",
+    "title": "Il tuo best seller è esaurito."
   },
   "support": {
     "kicker": "Assistenza",

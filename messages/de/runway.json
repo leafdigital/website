@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "title": "Reichweite in Tagen statt Stück-Alarm — Runway",
+    "description": "Dein Bestseller geht aus und niemand sagt dir Bescheid. Runway schickt eine Liste pro Woche: was zur Neige geht, wann, wie viel zu bestellen ist und was diese Bestellung bindet."
+  },
+  "hero": {
+    "badge": "Runway · im Labor · Warteliste offen",
+    "kicker": "Niemand schaut aufs Regal",
+    "headline": "Dein Bestseller ist aus. <accent>Niemand hat es dir gesagt.</accent>",
+    "subhead": "Runway schickt eine Liste pro Woche: was zur Neige geht, wann und wie viel zu bestellen ist. Du liest sie. Jemand handelt danach.",
+    "ctaPrimary": "Auf die Warteliste",
+    "ctaSecondary": "Was sich ändert",
+    "finePrint": "Genau jetzt sind einige deiner Produkte nicht kaufbar. Runway sagt dir in der ersten Minute, welche — und was sie normalerweise verkaufen."
+  },
+  "card": {
+    "title": "Montagsliste · eine Zeile, Beispiel",
+    "cover": "Reichweite noch",
+    "leadTime": "Lieferzeit des Lieferanten",
+    "days": "{count, number} Tage",
+    "order": "Jetzt bestellen",
+    "orderValue": "{units, number} Einheiten · {cost, number, ::currency/USD precision-integer}",
+    "caption": "Beispielzahlen. {days, number} Tage gebundenes Kapital — und jede Zahl zeigt ihre Rechnung, also prüfst du sie einmal gegen dein Admin und hörst dann auf zu prüfen."
+  },
+  "identify": {
+    "kicker": "Kommt dir bekannt vor?",
+    "title": "Du hast jemanden eingestellt, damit du dir das nie wieder ansehen musst.",
+    "one": {
+      "statement": "Dein Bestseller stand am Dienstag auf null.",
+      "body": "Erfahren hast du es am Freitag, von einer Kundin."
+    },
+    "two": {
+      "statement": "Der Bestandsalarm hat bei 10 Stück ausgelöst.",
+      "body": "Für dieses Produkt sind 10 Stück zwei Tage. Für den Langsamdreher daneben sind 10 Stück ein Monat. Gleicher Alarm. Beide Male nutzlos."
+    },
+    "three": {
+      "statement": "Also hast du groß bestellt. Sicherheitshalber.",
+      "body": "Jetzt steht eine Palette davon im 3PL, und das Geld, das du für die nächste Sache gebraucht hättest, liegt im Regal."
+    },
+    "four": {
+      "statement": "Und die Tabelle sagt, dein Bestseller sei ein Langsamdreher.",
+      "body": "Weil jeder Tag, an dem er ausverkauft war, als Tag zählte, an dem ihn keiner wollte."
+    },
+    "closer": "Du bist immer noch die, der es auffällt."
+  },
+  "logic": {
+    "kicker": "Das ändert sich",
+    "title": "Reichweite in Tagen, gegen den Lieferanten, den du wirklich nutzt",
+    "one": {
+      "title": "Dein Bestseller wirkt nicht mehr langsam",
+      "body": "Seine Abverkaufsrate wird an den Tagen gemessen, an denen er wirklich kaufbar war — damit die Produkte, die am schnellsten drehen, nicht länger die sind, die zu knapp bestellt werden."
+    },
+    "two": {
+      "title": "Du erfährst es rechtzeitig zum Bestellen",
+      "body": "Die Warnung ist Reichweite in Tagen gegen die echte Lieferzeit deines Lieferanten — keine Stückzahl. Neun Tage übrig bei einem 3-Tage-Lieferanten sind in Ordnung. Neun Tage übrig bei einem 26-Tage-Lieferanten sind schon zu spät. Runway kennt den Unterschied."
+    },
+    "three": {
+      "title": "Jede Zeile beziffert die Bestellung",
+      "body": "Sie sagt, was die Bestellung kostet und wie lange das Geld gebunden ist. „282 zu wenig. Bestellen kostet 9.900 $, rund 74 Tage gebunden.“ Dazu darfst du Nein sagen — und Recht haben."
+    },
+    "footer": "Jede Zahl zeigt ihre Rechnung: einmal gegen dein Admin prüfen, dann aufhören zu prüfen. Und deine Bestandshistorie beginnt an dem Tag, an dem du installierst — Shopify hält nur die heutige Zahl, und nichts von davor lässt sich wiederherstellen, von niemandem."
+  },
+  "objections": {
+    "kicker": "Sorgfaltsprüfung",
+    "title": "Die vier Gründe, das nicht zu glauben — beantwortet",
+    "one": {
+      "q": "„Shopify zeigt mir doch schon die Tage ohne Bestand.“",
+      "a": "Es zeigt die Zahl. Es hält die Historie nicht fest, korrigiert die Abverkaufsrate nicht und sagt dir nicht, was die Nachbestellung bindet."
+    },
+    "two": {
+      "q": "„Ich habe schon Bestandsalarme.“",
+      "a": "Bei 10 Stück, egal ob das zwei Tage oder zwanzig sind. Sie lösen zu spät aus, um noch etwas tun zu können — das ist die häufigste Beschwerde in der Kategorie."
+    },
+    "three": {
+      "q": "„Das baue ich mit Claude.“",
+      "a": "Den Alarm, vielleicht. Die Historie nicht. Shopify speichert sie nicht, und Gestern kann man nicht bauen. Sie existiert nur, wenn etwas mitgeschrieben hat."
+    },
+    "four": {
+      "q": "„Ich brauche kein weiteres Dashboard.“",
+      "a": "Es gibt keins zu prüfen. Eine Liste pro Woche an die Person, die den Bestand macht. Eine Zeile pro Monat an dich."
+    }
+  },
+  "confess": {
+    "title": "Wir haben die Zahl für entgangenen Umsatz auch gebaut — und dann vergraben.",
+    "sub": "Jedes Tool dieser Kategorie hat so eine Zahl, und jede davon ist eine Schätzung im Kostüm einer Tatsache. Unsere steht in der Zeile als Beleg, nie als Schlagzeile — und sie zeigt dir die Untergrenze, die Mitte und die Schätzung, die alle anderen als Wahrheit drucken."
+  },
+  "solution": {
+    "kicker": "Der Unterschied",
+    "title": "Du bist nicht mehr die, der es auffällt.",
+    "sub": "Bestseller im Regal. Kapital nicht im Rest festgefahren.",
+    "withoutLabel": "Ohne Runway",
+    "withoutBody": "Du erfährst es bei null. Du bestellst groß, damit es aufhört. Das Geld bleibt stecken. Und es ist immer noch an dir, es zu bemerken.",
+    "withLabel": "Mit Runway",
+    "withBody": "Montag, eine Liste. Was zur Neige geht, wann, wie viel, was es bindet. Jemand handelt danach. Einmal im Monat eine Zeile an dich: was nachbestellt wurde, bevor es auf null ging — und was nicht."
+  },
+  "cta": {
+    "title": "Auf die Warteliste. Deine Bestandshistorie beginnt am Tag der Installation.",
+    "sub": "Eine Liste, alle kommenden Leaf-Apps — du stehst bei allen vorn. Kostenlos bleibt kostenlos: läuft nie aus und hört nie auf mitzuschreiben. Das ist die richtige Entscheidung.",
+    "note": "Stumme Bilder lassen sich schon heute beheben. <link>Image Voice ist live — starte den Scan jetzt →</link>"
+  }
+}

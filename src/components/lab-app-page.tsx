@@ -42,7 +42,14 @@ import { breadcrumbs, faqPage, organization } from "@/lib/schema";
 /** Every namespace here fills the same key shape — see messages/en. */
 const scenarios = ["one", "two", "three", "four"] as const;
 const moves = ["one", "two", "three"] as const;
-const objections = ["one", "two", "three"] as const;
+
+/**
+ * How many objections a page answers. Three is the shape the schema was
+ * written around and stays the default; a page passes its own list only when
+ * the argument genuinely has a fourth one to answer — the `Faq` is a stacked
+ * list, so it costs nothing but the words.
+ */
+const defaultObjections = ["one", "two", "three"] as const;
 
 export function LabAppPage({
   namespace,
@@ -50,6 +57,7 @@ export function LabAppPage({
   name,
   source,
   visual,
+  objections = defaultObjections,
 }: {
   /** The message namespace: `reorderLoop`, `countCheck`, `lostSales`. */
   namespace: string;
@@ -60,6 +68,8 @@ export function LabAppPage({
   source: string;
   /** The hero's right column: this app's one number. */
   visual: React.ReactNode;
+  /** Objection keys, in order. Defaults to the schema's three. */
+  objections?: readonly string[];
 }) {
   const t = useTranslations(namespace);
   const locale = useLocale();

@@ -14,9 +14,9 @@
     "kicker": "Count Check",
     "title": "Votre stock disparaît."
   },
-  "lostSales": {
-    "kicker": "Lost Sales",
-    "title": "La rupture vous coûte."
+  "runway": {
+    "kicker": "Runway",
+    "title": "Votre best-seller est en rupture."
   },
   "support": {
     "kicker": "Assistance",

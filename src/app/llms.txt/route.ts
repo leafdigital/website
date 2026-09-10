@@ -2,7 +2,7 @@ import {
   APP_INSTALL_URL,
   APP_NAME,
   COUNT_CHECK_NAME,
-  LOST_SALES_NAME,
+  RUNWAY_NAME,
   PRICING,
   REORDER_LOOP_NAME,
   SITE_NAME,
@@ -44,7 +44,7 @@ function body() {
 - [${APP_NAME}](${url("/image-voice")}): alt text for Shopify stores. Free forever audit that grades existing alt text as missing / junk / weak / good, then writes a real description for every image. Live on the Shopify App Store. Plans: Audit $${PRICING.audit.toFixed(2)}, Keeper $${PRICING.keeper.toFixed(2)}/mo, Curator $${PRICING.curator.toFixed(2)}/mo.
 - [${REORDER_LOOP_NAME}](${url("/reorder-loop")}): end-to-end reordering for Shopify inventory — sizes the order to what is selling and to available cash, tracks the supplier's reply, and checks the invoice against what actually landed. Proven in shadow against a store's own orders for 30 days before it places one, and nothing is sent without approval. In development; waitlist open.
 - [${COUNT_CHECK_NAME}](${url("/count-check")}): daily reconciliation of a 3PL's inventory count against Shopify's, per product, with the difference priced in dollars and kept as history a merchant can file a claim on. Read-only — it writes to neither system. In development; waitlist open.
-- [${LOST_SALES_NAME}](${url("/lost-sales")}): counts the hours each product spends at zero and prices them from the store's own run-rate, so out-of-stock days can be told apart from low demand. It can only count from the day it is connected. In development; waitlist open.
+- [${RUNWAY_NAME}](${url("/runway")}): one weekly list of what is running out, measured as days of cover against each supplier's real lead time rather than a unit threshold. Sell rate is computed only over the days a product could actually be bought, so stockouts stop reading as low demand, and every line states what the order costs and how long it ties the cash up. It can only count from the day it is connected. In development; waitlist open.
 
 ## Guides and comparisons
 

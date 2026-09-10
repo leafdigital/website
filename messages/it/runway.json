@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "title": "Giorni di copertura, non avvisi a pezzi — Runway",
+    "description": "Il tuo best seller finisce e nessuno te lo dice. Runway manda una lista a settimana: cosa sta per esaurirsi, quando, quanto ordinare e cosa immobilizza quell’ordine."
+  },
+  "hero": {
+    "badge": "Runway · in laboratorio · lista d’attesa aperta",
+    "kicker": "Nessuno sta guardando lo scaffale",
+    "headline": "Il tuo best seller è esaurito. <accent>Nessuno te l’ha detto.</accent>",
+    "subhead": "Runway manda una lista a settimana: cosa sta per esaurirsi, quando e quanto ordinare. Tu la leggi. Qualcuno agisce.",
+    "ctaPrimary": "Iscriviti alla lista d’attesa",
+    "ctaSecondary": "Cosa cambia",
+    "finePrint": "Proprio adesso alcuni dei tuoi prodotti non si possono comprare. Runway ti dice quali, e quanto vendono di solito, nel primo minuto."
+  },
+  "card": {
+    "title": "Lista del lunedì · una riga, esempio",
+    "cover": "Copertura rimasta",
+    "leadTime": "Lead time del fornitore",
+    "days": "{count, number} giorni",
+    "order": "Ordina ora",
+    "orderValue": "{units, number} unità · {cost, number, ::currency/USD precision-integer}",
+    "caption": "Dati di esempio. {days, number} giorni di liquidità immobilizzata — e ogni numero mostra il suo calcolo, quindi lo verifichi una volta contro il tuo admin e poi smetti di controllare."
+  },
+  "identify": {
+    "kicker": "Ti suona familiare?",
+    "title": "Hai assunto qualcuno proprio per non doverci più guardare.",
+    "one": {
+      "statement": "Il tuo best seller è andato a zero un martedì.",
+      "body": "L’hai scoperto il venerdì, da un cliente."
+    },
+    "two": {
+      "statement": "L’avviso di scorte basse è scattato a 10 pezzi.",
+      "body": "Per quel prodotto, 10 pezzi sono due giorni. Per quello lento accanto, 10 pezzi sono un mese. Stesso avviso. Inutile entrambe le volte."
+    },
+    "three": {
+      "statement": "Così hai ordinato in grande. Per sicurezza.",
+      "body": "Adesso c’è un bancale nel 3PL, e i soldi che ti servivano per la cosa dopo sono fermi su uno scaffale."
+    },
+    "four": {
+      "statement": "E intanto il foglio di calcolo dice che il tuo best seller gira piano.",
+      "body": "Perché ogni giorno in cui era esaurito ha contato come un giorno in cui non lo voleva nessuno."
+    },
+    "closer": "Sei ancora tu quello che se ne accorge."
+  },
+  "logic": {
+    "kicker": "Ecco cosa cambia",
+    "title": "Giorni di copertura, contro il fornitore che usi davvero",
+    "one": {
+      "title": "Il tuo best seller smette di sembrare lento",
+      "body": "Il suo ritmo di vendita viene misurato sui giorni in cui si poteva davvero comprare — così i prodotti che girano più in fretta smettono di essere quelli che vengono ordinati troppo poco."
+    },
+    "two": {
+      "title": "Lo sai in tempo per ordinare",
+      "body": "L’allerta è in giorni di copertura contro il lead time reale del tuo fornitore — non un conteggio di pezzi. Nove giorni con un fornitore da 3 giorni va bene. Nove giorni con un fornitore da 26 è già tardi. Runway conosce la differenza."
+    },
+    "three": {
+      "title": "Ogni riga quantifica l’ordine",
+      "body": "Dice quanto costa l’ordine e per quanto resta immobilizzata la liquidità. «Mancano 282. Ordinare costa 9.900 $, immobilizzati circa 74 giorni.» A questo puoi dire di no — e avere ragione."
+    },
+    "footer": "Ogni numero mostra il suo calcolo: verificalo una volta contro il tuo admin, poi smetti di controllare. E il tuo storico di magazzino parte dal giorno in cui installi — Shopify tiene solo il numero di oggi, e niente di precedente è recuperabile, da nessuno."
+  },
+  "objections": {
+    "kicker": "Due diligence",
+    "title": "I quattro motivi per non crederci — con risposta",
+    "one": {
+      "q": "«Shopify mi mostra già i giorni senza scorte.»",
+      "a": "Mostra il conteggio. Non conserva lo storico, non corregge il ritmo di vendita e non ti dice cosa immobilizza il riordino."
+    },
+    "two": {
+      "q": "«Ho già gli avvisi di scorte basse.»",
+      "a": "A 10 pezzi, che siano due giorni o venti. Scattano troppo tardi per poterci fare qualcosa — è la lamentela più comune della categoria."
+    },
+    "three": {
+      "q": "«Me lo costruisco con Claude.»",
+      "a": "L’avviso, forse. Lo storico no. Shopify non lo conserva, e ieri non si può costruire. Esiste solo se qualcosa lo ha registrato."
+    },
+    "four": {
+      "q": "«Non mi serve un’altra dashboard.»",
+      "a": "Non ce n’è nessuna da controllare. Una lista a settimana a chi gestisce il magazzino. Una riga al mese a te."
+    }
+  },
+  "confess": {
+    "title": "Anche noi abbiamo costruito il numero del fatturato perso — e poi l’abbiamo sepolto.",
+    "sub": "Ogni strumento di questa categoria ne ha uno, e ognuno è una stima travestita da fatto. Il nostro sta nella riga come prova, mai come titolo — e ti mostra il minimo, la via di mezzo e la stima che tutti gli altri stampano come verità."
+  },
+  "solution": {
+    "kicker": "La differenza",
+    "title": "Smetti di essere quello che se ne accorge.",
+    "sub": "I best seller sullo scaffale. La liquidità non incastrata nel resto.",
+    "withoutLabel": "Senza Runway",
+    "withoutBody": "Lo scopri a zero. Ordini in grande per farla finita. I soldi restano incastrati. E sei ancora tu a doverti accorgere.",
+    "withLabel": "Con Runway",
+    "withBody": "Lunedì, una lista. Cosa sta per esaurirsi, quando, quanto, cosa immobilizza. Qualcuno agisce. Una volta al mese, una riga per te: cosa è stato riordinato prima di arrivare a zero, e cosa no."
+  },
+  "cta": {
+    "title": "Iscriviti alla lista. Il tuo storico parte dal giorno in cui installi.",
+    "sub": "Una lista, tutte le prossime app Leaf — sei primo per tutte. Il gratis resta gratis: non scade mai e non smette mai di registrare. È la scelta giusta.",
+    "note": "Le immagini mute si sistemano già oggi. <link>Image Voice è live — lancia la scansione adesso →</link>"
+  }
+}

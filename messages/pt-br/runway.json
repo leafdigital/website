@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "title": "Dias de cobertura, não alerta por unidade — Runway",
+    "description": "Seu campeão de vendas acaba e ninguém te avisa. O Runway manda uma lista por semana: o que está acabando, quando, quanto pedir e o que esse pedido prende de caixa."
+  },
+  "hero": {
+    "badge": "Runway · no laboratório · lista de espera aberta",
+    "kicker": "Ninguém está olhando a prateleira",
+    "headline": "Seu campeão de vendas acabou. <accent>Ninguém te avisou.</accent>",
+    "subhead": "O Runway manda uma lista por semana: o que está acabando, quando e quanto pedir. Você lê. Alguém age.",
+    "ctaPrimary": "Entrar na lista de espera",
+    "ctaSecondary": "O que muda",
+    "finePrint": "Agora mesmo tem produto seu que não dá para comprar. O Runway te diz qual, e quanto ele costuma vender, no primeiro minuto."
+  },
+  "card": {
+    "title": "Lista de segunda · uma linha, exemplo",
+    "cover": "Cobertura restante",
+    "leadTime": "Lead time do fornecedor",
+    "days": "{count, number} dias",
+    "order": "Pedir agora",
+    "orderValue": "{units, number} unidades · {cost, number, ::currency/USD precision-integer}",
+    "caption": "Dados de exemplo. {days, number} dias de caixa preso — e todo número mostra a conta, então você confere uma vez contra o seu admin e para de conferir."
+  },
+  "identify": {
+    "kicker": "Soa familiar?",
+    "title": "Você contratou alguém justamente para nunca mais precisar olhar isso.",
+    "one": {
+      "statement": "Seu campeão de vendas zerou numa terça.",
+      "body": "Você descobriu na sexta, por um cliente."
+    },
+    "two": {
+      "statement": "O alerta de estoque baixo disparou em 10 unidades.",
+      "body": "Para aquele produto, 10 unidades são dois dias. Para o lento do lado, 10 unidades são um mês. Mesmo alerta. Inútil das duas vezes."
+    },
+    "three": {
+      "statement": "Aí você pediu grande. Só por garantia.",
+      "body": "Agora tem um palete disso no 3PL, e o dinheiro de que você precisava para a próxima coisa está parado numa prateleira."
+    },
+    "four": {
+      "statement": "E enquanto isso a planilha diz que seu campeão gira devagar.",
+      "body": "Porque cada dia em que ele esteve esgotado contou como um dia em que ninguém quis."
+    },
+    "closer": "Continua sendo você quem percebe."
+  },
+  "logic": {
+    "kicker": "É isto que muda",
+    "title": "Dias de cobertura, contra o fornecedor que você usa de verdade",
+    "one": {
+      "title": "Seu campeão para de parecer lento",
+      "body": "O ritmo de venda dele é medido nos dias em que dava mesmo para comprar — assim os produtos que giram mais rápido param de ser os que ficam com pedido curto."
+    },
+    "two": {
+      "title": "Você fica sabendo a tempo de pedir",
+      "body": "O aviso é em dias de cobertura contra o lead time real do seu fornecedor — não uma contagem de unidades. Nove dias com um fornecedor de 3 dias está tranquilo. Nove dias com um de 26 já é tarde. O Runway sabe a diferença."
+    },
+    "three": {
+      "title": "Cada linha precifica o pedido",
+      "body": "Ela diz quanto o pedido custa e por quanto tempo o caixa fica preso. «Faltam 282. Pedir custa US$ 9.900, preso por uns 74 dias.» A isso você pode dizer não — e estar certo."
+    },
+    "footer": "Todo número mostra a conta: confira uma vez contra o seu admin e pare de conferir. E o seu histórico de estoque começa no dia em que você instala — o Shopify guarda só o número de hoje, e nada anterior à instalação dá para recuperar, por ninguém."
+  },
+  "objections": {
+    "kicker": "Due diligence",
+    "title": "Os quatro motivos para não acreditar — respondidos",
+    "one": {
+      "q": "«O Shopify já me mostra os dias sem estoque.»",
+      "a": "Ele mostra a contagem. Não guarda o histórico, não corrige o ritmo de venda e não te diz o que a reposição prende de caixa."
+    },
+    "two": {
+      "q": "«Eu já tenho alerta de estoque baixo.»",
+      "a": "Em 10 unidades, sejam dois dias ou vinte. Eles disparam tarde demais para dar tempo de fazer algo — é a reclamação mais comum da categoria."
+    },
+    "three": {
+      "q": "«Eu construo isso com o Claude.»",
+      "a": "O alerta, talvez. O histórico não. O Shopify não guarda, e ontem não dá para construir. Ele só existe se alguma coisa esteve registrando."
+    },
+    "four": {
+      "q": "«Não preciso de mais um dashboard.»",
+      "a": "Não tem nenhum para checar. Uma lista por semana para quem cuida do estoque. Uma linha por mês para você."
+    }
+  },
+  "confess": {
+    "title": "A gente também construiu o número de receita perdida — e depois enterrou.",
+    "sub": "Toda ferramenta dessa categoria tem um, e cada um deles é um chute fantasiado de fato. O nosso fica na linha como prova, nunca como manchete — e mostra o piso, o meio e o chute que todo mundo imprime como verdade."
+  },
+  "solution": {
+    "kicker": "A diferença",
+    "title": "Você deixa de ser quem percebe.",
+    "sub": "Campeões na prateleira. Caixa não preso no resto.",
+    "withoutLabel": "Sem o Runway",
+    "withoutBody": "Você descobre no zero. Pede grande para aquilo parar. O caixa fica preso. E continua sendo você quem tem que perceber.",
+    "withLabel": "Com o Runway",
+    "withBody": "Segunda, uma lista. O que está acabando, quando, quanto, o que prende de caixa. Alguém age. Uma vez por mês, uma linha para você: o que foi reposto antes de zerar, e o que não foi."
+  },
+  "cta": {
+    "title": "Entre na lista. Seu histórico começa no dia em que você instala.",
+    "sub": "Uma lista só, para todos os próximos apps da Leaf — você é o primeiro em todos. Grátis continua grátis: nunca expira e nunca para de registrar. Essa é a escolha certa.",
+    "note": "Imagens mudas já dá para resolver hoje. <link>O Image Voice está no ar — rode essa análise agora →</link>"
+  }
+}

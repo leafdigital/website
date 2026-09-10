@@ -11,9 +11,9 @@ const nextConfig: NextConfig = {
    * carries whatever equity they earned to the page that replaced them
    * instead of spending it on a 404.
    *
-   * `/reorder-engine` has a real successor: same app, new name. `/hidden-
-   * margin` has none — the app was killed, not renamed — so it lands on the
-   * suite index rather than being passed off as one of the survivors.
+   * `/reorder-engine` and `/lost-sales` have real successors: same app, new
+   * name. `/hidden-margin` has none — the app was killed, not renamed — so it
+   * lands on the suite index rather than being passed off as a survivor.
    *
    * Two rules per route, not one with an optional segment: an unmatched
    * optional param leaves a `//` in the destination. The prefixed rule keeps
@@ -38,6 +38,12 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       { source: "/hidden-margin", destination: "/#apps", permanent: true },
+      {
+        source: "/:locale(de|es|fr|it|pt-br)/lost-sales",
+        destination: "/:locale/runway",
+        permanent: true,
+      },
+      { source: "/lost-sales", destination: "/runway", permanent: true },
     ];
   },
 };

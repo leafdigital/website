@@ -14,9 +14,9 @@
     "kicker": "Count Check",
     "title": "Dein Bestand verschwindet."
   },
-  "lostSales": {
-    "kicker": "Lost Sales",
-    "title": "Ausverkauft kostet dich."
+  "runway": {
+    "kicker": "Runway",
+    "title": "Dein Bestseller ist aus."
   },
   "support": {
     "kicker": "Support",

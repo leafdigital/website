@@ -8,7 +8,7 @@
     "headline": "Votre argent<br></br>se <accent>cache.</accent>",
     "subhead": "Votre Shopify, votre 3PL et votre tableur racontent trois histoires différentes. Et l’argent se cache dans les écarts.",
     "ctaPrimary": "Où se cache le vôtre ? ↓",
-    "finePrint": "Notre première app est en ligne : Image Voice, l’analyse des images muettes. Trois autres sont au labo — Reorder Loop, Count Check et Lost Sales. Les premiers sur la liste sont les premiers prévenus."
+    "finePrint": "Notre première app est en ligne : Image Voice, l’analyse des images muettes. Trois autres sont au labo — Reorder Loop, Count Check et Runway. Les premiers sur la liste sont les premiers prévenus."
   },
   "inventory": {
     "title": "Stock disponible · mêmes SKU, même jour",
@@ -64,8 +64,8 @@
       "description": "Votre 3PL annonce un chiffre. Shopify en annonce un autre. L’écart, c’est votre argent — et personne ne vérifie.",
       "cta": "Rejoindre la liste d’attente →"
     },
-    "lostSales": {
-      "description": "Chaque jour en rupture vous coûte de l’argent que vous ne verrez jamais. Rien, nulle part, ne le note. Ceci, si.",
+    "runway": {
+      "description": "Votre best-seller tombe en rupture et personne ne vous prévient. Une liste par semaine : ce qui s’épuise, quand, et combien commander.",
       "cta": "Rejoindre la liste d’attente →"
     }
   },

@@ -11,12 +11,13 @@ export const APP_NAME = "Image Voice";
  * is: they are brand terms, never translated (i18n/glossary.json), and
  * structured data has to call them something.
  *
- * v3 retired Hidden Margin and renamed Reorder Engine to Reorder Loop. The
- * old routes 301 to their successors in next.config.ts.
+ * v3 retired Hidden Margin and renamed Reorder Engine to Reorder Loop; Lost
+ * Sales then became Runway. Every old route 301s to its successor in
+ * next.config.ts.
  */
 export const REORDER_LOOP_NAME = "Reorder Loop";
 export const COUNT_CHECK_NAME = "Count Check";
-export const LOST_SALES_NAME = "Lost Sales";
+export const RUNWAY_NAME = "Runway";
 
 export const SITE_NAME = "Leaf Digital";
 export const SITE_URL = "https://www.leafdigital.io";
@@ -101,12 +102,17 @@ export const SAMPLE = {
     shopify: 447,
   },
   /**
-   * Lost Sales’ opening claim: one bestseller, the days it sat at zero, and
-   * how many systems recorded what that cost.
+   * Runway’s hero: one line of the Monday list. Days of cover against the
+   * supplier’s real lead time is the whole argument — nine days is fine
+   * against a 3-day supplier and already late against a 26-day one — so the
+   * card states both, then what closing the gap costs and ties up.
    */
-  lostSales: {
-    zeroDays: 9,
-    systemsThatRecordedIt: 0,
+  runway: {
+    daysOfCover: 4,
+    leadTimeDays: 26,
+    shortUnits: 282,
+    orderCost: 9900,
+    cashTiedDays: 74,
   },
 } as const;
 
