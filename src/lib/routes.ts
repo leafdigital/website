@@ -49,6 +49,9 @@ export const indexedRoutes = [
 export const contentRoutes = [
   "/image-voice/vs-alttext-ai",
   "/image-voice/vs-altking",
+  /* English until counsel has reviewed it — see the note on the route. */
+  "/terms",
+  "/security",
 ] as const;
 
 export type ContentRoute = (typeof contentRoutes)[number];
@@ -94,4 +97,6 @@ export const lastModified: Record<AppRoute, string> = {
   "/guides/shopify-alt-text": "2026-09-04",
   "/image-voice/vs-alttext-ai": "2026-09-04",
   "/image-voice/vs-altking": "2026-09-04",
+  "/terms": "2026-09-11",
+  "/security": "2026-09-11",
 };

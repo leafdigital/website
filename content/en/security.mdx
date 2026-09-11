@@ -1,0 +1,139 @@
+import { APP_NAME, SUPPORT_EMAIL } from "@/lib/constants";
+
+export const meta = {
+  title: `${APP_NAME} security and data handling`,
+  updated: "2026-09-11",
+};
+
+## The short version
+
+{APP_NAME} asks Shopify for six permissions, none of them for customers or
+orders. It can change one thing in your store — alt text — and nothing is
+applied without your approval unless you turn on auto-pilot. Every change can
+be undone for 30 days. Your store's access token is encrypted, your data is
+walled off from every other store's, and about 48 hours after you uninstall,
+your store's data is erased. The rest of this page is the detail, including
+the parts that are not finished.
+
+This page answers the security questions in one place. What we collect and
+why, in full, is in the [privacy policy](/privacy); the agreement is in
+the [terms of service](/terms).
+
+## What it can read
+
+These are the Shopify permissions ("scopes") {APP_NAME} requests, and what each
+one is for. There are no others.
+
+| Scope           | What it is for                                                                     |
+| --------------- | ---------------------------------------------------------------------------------- |
+| `read_products` | Reads your product catalog and its images — the thing the app describes            |
+| `read_themes`   | Reads the image files in your published theme                                      |
+| `read_content`  | Reads blog articles and their images. It could also reach comments; we read none   |
+| `read_locales`  | Reads your store's languages, so descriptions are written in yours                 |
+| `write_files`   | Writes alt text back to an image file                                              |
+| `write_content` | Writes the alt text on a blog article's featured image, which lives on the article |
+
+**No customer scope, no order scope, and no payment scope** — and none of
+Shopify's sensitive scopes either. That is enforced in the build, not just
+promised: the app's tests fail if a customer or order permission, or a
+customer or order webhook, is ever added.
+
+## What it can change
+
+Alt text, and nothing else. `write_products` is deliberately absent, so the app
+cannot edit a product's title, description, price or inventory. It never
+touches theme code, never re-uploads or edits an image, and never adds a script
+to your storefront.
+
+- **Approval first.** Descriptions wait in a review queue until you approve
+  them. Auto-pilot — applying without asking each time — is off until you turn
+  it on, per image source, and off again whenever you say.
+- **Nothing a person wrote is overwritten.** Alt text your team already wrote
+  is graded, not replaced; a weak one gets a suggested rewrite for you to
+  decide on.
+- **30-day undo.** Every change is stored with its before and after, and any of
+  them can be restored for 30 days.
+
+## How your data is protected
+
+- **Hosting.** The app's database and job queue run on servers in Germany
+  (Hetzner).
+- **Encrypted access token.** The token that lets the app act on your store is
+  envelope-encrypted at rest. The app uses offline tokens only.
+- **Isolation by construction.** Every read and write goes through a
+  store-scoped unit of work; there is no code path that queries across stores.
+  Tests check that one store's data cannot be reached from another's.
+- **Verified webhooks.** Every request that claims to come from Shopify is
+  checked against its signature, and a forged one is refused.
+- **No screen recording.** The app records which of its own screens you
+  reached, from our servers, as counts. No recording script is ever sent to
+  your browser.
+
+## AI processing
+
+To write or grade a description, the app sends the image — as its Shopify CDN
+address — and text from your own store (the product title and, where set, its
+description excerpt, vendor and type; for blog images, the article's title and
+summary; for grading, the existing alt text) straight to Anthropic's API, where
+the Claude model returns the text. There is no reseller or proxy in between.
+Under Anthropic's commercial terms, that content is not used to train their
+models. No customer data is involved: neither request has anywhere a customer
+or order could be attached.
+
+## Who else is involved
+
+The complete list of services the app sends anything to:
+
+| Service                       | What it receives                                                    |
+| ----------------------------- | ------------------------------------------------------------------- |
+| **Anthropic** (anthropic.com) | Image addresses and store text, to write and grade descriptions     |
+| **PostHog** (posthog.com)     | Which of the app's own screens were reached, as counts              |
+| **Resend** (resend.com)       | Your digest email address and the digest, if you turn the digest on |
+
+Everything else the app talks to is Shopify itself or our own infrastructure.
+
+## Retention and erasure
+
+- **Change history** is kept for 30 days, to power the undo, then pruned.
+- **Your store's data** — scan results, descriptions, settings, sessions — is
+  kept while the app is installed. Sessions are deleted the moment you
+  uninstall.
+- **Erasure.** About 48 hours after you uninstall, Shopify sends the app a
+  mandatory erasure request, and the app erases your store's scan results,
+  descriptions, settings and usage allowance, and sweeps your sessions again.
+  The erasure is logged, and a repeated request removes nothing more.
+- **Customer requests.** Shopify's two customer privacy requests — export and
+  erase — are answered truthfully: the app holds no customer data, so there is
+  nothing to export and nothing to delete. Each request is logged.
+
+**What erasure does not reach yet.** A few records outlive it, and we would
+rather say so than let "erased" mean less than it sounds:
+
+- your shop's domain in the app's install registry, which is how a repeated
+  erasure request still finds your store;
+- the app's usage statistics, which are counts and age out after 12 months;
+- the app's internal event log, which records what happened in your store's
+  account — including, on description events, the alt text itself — and does
+  not yet have a time limit;
+- billing records, kept as long as tax and accounting law requires;
+- a copy of a background job that failed permanently, which can include a
+  product's title and description.
+
+None of these contain customer data. Closing the gaps is on our list, and this
+page will change when they are closed.
+
+## What we don't claim
+
+We don't hold a SOC 2 report or an ISO 27001 certificate; a company our
+size would be paying for the badge rather than the practice. What we have instead is
+above, written from the app's own code and tests rather than from a brochure. If your
+business needs a security questionnaire or a data processing agreement, ask —
+we will fill it in honestly.
+
+## Reporting a problem
+
+If you think you have found a security issue in {APP_NAME} or this website,
+email <a href={`mailto:${SUPPORT_EMAIL}?subject=Security`}>{SUPPORT_EMAIL}</a> with
+"Security" in the subject. It reaches the person who built the app. Please give
+us a chance to fix it before telling anyone else, and we will tell you what we
+found and what we changed.

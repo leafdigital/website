@@ -7,6 +7,8 @@ import { Container } from "./container";
 const links = [
   { href: "/about", key: "about" },
   { href: "/privacy", key: "privacy" },
+  { href: "/terms", key: "terms" },
+  { href: "/security", key: "security" },
   { href: "/support", key: "support" },
 ] as const;
 
@@ -28,9 +30,10 @@ export function Footer() {
             siteName: SITE_NAME,
           })}
         </p>
-        <div className="flex items-center gap-6">
+        <div className="flex flex-col items-center gap-6 sm:flex-row">
           <nav aria-label={t("footer.label")}>
-            <ul className="flex items-center gap-6">
+            {/* Six links now: wraps rather than pushing the row past a phone. */}
+            <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
               {links.map((link) => (
                 <li key={link.href}>
                   <Link
