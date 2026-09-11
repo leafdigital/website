@@ -49,11 +49,16 @@ export async function generateMetadata({
 const priceRows = ["traffic", "agentic", "accessibility"] as const;
 const steps = ["scan", "write", "speak"] as const;
 
-/** The content layer, in reading order: learn, then compare. */
+/**
+ * The content layer, in reading order: learn, then compare. The two hubs
+ * rather than the individual comparisons — there are seven of those now, and
+ * each hub links every one, so a reader lands on the page that fits their
+ * question instead of a list of competitor names.
+ */
 const comparisons = [
   { href: "/guides/shopify-alt-text", key: "guide" },
-  { href: "/image-voice/vs-alttext-ai", key: "altTextAi" },
-  { href: "/image-voice/vs-altking", key: "altKing" },
+  { href: "/guides/best-shopify-alt-text-apps", key: "roundup" },
+  { href: "/image-voice/alternatives", key: "alternatives" },
 ] as const;
 /**
  * The order is the reading order, and it is an argument: safety before

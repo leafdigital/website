@@ -49,6 +49,15 @@ export const indexedRoutes = [
 export const contentRoutes = [
   "/image-voice/vs-alttext-ai",
   "/image-voice/vs-altking",
+  "/image-voice/vs-pixc",
+  "/image-voice/vs-alterator",
+  "/image-voice/vs-seo-hero",
+  "/image-voice/vs-storeseo",
+  "/image-voice/vs-alttextgenerator",
+  /* The two hubs. Same English-only reasoning: every line is a claim about
+   * somebody else's listing. */
+  "/image-voice/alternatives",
+  "/guides/best-shopify-alt-text-apps",
   /* English until counsel has reviewed it — see the note on the route. */
   "/terms",
   "/security",
@@ -94,9 +103,16 @@ export const lastModified: Record<AppRoute, string> = {
   "/about": "2026-09-11",
   "/privacy": "2026-09-02",
   "/support": "2026-09-04",
-  "/guides/shopify-alt-text": "2026-09-04",
-  "/image-voice/vs-alttext-ai": "2026-09-04",
-  "/image-voice/vs-altking": "2026-09-04",
+  "/guides/shopify-alt-text": "2026-09-11",
+  "/image-voice/vs-alttext-ai": "2026-09-11",
+  "/image-voice/vs-altking": "2026-09-11",
+  "/image-voice/vs-pixc": "2026-09-11",
+  "/image-voice/vs-alterator": "2026-09-11",
+  "/image-voice/vs-seo-hero": "2026-09-11",
+  "/image-voice/vs-storeseo": "2026-09-11",
+  "/image-voice/vs-alttextgenerator": "2026-09-11",
+  "/image-voice/alternatives": "2026-09-11",
+  "/guides/best-shopify-alt-text-apps": "2026-09-11",
   "/terms": "2026-09-11",
   "/security": "2026-09-11",
 };
