@@ -68,6 +68,8 @@ to your storefront.
 - **No screen recording.** The app records which of its own screens you
   reached, from our servers, as counts. No recording script is ever sent to
   your browser.
+- **If something goes wrong.** If a security incident affects your store's
+  data, we'll tell you promptly and plainly.
 
 ## AI processing
 
@@ -76,19 +78,18 @@ address — and text from your own store (the product title and, where set, its
 description excerpt, vendor and type; for blog images, the article's title and
 summary; for grading, the existing alt text) straight to Anthropic's API, where
 the Claude model returns the text. There is no reseller or proxy in between.
-Under Anthropic's commercial terms, that content is not used to train their
-models. No customer data is involved: neither request has anywhere a customer
-or order could be attached.
+Anthropic processes it under its commercial terms. No customer data is
+involved: neither request has anywhere a customer or order could be attached.
 
 ## Who else is involved
 
 The complete list of services the app sends anything to:
 
-| Service                       | What it receives                                                    |
-| ----------------------------- | ------------------------------------------------------------------- |
-| **Anthropic** (anthropic.com) | Image addresses and store text, to write and grade descriptions     |
-| **PostHog** (posthog.com)     | Which of the app's own screens were reached, as counts              |
-| **Resend** (resend.com)       | Your digest email address and the digest, if you turn the digest on |
+| Service                                               | What it receives                                                                   |
+| ----------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| **Anthropic** (anthropic.com)                         | Image addresses and store text, to write and grade descriptions                    |
+| **PostHog** (posthog.com)                             | Which of the app's own screens were reached, tied to your store — never a customer |
+| An email delivery provider (named here once selected) | Your digest email address and the digest, if you turn the digest on                |
 
 Everything else the app talks to is Shopify itself or our own infrastructure.
 
@@ -102,6 +103,8 @@ Everything else the app talks to is Shopify itself or our own infrastructure.
   mandatory erasure request, and the app erases your store's scan results,
   descriptions, settings and usage allowance, and sweeps your sessions again.
   The erasure is logged, and a repeated request removes nothing more.
+- **Backups.** Erased data can persist in our server backups for up to 7 days
+  before those age out.
 - **Customer requests.** Shopify's two customer privacy requests — export and
   erase — are answered truthfully: the app holds no customer data, so there is
   nothing to export and nothing to delete. Each request is logged.
@@ -136,4 +139,5 @@ If you think you have found a security issue in {APP_NAME} or this website,
 email <a href={`mailto:${SUPPORT_EMAIL}?subject=Security`}>{SUPPORT_EMAIL}</a> with
 "Security" in the subject. It reaches the person who built the app. Please give
 us a chance to fix it before telling anyone else, and we will tell you what we
-found and what we changed.
+found and what we changed. If you report in good faith and give us time to fix
+it, we won't threaten you or take legal action for the research.
