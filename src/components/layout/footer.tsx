@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { LocaleSwitcher } from "@/components/layout/locale-switcher";
-import { SITE_NAME, SUPPORT_EMAIL } from "@/lib/constants";
+import { SITE_NAME } from "@/lib/constants";
 import { Container } from "./container";
 
 const links = [
@@ -44,15 +44,6 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
-              <li>
-                {/* External scheme — plain anchor, nothing to localize. */}
-                <a
-                  href={`mailto:${SUPPORT_EMAIL}`}
-                  className="transition-colors duration-150 hover:text-white"
-                >
-                  {t("footer.contact")}
-                </a>
-              </li>
             </ul>
           </nav>
           <LocaleSwitcher tone="dark" />
