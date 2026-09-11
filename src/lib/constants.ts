@@ -69,7 +69,8 @@ export const GA_ENABLED = SITE_INDEXABLE;
  * buyer who reads the privacy policy should find the website keeps the same
  * promise. Replay is disabled in the client config, not just in the project.
  */
-export const POSTHOG_KEY = "";
+export const POSTHOG_KEY: string =
+  "phc_o6viozdbPiPtSN4kW35DZi3bhayqcsSZSLFUpkoYghdn";
 /** The project's region host — `https://us.i.posthog.com` or `https://eu.i.posthog.com`. */
 export const POSTHOG_HOST = "https://us.i.posthog.com";
 export const POSTHOG_ENABLED = GA_ENABLED && POSTHOG_KEY !== "";
