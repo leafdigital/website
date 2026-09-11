@@ -35,6 +35,25 @@
     "fit": "Se os nossos planos não servem para a sua loja, a gente fala e oferece a lista de espera em vez de uma venda.",
     "replies": "A resposta a qualquer email chega à pessoa que construiu o app — não a um bot."
   },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "who": {
+      "q": "Quem está por trás da Leaf Digital?",
+      "a": "A Leaf é um time pequeno que passou anos construindo e consertando lojas Shopify para marcas antes de criar apps. Cada app nasce de um problema que vimos custar dinheiro de verdade a lojas de verdade. A resposta a qualquer email chega à pessoa que construiu o app."
+    },
+    "safe": {
+      "q": "Os dados da minha loja estão seguros com os apps da Leaf?",
+      "a": "Cada app pede as permissões do Shopify mais restritas com que consegue funcionar, não muda nada sem a sua aprovação, e toda mudança pode ser desfeita por 30 dias. Você vê cada ação no histórico de atividade do app."
+    },
+    "uninstall": {
+      "q": "O que acontece se eu desinstalar?",
+      "a": "Sua loja fica com tudo o que o app escreveu — nada é apagado nem fica refém. Você pode sair quando quiser; não tem contrato anual."
+    },
+    "free": {
+      "q": "Os apps da Leaf têm plano gratuito?",
+      "a": "Sim. Todo app da Leaf começa com uma análise gratuita que mostra o que ela encontrou na sua própria loja antes de você pagar qualquer coisa, e os preços são sempre publicados — sem ligação de vendas, sem orçamento sob medida."
+    }
+  },
   "cta": {
     "title": "A melhor apresentação é a sua própria loja.",
     "sub": "Rode a análise gratuita, veja o que ela encontra e julgue você mesmo.",

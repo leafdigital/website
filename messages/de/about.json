@@ -35,6 +35,25 @@
     "fit": "Wenn unsere Pläne nicht zu deinem Shop passen, sagen wir das und bieten dir die Warteliste statt eines Verkaufs an.",
     "replies": "Antworten auf jede E-Mail landen bei der Person, die die App gebaut hat — nicht bei einem Bot."
   },
+  "faq": {
+    "title": "Häufige Fragen",
+    "who": {
+      "q": "Wer steckt hinter Leaf Digital?",
+      "a": "Leaf ist ein kleines Team, das jahrelang Shopify-Shops für Marken gebaut und repariert hat, bevor es Apps gebaut hat. Jede App kommt aus einem Problem, bei dem wir zugesehen haben, wie es echte Shops echtes Geld kostet. Antworten auf jede E-Mail landen bei der Person, die die App gebaut hat."
+    },
+    "safe": {
+      "q": "Sind meine Shop-Daten bei Leaf-Apps sicher?",
+      "a": "Jede App fordert die engsten Shopify-Berechtigungen an, mit denen sie laufen kann, ändert nichts ohne deine Freigabe, und jede Änderung lässt sich 30 Tage lang rückgängig machen. Jede Aktion siehst du im Aktivitätsprotokoll der App."
+    },
+    "uninstall": {
+      "q": "Was passiert, wenn ich deinstalliere?",
+      "a": "Dein Shop behält alles, was die App geschrieben hat — nichts wird gelöscht oder als Geisel genommen. Du kannst jederzeit gehen; es gibt keine Jahresverträge."
+    },
+    "free": {
+      "q": "Haben Leaf-Apps kostenlose Pläne?",
+      "a": "Ja. Jede Leaf-App beginnt mit einem kostenlosen Scan, der dir zeigt, was er in deinem eigenen Shop gefunden hat, bevor du irgendetwas zahlst — und die Preise sind immer veröffentlicht. Keine Verkaufsgespräche, keine individuellen Angebote."
+    }
+  },
   "cta": {
     "title": "Die beste Vorstellung ist dein eigener Shop.",
     "sub": "Starte den kostenlosen Scan, sieh dir an, was er findet, und urteile selbst.",

@@ -344,7 +344,7 @@ export default function ImageVoicePage() {
         >
           {t.rich("pricing.footer", {
             link: (chunks) => (
-              <Link href="/" className="text-brand-800 font-semibold">
+              <Link href="/#apps" className="text-brand-800 font-semibold">
                 {chunks}
               </Link>
             ),

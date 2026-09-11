@@ -84,7 +84,7 @@ export type AppRoute =
  */
 export const lastModified: Record<AppRoute, string> = {
   "/": "2026-09-06",
-  "/image-voice": "2026-09-04",
+  "/image-voice": "2026-09-11",
   "/reorder-loop": "2026-09-06",
   "/count-check": "2026-09-06",
   "/runway": "2026-09-06",

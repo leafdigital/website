@@ -6,45 +6,41 @@ const nextConfig: NextConfig = {
   /** Tier-3 documents (privacy, terms) are authored per locale as MDX. */
   pageExtensions: ["ts", "tsx", "md", "mdx"],
   /**
-   * The v3 product line retired two routes, and both had been advertised —
-   * in the sitemap, in llms.txt, and from every page's cross-links. A 301
-   * carries whatever equity they earned to the page that replaced them
-   * instead of spending it on a 404.
+   * Routes the product line retired. Each one had been advertised — in the
+   * sitemap, in llms.txt, from every page's cross-links — so each 301s to
+   * the page that replaced it instead of spending what it earned on a 404.
    *
    * `/reorder-engine` and `/lost-sales` have real successors: same app, new
    * name. `/hidden-margin` has none — the app was killed, not renamed — so it
-   * lands on the suite index rather than being passed off as a survivor.
+   * goes to the homepage rather than being passed off as a survivor.
    *
-   * Two rules per route, not one with an optional segment: an unmatched
-   * optional param leaves a `//` in the destination. The prefixed rule keeps
-   * a German visitor on `/de/…` rather than dropping them into English; the
-   * bare rule covers the unprefixed default locale.
+   * 301, not Next's default 308 for `permanent`. Both are permanent to
+   * Google; 301 is the one every crawler, audit tool and old HTTP client
+   * reads the same way, and it is what the SEO audit checks for.
+   *
+   * Three rules per route, all one hop:
+   *   bare    — the unprefixed default locale
+   *   /en/…   — without this the proxy strips `/en` first and the visitor
+   *             takes two redirects to arrive
+   *   /xx/…   — every other locale keeps its segment. Not an optional
+   *             segment on one rule: an unmatched optional param leaves a
+   *             `//` in the destination.
    */
   async redirects() {
-    return [
-      {
-        source: "/:locale(de|es|fr|it|pt-br)/reorder-engine",
-        destination: "/:locale/reorder-loop",
-        permanent: true,
-      },
-      {
-        source: "/reorder-engine",
-        destination: "/reorder-loop",
-        permanent: true,
-      },
-      {
-        source: "/:locale(de|es|fr|it|pt-br)/hidden-margin",
-        destination: "/:locale#apps",
-        permanent: true,
-      },
-      { source: "/hidden-margin", destination: "/#apps", permanent: true },
-      {
-        source: "/:locale(de|es|fr|it|pt-br)/lost-sales",
-        destination: "/:locale/runway",
-        permanent: true,
-      },
-      { source: "/lost-sales", destination: "/runway", permanent: true },
+    const retired = [
+      { from: "/reorder-engine", to: "/reorder-loop" },
+      { from: "/lost-sales", to: "/runway" },
+      { from: "/hidden-margin", to: "/" },
     ];
+    return retired.flatMap(({ from, to }) => [
+      { source: from, destination: to, statusCode: 301 as const },
+      { source: `/en${from}`, destination: to, statusCode: 301 as const },
+      {
+        source: `/:locale(de|es|fr|it|pt-br)${from}`,
+        destination: to === "/" ? "/:locale" : `/:locale${to}`,
+        statusCode: 301 as const,
+      },
+    ]);
   },
 };
 

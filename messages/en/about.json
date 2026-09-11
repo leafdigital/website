@@ -35,6 +35,25 @@
     "fit": "If our plans don’t fit your store, we say so and offer a waitlist instead of a sale.",
     "replies": "Replies to any email reach the person who built the app — not a bot."
   },
+  "faq": {
+    "title": "Common questions",
+    "who": {
+      "q": "Who is behind Leaf Digital?",
+      "a": "Leaf is a small team that spent years building and fixing Shopify stores for brands before building apps. Every app comes from a problem we watched cost real stores real money. Replies to any email reach the person who built the app."
+    },
+    "safe": {
+      "q": "Is my store data safe with Leaf apps?",
+      "a": "Each app requests the narrowest Shopify permissions it can run on, changes nothing without your approval, and every change can be undone for 30 days. You can see every action in the app’s activity trail."
+    },
+    "uninstall": {
+      "q": "What happens if I uninstall?",
+      "a": "Your store keeps everything the app wrote — nothing is deleted or held hostage. You can leave any time; there are no annual contracts."
+    },
+    "free": {
+      "q": "Do Leaf apps have free plans?",
+      "a": "Yes. Every Leaf app starts with a free scan that shows you what it found on your own store before you pay anything, and prices are always published — no sales calls, no custom quotes."
+    }
+  },
   "cta": {
     "title": "The best introduction is your own store.",
     "sub": "Run the free scan, see what it finds, and judge for yourself.",

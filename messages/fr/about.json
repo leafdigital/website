@@ -35,6 +35,25 @@
     "fit": "Si nos formules ne conviennent pas à votre boutique, nous vous le disons et vous proposons la liste d’attente plutôt qu’une vente.",
     "replies": "Les réponses à chaque e-mail arrivent à la personne qui a construit l’app — pas à un bot."
   },
+  "faq": {
+    "title": "Questions fréquentes",
+    "who": {
+      "q": "Qui est derrière Leaf Digital ?",
+      "a": "Leaf est une petite équipe qui a passé des années à construire et réparer des boutiques Shopify pour des marques avant de créer des apps. Chaque app vient d’un problème que nous avons vu coûter de l’argent réel à de vraies boutiques. Les réponses à chaque e-mail arrivent à la personne qui a construit l’app."
+    },
+    "safe": {
+      "q": "Les données de ma boutique sont-elles en sécurité avec les apps Leaf ?",
+      "a": "Chaque app demande les autorisations Shopify les plus restreintes avec lesquelles elle peut fonctionner, ne change rien sans votre accord, et chaque changement peut être annulé pendant 30 jours. Vous voyez chaque action dans le journal d’activité de l’app."
+    },
+    "uninstall": {
+      "q": "Que se passe-t-il si je désinstalle ?",
+      "a": "Votre boutique garde tout ce que l’app a écrit — rien n’est supprimé ni pris en otage. Vous pouvez partir quand vous voulez ; il n’y a pas d’engagement annuel."
+    },
+    "free": {
+      "q": "Les apps Leaf ont-elles des formules gratuites ?",
+      "a": "Oui. Chaque app Leaf commence par une analyse gratuite qui vous montre ce qu’elle a trouvé sur votre propre boutique avant que vous ne payiez quoi que ce soit, et les prix sont toujours publiés — pas d’appels commerciaux, pas de devis sur mesure."
+    }
+  },
   "cta": {
     "title": "La meilleure présentation, c’est votre propre boutique.",
     "sub": "Lancez l’analyse gratuite, voyez ce qu’elle trouve, et jugez par vous-même.",

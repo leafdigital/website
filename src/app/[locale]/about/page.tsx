@@ -3,6 +3,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { HeroSplit } from "@/components/hero-split";
+import { Faq } from "@/components/faq";
 import { CtaBand } from "@/components/layout/cta-band";
 import { Section, SectionHeading } from "@/components/layout/section";
 import { StatementRows } from "@/components/layout/statement-rows";
@@ -11,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import { SITE_NAME } from "@/lib/constants";
 import { absoluteUrl, localeMetadata } from "@/lib/metadata";
-import { aboutPage, breadcrumbs, organization } from "@/lib/schema";
+import { aboutPage, breadcrumbs, faqPage, organization } from "@/lib/schema";
 
 export async function generateMetadata({
   params,
@@ -31,6 +32,12 @@ export async function generateMetadata({
 
 /** The page is a schema; `messages/{locale}/about.json` fills it. */
 const beliefs = ["one", "two", "three"] as const;
+/**
+ * Capped at four, on purpose. A long FAQ on an About page reads as nervous —
+ * the page is a statement, and a wall of questions under it undercuts that.
+ * The deep FAQs belong on the app pages, where the objections are specific.
+ */
+const faqKeys = ["who", "safe", "uninstall", "free"] as const;
 const commitments = [
   "prices",
   "approval",
@@ -87,6 +94,10 @@ function Commitments() {
 export default function AboutPage() {
   const t = useTranslations("about");
   const locale = useLocale();
+  const faq = faqKeys.map((key) => ({
+    q: t(`faq.${key}.q`),
+    a: t(`faq.${key}.a`),
+  }));
   const lead = (chunks: React.ReactNode) => (
     <strong className="text-foreground font-semibold">{chunks}</strong>
   );
@@ -116,6 +127,10 @@ export default function AboutPage() {
             { name: SITE_NAME, route: "/" },
             { name: t("breadcrumb"), route: "/about" },
           ]),
+          /* No rich result for a company FAQ since 2023 — it is here because
+           * answer engines still read it, and "who is behind this" is exactly
+           * what they get asked. */
+          faqPage(absoluteUrl("/about", locale), faq),
         ]}
       />
 
@@ -182,7 +197,15 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      {/* 5 — The one thing to do. */}
+      {/* 5 — The four questions asked before anyone installs. */}
+      <Section divided>
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,4fr)_minmax(0,7fr)] lg:gap-16">
+          <SectionHeading title={t("faq.title")} />
+          <Faq items={faq} />
+        </div>
+      </Section>
+
+      {/* 6 — The one thing to do. */}
       <CtaBand
         title={t("cta.title")}
         sub={t("cta.sub")}
