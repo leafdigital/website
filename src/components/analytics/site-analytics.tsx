@@ -133,10 +133,9 @@ function useBehaviourEvents() {
       const details = event.target;
       if (!(details instanceof HTMLDetailsElement) || !details.open) return;
       const summary = details.querySelector("summary");
-      trackEvent("faq_open", {
-        question: summary ? textOf(summary) : "",
-        page: window.location.pathname,
-      });
+      /* No page param: GA4 and PostHog both attach the page URL to every
+       * event on their own. */
+      trackEvent("faq_open", { question: summary ? textOf(summary) : "" });
     };
 
     document.addEventListener("click", onClick, { capture: true });
@@ -163,7 +162,9 @@ function useBehaviourEvents() {
           reached.add(milestone);
           trackEvent(
             "scroll_depth",
-            { percent: milestone, page: pathname },
+            /* GA4's own parameter name, so it lands in the built-in
+             * "Percent scrolled" dimension with no custom definition. */
+            { percent_scrolled: milestone },
             /* PostHog records scroll depth on page leave. */
             { posthog: false },
           );
