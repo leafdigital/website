@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { trackCta } from "@/lib/analytics";
+import { trackCta, trackEvent } from "@/lib/analytics";
 
 type Status = "idle" | "sending" | "done" | "error";
 
@@ -29,12 +29,15 @@ export function WaitlistForm({ source }: { source: string }) {
         body: JSON.stringify({ email, source }),
       });
       if (!res.ok) {
+        trackEvent("waitlist_error", { source, status: res.status });
         setStatus("error");
         return;
       }
       trackCta("cta_waitlist_join", { source });
+      trackEvent("generate_lead", { source });
       setStatus("done");
     } catch {
+      trackEvent("waitlist_error", { source, status: "network" });
       setStatus("error");
     }
   }

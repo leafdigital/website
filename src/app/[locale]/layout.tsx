@@ -5,6 +5,8 @@ import { NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { Analytics } from "@vercel/analytics/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { ConsentBanner } from "@/components/analytics/consent-banner";
+import { SiteAnalytics } from "@/components/analytics/site-analytics";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { LocaleSuggestion } from "@/components/layout/locale-suggestion";
@@ -17,6 +19,7 @@ import {
   SITE_NAME,
   SITE_URL,
 } from "@/lib/constants";
+import { CONSENT_DEFAULTS_SCRIPT } from "@/lib/consent";
 import { REVEAL_SCRIPT } from "@/lib/reveal-script";
 import "../globals.css";
 
@@ -102,6 +105,14 @@ export default async function LocaleLayout({
          * the reveal state is decided and there is no flash of shown-then-
          * hidden content. See src/lib/reveal-script.ts. */}
         <script dangerouslySetInnerHTML={{ __html: REVEAL_SCRIPT }} />
+        {/* Google's consent defaults, before gtag.js can read anything: GA
+         * loads after hydration and takes whatever defaults it finds first.
+         * See src/lib/consent.ts. */}
+        {GA_ENABLED ? (
+          <script
+            dangerouslySetInnerHTML={{ __html: CONSENT_DEFAULTS_SCRIPT }}
+          />
+        ) : null}
         <NextIntlClientProvider>
           <a
             href="#main"
@@ -115,6 +126,8 @@ export default async function LocaleLayout({
             {children}
           </main>
           <Footer />
+          <ConsentBanner />
+          <SiteAnalytics />
         </NextIntlClientProvider>
         <Analytics />
         {/* Loads after hydration, so it never competes with first paint.

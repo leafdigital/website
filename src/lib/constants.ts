@@ -56,6 +56,25 @@ export const GA_MEASUREMENT_ID = "G-7RHWEPW611";
 export const GA_ENABLED = SITE_INDEXABLE;
 
 /**
+ * PostHog, for behaviour: every click (autocapture), the path through the
+ * site, funnels and heatmaps. GA4 stays for acquisition — which campaign sent
+ * the visitor — and PostHog answers what they did once they arrived.
+ *
+ * Like the GA ID, the project key is public by design (it ships in the page),
+ * so it lives here rather than in an env var. Empty means off. It rides
+ * `GA_ENABLED` for the same reason GA does: previews, local builds and every
+ * Lighthouse run must never post synthetic sessions to the real project.
+ *
+ * No session replay on this site, deliberately — the app promises none, and a
+ * buyer who reads the privacy policy should find the website keeps the same
+ * promise. Replay is disabled in the client config, not just in the project.
+ */
+export const POSTHOG_KEY = "";
+/** The project's region host — `https://us.i.posthog.com` or `https://eu.i.posthog.com`. */
+export const POSTHOG_HOST = "https://us.i.posthog.com";
+export const POSTHOG_ENABLED = GA_ENABLED && POSTHOG_KEY !== "";
+
+/**
  * The App Store listing. BLOCKER: guessed from the app name — the real
  * handle is whatever Shopify assigns on approval. Every "Install on the
  * Shopify App Store" button on /image-voice points here.

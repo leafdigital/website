@@ -2,7 +2,7 @@ import { APP_NAME, SITE_NAME, SUPPORT_EMAIL } from "@/lib/constants";
 
 export const meta = {
   title: "Informativa sulla privacy",
-  updated: "2026-09-03",
+  updated: "2026-09-11",
 };
 
 ## La versione semplice
@@ -31,13 +31,18 @@ a <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>.
 
 ## Questo sito
 
-- **Analytics.** Due strumenti, e non sono la stessa cosa. Vercel Analytics è
-  senza cookie e raccoglie visualizzazioni di pagina aggregate ed eventi di
-  interazione anonimizzati. Google Analytics 4 gira accanto a esso sul sito in
-  produzione e i cookie li imposta eccome; è così che capiamo quale campagna ha
-  portato qualcuno qui. Nessuno dei due viene usato per pubblicità cross-site, e
-  non facciamo annunci né vendiamo audience. Le build di preview e locali non
-  caricano Google Analytics per niente.
+- **Analytics.** Tre strumenti, ognuno con un compito diverso. Vercel Analytics
+  è senza cookie e conta visualizzazioni di pagina e clic sui pulsanti. Google
+  Analytics 4 ci dice quale campagna ha portato qualcuno qui. PostHog
+  (posthog.com) mostra come le persone si muovono sul sito — quali pagine, link
+  e domande aprono — e dove cliccano, come mappe di calore. Non c'è
+  registrazione delle sessioni né dello schermo. Nell'UE/SEE, nel Regno Unito,
+  in Svizzera e in Brasile, Google Analytics e PostHog funzionano senza cookie
+  finché non li consenti nel banner; altrove impostano cookie di analisi per
+  impostazione predefinita, e «Scelte sulla privacy» nel footer li disattiva
+  ovunque tu sia. Se rifiuti, continuiamo a contare le visite senza cookie.
+  Niente di tutto questo serve alla pubblicità: non facciamo annunci né
+  vendiamo audience. Le build di preview e locali non caricano nessuno dei due.
 - **Moduli ed e-mail.** Se ci scrivi o entri in una lista d'attesa, conserviamo
   il tuo indirizzo e il tuo messaggio per risponderti. Non li vendiamo, non li
   condividiamo e non ti aggiungiamo a liste di marketing che non hai chiesto.

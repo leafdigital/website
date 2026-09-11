@@ -2,7 +2,7 @@ import { APP_NAME, SITE_NAME, SUPPORT_EMAIL } from "@/lib/constants";
 
 export const meta = {
   title: "Politique de confidentialité",
-  updated: "2026-09-03",
+  updated: "2026-09-11",
 };
 
 ## La version simple
@@ -32,14 +32,20 @@ conditions de la plateforme Shopify. Écrivez-nous
 
 ## Ce site
 
-- **Analytics.** Deux outils, et ce ne sont pas les mêmes. Vercel Analytics est
-  sans cookie et collecte des pages vues agrégées et des événements
-  d'interaction anonymisés. Google Analytics 4 tourne à côté sur le site en
-  production et pose bien des cookies ; c'est ainsi que nous savons quelle
-  campagne a amené quelqu'un ici. Ni l'un ni l'autre n'est utilisé pour de la
-  publicité inter-sites, et nous ne diffusons pas d'annonces et ne vendons pas
-  d'audiences. Les builds de preview et locaux ne chargent pas du tout Google
-  Analytics.
+- **Analytics.** Trois outils, chacun avec son rôle. Vercel Analytics est sans
+  cookie et compte les pages vues et les clics sur les boutons. Google
+  Analytics 4 nous indique quelle campagne a amené quelqu'un ici. PostHog
+  (posthog.com) montre comment les gens se déplacent sur le site — quelles
+  pages, quels liens et quelles questions ils ouvrent — et où ils cliquent,
+  sous forme de cartes de chaleur. Il n'y a ni enregistrement de session ni
+  enregistrement d'écran. Dans l'UE/EEE, au Royaume-Uni, en Suisse et au
+  Brésil, Google Analytics et PostHog fonctionnent sans cookie tant que vous ne
+  les avez pas autorisés dans le bandeau ; ailleurs, ils posent des cookies de
+  mesure par défaut, et « Choix de confidentialité » en pied de page les
+  désactive où que vous soyez. Si vous refusez, nous continuons à compter les
+  visites sans cookie. Rien de tout cela ne sert à la publicité : nous ne
+  diffusons pas d'annonces et ne vendons pas d'audiences. Les builds de preview
+  et locaux ne chargent ni l'un ni l'autre.
 - **Formulaires et e-mail.** Si vous nous écrivez ou rejoignez une liste
   d'attente, nous conservons votre adresse et votre message pour vous répondre.
   Nous ne les vendons pas, ne les partageons pas et ne vous ajoutons à aucune

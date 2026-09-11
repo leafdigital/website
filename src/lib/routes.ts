@@ -101,7 +101,7 @@ export const lastModified: Record<AppRoute, string> = {
   "/count-check": "2026-09-06",
   "/runway": "2026-09-06",
   "/about": "2026-09-11",
-  "/privacy": "2026-09-02",
+  "/privacy": "2026-09-11",
   "/support": "2026-09-04",
   "/guides/shopify-alt-text": "2026-09-11",
   "/image-voice/vs-alttext-ai": "2026-09-11",

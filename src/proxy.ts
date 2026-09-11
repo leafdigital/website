@@ -1,6 +1,7 @@
 import createMiddleware from "next-intl/middleware";
 import type { NextRequest } from "next/server";
 import { localeForCountry } from "./i18n/geo";
+import { GATED_COUNTRIES, REGION_COOKIE } from "./lib/consent";
 import { LOCALE_CHOICE_COOKIE, LOCALE_HINT_COOKIE } from "./i18n/locale-choice";
 import { routing } from "./i18n/routing";
 
@@ -60,10 +61,9 @@ export default function proxy(request: NextRequest) {
    * Suppressed once the visitor has made an explicit choice — someone who
    * picked a language should never be nagged about their IP.
    */
+  const country = request.headers.get("x-vercel-ip-country");
   const active = localeFromPath(pathname);
-  const suggested = localeForCountry(
-    request.headers.get("x-vercel-ip-country"),
-  );
+  const suggested = localeForCountry(country);
   /* NEXT_LOCALE is written on every request, so it proves nothing about intent. */
   const chose = request.cookies.has(LOCALE_CHOICE_COOKIE);
 
@@ -75,6 +75,22 @@ export default function proxy(request: NextRequest) {
     });
   } else if (request.cookies.has(LOCALE_HINT_COOKIE)) {
     response.cookies.delete(LOCALE_HINT_COOKIE);
+  }
+
+  /**
+   * Which consent rule applies — published the same way and for the same
+   * reason as the locale hint: the page is static, so the country has to
+   * travel as a cookie the client can read. It says which rule applies and
+   * nothing about who the visitor is (src/lib/consent.ts).
+   */
+  if (country && GATED_COUNTRIES.has(country)) {
+    response.cookies.set(REGION_COOKIE, "gated", {
+      maxAge: 60 * 60 * 24,
+      sameSite: "lax",
+      path: "/",
+    });
+  } else if (request.cookies.has(REGION_COOKIE)) {
+    response.cookies.delete(REGION_COOKIE);
   }
 
   return response;

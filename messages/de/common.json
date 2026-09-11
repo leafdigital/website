@@ -28,6 +28,13 @@
     "joined": "Du stehst auf der Liste. Wir schreiben nur, wenn es etwas zum Ausprobieren gibt.",
     "error": "Bei uns ist etwas kaputtgegangen — schreib uns stattdessen eine E-Mail?"
   },
+  "consent": {
+    "label": "Datenschutz-Einstellungen",
+    "body": "Wir zählen Besuche ohne Cookies. Mit deinem OK nutzen wir zusätzlich Analyse-Cookies, um zu sehen, welche Seiten und Buttons wirklich helfen — keine Werbung, kein Verkauf, keine Bildschirmaufzeichnungen.",
+    "accept": "Analyse-Cookies erlauben",
+    "decline": "Nein, danke",
+    "policy": "Datenschutzerklärung"
+  },
   "skipToContent": "Zum Inhalt springen",
   "localeSwitcher": {
     "label": "Sprache"

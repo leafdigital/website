@@ -28,6 +28,13 @@
     "joined": "Vous êtes sur la liste. On n’écrit que quand il y a quelque chose à essayer.",
     "error": "Quelque chose a cassé de notre côté — écrivez-nous plutôt ?"
   },
+  "consent": {
+    "label": "Choix de confidentialité",
+    "body": "Nous comptons les visites sans cookies. Avec votre accord, nous utilisons aussi des cookies de mesure d’audience pour voir quelles pages et quels boutons aident vraiment — pas de publicité, pas de revente, pas d’enregistrement d’écran.",
+    "accept": "Autoriser les cookies de mesure",
+    "decline": "Non merci",
+    "policy": "Politique de confidentialité"
+  },
   "skipToContent": "Aller au contenu",
   "localeSwitcher": {
     "label": "Langue"

@@ -28,6 +28,13 @@
     "joined": "Ya estás en la lista. Solo escribimos cuando hay algo que probar.",
     "error": "Algo se rompió por nuestro lado — ¿nos escribes un email?"
   },
+  "consent": {
+    "label": "Opciones de privacidad",
+    "body": "Contamos las visitas sin cookies. Si nos das tu OK, también usamos cookies de analítica para ver qué páginas y botones ayudan de verdad — sin anuncios, sin vender datos, sin grabaciones de pantalla.",
+    "accept": "Permitir cookies de analítica",
+    "decline": "No, gracias",
+    "policy": "Política de privacidad"
+  },
   "skipToContent": "Saltar al contenido",
   "localeSwitcher": {
     "label": "Idioma"

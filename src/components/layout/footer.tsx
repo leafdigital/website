@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { PrivacyChoicesButton } from "@/components/analytics/consent-banner";
 import { LocaleSwitcher } from "@/components/layout/locale-switcher";
 import { SITE_NAME } from "@/lib/constants";
 import { Container } from "./container";
@@ -32,7 +33,7 @@ export function Footer() {
         </p>
         <div className="flex flex-col items-center gap-6 sm:flex-row">
           <nav aria-label={t("footer.label")}>
-            {/* Six links now: wraps rather than pushing the row past a phone. */}
+            {/* Wraps rather than pushing the row past a phone. */}
             <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
               {links.map((link) => (
                 <li key={link.href}>
@@ -44,6 +45,12 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                {/* A button, not a link: it reopens the consent banner in
+                 * place. Present in every region — anyone can turn analytics
+                 * cookies off, not only the visitors the law says must be asked. */}
+                <PrivacyChoicesButton className="cursor-pointer transition-colors duration-150 hover:text-white" />
+              </li>
             </ul>
           </nav>
           <LocaleSwitcher tone="dark" />

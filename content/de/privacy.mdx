@@ -2,7 +2,7 @@ import { APP_NAME, SITE_NAME, SUPPORT_EMAIL } from "@/lib/constants";
 
 export const meta = {
   title: "Datenschutzerklärung",
-  updated: "2026-09-03",
+  updated: "2026-09-11",
 };
 
 ## Die einfache Fassung
@@ -32,13 +32,19 @@ unter <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>.
 
 ## Diese Website
 
-- **Analyse.** Zwei Dienste, und sie sind nicht dasselbe. Vercel Analytics ist
-  cookielos und erfasst aggregierte Seitenaufrufe und anonymisierte
-  Interaktionsereignisse. Google Analytics 4 läuft auf der Live-Seite daneben
-  und setzt sehr wohl Cookies; darüber erkennen wir, welche Kampagne jemanden
-  hergeführt hat. Keiner der beiden wird für seitenübergreifende Werbung
-  genutzt, und wir schalten keine Anzeigen und verkaufen keine Zielgruppen.
-  Preview- und lokale Builds laden Google Analytics überhaupt nicht.
+- **Analyse.** Drei Dienste, jeder mit einer anderen Aufgabe. Vercel Analytics
+  ist cookielos und zählt Seitenaufrufe und Button-Klicks. Google Analytics 4
+  zeigt uns, welche Kampagne jemanden hergeführt hat. PostHog (posthog.com)
+  zeigt, wie sich Menschen durch die Seite bewegen — welche Seiten, Links und
+  Fragen sie öffnen — und wo sie klicken, als Heatmaps. Es gibt keine
+  Sitzungsaufzeichnung und keine Bildschirmaufnahme. In der EU/im EWR, im
+  Vereinigten Königreich, in der Schweiz und in Brasilien laufen Google
+  Analytics und PostHog ohne Cookies, bis du sie im Banner erlaubst; überall
+  sonst setzen sie standardmäßig Analyse-Cookies, und „Datenschutz-Einstellungen“
+  im Footer schaltet sie überall ab. Wenn du ablehnst, zählen wir Besuche
+  weiterhin ohne Cookies. Nichts davon wird für Werbung genutzt: Wir schalten
+  keine Anzeigen und verkaufen keine Zielgruppen. Preview- und lokale Builds
+  laden keinen der beiden.
 - **Formulare und E-Mail.** Wenn du uns schreibst oder dich auf eine Warteliste
   setzt, behalten wir deine Adresse und deine Nachricht, um dir zu antworten.
   Wir verkaufen sie nicht, geben sie nicht weiter und setzen dich auf keine

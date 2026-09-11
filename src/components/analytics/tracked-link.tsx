@@ -25,6 +25,8 @@ export function TrackedLink({
   return (
     <Link
       {...props}
+      /* Tells SiteAnalytics' link listener this click is already reported. */
+      data-tracked=""
       onClick={(e) => {
         trackCta(event, eventProps);
         onClick?.(e);

@@ -2,7 +2,7 @@ import { APP_NAME, SITE_NAME, SUPPORT_EMAIL } from "@/lib/constants";
 
 export const meta = {
   title: "Privacy policy",
-  updated: "2026-09-03",
+  updated: "2026-09-11",
 };
 
 ## The plain version
@@ -29,12 +29,17 @@ at <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>.
 
 ## This website
 
-- **Analytics.** Two, and they are not the same thing. Vercel Analytics is
-  cookieless and collects aggregate page views and anonymized interaction
-  events. Google Analytics 4 runs alongside it on the live site and does set
-  cookies; it is how we tell which campaign sent someone here. Neither is used
-  for cross-site advertising, and we do not run ads or sell audiences. Preview
-  and local builds load Google Analytics not at all.
+- **Analytics.** Three tools, each doing a different job. Vercel Analytics is
+  cookieless and counts page views and button clicks. Google Analytics 4 tells
+  us which campaign sent someone here. PostHog (posthog.com) shows how people
+  move through the site — which pages, links and questions they open — and
+  where they click, as heatmaps. There is no session replay and no screen
+  recording. In the EU/EEA, the UK, Switzerland and Brazil, Google Analytics and
+  PostHog run without cookies until you allow them in the banner; everywhere
+  else they set analytics cookies by default, and "Privacy choices" in the
+  footer turns them off wherever you are. Declining still lets us count visits
+  without cookies. None of it is used for advertising: we do not run ads or sell
+  audiences. Preview and local builds load neither.
 - **Forms and email.** If you email us or join a waitlist, we keep your address
   and message to answer you. We don't sell it, share it, or add it to marketing
   lists you didn't ask for.

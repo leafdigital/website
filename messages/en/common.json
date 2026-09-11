@@ -28,6 +28,13 @@
     "joined": "You’re on the list. We only write when there’s something to try.",
     "error": "Something broke on our side — email us instead?"
   },
+  "consent": {
+    "label": "Privacy choices",
+    "body": "We count visits without cookies. With your OK, we also use analytics cookies to see which pages and buttons actually help — no ads, no selling, no screen recordings.",
+    "accept": "Allow analytics cookies",
+    "decline": "No thanks",
+    "policy": "Privacy policy"
+  },
   "skipToContent": "Skip to content",
   "localeSwitcher": {
     "label": "Language"
