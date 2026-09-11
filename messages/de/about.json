@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "title": "Über Leaf Digital — Shopify-Apps für verstecktes Geld",
+    "description": "Leaf baut Shopify-Apps, die das Geld finden, das sich zwischen deinen Systemen versteckt. Woher wir kommen, woran wir glauben und wie wir arbeiten."
+  },
+  "breadcrumb": "Über uns",
+  "hero": {
+    "headline": "Über <accent>Leaf</accent> Digital",
+    "subhead": "Leaf baut Shopify-Apps, die das Geld finden, das sich zwischen deinen Systemen versteckt. Woher wir kommen, woran wir glauben und wie wir arbeiten."
+  },
+  "origin": {
+    "title": "Woher wir kommen",
+    "one": "Leaf ist in Shopify-Shops entstanden — Jahre mit den Händen im System, beim Bauen und Reparieren für Marken, auf demselben Stuhl, auf dem du um 23 Uhr sitzt. Und in jedem Shop dasselbe: <lead>Das Geld stirbt nie in einem Feature. Es stirbt in den Nähten.</lead> Shopify nennt dir eine Zahl, der 3PL eine andere, und alles Teure bleibt unsichtbar.",
+    "two": "Niemand war für dieses Problem zuständig. Also sind wir es. Deshalb bauen wir Leaf-Apps — <imageVoice>Image Voice</imageVoice>, <reorderLoop>Reorder Loop</reorderLoop>, <countCheck>Count Check</countCheck> und <runway>Runway</runway> — jede auf eine einzige Naht ausgerichtet, jede dafür gebaut, das Geld dort zu finden und die Arbeit dann selbst zu erledigen."
+  },
+  "believe": {
+    "title": "Woran wir glauben",
+    "one": {
+      "statement": "Eine App, ein Problem."
+    },
+    "two": {
+      "statement": "Alles Teure bleibt unsichtbar, bis etwas es ans Licht zerrt."
+    },
+    "three": {
+      "statement": "Schönheit ist der sichtbare Beweis, dass jemand dem Problem seine volle Aufmerksamkeit geschenkt hat.",
+      "body": "Apps, gebaut wie gut gemachte Maschinen: solide, leise, nichts klappert."
+    }
+  },
+  "work": {
+    "title": "Wie wir arbeiten",
+    "sub": "Nimm uns beim Wort.",
+    "prices": "Preise veröffentlicht, immer.",
+    "approval": "Nichts fasst deinen Shop an ohne deine Freigabe, und jede Änderung lässt sich 30 Tage lang rückgängig machen.",
+    "reconcile": "Zahlen, die mit Shopifys eigenen Berichten übereinstimmen — was nicht aufgeht, wird nicht ausgeliefert.",
+    "fit": "Wenn unsere Pläne nicht zu deinem Shop passen, sagen wir das und bieten dir die Warteliste statt eines Verkaufs an.",
+    "replies": "Antworten auf jede E-Mail landen bei der Person, die die App gebaut hat — nicht bei einem Bot."
+  },
+  "cta": {
+    "title": "Die beste Vorstellung ist dein eigener Shop.",
+    "sub": "Starte den kostenlosen Scan, sieh dir an, was er findet, und urteile selbst.",
+    "button": "Bilder kostenlos scannen →",
+    "note": "Neugierig, wo sich der Rest versteckt? <apps>Sieh dir an, was sonst im Labor ist</apps>, oder lies <guide>den kompletten Leitfaden zu Alt-Text auf Shopify</guide>.",
+    "signoff": "— Leaf"
+  }
+}

@@ -6,12 +6,14 @@
   "nav": {
     "label": "Principale",
     "apps": "App",
+    "about": "Chi siamo",
     "freeScan": "Scansione gratuita",
     "earlyAccess": "Accesso anticipato",
     "joinWaitlist": "Lista d’attesa"
   },
   "footer": {
     "label": "Piè di pagina",
+    "about": "Chi siamo",
     "privacy": "Privacy",
     "support": "Assistenza",
     "contact": "Contatti",

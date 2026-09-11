@@ -95,7 +95,11 @@
       "countCheck.solution.*",
       "runway.hero.*",
       "runway.identify.*",
-      "runway.solution.*"
+      "runway.solution.*",
+      "about.hero.*",
+      "about.origin.*",
+      "about.believe.*",
+      "about.work.*"
     ]
   },
   "doNotTranslate.$comment": "App and plan names are product names, not words: a merchant who reads about Curator in Italian has to recognise it in the Shopify billing screen, which is English. Same for the acronyms — they are the terms of art in every one of these markets."

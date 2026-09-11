@@ -6,12 +6,14 @@
   "nav": {
     "label": "Main",
     "apps": "Apps",
+    "about": "About",
     "freeScan": "Free scan",
     "earlyAccess": "Get early access",
     "joinWaitlist": "Join the waitlist"
   },
   "footer": {
     "label": "Footer",
+    "about": "About",
     "privacy": "Privacy",
     "support": "Support",
     "contact": "Contact",

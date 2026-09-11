@@ -18,6 +18,10 @@
     "kicker": "Runway",
     "title": "Tu superventas está agotado."
   },
+  "about": {
+    "kicker": "Sobre nosotros",
+    "title": "El dinero muere en las grietas."
+  },
   "support": {
     "kicker": "Soporte",
     "title": "Te responde quien construyó la app."

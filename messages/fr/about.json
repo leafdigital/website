@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "title": "À propos de Leaf Digital — Apps Shopify, argent caché",
+    "description": "Leaf construit des apps Shopify qui trouvent l’argent caché entre vos systèmes. D’où nous venons, ce en quoi nous croyons, et comment nous travaillons."
+  },
+  "breadcrumb": "À propos",
+  "hero": {
+    "headline": "À propos de <accent>Leaf</accent> Digital",
+    "subhead": "Leaf construit des apps Shopify qui trouvent l’argent caché entre vos systèmes. D’où nous venons, ce en quoi nous croyons, et comment nous travaillons."
+  },
+  "origin": {
+    "title": "D’où nous venons",
+    "one": "Leaf est né à l’intérieur de boutiques Shopify — des années les mains dedans, à les construire et à les réparer pour des marques, assis sur la même chaise que vous à 23 h. Et dans chaque boutique, la même chose : <lead>l’argent ne meurt jamais dans une fonctionnalité. Il meurt dans les jointures.</lead> Shopify vous donne un chiffre, le 3PL vous en donne un autre, et tout ce qui coûte cher reste invisible.",
+    "two": "Personne ne s’occupait de ce problème. Alors nous nous en occupons. C’est pour ça que nous construisons les apps Leaf — <imageVoice>Image Voice</imageVoice>, <reorderLoop>Reorder Loop</reorderLoop>, <countCheck>Count Check</countCheck> et <runway>Runway</runway> — chacune visant une seule jointure, chacune conçue pour trouver l’argent qui s’y cache puis faire le travail elle-même."
+  },
+  "believe": {
+    "title": "Ce en quoi nous croyons",
+    "one": {
+      "statement": "Une app, un problème."
+    },
+    "two": {
+      "statement": "Tout ce qui coûte cher reste invisible jusqu’à ce que quelque chose le tire au grand jour."
+    },
+    "three": {
+      "statement": "La beauté, c’est la preuve visible que quelqu’un a accordé toute son attention au problème.",
+      "body": "Des apps construites comme des machines bien faites : solides, silencieuses, rien qui ne cliquette."
+    }
+  },
+  "work": {
+    "title": "Comment nous travaillons",
+    "sub": "Tenez-nous à cette liste.",
+    "prices": "Des prix publiés, toujours.",
+    "approval": "Rien ne touche votre boutique sans votre accord, et chaque changement s’annule pendant 30 jours.",
+    "reconcile": "Des chiffres qui tombent juste avec les propres rapports de Shopify — si ça ne se rapproche pas, ça ne sort pas.",
+    "fit": "Si nos formules ne conviennent pas à votre boutique, nous vous le disons et vous proposons la liste d’attente plutôt qu’une vente.",
+    "replies": "Les réponses à chaque e-mail arrivent à la personne qui a construit l’app — pas à un bot."
+  },
+  "cta": {
+    "title": "La meilleure présentation, c’est votre propre boutique.",
+    "sub": "Lancez l’analyse gratuite, voyez ce qu’elle trouve, et jugez par vous-même.",
+    "button": "Analyser vos images gratuitement →",
+    "note": "Curieux de savoir où se cache le reste ? <apps>Voyez ce qu’il y a d’autre au labo</apps>, ou lisez <guide>le guide complet de l’alt text sur Shopify</guide>.",
+    "signoff": "— Leaf"
+  }
+}

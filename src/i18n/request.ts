@@ -15,6 +15,7 @@ const namespaces = [
   "reorderLoop",
   "countCheck",
   "runway",
+  "about",
 ] as const;
 
 /**

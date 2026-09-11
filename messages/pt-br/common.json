@@ -6,12 +6,14 @@
   "nav": {
     "label": "Principal",
     "apps": "Apps",
+    "about": "Sobre",
     "freeScan": "Análise gratuita",
     "earlyAccess": "Acesso antecipado",
     "joinWaitlist": "Entrar na lista de espera"
   },
   "footer": {
     "label": "Rodapé",
+    "about": "Sobre",
     "privacy": "Privacidade",
     "support": "Suporte",
     "contact": "Contato",

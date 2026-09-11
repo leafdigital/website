@@ -6,12 +6,14 @@
   "nav": {
     "label": "Hauptnavigation",
     "apps": "Apps",
+    "about": "Über uns",
     "freeScan": "Kostenloser Scan",
     "earlyAccess": "Früh dabei sein",
     "joinWaitlist": "Auf die Warteliste"
   },
   "footer": {
     "label": "Fußzeile",
+    "about": "Über uns",
     "privacy": "Datenschutz",
     "support": "Support",
     "contact": "Kontakt",

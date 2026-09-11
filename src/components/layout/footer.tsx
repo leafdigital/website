@@ -5,6 +5,7 @@ import { SITE_NAME, SUPPORT_EMAIL } from "@/lib/constants";
 import { Container } from "./container";
 
 const links = [
+  { href: "/about", key: "about" },
   { href: "/privacy", key: "privacy" },
   { href: "/support", key: "support" },
 ] as const;

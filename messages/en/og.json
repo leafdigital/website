@@ -18,6 +18,10 @@
     "kicker": "Runway",
     "title": "Your best seller is out."
   },
+  "about": {
+    "kicker": "About",
+    "title": "The money dies in the seams."
+  },
   "support": {
     "kicker": "Support",
     "title": "Answered by the person who built it."

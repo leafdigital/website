@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "title": "About Leaf Digital — Shopify Apps That Find Hidden Money",
+    "description": "Leaf builds Shopify apps that find the money hiding between your systems. Where we come from, what we believe, and how we work."
+  },
+  "breadcrumb": "About",
+  "hero": {
+    "headline": "About <accent>Leaf</accent> Digital",
+    "subhead": "Leaf builds Shopify apps that find the money hiding between your systems. Where we come from, what we believe, and how we work."
+  },
+  "origin": {
+    "title": "Where we come from",
+    "one": "Leaf started inside Shopify stores — years spent hands-on, building and fixing them for brands, sitting in the same chair you sit in at 11pm. And in every store, the same thing: <lead>the money never dies in a feature. It dies in the seams.</lead> Shopify tells you one number, the 3PL tells you another, and everything expensive stays invisible.",
+    "two": "Nobody owned that problem. So we do. That’s why we build Leaf apps — <imageVoice>Image Voice</imageVoice>, <reorderLoop>Reorder Loop</reorderLoop>, <countCheck>Count Check</countCheck> and <runway>Runway</runway> — each one aimed at a single seam, each one built to find the money hiding there and then do the work itself."
+  },
+  "believe": {
+    "title": "What we believe",
+    "one": {
+      "statement": "One app, one problem."
+    },
+    "two": {
+      "statement": "Everything expensive is invisible until something drags it into the light."
+    },
+    "three": {
+      "statement": "Beauty means visible evidence that someone gave full presence to the problem.",
+      "body": "Apps built like well-made machines: solid, quiet, nothing rattling."
+    }
+  },
+  "work": {
+    "title": "How we work",
+    "sub": "Hold us to this list.",
+    "prices": "Prices published, always.",
+    "approval": "Nothing touches your store without your approval, and every change undoes for 30 days.",
+    "reconcile": "Numbers that tie out to Shopify’s own reports — if it doesn’t reconcile, it doesn’t ship.",
+    "fit": "If our plans don’t fit your store, we say so and offer a waitlist instead of a sale.",
+    "replies": "Replies to any email reach the person who built the app — not a bot."
+  },
+  "cta": {
+    "title": "The best introduction is your own store.",
+    "sub": "Run the free scan, see what it finds, and judge for yourself.",
+    "button": "Scan your images free →",
+    "note": "Curious where the rest hides? <apps>See what else is in the lab</apps>, or read <guide>the complete guide to alt text on Shopify</guide>.",
+    "signoff": "— Leaf"
+  }
+}

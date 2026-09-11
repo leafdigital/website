@@ -79,6 +79,17 @@ export function Header() {
                 {t("nav.apps")}
               </Link>
             </li>
+            {/* Hidden on phones: logo, two links and the CTA do not fit a
+                375px bar without the button wrapping. The footer carries
+                About on every page, so it is never unreachable. */}
+            <li className="hidden sm:block">
+              <Link
+                href="/about"
+                className="text-muted-foreground hover:text-foreground px-3.5 py-2 text-sm font-medium transition-colors duration-150"
+              >
+                {t("nav.about")}
+              </Link>
+            </li>
             <li className="ml-1.5">
               <Button asChild size="sm" className="shadow-cta-sm">
                 <TrackedLink

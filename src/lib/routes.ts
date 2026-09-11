@@ -13,6 +13,7 @@ export const indexedRoutes = [
   "/reorder-loop",
   "/count-check",
   "/runway",
+  "/about",
   "/privacy",
   "/support",
   /* Translated into all six locales, so it is advertised like any other page.
@@ -87,6 +88,7 @@ export const lastModified: Record<AppRoute, string> = {
   "/reorder-loop": "2026-09-06",
   "/count-check": "2026-09-06",
   "/runway": "2026-09-06",
+  "/about": "2026-09-11",
   "/privacy": "2026-09-02",
   "/support": "2026-09-04",
   "/guides/shopify-alt-text": "2026-09-04",

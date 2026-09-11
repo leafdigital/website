@@ -12,6 +12,7 @@ thesis behind it. Next.js 16 (App Router) + Tailwind v4, six locales.
 | `/reorder-loop` | In the lab — the whole reorder, waitlist               |
 | `/count-check`  | In the lab — 3PL vs Shopify, daily, waitlist           |
 | `/lost-sales`   | In the lab — what stockouts cost, waitlist             |
+| `/about`        | Where Leaf comes from, beliefs, the list we keep       |
 | `/privacy`      | Tier-3 document (MDX per locale)                       |
 | `/support`      | Utility copy + FAQ                                     |
 

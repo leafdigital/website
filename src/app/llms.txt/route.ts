@@ -57,6 +57,7 @@ English only. Each is dated, and the comparisons cite the competitor's own App S
 ## Site
 
 - [Home](${url("/")}): the problem all four apps address — Shopify, the 3PL and the spreadsheet disagreeing about the same numbers.
+- [About](${url("/about")}): where Leaf comes from, what it believes, and the five commitments it asks to be held to — published prices, nothing changed without approval, numbers that reconcile to Shopify's own reports, a waitlist instead of a sale when a plan doesn't fit, and replies from the person who built the app.
 - [Support](${url("/support")}): undo, billing, response times, and exactly what the apps read and write.
 - [Privacy](${url("/privacy")}): what is accessed, what is stored, how long it is kept, and the AI processing involved.
 

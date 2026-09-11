@@ -210,3 +210,37 @@ export function article({
     publisher: ref(ORGANIZATION_ID),
   };
 }
+
+/**
+ * The /about page, as a page ABOUT the organisation rather than a second
+ * description of it. `about` and `mainEntity` both point at the one
+ * `Organization` node by id — the page adds no facts of its own to the
+ * entity, it just says which entity it is the page for. That is what lets
+ * the name, logo, contact point and App Store `sameAs` stay stated once.
+ *
+ * No `isPartOf` a `WebSite`: there is deliberately no `WebSite` node — see
+ * the note on the ids above.
+ */
+export function aboutPage({
+  url,
+  name,
+  description,
+  locale,
+}: {
+  url: string;
+  name: string;
+  description: string;
+  locale: string;
+}): JsonLdNode {
+  return {
+    "@type": "AboutPage",
+    "@id": `${url}#about`,
+    url,
+    name,
+    description,
+    inLanguage: languageTag(locale),
+    about: ref(ORGANIZATION_ID),
+    mainEntity: ref(ORGANIZATION_ID),
+    publisher: ref(ORGANIZATION_ID),
+  };
+}

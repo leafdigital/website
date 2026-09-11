@@ -10,6 +10,7 @@
         "http://localhost:4381/reorder-loop",
         "http://localhost:4381/count-check",
         "http://localhost:4381/runway",
+        "http://localhost:4381/about",
         "http://localhost:4381/privacy",
         "http://localhost:4381/support"
       ]
