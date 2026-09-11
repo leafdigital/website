@@ -63,11 +63,21 @@ function usePostHog() {
         opt_out_capturing_by_default: isGatedRegion(),
       });
 
-      /* Bring PostHog's own record in line with the answer we hold. */
-      const choice = readConsent();
+      /*
+       * Bring PostHog's own record in line with the answer that applies.
+       *
+       * An unanswered visitor gets their region's default, stated explicitly —
+       * and outside the gated regions that default is yes. It has to be
+       * explicit: under `cookieless_mode: 'on_reject'` PostHog captures only
+       * once consent is granted or rejected, and a PENDING visitor sends
+       * nothing at all. Leaving it pending made every visitor who is never
+       * shown the banner invisible to PostHog.
+       */
+      const choice = readConsent() ?? (isGatedRegion() ? null : "granted");
       const status = posthog.get_explicit_consent_status();
       if (choice === "granted" && status !== "granted") {
-        posthog.opt_in_capturing();
+        /* No `$opt_in` event: nobody clicked anything. */
+        posthog.opt_in_capturing({ captureEventName: false });
       } else if (choice === "denied" && status !== "denied") {
         posthog.opt_out_capturing();
       }
