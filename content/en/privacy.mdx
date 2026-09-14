@@ -2,7 +2,7 @@ import { APP_NAME, SITE_NAME, SUPPORT_EMAIL } from "@/lib/constants";
 
 export const meta = {
   title: "Privacy policy",
-  updated: "2026-09-11",
+  updated: "2026-09-14",
 };
 
 ## The plain version
@@ -40,6 +40,13 @@ at <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>.
   footer turns them off wherever you are. Declining still lets us count visits
   without cookies. None of it is used for advertising: we do not run ads or sell
   audiences. Preview and local builds load neither.
+- **Video.** The Image Voice page has a YouTube video on it. It does not load
+  until you press play — until then the page shows a still image served from
+  our own site, and YouTube is sent nothing at all. Press play and YouTube
+  receives your IP address and sets its own cookies, under
+  <a href="https://policies.google.com/privacy">Google's privacy policy</a>. We
+  use the no-cookie player (`youtube-nocookie.com`), which keeps those cookies
+  out of Google's advertising profiles.
 - **Forms and email.** If you email us or join a waitlist, we keep your address
   and message to answer you. We don't sell it, share it, or add it to marketing
   lists you didn't ask for.
@@ -62,6 +69,12 @@ changes your answer at any time, wherever you are.
 
 - Google Analytics: `_ga` and `_ga_*`, kept for up to two years.
 - PostHog: `ph_*_posthog`, kept for up to a year.
+
+**Set by YouTube, only if you press play.** The video on the Image Voice page
+loads nothing until you ask for it. Pressing play hands you to YouTube's
+no-cookie player, which sets cookies on `youtube-nocookie.com` to remember
+playback — never on this site, and never for advertising. Not pressing play
+sets none of them.
 
 Vercel Analytics sets no cookies. Google, PostHog and Vercel process website
 analytics in the United States; each relies on the EU Standard Contractual

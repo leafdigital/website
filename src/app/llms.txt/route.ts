@@ -1,6 +1,7 @@
 import {
   APP_INSTALL_URL,
   APP_NAME,
+  APP_VIDEO_WATCH_URL,
   COUNT_CHECK_NAME,
   RUNWAY_NAME,
   PRICING,
@@ -73,6 +74,7 @@ The guide is available in all six languages; the comparisons are English only. E
 ## Elsewhere
 
 - [${APP_NAME} on the Shopify App Store](${APP_INSTALL_URL})
+- [${APP_NAME} in seventy seconds](${APP_VIDEO_WATCH_URL}): the product tour — the audit's grade, the review queue, and what an image says afterwards.
 
 ## Contact
 

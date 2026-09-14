@@ -17,6 +17,13 @@
     "aria": "{silent, number} of {total, number} of your images are silent",
     "caption": "Sample scan — yours takes minutes, free."
   },
+  "video": {
+    "kicker": "See it work",
+    "title": "The whole thing, in seventy seconds.",
+    "sub": "Scan, write, speak — what the free audit grades, what the review queue puts in front of you, and what your images say once they’re done.",
+    "play": "Play the Image Voice video — 1 minute 10 seconds",
+    "caption": "No sound needed. Nothing in it touches a store until you approve it."
+  },
   "task": {
     "eyebrow": "The task that never gets done",
     "opener": "Nobody sits down to describe 3,000 images.",

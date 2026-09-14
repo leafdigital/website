@@ -1,6 +1,11 @@
 import {
   APP_INSTALL_URL,
   APP_NAME,
+  APP_VIDEO_EMBED_URL,
+  APP_VIDEO_LENGTH,
+  APP_VIDEO_POSTER,
+  APP_VIDEO_UPLOADED,
+  APP_VIDEO_WATCH_URL,
   PRICING,
   SITE_NAME,
   SITE_URL,
@@ -56,6 +61,7 @@ export type JsonLdNode = Record<string, unknown>;
  */
 const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 const IMAGE_VOICE_ID = `${SITE_URL}/#image-voice`;
+const IMAGE_VOICE_VIDEO_ID = `${SITE_URL}/#image-voice-video`;
 
 const ref = (id: string) => ({ "@id": id });
 
@@ -125,11 +131,53 @@ export function imageVoiceApplication({
     description,
     inLanguage: languageTag(locale),
     publisher: ref(ORGANIZATION_ID),
+    video: ref(IMAGE_VOICE_VIDEO_ID),
     offers: [
       offer(planNames.audit, PRICING.audit),
       offer(planNames.keeper, PRICING.keeper),
       offer(planNames.curator, PRICING.curator),
     ],
+  };
+}
+
+/**
+ * The marketing video, told to a machine.
+ *
+ * Worth a node of its own rather than a property on the application: video is
+ * one of the few rich results Google still prints for a commercial page, and
+ * it needs `thumbnailUrl`, `uploadDate` and `duration` to qualify for one.
+ *
+ * `contentUrl` is the watch page and `embedUrl` the no-cookie player — the
+ * two are different surfaces, and giving Google the watch page is what lets
+ * the result link somewhere a person can actually land.
+ *
+ * Name and description come from the same message file the section renders,
+ * so the node can never describe a video the page does not.
+ */
+export function imageVoiceVideo({
+  locale,
+  name,
+  description,
+}: {
+  locale: string;
+  name: string;
+  description: string;
+}): JsonLdNode {
+  return {
+    "@type": "VideoObject",
+    "@id": IMAGE_VOICE_VIDEO_ID,
+    name,
+    description,
+    thumbnailUrl: `${SITE_URL}${APP_VIDEO_POSTER}`,
+    uploadDate: APP_VIDEO_UPLOADED,
+    duration: APP_VIDEO_LENGTH,
+    contentUrl: APP_VIDEO_WATCH_URL,
+    embedUrl: APP_VIDEO_EMBED_URL,
+    inLanguage: languageTag(locale),
+    publisher: ref(ORGANIZATION_ID),
+    /* Where the video is watched on this site — the section's own anchor,
+     * not the bare page, so a "jump to video" result lands on the player. */
+    url: `${absoluteUrl("/image-voice", locale)}#video`,
   };
 }
 

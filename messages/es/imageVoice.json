@@ -17,6 +17,13 @@
     "aria": "{silent, number} de {total, number} de tus imágenes están mudas",
     "caption": "Análisis de ejemplo — el tuyo tarda minutos y es gratis."
   },
+  "video": {
+    "kicker": "Míralo funcionar",
+    "title": "Todo el proceso, en setenta segundos.",
+    "sub": "Analiza, escribe, habla — qué califica la auditoría gratuita, qué te pone delante la cola de revisión y qué dicen tus imágenes cuando terminan.",
+    "play": "Reproducir el vídeo de Image Voice — 1 minuto 10 segundos",
+    "caption": "No hace falta sonido. Nada de lo que ves toca una tienda hasta que tú lo apruebas."
+  },
   "task": {
     "eyebrow": "La tarea que nunca se hace",
     "opener": "Nadie se sienta a describir 3.000 imágenes.",

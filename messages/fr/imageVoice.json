@@ -17,6 +17,13 @@
     "aria": "{silent, number} de vos {total, number} images sont muettes",
     "caption": "Analyse d’exemple — la vôtre prend quelques minutes, gratuitement."
   },
+  "video": {
+    "kicker": "Voyez-le à l’œuvre",
+    "title": "L’ensemble, en soixante-dix secondes.",
+    "sub": "Analyser, écrire, parler — ce que l’audit gratuit évalue, ce que la file de relecture vous présente, et ce que vos images disent une fois terminées.",
+    "play": "Lire la vidéo Image Voice — 1 minute 10 secondes",
+    "caption": "Le son n’est pas nécessaire. Rien de tout cela ne touche une boutique avant votre validation."
+  },
   "task": {
     "eyebrow": "La tâche qui n’est jamais faite",
     "opener": "Personne ne s’assoit pour décrire 3 000 images.",

@@ -31,7 +31,9 @@ export type SiteEvent =
   | "scroll_depth"
   /** A waitlist email accepted — GA4's recommended lead event. */
   | "generate_lead"
-  | "waitlist_error";
+  | "waitlist_error"
+  /** The marketing video asked for — the click that loads the embed. */
+  | "video_play";
 
 type Props = Record<string, string | number>;
 

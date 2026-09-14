@@ -17,6 +17,13 @@
     "aria": "{silent, number} de {total, number} imagens da sua loja estão mudas",
     "caption": "Análise de exemplo — a sua leva minutos e é grátis."
   },
+  "video": {
+    "kicker": "Veja funcionando",
+    "title": "Tudo isso, em setenta segundos.",
+    "sub": "Analisar, escrever, falar — o que a análise gratuita avalia, o que a fila de revisão coloca na sua frente e o que suas imagens dizem depois de prontas.",
+    "play": "Reproduzir o vídeo do Image Voice — 1 minuto e 10 segundos",
+    "caption": "Não precisa de som. Nada do que aparece toca uma loja até você aprovar."
+  },
   "task": {
     "eyebrow": "A tarefa que nunca sai do papel",
     "opener": "Ninguém senta para descrever 3.000 imagens.",

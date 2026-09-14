@@ -17,6 +17,13 @@
     "aria": "{silent, number} von {total, number} deiner Bilder schweigen",
     "caption": "Beispiel-Scan — deiner dauert Minuten, kostenlos."
   },
+  "video": {
+    "kicker": "Sieh es in Aktion",
+    "title": "Das Ganze, in siebzig Sekunden.",
+    "sub": "Scannen, schreiben, sprechen — was das kostenlose Audit bewertet, was dir die Prüfliste vorlegt und was deine Bilder danach sagen.",
+    "play": "Image-Voice-Video abspielen — 1 Minute 10 Sekunden",
+    "caption": "Ton nicht nötig. Nichts davon fasst einen Shop an, bevor du es freigibst."
+  },
   "task": {
     "eyebrow": "Die Aufgabe, die nie erledigt wird",
     "opener": "Niemand setzt sich hin und beschreibt 3.000 Bilder.",

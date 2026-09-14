@@ -20,12 +20,14 @@ import {
   breadcrumbs,
   faqPage,
   imageVoiceApplication,
+  imageVoiceVideo,
   organization,
 } from "@/lib/schema";
 import { Journey } from "./journey";
 import { PricingCards } from "./pricing-cards";
 import { SpecimenCard } from "./specimen-card";
 import { TodoCard } from "./todo-card";
+import { VideoSection } from "./video-section";
 
 export async function generateMetadata({
   params,
@@ -112,6 +114,11 @@ function Aura({ className }: { className: string }) {
  * chapters on a drawn spine), and only then given a price. Every reveal on
  * the page restates the layout — a rule draws, a strike crosses, a spine
  * grows — rather than decorating it.
+ *
+ * The video sits second, immediately under the claim it proves, and is the
+ * one shortcut through all of that for someone who would rather watch than
+ * read. It costs nothing to the people who scroll past: the embed is not
+ * built until its poster is clicked.
  */
 export default function ImageVoicePage() {
   const t = useTranslations("imageVoice");
@@ -140,6 +147,11 @@ export default function ImageVoicePage() {
               keeper: t("pricing.keeper.name"),
               curator: t("pricing.curator.name"),
             },
+          }),
+          imageVoiceVideo({
+            locale,
+            name: t("video.title"),
+            description: t("video.sub"),
           }),
           faqPage(absoluteUrl("/image-voice", locale), faq),
           breadcrumbs(locale, [
@@ -223,7 +235,13 @@ export default function ImageVoicePage() {
         }
       />
 
-      {/* 2 — The task that never gets done. Four sentences and a list; the
+      {/* 2 — The video. It sits here because the hero has just made a claim
+          and this is the fastest way to see it is true; everything below is
+          the same argument at reading speed, for whoever would rather read.
+          Nothing loads from YouTube until the poster is clicked. */}
+      <VideoSection />
+
+      {/* 3 — The task that never gets done. Four sentences and a list; the
           section is deliberately mostly air. */}
       <Section className="relative isolate overflow-hidden sm:py-[150px]">
         <Aura className="top-[14%] h-[620px] w-[940px] bg-[radial-gradient(closest-side,rgba(67,160,71,0.07),transparent_70%)]" />
@@ -257,7 +275,7 @@ export default function ImageVoicePage() {
         <TodoCard />
       </Section>
 
-      {/* 3 — One villain, three bills. The page's only dark band, and the one
+      {/* 4 — One villain, three bills. The page's only dark band, and the one
           block v2 deliberately left alone. */}
       <Section tone="dark">
         <SectionHeading
@@ -276,7 +294,7 @@ export default function ImageVoicePage() {
         />
       </Section>
 
-      {/* 4 — The competitive argument, shown rather than claimed. One
+      {/* 5 — The competitive argument, shown rather than claimed. One
           specimen, struck through and replaced. */}
       <Section className="relative isolate overflow-hidden sm:py-[130px]">
         <Aura className="top-[22%] h-[600px] w-[900px] bg-[radial-gradient(closest-side,rgba(67,160,71,0.06),transparent_70%)]" />
@@ -296,7 +314,7 @@ export default function ImageVoicePage() {
         </p>
       </Section>
 
-      {/* 5 — The ladder every Leaf app climbs, drawn as one thread. */}
+      {/* 6 — The ladder every Leaf app climbs, drawn as one thread. */}
       <Section divided>
         <SectionHeading
           align="center"
@@ -316,7 +334,7 @@ export default function ImageVoicePage() {
         </p>
       </Section>
 
-      {/* 6 — Not a feature list. Four chapters, in the order they happen. */}
+      {/* 7 — Not a feature list. Four chapters, in the order they happen. */}
       <Section divided>
         <SectionHeading
           kicker={t("benefits.kicker")}
@@ -327,7 +345,7 @@ export default function ImageVoicePage() {
         <Journey />
       </Section>
 
-      {/* 7 — Pricing. The free plan is a plan, not a trial. */}
+      {/* 8 — Pricing. The free plan is a plan, not a trial. */}
       <Section id="pricing" divided className="scroll-mt-16">
         <SectionHeading
           align="center"
@@ -357,7 +375,7 @@ export default function ImageVoicePage() {
         </p>
       </Section>
 
-      {/* 8 — The objections, answered before they are asked. */}
+      {/* 9 — The objections, answered before they are asked. */}
       <Section divided containerClassName="max-w-[800px]">
         <SectionHeading
           align="center"
@@ -376,7 +394,7 @@ export default function ImageVoicePage() {
         />
       </Section>
 
-      {/* 8.5 — The content layer, linked from the one page it belongs to.
+      {/* 9.5 — The content layer, linked from the one page it belongs to.
           Two of these three send readers to a competitor if the competitor
           is the better fit, which is the same argument the FAQ above makes
           and the reason this block sits after it rather than in the nav. */}
@@ -415,7 +433,7 @@ export default function ImageVoicePage() {
         </div>
       </Section>
 
-      {/* 9 — Install. Two futures, one button. */}
+      {/* 10 — Install. Two futures, one button. */}
       <CtaBand
         id="scan"
         title={t("cta.title")}

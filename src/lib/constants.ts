@@ -83,6 +83,30 @@ export const APP_INSTALL_URL =
   "https://apps.shopify.com/image-voice-alt-text-seo";
 
 /**
+ * The marketing video, hosted on YouTube.
+ *
+ * The id is stored rather than a URL because four different things are built
+ * from it — the embed, the watch link, the schema node's `embedUrl` and its
+ * `contentUrl` — and three of them are on hosts a reader never types.
+ *
+ * `youtube-nocookie.com` is the embed host, deliberately: the regular one
+ * sets advertising cookies the moment the iframe exists, which the privacy
+ * policy would then have to disclose and the consent banner would have to
+ * gate. Paired with the click-to-play poster in `VideoSection`, nothing
+ * reaches Google at all until a visitor asks for the video.
+ *
+ * `LENGTH` is ISO 8601 for schema.org, `DURATION` the clock the poster
+ * prints. Both describe the same 70 seconds; keep them together.
+ */
+export const APP_VIDEO_ID = "GttcTj9kOcQ";
+export const APP_VIDEO_WATCH_URL = `https://www.youtube.com/watch?v=${APP_VIDEO_ID}`;
+export const APP_VIDEO_EMBED_URL = `https://www.youtube-nocookie.com/embed/${APP_VIDEO_ID}`;
+export const APP_VIDEO_POSTER = "/brand/image-voice-video-poster.jpg";
+export const APP_VIDEO_DURATION = "1:10";
+export const APP_VIDEO_LENGTH = "PT1M10S";
+export const APP_VIDEO_UPLOADED = "2026-09-14";
+
+/**
  * Sample figures. Every one of these renders under a visible "sample data"
  * caption — we never present them as a case study — and every one is
  * expected to change, which is why they live here and not in a message file.

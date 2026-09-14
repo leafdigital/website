@@ -17,6 +17,13 @@
     "aria": "{silent, number} delle tue {total, number} immagini sono mute",
     "caption": "Scansione di esempio — la tua richiede pochi minuti, gratis."
   },
+  "video": {
+    "kicker": "Guardalo in azione",
+    "title": "Tutto quanto, in settanta secondi.",
+    "sub": "Scansiona, scrivi, parla — che cosa valuta l’analisi gratuita, che cosa ti mette davanti la coda di revisione e che cosa dicono le tue immagini una volta pronte.",
+    "play": "Riproduci il video di Image Voice — 1 minuto e 10 secondi",
+    "caption": "Non serve l’audio. Niente di ciò che vedi tocca un negozio prima della tua approvazione."
+  },
   "task": {
     "eyebrow": "Il compito che non si fa mai",
     "opener": "Nessuno si siede a descrivere 3.000 immagini.",
