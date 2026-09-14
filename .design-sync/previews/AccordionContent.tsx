@@ -31,7 +31,7 @@ export const RichContent = () => (
         </p>
         <p>
           Judge it free on your own products before paying anything —{" "}
-          <a href="https://apps.shopify.com/image-voice">
+          <a href="https://apps.shopify.com/image-voice-alt-text-seo">
             install on the Shopify App Store
           </a>
           .

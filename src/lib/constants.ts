@@ -76,11 +76,11 @@ export const POSTHOG_HOST = "https://us.i.posthog.com";
 export const POSTHOG_ENABLED = GA_ENABLED && POSTHOG_KEY !== "";
 
 /**
- * The App Store listing. BLOCKER: guessed from the app name — the real
- * handle is whatever Shopify assigns on approval. Every "Install on the
- * Shopify App Store" button on /image-voice points here.
+ * The App Store listing. Every "Install on the Shopify App Store" button on
+ * /image-voice points here.
  */
-export const APP_INSTALL_URL = "https://apps.shopify.com/image-voice";
+export const APP_INSTALL_URL =
+  "https://apps.shopify.com/image-voice-alt-text-seo";
 
 /**
  * Sample figures. Every one of these renders under a visible "sample data"

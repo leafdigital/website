@@ -29,7 +29,7 @@ button is `variant="onDark"`.
 ```tsx
 <Button asChild size="lg" variant="onDark" className="shadow-on-dark">
   <TrackedExternalLink
-    href="https://apps.shopify.com/image-voice"
+    href="https://apps.shopify.com/image-voice-alt-text-seo"
     rel="noreferrer"
     event="cta_install_click"
     eventProps={{ location: "image-voice-cta" }}

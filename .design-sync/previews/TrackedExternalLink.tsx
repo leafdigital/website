@@ -11,7 +11,7 @@ export const Default = () => (
   <div className="from-surface-deep via-brand-900 to-brand-800 bg-linear-[135deg] via-55% p-10 text-center">
     <Button asChild size="lg" variant="onDark" className="shadow-on-dark">
       <TrackedExternalLink
-        href="https://apps.shopify.com/image-voice"
+        href="https://apps.shopify.com/image-voice-alt-text-seo"
         rel="noreferrer"
         event="cta_install_click"
         eventProps={{ location: "image-voice-cta" }}
@@ -26,7 +26,7 @@ export const Default = () => (
 export const OnLight = () => (
   <Button asChild size="lg">
     <TrackedExternalLink
-      href="https://apps.shopify.com/image-voice"
+      href="https://apps.shopify.com/image-voice-alt-text-seo"
       rel="noreferrer"
       event="cta_install_click"
       eventProps={{ location: "pricing" }}
