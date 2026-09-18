@@ -3,17 +3,48 @@ import { ImageResponse } from "next/og";
 export const OG_SIZE = { width: 1200, height: 630 };
 
 /**
+ * Satori ships a Latin-only default face, so Japanese and Korean cards render
+ * as boxes. For those, fetch a Noto subset holding exactly the glyphs on the
+ * card — a few KB rather than the multi-MB full font — at build time, when
+ * the cards prerender. Hangul decides Korean; any other CJK is Japanese.
+ */
+const HANGUL = /[\u1100-\u11ff\u3130-\u318f\uac00-\ud7af]/;
+const CJK = /[\u3040-\u30ff\u3400-\u9fff\uff00-\uffef]/;
+
+async function cjkFont(text: string) {
+  const family = HANGUL.test(text)
+    ? "Noto Sans KR"
+    : CJK.test(text)
+      ? "Noto Sans JP"
+      : null;
+  if (!family) return undefined;
+
+  const css = await fetch(
+    `https://fonts.googleapis.com/css2?family=${family.replace(/ /g, "+")}:wght@800&text=${encodeURIComponent(text)}`,
+  ).then((r) => r.text());
+  const src = css.match(/src: url\((.+?)\) format\('(opentype|truetype)'\)/);
+  if (!src) throw new Error(`OG: no ${family} subset for "${text}"`);
+  const data = await fetch(src[1]).then((r) => r.arrayBuffer());
+  return [
+    { name: family, data, weight: 800 as const, style: "normal" as const },
+  ];
+}
+
+/**
  * Shared OG-image template, v1 style: green-on-white, wordmark bottom-left
  * (brand/BRAND.md continuity notes). Route files pass a title and optional
  * kicker; everything else is fixed so cards stay uniform across pages.
  */
-export function renderOgImage({
+export async function renderOgImage({
   title,
   kicker = "Leaf Digital",
 }: {
   title: string;
   kicker?: string;
 }) {
+  /* The subset must hold every glyph drawn: the kicker as rendered
+   * (uppercased) and the wordmark, not just the title. */
+  const fonts = await cjkFont(`${kicker.toUpperCase()}${title}Leaf digital`);
   return new ImageResponse(
     <div
       style={{
@@ -25,7 +56,7 @@ export function renderOgImage({
         padding: 80,
         backgroundColor: "#ffffff",
         backgroundImage: "linear-gradient(135deg, #f0fdf4 0%, #ffffff 55%)",
-        fontFamily: "sans-serif",
+        fontFamily: fonts ? `${fonts[0].name}, sans-serif` : "sans-serif",
       }}
     >
       <div style={{ display: "flex", flexDirection: "column" }}>
@@ -76,6 +107,6 @@ export function renderOgImage({
         Leaf digital
       </div>
     </div>,
-    OG_SIZE,
+    { ...OG_SIZE, fonts },
   );
 }

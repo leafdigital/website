@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "defaultTitle": "Leaf Digital — 틈새에 숨은 돈을 찾아내는 Shopify 앱",
+    "defaultDescription": "Shopify, 3PL, 스프레드시트가 전부 다른 이야기를 해요. Leaf는 그 틈새에 숨은 돈을 찾아내고, 일까지 직접 해내는 작고 날카로운 앱을 만들어요."
+  },
+  "nav": {
+    "label": "주 메뉴",
+    "apps": "앱",
+    "about": "소개",
+    "freeScan": "무료 스캔",
+    "earlyAccess": "먼저 써 보기",
+    "joinWaitlist": "대기자 명단 등록"
+  },
+  "footer": {
+    "label": "푸터",
+    "about": "소개",
+    "privacy": "개인정보 처리방침",
+    "terms": "이용약관",
+    "security": "보안",
+    "support": "지원",
+    "rights": "© {year} {siteName}. All rights reserved."
+  },
+  "waitlist": {
+    "emailLabel": "얼리 액세스용 이메일",
+    "placeholder": "you@yourstore.com",
+    "submit": "먼저 써 보기",
+    "sending": "등록 중…",
+    "joined": "명단에 올랐어요. 써 볼 게 생겼을 때만 연락드릴게요.",
+    "error": "저희 쪽에서 문제가 생겼어요. 대신 이메일로 연락 주시겠어요?"
+  },
+  "consent": {
+    "label": "개인정보 설정",
+    "body": "방문 수는 쿠키 없이 세요. 동의해 주시면 어떤 페이지와 버튼이 실제로 도움이 되는지 보려고 분석 쿠키도 사용해요. 광고도, 데이터 판매도, 화면 녹화도 없어요.",
+    "accept": "분석 쿠키 허용",
+    "decline": "괜찮아요",
+    "policy": "개인정보 처리방침"
+  },
+  "skipToContent": "본문으로 건너뛰기",
+  "localeSwitcher": {
+    "label": "언어"
+  },
+  "document": {
+    "fallbackNotice": "이 문서는 아직 한국어로 제공되지 않아 영어 버전을 보여 드려요.",
+    "draft": "초안 — 법률 검토 중",
+    "updated": "최종 업데이트: {date, date, long}"
+  },
+  "notFound": {
+    "title": "이 페이지는 없어요.",
+    "sub": "부실한 것도, 쓰레기도 아니고, 그냥 없어요. 따라오신 링크가 가리키는 페이지가 저희에게 없어요.",
+    "home": "홈으로 돌아가기",
+    "app": "Image Voice 보기"
+  }
+}

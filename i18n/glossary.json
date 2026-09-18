@@ -41,35 +41,45 @@
       "pt-br": "prateleira agêntica",
       "de": "agentisches Regal",
       "fr": "rayon agentique",
-      "it": "scaffale agentico"
+      "it": "scaffale agentico",
+      "ja": "エージェント型の売り場",
+      "ko": "에이전틱 진열대"
     },
     "coverage": {
       "es": "cobertura",
       "pt-br": "cobertura",
       "de": "Abdeckung",
       "fr": "couverture",
-      "it": "copertura"
+      "it": "copertura",
+      "ja": "カバー率",
+      "ko": "커버리지"
     },
     "scan": {
       "es": "análisis",
       "pt-br": "análise",
       "de": "Scan",
       "fr": "analyse",
-      "it": "scansione"
+      "it": "scansione",
+      "ja": "スキャン",
+      "ko": "스캔"
     },
     "auto-pilot": {
       "es": "piloto automático",
       "pt-br": "piloto automático",
       "de": "Autopilot",
       "fr": "pilote automatique",
-      "it": "pilota automatico"
+      "it": "pilota automatico",
+      "ja": "オートパイロット",
+      "ko": "오토파일럿"
     },
     "undo": {
       "es": "deshacer",
       "pt-br": "desfazer",
       "de": "rückgängig machen",
       "fr": "annuler",
-      "it": "annullare"
+      "it": "annullare",
+      "ja": "元に戻す",
+      "ko": "되돌리기"
     }
   },
   "critical": {

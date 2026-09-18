@@ -32,6 +32,8 @@ const countryToLocale: Record<string, Locale> = {
   FR: "fr",
   MC: "fr",
   LU: "fr",
+  JP: "ja",
+  KR: "ko",
 };
 
 export function localeForCountry(country: string | null | undefined) {

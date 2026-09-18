@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "defaultTitle": "Leaf Digital — システムの隙間に隠れたお金を見つけるShopifyアプリ",
+    "defaultDescription": "Shopify、3PL、スプレッドシート。三つとも言っている数字が違います。Leafは、その隙間に隠れたお金を見つけ出し、そのまま作業まで片づける、小さく鋭いアプリをつくっています。"
+  },
+  "nav": {
+    "label": "メイン",
+    "apps": "アプリ",
+    "about": "Leafについて",
+    "freeScan": "無料スキャン",
+    "earlyAccess": "先行アクセスに登録",
+    "joinWaitlist": "ウェイトリストに登録"
+  },
+  "footer": {
+    "label": "フッター",
+    "about": "Leafについて",
+    "privacy": "プライバシー",
+    "terms": "利用規約",
+    "security": "セキュリティ",
+    "support": "サポート",
+    "rights": "© {year} {siteName}. All rights reserved."
+  },
+  "waitlist": {
+    "emailLabel": "先行アクセス用のメールアドレス",
+    "placeholder": "you@yourstore.com",
+    "submit": "先行アクセスに登録",
+    "sending": "登録中…",
+    "joined": "登録しました。試せるものができたときだけ、ご連絡します。",
+    "error": "こちら側で問題が起きました。お手数ですが、メールでご連絡いただけますか？"
+  },
+  "consent": {
+    "label": "プライバシー設定",
+    "body": "訪問数はCookieを使わずに計測しています。ご同意いただければ、どのページやボタンが実際に役立っているかを知るために分析用Cookieも使います。広告なし、データ販売なし、画面録画なしです。",
+    "accept": "分析用Cookieを許可する",
+    "decline": "許可しない",
+    "policy": "プライバシーポリシー"
+  },
+  "skipToContent": "本文へスキップ",
+  "localeSwitcher": {
+    "label": "言語"
+  },
+  "document": {
+    "fallbackNotice": "このドキュメントはまだ日本語版がないため、英語版を表示しています。",
+    "draft": "草案 — 法務確認中",
+    "updated": "最終更新日：{date, date, long}"
+  },
+  "notFound": {
+    "title": "このページは見つかりません。",
+    "sub": "説明が弱いわけでも、ジャンクなわけでもなく、存在しないのです。たどったリンクの先に、該当するページはありません。",
+    "home": "ホームに戻る",
+    "app": "Image Voiceを見る"
+  }
+}

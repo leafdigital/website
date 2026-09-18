@@ -7,11 +7,13 @@ import { defineRouting } from "next-intl/routing";
  */
 export const routing = defineRouting({
   /**
-   * `en` is authored; the other five are generated (docs/i18n.md §7).
-   * All six are Latin-script, so the Geist `latin` subset already covers them.
+   * `en` is authored; the other seven are generated (docs/i18n.md §7).
+   * `ja` and `ko` are the only non-Latin scripts: Geist has no CJK glyphs, so
+   * they fall through to the system CJK faces named in globals.css, and the
+   * OG cards load a Noto subset (src/lib/og.tsx).
    * URL segments are lowercase BCP-47: `pt-br`, never `pt-BR`.
    */
-  locales: ["en", "es", "pt-br", "de", "fr", "it"],
+  locales: ["en", "es", "pt-br", "de", "fr", "it", "ja", "ko"],
   defaultLocale: "en",
 
   /**
@@ -78,12 +80,14 @@ export const bcp47: Record<Locale, string> = {
   de: "de",
   fr: "fr",
   it: "it",
+  ja: "ja",
+  ko: "ko",
 };
 
 /**
  * Open Graph is the one place that wants `language_TERRITORY` — bare `de` is
  * not a valid `og:locale` and gets dropped, which is why the cards had no
- * usable locale before. A territory has to be invented for the five locales
+ * usable locale before. A territory has to be invented for the seven locales
  * that are language-only; the largest market for each is the honest guess,
  * and nothing downstream reads it as a market signal.
  */
@@ -94,4 +98,6 @@ export const ogLocale: Record<Locale, string> = {
   de: "de_DE",
   fr: "fr_FR",
   it: "it_IT",
+  ja: "ja_JP",
+  ko: "ko_KR",
 };

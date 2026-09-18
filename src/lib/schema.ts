@@ -89,7 +89,7 @@ export function organization(): JsonLdNode {
       "@type": "ContactPoint",
       contactType: "customer support",
       email: SUPPORT_EMAIL,
-      availableLanguage: ["en", "de", "fr", "es", "it", "pt"],
+      availableLanguage: ["en", "de", "fr", "es", "it", "pt", "ja", "ko"],
     },
   };
 }

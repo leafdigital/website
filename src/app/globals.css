@@ -583,3 +583,30 @@
     }
   }
 }
+
+/* CJK. Geist has no Japanese or Korean glyphs, so name the system faces that
+ * do, per language — left to the browser, a Windows machine with both installed
+ * can pick a Chinese face for Japanese text. Unlayered on purpose: it has to
+ * beat the type-scale utilities. The Latin tracking is tuned for Geist; pulled
+ * tight on ideographs it crowds them, and the 1.02 hero leading clips them. */
+html:lang(ja) {
+  font-family:
+    var(--font-sans), "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic",
+    "Noto Sans JP", Meiryo, sans-serif;
+  line-break: strict;
+}
+html:lang(ko) {
+  font-family:
+    var(--font-sans), "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR",
+    sans-serif;
+  /* Korean breaks between words, like English — not between syllables. */
+  word-break: keep-all;
+}
+:is(html:lang(ja), html:lang(ko)) :is(h1, h2, h3) {
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+/* Japanese has no spaces; without this a heading can break mid-word. */
+html:lang(ja) :is(h1, h2, h3) {
+  word-break: auto-phrase;
+}

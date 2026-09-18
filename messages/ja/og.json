@@ -1,0 +1,29 @@
+{
+  "site": {
+    "title": "あなたのお金は、隠れています。"
+  },
+  "imageVoice": {
+    "kicker": "Image Voice",
+    "title": "あなたの画像のうち{silent, number}枚が、何も語っていません"
+  },
+  "reorderLoop": {
+    "kicker": "Reorder Loop",
+    "title": "現金が、在庫に閉じ込められています。"
+  },
+  "countCheck": {
+    "kicker": "Count Check",
+    "title": "在庫が、消えています。"
+  },
+  "runway": {
+    "kicker": "Runway",
+    "title": "売れ筋が、欠品しています。"
+  },
+  "about": {
+    "kicker": "Leafについて",
+    "title": "お金は、システムの継ぎ目で消えていく。"
+  },
+  "support": {
+    "kicker": "サポート",
+    "title": "つくった本人が答えます。"
+  }
+}

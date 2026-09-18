@@ -1,0 +1,29 @@
+{
+  "site": {
+    "title": "당신의 돈이 숨어 있어요."
+  },
+  "imageVoice": {
+    "kicker": "Image Voice",
+    "title": "이미지 {silent, number}개가 아무 말도 하지 않아요"
+  },
+  "reorderLoop": {
+    "kicker": "Reorder Loop",
+    "title": "현금이 묶여 있어요."
+  },
+  "countCheck": {
+    "kicker": "Count Check",
+    "title": "재고가 사라지고 있어요."
+  },
+  "runway": {
+    "kicker": "Runway",
+    "title": "베스트셀러가 품절됐어요."
+  },
+  "about": {
+    "kicker": "소개",
+    "title": "돈은 이음매에서 새요."
+  },
+  "support": {
+    "kicker": "지원",
+    "title": "앱을 만든 사람이 직접 답해요."
+  }
+}

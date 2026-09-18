@@ -36,7 +36,7 @@ const nextConfig: NextConfig = {
       { source: from, destination: to, statusCode: 301 as const },
       { source: `/en${from}`, destination: to, statusCode: 301 as const },
       {
-        source: `/:locale(de|es|fr|it|pt-br)${from}`,
+        source: `/:locale(de|es|fr|it|pt-br|ja|ko)${from}`,
         destination: to === "/" ? "/:locale" : `/:locale${to}`,
         statusCode: 301 as const,
       },

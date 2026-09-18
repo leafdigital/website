@@ -1,5 +1,5 @@
 {
-  "$comment": "Deliberately outside the per-locale namespace scheme: this banner speaks the language the visitor is NOT currently reading, so all locales ship together in one small file rather than loading six message bundles. Excluded from the parity guard for the same reason (scripts/i18n/lib.mjs walks directories only).",
+  "$comment": "Deliberately outside the per-locale namespace scheme: this banner speaks the language the visitor is NOT currently reading, so all locales ship together in one small file rather than loading seven message bundles. Excluded from the parity guard for the same reason (scripts/i18n/lib.mjs walks directories only).",
   "en": {
     "message": "View this site in English?",
     "accept": "Switch to English",
@@ -29,5 +29,15 @@
     "message": "Vuoi vedere questo sito in italiano?",
     "accept": "Passa all'italiano",
     "dismiss": "No, grazie"
+  },
+  "ja": {
+    "message": "このサイトを日本語で表示しますか？",
+    "accept": "日本語に切り替える",
+    "dismiss": "いいえ、結構です"
+  },
+  "ko": {
+    "message": "이 사이트를 한국어로 보시겠어요?",
+    "accept": "한국어로 전환",
+    "dismiss": "괜찮아요"
   }
 }

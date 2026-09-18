@@ -19,6 +19,8 @@ const localeNames: Record<Locale, string> = {
   de: "Deutsch",
   fr: "Français",
   it: "Italiano",
+  ja: "日本語",
+  ko: "한국어",
 };
 
 /** `dark` is the footer, which is the only place this currently renders. */
