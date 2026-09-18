@@ -49,7 +49,7 @@ function body() {
 
 ## Guides and comparisons
 
-The guide is available in all six languages; the comparisons are English only. Each is dated, and every figure about another app is cited to that app's own App Store listing, with the date it was checked.
+The guide is available in all eight site languages; the comparisons are English only. Each is dated, and every figure about another app is cited to that app's own App Store listing, with the date it was checked.
 
 - [The complete guide to alt text on Shopify](${url("/guides/shopify-alt-text")}): what alt text is for, Shopify's own rules (512-character field limit, 125 recommended, empty alt for decorative images), what good and weak descriptions read like, everywhere alt text lives in a Shopify store, and a ten-minute audit a merchant can run by hand with no app installed.
 - [The best Shopify alt text apps, compared](${url("/guides/best-shopify-alt-text-apps")}): eleven Shopify alt text apps plus ${APP_NAME}, compared from their own App Store listings — rating, review count, Built for Shopify status, starting price, how each says it writes alt text (template, product data, or the image), and whether it checks existing alt text. Discloses that Leaf makes ${APP_NAME} and that the apps were not installed or tested.
@@ -57,7 +57,7 @@ The guide is available in all six languages; the comparisons are English only. E
 - [${APP_NAME} vs AltText.ai](${url("/image-voice/vs-alttext-ai")}): AltText.ai analyses images, uses product data on Shopify, writes in 130+ languages and has 141 reviews; it meters by the image. The comparison is about metering and about grading existing alt text.
 - [${APP_NAME} vs AltKing](${url("/image-voice/vs-altking")}): AltKing builds alt text from variables and is free, with 199 reviews. For stores whose photography is packshots, the page says AltKing is the right choice.
 - [${APP_NAME} vs Pixc](${url("/image-voice/vs-pixc")}): Pixc writes from product data or a template and scans for poorly written alt text; its top plan covers 25,000 images for $100 a month.
-- [${APP_NAME} vs ALTerator](${url("/image-voice/vs-alterator")}): ALTerator scores alt text 0–100 for SEO and writes in 18 languages; ${APP_NAME} grades whether each description describes its photograph and writes in 7.
+- [${APP_NAME} vs ALTerator](${url("/image-voice/vs-alterator")}): ALTerator scores alt text 0–100 for SEO and writes in 18 languages; ${APP_NAME} grades whether each description describes its photograph and writes in 9.
 - [${APP_NAME} vs SEO HERO](${url("/image-voice/vs-seo-hero")}): SEO HERO injects SEO keywords using image context, with 171 reviews and the Built for Shopify badge.
 - [${APP_NAME} vs StoreSEO](${url("/image-voice/vs-storeseo")}): StoreSEO is a full SEO suite in which alt text is one feature; the page suggests many stores could run both.
 - [${APP_NAME} vs Alt Text Generator AI](${url("/image-voice/vs-alttextgenerator")}): credits that never expire, and two billing statements on its listing a buyer should confirm.

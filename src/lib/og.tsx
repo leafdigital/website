@@ -11,6 +11,27 @@ export const OG_SIZE = { width: 1200, height: 630 };
 const HANGUL = /[\u1100-\u11ff\u3130-\u318f\uac00-\ud7af]/;
 const CJK = /[\u3040-\u30ff\u3400-\u9fff\uff00-\uffef]/;
 
+/**
+ * The build depends on Google Fonts being reachable, so ride out a blip —
+ * then fail the build rather than ship a card full of boxes.
+ */
+async function fetchWithRetry(url: string, attempts = 4): Promise<Response> {
+  for (let i = 1; ; i++) {
+    try {
+      const res = await fetch(url, { signal: AbortSignal.timeout(10_000) });
+      if (res.ok) return res;
+      throw new Error(`HTTP ${res.status}`);
+    } catch (error) {
+      if (i >= attempts) {
+        throw new Error(`OG font fetch failed after ${i} tries: ${url}`, {
+          cause: error,
+        });
+      }
+      await new Promise((r) => setTimeout(r, 500 * 2 ** i));
+    }
+  }
+}
+
 async function cjkFont(text: string) {
   const family = HANGUL.test(text)
     ? "Noto Sans KR"
@@ -19,12 +40,12 @@ async function cjkFont(text: string) {
       : null;
   if (!family) return undefined;
 
-  const css = await fetch(
+  const css = await fetchWithRetry(
     `https://fonts.googleapis.com/css2?family=${family.replace(/ /g, "+")}:wght@800&text=${encodeURIComponent(text)}`,
   ).then((r) => r.text());
   const src = css.match(/src: url\((.+?)\) format\('(opentype|truetype)'\)/);
   if (!src) throw new Error(`OG: no ${family} subset for "${text}"`);
-  const data = await fetch(src[1]).then((r) => r.arrayBuffer());
+  const data = await fetchWithRetry(src[1]).then((r) => r.arrayBuffer());
   return [
     { name: family, data, weight: 800 as const, style: "normal" as const },
   ];

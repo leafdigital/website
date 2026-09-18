@@ -135,7 +135,7 @@
     },
     "four": {
       "title": "Deine Bilder sprechen die Sprache, in der deine Kunden einkaufen.",
-      "body": "Beschreibungen in der Sprache deines Shops — EN, DE, FR, ES, IT, NL, PT. Der Screenreader einer deutschen Kundin spricht Deutsch."
+      "body": "Beschreibungen in der Sprache deines Shops — EN, DE, FR, ES, IT, NL, PT, JA, KO. Der Screenreader einer deutschen Kundin spricht Deutsch."
     },
     "five": {
       "title": "Alt-Text und Barrierefreiheit nach EAA / ADA: erledigt, bevor jemand fragt.",
@@ -258,7 +258,7 @@
     },
     "languages": {
       "q": "In welchen Sprachen schreibt es?",
-      "a": "In der Sprache deines Shops: Englisch, Deutsch, Französisch, Spanisch, Italienisch, Niederländisch und Portugiesisch. Dein Bild-SEO wirkt in deinem Markt — und der Screenreader einer deutschen Kundin spricht Deutsch."
+      "a": "In der Sprache deines Shops: Englisch, Deutsch, Französisch, Spanisch, Italienisch, Niederländisch, Portugiesisch, Japanisch und Koreanisch. Dein Bild-SEO wirkt in deinem Markt — und der Screenreader einer deutschen Kundin spricht Deutsch."
     },
     "seoApp": {
       "q": "Ich habe schon eine SEO-App, in der Alt-Text enthalten ist.",

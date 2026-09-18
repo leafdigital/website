@@ -135,7 +135,7 @@
     },
     "four": {
       "title": "Vos images parlent la langue dans laquelle vos clients achètent.",
-      "body": "Des descriptions écrites dans la langue de votre boutique — EN, DE, FR, ES, IT, NL, PT. Le lecteur d’écran d’un client allemand parle allemand."
+      "body": "Des descriptions écrites dans la langue de votre boutique — EN, DE, FR, ES, IT, NL, PT, JA, KO. Le lecteur d’écran d’un client allemand parle allemand."
     },
     "five": {
       "title": "Alt text et accessibilité EAA / ADA : le dossier bouclé avant que quiconque vienne poser la question.",
@@ -258,7 +258,7 @@
     },
     "languages": {
       "q": "Dans quelles langues écrit-elle ?",
-      "a": "Celle de votre boutique : anglais, allemand, français, espagnol, italien, néerlandais et portugais. Votre SEO images fonctionne sur votre marché — et le lecteur d’écran d’un client allemand parle allemand."
+      "a": "Celle de votre boutique : anglais, allemand, français, espagnol, italien, néerlandais, portugais, japonais et coréen. Votre SEO images fonctionne sur votre marché — et le lecteur d’écran d’un client allemand parle allemand."
     },
     "seoApp": {
       "q": "J’ai déjà une app SEO qui inclut l’alt text.",
