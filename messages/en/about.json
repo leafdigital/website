@@ -29,17 +29,17 @@
   "work": {
     "title": "How we work",
     "sub": "Hold us to this list.",
-    "prices": "Prices published, always.",
+    "trust": "We don’t take your trust lightly. Every app starts with months of obsessing over which problem costs you most — and ships only when it’s world-class.",
     "approval": "Nothing touches your store without your approval, and every change undoes for 30 days.",
     "reconcile": "Numbers that tie out to Shopify’s own reports — if it doesn’t reconcile, it doesn’t ship.",
     "fit": "If our plans don’t fit your store, we say so and offer a waitlist instead of a sale.",
-    "replies": "Replies to any email reach the person who built the app — not a bot."
+    "proof": "We only build for problems we’ve watched cost real stores real money."
   },
   "faq": {
     "title": "Common questions",
     "who": {
       "q": "Who is behind Leaf Digital?",
-      "a": "Leaf is a small team that spent years building and fixing Shopify stores for brands before building apps. Every app comes from a problem we watched cost real stores real money. Replies to any email reach the person who built the app."
+      "a": "Leaf is a small team that spent years building and fixing Shopify stores for brands before building apps. Every app comes from a problem we watched cost real stores real money."
     },
     "safe": {
       "q": "Is my store data safe with Leaf apps?",
@@ -51,7 +51,7 @@
     },
     "free": {
       "q": "Do Leaf apps have free plans?",
-      "a": "Yes. Every Leaf app starts with a free scan that shows you what it found on your own store before you pay anything, and prices are always published — no sales calls, no custom quotes."
+      "a": "Yes. Every Leaf app starts with a free scan that shows you what it found on your own store before you pay anything — no sales calls, no custom quotes."
     }
   },
   "cta": {

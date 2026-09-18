@@ -29,17 +29,17 @@
   "work": {
     "title": "Como trabalhamos",
     "sub": "Cobre a gente por esta lista.",
-    "prices": "Preços publicados, sempre.",
+    "trust": "A gente não leva a sua confiança de forma leve. Todo app começa com meses de obsessão sobre qual problema mais te custa — e só vai para o ar quando é de nível mundial.",
     "approval": "Nada mexe na sua loja sem a sua aprovação, e toda mudança pode ser desfeita por 30 dias.",
     "reconcile": "Números que batem com os próprios relatórios do Shopify — se não concilia, não vai para o ar.",
     "fit": "Se os nossos planos não servem para a sua loja, a gente fala e oferece a lista de espera em vez de uma venda.",
-    "replies": "A resposta a qualquer email chega à pessoa que construiu o app — não a um bot."
+    "proof": "Só construímos para problemas que vimos custar dinheiro de verdade a lojas de verdade."
   },
   "faq": {
     "title": "Perguntas frequentes",
     "who": {
       "q": "Quem está por trás da Leaf Digital?",
-      "a": "A Leaf é um time pequeno que passou anos construindo e consertando lojas Shopify para marcas antes de criar apps. Cada app nasce de um problema que vimos custar dinheiro de verdade a lojas de verdade. A resposta a qualquer email chega à pessoa que construiu o app."
+      "a": "A Leaf é um time pequeno que passou anos construindo e consertando lojas Shopify para marcas antes de criar apps. Cada app nasce de um problema que vimos custar dinheiro de verdade a lojas de verdade."
     },
     "safe": {
       "q": "Os dados da minha loja estão seguros com os apps da Leaf?",
@@ -51,7 +51,7 @@
     },
     "free": {
       "q": "Os apps da Leaf têm plano gratuito?",
-      "a": "Sim. Todo app da Leaf começa com uma análise gratuita que mostra o que ela encontrou na sua própria loja antes de você pagar qualquer coisa, e os preços são sempre publicados — sem ligação de vendas, sem orçamento sob medida."
+      "a": "Sim. Todo app da Leaf começa com uma análise gratuita que mostra o que ela encontrou na sua própria loja antes de você pagar qualquer coisa — sem ligação de vendas, sem orçamento sob medida."
     }
   },
   "cta": {

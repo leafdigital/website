@@ -29,17 +29,17 @@
   "work": {
     "title": "Come lavoriamo",
     "sub": "Tienici a questa lista.",
-    "prices": "Prezzi pubblicati, sempre.",
+    "trust": "Non prendiamo la tua fiducia alla leggera. Ogni app nasce da mesi di ossessione su quale problema ti costa di più — ed esce solo quando è di livello mondiale.",
     "approval": "Niente tocca il tuo negozio senza la tua approvazione, e ogni modifica si annulla per 30 giorni.",
     "reconcile": "Numeri che tornano con i report di Shopify stesso — se non quadra, non esce.",
     "fit": "Se i nostri piani non vanno bene per il tuo negozio, te lo diciamo e ti offriamo la lista d’attesa invece di una vendita.",
-    "replies": "Le risposte a qualunque email arrivano alla persona che ha costruito l’app — non a un bot."
+    "proof": "Costruiamo solo per problemi che abbiamo visto costare soldi veri a negozi veri."
   },
   "faq": {
     "title": "Domande frequenti",
     "who": {
       "q": "Chi c’è dietro Leaf Digital?",
-      "a": "Leaf è un piccolo team che ha passato anni a costruire e sistemare negozi Shopify per i brand prima di costruire app. Ogni app nasce da un problema che abbiamo visto costare soldi veri a negozi veri. Le risposte a qualunque email arrivano alla persona che ha costruito l’app."
+      "a": "Leaf è un piccolo team che ha passato anni a costruire e sistemare negozi Shopify per i brand prima di costruire app. Ogni app nasce da un problema che abbiamo visto costare soldi veri a negozi veri."
     },
     "safe": {
       "q": "I dati del mio negozio sono al sicuro con le app Leaf?",
@@ -51,7 +51,7 @@
     },
     "free": {
       "q": "Le app Leaf hanno piani gratuiti?",
-      "a": "Sì. Ogni app Leaf parte con una scansione gratuita che ti mostra cosa ha trovato nel tuo negozio prima che tu paghi qualcosa, e i prezzi sono sempre pubblicati — niente chiamate commerciali, niente preventivi su misura."
+      "a": "Sì. Ogni app Leaf parte con una scansione gratuita che ti mostra cosa ha trovato nel tuo negozio prima che tu paghi qualcosa — niente chiamate commerciali, niente preventivi su misura."
     }
   },
   "cta": {

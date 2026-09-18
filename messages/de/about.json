@@ -29,17 +29,17 @@
   "work": {
     "title": "Wie wir arbeiten",
     "sub": "Nimm uns beim Wort.",
-    "prices": "Preise veröffentlicht, immer.",
+    "trust": "Wir nehmen dein Vertrauen nicht auf die leichte Schulter. Jede App beginnt mit Monaten, in denen wir besessen klären, welches Problem dich am meisten kostet — und erscheint erst, wenn sie Weltklasse ist.",
     "approval": "Nichts fasst deinen Shop an ohne deine Freigabe, und jede Änderung lässt sich 30 Tage lang rückgängig machen.",
     "reconcile": "Zahlen, die mit Shopifys eigenen Berichten übereinstimmen — was nicht aufgeht, wird nicht ausgeliefert.",
     "fit": "Wenn unsere Pläne nicht zu deinem Shop passen, sagen wir das und bieten dir die Warteliste statt eines Verkaufs an.",
-    "replies": "Antworten auf jede E-Mail landen bei der Person, die die App gebaut hat — nicht bei einem Bot."
+    "proof": "Wir bauen nur für Probleme, bei denen wir zugesehen haben, wie sie echte Shops echtes Geld kosten."
   },
   "faq": {
     "title": "Häufige Fragen",
     "who": {
       "q": "Wer steckt hinter Leaf Digital?",
-      "a": "Leaf ist ein kleines Team, das jahrelang Shopify-Shops für Marken gebaut und repariert hat, bevor es Apps gebaut hat. Jede App kommt aus einem Problem, bei dem wir zugesehen haben, wie es echte Shops echtes Geld kostet. Antworten auf jede E-Mail landen bei der Person, die die App gebaut hat."
+      "a": "Leaf ist ein kleines Team, das jahrelang Shopify-Shops für Marken gebaut und repariert hat, bevor es Apps gebaut hat. Jede App kommt aus einem Problem, bei dem wir zugesehen haben, wie es echte Shops echtes Geld kostet."
     },
     "safe": {
       "q": "Sind meine Shop-Daten bei Leaf-Apps sicher?",
@@ -51,7 +51,7 @@
     },
     "free": {
       "q": "Haben Leaf-Apps kostenlose Pläne?",
-      "a": "Ja. Jede Leaf-App beginnt mit einem kostenlosen Scan, der dir zeigt, was er in deinem eigenen Shop gefunden hat, bevor du irgendetwas zahlst — und die Preise sind immer veröffentlicht. Keine Verkaufsgespräche, keine individuellen Angebote."
+      "a": "Ja. Jede Leaf-App beginnt mit einem kostenlosen Scan, der dir zeigt, was er in deinem eigenen Shop gefunden hat, bevor du irgendetwas zahlst. Keine Verkaufsgespräche, keine individuellen Angebote."
     }
   },
   "cta": {

@@ -29,17 +29,17 @@
   "work": {
     "title": "Comment nous travaillons",
     "sub": "Tenez-nous à cette liste.",
-    "prices": "Des prix publiés, toujours.",
+    "trust": "Nous ne prenons pas votre confiance à la légère. Chaque app commence par des mois d’obsession sur le problème qui vous coûte le plus — et ne sort que lorsqu’elle est de classe mondiale.",
     "approval": "Rien ne touche votre boutique sans votre accord, et chaque changement s’annule pendant 30 jours.",
     "reconcile": "Des chiffres qui tombent juste avec les propres rapports de Shopify — si ça ne se rapproche pas, ça ne sort pas.",
     "fit": "Si nos formules ne conviennent pas à votre boutique, nous vous le disons et vous proposons la liste d’attente plutôt qu’une vente.",
-    "replies": "Les réponses à chaque e-mail arrivent à la personne qui a construit l’app — pas à un bot."
+    "proof": "Nous ne construisons que pour des problèmes que nous avons vus coûter de l’argent réel à de vraies boutiques."
   },
   "faq": {
     "title": "Questions fréquentes",
     "who": {
       "q": "Qui est derrière Leaf Digital ?",
-      "a": "Leaf est une petite équipe qui a passé des années à construire et réparer des boutiques Shopify pour des marques avant de créer des apps. Chaque app vient d’un problème que nous avons vu coûter de l’argent réel à de vraies boutiques. Les réponses à chaque e-mail arrivent à la personne qui a construit l’app."
+      "a": "Leaf est une petite équipe qui a passé des années à construire et réparer des boutiques Shopify pour des marques avant de créer des apps. Chaque app vient d’un problème que nous avons vu coûter de l’argent réel à de vraies boutiques."
     },
     "safe": {
       "q": "Les données de ma boutique sont-elles en sécurité avec les apps Leaf ?",
@@ -51,7 +51,7 @@
     },
     "free": {
       "q": "Les apps Leaf ont-elles des formules gratuites ?",
-      "a": "Oui. Chaque app Leaf commence par une analyse gratuite qui vous montre ce qu’elle a trouvé sur votre propre boutique avant que vous ne payiez quoi que ce soit, et les prix sont toujours publiés — pas d’appels commerciaux, pas de devis sur mesure."
+      "a": "Oui. Chaque app Leaf commence par une analyse gratuite qui vous montre ce qu’elle a trouvé sur votre propre boutique avant que vous ne payiez quoi que ce soit — pas d’appels commerciaux, pas de devis sur mesure."
     }
   },
   "cta": {

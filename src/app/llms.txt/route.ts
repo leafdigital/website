@@ -65,7 +65,7 @@ The guide is available in all eight site languages; the comparisons are English 
 ## Site
 
 - [Home](${url("/")}): the problem all four apps address — Shopify, the 3PL and the spreadsheet disagreeing about the same numbers.
-- [About](${url("/about")}): where Leaf comes from, what it believes, and the five commitments it asks to be held to — published prices, nothing changed without approval, numbers that reconcile to Shopify's own reports, a waitlist instead of a sale when a plan doesn't fit, and replies from the person who built the app.
+- [About](${url("/about")}): where Leaf comes from, what it believes, and the five commitments it asks to be held to — apps built only when they're world-class, nothing changed without approval, numbers that reconcile to Shopify's own reports, a waitlist instead of a sale when a plan doesn't fit, and building only for problems seen costing real stores real money.
 - [Support](${url("/support")}): undo, billing, response times, and exactly what the apps read and write.
 - [Security](${url("/security")}): the six Shopify scopes Image Voice requests and what each is for, what it can change, token encryption and store isolation, AI processing, retention, the mandatory erasure webhooks, and the records erasure does not reach yet.
 - [Terms of service](${url("/terms")}): billing through Shopify, published prices, approval before changes, the 30-day undo, and the limits of what the apps promise. Draft pending legal review.

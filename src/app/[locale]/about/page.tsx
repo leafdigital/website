@@ -38,13 +38,7 @@ const beliefs = ["one", "two", "three"] as const;
  * The deep FAQs belong on the app pages, where the objections are specific.
  */
 const faqKeys = ["who", "safe", "uninstall", "free"] as const;
-const commitments = [
-  "prices",
-  "approval",
-  "reconcile",
-  "fit",
-  "replies",
-] as const;
+const commitments = ["trust", "approval", "reconcile", "fit", "proof"] as const;
 
 /**
  * The commitments, as a numbered list on hairlines rather than a row of
