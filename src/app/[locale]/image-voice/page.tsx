@@ -376,7 +376,12 @@ export default function ImageVoicePage() {
       </Section>
 
       {/* 9 — The objections, answered before they are asked. */}
-      <Section divided containerClassName="max-w-[800px]">
+      <Section
+        id="faq"
+        divided
+        className="scroll-mt-16"
+        containerClassName="max-w-[800px]"
+      >
         <SectionHeading
           align="center"
           kicker={t("faq.kicker")}
