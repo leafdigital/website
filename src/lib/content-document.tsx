@@ -35,6 +35,7 @@ export function contentDocument({
   route,
   description,
   breadcrumb,
+  robots,
 }: {
   /** File stem under `content/{locale}/`. */
   doc: string;
@@ -42,6 +43,8 @@ export function contentDocument({
   description: string;
   /** The trail this page hangs off, excluding the site root and the page. */
   breadcrumb: { name: string; route: AppRoute }[];
+  /** Override the layout's indexing default — e.g. legal boilerplate. */
+  robots?: Metadata["robots"];
 }) {
   async function load(locale: string) {
     const { locale: resolved, fellBack } = resolveDocumentLocale(locale, doc);
@@ -63,6 +66,7 @@ export function contentDocument({
     return {
       title: { absolute: `${mod.meta.title} — ${SITE_NAME}` },
       description,
+      ...(robots ? { robots } : {}),
       /**
        * One rule, and it covers both kinds of document here.
        *

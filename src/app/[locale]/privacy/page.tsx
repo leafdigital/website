@@ -34,6 +34,8 @@ export async function generateMetadata({
   return {
     title: mod.meta.title,
     description: `How ${SITE_NAME} handles data across this website and the ${APP_NAME} app — what we access, what we store, how long we keep it, and the AI processing we disclose plainly.`,
+    // Legal boilerplate has no place in search results, indexable or not.
+    robots: { index: false, follow: true },
     ...localeMetadata("/privacy", locale),
     alternates: {
       ...localeMetadata("/privacy", locale).alternates,

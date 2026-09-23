@@ -13,6 +13,8 @@ const { generateMetadata, Page } = contentDocument({
   route: "/terms",
   description: `The terms for ${APP_NAME} and the ${SITE_NAME} website: Shopify billing, published prices, approval before any change, a 30-day undo, and what we do and don't promise.`,
   breadcrumb: [],
+  // Legal boilerplate has no place in search results, indexable or not.
+  robots: { index: false, follow: true },
 });
 
 export { generateMetadata };

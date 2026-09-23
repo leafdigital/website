@@ -3,15 +3,14 @@ import {
   FOUNDING_CURATOR_PRICE,
   OFFER,
   PRICING,
-  SITE_NAME,
   SUPPORT_EMAIL,
 } from "@/lib/constants";
 
 export const meta = {
   title: "Terms of service",
-  // PUBLISH RULE (GC review, 2026-09-11): `draft` stays true until September
-  // 17, 2026 — the LLC named below does not exist before its effective date.
-  // When it comes off, set `updated` to the actual go-live date, not this one.
+  // PUBLISH RULE (GC review, 2026-09-11): `draft` stays true until legal
+  // sign-off. When it comes off, set `updated` to the actual go-live date,
+  // not this one.
   updated: "2026-09-11",
   draft: true,
 };
@@ -28,9 +27,8 @@ the app will answer. Everything below is that, in detail.
 
 ## Who you're agreeing with
 
-These terms are an agreement between you and Leaf Digital Partners LLC, a
-California limited liability company which operates the {SITE_NAME} apps and
-this website ("we", "us").
+These terms are an agreement between you and Leaf Digital, which operates
+our apps and this website ("we", "us").
 "You" means the business that installs one of our apps or uses this website,
 and the person accepting these terms confirms they have authority to bind that
 business. Our apps are built for merchants running a business, not for
@@ -185,4 +183,4 @@ liability, disputes — survive after you uninstall.
 
 ## Contact
 
-Leaf Digital Partners LLC — <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>
+Leaf Digital — <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>
