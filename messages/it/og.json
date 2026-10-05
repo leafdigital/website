@@ -6,16 +6,16 @@
     "kicker": "Image Voice",
     "title": "{silent, number} delle tue immagini non dicono nulla"
   },
-  "reorderLoop": {
-    "kicker": "Reorder Loop",
-    "title": "I tuoi soldi sono bloccati."
+  "ledger": {
+    "kicker": "Ledger",
+    "title": "Hai pagato per 1.000. Ne sono arrivate 980."
   },
-  "countCheck": {
-    "kicker": "Count Check",
-    "title": "Il tuo stock sta sparendo."
+  "billCheck": {
+    "kicker": "3PL Bill Check",
+    "title": "Il tuo 3PL ti ha fatturato troppo."
   },
   "runway": {
-    "kicker": "Runway",
+    "kicker": "Inventory Runway",
     "title": "Il tuo best seller è esaurito."
   },
   "about": {

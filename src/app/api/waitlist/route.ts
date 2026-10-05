@@ -3,8 +3,8 @@ import { SUPPORT_EMAIL } from "@/lib/constants";
 
 /**
  * The waitlist. ONE list across every app — a visitor who signs up on
- * /count-check is first in line for /reorder-loop too, and the copy on every
- * lab page promises exactly that. `source` records which page they came from
+ * /runway is first in line for Ledger too, and the copy on every lab page
+ * promises exactly that. `source` records which page they came from
  * so the inbox keeps the context; it is not a list they joined.
  *
  * No database at this volume — submissions land in the support inbox via
@@ -14,12 +14,7 @@ import { SUPPORT_EMAIL } from "@/lib/constants";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 /** Where the form was rendered. Unknown values are recorded, never rejected. */
-const KNOWN_SOURCES = new Set([
-  "reorder-loop",
-  "count-check",
-  "runway",
-  "home",
-]);
+const KNOWN_SOURCES = new Set(["ledger", "3pl-bill-check", "runway", "home"]);
 
 export async function POST(request: Request) {
   let body: { email?: string; source?: string; company?: string };

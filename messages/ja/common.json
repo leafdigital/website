@@ -9,7 +9,13 @@
     "about": "Leafについて",
     "freeScan": "無料スキャン",
     "earlyAccess": "先行アクセスに登録",
-    "joinWaitlist": "ウェイトリストに登録"
+    "joinWaitlist": "ウェイトリストに登録",
+    "forwardInvoice": "先月の請求書を転送する",
+    "sendPos": "直近10件のPOを送る"
+  },
+  "mail": {
+    "ledger": "Ledger — 直近10件のPO",
+    "billCheck": "3PL Bill Check — 先月の請求書"
   },
   "footer": {
     "label": "フッター",

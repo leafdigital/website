@@ -8,7 +8,7 @@
     "headline": "I tuoi soldi<br></br>si <accent>nascondono.</accent>",
     "subhead": "Shopify, il tuo 3PL e il tuo foglio di calcolo raccontano tre storie diverse. E i soldi si nascondono nelle crepe.",
     "ctaPrimary": "Dove si nascondono i tuoi? ↓",
-    "finePrint": "La nostra prima app è live: Image Voice, la scansione delle immagini mute. Altre tre sono in laboratorio — Reorder Loop, Count Check e Runway. Chi è primo in lista lo sa per primo."
+    "finePrint": "La nostra prima app è live: Image Voice, la scansione delle immagini mute. Altre tre sono in laboratorio — Ledger, 3PL Bill Check e Inventory Runway. Chi è primo in lista lo sa per primo."
   },
   "inventory": {
     "title": "Giacenze di magazzino · stesso set di SKU, stesso giorno",
@@ -18,7 +18,7 @@
     "units": "{count, number} unità",
     "gap": "Lo scarto",
     "gapValue": "{units, number} unità · ~{dollars, number, ::currency/USD precision-integer}",
-    "caption": "Count Check + Reorder Loop — in laboratorio. È questa la crepa che sorvegliano, ogni giorno. <link>→</link>"
+    "caption": "Ledger — in laboratorio. Tre numeri in tre posti; è questa la crepa che sorveglia, PO per PO. <link>→</link>"
   },
   "villain": {
     "kicker": "Ti suona familiare?",
@@ -56,13 +56,13 @@
       "description": "Le tue immagini sono mute — per Google, per gli acquirenti AI, per gli screen reader. Scansione gratuita, una descrizione vera per ogni immagine.",
       "cta": "Scansiona le tue immagini gratis →"
     },
-    "reorderLoop": {
-      "description": "Nove app prevedono il tuo magazzino. Nessuna porta a termine l’ordine. Reorder Loop fa tutto l’ordine — tu dici solo di sì.",
-      "cta": "Iscriviti alla lista d’attesa →"
+    "ledger": {
+      "description": "Hai pagato per 1.000. Ne sono arrivate 980. Nessuno ha contato. Ledger tiene il PO tracker a partire dai documenti stessi — ordinato, fatturato, arrivato, quanto è costata davvero ogni unità.",
+      "cta": "Manda i tuoi ultimi dieci PO →"
     },
-    "countCheck": {
-      "description": "Il tuo 3PL dice un numero. Shopify ne dice un altro. La differenza sono i tuoi soldi — e nessuno la sta controllando.",
-      "cta": "Iscriviti alla lista d’attesa →"
+    "billCheck": {
+      "description": "Il tuo 3PL ti ha fatturato troppo. Nessuno se n’è accorto. Inoltra la fattura del mese scorso e ricevi le righe che non corrispondono a quanto hai concordato di pagare — quantificate, lo stesso giorno, gratis.",
+      "cta": "Inoltra l’ultima fattura →"
     },
     "runway": {
       "description": "Il tuo best seller finisce e nessuno te lo dice. Una lista a settimana: cosa sta per esaurirsi, quando e quanto ordinare.",
@@ -76,9 +76,9 @@
     "withBody": "Apri un’email a settimana, vedi i numeri quadrare e torni a costruire la cosa per cui hai aperto l’azienda."
   },
   "cta": {
-    "title": "Reorder Loop è in laboratorio. Sii il primo quando girerà sui tuoi ordini.",
-    "sub": "Non ti mostreremo i numeri di qualcun altro. Ti mostreremo i tuoi — il giorno in cui potrà girare sul tuo negozio. Una lista, tutte le prossime app Leaf.",
-    "button": "Iscriviti alla lista d’attesa",
+    "title": "Ledger è in laboratorio. Manda dieci PO e guarda cosa è arrivato.",
+    "sub": "Non ti mostreremo i numeri di qualcun altro. Ti mostreremo i tuoi — i tuoi ultimi dieci PO, ordinato, fatturato e arrivato, uno accanto all’altro, in circa 30 minuti. Gratis, e i risultati sono tuoi comunque.",
+    "button": "Manda i tuoi ultimi dieci PO",
     "note": "Intanto, già disponibile: parti da dove ogni negozio perde per primo. <link>Avvia la scansione immagini gratuita →</link>"
   }
 }

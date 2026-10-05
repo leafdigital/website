@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
+import { TrackedExternalLink } from "@/components/analytics/tracked-external-link";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { ContrastCards } from "@/components/contrast-cards";
 import { DataCard } from "@/components/data-card";
@@ -12,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import { PillBadge } from "@/components/ui/pill-badge";
 import { Link } from "@/i18n/navigation";
 import { SAMPLE } from "@/lib/constants";
+import { mailto } from "@/lib/mailto";
 import { localeMetadata } from "@/lib/metadata";
 import { organization } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -44,13 +46,13 @@ const villainRows = ["one", "two", "three", "four"] as const;
  * The homepage, v2 — the same argument as v3, told as one descent.
  *
  * The routing is the honest part and it survives the redesign: the hero
- * sends you to the one app you can install today, and the closing band
- * sends you to the waitlist for the one this page spends its middle
- * describing. We do not point a "run the free scan" button at a scanner
- * that is still in the lab.
+ * sends you to the index, and the closing band asks for the one thing the
+ * flagship needs to start — your last ten POs, by email, free. We do not
+ * point a "run the free scan" button at a scanner that is still in the lab.
  */
 export default function Home() {
   const t = useTranslations("home");
+  const common = useTranslations("common");
   const { inventory } = SAMPLE;
 
   return (
@@ -116,10 +118,7 @@ export default function Home() {
             title={t("inventory.title")}
             caption={t.rich("inventory.caption", {
               link: (chunks) => (
-                <Link
-                  href="/count-check"
-                  className="text-brand-800 font-semibold"
-                >
+                <Link href="/ledger" className="text-brand-800 font-semibold">
                   {chunks}
                 </Link>
               ),
@@ -210,21 +209,23 @@ export default function Home() {
         />
       </Section>
 
-      {/* 6 — The one thing to do. Waitlist-first: the app this page argues
-          for is the one that is still in the lab. */}
+      {/* 6 — The one thing to do. The flagship's own ask: ten POs, by email,
+          and the free ledger comes back. No waitlist — the audit is the
+          pitch, and it runs on the visitor's own documents. */}
       <CtaBand
         title={t("cta.title")}
         sub={t("cta.sub")}
         action={
           <Button asChild size="lg" variant="onDark" className="shadow-on-dark">
-            <TrackedLink
-              href="/reorder-loop#waitlist"
+            {/* A mailto — a plain anchor, not the locale-aware Link. */}
+            <TrackedExternalLink
+              href={mailto(common("mail.ledger"))}
               data-motion="dot"
-              event="cta_app_view"
-              eventProps={{ location: "home-cta" }}
+              event="cta_audit_request"
+              eventProps={{ location: "home-cta", app: "ledger" }}
             >
               {t("cta.button")}
-            </TrackedLink>
+            </TrackedExternalLink>
           </Button>
         }
         note={t.rich("cta.note", {

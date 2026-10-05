@@ -19,9 +19,11 @@ import type { AppRoute } from "@/lib/routes";
 import { breadcrumbs, faqPage, organization } from "@/lib/schema";
 
 /**
- * The three lab apps make the same argument in the same order, so they are
- * one page schema filled from three message files rather than three files
- * that will drift.
+ * The waitlist pages make the same argument in the same order, so they are
+ * one page schema filled from a message file rather than files that drift.
+ * Inventory Runway is the one left on it: Ledger and 3PL Bill Check are
+ * asked for by email rather than joined, and have their own schema in
+ * `audit-app-page.tsx`.
  *
  * The order is the argument and it does not vary per app:
  *
@@ -59,7 +61,7 @@ export function LabAppPage({
   visual,
   objections = defaultObjections,
 }: {
-  /** The message namespace: `reorderLoop`, `countCheck`, `lostSales`. */
+  /** The message namespace: `runway`. */
   namespace: string;
   route: AppRoute;
   /** The brand name, for the breadcrumb trail. Never translated. */

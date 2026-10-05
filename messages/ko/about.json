@@ -11,7 +11,7 @@
   "origin": {
     "title": "우리가 어디서 왔는지",
     "one": "Leaf는 Shopify 스토어 안에서 시작됐어요. 여러 브랜드의 스토어를 직접 만들고 고치며 몇 년을 보냈죠. 밤 11시에 당신이 앉아 있는 바로 그 의자에 앉아서요. 그리고 어느 스토어에서나 똑같았어요. <lead>돈은 기능에서 새지 않아요. 이음매에서 새요.</lead> Shopify는 이 숫자를 말하고, 3PL은 저 숫자를 말하고, 비싼 건 전부 눈에 보이지 않아요.",
-    "two": "그 문제를 책임지는 사람이 없었어요. 그래서 우리가 맡기로 했어요. 그게 우리가 Leaf 앱을 만드는 이유예요. <imageVoice>Image Voice</imageVoice>, <reorderLoop>Reorder Loop</reorderLoop>, <countCheck>Count Check</countCheck>, <runway>Runway</runway>. 각각 딱 하나의 이음매를 겨냥하고, 거기 숨은 돈을 찾아낸 다음 일까지 직접 해내도록 만들었어요."
+    "two": "그 문제를 책임지는 사람이 없었어요. 그래서 우리가 맡기로 했어요. 그게 우리가 Leaf 앱을 만드는 이유예요. <imageVoice>Image Voice</imageVoice>, <ledger>Ledger</ledger>, <billCheck>3PL Bill Check</billCheck>, <runway>Inventory Runway</runway>. 각각 딱 하나의 이음매를 겨냥하고, 거기 숨은 돈을 찾아낸 다음 일까지 직접 해내도록 만들었어요."
   },
   "believe": {
     "title": "우리가 믿는 것",

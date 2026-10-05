@@ -5,24 +5,28 @@ thesis behind it. Next.js 16 (App Router) + Tailwind v4, six locales.
 
 ## Pages
 
-| Route           | What it is                                             |
-| --------------- | ------------------------------------------------------ |
-| `/`             | The suite. Hero, the villain, the plan, the apps index |
-| `/image-voice`  | The live app — free audit, pricing, FAQ                |
-| `/reorder-loop` | In the lab — the whole reorder, waitlist               |
-| `/count-check`  | In the lab — 3PL vs Shopify, daily, waitlist           |
-| `/lost-sales`   | In the lab — what stockouts cost, waitlist             |
-| `/about`        | Where Leaf comes from, beliefs, the list we keep       |
-| `/privacy`      | Tier-3 document (MDX per locale)                       |
-| `/support`      | Utility copy + FAQ                                     |
+| Route             | What it is                                              |
+| ----------------- | ------------------------------------------------------- |
+| `/`               | The suite. Hero, the villain, the plan, the apps index  |
+| `/image-voice`    | The live app — free audit, pricing, FAQ                 |
+| `/ledger`         | The flagship, in the lab — PO tracker from documents    |
+| `/3pl-bill-check` | In the lab — the 3PL invoice read against the rate card |
+| `/runway`         | In the lab — Inventory Runway, days of cover, waitlist  |
+| `/about`          | Where Leaf comes from, beliefs, the list we keep        |
+| `/privacy`        | Tier-3 document (MDX per locale)                        |
+| `/support`        | Utility copy + FAQ                                      |
 
-The three lab pages are one page schema — `src/components/lab-app-page.tsx` —
-filled from three message files. They make the same argument in the same
-order, so they are one component rather than three files that drift. What a
-page owns is its hero visual and its accent word.
+The two audit pages (Ledger, 3PL Bill Check) are one page schema —
+`src/components/audit-app-page.tsx`, built from the Image Voice parts — filled
+from two message files. Their ask is an email (forward an invoice, send ten
+POs), so the primary CTA is a mailto with a localized subject from
+`common.mail.*`. The waitlist page (Inventory Runway) keeps the older schema in
+`src/components/lab-app-page.tsx`. What a page owns is its hero visual, its
+specimen card and its accent word.
 
-`/hidden-margin` was retired, `/reorder-engine` renamed to `/reorder-loop`
-and `/lost-sales` to `/runway`; every old route 301s in `next.config.ts`.
+Retired routes 301 in `next.config.ts`: `/hidden-margin`, `/reorder-engine`
+and `/reorder-loop` to the homepage (killed), `/count-check` to
+`/3pl-bill-check` (replaced), `/lost-sales` to `/runway` (renamed).
 
 English is unprefixed (`/image-voice`); every other locale carries its segment
 (`/de/image-voice`). Old `/en/…` URLs redirect to the short form. Never build

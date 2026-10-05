@@ -2,25 +2,25 @@ import { useTranslations } from "next-intl";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import {
   APP_NAME,
-  COUNT_CHECK_NAME,
+  BILL_CHECK_NAME,
+  LEDGER_NAME,
   RUNWAY_NAME,
-  REORDER_LOOP_NAME,
 } from "@/lib/constants";
 import type { AppRoute } from "@/lib/routes";
 import { cn } from "@/lib/utils";
 
+/**
+ * The live app leads; the lab apps follow in the order the line is argued —
+ * Ledger is the flagship, so it is the first thing after the one you can
+ * install today.
+ */
 const apps: { key: string; name: string; href: AppRoute; live: boolean }[] = [
   { key: "imageVoice", name: APP_NAME, href: "/image-voice", live: true },
+  { key: "ledger", name: LEDGER_NAME, href: "/ledger", live: false },
   {
-    key: "reorderLoop",
-    name: REORDER_LOOP_NAME,
-    href: "/reorder-loop",
-    live: false,
-  },
-  {
-    key: "countCheck",
-    name: COUNT_CHECK_NAME,
-    href: "/count-check",
+    key: "billCheck",
+    name: BILL_CHECK_NAME,
+    href: "/3pl-bill-check",
     live: false,
   },
   { key: "runway", name: RUNWAY_NAME, href: "/runway", live: false },

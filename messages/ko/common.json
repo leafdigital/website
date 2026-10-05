@@ -9,7 +9,13 @@
     "about": "소개",
     "freeScan": "무료 스캔",
     "earlyAccess": "먼저 써 보기",
-    "joinWaitlist": "대기자 명단 등록"
+    "joinWaitlist": "대기자 명단 등록",
+    "forwardInvoice": "지난 인보이스 전달하기",
+    "sendPos": "지난 PO 열 건 보내기"
+  },
+  "mail": {
+    "ledger": "Ledger — 지난 PO 열 건",
+    "billCheck": "3PL Bill Check — 지난달 인보이스"
   },
   "footer": {
     "label": "푸터",

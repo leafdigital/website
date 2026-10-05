@@ -9,7 +9,8 @@ export const contentType = "image/png";
  * card itself is localized. It is the fallback description on the social
  * card, not the card's visible copy.
  */
-export const alt = "Reorder Loop — your cash is trapped";
+export const alt =
+  "3PL Bill Check — your 3PL overbilled you and nobody caught it";
 
 /** One card per locale, prerendered. */
 export function generateStaticParams() {
@@ -25,7 +26,7 @@ export default async function OgImage({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "og" });
   return renderOgImage({
-    kicker: t("reorderLoop.kicker"),
-    title: t("reorderLoop.title"),
+    kicker: t("billCheck.kicker"),
+    title: t("billCheck.title"),
   });
 }

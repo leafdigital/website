@@ -1,16 +1,16 @@
 {
   "meta": {
-    "title": "Dias de cobertura, não alerta por unidade — Runway",
-    "description": "Seu campeão de vendas acaba e ninguém te avisa. O Runway manda uma lista por semana: o que está acabando, quando, quanto pedir e o que esse pedido prende de caixa."
+    "title": "Dias de cobertura, não alerta por unidade — Inventory Runway",
+    "description": "Seu campeão de vendas acaba e ninguém te avisa. O Inventory Runway manda uma lista por semana: o que está acabando, quando, quanto pedir e o que esse pedido prende de caixa."
   },
   "hero": {
-    "badge": "Runway · no laboratório · lista de espera aberta",
+    "badge": "Inventory Runway · no laboratório · lista de espera aberta",
     "kicker": "Ninguém está olhando a prateleira",
     "headline": "Seu campeão de vendas acabou. <accent>Ninguém te avisou.</accent>",
-    "subhead": "O Runway manda uma lista por semana: o que está acabando, quando e quanto pedir. Você lê. Alguém age.",
+    "subhead": "O Inventory Runway manda uma lista por semana: o que está acabando, quando e quanto pedir. Você lê. Alguém age.",
     "ctaPrimary": "Entrar na lista de espera",
     "ctaSecondary": "O que muda",
-    "finePrint": "Agora mesmo tem produto seu que não dá para comprar. O Runway te diz qual, e quanto ele costuma vender, no primeiro minuto."
+    "finePrint": "Agora mesmo tem produto seu que não dá para comprar. O Inventory Runway te diz qual, e quanto ele costuma vender, no primeiro minuto."
   },
   "card": {
     "title": "Lista de segunda · uma linha, exemplo",
@@ -51,7 +51,7 @@
     },
     "two": {
       "title": "Você fica sabendo a tempo de pedir",
-      "body": "O aviso é em dias de cobertura contra o lead time real do seu fornecedor — não uma contagem de unidades. Nove dias com um fornecedor de 3 dias está tranquilo. Nove dias com um de 26 já é tarde. O Runway sabe a diferença."
+      "body": "O aviso é em dias de cobertura contra o lead time real do seu fornecedor — não uma contagem de unidades. Nove dias com um fornecedor de 3 dias está tranquilo. Nove dias com um de 26 já é tarde. O Inventory Runway sabe a diferença."
     },
     "three": {
       "title": "Cada linha precifica o pedido",
@@ -87,9 +87,9 @@
     "kicker": "A diferença",
     "title": "Você deixa de ser quem percebe.",
     "sub": "Campeões na prateleira. Caixa não preso no resto.",
-    "withoutLabel": "Sem o Runway",
+    "withoutLabel": "Sem o Inventory Runway",
     "withoutBody": "Você descobre no zero. Pede grande para aquilo parar. O caixa fica preso. E continua sendo você quem tem que perceber.",
-    "withLabel": "Com o Runway",
+    "withLabel": "Com o Inventory Runway",
     "withBody": "Segunda, uma lista. O que está acabando, quando, quanto, o que prende de caixa. Alguém age. Uma vez por mês, uma linha para você: o que foi reposto antes de zerar, e o que não foi."
   },
   "cta": {

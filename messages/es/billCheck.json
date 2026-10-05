@@ -1,0 +1,164 @@
+{
+  "meta": {
+    "title": "Tu 3PL te cobró de más — auditoría de facturas | 3PL Bill Check",
+    "description": "Cuarenta páginas al mes, aprobadas porque siempre se aprueban. 3PL Bill Check lee la factura entera contra tu tarifario y lo que de verdad se envió, y te devuelve las líneas que no cuadran — con precio, en el vocabulario de tu 3PL. La primera factura, gratis."
+  },
+  "hero": {
+    "badge": "3PL Bill Check · en el laboratorio · primera factura gratis",
+    "headline": "Tu 3PL te cobró de más. <accent>Nadie se dio cuenta.</accent>",
+    "subhead": "<lead>Tarifas de picking, almacenaje, recepción, un recuento que no cuadra con Shopify</lead> — cuarenta páginas, aprobadas porque siempre se aprueban. Reenvía la factura del mes pasado. Recibes las líneas que no cuadran con lo que acordaste pagar, en dólares, el mismo día. Gratis.",
+    "ctaPrimary": "Reenvía tu última factura",
+    "ctaSecondary": "Qué cambia",
+    "finePrint": "Una factura, gratis · Nada que instalar · Los hallazgos son tuyos, sigas o no"
+  },
+  "card": {
+    "title": "Factura del mes pasado · {pages, number} páginas · ejemplo",
+    "pick": "Tarifa de picking · {count, number} pedidos",
+    "storage": "Almacenaje · {count, number} palés",
+    "receiving": "Recepción · {count, number} unidades",
+    "other": "{count, number} líneas más",
+    "over": "+{amount, number, ::currency/USD precision-integer}",
+    "gap": "{lines, number} líneas fuera de tu tarifario",
+    "gapValue": "{amount, number, ::currency/USD precision-integer}",
+    "caption": "Ejemplo. Tu factura, el mismo día — cada línea enseña la tarifa del contrato con la que se contrastó."
+  },
+  "task": {
+    "eyebrow": "El problema de la tarea",
+    "opener": "Nadie cruza 2.000 tarifas de picking con 2.000 pedidos.",
+    "middleOne": "La factura llega cada mes. La única persona que podría revisarla eres tú, y es el trabajo que nunca entra en la lista.",
+    "middleTwo": "Así que se aprueba — dando por hecho que el 3PL hizo bien las cuentas.",
+    "doc": {
+      "name": "Factura 3PL — marzo.pdf",
+      "meta": "{pages, number} páginas",
+      "stamp": "Aprobada · 23:42",
+      "caption": "Todas las tiendas la aprueban. Nadie la lee."
+    }
+  },
+  "prices": {
+    "kicker": "Un villano, tres precios",
+    "title": "La factura te cobra tres veces",
+    "drift": {
+      "label": "TARIFA A LA DERIVA",
+      "statement": "La tarifa de picking que negociaste no es la de la página 6.",
+      "body": "Nadie te lo dijo, y está en cada pedido de este mes."
+    },
+    "units": {
+      "label": "LAS UNIDADES QUE FALTAN",
+      "statement": "Tu 3PL dice 412. Shopify dice 447.",
+      "body": "Treinta y cinco unidades que no son de nadie — y estás pagando almacenaje por stock que no puedes vender."
+    },
+    "clock": {
+      "label": "EL RELOJ",
+      "statement": "Tu contrato te da un plazo para reclamar.",
+      "body": "Cuando se cierra, la pérdida es tuya, en silencio, para siempre."
+    }
+  },
+  "confess": {
+    "kicker": "El problema de la aprobación",
+    "title": "Aprobada, pero cobrada de más.",
+    "sub": "“Nuestro 3PL es buenísimo, nunca hemos tenido un problema.” Nunca has encontrado uno — no es lo mismo. La mayoría de las líneas de la mayoría de las facturas están bien. Las que no, se esconden en el volumen, y el volumen es lo que nadie lee.",
+    "specimenLabel": "Una línea de la reclamación — lo que recibe tu 3PL",
+    "feeCode": "Código de tarifa",
+    "feeCodeValue": "PICK-STD",
+    "contractRate": "Tarifa del contrato",
+    "billedRate": "Tarifa facturada",
+    "rate": "{amount, number, ::currency/USD}",
+    "orders": "Pedidos",
+    "ordersValue": "{count, number}",
+    "difference": "Diferencia",
+    "differenceValue": "{amount, number, ::currency/USD}",
+    "specimenCaption": "Su código de tarifa, su línea del contrato, su recuento y la diferencia. Sin adjetivos.",
+    "closer": "Esto no es una pelea con tu 3PL. Son sus propias cuentas devueltas en su propio vocabulario — <lead>código de tarifa, tarifa del contrato, tarifa facturada, número de pedidos, diferencia.</lead> Nada más. Los buenos 3PL corrigen esa línea. Y si la factura está limpia, te lo decimos — has perdido diez minutos."
+  },
+  "how": {
+    "kicker": "Reenvía. Cruza. Reclama.",
+    "title": "Cómo 3PL Bill Check lee tu factura",
+    "forward": {
+      "title": "Reenvía",
+      "body": "Mandas la factura. Ese es todo tu trabajo."
+    },
+    "match": {
+      "title": "Cruza",
+      "body": "Cada línea se contrasta con lo que acordaste pagar y con lo que pasó de verdad: pedidos enviados, unidades recibidas, stock en el almacén."
+    },
+    "dispute": {
+      "title": "Reclama",
+      "body": "Lo que no cuadra vuelve con precio, con fecha y escrito para tu 3PL — listo para reenviar, con el plazo de reclamación aún abierto."
+    },
+    "footer": "Una vez conectado a tu 3PL, lee cada factura en cuanto llega — sin ti. Auditoría → aprobación → autonomía ganada. Así funciona cada app de Leaf."
+  },
+  "changes": {
+    "kicker": "Qué cambia para ti",
+    "title": "No es una lista de funciones — es lo que es distinto el martes",
+    "sub": "Esto es lo que pasa de verdad, desde el día en que reenvías la primera factura.",
+    "one": {
+      "label": "El mismo día",
+      "title": "Sabes si la factura del mes pasado estaba bien.",
+      "body": "Por primera vez, la respuesta no es “probablemente”."
+    },
+    "two": {
+      "label": "Mes uno",
+      "title": "La factura se lee antes de pagarla.",
+      "body": "La apruebas sabiendo qué hay dentro, no esperando que esté bien."
+    },
+    "three": {
+      "label": "Mes dos",
+      "title": "Ves qué se movió desde el mes pasado.",
+      "body": "Una tarifa que derivó, una línea que apareció. Lo cazas el mes en que empieza, no el año en que se descubre."
+    },
+    "four": {
+      "label": "Mes tres",
+      "title": "Los casos sueltos se vuelven un patrón con fechas.",
+      "body": "Las unidades que faltan dejan de ser una sensación y se convierten en una reclamación."
+    },
+    "five": {
+      "label": "A partir de ahí",
+      "title": "Entras a renegociar con sus cuentas en la mano.",
+      "body": "O te vas, y sabes exactamente por qué."
+    },
+    "six": {
+      "label": "Antes de que se mueva dinero",
+      "title": "La auditoría gratis es todo el argumento.",
+      "body": "Factura limpia, te lo decimos."
+    }
+  },
+  "stop": {
+    "kicker": "Fuera de tu lista",
+    "title": "Lo que dejas de hacer",
+    "one": "Aprobar una factura de cuarenta páginas a las 23:42 porque no hay otra opción.",
+    "two": "Preguntarte si el recuento del almacén es el recuento de Shopify.",
+    "three": "Descubrir a fin de año lo que podrías haber reclamado en marzo.",
+    "four": "Discutir con tu 3PL en tus palabras en vez de en las suyas."
+  },
+  "trust": "Aquí nada se sostiene sobre la confianza. La primera factura se lee gratis, cada hallazgo enseña la línea del contrato con la que se contrastó, y la reclamación sale en tu nombre, no en el nuestro. Lo único que te pedimos creer es tu propia factura.",
+  "faq": {
+    "kicker": "Diligencia debida",
+    "title": "Las preguntas que nosotros también haríamos",
+    "sour": {
+      "q": "¿Esto va a estropear la relación con mi 3PL?",
+      "a": "No. El paquete es su código de tarifa, su línea del contrato, su recuento y la diferencia. Sin adjetivos. Así es como los buenos 3PL quieren que se lo digan."
+    },
+    "clean": {
+      "q": "¿Y si mi factura está limpia?",
+      "a": "Entonces lo dice y has perdido diez minutos. Preferimos perderte a inventar un hallazgo."
+    },
+    "spreadsheet": {
+      "q": "¿Esto no es solo una hoja de cálculo?",
+      "a": "Para una factura, sí — es la hoja que ibas a montar y no montaste. Para doce, con el plazo de reclamación corriendo y el recuento del mes pasado contra el de este, es la que de verdad se mantiene."
+    },
+    "bookkeeper": {
+      "q": "¿No puede hacerlo mi contable?",
+      "a": "Cuadra los dólares con el banco. Nadie de tu lado cuadra las tarifas de picking con los pedidos. Esa es la grieta."
+    },
+    "touch": {
+      "q": "¿Qué toca?",
+      "a": "Lee tu factura, tu contrato, tus pedidos y los propios informes de tu 3PL. No escribe nada en tu tienda."
+    }
+  },
+  "cta": {
+    "title": "Reenvía una factura. Mira qué dice.",
+    "sub": "Dos futuros: la factura sigue aprobándose a las 23:42, o se lee.",
+    "button": "Reenvía tu última factura",
+    "note": "Las imágenes mudas ya tienen arreglo hoy. <link>Image Voice está vivo — lanza ese análisis ahora →</link>"
+  }
+}

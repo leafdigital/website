@@ -1,16 +1,16 @@
 {
   "meta": {
-    "title": "Reichweite in Tagen statt Stück-Alarm — Runway",
-    "description": "Dein Bestseller geht aus und niemand sagt dir Bescheid. Runway schickt eine Liste pro Woche: was zur Neige geht, wann, wie viel zu bestellen ist und was diese Bestellung bindet."
+    "title": "Reichweite in Tagen statt Stück-Alarm — Inventory Runway",
+    "description": "Dein Bestseller geht aus und niemand sagt dir Bescheid. Inventory Runway schickt eine Liste pro Woche: was zur Neige geht, wann, wie viel zu bestellen ist und was diese Bestellung bindet."
   },
   "hero": {
-    "badge": "Runway · im Labor · Warteliste offen",
+    "badge": "Inventory Runway · im Labor · Warteliste offen",
     "kicker": "Niemand schaut aufs Regal",
     "headline": "Dein Bestseller ist aus. <accent>Niemand hat es dir gesagt.</accent>",
-    "subhead": "Runway schickt eine Liste pro Woche: was zur Neige geht, wann und wie viel zu bestellen ist. Du liest sie. Jemand handelt danach.",
+    "subhead": "Inventory Runway schickt eine Liste pro Woche: was zur Neige geht, wann und wie viel zu bestellen ist. Du liest sie. Jemand handelt danach.",
     "ctaPrimary": "Auf die Warteliste",
     "ctaSecondary": "Was sich ändert",
-    "finePrint": "Genau jetzt sind einige deiner Produkte nicht kaufbar. Runway sagt dir in der ersten Minute, welche — und was sie normalerweise verkaufen."
+    "finePrint": "Genau jetzt sind einige deiner Produkte nicht kaufbar. Inventory Runway sagt dir in der ersten Minute, welche — und was sie normalerweise verkaufen."
   },
   "card": {
     "title": "Montagsliste · eine Zeile, Beispiel",
@@ -51,7 +51,7 @@
     },
     "two": {
       "title": "Du erfährst es rechtzeitig zum Bestellen",
-      "body": "Die Warnung ist Reichweite in Tagen gegen die echte Lieferzeit deines Lieferanten — keine Stückzahl. Neun Tage übrig bei einem 3-Tage-Lieferanten sind in Ordnung. Neun Tage übrig bei einem 26-Tage-Lieferanten sind schon zu spät. Runway kennt den Unterschied."
+      "body": "Die Warnung ist Reichweite in Tagen gegen die echte Lieferzeit deines Lieferanten — keine Stückzahl. Neun Tage übrig bei einem 3-Tage-Lieferanten sind in Ordnung. Neun Tage übrig bei einem 26-Tage-Lieferanten sind schon zu spät. Inventory Runway kennt den Unterschied."
     },
     "three": {
       "title": "Jede Zeile beziffert die Bestellung",
@@ -87,9 +87,9 @@
     "kicker": "Der Unterschied",
     "title": "Du bist nicht mehr die, der es auffällt.",
     "sub": "Bestseller im Regal. Kapital nicht im Rest festgefahren.",
-    "withoutLabel": "Ohne Runway",
+    "withoutLabel": "Ohne Inventory Runway",
     "withoutBody": "Du erfährst es bei null. Du bestellst groß, damit es aufhört. Das Geld bleibt stecken. Und es ist immer noch an dir, es zu bemerken.",
-    "withLabel": "Mit Runway",
+    "withLabel": "Mit Inventory Runway",
     "withBody": "Montag, eine Liste. Was zur Neige geht, wann, wie viel, was es bindet. Jemand handelt danach. Einmal im Monat eine Zeile an dich: was nachbestellt wurde, bevor es auf null ging — und was nicht."
   },
   "cta": {

@@ -11,7 +11,7 @@
   "origin": {
     "title": "D’où nous venons",
     "one": "Leaf est né à l’intérieur de boutiques Shopify — des années les mains dedans, à les construire et à les réparer pour des marques, assis sur la même chaise que vous à 23 h. Et dans chaque boutique, la même chose : <lead>l’argent ne meurt jamais dans une fonctionnalité. Il meurt dans les jointures.</lead> Shopify vous donne un chiffre, le 3PL vous en donne un autre, et tout ce qui coûte cher reste invisible.",
-    "two": "Personne ne s’occupait de ce problème. Alors nous nous en occupons. C’est pour ça que nous construisons les apps Leaf — <imageVoice>Image Voice</imageVoice>, <reorderLoop>Reorder Loop</reorderLoop>, <countCheck>Count Check</countCheck> et <runway>Runway</runway> — chacune visant une seule jointure, chacune conçue pour trouver l’argent qui s’y cache puis faire le travail elle-même."
+    "two": "Personne ne s’occupait de ce problème. Alors nous nous en occupons. C’est pour ça que nous construisons les apps Leaf — <imageVoice>Image Voice</imageVoice>, <ledger>Ledger</ledger>, <billCheck>3PL Bill Check</billCheck> et <runway>Inventory Runway</runway> — chacune visant une seule jointure, chacune conçue pour trouver l’argent qui s’y cache puis faire le travail elle-même."
   },
   "believe": {
     "title": "Ce en quoi nous croyons",

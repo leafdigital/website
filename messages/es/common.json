@@ -9,7 +9,13 @@
     "about": "Sobre nosotros",
     "freeScan": "Análisis gratis",
     "earlyAccess": "Acceso anticipado",
-    "joinWaitlist": "Unirme a la lista"
+    "joinWaitlist": "Unirme a la lista",
+    "forwardInvoice": "Reenvía tu última factura",
+    "sendPos": "Envía tus últimas diez PO"
+  },
+  "mail": {
+    "ledger": "Ledger — mis últimas diez PO",
+    "billCheck": "3PL Bill Check — factura del mes pasado"
   },
   "footer": {
     "label": "Pie de página",

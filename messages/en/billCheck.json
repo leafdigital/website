@@ -1,0 +1,164 @@
+{
+  "meta": {
+    "title": "3PL Invoice Audit — Your 3PL Overbilled You | 3PL Bill Check",
+    "description": "Forty pages a month, approved because it always is. 3PL Bill Check reads the whole bill against your rate card and what actually shipped, and hands back the lines that don’t match — priced, in your 3PL’s own words. First invoice free."
+  },
+  "hero": {
+    "badge": "3PL Bill Check · in the lab · first invoice free",
+    "headline": "Your 3PL overbilled you. <accent>Nobody caught it.</accent>",
+    "subhead": "<lead>Pick fees, storage, receiving, a count that doesn’t match Shopify</lead> — forty pages, approved because it always is. Forward last month’s invoice. You get back the lines that don’t match what you agreed to pay, in dollars, the same day. Free.",
+    "ctaPrimary": "Forward your last invoice",
+    "ctaSecondary": "See what changes",
+    "finePrint": "One invoice, free · Nothing to install · The findings are yours whether you continue or not"
+  },
+  "card": {
+    "title": "Last month’s invoice · {pages, number} pages · sample",
+    "pick": "Pick fee · {count, number} orders",
+    "storage": "Storage · {count, number} pallets",
+    "receiving": "Receiving · {count, number} units",
+    "other": "{count, number} more lines",
+    "over": "+{amount, number, ::currency/USD precision-integer}",
+    "gap": "{lines, number} lines off your rate card",
+    "gapValue": "{amount, number, ::currency/USD precision-integer}",
+    "caption": "Sample. Your invoice, the same day — every line shows the contract rate it was checked against."
+  },
+  "task": {
+    "eyebrow": "The task problem",
+    "opener": "Nobody matches 2,000 pick fees to 2,000 orders.",
+    "middleOne": "The bill lands monthly. The only person who could check it is you, and it’s the one job that never makes the list.",
+    "middleTwo": "So it gets approved — on the assumption the 3PL did the arithmetic.",
+    "doc": {
+      "name": "3PL invoice — March.pdf",
+      "meta": "{pages, number} pages",
+      "stamp": "Approved · 11:42pm",
+      "caption": "Every store approves it. Nobody reads it."
+    }
+  },
+  "prices": {
+    "kicker": "One villain, three prices",
+    "title": "The bill charges you three ways",
+    "drift": {
+      "label": "FEE DRIFT",
+      "statement": "The pick fee you negotiated is not the pick fee on page 6.",
+      "body": "Nobody told you, and it’s on every order this month."
+    },
+    "units": {
+      "label": "THE MISSING UNITS",
+      "statement": "Your 3PL says 412. Shopify says 447.",
+      "body": "Thirty-five units are nobody’s — and you’re paying storage on stock you can’t sell."
+    },
+    "clock": {
+      "label": "THE CLOCK",
+      "statement": "Your contract gives you a window to claim.",
+      "body": "After it closes, the loss is yours, quietly, forever."
+    }
+  },
+  "confess": {
+    "kicker": "The approval problem",
+    "title": "Approved, still overbilled.",
+    "sub": "“Our 3PL is great, we’ve never had a problem.” You’ve never found one — not the same thing. Most lines on most bills are right. The ones that aren’t hide in volume, and volume is what nobody reads.",
+    "specimenLabel": "One line of the dispute — what your 3PL receives",
+    "feeCode": "Fee code",
+    "feeCodeValue": "PICK-STD",
+    "contractRate": "Contract rate",
+    "billedRate": "Billed rate",
+    "rate": "{amount, number, ::currency/USD}",
+    "orders": "Orders",
+    "ordersValue": "{count, number}",
+    "difference": "Difference",
+    "differenceValue": "{amount, number, ::currency/USD}",
+    "specimenCaption": "Their fee code, their contract line, their count, and the difference. No adjectives.",
+    "closer": "This isn’t a fight with your 3PL. It’s their own arithmetic handed back in their own vocabulary — <lead>fee code, contract rate, billed rate, order count, difference.</lead> Nothing else. Good 3PLs fix that line. And if the bill is clean, we say so — you’ve lost ten minutes."
+  },
+  "how": {
+    "kicker": "Forward. Match. Dispute.",
+    "title": "How 3PL Bill Check reads your bill",
+    "forward": {
+      "title": "Forward",
+      "body": "You send the invoice. That’s the whole job on your side."
+    },
+    "match": {
+      "title": "Match",
+      "body": "Every line is checked against what you agreed to pay and what actually happened: orders shipped, units received, stock on hand."
+    },
+    "dispute": {
+      "title": "Dispute",
+      "body": "What doesn’t match comes back priced, aged, and written for your 3PL — ready to forward, with the window to claim still open."
+    },
+    "footer": "Once it’s connected to your 3PL, it reads every bill as it lands — without you. Audit → approval → earned autonomy. This is how every Leaf app works."
+  },
+  "changes": {
+    "kicker": "What changes for you",
+    "title": "Not a feature list — what’s different on Tuesday",
+    "sub": "Here’s what actually happens, from the day you forward the first invoice.",
+    "one": {
+      "label": "Same day",
+      "title": "You know whether last month’s bill was right.",
+      "body": "For the first time, the answer isn’t “probably.”"
+    },
+    "two": {
+      "label": "Month one",
+      "title": "The bill gets read before you pay it.",
+      "body": "You approve it knowing what’s in it, not hoping."
+    },
+    "three": {
+      "label": "Month two",
+      "title": "You see what moved since last month.",
+      "body": "A fee that drifted, a line that appeared. You catch it the month it starts, not the year it’s found."
+    },
+    "four": {
+      "label": "Month three",
+      "title": "The one-offs become a pattern with dates on it.",
+      "body": "The missing units stop being a feeling and become a claim."
+    },
+    "five": {
+      "label": "From then on",
+      "title": "You walk into the renegotiation with their arithmetic in your hand.",
+      "body": "Or you walk out, and you know exactly why."
+    },
+    "six": {
+      "label": "Before any money moves",
+      "title": "The free audit is the whole pitch.",
+      "body": "Clean bill, we tell you."
+    }
+  },
+  "stop": {
+    "kicker": "Off your list",
+    "title": "What you stop doing",
+    "one": "Approving a forty-page bill at 11:42pm because there’s no other option.",
+    "two": "Wondering whether the count at the warehouse is the count in Shopify.",
+    "three": "Finding out at year-end what you could have claimed in March.",
+    "four": "Arguing with your 3PL in your words instead of theirs."
+  },
+  "trust": "Nothing here runs on trust. The first invoice is read free, every finding shows the contract line it was checked against, and the dispute goes out in your name, not ours. The only thing we ask you to believe is your own bill.",
+  "faq": {
+    "kicker": "Due diligence",
+    "title": "The questions we’d ask too",
+    "sour": {
+      "q": "Is this going to sour things with my 3PL?",
+      "a": "No. The pack is their fee code, their contract line, their count, and the difference. No adjectives. That’s how good 3PLs want to be told."
+    },
+    "clean": {
+      "q": "What if my bill is clean?",
+      "a": "Then it says so and you’ve lost ten minutes. We’d rather lose you than invent a finding."
+    },
+    "spreadsheet": {
+      "q": "Isn’t this just a spreadsheet?",
+      "a": "For one invoice, yes — it’s the spreadsheet you were going to build and didn’t. For twelve, with the claim window counting down and last month’s count against this month’s, it’s the one that actually gets kept."
+    },
+    "bookkeeper": {
+      "q": "Can’t my bookkeeper do this?",
+      "a": "They reconcile the dollars to the bank. Nobody on your side reconciles the pick fees to the orders. That’s the gap."
+    },
+    "touch": {
+      "q": "What does it touch?",
+      "a": "It reads your invoice, your contract, your orders, and your 3PL’s own reports. It writes nothing to your store."
+    }
+  },
+  "cta": {
+    "title": "Forward one invoice. See what it says.",
+    "sub": "Two futures: the bill keeps getting approved at 11:42pm, or it gets read.",
+    "button": "Forward your last invoice",
+    "note": "Silent images are already fixable today. <link>Image Voice is live — run that scan now →</link>"
+  }
+}

@@ -6,16 +6,16 @@
     "kicker": "Image Voice",
     "title": "이미지 {silent, number}개가 아무 말도 하지 않아요"
   },
-  "reorderLoop": {
-    "kicker": "Reorder Loop",
-    "title": "현금이 묶여 있어요."
+  "ledger": {
+    "kicker": "Ledger",
+    "title": "1,000개 값을 냈어요. 980개가 들어왔어요."
   },
-  "countCheck": {
-    "kicker": "Count Check",
-    "title": "재고가 사라지고 있어요."
+  "billCheck": {
+    "kicker": "3PL Bill Check",
+    "title": "3PL이 과다 청구했어요."
   },
   "runway": {
-    "kicker": "Runway",
+    "kicker": "Inventory Runway",
     "title": "베스트셀러가 품절됐어요."
   },
   "about": {

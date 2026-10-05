@@ -11,7 +11,7 @@
   "origin": {
     "title": "Where we come from",
     "one": "Leaf started inside Shopify stores — years spent hands-on, building and fixing them for brands, sitting in the same chair you sit in at 11pm. And in every store, the same thing: <lead>the money never dies in a feature. It dies in the seams.</lead> Shopify tells you one number, the 3PL tells you another, and everything expensive stays invisible.",
-    "two": "Nobody owned that problem. So we do. That’s why we build Leaf apps — <imageVoice>Image Voice</imageVoice>, <reorderLoop>Reorder Loop</reorderLoop>, <countCheck>Count Check</countCheck> and <runway>Runway</runway> — each one aimed at a single seam, each one built to find the money hiding there and then do the work itself."
+    "two": "Nobody owned that problem. So we do. That’s why we build Leaf apps — <imageVoice>Image Voice</imageVoice>, <ledger>Ledger</ledger>, <billCheck>3PL Bill Check</billCheck> and <runway>Inventory Runway</runway> — each one aimed at a single seam, each one built to find the money hiding there and then do the work itself."
   },
   "believe": {
     "title": "What we believe",

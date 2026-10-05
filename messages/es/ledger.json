@@ -1,0 +1,174 @@
+{
+  "meta": {
+    "title": "Seguimiento de PO desde tus documentos | Ledger",
+    "description": "Pagaste 1.000. Llegaron 980. Nadie contó. Ledger mantiene el seguimiento de tus PO desde los propios documentos — qué pediste, qué te facturaron, qué llegó, cuánto costó de verdad cada unidad — con cada diferencia valorada mientras aún puedes reclamar. Las primeras diez PO, gratis."
+  },
+  "hero": {
+    "badge": "Ledger · en el laboratorio · primeras diez PO gratis",
+    "headline": "Pagaste 1.000. Llegaron 980. <accent>Nadie contó.</accent>",
+    "subhead": "<lead>Cada PO tiene tres números</lead> — lo que pediste, lo que facturó el proveedor, lo que el almacén puso de verdad en el estante. Nadie los pone uno al lado del otro, así que las 20 corren de tu cuenta. Ledger mantiene el seguimiento de tus PO desde los propios documentos: cada PO desde que se hace hasta el estante, cuánto costó de verdad cada unidad, cada diferencia con precio, tus libros cuadrados a fin de mes.",
+    "ctaPrimary": "Envía tus últimas diez PO",
+    "ctaSecondary": "Qué cambia",
+    "finePrint": "30 minutos, gratis · Sobre tus PO, no una demo · Ves tu número antes de ver un precio"
+  },
+  "card": {
+    "title": "Tus últimas {count, number} PO · ejemplo",
+    "short": "Llegaron de menos",
+    "shortValue": "{count, number} PO",
+    "stale": "Coste desactualizado en Shopify",
+    "staleValue": "{count, number} SKU",
+    "due": "Transferencias que vencen en {days, number} días",
+    "dueValue": "{amount, number, ::currency/USD precision-integer}",
+    "caption": "Cifras de ejemplo. Las tuyas, desde tus propios documentos, en unos 30 minutos."
+  },
+  "task": {
+    "eyebrow": "El problema de la tarea",
+    "opener": "Nadie mantiene al día el seguimiento de las PO.",
+    "middleOne": "Confirmaciones en el email. Facturas en Drive. El albarán de recepción en el panel del 3PL. El coste tecleado a mano en Shopify en abril.",
+    "middleTwo": "Cinco fuentes, una hoja de cálculo — y la hoja es de la que menos te fías.",
+    "resolution": "Así que haces las cuentas solo, de noche, de memoria.",
+    "doc": {
+      "name": "Seguimiento de PO — T3.xlsx",
+      "meta": "última edición hace {days, number} días",
+      "caption": "La hoja que une cinco fuentes. De la que menos te fías, la que menos se toca."
+    }
+  },
+  "prices": {
+    "kicker": "Un villano, tres precios",
+    "title": "La diferencia te cobra tres veces",
+    "short": {
+      "label": "ENVÍO INCOMPLETO",
+      "statement": "Llegaron 980, facturaron 1.000.",
+      "body": "Detectado en la recepción, es una reclamación. Detectado a fin de año, es merma — y es tuya."
+    },
+    "stale": {
+      "label": "COSTE DESACTUALIZADO",
+      "statement": "Shopify dice 5,54 $ por unidad. La última factura del proveedor dice 7,57 $.",
+      "body": "Cada número de margen desde entonces está mal, cada decisión de precio construida encima está mal, y nada te avisó."
+    },
+    "cash": {
+      "label": "DINERO QUE NO VES VENIR",
+      "statement": "Dos anticipos pagados, tres transferencias por vencer, una factura de aranceles en la aduana.",
+      "body": "Nada de eso en Shopify. Todo vence en menos de 60 días. La cuenta de resultados nunca se vio mejor; la cuenta del banco, no."
+    }
+  },
+  "confess": {
+    "kicker": "El problema del seguimiento",
+    "title": "Con seguimiento, y aun así sin cuadrar.",
+    "sub": "Shopify ya tiene un campo de PO y un campo de coste. Los dos tecleados por una persona. Tu hoja también. Nada lee lo que facturó el proveedor, lo que guardó el almacén o si tus libros están de acuerdo.",
+    "specimenLabel": "Una PO, tres números — leídos de los documentos",
+    "po": "PO",
+    "poValue": "PO-1042",
+    "ordered": "Pedido",
+    "orderedValue": "{count, number} unidades",
+    "billed": "Facturado",
+    "billedValue": "{count, number} unidades · {amount, number, ::currency/USD precision-integer}",
+    "landed": "Recibido",
+    "landedValue": "{count, number} unidades",
+    "difference": "Diferencia",
+    "differenceValue": "{count, number} unidades · {amount, number, ::currency/USD precision-integer}",
+    "specimenCaption": "De la confirmación, la factura y el albarán de recepción. Nadie lo tecleó.",
+    "closer": "“Lo monto en Sheets con Claude.” Para diez PO — sí, y deberías. A treinta al mes con un proveedor, un transitario, la aduana y un 3PL, <lead>leer es el trabajo</lead>: cada confirmación, factura, factura de transporte, declaración de aduana, albarán de recepción. Y nadie comprueba que la hoja cuadre con el número de tu contable. Ledger sí, y te enseña de dónde salió."
+  },
+  "how": {
+    "kicker": "Reenvía. Cruza. Escribe.",
+    "title": "Cómo Ledger mantiene el seguimiento",
+    "forward": {
+      "title": "Reenvía",
+      "body": "Entra el papeleo de tu proveedor: confirmaciones, facturas, transporte, aduana. Tu 3PL está conectado. Confirmas lo leído, una vez."
+    },
+    "join": {
+      "title": "Cruza",
+      "body": "Lo que pediste, lo que te facturaron, lo que llegó, lo que hay en el estante, lo que cree Shopify — uno al lado del otro. Cada desacuerdo con precio y fecha mientras aún puedes hacer algo."
+    },
+    "write": {
+      "title": "Escribe",
+      "body": "El coste real de cada unidad vuelve a Shopify. Tú recibes una página al mes. Tu contable recibe la suya, y el mes cuadra."
+    },
+    "footer": "Auditoría → aprobación → autonomía ganada. Así funciona cada app de Leaf."
+  },
+  "changes": {
+    "kicker": "Qué cambia para ti",
+    "title": "No es una lista de funciones — es lo que es distinto el martes",
+    "sub": "Esto es lo que pasa de verdad, desde los primeros treinta minutos.",
+    "one": {
+      "label": "Minuto 30",
+      "title": "Ves tus últimas diez PO como nunca las habías visto.",
+      "body": "Qué está abierto, qué llegó de menos, qué SKU estás vendiendo con un coste que ya no es cierto."
+    },
+    "two": {
+      "label": "Semana dos",
+      "title": "Tu margen es real.",
+      "body": "El coste de tus SKU principales es lo que el proveedor cobró de verdad, no lo que alguien tecleó en abril. Sabes qué vence a 30, 60, 90 días — antes de la transferencia, no después."
+    },
+    "three": {
+      "label": "Mes uno",
+      "title": "El mes cuadra.",
+      "body": "Tu contable recibe un cierre que no tuvo que reconstruir desde PDF. El lunes por la mañana de tu gestor, hecho el domingo por la noche."
+    },
+    "four": {
+      "label": "Mes dos",
+      "title": "Los plazos de entrega son lo que tus proveedores hicieron de verdad, no lo que prometieron.",
+      "body": "Pides según la realidad."
+    },
+    "five": {
+      "label": "Mes tres",
+      "title": "Puedes decir, en dólares y desde tus propios documentos, qué se cazó.",
+      "body": "En la recepción, en las facturas, en costes desactualizados. Tu nombre está en la página. El mérito de las decisiones es tuyo."
+    },
+    "six": {
+      "label": "Antes de que se mueva dinero",
+      "title": "El ledger gratis sobre diez PO es todo el argumento.",
+      "body": "Si el número no está, te lo decimos."
+    }
+  },
+  "stop": {
+    "kicker": "Fuera de tu lista",
+    "title": "Lo que dejas de hacer",
+    "one": "Hacer las cuentas solo de noche, desde cinco pestañas y de memoria.",
+    "two": "Poner precios sobre un coste que sospechas que está mal y no puedes demostrar.",
+    "three": "Descubrir a fin de año qué llegó de menos en marzo.",
+    "four": "Que te sorprenda una transferencia que conocías y olvidaste.",
+    "five": "Reconstruir el inventario para tu contable desde los mismos PDF, cada mes, tarde."
+  },
+  "pair": {
+    "kicker": "Dos compradores, un ledger",
+    "title": "Tú te llevas el seguimiento. Tu contable, el cierre.",
+    "body": "Inventario a lo que costó de verdad, cada ajuste a la vista, cuadrado con tus libros o con el punto exacto donde no cuadra. La persona que más desconfía de tu número de inventario pasa a ser la que lo avala."
+  },
+  "trust": "Aquí nada se sostiene sobre la confianza. Las primeras diez PO se construyen gratis, cada fila enseña el documento del que salió, y el cierre tiene que cuadrar con el número de tu contable o decir dónde no cuadra. Lo único que te pedimos creer es tu propio papeleo.",
+  "faq": {
+    "kicker": "Diligencia debida",
+    "title": "Las preguntas que nosotros también haríamos",
+    "bookkeeper": {
+      "q": "Mi contable ya lleva el inventario.",
+      "a": "A mano, desde los mismos PDF, tarde, y el número no cuadra con Shopify. Ledger le entrega el puente con cada ajuste a la vista. Pregúntale si quiere recuperar el domingo por la noche."
+    },
+    "disagree": {
+      "q": "¿Y si el cierre no coincide con el de mi contable?",
+      "a": "Entonces Ledger está mal hasta que cuadre, y lo dice línea por línea. Un cierre que no coincide con tus libros no te sirve de nada; así lo tratamos."
+    },
+    "shopify": {
+      "q": "¿No puedo hacer esto en Shopify?",
+      "a": "La PO y el coste de Shopify son lo que alguien tecleó. Los de Ledger son lo que facturó el proveedor y lo que guardó el almacén, leídos de los documentos, con la diferencia valorada. Pagas por la lectura, no por el campo."
+    },
+    "send": {
+      "q": "¿Envía mis PO?",
+      "a": "No. Les hace seguimiento. Tú sigues siendo quien hace el pedido."
+    },
+    "touch": {
+      "q": "¿Qué toca?",
+      "a": "Lee tu papeleo y tu 3PL. Escribe una sola cosa en Shopify — el coste real por unidad — y solo después de que confirmes. Todo se puede deshacer y cada cambio enseña el antes y el después."
+    },
+    "leave": {
+      "q": "¿Qué pasa si me voy?",
+      "a": "Los costes están en Shopify, el cierre en tus libros, cada PDF sigue siendo tuyo."
+    }
+  },
+  "cta": {
+    "title": "Envía diez PO. Mira qué llegó.",
+    "sub": "Dos futuros: los tres números siguen en tres sitios, o están uno al lado del otro con tu nombre en la página.",
+    "button": "Envía tus últimas diez PO",
+    "note": "Las imágenes mudas ya tienen arreglo hoy. <link>Image Voice está vivo — lanza ese análisis ahora →</link>"
+  }
+}

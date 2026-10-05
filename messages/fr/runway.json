@@ -1,16 +1,16 @@
 {
   "meta": {
-    "title": "Des jours de couverture, pas des alertes en unités — Runway",
-    "description": "Votre best-seller tombe en rupture et personne ne vous prévient. Runway envoie une liste par semaine : ce qui s’épuise, quand, combien commander et ce que cette commande immobilise."
+    "title": "Des jours de couverture, pas des alertes en unités — Inventory Runway",
+    "description": "Votre best-seller tombe en rupture et personne ne vous prévient. Inventory Runway envoie une liste par semaine : ce qui s’épuise, quand, combien commander et ce que cette commande immobilise."
   },
   "hero": {
-    "badge": "Runway · au labo · liste d’attente ouverte",
+    "badge": "Inventory Runway · au labo · liste d’attente ouverte",
     "kicker": "Personne ne surveille le rayon",
     "headline": "Votre best-seller est en rupture. <accent>Personne ne vous l’a dit.</accent>",
-    "subhead": "Runway envoie une liste par semaine : ce qui s’épuise, quand, et combien commander. Vous la lisez. Quelqu’un agit.",
+    "subhead": "Inventory Runway envoie une liste par semaine : ce qui s’épuise, quand, et combien commander. Vous la lisez. Quelqu’un agit.",
     "ctaPrimary": "Rejoindre la liste d’attente",
     "ctaSecondary": "Ce qui change",
-    "finePrint": "En ce moment, certains de vos produits ne peuvent pas être achetés. Runway vous dit lesquels, et ce qu’ils vendent d’habitude, dès la première minute."
+    "finePrint": "En ce moment, certains de vos produits ne peuvent pas être achetés. Inventory Runway vous dit lesquels, et ce qu’ils vendent d’habitude, dès la première minute."
   },
   "card": {
     "title": "Liste du lundi · une ligne, exemple",
@@ -51,7 +51,7 @@
     },
     "two": {
       "title": "Vous l’apprenez à temps pour commander",
-      "body": "L’alerte, c’est des jours de couverture face au délai réel de votre fournisseur — pas un nombre d’unités. Neuf jours avec un fournisseur à 3 jours, ça va. Neuf jours avec un fournisseur à 26 jours, c’est déjà trop tard. Runway fait la différence."
+      "body": "L’alerte, c’est des jours de couverture face au délai réel de votre fournisseur — pas un nombre d’unités. Neuf jours avec un fournisseur à 3 jours, ça va. Neuf jours avec un fournisseur à 26 jours, c’est déjà trop tard. Inventory Runway fait la différence."
     },
     "three": {
       "title": "Chaque ligne chiffre la commande",
@@ -87,9 +87,9 @@
     "kicker": "La différence",
     "title": "Vous cessez d’être celui qui s’en aperçoit.",
     "sub": "Les best-sellers en rayon. La trésorerie pas coincée dans le reste.",
-    "withoutLabel": "Sans Runway",
+    "withoutLabel": "Sans Inventory Runway",
     "withoutBody": "Vous l’apprenez à zéro. Vous commandez large pour que ça s’arrête. La trésorerie se retrouve coincée. Et c’est toujours à vous de vous en apercevoir.",
-    "withLabel": "Avec Runway",
+    "withLabel": "Avec Inventory Runway",
     "withBody": "Lundi, une liste. Ce qui s’épuise, quand, combien, ce que ça immobilise. Quelqu’un agit. Une fois par mois, une ligne pour vous : ce qui a été réapprovisionné avant d’atteindre zéro, et ce qui ne l’a pas été."
   },
   "cta": {

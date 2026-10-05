@@ -1,0 +1,174 @@
+{
+  "meta": {
+    "title": "PO Tracker From Your Documents — Ordered, Billed, Landed | Ledger",
+    "description": "You paid for 1,000. 980 landed. Nobody counted. Ledger keeps the PO tracker from the documents themselves — what you ordered, what you were billed, what landed, what each unit really cost — with every gap priced while you can still claim it. First ten POs free."
+  },
+  "hero": {
+    "badge": "Ledger · in the lab · first ten POs free",
+    "headline": "You paid for 1,000. 980 landed. <accent>Nobody counted.</accent>",
+    "subhead": "<lead>Every PO has three numbers</lead> — what you ordered, what the supplier billed, what the warehouse actually put on the shelf. Nobody puts them side by side, so the 20 are yours. Ledger keeps the PO tracker from the documents themselves: every PO from placement to shelf, what each unit really cost, every gap priced, your books tied at month end.",
+    "ctaPrimary": "Send your last ten POs",
+    "ctaSecondary": "See what changes",
+    "finePrint": "30 minutes, free · Built on your POs, not a demo · You see your number before you see a price"
+  },
+  "card": {
+    "title": "Your last {count, number} POs · sample",
+    "short": "Landed short",
+    "shortValue": "{count, number} POs",
+    "stale": "Cost stale in Shopify",
+    "staleValue": "{count, number} SKUs",
+    "due": "Wires due in {days, number} days",
+    "dueValue": "{amount, number, ::currency/USD precision-integer}",
+    "caption": "Sample figures. Yours, from your own documents, in about 30 minutes."
+  },
+  "task": {
+    "eyebrow": "The task problem",
+    "opener": "Nobody keeps the PO tracker current.",
+    "middleOne": "Confirmations in email. Invoices in Drive. The receipt in the 3PL dashboard. Cost typed into Shopify by hand in April.",
+    "middleTwo": "Five sources, one spreadsheet — and the spreadsheet is the one you trust least.",
+    "resolution": "So you run the math alone, at night, from memory.",
+    "doc": {
+      "name": "PO tracker — Q3.xlsx",
+      "meta": "last edited {days, number} days ago",
+      "caption": "The sheet that joins five sources. Trusted least, edited last."
+    }
+  },
+  "prices": {
+    "kicker": "One villain, three prices",
+    "title": "The gap charges you three ways",
+    "short": {
+      "label": "SHORT-SHIPPED",
+      "statement": "980 landed, 1,000 billed.",
+      "body": "Caught at receipt, it’s a claim. Caught at year-end, it’s shrink — and it’s yours."
+    },
+    "stale": {
+      "label": "STALE COST",
+      "statement": "Shopify says $5.54 a unit. The last supplier invoice says $7.57.",
+      "body": "Every margin number since is wrong, every pricing call built on it is wrong, and nothing told you."
+    },
+    "cash": {
+      "label": "CASH YOU CAN’T SEE COMING",
+      "statement": "Two deposits out, three wires due, a duty bill at customs.",
+      "body": "None of it in Shopify. All of it due inside 60 days. The P&L looks better than ever; the bank account doesn’t."
+    }
+  },
+  "confess": {
+    "kicker": "The tracking problem",
+    "title": "Tracked, still untied.",
+    "sub": "Shopify has a PO field and a cost field now. Both typed in by a human. So is your sheet. Nothing reads what the supplier billed, what the warehouse stowed, or whether your books agree.",
+    "specimenLabel": "One PO, three numbers — read from the documents",
+    "po": "PO",
+    "poValue": "PO-1042",
+    "ordered": "Ordered",
+    "orderedValue": "{count, number} units",
+    "billed": "Billed",
+    "billedValue": "{count, number} units · {amount, number, ::currency/USD precision-integer}",
+    "landed": "Landed",
+    "landedValue": "{count, number} units",
+    "difference": "Difference",
+    "differenceValue": "{count, number} units · {amount, number, ::currency/USD precision-integer}",
+    "specimenCaption": "From the confirmation, the invoice and the receiving report. Nobody typed it.",
+    "closer": "“I’ll build it in Sheets with Claude.” For ten POs — yes, and you should. At thirty a month with a supplier, a forwarder, customs and a 3PL, <lead>the reading is the work</lead>: every confirmation, invoice, freight bill, customs entry, receiving report. And nobody checks that the sheet ties to your bookkeeper’s number. Ledger does, and shows you where it came from."
+  },
+  "how": {
+    "kicker": "Forward. Join. Write.",
+    "title": "How Ledger keeps the tracker",
+    "forward": {
+      "title": "Forward",
+      "body": "Your supplier paperwork goes in: confirmations, invoices, freight, customs. Your 3PL is connected. You confirm what was read, once."
+    },
+    "join": {
+      "title": "Join",
+      "body": "What you ordered, what you were billed, what landed, what’s on the shelf, what Shopify thinks — side by side. Every disagreement priced and dated while you can still do something about it."
+    },
+    "write": {
+      "title": "Write",
+      "body": "The true cost of every unit goes back into Shopify. You get one page a month. Your bookkeeper gets theirs, and the month ties."
+    },
+    "footer": "Audit → approval → earned autonomy. This is how every Leaf app works."
+  },
+  "changes": {
+    "kicker": "What changes for you",
+    "title": "Not a feature list — what’s different on Tuesday",
+    "sub": "Here’s what actually happens, from the first thirty minutes.",
+    "one": {
+      "label": "Minute 30",
+      "title": "You see your last ten POs the way you’ve never seen them.",
+      "body": "What’s open, what landed short, which SKUs you’re pricing off a cost that isn’t true anymore."
+    },
+    "two": {
+      "label": "Week two",
+      "title": "Your margin is real.",
+      "body": "The cost on your top SKUs is what the supplier actually charged, not what someone typed in April. You know what’s coming due at 30, 60, 90 days — before the wire, not after."
+    },
+    "three": {
+      "label": "Month one",
+      "title": "The month ties.",
+      "body": "Your bookkeeper gets a close they didn’t have to rebuild from PDFs. Your accountant’s Monday morning, done Sunday night."
+    },
+    "four": {
+      "label": "Month two",
+      "title": "Lead times are what your suppliers actually did, not what they promised.",
+      "body": "You order to reality."
+    },
+    "five": {
+      "label": "Month three",
+      "title": "You can say, in dollars and from your own documents, what was caught.",
+      "body": "At receipt, on invoices, in stale costs. Your name is on the page. Your calls are credited."
+    },
+    "six": {
+      "label": "Before any money moves",
+      "title": "The free ledger on ten POs is the whole pitch.",
+      "body": "If the number isn’t there, we tell you."
+    }
+  },
+  "stop": {
+    "kicker": "Off your list",
+    "title": "What you stop doing",
+    "one": "Running the math alone at night, from five tabs and memory.",
+    "two": "Pricing off a cost you suspect is wrong and can’t prove.",
+    "three": "Finding out at year-end what landed short in March.",
+    "four": "Getting surprised by a wire you knew about and forgot.",
+    "five": "Rebuilding inventory for your bookkeeper from the same PDFs, every month, late."
+  },
+  "pair": {
+    "kicker": "Two buyers, one ledger",
+    "title": "You get the tracker. Your bookkeeper gets the close.",
+    "body": "Inventory at what it really cost, every adjustment shown, tied to your books or told exactly where it isn’t. The person who distrusts your inventory number most becomes the person who vouches for it."
+  },
+  "trust": "Nothing here runs on trust. The first ten POs are built free, every row shows the document it came from, and the close has to tie to your bookkeeper’s number or say where it doesn’t. The only thing we ask you to believe is your own paperwork.",
+  "faq": {
+    "kicker": "Due diligence",
+    "title": "The questions we’d ask too",
+    "bookkeeper": {
+      "q": "My bookkeeper already does inventory.",
+      "a": "By hand, from the same PDFs, late, and the number doesn’t tie to Shopify. Ledger hands them the bridge with every adjustment shown. Ask them if they’d like Sunday night back."
+    },
+    "disagree": {
+      "q": "What if the close disagrees with my bookkeeper?",
+      "a": "Then Ledger is wrong until it ties, and it says so line by line. A close that disagrees with your books is useless to you; we treat it that way."
+    },
+    "shopify": {
+      "q": "Can’t I do this in Shopify?",
+      "a": "Shopify’s PO and cost are whatever someone typed. Ledger’s are what the supplier billed and the warehouse stowed, read from the documents, with the difference priced. You’re paying for the reading, not the field."
+    },
+    "send": {
+      "q": "Does it send my POs?",
+      "a": "No. It tracks them. You stay the one who places the order."
+    },
+    "touch": {
+      "q": "What does it touch?",
+      "a": "It reads your paperwork and your 3PL. It writes one thing to Shopify — the true cost per unit — and only after you confirm. Everything is undoable and every change shows before and after."
+    },
+    "leave": {
+      "q": "What happens if I leave?",
+      "a": "The costs are in Shopify, the close is in your books, every PDF is still yours."
+    }
+  },
+  "cta": {
+    "title": "Send ten POs. See what landed.",
+    "sub": "Two futures: the three numbers stay in three places, or they sit side by side with your name on the page.",
+    "button": "Send your last ten POs",
+    "note": "Silent images are already fixable today. <link>Image Voice is live — run that scan now →</link>"
+  }
+}

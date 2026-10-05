@@ -14,7 +14,9 @@ export type CtaEvent =
   | "cta_contact_click"
   /** Internal navigation toward an app page — not an install. */
   | "cta_app_view"
-  | "cta_waitlist_join";
+  | "cta_waitlist_join"
+  /** The free audit asked for: the mailto that sends an invoice or POs. */
+  | "cta_audit_request";
 
 /**
  * Behaviour events, fired by the site-wide listeners in `SiteAnalytics` and by

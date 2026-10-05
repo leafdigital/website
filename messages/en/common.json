@@ -9,7 +9,13 @@
     "about": "About",
     "freeScan": "Free scan",
     "earlyAccess": "Get early access",
-    "joinWaitlist": "Join the waitlist"
+    "joinWaitlist": "Join the waitlist",
+    "forwardInvoice": "Forward your last invoice",
+    "sendPos": "Send your last ten POs"
+  },
+  "mail": {
+    "ledger": "Ledger — my last ten POs",
+    "billCheck": "3PL Bill Check — last month’s invoice"
   },
   "footer": {
     "label": "Footer",

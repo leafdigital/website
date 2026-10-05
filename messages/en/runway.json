@@ -1,16 +1,16 @@
 {
   "meta": {
-    "title": "Days of Cover, Not Unit Alerts — Runway for Shopify",
-    "description": "Your best seller goes out and nobody tells you. Runway sends one list a week: what’s running out, when, how much to order, and what that order ties up."
+    "title": "Days of Cover, Not Unit Alerts — Inventory Runway for Shopify",
+    "description": "Your best seller goes out and nobody tells you. Inventory Runway sends one list a week: what’s running out, when, how much to order, and what that order ties up."
   },
   "hero": {
-    "badge": "Runway · in the lab · waitlist open",
+    "badge": "Inventory Runway · in the lab · waitlist open",
     "kicker": "Nobody is watching the shelf",
     "headline": "Your best seller is out. <accent>Nobody told you.</accent>",
-    "subhead": "Runway sends one list a week: what’s running out, when, and how much to order. You read it. Someone acts on it.",
+    "subhead": "Inventory Runway sends one list a week: what’s running out, when, and how much to order. You read it. Someone acts on it.",
     "ctaPrimary": "Join the waitlist",
     "ctaSecondary": "See what changes",
-    "finePrint": "Right now, some of your products can’t be bought. Runway tells you which, and what they normally sell, in the first minute."
+    "finePrint": "Right now, some of your products can’t be bought. Inventory Runway tells you which, and what they normally sell, in the first minute."
   },
   "card": {
     "title": "Monday list · one line, sample",
@@ -51,7 +51,7 @@
     },
     "two": {
       "title": "You hear about it in time to order",
-      "body": "The warning is days of cover against your supplier’s real lead time — not a unit count. Nine days left with a 3-day supplier is fine. Nine days left with a 26-day supplier is already late. Runway knows the difference."
+      "body": "The warning is days of cover against your supplier’s real lead time — not a unit count. Nine days left with a 3-day supplier is fine. Nine days left with a 26-day supplier is already late. Inventory Runway knows the difference."
     },
     "three": {
       "title": "Every line prices the order",
@@ -87,9 +87,9 @@
     "kicker": "The difference",
     "title": "You stop being the one who notices.",
     "sub": "Best sellers on the shelf. Cash not stuck in the rest.",
-    "withoutLabel": "Without Runway",
+    "withoutLabel": "Without Inventory Runway",
     "withoutBody": "You find out at zero. You order big to make it stop. The cash gets stuck. And you’re still the one who has to notice.",
-    "withLabel": "With Runway",
+    "withLabel": "With Inventory Runway",
     "withBody": "Monday, one list. What’s running out, when, how much, what it ties up. Someone acts on it. Once a month, one line to you: what got reordered before it hit zero, and what didn’t."
   },
   "cta": {

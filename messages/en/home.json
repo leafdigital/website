@@ -8,7 +8,7 @@
     "headline": "Your money<br></br>is <accent>hiding.</accent>",
     "subhead": "Your Shopify, your 3PL, and your spreadsheet all tell a different story. And the money hides in the gaps.",
     "ctaPrimary": "Where’s yours hiding? ↓",
-    "finePrint": "Our first app is live: Image Voice, the silent-images scan. Three more are in the lab — Reorder Loop, Count Check and Runway. First in line hears first."
+    "finePrint": "Our first app is live: Image Voice, the silent-images scan. Three more are in the lab — Ledger, 3PL Bill Check and Inventory Runway. First in line hears first."
   },
   "inventory": {
     "title": "Inventory on hand · same SKU set, same day",
@@ -18,7 +18,7 @@
     "units": "{count, number} units",
     "gap": "The gap",
     "gapValue": "{units, number} units · ~{dollars, number, ::currency/USD precision-integer}",
-    "caption": "Count Check + Reorder Loop — in the lab. This is the gap they watch, every day. <link>→</link>"
+    "caption": "Ledger — in the lab. Three numbers in three places; this is the gap it keeps, PO by PO. <link>→</link>"
   },
   "villain": {
     "kicker": "Sound familiar?",
@@ -56,13 +56,13 @@
       "description": "Your images are silent — to Google, to AI shoppers, to screen readers. Free scan, a real description for every image.",
       "cta": "Scan your images free →"
     },
-    "reorderLoop": {
-      "description": "Nine apps forecast your inventory. None of them finish the order. Reorder Loop does the whole order — you just say yes.",
-      "cta": "Join the waitlist →"
+    "ledger": {
+      "description": "You paid for 1,000. 980 landed. Nobody counted. Ledger keeps the PO tracker from the documents themselves — ordered, billed, landed, what each unit really cost.",
+      "cta": "Send your last ten POs →"
     },
-    "countCheck": {
-      "description": "Your 3PL says one number. Shopify says another. The difference is your money — and nobody’s checking.",
-      "cta": "Join the waitlist →"
+    "billCheck": {
+      "description": "Your 3PL overbilled you. Nobody caught it. Forward last month’s invoice and get back the lines that don’t match what you agreed to pay — priced, the same day, free.",
+      "cta": "Forward your last invoice →"
     },
     "runway": {
       "description": "Your best seller goes out and nobody tells you. One list a week: what’s running out, when, and how much to order.",
@@ -76,9 +76,9 @@
     "withBody": "You open one email a week, watch the numbers tie out, and go back to building the thing you started the company to build."
   },
   "cta": {
-    "title": "Reorder Loop is in the lab. Be first when it runs on your orders.",
-    "sub": "We won’t show you someone else’s numbers. We’ll show you yours — the day it can run on your store. One list, every coming Leaf app.",
-    "button": "Join the waitlist",
+    "title": "Ledger is in the lab. Send ten POs and see what landed.",
+    "sub": "We won’t show you someone else’s numbers. We’ll show you yours — your last ten POs, ordered, billed and landed, side by side, in about 30 minutes. Free, and the findings are yours either way.",
+    "button": "Send your last ten POs",
     "note": "Meanwhile, live today: start where every store leaks first. <link>Run the free image scan →</link>"
   }
 }

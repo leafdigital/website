@@ -6,16 +6,16 @@
     "kicker": "Image Voice",
     "title": "あなたの画像のうち{silent, number}枚が、何も語っていません"
   },
-  "reorderLoop": {
-    "kicker": "Reorder Loop",
-    "title": "現金が、在庫に閉じ込められています。"
+  "ledger": {
+    "kicker": "Ledger",
+    "title": "1,000個分払った。入庫したのは980個。"
   },
-  "countCheck": {
-    "kicker": "Count Check",
-    "title": "在庫が、消えています。"
+  "billCheck": {
+    "kicker": "3PL Bill Check",
+    "title": "3PLは、あなたに過剰請求しています。"
   },
   "runway": {
-    "kicker": "Runway",
+    "kicker": "Inventory Runway",
     "title": "売れ筋が、欠品しています。"
   },
   "about": {

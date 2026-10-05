@@ -11,13 +11,18 @@ export const APP_NAME = "Image Voice";
  * is: they are brand terms, never translated (i18n/glossary.json), and
  * structured data has to call them something.
  *
- * v3 retired Hidden Margin and renamed Reorder Engine to Reorder Loop; Lost
- * Sales then became Runway. Every old route 301s to its successor in
- * next.config.ts.
+ * The line as of October 2026: Ledger (the flagship), 3PL Bill Check and
+ * Inventory Runway. v3 retired Hidden Margin and renamed Reorder Engine to
+ * Reorder Loop and Lost Sales to Runway; the October refresh then killed
+ * Reorder Loop, replaced Count Check with 3PL Bill Check and gave Runway its
+ * first name. Every old route 301s to its successor in next.config.ts.
+ *
+ * One villain across the line: silence between systems. Runway — nobody
+ * told you. Bill Check — nobody caught it. Ledger — nobody counted.
  */
-export const REORDER_LOOP_NAME = "Reorder Loop";
-export const COUNT_CHECK_NAME = "Count Check";
-export const RUNWAY_NAME = "Runway";
+export const LEDGER_NAME = "Ledger";
+export const BILL_CHECK_NAME = "3PL Bill Check";
+export const RUNWAY_NAME = "Inventory Runway";
 
 export const SITE_NAME = "Leaf Digital";
 export const SITE_URL = "https://www.leafdigital.io";
@@ -131,19 +136,39 @@ export const SAMPLE = {
   /** The bulk-apply prompt in benefit 06: what is left after a review run. */
   bulkRemaining: 1750,
   /**
-   * Reorder Loop’s opening claim: how many apps forecast inventory, and how
-   * many of them will actually finish the order.
+   * 3PL Bill Check’s hero: one month’s invoice, read. Three named lines and
+   * the rest, each priced as the difference between the billed rate and the
+   * contract rate times the volume — so the pick-fee overbilling is derived
+   * from the two rates, not typed in beside them.
    */
-  forecastingApps: 9,
-  appsThatFinishTheOrder: 0,
+  billCheck: {
+    pages: 40,
+    pickOrders: 2000,
+    pickContractRate: 0.45,
+    pickBilledRate: 0.52,
+    storagePallets: 38,
+    storageOver: 612,
+    receivingUnits: 1200,
+    receivingOver: 288,
+    otherLines: 20,
+    otherOver: 800,
+  },
   /**
-   * Count Check’s opening claim: one SKU, two systems, on the same day. The
-   * gap is derived below rather than typed in — a hand-entered third number
-   * is a number that can drift out of arithmetic with the two above it.
+   * Ledger’s hero: the last ten POs, read from the documents. Then one PO
+   * opened up in the specimen — ordered, billed, landed — with the shortfall
+   * priced at the unit cost the supplier actually invoiced.
    */
-  countCheck: {
-    threePl: 412,
-    shopify: 447,
+  ledger: {
+    pos: 10,
+    landedShort: 3,
+    staleSkus: 14,
+    dueDays: 60,
+    dueAmount: 31000,
+    trackerAgeDays: 41,
+    ordered: 1000,
+    billed: 1000,
+    landed: 980,
+    unitCost: 7.57,
   },
   /**
    * Runway’s hero: one line of the Monday list. Days of cover against the
@@ -160,10 +185,29 @@ export const SAMPLE = {
   },
 } as const;
 
-/** The gap Count Check exists to show: the two counts, subtracted. */
-export const COUNT_CHECK_GAP = Math.abs(
-  SAMPLE.countCheck.shopify - SAMPLE.countCheck.threePl,
-);
+/** The pick-fee overbilling: (billed − contract) × orders, to the cent. */
+export const BILL_CHECK_PICK_OVER =
+  Math.round(
+    (SAMPLE.billCheck.pickBilledRate - SAMPLE.billCheck.pickContractRate) *
+      SAMPLE.billCheck.pickOrders *
+      100,
+  ) / 100;
+/** How many lines didn’t match: the three named ones plus the rest. */
+export const BILL_CHECK_LINES = 3 + SAMPLE.billCheck.otherLines;
+/** What they add up to. Derived, so the hero total is always the sum. */
+export const BILL_CHECK_TOTAL =
+  BILL_CHECK_PICK_OVER +
+  SAMPLE.billCheck.storageOver +
+  SAMPLE.billCheck.receivingOver +
+  SAMPLE.billCheck.otherOver;
+
+/** The units that never landed, and what they cost at the invoiced rate. */
+export const LEDGER_SHORT_UNITS = SAMPLE.ledger.ordered - SAMPLE.ledger.landed;
+export const LEDGER_SHORT_VALUE =
+  Math.round(LEDGER_SHORT_UNITS * SAMPLE.ledger.unitCost * 100) / 100;
+/** The billed total: the supplier invoiced every unit ordered. */
+export const LEDGER_BILLED_VALUE =
+  Math.round(SAMPLE.ledger.billed * SAMPLE.ledger.unitCost * 100) / 100;
 
 /**
  * Plan prices, in USD. Passed to ICU as raw numbers so each locale formats

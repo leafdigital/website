@@ -96,7 +96,7 @@ export default function AboutPage() {
     <strong className="text-foreground font-semibold">{chunks}</strong>
   );
   const app = (
-    href: "/image-voice" | "/reorder-loop" | "/count-check" | "/runway",
+    href: "/image-voice" | "/ledger" | "/3pl-bill-check" | "/runway",
   ) =>
     function AppLink(chunks: React.ReactNode) {
       return (
@@ -155,8 +155,8 @@ export default function AboutPage() {
             <p>
               {t.rich("origin.two", {
                 imageVoice: app("/image-voice"),
-                reorderLoop: app("/reorder-loop"),
-                countCheck: app("/count-check"),
+                ledger: app("/ledger"),
+                billCheck: app("/3pl-bill-check"),
                 runway: app("/runway"),
               })}
             </p>

@@ -2,10 +2,10 @@ import {
   APP_INSTALL_URL,
   APP_NAME,
   APP_VIDEO_WATCH_URL,
-  COUNT_CHECK_NAME,
+  BILL_CHECK_NAME,
+  LEDGER_NAME,
   RUNWAY_NAME,
   PRICING,
-  REORDER_LOOP_NAME,
   SITE_NAME,
   SITE_URL,
   SUPPORT_EMAIL,
@@ -43,9 +43,11 @@ function body() {
 ## Apps
 
 - [${APP_NAME}](${url("/image-voice")}): alt text for Shopify stores. Free forever audit that grades existing alt text as missing / junk / weak / good, then writes a real description for every image. Live on the Shopify App Store. Plans: Audit $${PRICING.audit.toFixed(2)}, Keeper $${PRICING.keeper.toFixed(2)}/mo, Curator $${PRICING.curator.toFixed(2)}/mo.
-- [${REORDER_LOOP_NAME}](${url("/reorder-loop")}): end-to-end reordering for Shopify inventory — sizes the order to what is selling and to available cash, tracks the supplier's reply, and checks the invoice against what actually landed. Proven in shadow against a store's own orders for 30 days before it places one, and nothing is sent without approval. In development; waitlist open.
-- [${COUNT_CHECK_NAME}](${url("/count-check")}): daily reconciliation of a 3PL's inventory count against Shopify's, per product, with the difference priced in dollars and kept as history a merchant can file a claim on. Read-only — it writes to neither system. In development; waitlist open.
+- [${LEDGER_NAME}](${url("/ledger")}): the flagship. A purchase-order tracker kept from the documents themselves — supplier confirmations, invoices, freight and customs paperwork, and the 3PL's receiving reports — so that what was ordered, what was billed and what actually landed sit side by side for every PO, with every gap priced and dated while it can still be claimed. Writes one thing to Shopify, the true cost per unit, only after confirmation; produces a month-end close the merchant's bookkeeper can tie to the books. In development. The first ten POs are built free, by email, in about 30 minutes.
+- [${BILL_CHECK_NAME}](${url("/3pl-bill-check")}): reads a 3PL invoice line by line against the merchant's rate card and against what actually happened — orders shipped, units received, stock on hand — and returns the lines that don't match, priced, aged and written in the 3PL's own vocabulary (fee code, contract rate, billed rate, order count, difference), ready to forward while the contract's claim window is still open. Reads the invoice, the contract, the orders and the 3PL's reports; writes nothing to the store. In development. The first invoice is read free, by email, the same day.
 - [${RUNWAY_NAME}](${url("/runway")}): one weekly list of what is running out, measured as days of cover against each supplier's real lead time rather than a unit threshold. Sell rate is computed only over the days a product could actually be bought, so stockouts stop reading as low demand, and every line states what the order costs and how long it ties the cash up. It can only count from the day it is connected. In development; waitlist open.
+
+One villain across the line — silence between systems. Runway: nobody told you. Bill Check: nobody caught it. Ledger: nobody counted.
 
 ## Guides and comparisons
 
@@ -64,7 +66,7 @@ The guide is available in all eight site languages; the comparisons are English 
 
 ## Site
 
-- [Home](${url("/")}): the problem all four apps address — Shopify, the 3PL and the spreadsheet disagreeing about the same numbers.
+- [Home](${url("/")}): the problem all four apps address — Shopify, the 3PL, the supplier's paperwork and the spreadsheet disagreeing about the same numbers.
 - [About](${url("/about")}): where Leaf comes from, what it believes, and the five commitments it asks to be held to — apps built only when they're world-class, nothing changed without approval, numbers that reconcile to Shopify's own reports, a waitlist instead of a sale when a plan doesn't fit, and building only for problems seen costing real stores real money.
 - [Support](${url("/support")}): undo, billing, response times, and exactly what the apps read and write.
 - [Security](${url("/security")}): the six Shopify scopes Image Voice requests and what each is for, what it can change, token encryption and store isolation, AI processing, retention, the mandatory erasure webhooks, and the records erasure does not reach yet.
@@ -85,6 +87,7 @@ The guide is available in all eight site languages; the comparisons are English 
 - Available in English, German, Spanish, French, Italian and Brazilian Portuguese. English pages are unprefixed; other locales carry a path segment, e.g. ${SITE_URL}/de/image-voice.
 - ${APP_NAME} writes only the alt field of an image. It cannot modify theme code, product content, or the images themselves, and every change it makes is reversible for 30 days.
 - No app applies a change to a store without approval unless the merchant has explicitly turned on auto-pilot.
+- ${LEDGER_NAME} and ${BILL_CHECK_NAME} are not yet installable. Each starts as a free audit run by Leaf on documents the merchant emails in; the findings are the merchant's to keep whether or not they continue.
 `;
 }
 

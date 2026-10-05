@@ -11,8 +11,10 @@ const nextConfig: NextConfig = {
    * the page that replaced it instead of spending what it earned on a 404.
    *
    * `/reorder-engine` and `/lost-sales` have real successors: same app, new
-   * name. `/hidden-margin` has none — the app was killed, not renamed — so it
-   * goes to the homepage rather than being passed off as a survivor.
+   * name. `/count-check` has one too — 3PL Bill Check took over its seam.
+   * `/hidden-margin` and `/reorder-loop` have none — those apps were killed,
+   * not renamed — so they go to the homepage rather than being passed off as
+   * survivors.
    *
    * 301, not Next's default 308 for `permanent`. Both are permanent to
    * Google; 301 is the one every crawler, audit tool and old HTTP client
@@ -28,8 +30,10 @@ const nextConfig: NextConfig = {
    */
   async redirects() {
     const retired = [
-      { from: "/reorder-engine", to: "/reorder-loop" },
+      { from: "/reorder-engine", to: "/" },
+      { from: "/reorder-loop", to: "/" },
       { from: "/lost-sales", to: "/runway" },
+      { from: "/count-check", to: "/3pl-bill-check" },
       { from: "/hidden-margin", to: "/" },
     ];
     return retired.flatMap(({ from, to }) => [

@@ -1,16 +1,16 @@
 {
   "meta": {
-    "title": "Giorni di copertura, non avvisi a pezzi — Runway",
-    "description": "Il tuo best seller finisce e nessuno te lo dice. Runway manda una lista a settimana: cosa sta per esaurirsi, quando, quanto ordinare e cosa immobilizza quell’ordine."
+    "title": "Giorni di copertura, non avvisi a pezzi — Inventory Runway",
+    "description": "Il tuo best seller finisce e nessuno te lo dice. Inventory Runway manda una lista a settimana: cosa sta per esaurirsi, quando, quanto ordinare e cosa immobilizza quell’ordine."
   },
   "hero": {
-    "badge": "Runway · in laboratorio · lista d’attesa aperta",
+    "badge": "Inventory Runway · in laboratorio · lista d’attesa aperta",
     "kicker": "Nessuno sta guardando lo scaffale",
     "headline": "Il tuo best seller è esaurito. <accent>Nessuno te l’ha detto.</accent>",
-    "subhead": "Runway manda una lista a settimana: cosa sta per esaurirsi, quando e quanto ordinare. Tu la leggi. Qualcuno agisce.",
+    "subhead": "Inventory Runway manda una lista a settimana: cosa sta per esaurirsi, quando e quanto ordinare. Tu la leggi. Qualcuno agisce.",
     "ctaPrimary": "Iscriviti alla lista d’attesa",
     "ctaSecondary": "Cosa cambia",
-    "finePrint": "Proprio adesso alcuni dei tuoi prodotti non si possono comprare. Runway ti dice quali, e quanto vendono di solito, nel primo minuto."
+    "finePrint": "Proprio adesso alcuni dei tuoi prodotti non si possono comprare. Inventory Runway ti dice quali, e quanto vendono di solito, nel primo minuto."
   },
   "card": {
     "title": "Lista del lunedì · una riga, esempio",
@@ -51,7 +51,7 @@
     },
     "two": {
       "title": "Lo sai in tempo per ordinare",
-      "body": "L’allerta è in giorni di copertura contro il lead time reale del tuo fornitore — non un conteggio di pezzi. Nove giorni con un fornitore da 3 giorni va bene. Nove giorni con un fornitore da 26 è già tardi. Runway conosce la differenza."
+      "body": "L’allerta è in giorni di copertura contro il lead time reale del tuo fornitore — non un conteggio di pezzi. Nove giorni con un fornitore da 3 giorni va bene. Nove giorni con un fornitore da 26 è già tardi. Inventory Runway conosce la differenza."
     },
     "three": {
       "title": "Ogni riga quantifica l’ordine",
@@ -87,9 +87,9 @@
     "kicker": "La differenza",
     "title": "Smetti di essere quello che se ne accorge.",
     "sub": "I best seller sullo scaffale. La liquidità non incastrata nel resto.",
-    "withoutLabel": "Senza Runway",
+    "withoutLabel": "Senza Inventory Runway",
     "withoutBody": "Lo scopri a zero. Ordini in grande per farla finita. I soldi restano incastrati. E sei ancora tu a doverti accorgere.",
-    "withLabel": "Con Runway",
+    "withLabel": "Con Inventory Runway",
     "withBody": "Lunedì, una lista. Cosa sta per esaurirsi, quando, quanto, cosa immobilizza. Qualcuno agisce. Una volta al mese, una riga per te: cosa è stato riordinato prima di arrivare a zero, e cosa no."
   },
   "cta": {

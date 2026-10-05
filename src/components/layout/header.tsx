@@ -4,8 +4,10 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { TrackedLink } from "@/components/analytics/tracked-link";
+import { TrackedExternalLink } from "@/components/analytics/tracked-external-link";
 import { Link, usePathname } from "@/i18n/navigation";
 import type { CtaEvent } from "@/lib/analytics";
+import { mailto } from "@/lib/mailto";
 import { Container } from "./container";
 
 /**
@@ -13,6 +15,9 @@ import { Container } from "./container";
  * homepage it is "go look at the live app", from an app page it is the
  * action that page is arguing for. `usePathname` is locale-stripped, so the
  * lookup is one table for all six locales.
+ *
+ * `mail` names the subject line in `common.mail.*`: the audit pages are asked
+ * for by email, so their header button is a mailto rather than an anchor.
  */
 const ctaByRoute = {
   "/image-voice": {
@@ -20,15 +25,15 @@ const ctaByRoute = {
     key: "freeScan",
     event: "cta_scan_click",
   },
-  "/reorder-loop": {
-    href: "/reorder-loop#waitlist",
-    key: "joinWaitlist",
-    event: "cta_waitlist_join",
+  "/ledger": {
+    mail: "ledger",
+    key: "sendPos",
+    event: "cta_audit_request",
   },
-  "/count-check": {
-    href: "/count-check#waitlist",
-    key: "joinWaitlist",
-    event: "cta_waitlist_join",
+  "/3pl-bill-check": {
+    mail: "billCheck",
+    key: "forwardInvoice",
+    event: "cta_audit_request",
   },
   "/runway": {
     href: "/runway#waitlist",
@@ -37,7 +42,7 @@ const ctaByRoute = {
   },
 } as const satisfies Record<
   string,
-  { href: string; key: string; event: CtaEvent }
+  { href?: string; mail?: string; key: string; event: CtaEvent }
 >;
 
 /** Everywhere else — the homepage, privacy, support — points at the live app. */
@@ -92,13 +97,23 @@ export function Header() {
             </li>
             <li className="ml-1.5">
               <Button asChild size="sm" className="shadow-cta-sm">
-                <TrackedLink
-                  href={cta.href}
-                  event={cta.event}
-                  eventProps={{ location: "header" }}
-                >
-                  {t(`nav.${cta.key}`)}
-                </TrackedLink>
+                {"mail" in cta ? (
+                  <TrackedExternalLink
+                    href={mailto(t(`mail.${cta.mail}`))}
+                    event={cta.event}
+                    eventProps={{ location: "header" }}
+                  >
+                    {t(`nav.${cta.key}`)}
+                  </TrackedExternalLink>
+                ) : (
+                  <TrackedLink
+                    href={cta.href}
+                    event={cta.event}
+                    eventProps={{ location: "header" }}
+                  >
+                    {t(`nav.${cta.key}`)}
+                  </TrackedLink>
+                )}
               </Button>
             </li>
           </ul>

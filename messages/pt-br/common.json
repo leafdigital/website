@@ -9,7 +9,13 @@
     "about": "Sobre",
     "freeScan": "Análise gratuita",
     "earlyAccess": "Acesso antecipado",
-    "joinWaitlist": "Entrar na lista de espera"
+    "joinWaitlist": "Entrar na lista de espera",
+    "forwardInvoice": "Encaminhar sua última fatura",
+    "sendPos": "Enviar seus últimos dez POs"
+  },
+  "mail": {
+    "ledger": "Ledger — meus últimos dez POs",
+    "billCheck": "3PL Bill Check — fatura do mês passado"
   },
   "footer": {
     "label": "Rodapé",

@@ -1,0 +1,164 @@
+{
+  "meta": {
+    "title": "3PL-Rechnung prüfen — zu viel berechnet | 3PL Bill Check",
+    "description": "Vierzig Seiten im Monat, freigegeben, weil es immer so ist. 3PL Bill Check liest die ganze Rechnung gegen deine Preisliste und das, was wirklich verschickt wurde — und gibt dir die Zeilen zurück, die nicht passen: beziffert, in den Worten deines 3PL. Erste Rechnung kostenlos."
+  },
+  "hero": {
+    "badge": "3PL Bill Check · im Labor · erste Rechnung kostenlos",
+    "headline": "Dein 3PL hat dir zu viel berechnet. <accent>Niemand hat es bemerkt.</accent>",
+    "subhead": "<lead>Pick-Gebühren, Lagerung, Wareneingang, eine Stückzahl, die nicht zu Shopify passt</lead> — vierzig Seiten, freigegeben, weil es immer so ist. Leite die Rechnung vom letzten Monat weiter. Du bekommst die Zeilen zurück, die nicht zu dem passen, was du vereinbart hast — in Dollar, noch am selben Tag. Kostenlos.",
+    "ctaPrimary": "Letzte Rechnung weiterleiten",
+    "ctaSecondary": "Was sich ändert",
+    "finePrint": "Eine Rechnung, kostenlos · Nichts zu installieren · Die Ergebnisse gehören dir, ob du weitermachst oder nicht"
+  },
+  "card": {
+    "title": "Rechnung vom letzten Monat · {pages, number} Seiten · Beispiel",
+    "pick": "Pick-Gebühr · {count, number} Bestellungen",
+    "storage": "Lagerung · {count, number} Paletten",
+    "receiving": "Wareneingang · {count, number} Einheiten",
+    "other": "{count, number} weitere Zeilen",
+    "over": "+{amount, number, ::currency/USD precision-integer}",
+    "gap": "{lines, number} Zeilen neben deiner Preisliste",
+    "gapValue": "{amount, number, ::currency/USD precision-integer}",
+    "caption": "Beispiel. Deine Rechnung, noch am selben Tag — jede Zeile zeigt den Vertragspreis, gegen den sie geprüft wurde."
+  },
+  "task": {
+    "eyebrow": "Das Aufgaben-Problem",
+    "opener": "Niemand gleicht 2.000 Pick-Gebühren mit 2.000 Bestellungen ab.",
+    "middleOne": "Die Rechnung kommt monatlich. Die einzige Person, die sie prüfen könnte, bist du — und es ist der eine Job, der nie auf die Liste kommt.",
+    "middleTwo": "Also wird sie freigegeben — in der Annahme, der 3PL habe richtig gerechnet.",
+    "doc": {
+      "name": "3PL-Rechnung — März.pdf",
+      "meta": "{pages, number} Seiten",
+      "stamp": "Freigegeben · 23:42 Uhr",
+      "caption": "Jeder Shop gibt sie frei. Niemand liest sie."
+    }
+  },
+  "prices": {
+    "kicker": "Ein Gegner, drei Rechnungen",
+    "title": "Die Rechnung kassiert dreifach",
+    "drift": {
+      "label": "GEBÜHRENDRIFT",
+      "statement": "Die Pick-Gebühr, die du verhandelt hast, ist nicht die Pick-Gebühr auf Seite 6.",
+      "body": "Niemand hat es dir gesagt, und sie steht diesen Monat auf jeder Bestellung."
+    },
+    "units": {
+      "label": "DIE FEHLENDEN EINHEITEN",
+      "statement": "Dein 3PL sagt 412. Shopify sagt 447.",
+      "body": "Fünfunddreißig Einheiten gehören niemandem — und du zahlst Lagerung für Ware, die du nicht verkaufen kannst."
+    },
+    "clock": {
+      "label": "DIE UHR",
+      "statement": "Dein Vertrag gibt dir eine Frist zum Reklamieren.",
+      "body": "Danach ist der Verlust deiner — leise, für immer."
+    }
+  },
+  "confess": {
+    "kicker": "Das Freigabe-Problem",
+    "title": "Freigegeben, trotzdem zu viel bezahlt.",
+    "sub": "„Unser 3PL ist super, wir hatten nie ein Problem.“ Du hast nie eins gefunden — nicht dasselbe. Die meisten Zeilen auf den meisten Rechnungen stimmen. Die, die nicht stimmen, verstecken sich in der Masse, und die Masse liest niemand.",
+    "specimenLabel": "Eine Zeile der Reklamation — was dein 3PL bekommt",
+    "feeCode": "Gebührencode",
+    "feeCodeValue": "PICK-STD",
+    "contractRate": "Vertragspreis",
+    "billedRate": "Berechneter Preis",
+    "rate": "{amount, number, ::currency/USD}",
+    "orders": "Bestellungen",
+    "ordersValue": "{count, number}",
+    "difference": "Differenz",
+    "differenceValue": "{amount, number, ::currency/USD}",
+    "specimenCaption": "Sein Gebührencode, seine Vertragszeile, seine Stückzahl und die Differenz. Keine Adjektive.",
+    "closer": "Das ist kein Streit mit deinem 3PL. Es ist seine eigene Arithmetik, zurückgereicht in seinem eigenen Vokabular — <lead>Gebührencode, Vertragspreis, berechneter Preis, Bestellzahl, Differenz.</lead> Sonst nichts. Gute 3PLs korrigieren die Zeile. Und wenn die Rechnung sauber ist, sagen wir es — du hast zehn Minuten verloren."
+  },
+  "how": {
+    "kicker": "Weiterleiten. Abgleichen. Reklamieren.",
+    "title": "So liest 3PL Bill Check deine Rechnung",
+    "forward": {
+      "title": "Weiterleiten",
+      "body": "Du schickst die Rechnung. Das ist deine ganze Arbeit."
+    },
+    "match": {
+      "title": "Abgleichen",
+      "body": "Jede Zeile wird gegen das geprüft, was du vereinbart hast, und gegen das, was wirklich passiert ist: verschickte Bestellungen, angelieferte Einheiten, Bestand im Lager."
+    },
+    "dispute": {
+      "title": "Reklamieren",
+      "body": "Was nicht passt, kommt beziffert, datiert und für deinen 3PL formuliert zurück — bereit zum Weiterleiten, solange die Reklamationsfrist noch läuft."
+    },
+    "footer": "Einmal mit deinem 3PL verbunden, liest es jede Rechnung, sobald sie kommt — ohne dich. Audit → Freigabe → verdiente Autonomie. So arbeitet jede Leaf-App."
+  },
+  "changes": {
+    "kicker": "Was sich für dich ändert",
+    "title": "Keine Feature-Liste — was am Dienstag anders ist",
+    "sub": "Das passiert wirklich, ab dem Tag, an dem du die erste Rechnung weiterleitest.",
+    "one": {
+      "label": "Am selben Tag",
+      "title": "Du weißt, ob die Rechnung vom letzten Monat gestimmt hat.",
+      "body": "Zum ersten Mal lautet die Antwort nicht „wahrscheinlich“."
+    },
+    "two": {
+      "label": "Monat eins",
+      "title": "Die Rechnung wird gelesen, bevor du sie bezahlst.",
+      "body": "Du gibst sie frei und weißt, was drinsteht — statt es zu hoffen."
+    },
+    "three": {
+      "label": "Monat zwei",
+      "title": "Du siehst, was sich seit dem letzten Monat bewegt hat.",
+      "body": "Eine Gebühr, die gewandert ist, eine Zeile, die neu aufgetaucht ist. Du erwischst es in dem Monat, in dem es anfängt — nicht in dem Jahr, in dem es auffällt."
+    },
+    "four": {
+      "label": "Monat drei",
+      "title": "Die Einzelfälle werden ein Muster mit Datum.",
+      "body": "Die fehlenden Einheiten sind kein Gefühl mehr, sondern eine Reklamation."
+    },
+    "five": {
+      "label": "Ab dann",
+      "title": "Du gehst mit seiner Arithmetik in der Hand in die Nachverhandlung.",
+      "body": "Oder du gehst — und weißt genau, warum."
+    },
+    "six": {
+      "label": "Bevor Geld fließt",
+      "title": "Der kostenlose Audit ist der ganze Pitch.",
+      "body": "Saubere Rechnung — wir sagen es dir."
+    }
+  },
+  "stop": {
+    "kicker": "Von deiner Liste",
+    "title": "Was du nicht mehr tust",
+    "one": "Eine vierzigseitige Rechnung um 23:42 Uhr freigeben, weil es keine andere Option gibt.",
+    "two": "Dich fragen, ob die Stückzahl im Lager die Stückzahl in Shopify ist.",
+    "three": "Zum Jahresende erfahren, was du im März hättest reklamieren können.",
+    "four": "Mit deinem 3PL in deinen Worten streiten statt in seinen."
+  },
+  "trust": "Nichts hier läuft auf Vertrauen. Die erste Rechnung wird kostenlos gelesen, jeder Fund zeigt die Vertragszeile, gegen die er geprüft wurde, und die Reklamation geht in deinem Namen raus, nicht in unserem. Das Einzige, was du glauben musst, ist deine eigene Rechnung.",
+  "faq": {
+    "kicker": "Due Diligence",
+    "title": "Die Fragen, die wir auch stellen würden",
+    "sour": {
+      "q": "Vergiftet das die Beziehung zu meinem 3PL?",
+      "a": "Nein. Das Paket besteht aus seinem Gebührencode, seiner Vertragszeile, seiner Stückzahl und der Differenz. Keine Adjektive. So wollen gute 3PLs es gesagt bekommen."
+    },
+    "clean": {
+      "q": "Und wenn meine Rechnung sauber ist?",
+      "a": "Dann steht das da, und du hast zehn Minuten verloren. Wir verlieren lieber dich, als einen Fund zu erfinden."
+    },
+    "spreadsheet": {
+      "q": "Ist das nicht nur eine Tabelle?",
+      "a": "Für eine Rechnung, ja — es ist die Tabelle, die du bauen wolltest und nicht gebaut hast. Für zwölf, mit laufender Reklamationsfrist und der Stückzahl vom letzten Monat gegen die von diesem, ist es die, die wirklich gepflegt wird."
+    },
+    "bookkeeper": {
+      "q": "Kann das nicht meine Buchhaltung machen?",
+      "a": "Sie stimmt die Beträge mit der Bank ab. Niemand auf deiner Seite stimmt die Pick-Gebühren mit den Bestellungen ab. Das ist die Lücke."
+    },
+    "touch": {
+      "q": "Worauf greift es zu?",
+      "a": "Es liest deine Rechnung, deinen Vertrag, deine Bestellungen und die eigenen Berichte deines 3PL. In deinen Shop schreibt es nichts."
+    }
+  },
+  "cta": {
+    "title": "Eine Rechnung weiterleiten. Sehen, was drinsteht.",
+    "sub": "Zwei Zukünfte: Die Rechnung wird weiter um 23:42 Uhr freigegeben — oder sie wird gelesen.",
+    "button": "Letzte Rechnung weiterleiten",
+    "note": "Stumme Bilder lassen sich schon heute beheben. <link>Image Voice ist live — starte den Scan jetzt →</link>"
+  }
+}

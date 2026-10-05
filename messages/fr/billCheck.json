@@ -1,0 +1,164 @@
+{
+  "meta": {
+    "title": "Audit de facture 3PL — votre 3PL vous surfacture | 3PL Bill Check",
+    "description": "Quarante pages par mois, validées parce que c’est toujours comme ça. 3PL Bill Check lit toute la facture face à votre grille tarifaire et à ce qui a vraiment été expédié, puis vous rend les lignes qui ne collent pas — chiffrées, dans les mots de votre 3PL. Première facture gratuite."
+  },
+  "hero": {
+    "badge": "3PL Bill Check · au labo · première facture gratuite",
+    "headline": "Votre 3PL vous a surfacturé. <accent>Personne ne l’a vu.</accent>",
+    "subhead": "<lead>Frais de picking, stockage, réception, un comptage qui ne colle pas avec Shopify</lead> — quarante pages, validées parce que c’est toujours comme ça. Transférez la facture du mois dernier. Vous recevez les lignes qui ne correspondent pas à ce que vous aviez accepté de payer, en dollars, le jour même. Gratuit.",
+    "ctaPrimary": "Transférez votre dernière facture",
+    "ctaSecondary": "Ce qui change",
+    "finePrint": "Une facture, gratuite · Rien à installer · Les constats sont à vous, que vous continuiez ou non"
+  },
+  "card": {
+    "title": "Facture du mois dernier · {pages, number} pages · exemple",
+    "pick": "Frais de picking · {count, number} commandes",
+    "storage": "Stockage · {count, number} palettes",
+    "receiving": "Réception · {count, number} unités",
+    "other": "{count, number} autres lignes",
+    "over": "+{amount, number, ::currency/USD precision-integer}",
+    "gap": "{lines, number} lignes hors grille tarifaire",
+    "gapValue": "{amount, number, ::currency/USD precision-integer}",
+    "caption": "Exemple. Votre facture, le jour même — chaque ligne montre le tarif contractuel face auquel elle a été vérifiée."
+  },
+  "task": {
+    "eyebrow": "Le problème de la tâche",
+    "opener": "Personne ne rapproche 2 000 frais de picking de 2 000 commandes.",
+    "middleOne": "La facture tombe chaque mois. La seule personne capable de la vérifier, c’est vous, et c’est la seule tâche qui n’arrive jamais sur la liste.",
+    "middleTwo": "Alors elle est validée — en partant du principe que le 3PL a fait le calcul.",
+    "doc": {
+      "name": "Facture 3PL — mars.pdf",
+      "meta": "{pages, number} pages",
+      "stamp": "Validée · 23 h 42",
+      "caption": "Toutes les boutiques la valident. Personne ne la lit."
+    }
+  },
+  "prices": {
+    "kicker": "Un coupable, trois additions",
+    "title": "La facture vous fait payer trois fois",
+    "drift": {
+      "label": "DÉRIVE DES FRAIS",
+      "statement": "Le frais de picking que vous avez négocié n’est pas celui de la page 6.",
+      "body": "Personne ne vous l’a dit, et il est sur chaque commande de ce mois."
+    },
+    "units": {
+      "label": "LES UNITÉS MANQUANTES",
+      "statement": "Votre 3PL dit 412. Shopify dit 447.",
+      "body": "Trente-cinq unités n’appartiennent à personne — et vous payez du stockage sur du stock que vous ne pouvez pas vendre."
+    },
+    "clock": {
+      "label": "L’HORLOGE",
+      "statement": "Votre contrat vous donne un délai pour réclamer.",
+      "body": "Une fois passé, la perte est pour vous, en silence, pour toujours."
+    }
+  },
+  "confess": {
+    "kicker": "Le problème de la validation",
+    "title": "Validée, et pourtant surfacturée.",
+    "sub": "« Notre 3PL est très bien, on n’a jamais eu de problème. » Vous n’en avez jamais trouvé — ce n’est pas la même chose. La plupart des lignes de la plupart des factures sont justes. Celles qui ne le sont pas se cachent dans le volume, et le volume, personne ne le lit.",
+    "specimenLabel": "Une ligne de la contestation — ce que reçoit votre 3PL",
+    "feeCode": "Code de frais",
+    "feeCodeValue": "PICK-STD",
+    "contractRate": "Tarif contractuel",
+    "billedRate": "Tarif facturé",
+    "rate": "{amount, number, ::currency/USD}",
+    "orders": "Commandes",
+    "ordersValue": "{count, number}",
+    "difference": "Écart",
+    "differenceValue": "{amount, number, ::currency/USD}",
+    "specimenCaption": "Leur code de frais, leur ligne de contrat, leur comptage, et l’écart. Pas d’adjectifs.",
+    "closer": "Ce n’est pas un bras de fer avec votre 3PL. C’est leur propre arithmétique qu’on leur rend dans leur propre vocabulaire — <lead>code de frais, tarif contractuel, tarif facturé, nombre de commandes, écart.</lead> Rien d’autre. Les bons 3PL corrigent la ligne. Et si la facture est propre, on vous le dit — vous avez perdu dix minutes."
+  },
+  "how": {
+    "kicker": "Transférer. Rapprocher. Contester.",
+    "title": "Comment 3PL Bill Check lit votre facture",
+    "forward": {
+      "title": "Transférer",
+      "body": "Vous envoyez la facture. C’est tout le travail de votre côté."
+    },
+    "match": {
+      "title": "Rapprocher",
+      "body": "Chaque ligne est vérifiée face à ce que vous aviez accepté de payer et à ce qui s’est vraiment passé : commandes expédiées, unités reçues, stock disponible."
+    },
+    "dispute": {
+      "title": "Contester",
+      "body": "Ce qui ne colle pas revient chiffré, daté, et rédigé pour votre 3PL — prêt à transférer, le délai de réclamation encore ouvert."
+    },
+    "footer": "Une fois connecté à votre 3PL, il lit chaque facture dès qu’elle tombe — sans vous. Audit → validation → autonomie méritée. C’est ainsi que fonctionne chaque app Leaf."
+  },
+  "changes": {
+    "kicker": "Ce qui change pour vous",
+    "title": "Pas une liste de fonctionnalités — ce qui est différent mardi",
+    "sub": "Voici ce qui se passe vraiment, dès le jour où vous transférez la première facture.",
+    "one": {
+      "label": "Le jour même",
+      "title": "Vous savez si la facture du mois dernier était juste.",
+      "body": "Pour la première fois, la réponse n’est pas « probablement »."
+    },
+    "two": {
+      "label": "Mois un",
+      "title": "La facture est lue avant d’être payée.",
+      "body": "Vous la validez en sachant ce qu’elle contient, pas en espérant."
+    },
+    "three": {
+      "label": "Mois deux",
+      "title": "Vous voyez ce qui a bougé depuis le mois dernier.",
+      "body": "Un frais qui a dérivé, une ligne qui est apparue. Vous l’attrapez le mois où ça commence, pas l’année où on le découvre."
+    },
+    "four": {
+      "label": "Mois trois",
+      "title": "Les cas isolés deviennent un schéma avec des dates.",
+      "body": "Les unités manquantes cessent d’être une impression et deviennent une réclamation."
+    },
+    "five": {
+      "label": "À partir de là",
+      "title": "Vous entrez en renégociation avec leur arithmétique en main.",
+      "body": "Ou vous en sortez, et vous savez exactement pourquoi."
+    },
+    "six": {
+      "label": "Avant que l’argent bouge",
+      "title": "L’audit gratuit, c’est tout l’argumentaire.",
+      "body": "Facture propre, on vous le dit."
+    }
+  },
+  "stop": {
+    "kicker": "Rayé de votre liste",
+    "title": "Ce que vous arrêtez de faire",
+    "one": "Valider une facture de quarante pages à 23 h 42 parce qu’il n’y a pas d’autre option.",
+    "two": "Vous demander si le comptage de l’entrepôt est celui de Shopify.",
+    "three": "Découvrir en fin d’année ce que vous auriez pu réclamer en mars.",
+    "four": "Discuter avec votre 3PL dans vos mots au lieu des leurs."
+  },
+  "trust": "Rien ici ne repose sur la confiance. La première facture est lue gratuitement, chaque constat montre la ligne de contrat face à laquelle il a été vérifié, et la contestation part en votre nom, pas au nôtre. La seule chose qu’on vous demande de croire, c’est votre propre facture.",
+  "faq": {
+    "kicker": "Due diligence",
+    "title": "Les questions qu’on poserait aussi",
+    "sour": {
+      "q": "Ça va abîmer la relation avec mon 3PL ?",
+      "a": "Non. Le dossier, c’est leur code de frais, leur ligne de contrat, leur comptage, et l’écart. Pas d’adjectifs. C’est comme ça que les bons 3PL veulent qu’on leur dise."
+    },
+    "clean": {
+      "q": "Et si ma facture est propre ?",
+      "a": "Alors il le dit et vous avez perdu dix minutes. On préfère vous perdre qu’inventer un constat."
+    },
+    "spreadsheet": {
+      "q": "Ce n’est pas juste un tableur ?",
+      "a": "Pour une facture, si — c’est le tableur que vous alliez construire et que vous n’avez pas construit. Pour douze, avec le délai de réclamation qui court et le comptage du mois dernier face à celui de ce mois, c’est celui qu’on tient vraiment à jour."
+    },
+    "bookkeeper": {
+      "q": "Mon comptable ne peut pas faire ça ?",
+      "a": "Il rapproche les dollars de la banque. Personne de votre côté ne rapproche les frais de picking des commandes. C’est là, le trou."
+    },
+    "touch": {
+      "q": "À quoi touche-t-il ?",
+      "a": "Il lit votre facture, votre contrat, vos commandes et les propres rapports de votre 3PL. Il n’écrit rien dans votre boutique."
+    }
+  },
+  "cta": {
+    "title": "Transférez une facture. Voyez ce qu’elle dit.",
+    "sub": "Deux futurs : la facture continue d’être validée à 23 h 42, ou elle est lue.",
+    "button": "Transférez votre dernière facture",
+    "note": "Les images muettes se réparent déjà aujourd’hui. <link>Image Voice est en ligne — lancez l’analyse maintenant →</link>"
+  }
+}

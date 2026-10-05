@@ -10,8 +10,8 @@
 export const indexedRoutes = [
   "/",
   "/image-voice",
-  "/reorder-loop",
-  "/count-check",
+  "/ledger",
+  "/3pl-bill-check",
   "/runway",
   "/about",
   "/privacy",
@@ -95,12 +95,12 @@ export type AppRoute =
  * date here costs a recrawl; a fresh one on an unchanged page costs trust.
  */
 export const lastModified: Record<AppRoute, string> = {
-  "/": "2026-09-06",
+  "/": "2026-10-04",
   "/image-voice": "2026-09-11",
-  "/reorder-loop": "2026-09-06",
-  "/count-check": "2026-09-06",
-  "/runway": "2026-09-06",
-  "/about": "2026-09-11",
+  "/ledger": "2026-10-04",
+  "/3pl-bill-check": "2026-10-04",
+  "/runway": "2026-10-04",
+  "/about": "2026-10-04",
   "/privacy": "2026-09-11",
   "/support": "2026-09-04",
   "/guides/shopify-alt-text": "2026-09-11",

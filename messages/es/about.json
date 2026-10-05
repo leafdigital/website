@@ -11,7 +11,7 @@
   "origin": {
     "title": "De dónde venimos",
     "one": "Leaf nació dentro de tiendas Shopify — años con las manos en la masa, construyéndolas y arreglándolas para marcas, sentados en la misma silla en la que tú te sientas a las 11 de la noche. Y en cada tienda, lo mismo: <lead>el dinero nunca muere en una función. Muere en las grietas.</lead> Shopify te dice un número, el 3PL te dice otro, y todo lo caro sigue siendo invisible.",
-    "two": "Nadie se hacía cargo de ese problema. Así que nos hacemos cargo nosotros. Por eso creamos las apps de Leaf — <imageVoice>Image Voice</imageVoice>, <reorderLoop>Reorder Loop</reorderLoop>, <countCheck>Count Check</countCheck> y <runway>Runway</runway> — cada una apuntando a una sola grieta, cada una hecha para encontrar el dinero que se esconde ahí y después hacer el trabajo ella misma."
+    "two": "Nadie se hacía cargo de ese problema. Así que nos hacemos cargo nosotros. Por eso creamos las apps de Leaf — <imageVoice>Image Voice</imageVoice>, <ledger>Ledger</ledger>, <billCheck>3PL Bill Check</billCheck> e <runway>Inventory Runway</runway> — cada una apuntando a una sola grieta, cada una hecha para encontrar el dinero que se esconde ahí y después hacer el trabajo ella misma."
   },
   "believe": {
     "title": "En qué creemos",
