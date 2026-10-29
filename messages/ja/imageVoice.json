@@ -197,7 +197,7 @@
       "price": "{amount, number, ::currency/USD}",
       "tagline": "ストア全体が語り出す — 14日間無料トライアル",
       "offerLabel": "Founding Curator",
-      "offer": "<lead>最初の{spots, number}店舗</lead>は、Curatorを<lead>生涯半額</lead>でご利用いただけます。{price, number, ::currency/USD}/月、そしてその称号はずっとあなたのものです。",
+      "offer": "<lead>最初の{spots, number}店舗</lead>は、Curatorを<lead>生涯{discount, number, ::percent}オフ</lead>でご利用いただけます。{price, number, ::currency/USD}/月、そしてその称号はずっとあなたのものです。",
       "one": "Keeperのすべての機能",
       "two": "<lead>First Sweepがストア全体をカバー</lead>。テーマも含め、最も高いスイープ上限で",
       "three": "テーマ画像にも説明を。バナー、スライダー、セクション画像まで。商品だけではありません",

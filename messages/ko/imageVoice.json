@@ -197,7 +197,7 @@
       "price": "{amount, number, ::currency/USD}",
       "tagline": "스토어 전체가 말해요 — 14일 무료 체험",
       "offerLabel": "Founding Curator",
-      "offer": "<lead>선착순 {spots, number}명의 판매자</lead>는 Curator를 <lead>평생 반값</lead>에 이용해요. 월 {price, number, ::currency/USD}, 그리고 그 타이틀은 계속 당신 거예요.",
+      "offer": "<lead>선착순 {spots, number}명의 판매자</lead>는 Curator를 <lead>평생 {discount, number, ::percent} 할인</lead>된 가격에 이용해요. 월 {price, number, ::currency/USD}, 그리고 그 타이틀은 계속 당신 거예요.",
       "one": "Keeper의 모든 기능",
       "two": "<lead>First Sweep이 스토어 전체를 커버</lead> — 테마 포함, 가장 높은 스윕 한도",
       "three": "테마 이미지까지 설명 — 상품뿐 아니라 배너, 슬라이더, 섹션 이미지",

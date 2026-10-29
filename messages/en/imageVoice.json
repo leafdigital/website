@@ -197,7 +197,7 @@
       "price": "{amount, number, ::currency/USD}",
       "tagline": "The whole store speaks — 14-day free trial",
       "offerLabel": "Founding Curator",
-      "offer": "The <lead>first {spots, number} merchants</lead> take Curator at <lead>half price, for life</lead> — {price, number, ::currency/USD}/mo, and the title stays yours.",
+      "offer": "The <lead>first {spots, number} merchants</lead> take Curator at <lead>{discount, number, ::percent} off, for life</lead> — {price, number, ::currency/USD}/mo, and the title stays yours.",
       "one": "Everything in Keeper",
       "two": "<lead>First Sweep covers the whole store</lead> — theme included, with the highest sweep ceiling",
       "three": "Theme images described — banners, sliders, section imagery, not just products",

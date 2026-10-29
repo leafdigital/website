@@ -197,7 +197,7 @@
       "price": "{amount, number, ::currency/USD}",
       "tagline": "Der ganze Shop spricht — 14 Tage kostenlos testen",
       "offerLabel": "Founding Curator",
-      "offer": "Die <lead>ersten {spots, number} Händler</lead> bekommen Curator <lead>lebenslang zum halben Preis</lead> — {price, number, ::currency/USD}/Mon., und der Titel bleibt deiner.",
+      "offer": "Die <lead>ersten {spots, number} Händler</lead> bekommen Curator <lead>lebenslang {discount, number, ::percent} günstiger</lead> — {price, number, ::currency/USD}/Mon., und der Titel bleibt deiner.",
       "one": "Alles aus Keeper",
       "two": "<lead>First Sweep deckt den ganzen Shop ab</lead> — Theme inklusive, mit der höchsten Sweep-Obergrenze",
       "three": "Theme-Bilder beschrieben — Banner, Slider, Sektionsbilder, nicht nur Produkte",

@@ -3,6 +3,7 @@ import { TrackedExternalLink } from "@/components/analytics/tracked-external-lin
 import { Button } from "@/components/ui/button";
 import {
   APP_INSTALL_URL,
+  FOUNDING_CURATOR_DISCOUNT,
   FOUNDING_CURATOR_PRICE,
   OFFER,
   PRICING,
@@ -154,6 +155,7 @@ export function PricingCards() {
               {t.rich("curator.offer", {
                 lead: (chunks) => <strong>{chunks}</strong>,
                 spots: OFFER.foundingCurators,
+                discount: FOUNDING_CURATOR_DISCOUNT,
                 price: FOUNDING_CURATOR_PRICE,
               })}
             </p>

@@ -220,18 +220,26 @@ export const PRICING = {
 } as const;
 
 /**
- * What a Founding Curator pays for Curator, for life. Derived, not typed in:
- * the offer copy says "half price" in six languages, so a hand-entered figure
- * that drifts from half of `curator` turns that sentence into a false claim.
+ * The Founding Curator discount, as a fraction. Passed to ICU as a raw number
+ * (`::percent`) so the offer copy prints it in every locale — the sentence
+ * and the figure can't drift apart.
  */
-export const FOUNDING_CURATOR_PRICE = PRICING.curator / 2;
+export const FOUNDING_CURATOR_DISCOUNT = 0.3;
+
+/**
+ * What a Founding Curator pays for Curator, for life. Derived, not typed in:
+ * the offer copy quotes the discount in nine languages, so a hand-entered
+ * figure that drifts from it turns that sentence into a false claim.
+ */
+export const FOUNDING_CURATOR_PRICE =
+  Math.round(PRICING.curator * (1 - FOUNDING_CURATOR_DISCOUNT) * 100) / 100;
 
 /**
  * Founder-offer inventory. Counts down as spots go; the copy around each one
  * is written so a changed number never breaks the sentence.
  */
 export const OFFER = {
-  /** Image Voice — Curator at half price, for life. */
+  /** Image Voice — Curator at 30% off, for life. */
   foundingCurators: 25,
   /** Every lab app — Charter pricing, locked for life. */
   charterStores: 50,

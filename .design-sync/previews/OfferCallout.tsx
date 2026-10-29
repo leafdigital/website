@@ -1,15 +1,14 @@
 import { OfferCallout } from "leaf-website";
 
 // Copy from messages/en/imageVoice.json → `pricing.curator`; the price is
-// FOUNDING_CURATOR_PRICE (half of PRICING.curator, $28.90).
+// FOUNDING_CURATOR_PRICE (30% off PRICING.curator, $28.90).
 
 /** The dashed note on white: a note pinned to a plan, not another plan. */
 export const Default = () => (
   <div className="max-w-sm">
     <OfferCallout label="Founding Curator">
       The <strong>first 25 merchants</strong> take Curator at{" "}
-      <strong>half price, for life</strong> — $14.45/mo, and the title stays
-      yours.
+      <strong>30% off, for life</strong> — $20.23/mo, and the title stays yours.
     </OfferCallout>
   </div>
 );
@@ -31,7 +30,7 @@ export const InPlanCard = () => (
     </p>
     <OfferCallout label="Founding Curator" className="mt-4">
       The <strong>first 25 merchants</strong> take Curator at{" "}
-      <strong>half price, for life</strong> — $14.45/mo.
+      <strong>30% off, for life</strong> — $20.23/mo.
     </OfferCallout>
   </div>
 );

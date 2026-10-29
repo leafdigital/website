@@ -197,7 +197,7 @@
       "price": "{amount, number, ::currency/USD}",
       "tagline": "A loja inteira fala — 14 dias de teste grátis",
       "offerLabel": "Founding Curator",
-      "offer": "Os <lead>primeiros {spots, number} lojistas</lead> levam o Curator pela <lead>metade do preço, para sempre</lead> — {price, number, ::currency/USD}/mês, e o título continua sendo seu.",
+      "offer": "Os <lead>primeiros {spots, number} lojistas</lead> levam o Curator com <lead>{discount, number, ::percent} de desconto, para sempre</lead> — {price, number, ::currency/USD}/mês, e o título continua sendo seu.",
       "one": "Tudo do Keeper",
       "two": "<lead>O First Sweep cobre a loja inteira</lead> — tema incluído, com o maior teto de varredura",
       "three": "Imagens do tema descritas — banners, sliders, imagens de seção, não só produtos",

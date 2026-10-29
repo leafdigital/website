@@ -31,6 +31,6 @@ reason the card exists, fill it instead.
 ```tsx
 <OfferCallout label="Founding Curator">
   The <strong>first 25 merchants</strong> take Curator at{" "}
-  <strong>half price, for life</strong> — $14.45/mo, and the title stays yours.
+  <strong>30% off, for life</strong> — $20.23/mo, and the title stays yours.
 </OfferCallout>
 ```
